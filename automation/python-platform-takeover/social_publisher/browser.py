@@ -40,6 +40,30 @@ class BrowserController:
     def find_pages_by_url(self, text: str) -> list[Page]:
         return [page for page in self.pages() if text in page.url]
 
+    def primary_page(self) -> Page:
+        pages = self.pages()
+        if pages:
+            return pages[0]
+        browser = self._require_browser()
+        contexts = browser.contexts
+        if contexts:
+            return contexts[0].new_page()
+        context = browser.new_context()
+        return context.new_page()
+
+    def open_or_activate_page(self, url: str, reuse_contains: str | None = None) -> Page:
+        if reuse_contains:
+            matches = self.find_pages_by_url(reuse_contains)
+            if matches:
+                page = matches[0]
+                page.bring_to_front()
+                page.goto(url, wait_until="domcontentloaded")
+                return page
+        page = self.primary_page()
+        page.bring_to_front()
+        page.goto(url, wait_until="domcontentloaded")
+        return page
+
     def describe_pages(self) -> Iterable[tuple[str, str]]:
         for page in self.pages():
             yield page.title(), page.url

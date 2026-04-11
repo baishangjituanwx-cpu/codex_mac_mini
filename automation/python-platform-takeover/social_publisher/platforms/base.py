@@ -1,6 +1,12 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+import platform as platform_runtime
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from social_publisher.browser import BrowserController
+    from social_publisher.content_package import AssetPaths, PlatformContent
 
 
 @dataclass(frozen=True)
@@ -14,6 +20,16 @@ class PlatformMetadata:
     success_signals: list[str]
     takeover_allowed: list[str]
     takeover_stop_conditions: list[str]
+
+
+@dataclass
+class PublishResult:
+    ok: bool
+    status: str
+    message: str
+    current_url: str | None = None
+    management_url: str | None = None
+    notes: list[str] = field(default_factory=list)
 
 
 class PlatformPublisher:
@@ -38,7 +54,27 @@ class PlatformPublisher:
         lines.extend(f"- {item}" for item in self.metadata.takeover_stop_conditions)
         return lines
 
-    def publish(self) -> None:
+    def publish(
+        self,
+        controller: "BrowserController",
+        platform_content: "PlatformContent",
+        assets: "AssetPaths",
+        *,
+        dry_run: bool = False,
+    ) -> PublishResult:
         raise NotImplementedError(
             f"{self.metadata.display_name} publish flow is not implemented yet."
         )
+
+
+def normalize_text(value: str) -> str:
+    return " ".join(value.split())
+
+
+def content_snippet(value: str, *, limit: int = 18) -> str:
+    normalized = normalize_text(value)
+    return normalized[:limit]
+
+
+def primary_select_all_shortcut() -> str:
+    return "Meta+A" if platform_runtime.system() == "Darwin" else "Control+A"

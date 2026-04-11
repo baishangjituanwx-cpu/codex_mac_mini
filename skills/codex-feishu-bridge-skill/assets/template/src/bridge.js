@@ -3,18 +3,25 @@ const fsp = require("fs/promises");
 const os = require("os");
 const path = require("path");
 const readline = require("readline");
-const { spawn } = require("child_process");
+const { spawn, spawnSync } = require("child_process");
 
 const ROOT_DIR = process.cwd();
 const DATA_DIR = path.join(ROOT_DIR, ".codex-feishu-bridge");
 const MIRROR_DIR = path.join(DATA_DIR, "mirrors");
 const STATE_PATH = path.join(DATA_DIR, "state.json");
 const LOG_PATH = path.join(ROOT_DIR, "bridge.log");
-const LARK_BIN_NAME = process.platform === "win32" ? "lark-cli.exe" : "lark-cli";
 const ENV_PATH = path.join(ROOT_DIR, ".bridge.env");
+const WINDOWS_LARK_CLI_CANDIDATES = [
+  path.join(ROOT_DIR, "node_modules", ".bin", "lark-cli.cmd"),
+  path.join(ROOT_DIR, "node_modules", "@larksuite", "cli", "bin", "lark-cli.exe"),
+  path.join(ROOT_DIR, "node_modules", "@larksuite", "cli", "bin", "lark-cli.cmd"),
+];
 const LARK_CLI =
   process.env.LARK_CLI_BIN ||
-  path.join(ROOT_DIR, "node_modules", "@larksuite", "cli", "bin", LARK_BIN_NAME);
+  (process.platform === "win32"
+    ? WINDOWS_LARK_CLI_CANDIDATES.find((candidate) => fs.existsSync(candidate)) ||
+      WINDOWS_LARK_CLI_CANDIDATES[0]
+    : path.join(ROOT_DIR, "node_modules", "@larksuite", "cli", "bin", "lark-cli"));
 const CODEX_BIN =
   process.env.CODEX_BIN ||
   (process.platform === "win32" ? "codex" : "/Applications/Codex.app/Contents/Resources/codex");
@@ -536,6 +543,9 @@ function spawnCommand(command, args, options = {}) {
   return spawn(command, args, {
     cwd: options.cwd || ROOT_DIR,
     env: { ...process.env, ...(options.env || {}) },
+    shell:
+      options.shell ??
+      (process.platform === "win32" && /\.(cmd|bat)$/i.test(String(command))),
     stdio: options.stdio || ["ignore", "pipe", "pipe"],
   });
 }
@@ -1259,8 +1269,8 @@ async function subscribeLoop() {
 }
 
 async function verifyBinaries() {
-  await fsp.access(LARK_CLI, fs.constants.X_OK);
-  await fsp.access(CODEX_BIN, fs.constants.X_OK);
+  await verifyCommand(LARK_CLI);
+  await verifyCommand(CODEX_BIN);
 }
 
 function printLocalHelp() {

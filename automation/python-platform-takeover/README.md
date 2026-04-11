@@ -21,6 +21,10 @@
   - 每个平台稳定 selector
   - 风控检查点恢复
   - 真正的发布动作实现
+- 已有可执行试点:
+  - `快手 v0.1`
+  - 通过 `--execute` 进入真实接管流程
+  - 默认仍保持安全模式，不会直接点击发布
 
 ## 目录
 
@@ -40,7 +44,6 @@ automation/python-platform-takeover/
 │   ├── content_package.py
 │   └── platforms/
 │       ├── __init__.py
-│       ├── base.py
 │       ├── baijiahao.py
 │       ├── douyin.py
 │       ├── kuaishou.py
@@ -104,16 +107,22 @@ python -m social_publisher validate-package configs/content-package.example.yaml
 ```bash
 python -m social_publisher publish \
   --platform kuaishou \
-  --package configs/content-package.example.yaml
+  --package configs/content-package.example.yaml \
+  --execute
 ```
 
 注意:
 
-当前 `publish` 命令还不会替你完成整条发布链路，它会先做:
+当前状态分两层:
 
-- 内容包读取
-- 平台规则加载
-- 接管前检查项输出
-- 浏览器接管准备
+- 所有平台:
+  - 都支持 readiness / inspect-tabs / validate-package
+- 快手:
+  - 已经接上 `--execute` 的真实接管链路
+  - 会先查 `作品管理`
+  - 再接管发布页 / 草稿页
+  - 再回 `作品管理` 验证
+- 其他平台:
+  - 还停留在脚手架阶段
 
-后续再逐个平台补正式实现。
+如果只是想先看规则，不加 `--execute`。

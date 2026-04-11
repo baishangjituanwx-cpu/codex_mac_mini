@@ -6,7 +6,7 @@
 
 - `skills/codex-feishu-bridge-skill/`
   - 可部署的 Codex <-> 飞书桥接技能包
-  - 内含 Node bridge、`launchd` 模板、部署脚本、使用文档
+  - 内含 Node bridge、macOS `launchd` 模板、Windows PowerShell 模板、部署脚本、使用文档
 - `skills/multi-platform-content-review-skill/`
   - 多平台发布后复盘 skill
   - 适合 nightly review、人工复盘、飞书复盘同步
@@ -14,6 +14,10 @@
   - 视频制作到多平台发布的内容模板
   - 发布日志模板
   - 最近成功案例示例
+- `automation/python-platform-takeover/`
+  - Python 自动接管脚手架
+  - 先把“平台规则、接管条件、管理页验证标准”沉淀成统一工程
+  - 方便后续逐个平台补齐真正可执行的接管脚本
 - `docs/`
   - 系统架构
   - 浏览器操作 SOP
@@ -36,6 +40,12 @@
 - 而是 `Codex + 浏览器自动化会话` 执行
 - 具体成功 SOP 已经整理到 [`docs/browser-operation-sop.md`](./docs/browser-operation-sop.md)
 - 直接接管已有标签页、半成品草稿页、失败后恢复页的细粒度规则，整理到 [`docs/browser-tab-takeover-runbook.md`](./docs/browser-tab-takeover-runbook.md)
+- Python 自动接管:
+  - 这次补上了 `automation/python-platform-takeover/` 脚手架
+  - 目前已经把平台级规则、接管前检查项、成功信号、工程结构统一下来
+  - 快手已经补到 `v0.1` 可执行接管链路
+  - 头条号、微信视频号已经补了 selector / checkpoint mapping
+  - 还没有把 8 个平台全部做成“可直接跑完全流程”的稳定脚本
 - 数据复盘:
   - 当前主链路是 `发布包 Markdown + 发布日志 Markdown + review skill`
 - 视频制作:
@@ -46,6 +56,7 @@
 
 ```text
 .
+├── automation/
 ├── docs/
 ├── scripts/
 ├── skills/
@@ -70,7 +81,7 @@
 cd skills/codex-feishu-bridge-skill
 ```
 
-然后按 skill 自带部署方式安装到目标机:
+macOS 安装:
 
 ```bash
 bash scripts/install_bridge_template.sh "$HOME/.codex-feishu-bridge"
@@ -81,6 +92,17 @@ npm install
 ./scripts/bridge-start.sh
 ```
 
+Windows 安装:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install_bridge_template_windows.ps1 -TargetDir C:\codex-feishu-bridge
+cd C:\codex-feishu-bridge
+npm install
+.\node_modules\.bin\lark-cli.cmd config init --app-id <APP_ID> --app-secret-stdin --brand feishu
+.\node_modules\.bin\lark-cli.cmd auth login --domain im,event --recommend
+.\scripts\bridge-start.ps1
+```
+
 桥接跑起来后，在飞书聊天里执行:
 
 ```text
@@ -89,6 +111,11 @@ npm install
 ```
 
 这样发布完成推送和任务进度推送都会落到当前聊天。
+
+Windows 专用入口文档见:
+
+- [`docs/windows-version-guide.md`](./docs/windows-version-guide.md)
+- [`skills/codex-feishu-bridge-skill/references/deployment-windows.md`](./skills/codex-feishu-bridge-skill/references/deployment-windows.md)
 
 ### 2. 初始化一个新内容批次
 
@@ -143,6 +170,33 @@ node scripts/init_campaign.js --id 2026-04-11-ai-workflow --theme "这里写母�
 - `workflow/content-library/posts/`
 
 来做 batch review。
+
+### 6. Python 接管脚本从这里开始
+
+如果你准备把“接管现有标签页”逐步沉淀成独立 Python 工程，直接看:
+
+- [`docs/python-automation-roadmap.md`](./docs/python-automation-roadmap.md)
+- `automation/python-platform-takeover/`
+
+当前这部分的定位很明确:
+
+- 已有:
+  - 统一工程目录
+  - 内容包读取骨架
+  - CDP 接管浏览器骨架
+  - 各平台规则元数据
+  - 快手 `--execute` 试点
+  - 头条号 / 微信视频号 mapping
+- 暂未完成:
+  - 每个平台稳定 selector
+  - 风控检查点恢复逻辑
+  - 真正可连续执行的发布实现
+
+建议把第一个试点先放在:
+
+1. 快手
+2. 头条号
+3. 微信视频号
 
 ## 最近成功基线
 
