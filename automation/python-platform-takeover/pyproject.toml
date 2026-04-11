@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "social-publisher-takeover"
+version = "0.1.0"
+description = "Python takeover scaffold for multi-platform browser publishing."
+requires-python = ">=3.10"
+dependencies = [
+  "playwright>=1.53.0",
+  "PyYAML>=6.0.1",
+  "typer>=0.12.3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.2",
+]
+
+[project.scripts]
+social-publisher = "social_publisher.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["social_publisher*"]
