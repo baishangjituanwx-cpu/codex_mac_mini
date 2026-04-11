@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+.bridge.env
+bridge.log
+bridge.stdout.log
+bridge.stderr.log
+.codex-feishu-bridge/
+workflow/content-library/assets/generated/*
+!workflow/content-library/assets/generated/.gitkeep
+workflow/content-library/assets/shared/*
+!workflow/content-library/assets/shared/.gitkeep
+
