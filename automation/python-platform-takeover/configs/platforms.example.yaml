@@ -1,0 +1,63 @@
+platforms:
+  weibo:
+    compose_urls:
+      - "https://weibo.com"
+    management_urls:
+      - "https://weibo.com"
+    success_signals:
+      - "主页流可见"
+      - "帖子直链可访问"
+  douyin:
+    compose_urls:
+      - "https://creator.douyin.com"
+    management_urls:
+      - "https://creator.douyin.com/creator-micro/content/manage"
+    success_signals:
+      - "作品管理出现新条目"
+      - "审核中"
+  wechat_channels:
+    compose_urls:
+      - "https://channels.weixin.qq.com/platform/post/create"
+    management_urls:
+      - "https://channels.weixin.qq.com/micro/content/post/list"
+    success_signals:
+      - "列表页出现新条目"
+      - "create 页显示已发表"
+  kuaishou:
+    compose_urls:
+      - "https://cp.kuaishou.com/article/publish/video?tabType=1"
+    management_urls:
+      - "https://cp.kuaishou.com/article/manage/video"
+    success_signals:
+      - "作品管理出现新条目"
+      - "审核中"
+  baijiahao:
+    compose_urls:
+      - "https://baijiahao.baidu.com"
+    management_urls:
+      - "https://baijiahao.baidu.com/builder/rc/home"
+    success_signals:
+      - "提交成功"
+      - "内容管理出现新条目"
+  toutiao:
+    compose_urls:
+      - "https://mp.toutiao.com"
+    management_urls:
+      - "https://mp.toutiao.com/profile_v4/graphic/publish"
+    success_signals:
+      - "作品管理出现新条目"
+      - "审核中"
+  zhihu:
+    compose_urls:
+      - "https://zhuanlan.zhihu.com/write"
+    management_urls:
+      - "https://www.zhihu.com/creator/content"
+    success_signals:
+      - "公开文章页可见"
+  xiaohongshu:
+    compose_urls:
+      - "https://creator.xiaohongshu.com"
+    management_urls:
+      - "https://creator.xiaohongshu.com/publish/publish"
+    success_signals:
+      - "笔记管理出现新条目"
