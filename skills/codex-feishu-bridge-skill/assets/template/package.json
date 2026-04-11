@@ -1,0 +1,18 @@
+{
+  "name": "codex-feishu-bridge",
+  "version": "1.0.0",
+  "description": "Feishu to Codex bridge",
+  "main": "src/bridge.js",
+  "type": "commonjs",
+  "scripts": {
+    "bridge": "node src/bridge.js",
+    "bridge:start": "zsh scripts/bridge-start.sh",
+    "bridge:stop": "zsh scripts/bridge-stop.sh",
+    "bridge:status": "zsh scripts/bridge-status.sh",
+    "bridge:logs": "zsh scripts/bridge-logs.sh",
+    "mirror:view": "zsh scripts/mirror-view.sh latest 60"
+  },
+  "dependencies": {
+    "@larksuite/cli": "^1.0.4"
+  }
+}
