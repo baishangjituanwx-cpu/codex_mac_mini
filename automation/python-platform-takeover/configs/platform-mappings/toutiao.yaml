@@ -1,0 +1,26 @@
+selectors:
+  title_input_candidates:
+    - "input[placeholder*='标题']"
+  body_editor_candidates:
+    - "[contenteditable='true']"
+  cover_file_inputs:
+    - "input[type='file']"
+buttons:
+  publish_entry:
+    - "创作"
+    - "图文"
+  preview_publish:
+    - "预览并发布"
+  confirm_publish:
+    - "确认发布"
+checkpoints:
+  manual:
+    - "短信验证码"
+    - "登录态恢复"
+stops:
+  duplicate_conditions:
+    - "作品管理已有同标题"
+verify:
+  management_status:
+    - "审核中"
+    - "已发布"
