@@ -1,0 +1,34 @@
+selectors:
+  publish_frame: "iframe[name='content']"
+  description_input_candidates:
+    - "textarea"
+  short_title_candidates:
+    - "input"
+  cover_file_inputs:
+    - "input[type='file']"
+  cover_file_input_index: 1
+buttons:
+  cover_entry:
+    - "编辑"
+    - "编辑封面"
+  cover_confirm:
+    - "确定"
+  publish:
+    - "发表"
+signals:
+  pending_upload:
+    - "请上传视频"
+    - "取消上传"
+    - "0%"
+    - "文件上传中，请等待完成后再发表。"
+  success:
+    - "已发表"
+checkpoints:
+  manual:
+    - "登录失效"
+    - "上传卡住"
+    - "封面弹层人工复核"
+stops:
+  duplicate_conditions:
+    - "视频管理已有同视频"
+    - "当前 visible UI 和 frame 真实状态不一致"
