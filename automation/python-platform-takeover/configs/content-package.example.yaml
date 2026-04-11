@@ -1,0 +1,32 @@
+campaign_id: "2026-04-11-ai-workflow"
+theme: "AI工作流"
+assets:
+  main_video: "/ABS/PATH/final_video.mp4"
+  backup_video: "/ABS/PATH/final_video_backup.mp4"
+  cover_3_4: "/ABS/PATH/cover-3x4.jpg"
+  cover_4_3: "/ABS/PATH/cover-4x3.jpg"
+platforms:
+  weibo:
+    title: "AI员工先替劳动，不是先替人"
+    description: "这里放微博正文"
+  douyin:
+    title: "AI员工先替劳动，不是先替人"
+    description: "这里放抖音描述"
+  wechat_channels:
+    title: "AI员工先替劳动，不是先替人"
+    description: "这里放视频号描述"
+  kuaishou:
+    title: "AI员工先替劳动，不是先替人"
+    description: "这里放快手描述"
+  baijiahao:
+    title: "AI员工先替劳动，不是先替人"
+    description: "这里放百家号正文"
+  toutiao:
+    title: "AI员工先替劳动，不是先替人"
+    description: "这里放头条号正文"
+  zhihu:
+    title: "AI员工先替劳动，不是先替人"
+    description: "这里放知乎正文"
+  xiaohongshu:
+    title: "AI员工先替劳动，不是先替人"
+    description: "这里放小红书正文"
