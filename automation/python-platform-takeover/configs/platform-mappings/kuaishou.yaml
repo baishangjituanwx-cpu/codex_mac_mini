@@ -1,0 +1,30 @@
+selectors:
+  description_editor: "#work-description-edit"
+  file_input: "input[type='file']"
+  cover_file_input_index: 0
+buttons:
+  continue_edit:
+    - "继续编辑"
+  cover_entry:
+    - "上传新封面"
+    - "上传封面"
+    - "更换封面"
+  publish:
+    - "发布"
+signals:
+  existing_video:
+    - "重新上传"
+    - "更换视频"
+    - "封面"
+  pending_upload:
+    - "取消上传"
+    - "0%"
+    - "上传中"
+checkpoints:
+  manual:
+    - "登录态恢复"
+    - "上传封面后人工确认"
+verify:
+  management_status:
+    - "审核中"
+    - "已发布"
