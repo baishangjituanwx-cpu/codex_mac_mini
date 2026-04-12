@@ -1,0 +1,8 @@
+{
+  "workflow_id": "7626331907709812776",
+  "coze_base_url": "https://api.coze.cn",
+  "pat_env_var": "COZE_PAT",
+  "pat_keychain_service": "codex.coze-seedance15pro-sales-workflow.pat",
+  "default_output_dir": "/Users/baishangjituan/Downloads/Codex/outputs/coze-videos"
+}
+

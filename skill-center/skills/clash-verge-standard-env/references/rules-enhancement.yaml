@@ -1,0 +1,10 @@
+# Profile Enhancement Rules Template for Clash Verge
+
+prepend:
+  - PROCESS-NAME,远程看看,🎯 全球直连
+  - DOMAIN-SUFFIX,aomeisoftware.com,🎯 全球直连
+  - DOMAIN-SUFFIX,anyviewer.com,🎯 全球直连
+
+append: []
+
+delete: []
