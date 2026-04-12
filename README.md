@@ -18,6 +18,10 @@
   - Python 自动接管脚手架
   - 先把“平台规则、接管条件、管理页验证标准”沉淀成统一工程
   - 方便后续逐个平台补齐真正可执行的接管脚本
+- `skill-center/`
+  - 本机 Codex 技能中心镜像
+  - 当前已把 `~/.codex/skills/` 里的 `61` 个 skill 镜像进仓库
+  - 提供 Mac / Windows 两套同步脚本，保证两边拿到完全相同的一套 skill
 - `docs/`
   - 系统架构
   - 浏览器操作 SOP
@@ -59,6 +63,7 @@
 ├── automation/
 ├── docs/
 ├── scripts/
+├── skill-center/
 ├── skills/
 │   ├── codex-feishu-bridge-skill/
 │   └── multi-platform-content-review-skill/
@@ -324,6 +329,25 @@ workflow/content-library/assets/generated/<campaign-id>/
 ```
 
 示例中的 `{{WORKSPACE_ROOT}}` 只是占位符，表示你的本机仓库根目录。
+
+## 技能中心镜像
+
+这次仓库里额外补上了一块之前明显缺失的内容:
+
+- `skill-center/skills/`
+
+它不是几个零散示例，而是把当前本机 `~/.codex/skills/` 里正在使用的 skill 做了一份完整镜像。
+
+这意味着:
+
+- GitHub 上现在能看到完整 skill 中心
+- `Mac` 和 `Windows` 都可以从同一份镜像恢复 skill
+- 像 `baijiahao-ops`、`douyin-ops`、`kuaishou-ops`、`social-publish-automation` 这类 skill，不再只存在于本机
+
+如果你要把仓库里的 skill 中心同步到本机:
+
+- Mac: `bash skill-center/scripts/sync-skills.sh`
+- Windows: `powershell -ExecutionPolicy Bypass -File .\skill-center\scripts\sync-skills.ps1`
 
 ## 安全和上传建议
 

@@ -10,6 +10,7 @@
 
 - `/Users/baishangjituan/.codex/skills/`
 - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`
 - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`
 
 ## 记录文件
