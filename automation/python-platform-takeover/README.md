@@ -65,7 +65,8 @@ automation/python-platform-takeover/
 │       ├── xiaohongshu.py
 │       └── zhihu.py
 └── tests/
-    └── test_content_package.py
+    ├── test_content_package.py
+    └── test_platform_base.py
 ```
 
 ## 安装
@@ -80,6 +81,8 @@ pip install -e '.[dev]'
 playwright install chromium
 ```
 
+如果本机自带的 `python3` 还是 `3.9`，先换到 `3.10+` 再继续。这个项目当前不支持 `Python 3.9`。
+
 Windows PowerShell:
 
 ```powershell
@@ -88,6 +91,8 @@ py -3 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e ".[dev]"
 .\.venv\Scripts\python.exe -m playwright install chromium
 ```
+
+仓库里的 `.\scripts\social-publisher.ps1` 现在会先检查 `Python 3.10+` 和关键依赖是否已安装，缺了会直接给出友好提示。
 
 ## 直接使用的准确含义
 
@@ -201,7 +206,7 @@ macOS / Linux:
 python -m social_publisher readiness wechat_channels
 python -m social_publisher inspect-tabs --url-contains channels.weixin.qq.com
 python -m social_publisher validate-package configs/content-package.example.yaml
-python -m social_publisher publish --platform kuaishou --package configs/content-package.local.yaml --execute
+python -m social_publisher publish kuaishou configs/content-package.local.yaml --execute
 social-publisher publish kuaishou configs/content-package.local.yaml --execute
 ```
 
@@ -211,7 +216,7 @@ Windows PowerShell:
 .\scripts\social-publisher.ps1 readiness wechat_channels
 .\scripts\social-publisher.ps1 inspect-tabs --url-contains channels.weixin.qq.com
 .\scripts\social-publisher.ps1 validate-package configs/content-package.example.yaml
-.\scripts\social-publisher.ps1 publish --platform kuaishou --package configs/content-package.local.yaml --execute
+.\scripts\social-publisher.ps1 publish kuaishou configs/content-package.local.yaml --execute
 ```
 
 注意:
@@ -253,8 +258,8 @@ Windows PowerShell:
 ```powershell
 .\scripts\social-publisher.ps1 inspect-tabs --url-contains mp.toutiao.com
 .\scripts\social-publisher.ps1 readiness toutiao
-.\scripts\social-publisher.ps1 publish --platform toutiao --package configs/content-package.local.yaml
-.\scripts\social-publisher.ps1 publish --platform toutiao --package configs/content-package.local.yaml --execute
+.\scripts\social-publisher.ps1 publish toutiao configs/content-package.local.yaml
+.\scripts\social-publisher.ps1 publish toutiao configs/content-package.local.yaml --execute
 ```
 
 ## 遇到这些情况先停下来
