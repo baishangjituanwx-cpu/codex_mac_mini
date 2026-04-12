@@ -131,12 +131,17 @@ class ToutiaoPublisher(PlatformPublisher):
             )
 
         self._click_publish_chain(compose_page, mapping)
-        verified = self._find_existing_entry(
-            management_page,
-            mapping,
-            title_marker,
-            refresh=True,
-        )
+        if self._has_success_signal(compose_page, mapping):
+            notes.append("editor_signal: success")
+            return PublishResult(
+                ok=True,
+                status="submitted",
+                message="头条号发布已提交，编辑页出现了成功信号。",
+                current_url=compose_page.url,
+                management_url=management_page.url,
+                notes=notes,
+            )
+        verified = self._wait_for_existing_entry(management_page, mapping, title_marker)
         if verified:
             return PublishResult(
                 ok=True,
@@ -246,6 +251,22 @@ class ToutiaoPublisher(PlatformPublisher):
         text = normalize_text(page.locator("body").inner_text())
         statuses = mapping["verify"]["management_status"]
         return title_marker in text and any(status in text for status in statuses)
+
+    def _wait_for_existing_entry(
+        self,
+        page: Page,
+        mapping: dict,
+        title_marker: str,
+    ) -> bool:
+        for _ in range(4):
+            if self._find_existing_entry(page, mapping, title_marker, refresh=True):
+                return True
+            page.wait_for_timeout(1200)
+        return False
+
+    def _has_success_signal(self, page: Page, mapping: dict) -> bool:
+        text = normalize_text(page.locator("body").inner_text())
+        return any(marker in text for marker in mapping["signals"]["success"])
 
     def _is_login_gate(self, page: Page, mapping: dict) -> bool:
         if "login" in page.url:

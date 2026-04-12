@@ -4,9 +4,12 @@ selectors:
     - "input[type='file']"
   title_input_candidates:
     - "input[placeholder*='填写作品标题']"
+    - "input[placeholder*='获得更多流量']"
     - "input[placeholder*='作品标题']"
     - "input[maxlength]"
   description_input_candidates:
+    - "textarea[placeholder*='作品简介']"
+    - "div[data-placeholder]"
     - "div[contenteditable='true']"
     - "textarea"
   cover_file_inputs: "input[type='file']"
@@ -33,6 +36,10 @@ signals:
     - "0%"
     - "处理中"
     - "取消上传"
+  success:
+    - "发布成功"
+    - "提交成功"
+    - "正在审核"
 checkpoints:
   manual:
     - "登录和风控验证"
