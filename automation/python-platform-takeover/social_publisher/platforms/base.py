@@ -7,6 +7,7 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from social_publisher.browser import BrowserController
     from social_publisher.content_package import AssetPaths, PlatformContent
+    from playwright.sync_api import Locator
 
 
 @dataclass(frozen=True)
@@ -78,3 +79,42 @@ def content_snippet(value: str, *, limit: int = 18) -> str:
 
 def primary_select_all_shortcut() -> str:
     return "Meta+A" if platform_runtime.system() == "Darwin" else "Control+A"
+
+
+def read_locator_text(locator: "Locator | None") -> str:
+    if locator is None:
+        return ""
+    try:
+        value = locator.input_value(timeout=1500)
+    except Exception:  # noqa: BLE001
+        try:
+            value = locator.inner_text(timeout=1500)
+        except Exception:  # noqa: BLE001
+            return ""
+    return normalize_text(value)
+
+
+def text_matches_target(current: str, target: str) -> bool:
+    normalized_current = normalize_text(current)
+    normalized_target = normalize_text(target)
+    if not normalized_current or not normalized_target:
+        return True
+    return (
+        normalized_current in normalized_target
+        or normalized_target in normalized_current
+    )
+
+
+def detect_text_mismatch(
+    field_name: str,
+    current: str,
+    target: str,
+    *,
+    limit: int = 80,
+) -> str | None:
+    normalized_current = normalize_text(current)
+    if not normalized_current:
+        return None
+    if text_matches_target(normalized_current, target):
+        return None
+    return f"existing_{field_name}: {normalized_current[:limit]}"

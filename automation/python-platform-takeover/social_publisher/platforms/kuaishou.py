@@ -8,9 +8,11 @@ from social_publisher.browser import BrowserController
 from social_publisher.content_package import AssetPaths, PlatformContent
 from social_publisher.platform_mapping import load_platform_mapping
 from social_publisher.platforms.base import (
+    detect_text_mismatch,
     PlatformMetadata,
     PlatformPublisher,
     PublishResult,
+    read_locator_text,
     content_snippet,
     normalize_text,
     primary_select_all_shortcut,
@@ -76,6 +78,20 @@ class KuaishouPublisher(PlatformPublisher):
             reuse_contains="cp.kuaishou.com/article/publish/video",
         )
         self._resume_existing_draft_if_needed(compose_page, mapping)
+        mismatch = self._detect_draft_mismatch(
+            compose_page,
+            mapping,
+            platform_content.description,
+        )
+        if mismatch:
+            return PublishResult(
+                ok=False,
+                status="stopped_existing_draft_mismatch",
+                message="快手当前标签页残留的是旧草稿内容，停止接管。",
+                current_url=compose_page.url,
+                management_url=management_page.url,
+                notes=[mismatch],
+            )
         self._ensure_video_present(compose_page, mapping, Path(assets.main_video))
         self._type_description(compose_page, mapping, platform_content.description)
 
@@ -143,6 +159,21 @@ class KuaishouPublisher(PlatformPublisher):
             return
         file_inputs.first.set_input_files(str(video_path))
         self._wait_for_upload_settle(page, mapping)
+
+    def _detect_draft_mismatch(
+        self,
+        page: Page,
+        mapping: dict,
+        description: str,
+    ) -> str | None:
+        editor = page.locator(mapping["selectors"]["description_editor"])
+        if not editor.count():
+            return None
+        return detect_text_mismatch(
+            "description",
+            read_locator_text(editor.first),
+            description,
+        )
 
     def _type_description(self, page: Page, mapping: dict, description: str) -> None:
         editor = page.locator(mapping["selectors"]["description_editor"]).first
