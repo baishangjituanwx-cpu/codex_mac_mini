@@ -36,16 +36,16 @@
   - 核心依赖 `@larksuite/cli`
   - 由本地 `codex` CLI 和 `src/bridge.js` 串起来
 - 浏览器侧发布:
-- 当前最近成功流程不是固定的 Python 发布脚本
-- 而是 `Codex + 浏览器自动化会话` 执行
-- 具体成功 SOP 已经整理到 [`docs/browser-operation-sop.md`](./docs/browser-operation-sop.md)
-- 直接接管已有标签页、半成品草稿页、失败后恢复页的细粒度规则，整理到 [`docs/browser-tab-takeover-runbook.md`](./docs/browser-tab-takeover-runbook.md)
+  - 当前最近成功流程不是单一的“一键 Python 全平台发布器”
+  - 主链路仍然是 `Codex + 浏览器自动化会话`
+  - 具体成功 SOP 已经整理到 [`docs/browser-operation-sop.md`](./docs/browser-operation-sop.md)
+  - 直接接管已有标签页、半成品草稿页、失败后恢复页的细粒度规则，整理到 [`docs/browser-tab-takeover-runbook.md`](./docs/browser-tab-takeover-runbook.md)
 - Python 自动接管:
-  - 这次补上了 `automation/python-platform-takeover/` 脚手架
-  - 目前已经把平台级规则、接管前检查项、成功信号、工程结构统一下来
-  - 快手已经补到 `v0.1` 可执行接管链路
-  - 头条号、微博、百家号、知乎、抖音、微信视频号已经补到 `v0.1` 接管链路
-  - 还没有把 8 个平台全部做成“可直接跑完全流程”的稳定脚本
+  - `automation/python-platform-takeover/` 现在已经不是纯空壳
+  - 已经把平台规则、接管条件、成功信号、管理页验证方式沉淀成统一工程
+  - `快手 / 头条号 / 微博 / 百家号 / 知乎 / 抖音 / 微信视频号` 已补到 `v0.1`
+  - 这批脚本是通用 Python 代码，`Mac` 和 `Windows` 都能运行
+  - 但前提是你已经准备好 `Playwright + CDP 浏览器会话 + 平台登录态`
 - 数据复盘:
   - 当前主链路是 `发布包 Markdown + 发布日志 Markdown + review skill`
 - 视频制作:
@@ -169,8 +169,9 @@ node scripts/init_campaign.js --id 2026-04-11-ai-workflow --theme "这里写母�
   - 内容包读取骨架
   - CDP 接管浏览器骨架
   - 各平台规则元数据
-  - 快手 `--execute` 试点
-  - 头条号 / 微信视频号 `--execute` 试点
+  - `快手 / 头条号 / 微博 / 百家号 / 知乎 / 抖音 / 微信视频号` 的 `--execute` 试点
+  - 旧标签页残留旧草稿时停止接管
+  - 快手 / 头条号 / 抖音的成功信号与管理页二次验证兜底
 - 暂未完成:
   - 每个平台稳定 selector
   - 风控检查点恢复逻辑
@@ -181,6 +182,124 @@ node scripts/init_campaign.js --id 2026-04-11-ai-workflow --theme "这里写母�
 1. 快手
 2. 头条号
 3. 微信视频号
+
+### 7. Mac 直接使用说明
+
+如果你现在就在 `Mac` 上跑这套 Python 接管脚本，可以直接按下面走。
+
+先说边界:
+
+- 这是“接管现有浏览器会话”的方案
+- 不是从零启动一个全新匿名浏览器帮你登录所有平台
+- 更不是 8 平台全部稳定量产的一键发布器
+
+#### 7.1 你需要先准备好的东西
+
+- `macOS` 本机
+- `Python 3.10+`
+- `Google Chrome` 或其他 Chromium 内核浏览器
+- 已经登录好的平台后台
+- 一份内容包 YAML
+- 本地视频和封面素材绝对路径
+
+#### 7.2 在 Mac 上启动一个可接管的浏览器
+
+推荐单独开一个 Chrome profile，不要污染你日常浏览器。
+
+示例命令:
+
+```bash
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+  --remote-debugging-port=9222 \
+  --user-data-dir="$HOME/.codex-chrome-takeover"
+```
+
+启动后，用这个浏览器窗口手动登录你要发的平台。后面的 Python 脚本会通过 `CDP` 接管这组标签页。
+
+#### 7.3 安装 Python 接管环境
+
+```bash
+cd automation/python-platform-takeover
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e '.[dev]'
+playwright install chromium
+cp .env.example .env
+```
+
+`.env` 里最关键的是:
+
+- `BROWSER_CDP_URL=http://127.0.0.1:9222`
+- `DEFAULT_TAKEOVER_MODE=existing-tab`
+
+#### 7.4 准备内容包
+
+先复制一份示例:
+
+```bash
+cp configs/content-package.example.yaml configs/content-package.local.yaml
+```
+
+然后至少改这几项:
+
+- `campaign_id`
+- `assets.main_video`
+- `assets.cover_3_4`
+- `assets.cover_4_3`
+- 你要发布的平台标题和正文
+
+这里的素材路径建议全部写绝对路径，少踩一次路径坑，心情会更好一点。
+
+#### 7.5 先检查浏览器标签页是否接得上
+
+```bash
+source .venv/bin/activate
+social-publisher inspect-tabs --url-contains channels.weixin.qq.com
+```
+
+如果能看到当前打开的后台标签页，说明 Mac 这边的 `CDP` 接管已经通了。
+
+#### 7.6 先跑安全模式
+
+先不要急着真发，先看规则:
+
+```bash
+social-publisher readiness wechat_channels
+social-publisher publish wechat_channels configs/content-package.local.yaml
+```
+
+这一步默认只会输出 readiness 和接管条件，不会真实点击发布。
+
+#### 7.7 再跑真实接管
+
+确认浏览器里就是你要接管的那组登录态和标签页后，再执行:
+
+```bash
+social-publisher publish wechat_channels configs/content-package.local.yaml --execute
+```
+
+目前已经接上真实接管链路的平台有:
+
+- `kuaishou`
+- `toutiao`
+- `weibo`
+- `baijiahao`
+- `zhihu`
+- `douyin`
+- `wechat_channels`
+
+#### 7.8 Mac 直接使用时的几个硬规则
+
+- 发布前先看管理页或列表页，避免重复发
+- 旧标签页里如果残留的是别的草稿，脚本会停止接管
+- 脚本点击了发布，不等于平台一定成功入库，还要看返回的验证结果
+- 遇到验证码、风控、人工确认封面这类检查点，要人工接手
+
+如果你想把“Mac 上直接使用”这条线继续稳定下来，优先做的是:
+
+1. 用你自己的已登录浏览器标签页跑一轮 `inspect-tabs`
+2. 先试 `wechat_channels / toutiao / kuaishou`
+3. 跑完后把真实 selector 偏差和人工检查点补回代码
 ## 最近成功基线
 
 当前这份仓库主要依据两条本地成功证据整理:

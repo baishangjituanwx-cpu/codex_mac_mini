@@ -40,19 +40,55 @@ def inspect_tabs(url_contains: str = "") -> None:
 
 
 @app.command("publish")
-def publish(platform: str, package: Path) -> None:
+def publish(
+    platform: str,
+    package: Path,
+    execute: bool = typer.Option(
+        False,
+        "--execute",
+        help="Run the live publish flow when the platform implementation supports it.",
+    ),
+) -> None:
     publisher = build_publisher(platform)
     content_package = load_package(package)
     if platform not in content_package.platforms:
         raise typer.BadParameter(f"{platform} not found in package.")
 
-    typer.echo(f"campaign_id: {content_package.campaign_id}")
-    typer.echo(f"platform: {platform}")
-    typer.echo("当前是接管脚手架模式，先输出 readiness 清单。")
-    typer.echo("")
-    typer.echo("\n".join(publisher.readiness_lines()))
-    typer.echo("")
-    typer.echo("下一步: 把该平台的 selector、检查点恢复和管理页验证写进正式发布器。")
+    if not execute:
+        typer.echo(f"campaign_id: {content_package.campaign_id}")
+        typer.echo(f"platform: {platform}")
+        typer.echo("当前默认还是安全模式，先输出 readiness 清单。")
+        typer.echo("")
+        typer.echo("\n".join(publisher.readiness_lines()))
+        typer.echo("")
+        typer.echo("如果要真正执行，追加 --execute。")
+        return
+
+    config = BrowserSessionConfig(cdp_url=os.getenv("BROWSER_CDP_URL"))
+    try:
+        with BrowserController(config) as controller:
+            result = publisher.publish(
+                controller,
+                content_package.platforms[platform],
+                content_package.assets,
+                dry_run=False,
+            )
+    except Exception as exc:  # noqa: BLE001
+        typer.echo("status: failed")
+        typer.echo("ok: False")
+        typer.echo(f"message: {exc}")
+        raise typer.Exit(1) from exc
+    typer.echo(f"status: {result.status}")
+    typer.echo(f"ok: {result.ok}")
+    typer.echo(f"message: {result.message}")
+    if result.current_url:
+        typer.echo(f"current_url: {result.current_url}")
+    if result.management_url:
+        typer.echo(f"management_url: {result.management_url}")
+    if result.notes:
+        typer.echo("notes:")
+        for note in result.notes:
+            typer.echo(f"- {note}")
 
 
 def main() -> None:

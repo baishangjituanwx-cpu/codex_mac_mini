@@ -71,9 +71,37 @@ automation/python-platform-takeover/
 cd automation/python-platform-takeover
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -e .
+pip install -e '.[dev]'
 playwright install chromium
 ```
+
+## Mac 直接使用
+
+这批脚本不是 Windows 专属，`Mac` 也可以直接使用。
+
+但它的“直接使用”准确含义是:
+
+- 通过 `CDP` 接管你已经打开并已登录的 Chromium 浏览器
+- 读取当前标签页状态
+- 继续接管发布页、草稿页或管理页
+
+不是:
+
+- 帮你从零创建登录态
+- 绕过验证码或风控
+- 保证 7 个平台在任何 UI 变动下都零维护
+
+### 1. 在 Mac 上启动浏览器
+
+推荐单独开一个 Chrome profile:
+
+```bash
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+  --remote-debugging-port=9222 \
+  --user-data-dir="$HOME/.codex-chrome-takeover"
+```
+
+然后在这个浏览器里手动登录各平台后台，并把待接管页面保持打开。
 
 ## 环境变量
 
@@ -88,8 +116,34 @@ cp .env.example .env
 - `BROWSER_CDP_URL`
 - `BROWSER_USER_DATA_DIR`
 - `RUN_HEADLESS`
+- `DEFAULT_TAKEOVER_MODE`
 
 如果你要“接管现有标签页”，优先走 `BROWSER_CDP_URL`。
+
+推荐值:
+
+```bash
+BROWSER_CDP_URL=http://127.0.0.1:9222
+DEFAULT_TAKEOVER_MODE=existing-tab
+RUN_HEADLESS=false
+```
+
+### 2. 准备内容包
+
+```bash
+cp configs/content-package.example.yaml configs/content-package.local.yaml
+```
+
+需要至少填好:
+
+- `campaign_id`
+- `assets.main_video`
+- `assets.cover_3_4`
+- `assets.cover_4_3`
+- 对应平台的 `title`
+- 对应平台的 `description`
+
+素材路径建议都写绝对路径。
 
 ## 示例命令
 
@@ -116,8 +170,14 @@ python -m social_publisher validate-package configs/content-package.example.yaml
 ```bash
 python -m social_publisher publish \
   --platform kuaishou \
-  --package configs/content-package.example.yaml \
+  --package configs/content-package.local.yaml \
   --execute
+```
+
+或者用安装后的命令:
+
+```bash
+social-publisher publish kuaishou configs/content-package.local.yaml --execute
 ```
 
 注意:
@@ -135,3 +195,29 @@ python -m social_publisher publish \
   - 还停留在脚手架阶段
 
 如果只是想先看规则，不加 `--execute`。
+
+## 推荐使用顺序
+
+在 Mac 上第一次接管，建议按这个顺序:
+
+1. `inspect-tabs`
+2. `readiness`
+3. 不带 `--execute` 的 `publish`
+4. 带 `--execute` 的 `publish`
+
+对应示例:
+
+```bash
+social-publisher inspect-tabs --url-contains mp.toutiao.com
+social-publisher readiness toutiao
+social-publisher publish toutiao configs/content-package.local.yaml
+social-publisher publish toutiao configs/content-package.local.yaml --execute
+```
+
+## 遇到这些情况先停下来
+
+- 平台弹出验证码
+- 当前标签页残留的是另一篇旧草稿
+- 管理页已经出现重复内容
+- 封面裁切结果需要人工确认
+- 发布按钮点击后，没有出现成功信号，也没有在管理页看到新条目
