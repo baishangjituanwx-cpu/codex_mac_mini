@@ -44,7 +44,7 @@
   - 这次补上了 `automation/python-platform-takeover/` 脚手架
   - 目前已经把平台级规则、接管前检查项、成功信号、工程结构统一下来
   - 快手已经补到 `v0.1` 可执行接管链路
-  - 头条号、微信视频号已经补了 selector / checkpoint mapping
+  - 头条号、微信视频号已经补到 `v0.1` 接管链路
   - 还没有把 8 个平台全部做成“可直接跑完全流程”的稳定脚本
 - 数据复盘:
   - 当前主链路是 `发布包 Markdown + 发布日志 Markdown + review skill`
@@ -186,7 +186,7 @@ node scripts/init_campaign.js --id 2026-04-11-ai-workflow --theme "这里写母�
   - CDP 接管浏览器骨架
   - 各平台规则元数据
   - 快手 `--execute` 试点
-  - 头条号 / 微信视频号 mapping
+  - 头条号 / 微信视频号 `--execute` 试点
 - 暂未完成:
   - 每个平台稳定 selector
   - 风控检查点恢复逻辑

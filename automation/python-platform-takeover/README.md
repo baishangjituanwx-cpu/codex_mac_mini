@@ -20,9 +20,11 @@
 - 未完成:
   - 每个平台稳定 selector
   - 风控检查点恢复
-  - 真正的发布动作实现
+  - 其余平台的真正发布动作实现
 - 已有可执行试点:
   - `快手 v0.1`
+  - `头条号 v0.1`
+  - `微信视频号 v0.1`
   - 通过 `--execute` 进入真实接管流程
   - 默认仍保持安全模式，不会直接点击发布
 
@@ -44,6 +46,7 @@ automation/python-platform-takeover/
 │   ├── content_package.py
 │   └── platforms/
 │       ├── __init__.py
+│       ├── base.py
 │       ├── baijiahao.py
 │       ├── douyin.py
 │       ├── kuaishou.py
@@ -117,11 +120,11 @@ python -m social_publisher publish \
 
 - 所有平台:
   - 都支持 readiness / inspect-tabs / validate-package
-- 快手:
+- 快手 / 头条号 / 微信视频号:
   - 已经接上 `--execute` 的真实接管链路
-  - 会先查 `作品管理`
+  - 都会先查管理页或列表页避免重复
   - 再接管发布页 / 草稿页
-  - 再回 `作品管理` 验证
+  - 最后回管理页或列表页验证
 - 其他平台:
   - 还停留在脚手架阶段
 

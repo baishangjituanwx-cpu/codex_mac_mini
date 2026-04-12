@@ -1,8 +1,12 @@
 selectors:
   publish_frame: "iframe[name='content']"
+  video_file_input: "input[type='file']"
   description_input_candidates:
+    - ".input-editor"
     - "textarea"
   short_title_candidates:
+    - "input[placeholder='概括视频主要内容，字数建议6-16个字符']"
+    - "input[placeholder*='6-16']"
     - "input"
   cover_file_inputs:
     - "input[type='file']"
@@ -16,6 +20,9 @@ buttons:
   publish:
     - "发表"
 signals:
+  login_required:
+    - "扫码登录"
+    - "请使用微信扫码登录"
   pending_upload:
     - "请上传视频"
     - "取消上传"
@@ -32,3 +39,8 @@ stops:
   duplicate_conditions:
     - "视频管理已有同视频"
     - "当前 visible UI 和 frame 真实状态不一致"
+verify:
+  management_status:
+    - "已发表"
+    - "审核中"
+    - "处理中"
