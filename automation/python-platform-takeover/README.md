@@ -44,6 +44,9 @@ automation/python-platform-takeover/
 │   └── platforms.example.yaml
 ├── pyproject.toml
 ├── README.md
+├── scripts/
+│   ├── social-publisher.ps1
+│   └── start-chrome-cdp.ps1
 ├── social_publisher/
 │   ├── __init__.py
 │   ├── __main__.py
@@ -67,6 +70,8 @@ automation/python-platform-takeover/
 
 ## 安装
 
+macOS / Linux:
+
 ```bash
 cd automation/python-platform-takeover
 python3 -m venv .venv
@@ -75,9 +80,18 @@ pip install -e '.[dev]'
 playwright install chromium
 ```
 
-## Mac 直接使用
+Windows PowerShell:
 
-这批脚本不是 Windows 专属，`Mac` 也可以直接使用。
+```powershell
+Set-Location automation/python-platform-takeover
+py -3 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
+.\.venv\Scripts\python.exe -m playwright install chromium
+```
+
+## 直接使用的准确含义
+
+这批脚本不是 Windows 专属，`Mac` 和 `Windows` 都可以直接使用。
 
 但它的“直接使用”准确含义是:
 
@@ -91,7 +105,9 @@ playwright install chromium
 - 绕过验证码或风控
 - 保证 7 个平台在任何 UI 变动下都零维护
 
-### 1. 在 Mac 上启动浏览器
+## 启动浏览器
+
+### macOS
 
 推荐单独开一个 Chrome profile:
 
@@ -101,14 +117,36 @@ playwright install chromium
   --user-data-dir="$HOME/.codex-chrome-takeover"
 ```
 
+### Windows PowerShell
+
+仓库已附带 PowerShell 启动器，会优先寻找 Chrome，也兼容 Edge:
+
+```powershell
+.\scripts\start-chrome-cdp.ps1
+```
+
+如果要指定端口或 profile 目录:
+
+```powershell
+.\scripts\start-chrome-cdp.ps1 -Port 9222 -ProfileDir "$HOME\.codex-chrome-takeover"
+```
+
 然后在这个浏览器里手动登录各平台后台，并把待接管页面保持打开。
 
 ## 环境变量
 
 复制:
 
+macOS / Linux:
+
 ```bash
 cp .env.example .env
+```
+
+Windows PowerShell:
+
+```powershell
+Copy-Item .env.example .env
 ```
 
 核心变量:
@@ -128,10 +166,20 @@ DEFAULT_TAKEOVER_MODE=existing-tab
 RUN_HEADLESS=false
 ```
 
-### 2. 准备内容包
+Windows 上如果要在 YAML 或 `.env` 中写素材绝对路径，优先使用正斜杠格式，例如 `C:/Users/name/Desktop/video.mp4`，这样最不容易踩转义问题。
+
+## 准备内容包
+
+macOS / Linux:
 
 ```bash
 cp configs/content-package.example.yaml configs/content-package.local.yaml
+```
+
+Windows PowerShell:
+
+```powershell
+Copy-Item configs/content-package.example.yaml configs/content-package.local.yaml
 ```
 
 需要至少填好:
@@ -147,37 +195,23 @@ cp configs/content-package.example.yaml configs/content-package.local.yaml
 
 ## 示例命令
 
-查看某个平台的接管规则:
+macOS / Linux:
 
 ```bash
 python -m social_publisher readiness wechat_channels
-```
-
-查看当前浏览器里有哪些标签页:
-
-```bash
 python -m social_publisher inspect-tabs --url-contains channels.weixin.qq.com
-```
-
-验证内容包是否可读:
-
-```bash
 python -m social_publisher validate-package configs/content-package.example.yaml
-```
-
-尝试进入发布入口:
-
-```bash
-python -m social_publisher publish \
-  --platform kuaishou \
-  --package configs/content-package.local.yaml \
-  --execute
-```
-
-或者用安装后的命令:
-
-```bash
+python -m social_publisher publish --platform kuaishou --package configs/content-package.local.yaml --execute
 social-publisher publish kuaishou configs/content-package.local.yaml --execute
+```
+
+Windows PowerShell:
+
+```powershell
+.\scripts\social-publisher.ps1 readiness wechat_channels
+.\scripts\social-publisher.ps1 inspect-tabs --url-contains channels.weixin.qq.com
+.\scripts\social-publisher.ps1 validate-package configs/content-package.example.yaml
+.\scripts\social-publisher.ps1 publish --platform kuaishou --package configs/content-package.local.yaml --execute
 ```
 
 注意:
@@ -198,20 +232,29 @@ social-publisher publish kuaishou configs/content-package.local.yaml --execute
 
 ## 推荐使用顺序
 
-在 Mac 上第一次接管，建议按这个顺序:
+第一次接管，建议按这个顺序:
 
 1. `inspect-tabs`
 2. `readiness`
 3. 不带 `--execute` 的 `publish`
 4. 带 `--execute` 的 `publish`
 
-对应示例:
+macOS / Linux:
 
 ```bash
 social-publisher inspect-tabs --url-contains mp.toutiao.com
 social-publisher readiness toutiao
 social-publisher publish toutiao configs/content-package.local.yaml
 social-publisher publish toutiao configs/content-package.local.yaml --execute
+```
+
+Windows PowerShell:
+
+```powershell
+.\scripts\social-publisher.ps1 inspect-tabs --url-contains mp.toutiao.com
+.\scripts\social-publisher.ps1 readiness toutiao
+.\scripts\social-publisher.ps1 publish --platform toutiao --package configs/content-package.local.yaml
+.\scripts\social-publisher.ps1 publish --platform toutiao --package configs/content-package.local.yaml --execute
 ```
 
 ## 遇到这些情况先停下来
