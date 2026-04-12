@@ -20,7 +20,19 @@
 - 未完成:
   - 每个平台稳定 selector
   - 风控检查点恢复
-  - 真正的发布动作实现
+  - 其余平台的真正发布动作实现
+- 已有可执行试点:
+  - `快手 v0.1`
+  - `头条号 v0.1`
+  - `微博 v0.1`
+  - `百家号 v0.1`
+  - `知乎 v0.1`
+  - `抖音 v0.1`
+  - `微信视频号 v0.1`
+  - 这 7 个平台都已补上“旧标签页残留旧草稿时停止接管”的保护
+  - 其中快手、头条号、抖音已补上“发布页成功信号 + 管理页重试验证”的双层兜底
+  - 通过 `--execute` 进入真实接管流程
+  - 默认仍保持安全模式，不会直接点击发布
 
 ## 目录
 
@@ -104,16 +116,22 @@ python -m social_publisher validate-package configs/content-package.example.yaml
 ```bash
 python -m social_publisher publish \
   --platform kuaishou \
-  --package configs/content-package.example.yaml
+  --package configs/content-package.example.yaml \
+  --execute
 ```
 
 注意:
 
-当前 `publish` 命令还不会替你完成整条发布链路，它会先做:
+当前状态分两层:
 
-- 内容包读取
-- 平台规则加载
-- 接管前检查项输出
-- 浏览器接管准备
+- 所有平台:
+  - 都支持 readiness / inspect-tabs / validate-package
+- 快手 / 头条号 / 微博 / 百家号 / 知乎 / 抖音 / 微信视频号:
+  - 已经接上 `--execute` 的真实接管链路
+  - 都会先查管理页或列表页避免重复
+  - 再接管发布页 / 草稿页
+  - 最后回管理页或列表页验证
+- 其他平台:
+  - 还停留在脚手架阶段
 
-后续再逐个平台补正式实现。
+如果只是想先看规则，不加 `--execute`。
