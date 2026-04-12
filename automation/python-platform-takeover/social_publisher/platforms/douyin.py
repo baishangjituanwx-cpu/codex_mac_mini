@@ -142,12 +142,21 @@ class DouyinPublisher(PlatformPublisher):
             )
 
         self._click_publish(compose_page, mapping)
-        verified = self._find_existing_entry(
+        if self._has_success_signal(compose_page, mapping):
+            notes.append("composer_signal: success")
+            return PublishResult(
+                ok=True,
+                status="submitted",
+                message="抖音发布已提交，发布页出现了成功信号。",
+                current_url=compose_page.url,
+                management_url=management_page.url,
+                notes=notes,
+            )
+        verified = self._wait_for_existing_entry(
             management_page,
             mapping,
             description_marker,
             title_marker,
-            refresh=True,
         )
         if verified:
             return PublishResult(
@@ -282,6 +291,29 @@ class DouyinPublisher(PlatformPublisher):
         statuses = mapping["verify"]["management_status"]
         markers = [marker for marker in (description_marker, title_marker) if marker]
         return any(marker in text for marker in markers) and any(status in text for status in statuses)
+
+    def _wait_for_existing_entry(
+        self,
+        page: Page,
+        mapping: dict,
+        description_marker: str,
+        title_marker: str,
+    ) -> bool:
+        for _ in range(4):
+            if self._find_existing_entry(
+                page,
+                mapping,
+                description_marker,
+                title_marker,
+                refresh=True,
+            ):
+                return True
+            page.wait_for_timeout(1200)
+        return False
+
+    def _has_success_signal(self, page: Page, mapping: dict) -> bool:
+        text = normalize_text(page.locator("body").inner_text())
+        return any(marker in text for marker in mapping["signals"]["success"])
 
     def _wait_for_upload_settle(self, page: Page, mapping: dict) -> None:
         pending_markers = mapping["signals"]["pending_upload"]

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from playwright.sync_api import Page, TimeoutError as PlaywrightTimeoutError
+from playwright.sync_api import Locator, Page, TimeoutError as PlaywrightTimeoutError
 
 from social_publisher.browser import BrowserController
 from social_publisher.content_package import AssetPaths, PlatformContent
@@ -62,6 +62,15 @@ class KuaishouPublisher(PlatformPublisher):
             self.metadata.management_urls[0],
             reuse_contains="cp.kuaishou.com/article/manage",
         )
+        if self._is_login_gate(management_page, mapping):
+            return PublishResult(
+                ok=False,
+                status="manual_login_required",
+                message="快手当前停在登录检查点，先人工恢复登录态再继续。",
+                current_url=management_page.url,
+                management_url=management_page.url,
+                notes=mapping["checkpoints"]["manual"],
+            )
         duplicate = self._find_existing_entry(management_page, mapping, snippet)
         if duplicate:
             return PublishResult(
@@ -77,6 +86,15 @@ class KuaishouPublisher(PlatformPublisher):
             self.metadata.compose_urls[0],
             reuse_contains="cp.kuaishou.com/article/publish/video",
         )
+        if self._is_login_gate(compose_page, mapping):
+            return PublishResult(
+                ok=False,
+                status="manual_login_required",
+                message="快手发布页当前停在登录检查点，先人工恢复登录态再继续。",
+                current_url=compose_page.url,
+                management_url=management_page.url,
+                notes=mapping["checkpoints"]["manual"],
+            )
         self._resume_existing_draft_if_needed(compose_page, mapping)
         mismatch = self._detect_draft_mismatch(
             compose_page,
@@ -114,9 +132,17 @@ class KuaishouPublisher(PlatformPublisher):
             )
 
         self._click_publish(compose_page, mapping)
-        verified = self._find_existing_entry(
-            management_page, mapping, snippet, refresh=True
-        )
+        if self._has_success_signal(compose_page, mapping):
+            notes.append("composer_signal: success")
+            return PublishResult(
+                ok=True,
+                status="submitted",
+                message="快手发布已提交，发布页出现了成功信号。",
+                current_url=compose_page.url,
+                management_url=management_page.url,
+                notes=notes + [f"matched_snippet: {snippet}"],
+            )
+        verified = self._wait_for_existing_entry(management_page, mapping, snippet)
         if verified:
             return PublishResult(
                 ok=True,
@@ -154,7 +180,7 @@ class KuaishouPublisher(PlatformPublisher):
                 return
         if not video_path.exists():
             raise FileNotFoundError(f"Video file not found: {video_path}")
-        file_inputs = page.locator(mapping["selectors"]["file_input"])
+        file_inputs = self._file_inputs(page, mapping["selectors"]["file_input_candidates"])
         if not file_inputs.count():
             return
         file_inputs.first.set_input_files(str(video_path))
@@ -166,17 +192,18 @@ class KuaishouPublisher(PlatformPublisher):
         mapping: dict,
         description: str,
     ) -> str | None:
-        editor = page.locator(mapping["selectors"]["description_editor"])
-        if not editor.count():
-            return None
+        editor = self._maybe_first_locator(
+            page,
+            mapping["selectors"]["description_input_candidates"],
+        )
         return detect_text_mismatch(
             "description",
-            read_locator_text(editor.first),
+            read_locator_text(editor),
             description,
         )
 
     def _type_description(self, page: Page, mapping: dict, description: str) -> None:
-        editor = page.locator(mapping["selectors"]["description_editor"]).first
+        editor = self._first_locator(page, mapping["selectors"]["description_input_candidates"])
         editor.wait_for(timeout=8000)
         editor.click()
         page.keyboard.press(primary_select_all_shortcut())
@@ -196,7 +223,7 @@ class KuaishouPublisher(PlatformPublisher):
                     break
                 except PlaywrightTimeoutError:
                     continue
-        file_inputs = page.locator(mapping["selectors"]["file_input"])
+        file_inputs = self._file_inputs(page, mapping["selectors"]["cover_file_input_candidates"])
         input_count = file_inputs.count()
         if not input_count:
             raise RuntimeError("No file input found for Kuaishou cover upload.")
@@ -216,6 +243,10 @@ class KuaishouPublisher(PlatformPublisher):
                     continue
         raise RuntimeError("Unable to locate a clickable publish button on Kuaishou.")
 
+    def _has_success_signal(self, page: Page, mapping: dict) -> bool:
+        text = normalize_text(page.locator("body").inner_text())
+        return any(marker in text for marker in mapping["signals"]["success"])
+
     def _find_existing_entry(
         self, page: Page, mapping: dict, snippet: str, *, refresh: bool = False
     ) -> bool:
@@ -225,6 +256,13 @@ class KuaishouPublisher(PlatformPublisher):
         text = normalize_text(page.locator("body").inner_text())
         statuses = mapping["verify"]["management_status"]
         return snippet in text and any(status in text for status in statuses)
+
+    def _wait_for_existing_entry(self, page: Page, mapping: dict, snippet: str) -> bool:
+        for _ in range(4):
+            if self._find_existing_entry(page, mapping, snippet, refresh=True):
+                return True
+            page.wait_for_timeout(1200)
+        return False
 
     def _pick_cover_path(self, assets: AssetPaths) -> Path | None:
         for candidate in (assets.cover_3_4, assets.cover_4_3):
@@ -239,3 +277,27 @@ class KuaishouPublisher(PlatformPublisher):
             if not any(marker in text for marker in pending_markers):
                 return
             page.wait_for_timeout(1000)
+
+    def _is_login_gate(self, page: Page, mapping: dict) -> bool:
+        text = normalize_text(page.locator("body").inner_text())
+        return any(marker in text for marker in mapping["signals"]["login_required"])
+
+    def _file_inputs(self, page: Page, selectors: list[str]) -> Locator:
+        for selector in selectors:
+            locator = page.locator(selector)
+            if locator.count():
+                return locator
+        return page.locator("input[type='file']")
+
+    def _maybe_first_locator(self, page: Page, selectors: list[str]) -> Locator | None:
+        for selector in selectors:
+            locator = page.locator(selector)
+            if locator.count():
+                return locator.first
+        return None
+
+    def _first_locator(self, page: Page, selectors: list[str]) -> Locator:
+        locator = self._maybe_first_locator(page, selectors)
+        if locator is None:
+            raise RuntimeError(f"Unable to locate any selector from: {selectors}")
+        return locator
