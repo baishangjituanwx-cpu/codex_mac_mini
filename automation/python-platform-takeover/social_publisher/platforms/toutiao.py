@@ -1,8 +1,16 @@
 from __future__ import annotations
 
 from pathlib import Path
+from typing import TYPE_CHECKING
 
-from playwright.sync_api import Locator, Page, TimeoutError as PlaywrightTimeoutError
+try:
+    from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
+except ModuleNotFoundError:  # pragma: no cover - runtime fallback for readiness-only usage
+    class PlaywrightTimeoutError(Exception):
+        pass
+
+if TYPE_CHECKING:
+    from playwright.sync_api import Locator, Page
 
 from social_publisher.browser import BrowserController
 from social_publisher.content_package import AssetPaths, PlatformContent
