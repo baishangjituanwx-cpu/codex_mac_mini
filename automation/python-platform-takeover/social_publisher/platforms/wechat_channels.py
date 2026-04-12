@@ -8,12 +8,14 @@ from social_publisher.browser import BrowserController
 from social_publisher.content_package import AssetPaths, PlatformContent
 from social_publisher.platform_mapping import load_platform_mapping
 from social_publisher.platforms.base import (
+    detect_text_mismatch,
     PlatformMetadata,
     PlatformPublisher,
     PublishResult,
     content_snippet,
     normalize_text,
     primary_select_all_shortcut,
+    read_locator_text,
 )
 
 
@@ -110,6 +112,21 @@ class WeChatChannelsPublisher(PlatformPublisher):
             )
 
         frame = self._require_publish_frame(compose_page, mapping)
+        mismatch = self._detect_draft_mismatch(
+            frame,
+            mapping,
+            platform_content.title,
+            platform_content.description,
+        )
+        if mismatch:
+            return PublishResult(
+                ok=False,
+                status="stopped_existing_draft_mismatch",
+                message="视频号当前标签页残留的是旧草稿内容，停止接管。",
+                current_url=compose_page.url,
+                management_url=management_page.url,
+                notes=mismatch,
+            )
         self._ensure_video_present(compose_page, frame, mapping, Path(assets.main_video))
         self._type_description(compose_page, frame, mapping, platform_content.description)
         self._type_short_title(compose_page, frame, mapping, platform_content.title)
@@ -199,6 +216,39 @@ class WeChatChannelsPublisher(PlatformPublisher):
             raise RuntimeError("No video file input found on WeChat Channels create page.")
         file_inputs.first.set_input_files(str(video_path))
         self._wait_for_upload_settle(page, frame, mapping)
+
+    def _detect_draft_mismatch(
+        self,
+        frame: Frame,
+        mapping: dict,
+        short_title: str,
+        description: str,
+    ) -> list[str]:
+        issues: list[str] = []
+        description_locator = self._first_locator(
+            frame,
+            mapping["selectors"]["description_input_candidates"],
+        )
+        short_title_locator = self._first_locator(
+            frame,
+            mapping["selectors"]["short_title_candidates"],
+        )
+        description_mismatch = detect_text_mismatch(
+            "description",
+            read_locator_text(description_locator),
+            description,
+        )
+        short_title_mismatch = detect_text_mismatch(
+            "short_title",
+            read_locator_text(short_title_locator),
+            short_title,
+            limit=60,
+        )
+        if description_mismatch:
+            issues.append(description_mismatch)
+        if short_title_mismatch:
+            issues.append(short_title_mismatch)
+        return issues
 
     def _type_description(
         self,

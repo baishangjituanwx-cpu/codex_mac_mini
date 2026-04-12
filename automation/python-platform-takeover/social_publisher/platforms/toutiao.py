@@ -8,12 +8,14 @@ from social_publisher.browser import BrowserController
 from social_publisher.content_package import AssetPaths, PlatformContent
 from social_publisher.platform_mapping import load_platform_mapping
 from social_publisher.platforms.base import (
+    detect_text_mismatch,
     PlatformMetadata,
     PlatformPublisher,
     PublishResult,
     content_snippet,
     normalize_text,
     primary_select_all_shortcut,
+    read_locator_text,
 )
 
 
@@ -92,6 +94,21 @@ class ToutiaoPublisher(PlatformPublisher):
             )
 
         self._enter_compose_flow(compose_page, mapping)
+        mismatch = self._detect_draft_mismatch(
+            compose_page,
+            mapping,
+            platform_content.title,
+            platform_content.description,
+        )
+        if mismatch:
+            return PublishResult(
+                ok=False,
+                status="stopped_existing_draft_mismatch",
+                message="头条号当前标签页残留的是旧草稿内容，停止接管。",
+                current_url=compose_page.url,
+                management_url=management_page.url,
+                notes=mismatch,
+            )
         self._type_title(compose_page, mapping, platform_content.title)
         self._type_body(compose_page, mapping, platform_content.description)
 
@@ -166,6 +183,33 @@ class ToutiaoPublisher(PlatformPublisher):
         return self._has_candidate(page, mapping["selectors"]["title_input_candidates"]) and self._has_candidate(
             page, mapping["selectors"]["body_editor_candidates"]
         )
+
+    def _detect_draft_mismatch(
+        self,
+        page: Page,
+        mapping: dict,
+        title: str,
+        body: str,
+    ) -> list[str]:
+        issues: list[str] = []
+        title_input = self._first_locator(page, mapping["selectors"]["title_input_candidates"])
+        body_editor = self._first_locator(page, mapping["selectors"]["body_editor_candidates"])
+        title_mismatch = detect_text_mismatch(
+            "title",
+            read_locator_text(title_input),
+            title,
+            limit=60,
+        )
+        body_mismatch = detect_text_mismatch(
+            "body",
+            read_locator_text(body_editor),
+            body,
+        )
+        if title_mismatch:
+            issues.append(title_mismatch)
+        if body_mismatch:
+            issues.append(body_mismatch)
+        return issues
 
     def _type_title(self, page: Page, mapping: dict, title: str) -> None:
         title_input = self._first_locator(page, mapping["selectors"]["title_input_candidates"])
