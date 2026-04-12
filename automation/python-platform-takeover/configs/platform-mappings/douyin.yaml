@@ -1,0 +1,43 @@
+selectors:
+  video_file_input_candidates:
+    - "input[type='file'][accept*='video']"
+    - "input[type='file']"
+  title_input_candidates:
+    - "input[placeholder*='填写作品标题']"
+    - "input[placeholder*='作品标题']"
+    - "input[maxlength]"
+  description_input_candidates:
+    - "div[contenteditable='true']"
+    - "textarea"
+  cover_file_inputs: "input[type='file']"
+buttons:
+  cover_entry:
+    - "上传封面"
+    - "设置封面"
+  cover_confirm:
+    - "完成"
+    - "确定"
+  publish:
+    - "发布"
+signals:
+  login_required:
+    - "登录抖音创作服务平台"
+    - "扫码登录"
+    - "验证"
+  existing_video:
+    - "重新上传"
+    - "更换视频"
+    - "设置封面"
+  pending_upload:
+    - "上传中"
+    - "0%"
+    - "处理中"
+    - "取消上传"
+checkpoints:
+  manual:
+    - "登录和风控验证"
+    - "封面裁切后人工确认"
+verify:
+  management_status:
+    - "审核中"
+    - "已发布"
