@@ -205,6 +205,7 @@ macOS / Linux:
 ```bash
 python -m social_publisher readiness wechat_channels
 python -m social_publisher inspect-tabs --url-contains channels.weixin.qq.com
+python -m social_publisher inspect-tabs --platform wechat_channels --package configs/content-package.local.yaml
 python -m social_publisher validate-package configs/content-package.example.yaml
 python -m social_publisher publish kuaishou configs/content-package.local.yaml --execute
 social-publisher publish kuaishou configs/content-package.local.yaml --execute
@@ -215,9 +216,16 @@ Windows PowerShell:
 ```powershell
 .\scripts\social-publisher.ps1 readiness wechat_channels
 .\scripts\social-publisher.ps1 inspect-tabs --url-contains channels.weixin.qq.com
+.\scripts\social-publisher.ps1 inspect-tabs --platform wechat_channels --package configs/content-package.local.yaml
 .\scripts\social-publisher.ps1 validate-package configs/content-package.example.yaml
 .\scripts\social-publisher.ps1 publish kuaishou configs/content-package.local.yaml --execute
 ```
+
+新增的 `inspect-tabs --platform ... --package ...` 会按平台规则给现有标签页打分，输出:
+
+- 哪个 tab 最像这次要接管的草稿
+- 哪些字段已经和发布包匹配
+- 哪些 tab 属于旧草稿、登录页或缺关键 frame，应该停止接管
 
 注意:
 

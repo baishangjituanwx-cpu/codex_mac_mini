@@ -58,3 +58,22 @@ def test_open_or_activate_page_creates_page_when_missing() -> None:
     assert page.goto_calls == [("https://example.com/new", "domcontentloaded")]
     assert page.brought_to_front is True
     assert context.pages == [page]
+
+
+def test_open_or_activate_page_force_new_skips_existing_match() -> None:
+    existing = FakePage("https://example.com/editor")
+    context = FakeContext([existing])
+    controller = BrowserController(BrowserSessionConfig(cdp_url="http://127.0.0.1:9222"))
+    controller._browser = FakeBrowser([context])  # type: ignore[assignment]
+
+    page = controller.open_or_activate_page(
+        "https://example.com/editor",
+        reuse_contains="example.com/editor",
+        force_new=True,
+    )
+
+    assert page is not existing
+    assert page.url == "https://example.com/editor"
+    assert existing.brought_to_front is False
+    assert page.goto_calls == [("https://example.com/editor", "domcontentloaded")]
+    assert context.pages == [existing, page]

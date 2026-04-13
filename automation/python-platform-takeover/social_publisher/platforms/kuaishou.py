@@ -17,10 +17,13 @@ from social_publisher.content_package import AssetPaths, PlatformContent
 from social_publisher.platform_mapping import load_platform_mapping
 from social_publisher.platforms.base import (
     detect_text_mismatch,
+    evaluate_takeover_field,
     PlatformMetadata,
     PlatformPublisher,
     PublishResult,
+    pick_takeover_candidate,
     read_locator_text,
+    TakeoverCandidate,
     content_snippet,
     normalize_text,
     primary_select_all_shortcut,
@@ -56,6 +59,18 @@ class KuaishouPublisher(PlatformPublisher):
         ],
     )
 
+    def inspect_takeover_candidates(
+        self,
+        controller: BrowserController,
+        platform_content: PlatformContent,
+    ) -> list[TakeoverCandidate]:
+        mapping = load_platform_mapping("kuaishou")
+        return self._collect_compose_candidates(
+            controller,
+            mapping,
+            platform_content.description,
+        )
+
     def publish(
         self,
         controller: BrowserController,
@@ -90,9 +105,10 @@ class KuaishouPublisher(PlatformPublisher):
                 notes=[f"matched_snippet: {snippet}"],
             )
 
-        compose_page = controller.open_or_activate_page(
-            self.metadata.compose_urls[0],
-            reuse_contains="cp.kuaishou.com/article/publish/video",
+        compose_page, compose_notes = self._select_compose_page(
+            controller,
+            mapping,
+            platform_content.description,
         )
         if self._is_login_gate(compose_page, mapping):
             return PublishResult(
@@ -122,7 +138,7 @@ class KuaishouPublisher(PlatformPublisher):
         self._type_description(compose_page, mapping, platform_content.description)
 
         cover_path = self._pick_cover_path(assets)
-        notes: list[str] = []
+        notes = compose_notes.copy()
         if cover_path is not None:
             self._upload_cover(compose_page, mapping, cover_path)
             notes.append(f"cover: {cover_path}")
@@ -168,6 +184,74 @@ class KuaishouPublisher(PlatformPublisher):
             management_url=management_page.url,
             notes=notes + [f"matched_snippet: {snippet}"],
         )
+
+    def _select_compose_page(
+        self,
+        controller: BrowserController,
+        mapping: dict,
+        description: str,
+    ) -> tuple[Page, list[str]]:
+        candidates = self._collect_compose_candidates(controller, mapping, description)
+        selected = pick_takeover_candidate(candidates)
+        if selected is not None:
+            selected.page.bring_to_front()
+            return selected.page, self._candidate_notes(selected)
+        compose_page = controller.open_or_activate_page(
+            self.metadata.compose_urls[0],
+            reuse_contains="cp.kuaishou.com/article/publish/video",
+            force_new=True,
+        )
+        return compose_page, ["takeover: opened_fresh_compose_tab"]
+
+    def _collect_compose_candidates(
+        self,
+        controller: BrowserController,
+        mapping: dict,
+        description: str,
+    ) -> list[TakeoverCandidate]:
+        candidates: list[TakeoverCandidate] = []
+        for page in controller.find_pages_by_url("cp.kuaishou.com/article/publish/video"):
+            candidate = TakeoverCandidate(page=page, score=1)
+            if self._is_login_gate(page, mapping):
+                candidate.stop_reasons.append("login_gate")
+                candidates.append(candidate)
+                continue
+            body_text = normalize_text(page.locator("body").inner_text())
+            if any(marker in body_text for marker in mapping["signals"]["existing_video"]):
+                candidate.score += 1
+                candidate.notes.append("has_existing_video")
+            for text in mapping["buttons"]["continue_edit"]:
+                button = page.get_by_role("button", name=text)
+                if button.count():
+                    candidate.score += 1
+                    candidate.notes.append("continue_edit_prompt")
+                    break
+            editor = self._maybe_first_locator(
+                page,
+                mapping["selectors"]["description_input_candidates"],
+            )
+            score, matched_field, stop_reason = evaluate_takeover_field(
+                "description",
+                read_locator_text(editor),
+                description,
+            )
+            candidate.score += score
+            if matched_field:
+                candidate.matched_fields.append(matched_field)
+            if stop_reason:
+                candidate.stop_reasons.append(stop_reason)
+            candidates.append(candidate)
+        return candidates
+
+    def _candidate_notes(self, candidate: TakeoverCandidate) -> list[str]:
+        notes = [
+            "takeover: reused_existing_tab",
+            f"takeover_score: {candidate.score}",
+        ]
+        if candidate.matched_fields:
+            notes.append("takeover_fields: " + ", ".join(candidate.matched_fields))
+        notes.extend(candidate.notes)
+        return notes
 
     def _resume_existing_draft_if_needed(self, page: Page, mapping: dict) -> None:
         page.wait_for_timeout(1200)

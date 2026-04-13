@@ -17,13 +17,16 @@ from social_publisher.content_package import AssetPaths, PlatformContent
 from social_publisher.platform_mapping import load_platform_mapping
 from social_publisher.platforms.base import (
     detect_text_mismatch,
+    evaluate_takeover_field,
     PlatformMetadata,
     PlatformPublisher,
     PublishResult,
+    pick_takeover_candidate,
     content_snippet,
     normalize_text,
     primary_select_all_shortcut,
     read_locator_text,
+    TakeoverCandidate,
 )
 
 
@@ -60,6 +63,19 @@ class WeChatChannelsPublisher(PlatformPublisher):
             "create 页跳回 login.html",
         ],
     )
+
+    def inspect_takeover_candidates(
+        self,
+        controller: BrowserController,
+        platform_content: PlatformContent,
+    ) -> list[TakeoverCandidate]:
+        mapping = load_platform_mapping("wechat_channels")
+        return self._collect_compose_candidates(
+            controller,
+            mapping,
+            platform_content.title,
+            platform_content.description,
+        )
 
     def publish(
         self,
@@ -105,9 +121,11 @@ class WeChatChannelsPublisher(PlatformPublisher):
                 ],
             )
 
-        compose_page = controller.open_or_activate_page(
-            self.metadata.compose_urls[1],
-            reuse_contains="platform/post/create",
+        compose_page, frame, compose_notes = self._select_compose_page(
+            controller,
+            mapping,
+            platform_content.title,
+            platform_content.description,
         )
         if self._is_login_gate(compose_page, mapping):
             return PublishResult(
@@ -119,7 +137,6 @@ class WeChatChannelsPublisher(PlatformPublisher):
                 notes=mapping["checkpoints"]["manual"],
             )
 
-        frame = self._require_publish_frame(compose_page, mapping)
         mismatch = self._detect_draft_mismatch(
             frame,
             mapping,
@@ -139,7 +156,7 @@ class WeChatChannelsPublisher(PlatformPublisher):
         self._type_description(compose_page, frame, mapping, platform_content.description)
         self._type_short_title(compose_page, frame, mapping, platform_content.title)
 
-        notes = [
+        notes = compose_notes + [
             f"matched_title: {title_marker}",
             f"matched_description: {description_marker}",
         ]
@@ -197,9 +214,106 @@ class WeChatChannelsPublisher(PlatformPublisher):
             notes=notes,
         )
 
-    def _require_publish_frame(self, page: Page, mapping: dict) -> Frame:
-        page.locator(mapping["selectors"]["publish_frame"]).first.wait_for(timeout=8000)
-        for _ in range(10):
+    def _select_compose_page(
+        self,
+        controller: BrowserController,
+        mapping: dict,
+        short_title: str,
+        description: str,
+    ) -> tuple[Page, Frame, list[str]]:
+        candidates = self._collect_compose_candidates(
+            controller,
+            mapping,
+            short_title,
+            description,
+        )
+        selected = pick_takeover_candidate(candidates)
+        if selected is not None:
+            selected.page.bring_to_front()
+            frame = self._require_publish_frame(selected.page, mapping)
+            return selected.page, frame, self._candidate_notes(selected)
+
+        compose_page = controller.open_or_activate_page(
+            self.metadata.compose_urls[1],
+            reuse_contains="platform/post/create",
+            force_new=True,
+        )
+        frame = self._require_publish_frame(compose_page, mapping)
+        return compose_page, frame, ["takeover: opened_fresh_compose_tab"]
+
+    def _collect_compose_candidates(
+        self,
+        controller: BrowserController,
+        mapping: dict,
+        short_title: str,
+        description: str,
+    ) -> list[TakeoverCandidate]:
+        candidates: list[TakeoverCandidate] = []
+        for page in controller.find_pages_by_url("platform/post/create"):
+            candidate = TakeoverCandidate(page=page, score=1)
+            if self._is_login_gate(page, mapping):
+                candidate.stop_reasons.append("login_gate")
+                candidates.append(candidate)
+                continue
+
+            try:
+                frame = self._require_publish_frame(page, mapping, timeout=1500)
+            except RuntimeError:
+                candidate.stop_reasons.append("missing_publish_frame")
+                candidates.append(candidate)
+                continue
+
+            frame_text = normalize_text(frame.locator("body").inner_text())
+            if any(marker in frame_text for marker in mapping["signals"]["existing_video"]):
+                candidate.score += 1
+                candidate.notes.append("has_existing_video")
+
+            description_locator = self._maybe_first_locator(
+                frame,
+                mapping["selectors"]["description_input_candidates"],
+            )
+            short_title_locator = self._maybe_first_locator(
+                frame,
+                mapping["selectors"]["short_title_candidates"],
+            )
+            for field_name, current, target, limit in (
+                ("description", read_locator_text(description_locator), description, 80),
+                ("short_title", read_locator_text(short_title_locator), short_title, 60),
+            ):
+                score, matched_field, stop_reason = evaluate_takeover_field(
+                    field_name,
+                    current,
+                    target,
+                    limit=limit,
+                )
+                candidate.score += score
+                if matched_field:
+                    candidate.matched_fields.append(matched_field)
+                if stop_reason:
+                    candidate.stop_reasons.append(stop_reason)
+            candidates.append(candidate)
+        return candidates
+
+    def _candidate_notes(self, candidate: TakeoverCandidate) -> list[str]:
+        notes = [
+            "takeover: reused_existing_tab",
+            f"takeover_score: {candidate.score}",
+        ]
+        if candidate.matched_fields:
+            notes.append("takeover_fields: " + ", ".join(candidate.matched_fields))
+        notes.extend(candidate.notes)
+        return notes
+
+    def _require_publish_frame(
+        self,
+        page: Page,
+        mapping: dict,
+        *,
+        timeout: int = 8000,
+    ) -> Frame:
+        page.locator(mapping["selectors"]["publish_frame"]).first.wait_for(timeout=timeout)
+        attempts = max(1, timeout // 300)
+        for _ in range(attempts):
             frame = page.frame(name="content")
             if frame is not None:
                 return frame
@@ -356,11 +470,21 @@ class WeChatChannelsPublisher(PlatformPublisher):
         raise RuntimeError(f"Unable to locate a clickable button from: {names}")
 
     def _first_locator(self, frame: Frame, selectors: list[str]) -> Locator:
+        locator = self._maybe_first_locator(frame, selectors)
+        if locator is not None:
+            return locator
+        raise RuntimeError(f"Unable to locate any selector from: {selectors}")
+
+    def _maybe_first_locator(
+        self,
+        frame: Frame,
+        selectors: list[str],
+    ) -> Locator | None:
         for selector in selectors:
             locator = frame.locator(selector)
             if locator.count():
                 return locator.first
-        raise RuntimeError(f"Unable to locate any selector from: {selectors}")
+        return None
 
     def _clear_and_type(self, page: Page, locator: Locator, text: str) -> None:
         locator.wait_for(timeout=8000)

@@ -16,9 +16,13 @@ from social_publisher.browser import BrowserController
 from social_publisher.content_package import AssetPaths, PlatformContent
 from social_publisher.platform_mapping import load_platform_mapping
 from social_publisher.platforms.base import (
+    evaluate_takeover_field,
     PlatformMetadata,
     PlatformPublisher,
     PublishResult,
+    pick_takeover_candidate,
+    read_locator_text,
+    TakeoverCandidate,
     content_snippet,
     normalize_text,
     primary_select_all_shortcut,
@@ -56,6 +60,19 @@ class BaijiahaoPublisher(PlatformPublisher):
         ],
     )
 
+    def inspect_takeover_candidates(
+        self,
+        controller: BrowserController,
+        platform_content: PlatformContent,
+    ) -> list[TakeoverCandidate]:
+        mapping = load_platform_mapping("baijiahao")
+        return self._collect_editor_candidates(
+            controller,
+            mapping,
+            platform_content.title,
+            platform_content.description,
+        )
+
     def publish(
         self,
         controller: BrowserController,
@@ -91,7 +108,12 @@ class BaijiahaoPublisher(PlatformPublisher):
                 notes=[f"matched_title: {title_marker}"],
             )
 
-        compose_page = self._open_editor(controller, mapping)
+        compose_page, compose_notes = self._select_editor_page(
+            controller,
+            mapping,
+            platform_content.title,
+            platform_content.description,
+        )
         if self._is_login_gate(compose_page, mapping):
             return PublishResult(
                 ok=False,
@@ -122,7 +144,7 @@ class BaijiahaoPublisher(PlatformPublisher):
         self._type_title(compose_page, mapping, platform_content.title)
         self._type_body(compose_page, mapping, platform_content.description)
 
-        notes = [f"matched_title: {title_marker}"]
+        notes = compose_notes + [f"matched_title: {title_marker}"]
         cover_path = self._pick_cover_path(assets)
         if cover_path is not None:
             self._upload_cover(compose_page, mapping, cover_path)
@@ -177,15 +199,71 @@ class BaijiahaoPublisher(PlatformPublisher):
             notes=notes,
         )
 
-    def _open_editor(self, controller: BrowserController, mapping: dict) -> Page:
-        for page in controller.find_pages_by_url("baijiahao.baidu.com"):
-            if self._looks_like_editor(page, mapping):
-                page.bring_to_front()
-                return page
-        return controller.open_or_activate_page(
+    def _select_editor_page(
+        self,
+        controller: BrowserController,
+        mapping: dict,
+        title: str,
+        body: str,
+    ) -> tuple[Page, list[str]]:
+        candidates = self._collect_editor_candidates(controller, mapping, title, body)
+        selected = pick_takeover_candidate(candidates)
+        if selected is not None:
+            selected.page.bring_to_front()
+            return selected.page, self._candidate_notes(selected)
+        page = controller.open_or_activate_page(
             self.metadata.compose_urls[0],
             reuse_contains="baijiahao.baidu.com",
+            force_new=True,
         )
+        return page, ["takeover: opened_fresh_compose_tab"]
+
+    def _collect_editor_candidates(
+        self,
+        controller: BrowserController,
+        mapping: dict,
+        title: str,
+        body: str,
+    ) -> list[TakeoverCandidate]:
+        candidates: list[TakeoverCandidate] = []
+        for page in controller.find_pages_by_url("baijiahao.baidu.com"):
+            candidate = TakeoverCandidate(page=page, score=1)
+            if self._is_login_gate(page, mapping):
+                candidate.stop_reasons.append("login_gate")
+                candidates.append(candidate)
+                continue
+            if not self._looks_like_editor(page, mapping):
+                candidate.stop_reasons.append("not_editor")
+                candidates.append(candidate)
+                continue
+            title_locator = self._maybe_first_locator(page, mapping["selectors"]["title_input_candidates"])
+            body_locator = self._maybe_first_locator(page, mapping["selectors"]["body_editor_candidates"])
+            for field_name, current, target, limit in (
+                ("title", read_locator_text(title_locator), title, 60),
+                ("body", read_locator_text(body_locator), body, 80),
+            ):
+                score, matched_field, stop_reason = evaluate_takeover_field(
+                    field_name,
+                    current,
+                    target,
+                    limit=limit,
+                )
+                candidate.score += score
+                if matched_field:
+                    candidate.matched_fields.append(matched_field)
+                if stop_reason:
+                    candidate.stop_reasons.append(stop_reason)
+            candidates.append(candidate)
+        return candidates
+
+    def _candidate_notes(self, candidate: TakeoverCandidate) -> list[str]:
+        notes = [
+            "takeover: reused_existing_tab",
+            f"takeover_score: {candidate.score}",
+        ]
+        if candidate.matched_fields:
+            notes.append("takeover_fields: " + ", ".join(candidate.matched_fields))
+        return notes
 
     def _enter_compose_flow(self, page: Page, mapping: dict) -> None:
         if self._looks_like_editor(page, mapping):
