@@ -218,12 +218,343 @@
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/images/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering patterns.
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/kv/README.md` | `added` | Added reference material for `cloudflare-deploy` covering readme.
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/kv/api.md` | `added` | Added reference material for `cloudflare-deploy` covering api.
+
+## 2026-04-13 01:24:05 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 00:22:32 CST`（对应上次运行 `2026-04-12T16:22:32.322Z`）
+- 结果汇总: 新增 1，修改 10，删除 0。
+- 说明:
+- `~/.codex/skills`、仓库 `skills/`、`skill-center/` 在本轮没有晚于基线的新变更。
+- `skills/codex-feishu-bridge-skill/**` 虽然仍有未提交改动，但文件 mtime 全部早于基线，未计入本轮。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_browser_controller.py` | `added` | Added regression tests for `BrowserController.open_or_activate_page`, covering existing-tab reuse and new-page creation when no matching tab is open.
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md` | `modified` | Expanded the takeover scaffold docs with Windows setup, Python 3.10+ requirement, clearer CDP takeover semantics, and cross-platform usage examples.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/social-publisher.ps1` | `modified` | Hardened the PowerShell launcher to locate a usable Python runtime, verify Python 3.10+, check `typer`/`yaml`/`playwright`, and fail fast with setup guidance before invoking `social_publisher`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/browser.py` | `modified` | Added `open_or_activate_page()` so takeover flows can reuse an already-open matching tab or open a fresh page only when needed.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/baijiahao.py` | `modified` | Switched Baijiahao takeover to management-page duplicate checks, existing-tab reuse, stale-draft mismatch detection, and post-submit confirmation against the content list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/douyin.py` | `modified` | Strengthened Douyin publishing with management-page duplicate detection, existing-tab reuse, draft mismatch checks, and dual confirmation via composer success signal or content-manage verification.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/kuaishou.py` | `modified` | Updated Kuaishou takeover to resume unfinished drafts safely, block mismatched legacy drafts, and confirm submission through success markers plus management-page retries.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/toutiao.py` | `modified` | Added Toutiao management duplicate checks, existing-tab reuse into the compose flow, draft-content mismatch guards, and submit confirmation against the article list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py` | `modified` | Tightened WeChat Channels takeover with list-page duplicate checks, existing-tab reuse for create pages, stale-draft detection inside the publish frame, and success confirmation from either the editor or the management list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/weibo.py` | `modified` | Reworked Weibo takeover to inspect the home feed for duplicates, reuse existing composer tabs, stop on mismatched old drafts, and verify publish success from composer or refreshed feed.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/zhihu.py` | `modified` | Added Zhihu creator-center duplicate checks, existing-tab editor reuse, draft mismatch detection, and publish confirmation via public article URL or creator-center refresh.
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_browser_controller.py` | 用途: 为浏览器接管层新增标签页复用/新建页面行为的回归测试。| 关联 skill/自动化: `automation/python-platform-takeover` 多平台发布接管自动化。| 平台属性: `cross-platform`（纯 Python 测试，不绑定单一操作系统）。
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/kv/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering configuration.
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/kv/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering gotchas.
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/kv/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering patterns.
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/miniflare/README.md` | `added` | Added reference material for `cloudflare-deploy` covering readme.
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/miniflare/api.md` | `added` | Added reference material for `cloudflare-deploy` covering api.
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/miniflare/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering configuration.
+
+## 2026-04-13 20:24:43 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 19:23:05 CST`（对应上次运行 `2026-04-13T11:23:05.327Z`）
+- 结果汇总: 新增 9，修改 3，删除 0。
+- 说明:
+- `~/.codex/skills`、仓库 `skills/`、`skill-center/` 本轮没有晚于基线的 skill 相关源码变更。
+- `automation/python-platform-takeover/.venv`、`__pycache__`、`.pytest_cache` 在本轮有大量时间戳更新，但属于本地环境/缓存产物，未计入技能或自动化变更清单。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.demo.yaml` | `added` | Added a first-run demo content package template with placeholder asset paths plus title/description fields for 8 target platforms.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/quickstart-mac.sh` | `added` | Added a macOS bootstrap script that creates `.venv`, installs dependencies and Chromium, seeds `.env` and `content-package.local.yaml`, starts CDP Chrome, then runs `doctor`, `inspect-tabs`, and safe-mode `publish`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/quickstart-windows.ps1` | `added` | Added the Windows PowerShell quickstart equivalent for the takeover scaffold, including browser startup, env/package seeding, and the same doctor/inspect/publish first-run flow.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/social-publisher.sh` | `added` | Added a macOS/Linux launcher that prefers the local `.venv`, enforces Python 3.10+, verifies `typer`/`yaml`/`playwright`, and then dispatches to `python -m social_publisher`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/start-chrome-cdp.sh` | `added` | Added a macOS/Linux CDP browser launcher that locates Chrome/Edge, starts a dedicated profile with remote debugging enabled, and waits until the CDP endpoint is reachable.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/doctor.py` | `added` | Added the new readiness/diagnostics module that validates Python dependencies, `.env`, `BROWSER_CDP_URL`, default takeover mode, content-package structure, placeholder asset paths, platform registration, and optional browser connectivity.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/env.py` | `added` | Added shared `.env` loading helpers so the CLI can auto-read environment variables from the current working directory or the project root.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_doctor.py` | `added` | Added regression tests covering `doctor` behavior for placeholder asset warnings and missing-platform failures.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_env.py` | `added` | Added tests confirming `.env` auto-loading from the current working directory populates takeover settings correctly.
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md` | `modified` | Expanded the takeover documentation with a “最短首跑” section, new quickstart commands for macOS and Windows, `doctor` usage, auto-`.env` behavior, and troubleshooting notes for CDP browser startup.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/start-chrome-cdp.ps1` | `modified` | Hardened the Windows CDP launcher to poll `/json/version` after startup and fail fast with a clear retry message when the debug endpoint never comes up.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/cli.py` | `modified` | Added a `doctor` CLI command and startup-time `.env` auto-loading so the takeover tool can validate packages/browser readiness without requiring manual environment export.
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/doctor.py` | 用途: 执行发布接管前的环境、依赖、内容包、素材路径与浏览器连接自检。 | 关联 skill/自动化: `automation/python-platform-takeover` 多平台浏览器接管自动化。 | 平台属性: `cross-platform`（纯 Python 诊断逻辑，面向 Mac/Windows 共用流程）。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/env.py` | 用途: 解析并加载 `.env`，为 CLI 提供统一环境变量发现逻辑。 | 关联 skill/自动化: `automation/python-platform-takeover` 多平台浏览器接管自动化。 | 平台属性: `cross-platform`（文件解析与环境注入不绑定单一操作系统）。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_doctor.py` | 用途: 验证 `doctor` 对占位素材路径和平台缺失场景的结果输出。 | 关联 skill/自动化: `automation/python-platform-takeover` 多平台浏览器接管自动化测试。 | 平台属性: `cross-platform`（纯 Python 单元测试）。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_env.py` | 用途: 验证 `.env` 自动加载逻辑是否按当前工作目录生效。 | 关联 skill/自动化: `automation/python-platform-takeover` 多平台浏览器接管自动化测试。 | 平台属性: `cross-platform`（纯 Python 单元测试）。
+
+## 2026-04-13 18:24:13 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 17:23:04 CST`（对应上次运行 `2026-04-13T09:23:04.907Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 四个扫描目录内没有任何文件的 `mtime` 晚于本轮基线，未发现新的技能或技能支撑自动化变更批次。
+- 仓库里仍存在 `skills/codex-feishu-bridge-skill/**` 的未提交改动，但这些文件的实际修改时间都停留在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，属于更早一批，未计入本轮。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-13 22:24:38 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 21:23:05 CST`（对应上次运行 `2026-04-13T13:23:05.633Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 本轮未发现新的 skill 相关源文件或支撑自动化源文件变更，因此未更新 `github-sync-status.md`。
+- `automation/python-platform-takeover/.pytest_cache/v/cache/nodeids` 与 `automation/python-platform-takeover/.venv/lib/python3.11/site-packages/pytest/__pycache__/__main__.cpython-311.pyc` 晚于基线，但属于测试/虚拟环境生成缓存，不计入 skill 变更批次。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+
+
+
+## 2026-04-13 10:24:06 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 10:22:34 CST`（对应上次运行 `2026-04-13T02:22:34.000Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 四个扫描目录下没有任何文件的 `mtime` 晚于本次基线，因此本轮未形成新的技能变更批次。
+- 仓库内仍存在 `skills/codex-feishu-bridge-skill/**` 的未提交修改与未跟踪文件，但这些文件时间都停留在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，属于更早批次，未重复计入。
+- 本轮未发现新的删除痕迹，也没有新建 `.py` 文件。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-13 13:24:19 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 12:23:04 CST`（对应上次运行 `2026-04-13T04:23:04.288Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 四个目标目录中没有文件 `mtime` 晚于基线，也没有发现新的删除记录。
+- `skills/codex-feishu-bridge-skill/**` 仍存在未提交改动，但相关文件的 `mtime` 全部早于基线，本轮未重复计入。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-13 14:24:19 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 13:23:04 CST`（对应上次运行 `2026-04-13T05:23:04.451Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 四个扫描目录里都没有文件 `mtime` 晚于基线；`last-snapshot.json` 里的既有路径当前也都仍然存在，因此本轮未发现新增、修改或删除的技能相关文件。
+- 仓库中 `skills/codex-feishu-bridge-skill/**` 仍有未提交改动与未跟踪脚本，但这些文件的 `mtime` 全部停留在 `2026-04-12 22:07:15 CST` 或 `2026-04-12 22:09:39 CST`，早于本轮基线，未重复计入新批次。
+- 因为没有新的变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+
+## 2026-04-13 13:24:19 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 12:23:04 CST`（对应上次运行 `2026-04-13T04:23:04.288Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 四个目标目录中没有文件 `mtime` 晚于基线，也没有发现新的删除记录。
+- `skills/codex-feishu-bridge-skill/**` 仍存在未提交改动，但相关文件的 `mtime` 全部早于基线，本轮未重复计入。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-13 10:25:22 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 09:22:33 CST`（对应上次运行 `2026-04-13T01:22:33.841Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 本轮按文件系统 `mtime` 扫描四个目录，未发现晚于基线时间的新建、修改或删除的技能相关文件。
+- 仓库内仍存在 `skills/codex-feishu-bridge-skill/**` 的未提交改动，但这些文件的修改时间均为 `2026-04-12 22:07:15 CST` 或 `2026-04-12 22:09:39 CST`，早于本轮基线，因此不计入本批次。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-13 12:24:38 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 11:23:04 CST`（对应上次运行 `2026-04-13T03:23:04.122Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 本轮按文件系统 `mtime` 扫描四个目录，未发现晚于基线时间的技能相关新增或修改文件。
+- 仓库内现有脏文件仍集中在 `skills/codex-feishu-bridge-skill/**` 与两份监控文档，但这些文件的最新 `mtime` 都早于基线，属于上一批次遗留改动，本轮未重复计入。
+- 删除项按仓库状态做了补充校验，`skills`、`skill-center`、`automation` 下未发现新的已删除技能文件；由于自动化记忆文件此前缺失，本轮已重建最小基线供下次扫描继续使用。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-13 11:24:10 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 10:23:04 CST`（对应上次运行 `2026-04-13T02:23:04.001Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 本轮按文件系统 `mtime` 扫描四个目录，未发现晚于基线时间的新建或修改的技能相关文件。
+- 通过 Git 工作区交叉核对，`skills/codex-feishu-bridge-skill/**` 仍存在未提交修改与新增脚本，但这些文件的时间均为 `2026-04-12 22:07:15 CST` 或 `2026-04-12 22:09:39 CST`，属于基线前遗留变更，未重复计入本批次。
+- 本轮未发现删除项，也没有新建 `.py` 文件，因此未向 `github-sync-status.md` 追加新的待同步批次说明。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-13 10:24:48 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 09:22:33 CST`（对应上次运行 `2026-04-13T01:22:33.841Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 本轮按文件系统 `mtime` 扫描四个目录，未发现晚于基线时间的新建、修改或删除的技能相关文件。
+- 仓库内仍存在 `skills/codex-feishu-bridge-skill/**` 的未提交改动，但这些文件的修改时间均为 `2026-04-12 22:07:15 CST` 或 `2026-04-12 22:09:39 CST`，早于本轮基线，因此不计入本批次。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/miniflare/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering gotchas.
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/miniflare/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering patterns.
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/network-interconnect/README.md` | `added` | Added reference material for `cloudflare-deploy` covering readme.
@@ -1142,6 +1473,189 @@
 ### 新增 `.py` 文件
 - 无。
 
+## 2026-04-13 09:23:31 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 08:22:33 CST`（对应上次运行 `2026-04-13T00:22:33.666Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 四个扫描目录里都没有文件 `mtime` 晚于基线时间，因此本轮未形成新的技能变更批次。
+- 仓库内仍存在 `skills/codex-feishu-bridge-skill/**` 的较早未提交改动与新增 PowerShell 脚本，但这些文件的时间均早于本轮基线，未重复计入。
+- 本轮未发现删除项，也没有新建 `.py` 文件；同时已重建后续删除检测所需的目录快照基线。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-13 09:23:31 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 08:22:33 CST`（对应上次运行 `2026-04-13T00:22:33.666Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 四个扫描目录里都没有文件 `mtime` 晚于基线时间，因此本轮未形成新的技能变更批次。
+- 仓库内仍存在 `skills/codex-feishu-bridge-skill/**` 的较早未提交改动与新增 PowerShell 脚本，但这些文件的时间均早于本轮基线，未重复计入。
+- 本轮未发现删除项，也没有新建 `.py` 文件；同时已重建后续删除检测所需的目录快照基线。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-13 08:23:23 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 07:22:33 CST`（对应上次运行 `2026-04-12T23:22:33.499Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 本轮未发现晚于基线时间的技能文件或技能支撑自动化文件。
+- `~/.codex/skills`、仓库 `skills/`、`skill-center/`、`automation/` 在本轮都没有形成新的变更批次。
+- 当前仓库里仍存在 `skills/codex-feishu-bridge-skill/**` 的未提交改动与新增文件，但这些文件时间都停留在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，属于前一批次，未计入本轮。
+- 本轮未发现删除项，也没有新建 `.py` 文件。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-13 06:23:56 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 05:22:33 CST`（对应上次运行 `2026-04-12T21:22:33.146Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 四个扫描目录下没有任何技能相关文件的 `mtime` 晚于本次基线。
+- 当前仓库仍有 `skills/codex-feishu-bridge-skill/**` 的未提交变更，但这些文件时间都停留在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，属于旧批次，未计入本轮。
+- 本轮未发现删除项，也没有新建 `.py` 文件，因此未更新 GitHub 同步待处理说明。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+ 
+## 2026-04-13 05:23:22 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 04:22:32 CST`（对应上次运行 `2026-04-12T20:22:32.960Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 四个扫描目录下没有任何文件的 `mtime` 晚于本次基线。
+- 仓库内 `skills/codex-feishu-bridge-skill/**` 仍有未提交修改和新增文件，但其时间戳均为 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，属于上一批次，不计入本轮。
+- 本轮未发现删除项，也没有新建 `.py` 文件。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-13 04:23:29 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 03:22:32 CST`（对应上次运行 `2026-04-12T19:22:32.790Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 四个扫描目录下没有任何文件的 `mtime` 或 `ctime` 晚于本次基线。
+- 仓库内仍存在 `skills/codex-feishu-bridge-skill/**` 的未提交改动与新增文件，但抽样核对显示其时间停留在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，属于更早批次，未计入本轮。
+- 本轮未发现删除项，也没有新建 `.py` 文件，因此未更新 GitHub 同步待办说明。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-13 03:23:28 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 02:22:32 CST`（对应上次运行 `2026-04-12T18:22:32.633Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 四个扫描目录下没有任何文件的 `mtime` 晚于本次基线。
+- 当前仓库里仍存在 `skills/codex-feishu-bridge-skill/**` 的未提交改动与新增文件，但这些文件时间都停留在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，属于前一批次，未计入本轮。
+- 本轮未发现删除项，也没有新建 `.py` 文件。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
 ## 2026-04-12 21:23:20 CST
 - 扫描范围:
 - `/Users/baishangjituan/.codex/skills`
@@ -1182,3 +1696,1204 @@
 
 ### 变更摘要
 - 本次扫描未发现新的技能或配套自动化文件批次，因此未追加 GitHub 同步提醒。
+
+## 2026-04-13 00:25:38 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 上次运行: `2026-04-12T15:22:32.232Z`（本地时间 `2026-04-12 23:22:32 CST`）
+- 结果汇总: 新增 860，修改 1，删除 0。
+- 说明: 发现一批新的 skill-related 变更，主要是 `skill-center` 全量镜像入库，以及 `automation/python-platform-takeover` 增补 Windows PowerShell 启动脚本。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/social-publisher.ps1` | `added` | Added a PowerShell publisher launcher for the Python platform takeover automation.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/start-chrome-cdp.ps1` | `added` | Added a PowerShell helper that starts Chrome with a remote-debugging port for takeover flows.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/README.md` | `added` | Added the skill-center overview and mirroring instructions.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/scripts/sync-skills.ps1` | `added` | Added the PowerShell sync script for mirroring local Codex skills on Windows.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/scripts/sync-skills.sh` | `added` | Added the Unix sync script that mirrors local Codex skills into `skill-center`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills-manifest.txt` | `added` | Added the mirrored skill inventory manifest for skill-center.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/aspnet-core/LICENSE.txt` | `added` | Added license metadata for `aspnet-core`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/aspnet-core/SKILL.md` | `added` | Added the main skill definition for `aspnet-core`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/aspnet-core/agents/openai.yaml` | `added` | Added the OpenAI agent config for `aspnet-core`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/aspnet-core/assets/dotnet-logo.png` | `added` | Added an asset/template file for `aspnet-core`: `dotnet-logo.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/aspnet-core/references/_sections.md` | `added` | Added reference material for `aspnet-core` covering `_sections.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/aspnet-core/references/apis-minimal-and-controllers.md` | `added` | Added reference material for `aspnet-core` covering `apis-minimal-and-controllers.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/aspnet-core/references/data-state-and-services.md` | `added` | Added reference material for `aspnet-core` covering `data-state-and-services.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/aspnet-core/references/program-and-pipeline.md` | `added` | Added reference material for `aspnet-core` covering `program-and-pipeline.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/aspnet-core/references/realtime-grpc-and-background-work.md` | `added` | Added reference material for `aspnet-core` covering `realtime-grpc-and-background-work.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/aspnet-core/references/security-and-identity.md` | `added` | Added reference material for `aspnet-core` covering `security-and-identity.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/aspnet-core/references/source-map.md` | `added` | Added reference material for `aspnet-core` covering `source-map.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/aspnet-core/references/stack-selection.md` | `added` | Added reference material for `aspnet-core` covering `stack-selection.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/aspnet-core/references/testing-performance-and-operations.md` | `added` | Added reference material for `aspnet-core` covering `testing-performance-and-operations.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/aspnet-core/references/ui-blazor.md` | `added` | Added reference material for `aspnet-core` covering `ui-blazor.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/aspnet-core/references/ui-mvc.md` | `added` | Added reference material for `aspnet-core` covering `ui-mvc.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/aspnet-core/references/ui-razor-pages.md` | `added` | Added reference material for `aspnet-core` covering `ui-razor-pages.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/aspnet-core/references/versioning-and-upgrades.md` | `added` | Added reference material for `aspnet-core` covering `versioning-and-upgrades.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/baijiahao-ops/SKILL.md` | `added` | Added the main skill definition for `baijiahao-ops`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/baijiahao-ops/agents/openai.yaml` | `added` | Added the OpenAI agent config for `baijiahao-ops`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/baijiahao-ops/references/platform-notes.md` | `added` | Added reference material for `baijiahao-ops` covering `platform-notes.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/chatgpt-apps/LICENSE.txt` | `added` | Added license metadata for `chatgpt-apps`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/chatgpt-apps/SKILL.md` | `added` | Added the main skill definition for `chatgpt-apps`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/chatgpt-apps/agents/openai.yaml` | `added` | Added the OpenAI agent config for `chatgpt-apps`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/chatgpt-apps/references/app-archetypes.md` | `added` | Added reference material for `chatgpt-apps` covering `app-archetypes.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/chatgpt-apps/references/apps-sdk-docs-workflow.md` | `added` | Added reference material for `chatgpt-apps` covering `apps-sdk-docs-workflow.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/chatgpt-apps/references/interactive-state-sync-patterns.md` | `added` | Added reference material for `chatgpt-apps` covering `interactive-state-sync-patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/chatgpt-apps/references/repo-contract-and-validation.md` | `added` | Added reference material for `chatgpt-apps` covering `repo-contract-and-validation.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/chatgpt-apps/references/search-fetch-standard.md` | `added` | Added reference material for `chatgpt-apps` covering `search-fetch-standard.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/chatgpt-apps/references/upstream-example-workflow.md` | `added` | Added reference material for `chatgpt-apps` covering `upstream-example-workflow.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/chatgpt-apps/references/window-openai-patterns.md` | `added` | Added reference material for `chatgpt-apps` covering `window-openai-patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/chatgpt-apps/scripts/scaffold_node_ext_apps.mjs` | `added` | Added a helper script for `chatgpt-apps`: `scaffold_node_ext_apps.mjs`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/SKILL.md` | `added` | Added the main skill definition for `clash-verge-standard-env`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/agents/openai.yaml` | `added` | Added the OpenAI agent config for `clash-verge-standard-env`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml` | `added` | Added reference material for `clash-verge-standard-env` covering `rules-enhancement.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/references/verge.template.yaml` | `added` | Added reference material for `clash-verge-standard-env` covering `verge.template.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/scripts/apply_standard_env.py` | `added` | Added a helper script for `clash-verge-standard-env`: `apply_standard_env.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/LICENSE.txt` | `added` | Added license metadata for `cloudflare-deploy`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/SKILL.md` | `added` | Added the main skill definition for `cloudflare-deploy`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/agents/openai.yaml` | `added` | Added the OpenAI agent config for `cloudflare-deploy`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/assets/cloudflare-small.svg` | `added` | Added an asset/template file for `cloudflare-deploy`: `cloudflare-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/assets/cloudflare.png` | `added` | Added an asset/template file for `cloudflare-deploy`: `cloudflare.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/agents-sdk/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `agents-sdk/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/agents-sdk/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `agents-sdk/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/agents-sdk/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `agents-sdk/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/agents-sdk/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `agents-sdk/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/agents-sdk/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `agents-sdk/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/ai-gateway/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `ai-gateway/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/ai-gateway/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `ai-gateway/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/ai-gateway/dynamic-routing.md` | `added` | Added reference material for `cloudflare-deploy` covering `ai-gateway/dynamic-routing.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/ai-gateway/features.md` | `added` | Added reference material for `cloudflare-deploy` covering `ai-gateway/features.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/ai-gateway/sdk-integration.md` | `added` | Added reference material for `cloudflare-deploy` covering `ai-gateway/sdk-integration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/ai-gateway/troubleshooting.md` | `added` | Added reference material for `cloudflare-deploy` covering `ai-gateway/troubleshooting.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/ai-search/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `ai-search/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/ai-search/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `ai-search/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/ai-search/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `ai-search/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/ai-search/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `ai-search/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/ai-search/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `ai-search/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/analytics-engine/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `analytics-engine/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/analytics-engine/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `analytics-engine/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/analytics-engine/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `analytics-engine/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/analytics-engine/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `analytics-engine/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/analytics-engine/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `analytics-engine/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/api-shield/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `api-shield/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/api-shield/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `api-shield/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/api-shield/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `api-shield/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/api-shield/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `api-shield/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/api-shield/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `api-shield/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/api/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `api/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/api/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `api/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/api/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `api/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/api/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `api/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/api/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `api/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/argo-smart-routing/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `argo-smart-routing/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/argo-smart-routing/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `argo-smart-routing/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/argo-smart-routing/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `argo-smart-routing/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/argo-smart-routing/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `argo-smart-routing/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/argo-smart-routing/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `argo-smart-routing/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/bindings/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `bindings/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/bindings/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `bindings/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/bindings/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `bindings/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/bindings/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `bindings/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/bindings/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `bindings/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/bot-management/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `bot-management/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/bot-management/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `bot-management/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/bot-management/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `bot-management/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/bot-management/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `bot-management/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/bot-management/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `bot-management/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/browser-rendering/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `browser-rendering/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/browser-rendering/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `browser-rendering/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/browser-rendering/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `browser-rendering/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/browser-rendering/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `browser-rendering/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/browser-rendering/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `browser-rendering/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/c3/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `c3/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/c3/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `c3/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/c3/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `c3/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/c3/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `c3/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/c3/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `c3/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/cache-reserve/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `cache-reserve/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/cache-reserve/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `cache-reserve/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/cache-reserve/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `cache-reserve/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/cache-reserve/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `cache-reserve/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/cache-reserve/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `cache-reserve/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/containers/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `containers/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/containers/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `containers/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/containers/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `containers/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/containers/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `containers/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/containers/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `containers/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/cron-triggers/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `cron-triggers/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/cron-triggers/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `cron-triggers/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/cron-triggers/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `cron-triggers/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/cron-triggers/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `cron-triggers/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/cron-triggers/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `cron-triggers/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/d1/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `d1/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/d1/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `d1/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/d1/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `d1/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/d1/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `d1/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/d1/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `d1/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/ddos/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `ddos/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/ddos/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `ddos/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/ddos/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `ddos/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/ddos/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `ddos/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/ddos/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `ddos/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/do-storage/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `do-storage/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/do-storage/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `do-storage/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/do-storage/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `do-storage/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/do-storage/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `do-storage/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/do-storage/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `do-storage/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/do-storage/testing.md` | `added` | Added reference material for `cloudflare-deploy` covering `do-storage/testing.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/durable-objects/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `durable-objects/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/durable-objects/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `durable-objects/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/durable-objects/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `durable-objects/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/durable-objects/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `durable-objects/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/durable-objects/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `durable-objects/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/email-routing/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `email-routing/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/email-routing/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `email-routing/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/email-routing/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `email-routing/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/email-routing/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `email-routing/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/email-routing/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `email-routing/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/email-workers/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `email-workers/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/email-workers/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `email-workers/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/email-workers/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `email-workers/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/email-workers/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `email-workers/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/email-workers/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `email-workers/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/hyperdrive/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `hyperdrive/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/hyperdrive/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `hyperdrive/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/hyperdrive/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `hyperdrive/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/hyperdrive/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `hyperdrive/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/hyperdrive/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `hyperdrive/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/images/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `images/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/images/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `images/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/images/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `images/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/images/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `images/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/images/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `images/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/kv/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `kv/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/kv/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `kv/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/kv/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `kv/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/kv/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `kv/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/kv/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `kv/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/miniflare/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `miniflare/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/miniflare/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `miniflare/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/miniflare/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `miniflare/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/miniflare/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `miniflare/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/miniflare/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `miniflare/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/network-interconnect/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `network-interconnect/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/network-interconnect/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `network-interconnect/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/network-interconnect/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `network-interconnect/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/network-interconnect/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `network-interconnect/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/network-interconnect/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `network-interconnect/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/observability/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `observability/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/observability/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `observability/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/observability/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `observability/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/observability/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `observability/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/observability/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `observability/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pages-functions/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `pages-functions/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pages-functions/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `pages-functions/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pages-functions/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `pages-functions/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pages-functions/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `pages-functions/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pages-functions/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `pages-functions/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pages/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `pages/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pages/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `pages/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pages/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `pages/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pages/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `pages/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pages/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `pages/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pipelines/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `pipelines/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pipelines/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `pipelines/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pipelines/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `pipelines/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pipelines/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `pipelines/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pipelines/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `pipelines/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pulumi/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `pulumi/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pulumi/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `pulumi/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pulumi/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `pulumi/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pulumi/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `pulumi/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/pulumi/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `pulumi/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/queues/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `queues/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/queues/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `queues/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/queues/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `queues/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/queues/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `queues/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/queues/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `queues/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/r2-data-catalog/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `r2-data-catalog/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/r2-data-catalog/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `r2-data-catalog/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/r2-data-catalog/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `r2-data-catalog/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/r2-data-catalog/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `r2-data-catalog/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/r2-data-catalog/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `r2-data-catalog/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/r2-sql/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `r2-sql/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/r2-sql/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `r2-sql/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/r2-sql/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `r2-sql/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/r2-sql/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `r2-sql/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/r2-sql/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `r2-sql/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/r2/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `r2/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/r2/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `r2/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/r2/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `r2/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/r2/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `r2/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/r2/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `r2/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/realtime-sfu/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `realtime-sfu/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/realtime-sfu/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `realtime-sfu/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/realtime-sfu/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `realtime-sfu/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/realtime-sfu/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `realtime-sfu/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/realtime-sfu/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `realtime-sfu/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/realtimekit/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `realtimekit/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/realtimekit/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `realtimekit/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/realtimekit/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `realtimekit/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/realtimekit/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `realtimekit/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/realtimekit/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `realtimekit/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/sandbox/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `sandbox/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/sandbox/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `sandbox/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/sandbox/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `sandbox/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/sandbox/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `sandbox/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/sandbox/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `sandbox/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/secrets-store/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `secrets-store/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/secrets-store/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `secrets-store/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/secrets-store/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `secrets-store/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/secrets-store/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `secrets-store/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/secrets-store/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `secrets-store/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/smart-placement/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `smart-placement/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/smart-placement/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `smart-placement/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/smart-placement/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `smart-placement/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/smart-placement/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `smart-placement/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/smart-placement/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `smart-placement/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/snippets/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `snippets/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/snippets/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `snippets/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/snippets/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `snippets/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/snippets/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `snippets/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/snippets/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `snippets/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/spectrum/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `spectrum/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/spectrum/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `spectrum/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/spectrum/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `spectrum/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/spectrum/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `spectrum/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/spectrum/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `spectrum/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/static-assets/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `static-assets/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/static-assets/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `static-assets/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/static-assets/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `static-assets/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/static-assets/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `static-assets/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/static-assets/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `static-assets/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/stream/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `stream/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/stream/api-live.md` | `added` | Added reference material for `cloudflare-deploy` covering `stream/api-live.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/stream/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `stream/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/stream/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `stream/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/stream/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `stream/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/stream/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `stream/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/tail-workers/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `tail-workers/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/tail-workers/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `tail-workers/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/tail-workers/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `tail-workers/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/tail-workers/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `tail-workers/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/tail-workers/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `tail-workers/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/terraform/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `terraform/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/terraform/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `terraform/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/terraform/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `terraform/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/terraform/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `terraform/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/terraform/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `terraform/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/tunnel/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `tunnel/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/tunnel/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `tunnel/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/tunnel/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `tunnel/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/tunnel/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `tunnel/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/tunnel/networking.md` | `added` | Added reference material for `cloudflare-deploy` covering `tunnel/networking.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/tunnel/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `tunnel/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/turn/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `turn/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/turn/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `turn/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/turn/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `turn/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/turn/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `turn/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/turn/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `turn/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/turnstile/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `turnstile/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/turnstile/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `turnstile/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/turnstile/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `turnstile/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/turnstile/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `turnstile/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/turnstile/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `turnstile/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/vectorize/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `vectorize/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/vectorize/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `vectorize/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/vectorize/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `vectorize/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/vectorize/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `vectorize/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/vectorize/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `vectorize/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/waf/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `waf/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/waf/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `waf/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/waf/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `waf/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/waf/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `waf/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/waf/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `waf/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/web-analytics/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `web-analytics/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/web-analytics/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `web-analytics/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/web-analytics/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `web-analytics/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/web-analytics/integration.md` | `added` | Added reference material for `cloudflare-deploy` covering `web-analytics/integration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/web-analytics/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `web-analytics/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workerd/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `workerd/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workerd/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `workerd/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workerd/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `workerd/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workerd/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `workerd/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workerd/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `workerd/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-ai/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-ai/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-ai/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-ai/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-ai/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-ai/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-ai/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-ai/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-ai/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-ai/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-for-platforms/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-for-platforms/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-for-platforms/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-for-platforms/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-for-platforms/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-for-platforms/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-for-platforms/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-for-platforms/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-for-platforms/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-for-platforms/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-playground/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-playground/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-playground/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-playground/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-playground/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-playground/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-playground/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-playground/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-playground/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-playground/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-vpc/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-vpc/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-vpc/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-vpc/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-vpc/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-vpc/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-vpc/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-vpc/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers-vpc/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers-vpc/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers/frameworks.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers/frameworks.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workers/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `workers/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workflows/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `workflows/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workflows/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `workflows/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workflows/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `workflows/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workflows/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `workflows/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/workflows/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `workflows/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/wrangler/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `wrangler/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/wrangler/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `wrangler/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/wrangler/auth.md` | `added` | Added reference material for `cloudflare-deploy` covering `wrangler/auth.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/wrangler/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `wrangler/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/wrangler/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `wrangler/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/wrangler/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `wrangler/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/zaraz/IMPLEMENTATION_SUMMARY.md` | `added` | Added reference material for `cloudflare-deploy` covering `zaraz/IMPLEMENTATION_SUMMARY.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/zaraz/README.md` | `added` | Added reference material for `cloudflare-deploy` covering `zaraz/README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/zaraz/api.md` | `added` | Added reference material for `cloudflare-deploy` covering `zaraz/api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/zaraz/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering `zaraz/configuration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/zaraz/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering `zaraz/gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/cloudflare-deploy/references/zaraz/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering `zaraz/patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/SKILL.md` | `added` | Added the main skill definition for `codex-feishu-bridge`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/agents/openai.yaml` | `added` | Added the OpenAI agent config for `codex-feishu-bridge`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/assets/template/.bridge.env.example` | `added` | Added an asset/template file for `codex-feishu-bridge`: `template/.bridge.env.example`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/assets/template/launchd/com.codex.feishu-bridge.plist` | `added` | Added an asset/template file for `codex-feishu-bridge`: `template/launchd/com.codex.feishu-bridge.plist`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/assets/template/package.json` | `added` | Added an asset/template file for `codex-feishu-bridge`: `template/package.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/assets/template/scripts/bridge-logs.sh` | `added` | Added an asset/template file for `codex-feishu-bridge`: `template/scripts/bridge-logs.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/assets/template/scripts/bridge-start.sh` | `added` | Added an asset/template file for `codex-feishu-bridge`: `template/scripts/bridge-start.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/assets/template/scripts/bridge-status.sh` | `added` | Added an asset/template file for `codex-feishu-bridge`: `template/scripts/bridge-status.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/assets/template/scripts/bridge-stop.sh` | `added` | Added an asset/template file for `codex-feishu-bridge`: `template/scripts/bridge-stop.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/assets/template/scripts/configure_notify_target.sh` | `added` | Added an asset/template file for `codex-feishu-bridge`: `template/scripts/configure_notify_target.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/assets/template/scripts/mirror-view.command` | `added` | Added an asset/template file for `codex-feishu-bridge`: `template/scripts/mirror-view.command`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/assets/template/scripts/mirror-view.sh` | `added` | Added an asset/template file for `codex-feishu-bridge`: `template/scripts/mirror-view.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/assets/template/scripts/run-bridge.sh` | `added` | Added an asset/template file for `codex-feishu-bridge`: `template/scripts/run-bridge.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/assets/template/src/bridge.js` | `added` | Added an asset/template file for `codex-feishu-bridge`: `template/src/bridge.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/references/INSTALL-QUICKSTART.md` | `added` | Added reference material for `codex-feishu-bridge` covering `INSTALL-QUICKSTART.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/references/architecture.md` | `added` | Added reference material for `codex-feishu-bridge` covering `architecture.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/references/deployment.md` | `added` | Added reference material for `codex-feishu-bridge` covering `deployment.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/references/user-guide.md` | `added` | Added reference material for `codex-feishu-bridge` covering `user-guide.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/scripts/install_bridge_template.sh` | `added` | Added a helper script for `codex-feishu-bridge`: `install_bridge_template.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-feishu-bridge/scripts/package_skill_bundle.sh` | `added` | Added a helper script for `codex-feishu-bridge`: `package_skill_bundle.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/coze-seedance15pro-sales-workflow/SKILL.md` | `added` | Added the main skill definition for `coze-seedance15pro-sales-workflow`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/coze-seedance15pro-sales-workflow/agents/openai.yaml` | `added` | Added the OpenAI agent config for `coze-seedance15pro-sales-workflow`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/coze-seedance15pro-sales-workflow/config.json` | `added` | Added supporting content for `coze-seedance15pro-sales-workflow`: `config.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/coze-seedance15pro-sales-workflow/references/exported-workflow.yaml` | `added` | Added reference material for `coze-seedance15pro-sales-workflow` covering `exported-workflow.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/coze-seedance15pro-sales-workflow/references/manifest.yml` | `added` | Added reference material for `coze-seedance15pro-sales-workflow` covering `manifest.yml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/coze-seedance15pro-sales-workflow/references/runtime-config.md` | `added` | Added reference material for `coze-seedance15pro-sales-workflow` covering `runtime-config.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/coze-seedance15pro-sales-workflow/references/workflow-summary.md` | `added` | Added reference material for `coze-seedance15pro-sales-workflow` covering `workflow-summary.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/coze-seedance15pro-sales-workflow/scripts/run_workflow.py` | `added` | Added a helper script for `coze-seedance15pro-sales-workflow`: `run_workflow.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/SKILL.md` | `added` | Added the main skill definition for `dachen-founder-flywheel`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/agents/openai.yaml` | `added` | Added the OpenAI agent config for `dachen-founder-flywheel`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/references/daily-automation-spec.md` | `added` | Added reference material for `dachen-founder-flywheel` covering `daily-automation-spec.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/references/flywheel-operating-system.md` | `added` | Added reference material for `dachen-founder-flywheel` covering `flywheel-operating-system.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/references/review-scorecard.md` | `added` | Added reference material for `dachen-founder-flywheel` covering `review-scorecard.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/references/weekly-content-calendar.md` | `added` | Added reference material for `dachen-founder-flywheel` covering `weekly-content-calendar.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/scripts/validate_flywheel_skill.rb` | `added` | Added a helper script for `dachen-founder-flywheel`: `validate_flywheel_skill.rb`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/SKILL.md` | `added` | Added the main skill definition for `data-review`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/agents/openai.yaml` | `added` | Added the OpenAI agent config for `data-review`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/account-slice-analysis.md` | `added` | Added reference material for `data-review` covering `account-slice-analysis.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/diagnosis-and-decisions.md` | `added` | Added reference material for `data-review` covering `diagnosis-and-decisions.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/platform-metrics.md` | `added` | Added reference material for `data-review` covering `platform-metrics.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/report-template.md` | `added` | Added reference material for `data-review` covering `report-template.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/develop-web-game/LICENSE.txt` | `added` | Added license metadata for `develop-web-game`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/develop-web-game/SKILL.md` | `added` | Added the main skill definition for `develop-web-game`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/develop-web-game/agents/openai.yaml` | `added` | Added the OpenAI agent config for `develop-web-game`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/develop-web-game/assets/game-small.svg` | `added` | Added an asset/template file for `develop-web-game`: `game-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/develop-web-game/assets/game.png` | `added` | Added an asset/template file for `develop-web-game`: `game.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/develop-web-game/references/action_payloads.json` | `added` | Added reference material for `develop-web-game` covering `action_payloads.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/develop-web-game/scripts/web_game_playwright_client.js` | `added` | Added a helper script for `develop-web-game`: `web_game_playwright_client.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/doc/LICENSE.txt` | `added` | Added license metadata for `doc`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/doc/SKILL.md` | `added` | Added the main skill definition for `doc`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/doc/agents/openai.yaml` | `added` | Added the OpenAI agent config for `doc`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/doc/assets/doc-small.svg` | `added` | Added an asset/template file for `doc`: `doc-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/doc/assets/doc.png` | `added` | Added an asset/template file for `doc`: `doc.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/doc/scripts/render_docx.py` | `added` | Added a helper script for `doc`: `render_docx.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/douyin-ops/SKILL.md` | `added` | Added the main skill definition for `douyin-ops`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/douyin-ops/agents/openai.yaml` | `added` | Added the OpenAI agent config for `douyin-ops`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/douyin-ops/references/platform-notes.md` | `added` | Added reference material for `douyin-ops` covering `platform-notes.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-code-connect-components/LICENSE.TXT` | `added` | Added supporting content for `figma-code-connect-components`: `LICENSE.TXT`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-code-connect-components/SKILL.md` | `added` | Added the main skill definition for `figma-code-connect-components`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-code-connect-components/agents/openai.yaml` | `added` | Added the OpenAI agent config for `figma-code-connect-components`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-code-connect-components/assets/figma-small.svg` | `added` | Added an asset/template file for `figma-code-connect-components`: `figma-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-code-connect-components/assets/figma.png` | `added` | Added an asset/template file for `figma-code-connect-components`: `figma.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-code-connect-components/assets/icon.svg` | `added` | Added an asset/template file for `figma-code-connect-components`: `icon.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-code-connect-components/references/mapping-checklist.md` | `added` | Added reference material for `figma-code-connect-components` covering `mapping-checklist.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-code-connect-components/scripts/normalize_node_id.py` | `added` | Added a helper script for `figma-code-connect-components`: `normalize_node_id.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-create-design-system-rules/LICENSE.TXT` | `added` | Added supporting content for `figma-create-design-system-rules`: `LICENSE.TXT`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-create-design-system-rules/SKILL.md` | `added` | Added the main skill definition for `figma-create-design-system-rules`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-create-design-system-rules/agents/openai.yaml` | `added` | Added the OpenAI agent config for `figma-create-design-system-rules`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-create-design-system-rules/assets/figma-small.svg` | `added` | Added an asset/template file for `figma-create-design-system-rules`: `figma-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-create-design-system-rules/assets/figma.png` | `added` | Added an asset/template file for `figma-create-design-system-rules`: `figma.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-create-design-system-rules/assets/icon.svg` | `added` | Added an asset/template file for `figma-create-design-system-rules`: `icon.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-create-design-system-rules/references/rule-template.md` | `added` | Added reference material for `figma-create-design-system-rules` covering `rule-template.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-create-design-system-rules/scripts/check_agents_md.sh` | `added` | Added a helper script for `figma-create-design-system-rules`: `check_agents_md.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-create-new-file/LICENSE.TXT` | `added` | Added supporting content for `figma-create-new-file`: `LICENSE.TXT`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-create-new-file/SKILL.md` | `added` | Added the main skill definition for `figma-create-new-file`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-create-new-file/agents/openai.yaml` | `added` | Added the OpenAI agent config for `figma-create-new-file`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-create-new-file/assets/figma-small.svg` | `added` | Added an asset/template file for `figma-create-new-file`: `figma-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-create-new-file/assets/figma.png` | `added` | Added an asset/template file for `figma-create-new-file`: `figma.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-create-new-file/assets/icon.svg` | `added` | Added an asset/template file for `figma-create-new-file`: `icon.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-create-new-file/maintainers.yml` | `added` | Added supporting content for `figma-create-new-file`: `maintainers.yml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-design/LICENSE.TXT` | `added` | Added supporting content for `figma-generate-design`: `LICENSE.TXT`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-design/SKILL.md` | `added` | Added the main skill definition for `figma-generate-design`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-design/agents/openai.yaml` | `added` | Added the OpenAI agent config for `figma-generate-design`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-design/assets/figma-small.svg` | `added` | Added an asset/template file for `figma-generate-design`: `figma-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-design/assets/figma.png` | `added` | Added an asset/template file for `figma-generate-design`: `figma.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-design/assets/icon.svg` | `added` | Added an asset/template file for `figma-generate-design`: `icon.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-design/maintainers.yml` | `added` | Added supporting content for `figma-generate-design`: `maintainers.yml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/LICENSE.TXT` | `added` | Added supporting content for `figma-generate-library`: `LICENSE.TXT`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/SKILL.md` | `added` | Added the main skill definition for `figma-generate-library`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/agents/openai.yaml` | `added` | Added the OpenAI agent config for `figma-generate-library`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/assets/figma-small.svg` | `added` | Added an asset/template file for `figma-generate-library`: `figma-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/assets/figma.png` | `added` | Added an asset/template file for `figma-generate-library`: `figma.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/assets/icon.svg` | `added` | Added an asset/template file for `figma-generate-library`: `icon.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/maintainers.yml` | `added` | Added supporting content for `figma-generate-library`: `maintainers.yml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/references/code-connect-setup.md` | `added` | Added reference material for `figma-generate-library` covering `code-connect-setup.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/references/component-creation.md` | `added` | Added reference material for `figma-generate-library` covering `component-creation.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/references/discovery-phase.md` | `added` | Added reference material for `figma-generate-library` covering `discovery-phase.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/references/documentation-creation.md` | `added` | Added reference material for `figma-generate-library` covering `documentation-creation.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/references/error-recovery.md` | `added` | Added reference material for `figma-generate-library` covering `error-recovery.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/references/naming-conventions.md` | `added` | Added reference material for `figma-generate-library` covering `naming-conventions.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/references/token-creation.md` | `added` | Added reference material for `figma-generate-library` covering `token-creation.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/scripts/bindVariablesToComponent.js` | `added` | Added a helper script for `figma-generate-library`: `bindVariablesToComponent.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/scripts/cleanupOrphans.js` | `added` | Added a helper script for `figma-generate-library`: `cleanupOrphans.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/scripts/createComponentWithVariants.js` | `added` | Added a helper script for `figma-generate-library`: `createComponentWithVariants.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/scripts/createDocumentationPage.js` | `added` | Added a helper script for `figma-generate-library`: `createDocumentationPage.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/scripts/createSemanticTokens.js` | `added` | Added a helper script for `figma-generate-library`: `createSemanticTokens.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/scripts/createVariableCollection.js` | `added` | Added a helper script for `figma-generate-library`: `createVariableCollection.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/scripts/inspectFileStructure.js` | `added` | Added a helper script for `figma-generate-library`: `inspectFileStructure.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/scripts/rehydrateState.js` | `added` | Added a helper script for `figma-generate-library`: `rehydrateState.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-generate-library/scripts/validateCreation.js` | `added` | Added a helper script for `figma-generate-library`: `validateCreation.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-implement-design/LICENSE.txt` | `added` | Added license metadata for `figma-implement-design`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-implement-design/SKILL.md` | `added` | Added the main skill definition for `figma-implement-design`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-implement-design/agents/openai.yaml` | `added` | Added the OpenAI agent config for `figma-implement-design`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-implement-design/assets/figma-small.svg` | `added` | Added an asset/template file for `figma-implement-design`: `figma-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-implement-design/assets/figma.png` | `added` | Added an asset/template file for `figma-implement-design`: `figma.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-implement-design/assets/icon.svg` | `added` | Added an asset/template file for `figma-implement-design`: `icon.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/LICENSE.TXT` | `added` | Added supporting content for `figma-use`: `LICENSE.TXT`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/SKILL.md` | `added` | Added the main skill definition for `figma-use`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/agents/openai.yaml` | `added` | Added the OpenAI agent config for `figma-use`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/assets/figma-small.svg` | `added` | Added an asset/template file for `figma-use`: `figma-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/assets/figma.png` | `added` | Added an asset/template file for `figma-use`: `figma.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/assets/icon.svg` | `added` | Added an asset/template file for `figma-use`: `icon.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/maintainers.yml` | `added` | Added supporting content for `figma-use`: `maintainers.yml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/api-reference.md` | `added` | Added reference material for `figma-use` covering `api-reference.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/common-patterns.md` | `added` | Added reference material for `figma-use` covering `common-patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/component-patterns.md` | `added` | Added reference material for `figma-use` covering `component-patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/effect-style-patterns.md` | `added` | Added reference material for `figma-use` covering `effect-style-patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/gotchas.md` | `added` | Added reference material for `figma-use` covering `gotchas.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/maintainers.yml` | `added` | Added reference material for `figma-use` covering `maintainers.yml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/plugin-api-patterns.md` | `added` | Added reference material for `figma-use` covering `plugin-api-patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/plugin-api-standalone.d.ts` | `added` | Added reference material for `figma-use` covering `plugin-api-standalone.d.ts`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/plugin-api-standalone.index.md` | `added` | Added reference material for `figma-use` covering `plugin-api-standalone.index.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/text-style-patterns.md` | `added` | Added reference material for `figma-use` covering `text-style-patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/validation-and-recovery.md` | `added` | Added reference material for `figma-use` covering `validation-and-recovery.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/variable-patterns.md` | `added` | Added reference material for `figma-use` covering `variable-patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/working-with-design-systems/maintainers.yml` | `added` | Added reference material for `figma-use` covering `working-with-design-systems/maintainers.yml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/working-with-design-systems/wwds-components--creating.md` | `added` | Added reference material for `figma-use` covering `working-with-design-systems/wwds-components--creating.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/working-with-design-systems/wwds-components--using.md` | `added` | Added reference material for `figma-use` covering `working-with-design-systems/wwds-components--using.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/working-with-design-systems/wwds-components.md` | `added` | Added reference material for `figma-use` covering `working-with-design-systems/wwds-components.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/working-with-design-systems/wwds-effect-styles.md` | `added` | Added reference material for `figma-use` covering `working-with-design-systems/wwds-effect-styles.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/working-with-design-systems/wwds-text-styles.md` | `added` | Added reference material for `figma-use` covering `working-with-design-systems/wwds-text-styles.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/working-with-design-systems/wwds-variables--creating.md` | `added` | Added reference material for `figma-use` covering `working-with-design-systems/wwds-variables--creating.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/working-with-design-systems/wwds-variables--using.md` | `added` | Added reference material for `figma-use` covering `working-with-design-systems/wwds-variables--using.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/working-with-design-systems/wwds-variables.md` | `added` | Added reference material for `figma-use` covering `working-with-design-systems/wwds-variables.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-use/references/working-with-design-systems/wwds.md` | `added` | Added reference material for `figma-use` covering `working-with-design-systems/wwds.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma/LICENSE.txt` | `added` | Added license metadata for `figma`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma/SKILL.md` | `added` | Added the main skill definition for `figma`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma/agents/openai.yaml` | `added` | Added the OpenAI agent config for `figma`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma/assets/figma-small.svg` | `added` | Added an asset/template file for `figma`: `figma-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma/assets/figma.png` | `added` | Added an asset/template file for `figma`: `figma.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma/assets/icon.svg` | `added` | Added an asset/template file for `figma`: `icon.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma/references/figma-mcp-config.md` | `added` | Added reference material for `figma` covering `figma-mcp-config.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma/references/figma-tools-and-prompts.md` | `added` | Added reference material for `figma` covering `figma-tools-and-prompts.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/frontend-skill/LICENSE.txt` | `added` | Added license metadata for `frontend-skill`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/frontend-skill/SKILL.md` | `added` | Added the main skill definition for `frontend-skill`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/frontend-skill/agents/openai.yaml` | `added` | Added the OpenAI agent config for `frontend-skill`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/gh-address-comments/LICENSE.txt` | `added` | Added license metadata for `gh-address-comments`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/gh-address-comments/SKILL.md` | `added` | Added the main skill definition for `gh-address-comments`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/gh-address-comments/agents/openai.yaml` | `added` | Added the OpenAI agent config for `gh-address-comments`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/gh-address-comments/assets/github-small.svg` | `added` | Added an asset/template file for `gh-address-comments`: `github-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/gh-address-comments/assets/github.png` | `added` | Added an asset/template file for `gh-address-comments`: `github.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/gh-address-comments/scripts/fetch_comments.py` | `added` | Added a helper script for `gh-address-comments`: `fetch_comments.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/gh-fix-ci/LICENSE.txt` | `added` | Added license metadata for `gh-fix-ci`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/gh-fix-ci/SKILL.md` | `added` | Added the main skill definition for `gh-fix-ci`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/gh-fix-ci/agents/openai.yaml` | `added` | Added the OpenAI agent config for `gh-fix-ci`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/gh-fix-ci/assets/github-small.svg` | `added` | Added an asset/template file for `gh-fix-ci`: `github-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/gh-fix-ci/assets/github.png` | `added` | Added an asset/template file for `gh-fix-ci`: `github.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/gh-fix-ci/scripts/inspect_pr_checks.py` | `added` | Added a helper script for `gh-fix-ci`: `inspect_pr_checks.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/jupyter-notebook/LICENSE.txt` | `added` | Added license metadata for `jupyter-notebook`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/jupyter-notebook/SKILL.md` | `added` | Added the main skill definition for `jupyter-notebook`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/jupyter-notebook/agents/openai.yaml` | `added` | Added the OpenAI agent config for `jupyter-notebook`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/jupyter-notebook/assets/experiment-template.ipynb` | `added` | Added an asset/template file for `jupyter-notebook`: `experiment-template.ipynb`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/jupyter-notebook/assets/jupyter-small.svg` | `added` | Added an asset/template file for `jupyter-notebook`: `jupyter-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/jupyter-notebook/assets/jupyter.png` | `added` | Added an asset/template file for `jupyter-notebook`: `jupyter.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/jupyter-notebook/assets/tutorial-template.ipynb` | `added` | Added an asset/template file for `jupyter-notebook`: `tutorial-template.ipynb`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/jupyter-notebook/references/experiment-patterns.md` | `added` | Added reference material for `jupyter-notebook` covering `experiment-patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/jupyter-notebook/references/notebook-structure.md` | `added` | Added reference material for `jupyter-notebook` covering `notebook-structure.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/jupyter-notebook/references/quality-checklist.md` | `added` | Added reference material for `jupyter-notebook` covering `quality-checklist.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/jupyter-notebook/references/tutorial-patterns.md` | `added` | Added reference material for `jupyter-notebook` covering `tutorial-patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/jupyter-notebook/scripts/new_notebook.py` | `added` | Added a helper script for `jupyter-notebook`: `new_notebook.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/kuaishou-ops/SKILL.md` | `added` | Added the main skill definition for `kuaishou-ops`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/kuaishou-ops/agents/openai.yaml` | `added` | Added the OpenAI agent config for `kuaishou-ops`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/kuaishou-ops/references/platform-notes.md` | `added` | Added reference material for `kuaishou-ops` covering `platform-notes.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/linear/LICENSE.txt` | `added` | Added license metadata for `linear`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/linear/SKILL.md` | `added` | Added the main skill definition for `linear`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/linear/agents/openai.yaml` | `added` | Added the OpenAI agent config for `linear`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/linear/assets/linear-small.svg` | `added` | Added an asset/template file for `linear`: `linear-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/linear/assets/linear.png` | `added` | Added an asset/template file for `linear`: `linear.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/netlify-deploy/LICENSE.txt` | `added` | Added license metadata for `netlify-deploy`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/netlify-deploy/SKILL.md` | `added` | Added the main skill definition for `netlify-deploy`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/netlify-deploy/agents/openai.yaml` | `added` | Added the OpenAI agent config for `netlify-deploy`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/netlify-deploy/assets/netlify-small.svg` | `added` | Added an asset/template file for `netlify-deploy`: `netlify-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/netlify-deploy/assets/netlify.png` | `added` | Added an asset/template file for `netlify-deploy`: `netlify.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/netlify-deploy/references/cli-commands.md` | `added` | Added reference material for `netlify-deploy` covering `cli-commands.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/netlify-deploy/references/deployment-patterns.md` | `added` | Added reference material for `netlify-deploy` covering `deployment-patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/netlify-deploy/references/netlify-toml.md` | `added` | Added reference material for `netlify-deploy` covering `netlify-toml.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-knowledge-capture/LICENSE.txt` | `added` | Added license metadata for `notion-knowledge-capture`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-knowledge-capture/SKILL.md` | `added` | Added the main skill definition for `notion-knowledge-capture`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-knowledge-capture/agents/openai.yaml` | `added` | Added the OpenAI agent config for `notion-knowledge-capture`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-knowledge-capture/assets/notion-small.svg` | `added` | Added an asset/template file for `notion-knowledge-capture`: `notion-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-knowledge-capture/assets/notion.png` | `added` | Added an asset/template file for `notion-knowledge-capture`: `notion.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-knowledge-capture/evaluations/README.md` | `added` | Added an evaluation fixture for `notion-knowledge-capture`: `README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-knowledge-capture/evaluations/conversation-to-wiki.json` | `added` | Added an evaluation fixture for `notion-knowledge-capture`: `conversation-to-wiki.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-knowledge-capture/evaluations/decision-record.json` | `added` | Added an evaluation fixture for `notion-knowledge-capture`: `decision-record.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-knowledge-capture/examples/conversation-to-faq.md` | `added` | Added an example artifact for `notion-knowledge-capture`: `conversation-to-faq.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-knowledge-capture/examples/decision-capture.md` | `added` | Added an example artifact for `notion-knowledge-capture`: `decision-capture.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-knowledge-capture/examples/how-to-guide.md` | `added` | Added an example artifact for `notion-knowledge-capture`: `how-to-guide.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-knowledge-capture/reference/database-best-practices.md` | `added` | Added reference material for `notion-knowledge-capture` covering `database-best-practices.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-knowledge-capture/reference/decision-log-database.md` | `added` | Added reference material for `notion-knowledge-capture` covering `decision-log-database.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-knowledge-capture/reference/documentation-database.md` | `added` | Added reference material for `notion-knowledge-capture` covering `documentation-database.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-knowledge-capture/reference/faq-database.md` | `added` | Added reference material for `notion-knowledge-capture` covering `faq-database.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-knowledge-capture/reference/how-to-guide-database.md` | `added` | Added reference material for `notion-knowledge-capture` covering `how-to-guide-database.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-knowledge-capture/reference/learning-database.md` | `added` | Added reference material for `notion-knowledge-capture` covering `learning-database.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-knowledge-capture/reference/team-wiki-database.md` | `added` | Added reference material for `notion-knowledge-capture` covering `team-wiki-database.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-meeting-intelligence/LICENSE.txt` | `added` | Added license metadata for `notion-meeting-intelligence`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-meeting-intelligence/SKILL.md` | `added` | Added the main skill definition for `notion-meeting-intelligence`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-meeting-intelligence/agents/openai.yaml` | `added` | Added the OpenAI agent config for `notion-meeting-intelligence`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-meeting-intelligence/assets/notion-small.svg` | `added` | Added an asset/template file for `notion-meeting-intelligence`: `notion-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-meeting-intelligence/assets/notion.png` | `added` | Added an asset/template file for `notion-meeting-intelligence`: `notion.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-meeting-intelligence/evaluations/README.md` | `added` | Added an evaluation fixture for `notion-meeting-intelligence`: `README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-meeting-intelligence/evaluations/decision-meeting-prep.json` | `added` | Added an evaluation fixture for `notion-meeting-intelligence`: `decision-meeting-prep.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-meeting-intelligence/evaluations/status-meeting-prep.json` | `added` | Added an evaluation fixture for `notion-meeting-intelligence`: `status-meeting-prep.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-meeting-intelligence/examples/customer-meeting.md` | `added` | Added an example artifact for `notion-meeting-intelligence`: `customer-meeting.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-meeting-intelligence/examples/executive-review.md` | `added` | Added an example artifact for `notion-meeting-intelligence`: `executive-review.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-meeting-intelligence/examples/project-decision.md` | `added` | Added an example artifact for `notion-meeting-intelligence`: `project-decision.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-meeting-intelligence/examples/sprint-planning.md` | `added` | Added an example artifact for `notion-meeting-intelligence`: `sprint-planning.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-meeting-intelligence/reference/brainstorming-template.md` | `added` | Added reference material for `notion-meeting-intelligence` covering `brainstorming-template.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-meeting-intelligence/reference/decision-meeting-template.md` | `added` | Added reference material for `notion-meeting-intelligence` covering `decision-meeting-template.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-meeting-intelligence/reference/one-on-one-template.md` | `added` | Added reference material for `notion-meeting-intelligence` covering `one-on-one-template.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-meeting-intelligence/reference/retrospective-template.md` | `added` | Added reference material for `notion-meeting-intelligence` covering `retrospective-template.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-meeting-intelligence/reference/sprint-planning-template.md` | `added` | Added reference material for `notion-meeting-intelligence` covering `sprint-planning-template.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-meeting-intelligence/reference/status-update-template.md` | `added` | Added reference material for `notion-meeting-intelligence` covering `status-update-template.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-meeting-intelligence/reference/template-selection-guide.md` | `added` | Added reference material for `notion-meeting-intelligence` covering `template-selection-guide.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/LICENSE.txt` | `added` | Added license metadata for `notion-research-documentation`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/SKILL.md` | `added` | Added the main skill definition for `notion-research-documentation`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/agents/openai.yaml` | `added` | Added the OpenAI agent config for `notion-research-documentation`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/assets/notion-small.svg` | `added` | Added an asset/template file for `notion-research-documentation`: `notion-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/assets/notion.png` | `added` | Added an asset/template file for `notion-research-documentation`: `notion.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/evaluations/README.md` | `added` | Added an evaluation fixture for `notion-research-documentation`: `README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/evaluations/basic-research.json` | `added` | Added an evaluation fixture for `notion-research-documentation`: `basic-research.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/evaluations/research-to-database.json` | `added` | Added an evaluation fixture for `notion-research-documentation`: `research-to-database.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/examples/competitor-analysis.md` | `added` | Added an example artifact for `notion-research-documentation`: `competitor-analysis.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/examples/market-research.md` | `added` | Added an example artifact for `notion-research-documentation`: `market-research.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/examples/technical-investigation.md` | `added` | Added an example artifact for `notion-research-documentation`: `technical-investigation.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/examples/trip-planning.md` | `added` | Added an example artifact for `notion-research-documentation`: `trip-planning.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/reference/advanced-search.md` | `added` | Added reference material for `notion-research-documentation` covering `advanced-search.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/reference/citations.md` | `added` | Added reference material for `notion-research-documentation` covering `citations.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/reference/comparison-format.md` | `added` | Added reference material for `notion-research-documentation` covering `comparison-format.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/reference/comparison-template.md` | `added` | Added reference material for `notion-research-documentation` covering `comparison-template.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/reference/comprehensive-report-format.md` | `added` | Added reference material for `notion-research-documentation` covering `comprehensive-report-format.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/reference/comprehensive-report-template.md` | `added` | Added reference material for `notion-research-documentation` covering `comprehensive-report-template.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/reference/format-selection-guide.md` | `added` | Added reference material for `notion-research-documentation` covering `format-selection-guide.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/reference/quick-brief-format.md` | `added` | Added reference material for `notion-research-documentation` covering `quick-brief-format.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/reference/quick-brief-template.md` | `added` | Added reference material for `notion-research-documentation` covering `quick-brief-template.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/reference/research-summary-format.md` | `added` | Added reference material for `notion-research-documentation` covering `research-summary-format.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-research-documentation/reference/research-summary-template.md` | `added` | Added reference material for `notion-research-documentation` covering `research-summary-template.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-spec-to-implementation/LICENSE.txt` | `added` | Added license metadata for `notion-spec-to-implementation`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-spec-to-implementation/SKILL.md` | `added` | Added the main skill definition for `notion-spec-to-implementation`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-spec-to-implementation/agents/openai.yaml` | `added` | Added the OpenAI agent config for `notion-spec-to-implementation`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-spec-to-implementation/assets/notion-small.svg` | `added` | Added an asset/template file for `notion-spec-to-implementation`: `notion-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-spec-to-implementation/assets/notion.png` | `added` | Added an asset/template file for `notion-spec-to-implementation`: `notion.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-spec-to-implementation/evaluations/README.md` | `added` | Added an evaluation fixture for `notion-spec-to-implementation`: `README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-spec-to-implementation/evaluations/basic-spec-implementation.json` | `added` | Added an evaluation fixture for `notion-spec-to-implementation`: `basic-spec-implementation.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-spec-to-implementation/evaluations/spec-to-tasks.json` | `added` | Added an evaluation fixture for `notion-spec-to-implementation`: `spec-to-tasks.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-spec-to-implementation/examples/api-feature.md` | `added` | Added an example artifact for `notion-spec-to-implementation`: `api-feature.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-spec-to-implementation/examples/database-migration.md` | `added` | Added an example artifact for `notion-spec-to-implementation`: `database-migration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-spec-to-implementation/examples/ui-component.md` | `added` | Added an example artifact for `notion-spec-to-implementation`: `ui-component.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-spec-to-implementation/reference/milestone-summary-template.md` | `added` | Added reference material for `notion-spec-to-implementation` covering `milestone-summary-template.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-spec-to-implementation/reference/progress-tracking.md` | `added` | Added reference material for `notion-spec-to-implementation` covering `progress-tracking.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-spec-to-implementation/reference/progress-update-template.md` | `added` | Added reference material for `notion-spec-to-implementation` covering `progress-update-template.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-spec-to-implementation/reference/quick-implementation-plan.md` | `added` | Added reference material for `notion-spec-to-implementation` covering `quick-implementation-plan.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-spec-to-implementation/reference/spec-parsing.md` | `added` | Added reference material for `notion-spec-to-implementation` covering `spec-parsing.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-spec-to-implementation/reference/standard-implementation-plan.md` | `added` | Added reference material for `notion-spec-to-implementation` covering `standard-implementation-plan.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-spec-to-implementation/reference/task-creation-template.md` | `added` | Added reference material for `notion-spec-to-implementation` covering `task-creation-template.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/notion-spec-to-implementation/reference/task-creation.md` | `added` | Added reference material for `notion-spec-to-implementation` covering `task-creation.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/pdf/LICENSE.txt` | `added` | Added license metadata for `pdf`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/pdf/SKILL.md` | `added` | Added the main skill definition for `pdf`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/pdf/agents/openai.yaml` | `added` | Added the OpenAI agent config for `pdf`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/pdf/assets/pdf.png` | `added` | Added an asset/template file for `pdf`: `pdf.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/platform-cover-ops/SKILL.md` | `added` | Added the main skill definition for `platform-cover-ops`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/platform-cover-ops/agents/openai.yaml` | `added` | Added the OpenAI agent config for `platform-cover-ops`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/platform-cover-ops/references/cover-playbook.md` | `added` | Added reference material for `platform-cover-ops` covering `cover-playbook.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/platform-cover-ops/references/cover-prompt-kit.md` | `added` | Added reference material for `platform-cover-ops` covering `cover-prompt-kit.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/platform-cover-ops/references/cover-template-matrix.md` | `added` | Added reference material for `platform-cover-ops` covering `cover-template-matrix.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/platform-cover-ops/references/platform-notes.md` | `added` | Added reference material for `platform-cover-ops` covering `platform-notes.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/platform-cover-ops/scripts/preflight_cover_briefs.rb` | `added` | Added a helper script for `platform-cover-ops`: `preflight_cover_briefs.rb`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/platform-cover-ops/scripts/validate_cover_skill.rb` | `added` | Added a helper script for `platform-cover-ops`: `validate_cover_skill.rb`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/platform-ops-hub/SKILL.md` | `added` | Added the main skill definition for `platform-ops-hub`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/platform-ops-hub/agents/openai.yaml` | `added` | Added the OpenAI agent config for `platform-ops-hub`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright-interactive/LICENSE.txt` | `added` | Added license metadata for `playwright-interactive`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright-interactive/NOTICE.txt` | `added` | Added notice metadata for `playwright-interactive`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright-interactive/SKILL.md` | `added` | Added the main skill definition for `playwright-interactive`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright-interactive/agents/openai.yaml` | `added` | Added the OpenAI agent config for `playwright-interactive`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright-interactive/assets/playwright-small.svg` | `added` | Added an asset/template file for `playwright-interactive`: `playwright-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright-interactive/assets/playwright.png` | `added` | Added an asset/template file for `playwright-interactive`: `playwright.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/LICENSE.txt` | `added` | Added license metadata for `playwright`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/NOTICE.txt` | `added` | Added notice metadata for `playwright`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/SKILL.md` | `added` | Added the main skill definition for `playwright`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/agents/openai.yaml` | `added` | Added the OpenAI agent config for `playwright`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/assets/playwright-small.svg` | `added` | Added an asset/template file for `playwright`: `playwright-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/assets/playwright.png` | `added` | Added an asset/template file for `playwright`: `playwright.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/references/cli.md` | `added` | Added reference material for `playwright` covering `cli.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/references/workflows.md` | `added` | Added reference material for `playwright` covering `workflows.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh` | `added` | Added a helper script for `playwright`: `playwright_cli.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/LICENSE.txt` | `added` | Added license metadata for `render-deploy`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/SKILL.md` | `added` | Added the main skill definition for `render-deploy`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/agents/openai.yaml` | `added` | Added the OpenAI agent config for `render-deploy`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/assets/docker.yaml` | `added` | Added an asset/template file for `render-deploy`: `docker.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/assets/go-api.yaml` | `added` | Added an asset/template file for `render-deploy`: `go-api.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/assets/nextjs-postgres.yaml` | `added` | Added an asset/template file for `render-deploy`: `nextjs-postgres.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/assets/node-express.yaml` | `added` | Added an asset/template file for `render-deploy`: `node-express.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/assets/python-django.yaml` | `added` | Added an asset/template file for `render-deploy`: `python-django.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/assets/render-small.svg` | `added` | Added an asset/template file for `render-deploy`: `render-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/assets/render.png` | `added` | Added an asset/template file for `render-deploy`: `render.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/assets/static-site.yaml` | `added` | Added an asset/template file for `render-deploy`: `static-site.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/references/blueprint-spec.md` | `added` | Added reference material for `render-deploy` covering `blueprint-spec.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/references/codebase-analysis.md` | `added` | Added reference material for `render-deploy` covering `codebase-analysis.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/references/configuration-guide.md` | `added` | Added reference material for `render-deploy` covering `configuration-guide.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/references/deployment-details.md` | `added` | Added reference material for `render-deploy` covering `deployment-details.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/references/direct-creation.md` | `added` | Added reference material for `render-deploy` covering `direct-creation.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/references/error-patterns.md` | `added` | Added reference material for `render-deploy` covering `error-patterns.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/references/post-deploy-checks.md` | `added` | Added reference material for `render-deploy` covering `post-deploy-checks.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/references/runtimes.md` | `added` | Added reference material for `render-deploy` covering `runtimes.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/references/service-types.md` | `added` | Added reference material for `render-deploy` covering `service-types.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/render-deploy/references/troubleshooting-basics.md` | `added` | Added reference material for `render-deploy` covering `troubleshooting-basics.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/screenshot/LICENSE.txt` | `added` | Added license metadata for `screenshot`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/screenshot/SKILL.md` | `added` | Added the main skill definition for `screenshot`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/screenshot/agents/openai.yaml` | `added` | Added the OpenAI agent config for `screenshot`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/screenshot/assets/screenshot-small.svg` | `added` | Added an asset/template file for `screenshot`: `screenshot-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/screenshot/assets/screenshot.png` | `added` | Added an asset/template file for `screenshot`: `screenshot.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/screenshot/scripts/ensure_macos_permissions.sh` | `added` | Added a helper script for `screenshot`: `ensure_macos_permissions.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/screenshot/scripts/macos_display_info.swift` | `added` | Added a helper script for `screenshot`: `macos_display_info.swift`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/screenshot/scripts/macos_permissions.swift` | `added` | Added a helper script for `screenshot`: `macos_permissions.swift`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/screenshot/scripts/macos_window_info.swift` | `added` | Added a helper script for `screenshot`: `macos_window_info.swift`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/screenshot/scripts/take_screenshot.ps1` | `added` | Added a helper script for `screenshot`: `take_screenshot.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/screenshot/scripts/take_screenshot.py` | `added` | Added a helper script for `screenshot`: `take_screenshot.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-best-practices/LICENSE.txt` | `added` | Added license metadata for `security-best-practices`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-best-practices/SKILL.md` | `added` | Added the main skill definition for `security-best-practices`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-best-practices/agents/openai.yaml` | `added` | Added the OpenAI agent config for `security-best-practices`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-best-practices/references/golang-general-backend-security.md` | `added` | Added reference material for `security-best-practices` covering `golang-general-backend-security.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-best-practices/references/javascript-express-web-server-security.md` | `added` | Added reference material for `security-best-practices` covering `javascript-express-web-server-security.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-best-practices/references/javascript-general-web-frontend-security.md` | `added` | Added reference material for `security-best-practices` covering `javascript-general-web-frontend-security.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-best-practices/references/javascript-jquery-web-frontend-security.md` | `added` | Added reference material for `security-best-practices` covering `javascript-jquery-web-frontend-security.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-best-practices/references/javascript-typescript-nextjs-web-server-security.md` | `added` | Added reference material for `security-best-practices` covering `javascript-typescript-nextjs-web-server-security.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-best-practices/references/javascript-typescript-react-web-frontend-security.md` | `added` | Added reference material for `security-best-practices` covering `javascript-typescript-react-web-frontend-security.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-best-practices/references/javascript-typescript-vue-web-frontend-security.md` | `added` | Added reference material for `security-best-practices` covering `javascript-typescript-vue-web-frontend-security.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-best-practices/references/python-django-web-server-security.md` | `added` | Added reference material for `security-best-practices` covering `python-django-web-server-security.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-best-practices/references/python-fastapi-web-server-security.md` | `added` | Added reference material for `security-best-practices` covering `python-fastapi-web-server-security.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-best-practices/references/python-flask-web-server-security.md` | `added` | Added reference material for `security-best-practices` covering `python-flask-web-server-security.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-ownership-map/LICENSE.txt` | `added` | Added license metadata for `security-ownership-map`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-ownership-map/SKILL.md` | `added` | Added the main skill definition for `security-ownership-map`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-ownership-map/agents/openai.yaml` | `added` | Added the OpenAI agent config for `security-ownership-map`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-ownership-map/references/neo4j-import.md` | `added` | Added reference material for `security-ownership-map` covering `neo4j-import.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-ownership-map/scripts/build_ownership_map.py` | `added` | Added a helper script for `security-ownership-map`: `build_ownership_map.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-ownership-map/scripts/community_maintainers.py` | `added` | Added a helper script for `security-ownership-map`: `community_maintainers.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-ownership-map/scripts/query_ownership.py` | `added` | Added a helper script for `security-ownership-map`: `query_ownership.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-ownership-map/scripts/run_ownership_map.py` | `added` | Added a helper script for `security-ownership-map`: `run_ownership_map.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-threat-model/LICENSE.txt` | `added` | Added license metadata for `security-threat-model`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-threat-model/SKILL.md` | `added` | Added the main skill definition for `security-threat-model`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-threat-model/agents/openai.yaml` | `added` | Added the OpenAI agent config for `security-threat-model`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-threat-model/references/prompt-template.md` | `added` | Added reference material for `security-threat-model` covering `prompt-template.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-threat-model/references/security-controls-and-assets.md` | `added` | Added reference material for `security-threat-model` covering `security-controls-and-assets.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sentry/LICENSE.txt` | `added` | Added license metadata for `sentry`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sentry/SKILL.md` | `added` | Added the main skill definition for `sentry`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sentry/agents/openai.yaml` | `added` | Added the OpenAI agent config for `sentry`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sentry/assets/sentry-small.svg` | `added` | Added an asset/template file for `sentry`: `sentry-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sentry/assets/sentry.png` | `added` | Added an asset/template file for `sentry`: `sentry.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sentry/scripts/sentry_api.py` | `added` | Added a helper script for `sentry`: `sentry_api.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/LICENSE.txt` | `added` | Added license metadata for `slides`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/SKILL.md` | `added` | Added the main skill definition for `slides`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/agents/openai.yaml` | `added` | Added the OpenAI agent config for `slides`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/assets/pptxgenjs_helpers/code.js` | `added` | Added an asset/template file for `slides`: `pptxgenjs_helpers/code.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/assets/pptxgenjs_helpers/image.js` | `added` | Added an asset/template file for `slides`: `pptxgenjs_helpers/image.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/assets/pptxgenjs_helpers/index.js` | `added` | Added an asset/template file for `slides`: `pptxgenjs_helpers/index.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/assets/pptxgenjs_helpers/latex.js` | `added` | Added an asset/template file for `slides`: `pptxgenjs_helpers/latex.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/assets/pptxgenjs_helpers/layout.js` | `added` | Added an asset/template file for `slides`: `pptxgenjs_helpers/layout.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/assets/pptxgenjs_helpers/layout_builders.js` | `added` | Added an asset/template file for `slides`: `pptxgenjs_helpers/layout_builders.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/assets/pptxgenjs_helpers/svg.js` | `added` | Added an asset/template file for `slides`: `pptxgenjs_helpers/svg.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/assets/pptxgenjs_helpers/text.js` | `added` | Added an asset/template file for `slides`: `pptxgenjs_helpers/text.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/assets/pptxgenjs_helpers/util.js` | `added` | Added an asset/template file for `slides`: `pptxgenjs_helpers/util.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/assets/slides-small.svg` | `added` | Added an asset/template file for `slides`: `slides-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/assets/slides.png` | `added` | Added an asset/template file for `slides`: `slides.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/references/pptxgenjs-helpers.md` | `added` | Added reference material for `slides` covering `pptxgenjs-helpers.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/scripts/create_montage.py` | `added` | Added a helper script for `slides`: `create_montage.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/scripts/detect_font.py` | `added` | Added a helper script for `slides`: `detect_font.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/scripts/ensure_raster_image.py` | `added` | Added a helper script for `slides`: `ensure_raster_image.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/scripts/render_slides.py` | `added` | Added a helper script for `slides`: `render_slides.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/scripts/slides_test.py` | `added` | Added a helper script for `slides`: `slides_test.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/SKILL.md` | `added` | Added the main skill definition for `social-publish-automation`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/agents/openai.yaml` | `added` | Added the OpenAI agent config for `social-publish-automation`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/references/platform-notes.md` | `added` | Added reference material for `social-publish-automation` covering `platform-notes.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sora/LICENSE.txt` | `added` | Added license metadata for `sora`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sora/SKILL.md` | `added` | Added the main skill definition for `sora`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sora/agents/openai.yaml` | `added` | Added the OpenAI agent config for `sora`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sora/assets/sora-small.svg` | `added` | Added an asset/template file for `sora`: `sora-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sora/assets/sora.png` | `added` | Added an asset/template file for `sora`: `sora.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sora/references/cinematic-shots.md` | `added` | Added reference material for `sora` covering `cinematic-shots.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sora/references/cli.md` | `added` | Added reference material for `sora` covering `cli.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sora/references/codex-network.md` | `added` | Added reference material for `sora` covering `codex-network.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sora/references/prompting.md` | `added` | Added reference material for `sora` covering `prompting.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sora/references/sample-prompts.md` | `added` | Added reference material for `sora` covering `sample-prompts.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sora/references/social-ads.md` | `added` | Added reference material for `sora` covering `social-ads.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sora/references/troubleshooting.md` | `added` | Added reference material for `sora` covering `troubleshooting.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sora/references/video-api.md` | `added` | Added reference material for `sora` covering `video-api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sora/scripts/sora.py` | `added` | Added a helper script for `sora`: `sora.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/speech/LICENSE.txt` | `added` | Added license metadata for `speech`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/speech/SKILL.md` | `added` | Added the main skill definition for `speech`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/speech/agents/openai.yaml` | `added` | Added the OpenAI agent config for `speech`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/speech/assets/speech-small.svg` | `added` | Added an asset/template file for `speech`: `speech-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/speech/assets/speech.png` | `added` | Added an asset/template file for `speech`: `speech.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/speech/references/accessibility.md` | `added` | Added reference material for `speech` covering `accessibility.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/speech/references/audio-api.md` | `added` | Added reference material for `speech` covering `audio-api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/speech/references/cli.md` | `added` | Added reference material for `speech` covering `cli.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/speech/references/codex-network.md` | `added` | Added reference material for `speech` covering `codex-network.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/speech/references/ivr.md` | `added` | Added reference material for `speech` covering `ivr.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/speech/references/narration.md` | `added` | Added reference material for `speech` covering `narration.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/speech/references/prompting.md` | `added` | Added reference material for `speech` covering `prompting.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/speech/references/sample-prompts.md` | `added` | Added reference material for `speech` covering `sample-prompts.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/speech/references/voice-directions.md` | `added` | Added reference material for `speech` covering `voice-directions.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/speech/references/voiceover.md` | `added` | Added reference material for `speech` covering `voiceover.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/speech/scripts/text_to_speech.py` | `added` | Added a helper script for `speech`: `text_to_speech.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/spreadsheet/LICENSE.txt` | `added` | Added license metadata for `spreadsheet`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/spreadsheet/SKILL.md` | `added` | Added the main skill definition for `spreadsheet`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/spreadsheet/agents/openai.yaml` | `added` | Added the OpenAI agent config for `spreadsheet`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/spreadsheet/assets/spreadsheet-small.svg` | `added` | Added an asset/template file for `spreadsheet`: `spreadsheet-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/spreadsheet/assets/spreadsheet.png` | `added` | Added an asset/template file for `spreadsheet`: `spreadsheet.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/spreadsheet/references/examples/openpyxl/create_basic_spreadsheet.py` | `added` | Added reference material for `spreadsheet` covering `examples/openpyxl/create_basic_spreadsheet.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/spreadsheet/references/examples/openpyxl/create_spreadsheet_with_styling.py` | `added` | Added reference material for `spreadsheet` covering `examples/openpyxl/create_spreadsheet_with_styling.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/spreadsheet/references/examples/openpyxl/read_existing_spreadsheet.py` | `added` | Added reference material for `spreadsheet` covering `examples/openpyxl/read_existing_spreadsheet.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/spreadsheet/references/examples/openpyxl/styling_spreadsheet.py` | `added` | Added reference material for `spreadsheet` covering `examples/openpyxl/styling_spreadsheet.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/toutiao-ops/SKILL.md` | `added` | Added the main skill definition for `toutiao-ops`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/toutiao-ops/agents/openai.yaml` | `added` | Added the OpenAI agent config for `toutiao-ops`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/toutiao-ops/references/platform-notes.md` | `added` | Added reference material for `toutiao-ops` covering `platform-notes.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/toutiao-publish/SKILL.md` | `added` | Added the main skill definition for `toutiao-publish`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/toutiao-publish/agents/openai.yaml` | `added` | Added the OpenAI agent config for `toutiao-publish`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/toutiao-publish/references/toutiao-publish-notes.md` | `added` | Added reference material for `toutiao-publish` covering `toutiao-publish-notes.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/transcribe/LICENSE.txt` | `added` | Added license metadata for `transcribe`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/transcribe/SKILL.md` | `added` | Added the main skill definition for `transcribe`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/transcribe/agents/openai.yaml` | `added` | Added the OpenAI agent config for `transcribe`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/transcribe/assets/transcribe-small.svg` | `added` | Added an asset/template file for `transcribe`: `transcribe-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/transcribe/assets/transcribe.png` | `added` | Added an asset/template file for `transcribe`: `transcribe.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/transcribe/references/api.md` | `added` | Added reference material for `transcribe` covering `api.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/transcribe/scripts/transcribe_diarize.py` | `added` | Added a helper script for `transcribe`: `transcribe_diarize.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/vercel-deploy/LICENSE.txt` | `added` | Added license metadata for `vercel-deploy`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/vercel-deploy/SKILL.md` | `added` | Added the main skill definition for `vercel-deploy`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/vercel-deploy/agents/openai.yaml` | `added` | Added the OpenAI agent config for `vercel-deploy`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/vercel-deploy/assets/vercel-small.svg` | `added` | Added an asset/template file for `vercel-deploy`: `vercel-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/vercel-deploy/assets/vercel.png` | `added` | Added an asset/template file for `vercel-deploy`: `vercel.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/vercel-deploy/scripts/deploy.sh` | `added` | Added a helper script for `vercel-deploy`: `deploy.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/SKILL.md` | `added` | Added the main skill definition for `wechat-channels-ops`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/agents/openai.yaml` | `added` | Added the OpenAI agent config for `wechat-channels-ops`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/references/platform-notes.md` | `added` | Added reference material for `wechat-channels-ops` covering `platform-notes.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-desktop-ops/SKILL.md` | `added` | Added the main skill definition for `wechat-desktop-ops`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-desktop-ops/agents/openai.yaml` | `added` | Added the OpenAI agent config for `wechat-desktop-ops`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-desktop-ops/references/local-automation-playbook.md` | `added` | Added reference material for `wechat-desktop-ops` covering `local-automation-playbook.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-desktop-ops/references/official-notes.md` | `added` | Added reference material for `wechat-desktop-ops` covering `official-notes.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-desktop-ops/scripts/check_wechat_runtime.py` | `added` | Added a helper script for `wechat-desktop-ops`: `check_wechat_runtime.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-moments-desktop-ops/SKILL.md` | `added` | Added the main skill definition for `wechat-moments-desktop-ops`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-moments-desktop-ops/agents/openai.yaml` | `added` | Added the OpenAI agent config for `wechat-moments-desktop-ops`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-moments-desktop-ops/references/desktop-posting-guide.md` | `added` | Added reference material for `wechat-moments-desktop-ops` covering `desktop-posting-guide.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-moments-desktop-ops/references/official-notes.md` | `added` | Added reference material for `wechat-moments-desktop-ops` covering `official-notes.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-moments-desktop-ops/scripts/check_wechat_moments_support.py` | `added` | Added a helper script for `wechat-moments-desktop-ops`: `check_wechat_moments_support.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-video-channel-share-desktop-ops/SKILL.md` | `added` | Added the main skill definition for `wechat-video-channel-share-desktop-ops`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-video-channel-share-desktop-ops/agents/openai.yaml` | `added` | Added the OpenAI agent config for `wechat-video-channel-share-desktop-ops`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-video-channel-share-desktop-ops/references/desktop-share-guide.md` | `added` | Added reference material for `wechat-video-channel-share-desktop-ops` covering `desktop-share-guide.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-video-channel-share-desktop-ops/references/official-notes.md` | `added` | Added reference material for `wechat-video-channel-share-desktop-ops` covering `official-notes.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-video-channel-share-desktop-ops/scripts/check_wechat_video_channel_share_support.py` | `added` | Added a helper script for `wechat-video-channel-share-desktop-ops`: `check_wechat_video_channel_share_support.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weibo-ops/SKILL.md` | `added` | Added the main skill definition for `weibo-ops`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weibo-ops/agents/openai.yaml` | `added` | Added the OpenAI agent config for `weibo-ops`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weibo-ops/references/platform-notes.md` | `added` | Added reference material for `weibo-ops` covering `platform-notes.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/LICENSE.txt` | `added` | Added license metadata for `winui-app`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/SKILL.md` | `added` | Added the main skill definition for `winui-app`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/agents/openai.yaml` | `added` | Added the OpenAI agent config for `winui-app`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/assets/winui.png` | `added` | Added an asset/template file for `winui-app`: `winui.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/config.yaml` | `added` | Added skill config for `winui-app`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/references/_sections.md` | `added` | Added reference material for `winui-app` covering `_sections.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/references/accessibility-input-and-localization.md` | `added` | Added reference material for `winui-app` covering `accessibility-input-and-localization.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/references/build-run-and-launch-verification.md` | `added` | Added reference material for `winui-app` covering `build-run-and-launch-verification.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/references/community-toolkit-controls-and-helpers.md` | `added` | Added reference material for `winui-app` covering `community-toolkit-controls-and-helpers.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/references/controls-layout-and-adaptive-ui.md` | `added` | Added reference material for `winui-app` covering `controls-layout-and-adaptive-ui.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/references/foundation-environment-audit-and-remediation.md` | `added` | Added reference material for `winui-app` covering `foundation-environment-audit-and-remediation.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/references/foundation-setup-and-project-selection.md` | `added` | Added reference material for `winui-app` covering `foundation-setup-and-project-selection.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/references/foundation-template-first-recovery.md` | `added` | Added reference material for `winui-app` covering `foundation-template-first-recovery.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/references/foundation-winui-app-structure.md` | `added` | Added reference material for `winui-app` covering `foundation-winui-app-structure.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/references/motion-animations-and-polish.md` | `added` | Added reference material for `winui-app` covering `motion-animations-and-polish.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/references/performance-diagnostics-and-responsiveness.md` | `added` | Added reference material for `winui-app` covering `performance-diagnostics-and-responsiveness.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/references/sample-source-map.md` | `added` | Added reference material for `winui-app` covering `sample-source-map.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/references/shell-navigation-and-windowing.md` | `added` | Added reference material for `winui-app` covering `shell-navigation-and-windowing.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/references/styling-theming-materials-and-icons.md` | `added` | Added reference material for `winui-app` covering `styling-theming-materials-and-icons.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/references/testing-debugging-and-review-checklists.md` | `added` | Added reference material for `winui-app` covering `testing-debugging-and-review-checklists.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/winui-app/references/windows-app-sdk-lifecycle-notifications-and-deployment.md` | `added` | Added reference material for `winui-app` covering `windows-app-sdk-lifecycle-notifications-and-deployment.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/SKILL.md` | `added` | Added the main skill definition for `xiaohongshu-ops`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/agents/openai.yaml` | `added` | Added the OpenAI agent config for `xiaohongshu-ops`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/references/platform-notes.md` | `added` | Added reference material for `xiaohongshu-ops` covering `platform-notes.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/SKILL.md` | `added` | Added the main skill definition for `xiaoyunque-source-video`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/agents/openai.yaml` | `added` | Added the OpenAI agent config for `xiaoyunque-source-video`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/prompt-template.md` | `added` | Added reference material for `xiaoyunque-source-video` covering `prompt-template.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/source-video-playbook.md` | `added` | Added reference material for `xiaoyunque-source-video` covering `source-video-playbook.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/yeet/LICENSE.txt` | `added` | Added license metadata for `yeet`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/yeet/SKILL.md` | `added` | Added the main skill definition for `yeet`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/yeet/agents/openai.yaml` | `added` | Added the OpenAI agent config for `yeet`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/yeet/assets/yeet-small.svg` | `added` | Added an asset/template file for `yeet`: `yeet-small.svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/yeet/assets/yeet.png` | `added` | Added an asset/template file for `yeet`: `yeet.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/zhihu-ops/SKILL.md` | `added` | Added the main skill definition for `zhihu-ops`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/zhihu-ops/agents/openai.yaml` | `added` | Added the OpenAI agent config for `zhihu-ops`: `openai.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/zhihu-ops/references/platform-notes.md` | `added` | Added reference material for `zhihu-ops` covering `platform-notes.md`.
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md` | `modified` | Updated the takeover automation guide with the new Windows PowerShell launcher flow.
+
+### 删除文件
+- 无。
+
+### 新增 Python 文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/scripts/apply_standard_env.py` | 用途: Apply the standard Clash Verge config and rules templates into the local macOS app data directory. | 关联 skill: `clash-verge-standard-env` | 平台属性: platform-specific (macOS).
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/coze-seedance15pro-sales-workflow/scripts/run_workflow.py` | 用途: Call the configured Coze workflow and poll Seedance generation results from the command line. | 关联 skill: `coze-seedance15pro-sales-workflow` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/doc/scripts/render_docx.py` | 用途: Render DOCX files through office/PDF tooling so the doc skill can visually inspect layout. | 关联 skill: `doc` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/figma-code-connect-components/scripts/normalize_node_id.py` | 用途: Convert Figma node IDs between URL form and tool form. | 关联 skill: `figma-code-connect-components` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/gh-address-comments/scripts/fetch_comments.py` | 用途: Fetch PR review threads and comments through `gh api graphql` for comment triage. | 关联 skill: `gh-address-comments` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/gh-fix-ci/scripts/inspect_pr_checks.py` | 用途: Inspect PR checks and summarize failing GitHub Actions runs. | 关联 skill: `gh-fix-ci` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/jupyter-notebook/scripts/new_notebook.py` | 用途: Scaffold a new notebook from bundled templates with a slugged path. | 关联 skill: `jupyter-notebook` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/screenshot/scripts/take_screenshot.py` | 用途: Capture screenshots through platform-specific backends behind one CLI. | 关联 skill: `screenshot` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-ownership-map/scripts/build_ownership_map.py` | 用途: Build ownership and risk graph data from git history. | 关联 skill: `security-ownership-map` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-ownership-map/scripts/community_maintainers.py` | 用途: Report monthly maintainers for a file community from ownership-map outputs. | 关联 skill: `security-ownership-map` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-ownership-map/scripts/query_ownership.py` | 用途: Query ownership-map outputs without loading the full dataset. | 关联 skill: `security-ownership-map` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/security-ownership-map/scripts/run_ownership_map.py` | 用途: Run the ownership-map pipeline with sensible defaults. | 关联 skill: `security-ownership-map` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sentry/scripts/sentry_api.py` | 用途: Query Sentry issues and events via the REST API with basic scrubbing. | 关联 skill: `sentry` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/scripts/create_montage.py` | 用途: Build image montages from slide renders for visual review. | 关联 skill: `slides` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/scripts/detect_font.py` | 用途: Detect requested versus resolved fonts in PPTX rendering. | 关联 skill: `slides` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/scripts/ensure_raster_image.py` | 用途: Convert non-raster assets into PNG for slide previews and testing. | 关联 skill: `slides` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/scripts/render_slides.py` | 用途: Render PPTX slides into images through PDF conversion tooling. | 关联 skill: `slides` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/slides/scripts/slides_test.py` | 用途: Exercise slide generation/rendering behavior with automated checks. | 关联 skill: `slides` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/sora/scripts/sora.py` | 用途: Create, poll, download, and manage Sora video jobs from the CLI. | 关联 skill: `sora` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/speech/scripts/text_to_speech.py` | 用途: Generate speech audio files via the OpenAI TTS API. | 关联 skill: `speech` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/spreadsheet/references/examples/openpyxl/create_basic_spreadsheet.py` | 用途: Create a minimal example workbook with formulas. | 关联 skill: `spreadsheet` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/spreadsheet/references/examples/openpyxl/create_spreadsheet_with_styling.py` | 用途: Generate a styled example workbook that demonstrates formatting rules. | 关联 skill: `spreadsheet` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/spreadsheet/references/examples/openpyxl/read_existing_spreadsheet.py` | 用途: Read an existing workbook and print a concise summary. | 关联 skill: `spreadsheet` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/spreadsheet/references/examples/openpyxl/styling_spreadsheet.py` | 用途: Create a styled workbook with headers, borders, and totals. | 关联 skill: `spreadsheet` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/transcribe/scripts/transcribe_diarize.py` | 用途: Transcribe audio and optionally label speakers through the OpenAI API. | 关联 skill: `transcribe` | 平台属性: cross-platform.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-desktop-ops/scripts/check_wechat_runtime.py` | 用途: Check the local macOS WeChat desktop automation runtime, helper scripts, and dependencies. | 关联 skill: `wechat-desktop-ops` | 平台属性: platform-specific (macOS/local environment).
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-moments-desktop-ops/scripts/check_wechat_moments_support.py` | 用途: Check whether the installed macOS WeChat build should support Moments posting. | 关联 skill: `wechat-moments-desktop-ops` | 平台属性: platform-specific (macOS).
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-video-channel-share-desktop-ops/scripts/check_wechat_video_channel_share_support.py` | 用途: Check whether the installed macOS WeChat build should support sharing Channels posts. | 关联 skill: `wechat-video-channel-share-desktop-ops` | 平台属性: platform-specific (macOS).
+
+## 2026-04-13 02:23:31 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 01:22:32 CST`（对应上次运行 `2026-04-12T17:22:32.437Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 四个扫描目录下没有任何文件的 `mtime` 晚于本次基线。
+- 当前仓库里仍存在 `skills/codex-feishu-bridge-skill/**` 的未提交改动与新增文件，但这些文件时间都停留在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，属于前一批次，未计入本轮。
+- 本轮未发现删除项，也没有新建 `.py` 文件。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+ 
+## 2026-04-13 07:24:01 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 06:22:33 CST`（对应上次运行 `2026-04-12T22:22:33.333Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 本轮未发现晚于基线时间的技能文件或技能支撑自动化文件。
+- `skills/codex-feishu-bridge-skill/**`、`skill-center/**`、`automation/python-platform-takeover/**` 仍可见较早改动痕迹，但最新文件时间均早于本轮基线，未计入新批次。
+- `automation/python-platform-takeover/.pytest_cache/**` 仅表现为较早的测试缓存文件，本轮未新增，也不作为技能变更记录。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+
+## 2026-04-13 09:23:31 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 08:22:33 CST`（对应上次运行 `2026-04-13T00:22:33.666Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 四个扫描目录里都没有文件 `mtime` 晚于基线时间，因此本轮未形成新的技能变更批次。
+- 仓库内仍存在 `skills/codex-feishu-bridge-skill/**` 的较早未提交改动与新增 PowerShell 脚本，但这些文件的时间均早于本轮基线，未重复计入。
+- 本轮未发现删除项，也没有新建 `.py` 文件；同时已重建后续删除检测所需的目录快照基线。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-13 10:25:22 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 09:22:33 CST`（对应上次运行 `2026-04-13T01:22:33.841Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 本轮按文件系统 `mtime` 扫描四个目录，未发现晚于基线时间的新建、修改或删除的技能相关文件。
+- 仓库内仍存在 `skills/codex-feishu-bridge-skill/**` 的未提交改动，但这些文件的修改时间均为 `2026-04-12 22:07:15 CST` 或 `2026-04-12 22:09:39 CST`，早于本轮基线，因此不计入本批次。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+ 
+## 2026-04-13 13:24:19 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 12:23:04 CST`（对应上次运行 `2026-04-13T04:23:04.288Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 四个目标目录中没有文件 `mtime` 晚于基线，也没有发现新的删除记录。
+- `skills/codex-feishu-bridge-skill/**` 仍存在未提交改动，但相关文件的 `mtime` 全部早于基线，本轮未重复计入。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+ 
+## 2026-04-13 15:24:34 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-13T06:23:04.582Z`（上次运行时间）
+- 结果汇总: 新增 0，修改 6，删除 0。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/browser.py` | `modified` | Added `force_new` to `open_or_activate_page()` so platform takeover logic can deliberately open a fresh compose tab instead of always reusing an existing one.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/base.py` | `modified` | Added shared takeover candidate scoring primitives (`TakeoverCandidate`, `evaluate_takeover_field`, `pick_takeover_candidate`) plus an `inspect_takeover_candidates()` hook for platform publishers.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/kuaishou.py` | `modified` | Reworked Kuaishou compose-page selection to score existing publish tabs, reuse a matching draft when safe, and fall back to a forced fresh tab with takeover notes when no viable candidate matches.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py` | `modified` | Added WeChat Channels takeover candidate discovery across open compose tabs, frame-aware draft matching for title and description, and forced fresh-tab fallback when no reusable compose page qualifies.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_browser_controller.py` | `modified` | Added regression coverage proving `force_new=True` bypasses matching pages and creates a new browser tab.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_platform_base.py` | `modified` | Added unit tests for takeover field scoring and viable-candidate selection so stopped old drafts lose to valid matching tabs.
+
+### 删除文件
+- 无
+
+### 变更摘要
+- 本批次仅命中 `automation/python-platform-takeover`，未发现 `~/.codex/skills`、仓库内 `skills/`、`skill-center/` 在上次运行后有新的 skill 文件变动。
+- 变更重点是“接管既有草稿页”策略：平台实现现在会评估现有编辑页是否与目标内容匹配，不匹配时改为强制打开新发布页，避免误接管旧草稿。
+- 同步补上了对应测试，说明这是一次带回归保护的自动化行为调整。
+
+### 新增 `.py` 文件
+- 无
+
+## 2026-04-13 16:24:35 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 15:23:04 CST`（对应上次运行 `2026-04-13T07:23:04.684Z`）
+- 结果汇总: 新增 0，修改 7，删除 0。
+- 说明:
+- `~/.codex/skills`、仓库 `skills/`、`skill-center/` 在本轮没有晚于基线的新文件变更。
+- `skills/codex-feishu-bridge-skill/**` 仍有未提交改动，但相关文件 mtime 早于本轮基线，未重复计入。
+- `automation/python-platform-takeover/.pytest_cache/**` 是本地测试运行产物，不作为技能/自动化变更记录。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md` | `modified` | Added `inspect-tabs --platform --package` usage examples and candidate-scoring guidance, then clarified which local run artifacts should be kept out of GitHub versus promoted as reusable fixes, tests, and stable docs.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/cli.py` | `modified` | Expanded `inspect-tabs` so it can score platform-specific takeover candidates from a content package, highlight the selected tab, and print matched fields, stop reasons, and takeover notes.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/baijiahao.py` | `modified` | Reworked Baijiahao editor selection to score open tabs by title/body match, reuse only safe matching drafts, and force a fresh compose tab when no candidate passes.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/kuaishou.py` | `modified` | Added Kuaishou compose-page candidate scoring using existing-video markers, continue-edit prompts, and description matching so takeover can reuse only validated tabs or open a new publish page.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/toutiao.py` | `modified` | Reworked Toutiao editor selection to inspect open tabs, score title/body matches, attach takeover notes, and force a fresh compose tab when the current candidates look unsafe.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py` | `modified` | Added 视频号 publish-frame candidate scoring for short title and description matches, records takeover notes from reused tabs, and falls back to a forced fresh create page when no safe draft frame is available.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/zhihu.py` | `modified` | Reworked Zhihu editor selection to score open write tabs by title/body match, reuse only viable drafts, and open a fresh write page when existing tabs look like stale or mismatched drafts.
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-13 17:24:07 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 16:23:04 CST`（对应上次运行 `2026-04-13T08:23:04.779Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 本轮在四个扫描目录中均未发现晚于基线的新文件、修改文件或删除文件。
+- `skills/codex-feishu-bridge-skill/**` 仍存在未提交改动，但抽查的 `SKILL.md`、新增 `.ps1`/`.js` 脚本 mtime 均停留在 `2026-04-12 22:07-22:09 CST`，早于本轮基线，未计入新增批次。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-13 19:24:14 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 18:23:05 CST`（对应上次运行 `2026-04-13T10:23:05.218Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 本轮在四个扫描目录中均未发现晚于基线的新文件、修改文件或删除文件。
+- 仓库内仍有 `skills/codex-feishu-bridge-skill/**` 的未提交技能改动与新增脚本，但抽查文件 mtime 均为 `2026-04-12 22:07-22:09 CST`，早于本轮基线，未计入新批次。
+- 未发现新的 `.py` 文件，因此无需新增 Python 脚本分项记录。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-13 21:24:10 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 20:23:05 CST`（对应上次运行 `2026-04-13T12:23:05.460Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 本轮在四个扫描目录中均未发现晚于基线的新文件、修改文件或删除文件。
+- 仓库内仍有 `skills/codex-feishu-bridge-skill/**` 的未提交技能改动与新增脚本，但抽查文件 mtime 均为 `2026-04-12 22:07-22:09 CST`，早于本轮基线，未计入新批次。
+- 未发现新的 `.py` 文件，因此无需新增 Python 脚本分项记录。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-13 23:24:53 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-13 22:23:05 CST`（对应上次运行 `2026-04-13T14:23:05.770Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 本轮在四个扫描目录中均未发现晚于基线的新文件、修改文件或删除文件。
+- 与上轮快照比对后也未发现有效的删除项；唯一消失的路径来自 `automation/python-platform-takeover/.pytest_cache/**` 运行缓存，已按监控规则忽略。
+- 仓库内仍有 `skills/codex-feishu-bridge-skill/**` 的较早未提交改动，但抽查文件 mtime 仍停留在 `2026-04-12 22:07-22:09 CST`，早于本轮基线，未计入新批次。
+- 未发现新的 `.py` 文件，因此无需新增 Python 脚本分项记录。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
