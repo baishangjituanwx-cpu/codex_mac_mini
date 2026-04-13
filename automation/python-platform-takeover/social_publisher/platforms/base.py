@@ -7,7 +7,9 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from social_publisher.browser import BrowserController
     from social_publisher.content_package import AssetPaths, PlatformContent
-    from playwright.sync_api import Locator
+    from playwright.sync_api import Locator, Page
+else:
+    Page = object
 
 
 @dataclass(frozen=True)
@@ -30,6 +32,15 @@ class PublishResult:
     message: str
     current_url: str | None = None
     management_url: str | None = None
+    notes: list[str] = field(default_factory=list)
+
+
+@dataclass
+class TakeoverCandidate:
+    page: "Page"
+    score: int = 0
+    matched_fields: list[str] = field(default_factory=list)
+    stop_reasons: list[str] = field(default_factory=list)
     notes: list[str] = field(default_factory=list)
 
 
@@ -66,6 +77,14 @@ class PlatformPublisher:
         raise NotImplementedError(
             f"{self.metadata.display_name} publish flow is not implemented yet."
         )
+
+    def inspect_takeover_candidates(
+        self,
+        controller: "BrowserController",
+        platform_content: "PlatformContent",
+    ) -> list[TakeoverCandidate]:
+        del controller, platform_content
+        return []
 
 
 def normalize_text(value: str) -> str:
@@ -118,3 +137,41 @@ def detect_text_mismatch(
     if text_matches_target(normalized_current, target):
         return None
     return f"existing_{field_name}: {normalized_current[:limit]}"
+
+
+def evaluate_takeover_field(
+    field_name: str,
+    current: str,
+    target: str,
+    *,
+    limit: int = 80,
+) -> tuple[int, str | None, str | None]:
+    normalized_current = normalize_text(current)
+    normalized_target = normalize_text(target)
+    if not normalized_current or not normalized_target:
+        return 0, None, None
+    if text_matches_target(normalized_current, normalized_target):
+        return 2, field_name, None
+    return 0, None, detect_text_mismatch(
+        field_name,
+        normalized_current,
+        normalized_target,
+        limit=limit,
+    )
+
+
+def pick_takeover_candidate(
+    candidates: list[TakeoverCandidate],
+) -> TakeoverCandidate | None:
+    viable = [candidate for candidate in candidates if not candidate.stop_reasons]
+    if not viable:
+        return None
+    viable.sort(
+        key=lambda candidate: (
+            candidate.score,
+            len(candidate.matched_fields),
+            len(candidate.notes),
+        ),
+        reverse=True,
+    )
+    return viable[0]

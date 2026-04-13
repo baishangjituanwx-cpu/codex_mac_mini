@@ -54,14 +54,16 @@ class BrowserController:
         url: str,
         *,
         reuse_contains: str | None = None,
+        force_new: bool = False,
     ) -> Page:
-        for page in self.pages():
-            if reuse_contains and reuse_contains in page.url:
-                page.bring_to_front()
-                return page
-            if page.url == url:
-                page.bring_to_front()
-                return page
+        if not force_new:
+            for page in self.pages():
+                if reuse_contains and reuse_contains in page.url:
+                    page.bring_to_front()
+                    return page
+                if page.url == url:
+                    page.bring_to_front()
+                    return page
 
         browser = self._require_browser()
         if browser.contexts:

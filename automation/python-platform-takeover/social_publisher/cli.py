@@ -7,6 +7,7 @@ import typer
 
 from social_publisher.browser import BrowserController, BrowserSessionConfig
 from social_publisher.content_package import load_package
+from social_publisher.platforms.base import pick_takeover_candidate
 from social_publisher.platforms import build_publisher
 
 app = typer.Typer(help="Multi-platform browser takeover scaffold.")
@@ -29,9 +30,63 @@ def readiness(platform: str) -> None:
 
 
 @app.command("inspect-tabs")
-def inspect_tabs(url_contains: str = "") -> None:
+def inspect_tabs(
+    url_contains: str = "",
+    platform: str = typer.Option(
+        "",
+        "--platform",
+        help="Inspect takeover candidates for a specific platform.",
+    ),
+    package: Path | None = typer.Option(
+        None,
+        "--package",
+        help="Content package used to score existing draft tabs.",
+    ),
+) -> None:
     config = BrowserSessionConfig(cdp_url=os.getenv("BROWSER_CDP_URL"))
     with BrowserController(config) as controller:
+        if platform:
+            if package is None:
+                raise typer.BadParameter("--package is required when --platform is set.")
+            content_package = load_package(package)
+            if platform not in content_package.platforms:
+                raise typer.BadParameter(f"{platform} not found in package.")
+            publisher = build_publisher(platform)
+            candidates = publisher.inspect_takeover_candidates(
+                controller,
+                content_package.platforms[platform],
+            )
+            selected = pick_takeover_candidate(candidates)
+            if candidates:
+                ordered = sorted(
+                    candidates,
+                    key=lambda candidate: (
+                        not candidate.stop_reasons,
+                        candidate.score,
+                        len(candidate.matched_fields),
+                    ),
+                    reverse=True,
+                )
+                for candidate in ordered:
+                    if url_contains and url_contains not in candidate.page.url:
+                        continue
+                    prefix = "*" if candidate is selected else "-"
+                    typer.echo(
+                        f"{prefix} score={candidate.score} "
+                        f"title={_safe_page_title(candidate.page)} "
+                        f"url={candidate.page.url}"
+                    )
+                    if candidate.matched_fields:
+                        typer.echo(
+                            "  matched_fields: " + ", ".join(candidate.matched_fields)
+                        )
+                    if candidate.stop_reasons:
+                        typer.echo(
+                            "  stop_reasons: " + " | ".join(candidate.stop_reasons)
+                        )
+                    if candidate.notes:
+                        typer.echo("  notes: " + " | ".join(candidate.notes))
+                return
         matches = list(controller.describe_pages())
         for title, url in matches:
             if url_contains and url_contains not in url:
@@ -93,3 +148,11 @@ def publish(
 
 def main() -> None:
     app()
+
+
+def _safe_page_title(page: object) -> str:
+    try:
+        title = page.title()  # type: ignore[attr-defined]
+    except Exception:  # noqa: BLE001
+        return "<unknown>"
+    return title or "<untitled>"
