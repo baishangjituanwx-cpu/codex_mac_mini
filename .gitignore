@@ -1,5 +1,8 @@
 .DS_Store
 node_modules/
+.venv/
+__pycache__/
+*.egg-info/
 .bridge.env
 bridge.log
 bridge.stdout.log
@@ -7,6 +10,8 @@ bridge.stderr.log
 .codex/
 .codex-skill-monitor-snapshot.txt
 .codex-feishu-bridge/
+automation/python-platform-takeover/.env
+automation/python-platform-takeover/configs/content-package.local.yaml
 workflow/content-library/assets/generated/*
 !workflow/content-library/assets/generated/.gitkeep
 workflow/content-library/assets/shared/*

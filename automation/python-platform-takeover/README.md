@@ -9,6 +9,39 @@
 3. 平台规则元数据
 4. 后续逐个平台补真实发布器的工程骨架
 
+## 最短首跑
+
+如果你刚从 GitHub 打开这个仓库，先不要自己拼命令，直接跑首跑脚本。
+
+macOS:
+
+```bash
+cd automation/python-platform-takeover
+bash scripts/quickstart-mac.sh --platform wechat_channels
+```
+
+Windows PowerShell:
+
+```powershell
+Set-Location automation/python-platform-takeover
+.\scripts\quickstart-windows.ps1 -Platform wechat_channels
+```
+
+这两条脚本会自动帮你做 6 件事:
+
+1. 创建 `.venv`
+2. 安装 Python 依赖
+3. 安装 Playwright Chromium
+4. 生成 `.env`
+5. 生成 `configs/content-package.local.yaml`
+6. 运行 `doctor`、`inspect-tabs` 和安全模式 `publish`
+
+如果你只是想单独检查环境，不想立刻走完整首跑，也可以直接用:
+
+```bash
+./scripts/social-publisher.sh doctor --package configs/content-package.local.yaml --platform wechat_channels --check-browser
+```
+
 ## 当前状态
 
 - 已完成:
@@ -40,12 +73,17 @@
 automation/python-platform-takeover/
 ├── .env.example
 ├── configs/
+│   ├── content-package.demo.yaml
 │   ├── content-package.example.yaml
 │   └── platforms.example.yaml
 ├── pyproject.toml
 ├── README.md
 ├── scripts/
+│   ├── quickstart-mac.sh
+│   ├── quickstart-windows.ps1
+│   ├── social-publisher.sh
 │   ├── social-publisher.ps1
+│   ├── start-chrome-cdp.sh
 │   └── start-chrome-cdp.ps1
 ├── social_publisher/
 │   ├── __init__.py
@@ -53,6 +91,8 @@ automation/python-platform-takeover/
 │   ├── browser.py
 │   ├── cli.py
 │   ├── content_package.py
+│   ├── doctor.py
+│   ├── env.py
 │   └── platforms/
 │       ├── __init__.py
 │       ├── base.py
@@ -65,7 +105,10 @@ automation/python-platform-takeover/
 │       ├── xiaohongshu.py
 │       └── zhihu.py
 └── tests/
+    ├── test_browser_controller.py
     ├── test_content_package.py
+    ├── test_doctor.py
+    ├── test_env.py
     └── test_platform_base.py
 ```
 
@@ -93,6 +136,12 @@ py -3 -m venv .venv
 ```
 
 仓库里的 `.\scripts\social-publisher.ps1` 现在会先检查 `Python 3.10+` 和关键依赖是否已安装，缺了会直接给出友好提示。
+
+macOS / Linux 也有对应包装器:
+
+```bash
+./scripts/social-publisher.sh doctor
+```
 
 ## 直接使用的准确含义
 
@@ -122,6 +171,8 @@ py -3 -m venv .venv
   --user-data-dir="$HOME/.codex-chrome-takeover"
 ```
 
+如果 `./scripts/start-chrome-cdp.sh` 提示 “CDP did not become reachable”，通常说明当前 Chrome 实例没有按预期挂上调试端口。先关闭冲突的 Chrome / Edge 实例，或换一个新的 `--profile-dir` 再试。
+
 ### Windows PowerShell
 
 仓库已附带 PowerShell 启动器，会优先寻找 Chrome，也兼容 Edge:
@@ -135,6 +186,8 @@ py -3 -m venv .venv
 ```powershell
 .\scripts\start-chrome-cdp.ps1 -Port 9222 -ProfileDir "$HOME\.codex-chrome-takeover"
 ```
+
+如果脚本提示 CDP 端口没有起来，先关闭冲突的浏览器实例，或者换一个新的 `-ProfileDir` 后再试。
 
 然后在这个浏览器里手动登录各平台后台，并把待接管页面保持打开。
 
@@ -153,6 +206,8 @@ Windows PowerShell:
 ```powershell
 Copy-Item .env.example .env
 ```
+
+CLI 现在会自动读取当前目录下的 `.env`，不需要再手动 `export` 一遍。
 
 核心变量:
 
@@ -203,6 +258,7 @@ Copy-Item configs/content-package.example.yaml configs/content-package.local.yam
 macOS / Linux:
 
 ```bash
+./scripts/social-publisher.sh doctor --package configs/content-package.local.yaml --platform wechat_channels --check-browser
 python -m social_publisher readiness wechat_channels
 python -m social_publisher inspect-tabs --url-contains channels.weixin.qq.com
 python -m social_publisher inspect-tabs --platform wechat_channels --package configs/content-package.local.yaml
@@ -214,6 +270,7 @@ social-publisher publish kuaishou configs/content-package.local.yaml --execute
 Windows PowerShell:
 
 ```powershell
+.\scripts\social-publisher.ps1 doctor --package configs/content-package.local.yaml --platform wechat_channels --check-browser
 .\scripts\social-publisher.ps1 readiness wechat_channels
 .\scripts\social-publisher.ps1 inspect-tabs --url-contains channels.weixin.qq.com
 .\scripts\social-publisher.ps1 inspect-tabs --platform wechat_channels --package configs/content-package.local.yaml
@@ -232,7 +289,7 @@ Windows PowerShell:
 当前状态分两层:
 
 - 所有平台:
-  - 都支持 readiness / inspect-tabs / validate-package
+  - 都支持 doctor / readiness / inspect-tabs / validate-package
 - 快手 / 头条号 / 微博 / 百家号 / 知乎 / 抖音 / 微信视频号:
   - 已经接上 `--execute` 的真实接管链路
   - 都会先查管理页或列表页避免重复
@@ -247,14 +304,16 @@ Windows PowerShell:
 
 第一次接管，建议按这个顺序:
 
-1. `inspect-tabs`
-2. `readiness`
-3. 不带 `--execute` 的 `publish`
-4. 带 `--execute` 的 `publish`
+1. `doctor`
+2. `inspect-tabs`
+3. `readiness`
+4. 不带 `--execute` 的 `publish`
+5. 带 `--execute` 的 `publish`
 
 macOS / Linux:
 
 ```bash
+./scripts/social-publisher.sh doctor --package configs/content-package.local.yaml --platform toutiao --check-browser
 social-publisher inspect-tabs --url-contains mp.toutiao.com
 social-publisher readiness toutiao
 social-publisher publish toutiao configs/content-package.local.yaml
@@ -264,6 +323,7 @@ social-publisher publish toutiao configs/content-package.local.yaml --execute
 Windows PowerShell:
 
 ```powershell
+.\scripts\social-publisher.ps1 doctor --package configs/content-package.local.yaml --platform toutiao --check-browser
 .\scripts\social-publisher.ps1 inspect-tabs --url-contains mp.toutiao.com
 .\scripts\social-publisher.ps1 readiness toutiao
 .\scripts\social-publisher.ps1 publish toutiao configs/content-package.local.yaml

@@ -7,6 +7,8 @@ import typer
 
 from social_publisher.browser import BrowserController, BrowserSessionConfig
 from social_publisher.content_package import load_package
+from social_publisher.doctor import format_doctor_report, run_doctor
+from social_publisher.env import load_dotenv_if_present
 from social_publisher.platforms.base import pick_takeover_candidate
 from social_publisher.platforms import build_publisher
 
@@ -27,6 +29,34 @@ def validate_package(package: Path) -> None:
 def readiness(platform: str) -> None:
     publisher = build_publisher(platform)
     typer.echo("\n".join(publisher.readiness_lines()))
+
+
+@app.command("doctor")
+def doctor(
+    package: Path | None = typer.Option(
+        None,
+        "--package",
+        help="Validate a content package and asset paths.",
+    ),
+    platform: str = typer.Option(
+        "",
+        "--platform",
+        help="Validate a specific platform entry inside the package.",
+    ),
+    check_browser: bool = typer.Option(
+        False,
+        "--check-browser",
+        help="Try connecting to the current CDP browser session.",
+    ),
+) -> None:
+    report = run_doctor(
+        package_path=package,
+        platform_id=platform or None,
+        check_browser=check_browser,
+    )
+    typer.echo("\n".join(format_doctor_report(report)))
+    if report.has_failures:
+        raise typer.Exit(1)
 
 
 @app.command("inspect-tabs")
@@ -147,6 +177,7 @@ def publish(
 
 
 def main() -> None:
+    load_dotenv_if_present()
     app()
 
 

@@ -46,6 +46,21 @@ $arguments = @(
 
 $process = Start-Process -FilePath $browserExe -ArgumentList $arguments -PassThru
 
+$cdpReady = $false
+for ($index = 0; $index -lt 15; $index++) {
+  Start-Sleep -Seconds 1
+  try {
+    Invoke-WebRequest -UseBasicParsing -Uri "http://127.0.0.1:$Port/json/version" | Out-Null
+    $cdpReady = $true
+    break
+  } catch {
+  }
+}
+
+if (-not $cdpReady) {
+  throw "Browser launch was attempted, but CDP did not become reachable on port $Port. Close any conflicting Chrome/Edge instances for this profile, then retry."
+}
+
 Write-Output "Started browser: $browserExe"
 Write-Output "PID: $($process.Id)"
 Write-Output "CDP endpoint: http://127.0.0.1:$Port"
