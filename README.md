@@ -2,6 +2,36 @@
 
 这是一套可复制的多平台内容运营仓库，按当前工作区里最近成功跑通的流程重新整理，目标是让你后续上传 GitHub 后，可以快速在另一台机器复刻。
 
+## GitHub 打开后先做这一步
+
+如果你希望“打开仓库后就立刻开始跑”，先从 Python 接管首跑入口开始。
+
+macOS:
+
+```bash
+cd automation/python-platform-takeover
+bash scripts/quickstart-mac.sh --platform wechat_channels
+```
+
+Windows PowerShell:
+
+```powershell
+Set-Location automation/python-platform-takeover
+.\scripts\quickstart-windows.ps1 -Platform wechat_channels
+```
+
+这两条命令会自动完成:
+
+- 环境安装
+- `.env` 生成
+- demo 内容包生成
+- CDP 浏览器启动
+- `doctor`
+- `inspect-tabs`
+- 安全模式 `publish`
+
+跑完以后，你只需要替换素材路径、登录后台标签页，再加上 `--execute` 就能进入真实接管。
+
 ## 这份仓库包含什么
 
 - `skills/codex-feishu-bridge-skill/`
@@ -18,6 +48,7 @@
   - Python 自动接管脚手架
   - 先把“平台规则、接管条件、管理页验证标准”沉淀成统一工程
   - 方便后续逐个平台补齐真正可执行的接管脚本
+  - 现在已经带 `quickstart-mac.sh`、`quickstart-windows.ps1`、`doctor`
 - `skill-center/`
   - 本机 Codex 技能中心镜像
   - 当前已把 `~/.codex/skills/` 里的 `61` 个 skill 镜像进仓库
@@ -196,6 +227,12 @@ node scripts/init_campaign.js --id 2026-04-11-ai-workflow --theme "这里写母�
   - 每个平台稳定 selector
   - 风控检查点恢复逻辑
   - 真正可连续执行的发布实现
+
+现在这块已经多了一条更适合 GitHub 首次使用的路径:
+
+- Mac: `bash scripts/quickstart-mac.sh --platform wechat_channels`
+- Windows: `.\scripts\quickstart-windows.ps1 -Platform wechat_channels`
+- 单独自检: `doctor`
 
 建议把第一个试点先放在:
 
