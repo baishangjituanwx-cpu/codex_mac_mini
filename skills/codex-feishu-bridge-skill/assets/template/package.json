@@ -6,16 +6,11 @@
   "type": "commonjs",
   "scripts": {
     "bridge": "node src/bridge.js",
-    "bridge:start": "zsh scripts/bridge-start.sh",
-    "bridge:stop": "zsh scripts/bridge-stop.sh",
-    "bridge:status": "zsh scripts/bridge-status.sh",
-    "bridge:logs": "zsh scripts/bridge-logs.sh",
-    "mirror:view": "zsh scripts/mirror-view.sh latest 60",
-    "bridge:start:windows": "powershell -ExecutionPolicy Bypass -File scripts/bridge-start.ps1",
-    "bridge:stop:windows": "powershell -ExecutionPolicy Bypass -File scripts/bridge-stop.ps1",
-    "bridge:status:windows": "powershell -ExecutionPolicy Bypass -File scripts/bridge-status.ps1",
-    "bridge:logs:windows": "powershell -ExecutionPolicy Bypass -File scripts/bridge-logs.ps1",
-    "mirror:view:windows": "powershell -ExecutionPolicy Bypass -File scripts/mirror-view.ps1"
+    "bridge:start": "node scripts/run-platform-script.js bridge-start",
+    "bridge:stop": "node scripts/run-platform-script.js bridge-stop",
+    "bridge:status": "node scripts/run-platform-script.js bridge-status",
+    "bridge:logs": "node scripts/run-platform-script.js bridge-logs",
+    "mirror:view": "node scripts/run-platform-script.js mirror-view latest 60"
   },
   "dependencies": {
     "@larksuite/cli": "^1.0.4"

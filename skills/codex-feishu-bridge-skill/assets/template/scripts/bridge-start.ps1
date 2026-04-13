@@ -1,27 +1,49 @@
-param(
-    [switch]$RegisterStartupTask
+$ErrorActionPreference = "Stop"
+
+function Get-PowerShellExecutable {
+  foreach ($candidate in @("pwsh.exe", "pwsh", "powershell.exe", "powershell")) {
+    $command = Get-Command $candidate -ErrorAction SilentlyContinue
+    if ($command) {
+      return $command.Path
+    }
+  }
+  throw "PowerShell executable not found on PATH."
+}
+
+$root = Split-Path -Parent $PSScriptRoot
+$dataDir = Join-Path $root ".codex-feishu-bridge"
+$pidFile = Join-Path $dataDir "bridge.pid"
+$runScript = Join-Path $PSScriptRoot "run-bridge.ps1"
+$stdoutLog = Join-Path $root "bridge.stdout.log"
+$stderrLog = Join-Path $root "bridge.stderr.log"
+
+New-Item -ItemType Directory -Force -Path $dataDir | Out-Null
+
+if (Test-Path $pidFile) {
+  & (Join-Path $PSScriptRoot "bridge-stop.ps1") | Out-Null
+}
+
+$shell = Get-PowerShellExecutable
+$process = Start-Process `
+  -FilePath $shell `
+  -ArgumentList @("-NoProfile", "-ExecutionPolicy", "Bypass", "-File", $runScript) `
+  -WorkingDirectory $root `
+  -WindowStyle Hidden `
+  -RedirectStandardOutput $stdoutLog `
+  -RedirectStandardError $stderrLog `
+  -PassThru
+
+[System.IO.File]::WriteAllText(
+  $pidFile,
+  [string]$process.Id,
+  [System.Text.UTF8Encoding]::new($false)
 )
 
-$ErrorActionPreference = "Stop"
-$Root = "__INSTALL_DIR__"
-$TaskName = "CodexFeishuBridge"
-$RunScript = Join-Path $Root "scripts\run-bridge.ps1"
-
-Get-CimInstance Win32_Process | Where-Object {
-    $_.CommandLine -like "*src\\bridge.js*" -or
-    $_.CommandLine -like "*src/bridge.js*" -or
-    $_.CommandLine -like "*lark-cli*event*subscribe*"
-} | ForEach-Object {
-    Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue
-}
-
-if ($RegisterStartupTask) {
-    $Action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-NoProfile -ExecutionPolicy Bypass -File `"$RunScript`""
-    $Trigger = New-ScheduledTaskTrigger -AtLogOn
-    $Settings = New-ScheduledTaskSettingsSet -StartWhenAvailable
-    Register-ScheduledTask -TaskName $TaskName -Action $Action -Trigger $Trigger -Settings $Settings -Description "Codex Feishu Bridge" -Force | Out-Null
-}
-
-Start-Process -FilePath "powershell.exe" -ArgumentList @("-NoProfile", "-ExecutionPolicy", "Bypass", "-File", $RunScript) -WindowStyle Hidden
 Start-Sleep -Seconds 2
-& (Join-Path $Root "scripts\bridge-status.ps1")
+if ($process.HasExited) {
+  Remove-Item $pidFile -Force -ErrorAction SilentlyContinue
+  throw "Bridge exited immediately. Check bridge.stderr.log."
+}
+
+Write-Output "Started bridge host process: $($process.Id)"
+& (Join-Path $PSScriptRoot "bridge-status.ps1")

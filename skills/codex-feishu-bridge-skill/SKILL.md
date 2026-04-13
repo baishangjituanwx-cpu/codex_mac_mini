@@ -17,24 +17,23 @@ This skill packages and operates a Feishu-to-Codex bridge built around:
 - the user wants deployment instructions for another machine
 - the user wants a reusable Codex skill/bundle for the bridge
 - the user wants usage guidance for Feishu commands, mirrored history, or local mirror viewing
-- the user wants to troubleshoot `lark-cli`, launchd, Windows startup tasks, mirror files, or thread binding
+- the user wants to troubleshoot `lark-cli`, launchd, mirror files, or thread binding
 
 ## Workflow
 
-1. Read [deployment.md](./references/deployment.md) for macOS deployment.
-2. Read [deployment-windows.md](./references/deployment-windows.md) for Windows deployment.
-3. Read [user-guide.md](./references/user-guide.md) for operator-facing commands and normal usage flows.
-4. Read [architecture.md](./references/architecture.md) if you need the bridge internals, file layout, or limits.
-5. Use [install_bridge_template.sh](./scripts/install_bridge_template.sh) for macOS deployments.
-6. Use [install_bridge_template_windows.ps1](./scripts/install_bridge_template_windows.ps1) for Windows deployments.
-7. Use the bundled template under `assets/template/` as the source of truth for deployed bridge files.
+1. Read [deployment.md](./references/deployment.md) for machine setup, prerequisites, and the recommended deployment path.
+2. Read [user-guide.md](./references/user-guide.md) for operator-facing commands and normal usage flows.
+3. Read [architecture.md](./references/architecture.md) if you need the bridge internals, file layout, or limits.
+4. Use the bundled installer in [install_bridge_template.sh](./scripts/install_bridge_template.sh) on macOS, or [install_bridge_template.ps1](./scripts/install_bridge_template.ps1) on Windows, when deploying the template to another machine.
+5. Use the bundled template under `assets/template/` as the source of truth for deployed bridge files.
 
 ## Deployment rules
 
-- Default install target: `~/.codex-feishu-bridge`
-- Prefer user-scoped `launchd` under `~/Library/LaunchAgents`
-- On Windows, prefer `C:\codex-feishu-bridge` or another path without spaces
-- On Windows, prefer PowerShell scripts plus an optional Scheduled Task for auto-start
+- Default install target:
+  - macOS: `~/.codex-feishu-bridge`
+  - Windows: `%USERPROFILE%\.codex-feishu-bridge`
+- Prefer user-scoped `launchd` under `~/Library/LaunchAgents` on macOS.
+- Prefer the bundled per-user PowerShell launchers on Windows.
 - Do not claim the deployed bridge is read-only unless a real permission or sandbox failure occurred
 - Preserve user secrets locally; never store `App Secret` in shared docs or logs
 - Keep Feishu usage to private bot chats unless the user explicitly wants group routing

@@ -1,40 +1,57 @@
 $ErrorActionPreference = "Stop"
-$Root = "__INSTALL_DIR__"
-Set-Location $Root
 
-$EnvFile = Join-Path $Root ".bridge.env"
-if (Test-Path $EnvFile) {
-    Get-Content $EnvFile | ForEach-Object {
-        if ([string]::IsNullOrWhiteSpace($_)) { return }
-        if ($_.StartsWith("#")) { return }
-        $pair = $_ -split "=", 2
-        if ($pair.Count -ne 2) { return }
-        $name = $pair[0].Trim()
-        $value = $pair[1].Trim()
-        if ($value.StartsWith('"') -and $value.EndsWith('"')) {
-            $value = $value.Substring(1, $value.Length - 2)
-        }
-        [Environment]::SetEnvironmentVariable($name, $value, "Process")
+function Get-NodeExecutable {
+  $nodeCommand = Get-Command node.exe -ErrorAction SilentlyContinue
+  if (-not $nodeCommand) {
+    $nodeCommand = Get-Command node -ErrorAction SilentlyContinue
+  }
+  if ($nodeCommand) {
+    return $nodeCommand.Path
+  }
+  $fallback = Join-Path $HOME ".local\bin\node.exe"
+  if (Test-Path $fallback) {
+    return $fallback
+  }
+  throw "node not found on PATH and $fallback is missing."
+}
+
+function Parse-EnvValue {
+  param([string]$Value)
+
+  $trimmed = $Value.Trim()
+  if ($trimmed.StartsWith('"') -and $trimmed.EndsWith('"')) {
+    try {
+      return $trimmed | ConvertFrom-Json
+    } catch {
+      return $trimmed.Trim('"')
     }
+  }
+  if ($trimmed.StartsWith("'") -and $trimmed.EndsWith("'")) {
+    return $trimmed.Substring(1, $trimmed.Length - 2)
+  }
+  return $trimmed
 }
 
-$node = Get-Command node -ErrorAction SilentlyContinue
-if (-not $node) {
-    $fallbacks = @(
-        "C:\Program Files\nodejs\node.exe",
-        "C:\Program Files (x86)\nodejs\node.exe"
-    )
-    foreach ($candidate in $fallbacks) {
-        if (Test-Path $candidate) {
-            $node = @{ Source = $candidate }
-            break
-        }
+$root = Split-Path -Parent $PSScriptRoot
+$envFile = Join-Path $root ".bridge.env"
+
+if (Test-Path $envFile) {
+  foreach ($line in Get-Content -Path $envFile) {
+    if ($line -match '^\s*([A-Za-z_][A-Za-z0-9_]*)=(.*)\s*$') {
+      $name = $matches[1]
+      $value = Parse-EnvValue -Value $matches[2]
+      Set-Item -Path "Env:$name" -Value $value
     }
+  }
 }
 
-if (-not $node) {
-    throw "node not found on PATH and common install locations are missing"
+$nodeExe = Get-NodeExecutable
+Push-Location $root
+try {
+  & $nodeExe "src/bridge.js"
+  if ($LASTEXITCODE -ne 0) {
+    exit $LASTEXITCODE
+  }
+} finally {
+  Pop-Location
 }
-
-& $node.Source "src/bridge.js"
-exit $LASTEXITCODE

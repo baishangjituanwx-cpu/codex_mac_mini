@@ -1,23 +1,26 @@
 param(
-    [string]$ThreadName = "latest",
-    [int]$Lines = 60
+  [string]$Target = "latest",
+  [int]$Count = 60
 )
 
 $ErrorActionPreference = "Stop"
-$Root = "__INSTALL_DIR__"
-$MirrorDir = Join-Path $Root ".codex-feishu-bridge\mirrors"
-if (-not (Test-Path $MirrorDir)) {
-    throw "Mirror directory not found: $MirrorDir"
-}
 
-if ($ThreadName -eq "latest") {
-    $File = Get-ChildItem $MirrorDir -Filter *.md | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+$scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$nodeCommand = Get-Command node.exe -ErrorAction SilentlyContinue
+if (-not $nodeCommand) {
+  $nodeCommand = Get-Command node -ErrorAction SilentlyContinue
+}
+if ($nodeCommand) {
+  $nodeExe = $nodeCommand.Path
 } else {
-    $File = Get-ChildItem $MirrorDir -Filter "$ThreadName*.md" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+  $fallback = Join-Path $HOME ".local\bin\node.exe"
+  if (-not (Test-Path $fallback)) {
+    throw "node not found on PATH and $fallback is missing."
+  }
+  $nodeExe = $fallback
 }
 
-if (-not $File) {
-    throw "No mirror file found."
+& $nodeExe (Join-Path $scriptDir "mirror-view.js") $Target $Count
+if ($LASTEXITCODE -ne 0) {
+  exit $LASTEXITCODE
 }
-
-Get-Content $File.FullName -Tail $Lines

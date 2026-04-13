@@ -1,44 +1,50 @@
+$ErrorActionPreference = "Stop"
+
 param(
-    [string]$Target
+  [string]$Target = ""
 )
 
-$ErrorActionPreference = "Stop"
-$Root = "__INSTALL_DIR__"
-$EnvFile = Join-Path $Root ".bridge.env"
+$root = Split-Path -Parent $PSScriptRoot
+$envFile = Join-Path $root ".bridge.env"
+$exampleFile = Join-Path $root ".bridge.env.example"
 
 if (-not $Target) {
-    $Target = Read-Host "Enter Feishu chat id to receive publish-success notifications"
+  $Target = Read-Host "Enter Feishu chat id to receive publish-success notifications"
 }
 
 if (-not $Target) {
-    throw "No chat id provided."
+  throw "No chat id provided."
 }
 
-if (-not (Test-Path $EnvFile)) {
-    Copy-Item (Join-Path $Root ".bridge.env.example") $EnvFile
+if (-not (Test-Path $envFile)) {
+  Copy-Item -Path $exampleFile -Destination $envFile -Force
 }
 
-$Needle = "CODEX_BRIDGE_PUBLISH_NOTIFY_CHAT_ID="
-$NewLine = $Needle + '"' + $Target + '"'
-$Lines = @()
-if (Test-Path $EnvFile) {
-    $Lines = Get-Content $EnvFile
+$needle = "CODEX_BRIDGE_PUBLISH_NOTIFY_CHAT_ID="
+$newLine = $needle + ($Target | ConvertTo-Json -Compress)
+$lines = @(Get-Content -Path $envFile -ErrorAction SilentlyContinue)
+$found = $false
+$output = @()
+
+foreach ($line in $lines) {
+  if ($line.StartsWith($needle)) {
+    $output += $newLine
+    $found = $true
+  } else {
+    $output += $line
+  }
 }
 
-$Found = $false
-$Output = foreach ($Line in $Lines) {
-    if ($Line.StartsWith($Needle)) {
-        $Found = $true
-        $NewLine
-    } else {
-        $Line
-    }
-}
-if (-not $Found) {
-    $Output += $NewLine
+if (-not $found) {
+  $output += $newLine
 }
 
-Set-Content -Path $EnvFile -Value $Output -Encoding UTF8
-Write-Host "Updated publish notify chat id: $Target"
-Write-Host "If the bridge is already running, restart it with:"
-Write-Host "  powershell -ExecutionPolicy Bypass -File `"$Root\scripts\bridge-start.ps1`""
+[System.IO.File]::WriteAllText(
+  $envFile,
+  (($output -join "`n") + "`n"),
+  [System.Text.UTF8Encoding]::new($false)
+)
+
+Write-Output "Updated publish notify chat id: $Target"
+Write-Output "If the bridge is already running, restart it with:"
+Write-Output ('  powershell -NoProfile -ExecutionPolicy Bypass -File "{0}"' -f (Join-Path $PSScriptRoot "bridge-start.ps1"))
