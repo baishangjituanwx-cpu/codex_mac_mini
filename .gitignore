@@ -4,9 +4,10 @@ node_modules/
 bridge.log
 bridge.stdout.log
 bridge.stderr.log
+.codex/
+.codex-skill-monitor-snapshot.txt
 .codex-feishu-bridge/
 workflow/content-library/assets/generated/*
 !workflow/content-library/assets/generated/.gitkeep
 workflow/content-library/assets/shared/*
 !workflow/content-library/assets/shared/.gitkeep
-
