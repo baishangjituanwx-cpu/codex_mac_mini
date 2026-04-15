@@ -216,7 +216,49 @@
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/images/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering configuration.
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/images/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering gotchas.
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/images/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering patterns.
+
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/kv/README.md` | `added` | Added reference material for `cloudflare-deploy` covering readme.
+
+## 2026-04-15 23:26:09 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间: `2026-04-15T14:25:07.224Z`
+- 结果汇总: 新增 11，修改 8，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-logs.ps1` | `added` | Added a Windows PowerShell log-tail helper for reading the bridge log without the macOS shell scripts.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.ps1` | `added` | Added a Windows bridge launcher that starts the bridge in a detached PowerShell process, writes a PID file, and reports startup status.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-status.ps1` | `added` | Added a Windows status inspector that reads the bridge PID, walks the child process tree, and tails recent bridge logs.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-stop.ps1` | `added` | Added a Windows stop helper that finds bridge host and child processes, terminates them, and clears stale PID state.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/configure_notify_target.ps1` | `added` | Added a Windows PowerShell helper to set `CODEX_BRIDGE_PUBLISH_NOTIFY_CHAT_ID` in `.bridge.env` and preserve the local env file format.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.cmd` | `added` | Added a double-clickable Windows launcher that opens the local mirror viewer in a PowerShell console and keeps the window open.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.js` | `added` | Extracted mirror rendering into a shared Node script so both macOS shell and Windows PowerShell launchers can inspect mirrored conversation history.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.ps1` | `added` | Added a Windows mirror viewer wrapper that locates Node and runs the shared mirror viewer script.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/run-bridge.ps1` | `added` | Added a Windows bridge runtime wrapper that loads `.bridge.env`, resolves Node, and launches `src/bridge.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/run-platform-script.js` | `added` | Added a cross-platform npm script dispatcher that chooses `.ps1` on Windows and `.sh` on non-Windows hosts.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/install_bridge_template.ps1` | `added` | Added a Windows installer that copies the bridge template into `%USERPROFILE%\\.codex-feishu-bridge`, seeds `.bridge.env`, and prints Windows-specific setup steps.
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/SKILL.md` | `modified` | Expanded the skill contract to document Windows deployment support, Windows install targets, and the new `.ps1` and `.cmd` template assets.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/.bridge.env.example` | `modified` | Added `CODEX_BRIDGE_PROGRESS_NOTIFY_CHAT_ID` so Windows and macOS installs can configure a dedicated live-progress push target.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/package.json` | `modified` | Replaced zsh-only npm commands with a Node dispatcher so `bridge:start`, `bridge:stop`, `bridge:status`, `bridge:logs`, and `mirror:view` work on Windows too.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.command` | `modified` | Stopped relying on `__INSTALL_DIR__` for the macOS mirror launcher and switched it to resolve sibling scripts from its own directory.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.sh` | `modified` | Simplified the macOS mirror viewer to call the new shared Node renderer instead of embedding the history-rendering logic inline.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART.md` | `modified` | Reworked the quickstart into parallel macOS and Windows flows, including PowerShell install, auth, notify-target, start, status, and mirror-view commands.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/deployment.md` | `modified` | Expanded deployment guidance from macOS-only to dual-platform service deployment, documenting Windows service behavior, PID/log files, and post-install smoke tests.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/user-guide.md` | `modified` | Added Windows operator commands for local mirror viewing and clarified that progress-push behavior is unchanged across platforms.
+
+### 删除文件
+- 无
+
+### 新建 `.py` 文件
+- 无
+
+### 变更摘要
+- 本批次变更集中在 `codex-feishu-bridge-skill` 的 Windows 可部署性补齐，新增 PowerShell 生命周期脚本、Windows 安装器、跨平台 npm 分发器，以及对应的双平台安装/使用文档。
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/kv/api.md` | `added` | Added reference material for `cloudflare-deploy` covering api.
 
 ## 2026-04-13 01:24:05 CST
@@ -237,6 +279,8 @@
 
 ### 修改文件
 - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md` | `modified` | Expanded the takeover scaffold docs with Windows setup, Python 3.10+ requirement, clearer CDP takeover semantics, and cross-platform usage examples.
+
+
 - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/social-publisher.ps1` | `modified` | Hardened the PowerShell launcher to locate a usable Python runtime, verify Python 3.10+, check `typer`/`yaml`/`playwright`, and fail fast with setup guidance before invoking `social_publisher`.
 - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/browser.py` | `modified` | Added `open_or_activate_page()` so takeover flows can reuse an already-open matching tab or open a fresh page only when needed.
 - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/baijiahao.py` | `modified` | Switched Baijiahao takeover to management-page duplicate checks, existing-tab reuse, stale-draft mismatch detection, and post-submit confirmation against the content list.
@@ -255,7 +299,9 @@
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/kv/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering configuration.
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/kv/gotchas.md` | `added` | Added reference material for `cloudflare-deploy` covering gotchas.
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/kv/patterns.md` | `added` | Added reference material for `cloudflare-deploy` covering patterns.
+
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/miniflare/README.md` | `added` | Added reference material for `cloudflare-deploy` covering readme.
+
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/miniflare/api.md` | `added` | Added reference material for `cloudflare-deploy` covering api.
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/miniflare/configuration.md` | `added` | Added reference material for `cloudflare-deploy` covering configuration.
 
@@ -322,6 +368,245 @@
 ### 新增 `.py` 文件
 - 无。
 
+## 2026-04-15 22:26:27 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-15 21:26:50 CST`（监控文档中的最新已记录扫描）与任务元数据提供的 `2026-04-15T13:25:07.173Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 任务元数据中的 `Last run` 早于监控文档里已经存在的 `2026-04-15 21:26:50 CST` 扫描记录；本轮按更晚的已记录基线复核，避免重复登记同一批次。
+- 四个监控目录中没有任何 skill 或 supporting automation 文件的 `mtime` 晚于 `2026-04-15 21:26:50 CST`。
+- 仓库 `git status` 仍显示 `skills/codex-feishu-bridge-skill/**` 的未提交变更，但这些文件已在更早批次中出现，本轮未发现新的新增、修改或删除。
+- 本轮没有新建 `.py` 文件，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+
+## 2026-04-15 19:26:50 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-15 18:25:06 CST`（对应上次运行 `2026-04-15T10:25:06.729Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 基于过滤后的文件时间戳扫描、`last-snapshot.json` 快照比对和仓库状态核对，本轮未发现晚于基线的技能相关新增、修改或删除文件。
+- 本轮继续排除了 `.venv`、`node_modules`、`__pycache__`、`.pytest_cache`、`.mypy_cache`、`.ruff_cache` 等运行时目录，避免缓存噪音被计入技能变更。
+- 仓库内仍存在 `skills/codex-feishu-bridge-skill/**` 的未提交改动，但这些文件已存在于上一轮快照中，当前 `mtime` 也停留在 `2026-04-12 22:07:15 CST` 或 `2026-04-12 22:09:39 CST`，未计入本轮。
+- 本轮没有新建 `.py` 文件，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-15 07:24:15 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-15 06:23:11 CST`（对应上次运行 `2026-04-14T22:23:11.028Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 四个扫描目录中没有任何文件的 `mtime` 晚于本轮基线时间，因此未发现新的技能或技能支撑自动化变更。
+- 仓库 `git status` 中仍存在 `skills/codex-feishu-bridge-skill/**` 的未提交改动，但相关文件时间戳全部停留在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，属于此前已记录批次，未重复计入本轮。
+- 本轮没有新的 `.py` 文件，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-15 05:24:51 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-15 04:23:10 CST`（对应上次运行 `2026-04-14T20:23:10.724Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 基于 `find -newermt` 的四目录增量扫描，本轮没有发现晚于基线时间的技能或技能支撑自动化文件。
+- 当前工作区 `skills/codex-feishu-bridge-skill/**` 仍存在未提交改动，但相关文件 `mtime` 均为 `2026-04-12 22:07:15 CST` 或 `2026-04-12 22:09:39 CST`，属于既有批次，未重复计入本轮。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+ 
+## 2026-04-15 06:24:27 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-15 05:23:10 CST`（对应上次运行 `2026-04-14T21:23:10.898Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 基于 `find -newermt` 的文件时间扫描，四个目录内没有晚于基线的新文件或已修改文件。
+- 仓库 `git status` 仍显示 `skills/codex-feishu-bridge-skill/**` 的未提交变更，但相关文件时间戳仍为 `2026-04-12 22:07:15 CST` 至 `2026-04-12 22:09:39 CST`，属于 `2026-04-14 02:24:19 CST` 已记录的更早批次，本轮不重复计入。
+- `automation/python-platform-takeover/.venv/**` 在更早时段出现 `.pyc` 缓存刷新，但属于运行时产物，不计入技能变更批次。
+- 本轮未发现新的 `.py` 文件，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-15 04:24:56 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-15 03:23:10 CST`（对应上次运行 `2026-04-14T19:23:10.567Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 基于 `find -newermt` 的文件时间扫描，四个目录内没有晚于基线的新文件或已修改文件。
+- 仓库 `git status` 中仍存在 `skills/codex-feishu-bridge-skill/**` 的未提交变更，但这些文件 `mtime` 全部停留在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，早于本轮基线，未计入本次变更批次。
+- 本轮未发现新的 `.py` 文件，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-15 06:24:27 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-15 05:23:10 CST`（对应上次运行 `2026-04-14T21:23:10.898Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 基于 `find -newermt` 的文件时间扫描，四个目录内没有晚于基线的新文件或已修改文件。
+- 仓库 `git status` 仍显示 `skills/codex-feishu-bridge-skill/**` 的未提交变更，但相关文件时间戳仍为 `2026-04-12 22:07:15 CST` 至 `2026-04-12 22:09:39 CST`，属于 `2026-04-14 02:24:19 CST` 已记录的更早批次，本轮不重复计入。
+- `automation/python-platform-takeover/.venv/**` 在更早时段出现 `.pyc` 缓存刷新，但属于运行时产物，不计入技能变更批次。
+- 本轮未发现新的 `.py` 文件，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-15 04:24:56 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-15 03:23:10 CST`（对应上次运行 `2026-04-14T19:23:10.567Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 基于 `find -newermt` 的文件时间扫描，四个目录内没有晚于基线的新文件或已修改文件。
+- 仓库 `git status` 中仍存在 `skills/codex-feishu-bridge-skill/**` 的未提交变更，但这些文件 `mtime` 全部停留在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，早于本轮基线，未计入本次变更批次。
+- 本轮未发现新的 `.py` 文件，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-15 02:24:25 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-15 01:23:10 CST`（对应上次运行 `2026-04-14T17:23:10.311Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 基于文件系统时间扫描，四个目录内都没有晚于基线的新建或已修改的技能相关文件。
+- 仓库 `git status` 仍显示 `skills/codex-feishu-bridge-skill/**` 的未提交修改与未跟踪脚本，但这些文件磁盘时间戳仍停留在 `2026-04-12 22:07:15 CST` 至 `2026-04-12 22:09:39 CST`，属于已记录的更早批次，本轮不重复计入。
+- 仓库范围内未检测到新的删除项；由于没有新的变更批次，`docs/automation/github-sync-status.md` 本轮未追加同步提醒。
+- 本轮未发现新的 `.py` 文件。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
 ## 2026-04-14 23:24:37 CST
 - 扫描范围:
 - `/Users/baishangjituan/.codex/skills`
@@ -335,6 +620,33 @@
 - 本轮在四个扫描目录中均未发现晚于基线的新文件、修改文件或删除文件。
 - 仓库 `git status` 仍显示 `skills/codex-feishu-bridge-skill/**` 的未提交修改与未跟踪脚本，但这些文件创建/修改时间仍停留在 `2026-04-12 22:07:15 CST` 至 `2026-04-12 22:09:39 CST`，属于已记录的更早批次，本轮不重复计入。
 - 本轮未发现新的 `.py` 文件，也未发现删除项；由于没有新的变更批次，`docs/automation/github-sync-status.md` 本轮未追加同步提醒。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-15 00:24:22 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 上次运行时间:
+- `2026-04-14T15:23:09.991Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 本轮在四个扫描目录中均未发现晚于上次运行时间的新文件、修改文件或删除文件。
+- 仓库 `git status` 仍显示 `skills/codex-feishu-bridge-skill/**` 的未提交修改与未跟踪脚本，但抽查相关文件时间戳均停留在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，已被 `2026-04-14 02:24:19 CST` 批次覆盖，本轮不重复计入。
+- 仓库跟踪范围内未检测到 `skills/`、`skill-center/`、`automation/` 下的已跟踪删除文件。
+- 本轮未发现新的 `.py` 文件；由于没有新的变更批次，`docs/automation/github-sync-status.md` 本轮未追加同步提醒。
 
 ### 新增文件
 - 无。
@@ -373,7 +685,6 @@
 
 ### 新增 `.py` 文件
 - 无。
-
 ## 2026-04-14 19:24:25 CST
 - 扫描范围:
 - `/Users/baishangjituan/.codex/skills`
@@ -3735,6 +4046,263 @@
 - 快照比对后也未发现新增路径或删除路径；排除了 `.venv`、`node_modules`、`__pycache__`、`.pytest_cache` 等运行时噪音目录。
 - 仓库 `git status` 仍显示 `skills/codex-feishu-bridge-skill/**` 的未提交修改与未跟踪脚本，但这些文件磁盘时间戳仍停留在 `2026-04-12 22:07:15 CST` 至 `22:09:39 CST`，属于已记录的更早批次，本轮不重复计入。
 - 本轮未发现新的 `.py` 文件，也未发现删除项；由于没有新的变更批次，`docs/automation/github-sync-status.md` 本轮未追加同步提醒。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-15 01:23:59 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-15 00:23:10 CST`（对应上次运行 `2026-04-14T16:23:10.178Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 基于 `find -newermt` 的文件时间扫描，四个目录内没有晚于基线的新文件或已修改文件。
+- 仓库 `git status` 中仍存在 `skills/codex-feishu-bridge-skill/**` 的未提交变更，但这些文件 `mtime` 全部停留在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，早于本轮基线，未计入本次变更批次。
+- 本轮未发现新的 `.py` 文件，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+ 
+## 2026-04-15 03:24:22 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-15 02:23:10 CST`（对应上次运行 `2026-04-14T18:23:10.442Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 这四个扫描目录中没有任何文件的 `mtime` 晚于本轮基线时间，因此未发现新的技能或技能支撑自动化变更。
+- 仓库内 `skills/codex-feishu-bridge-skill/**` 仍有未提交改动，但相关文件时间戳均为 `2026-04-12`，属于此前已发现批次，未重复计入本轮。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+ 
+## 2026-04-15 04:24:56 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-15 03:23:10 CST`（对应上次运行 `2026-04-14T19:23:10.567Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 基于 `find -newermt` 的文件时间扫描，四个目录内没有晚于基线的新文件或已修改文件。
+- 仓库 `git status` 中仍存在 `skills/codex-feishu-bridge-skill/**` 的未提交变更，但这些文件 `mtime` 全部停留在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，早于本轮基线，未计入本次变更批次。
+- 本轮未发现新的 `.py` 文件，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+## 2026-04-15 08:24:08 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基准: `2026-04-15T07:23:11 CST`（上次运行 `2026-04-14T23:23:11.191Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 本轮结论
+- 未发现自上次运行以来的新技能变更批次。
+- 工作区中仍可见 `skills/codex-feishu-bridge-skill/**` 的未提交改动，但其创建/修改时间均为 `2026-04-12 22:07:15` 到 `2026-04-12 22:09:39 CST`，已早于本轮扫描窗口，故不重复记入。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无新的 `.py` 文件。
+
+## 2026-04-15 09:24:47 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-15 08:23:11 CST`（对应上次运行 `2026-04-15T00:23:11.422Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 本轮未发现任何晚于基线的 skill 相关文件，因此没有新的变更批次需要追加同步说明。
+- `skills/codex-feishu-bridge-skill/**` 仍存在 19 个未提交文件变更，但这些文件的 birth time / mtime 都早于本轮基线，未计入本次扫描。
+- 本轮没有新建 `.py` 文件；因此无需追加 Python 文件专项清单。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-15 16:26:17 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-15 09:23:11 CST`（对应上次运行 `2026-04-15T01:23:11.574Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 四个监控目录中，没有任何 skill / supporting automation 文件的 `mtime` 晚于本轮基线。
+- 仓库内仍存在 `skills/codex-feishu-bridge-skill/**` 的未提交改动，但这些文件的当前时间戳均早于基线，属于上轮之前的存量改动，未计入本轮新增批次。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+ 
+## 2026-04-15 18:26:11 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-15 17:25:06 CST`（对应上次运行 `2026-04-15T09:25:06.625Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 四个监控目录中，没有任何 skill / supporting automation 文件的 `mtime` 晚于本轮基线。
+- 仓库内仍存在 `skills/codex-feishu-bridge-skill/**` 的未提交改动，但这些文件的当前 `mtime` 都是 `2026-04-12 22:47:15 CST` 或 `2026-04-12 22:49:39 CST`，属于更早批次的存量改动，未计入本轮。
+- 本轮没有新建 `.py` 文件，因此无需追加 Python 文件专项清单。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+ 
+## 2026-04-15 17:26:00 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-15 16:25:06 CST`（对应上次运行 `2026-04-15T08:25:06.477Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 四个监控目录中，没有任何 skill / supporting automation 文件的 `mtime` 晚于本轮基线。
+- 仓库内仍存在 `skills/codex-feishu-bridge-skill/**` 的未提交改动，但这些文件当前时间戳均早于基线，属于前序存量改动，未计入本轮新增批次。
+- 本轮没有新建 `.py` 文件，因此无需追加 Python 文件专项清单。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-15 20:26:18 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-15 19:25:06 CST`（对应上次运行 `2026-04-15T11:25:06.941Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 四个监控目录中，没有任何 skill / supporting automation 文件的 `mtime` 晚于本轮基线。
+- 仓库内仍存在 `skills/codex-feishu-bridge-skill/**` 的未提交改动，但这些文件当前时间戳均为 `2026-04-12 22:07:15 CST` 或 `2026-04-12 22:09:39 CST`，属于更早批次的存量改动，未计入本轮。
+- 本轮没有新建 `.py` 文件，因此无需追加 Python 文件专项清单。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-15 21:26:50 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间:
+- `2026-04-15 20:25:07 CST`（对应上次运行 `2026-04-15T12:25:07.077Z`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+- 说明:
+- 已排除 `.git`、`.venv`、`node_modules`、`__pycache__` 等生成目录，避免把依赖或缓存误记为技能变更。
+- 四个监控目录中没有任何 skill 或 supporting automation 文件的 `mtime` 晚于本轮基线，因此未发现新的变更批次。
+- 仓库 `git status` 仍显示 `skills/codex-feishu-bridge-skill/**` 的未提交改动，但相关文件当前 `mtime` 仍为 `2026-04-12 22:07:15 CST` 至 `2026-04-12 22:09:39 CST`，属于更早批次，未重复计入。
+- 本轮没有新建 `.py` 文件，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
 
 ### 新增文件
 - 无。
