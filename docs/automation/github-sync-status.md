@@ -165,8 +165,8 @@
   - `codex/windows-version-20260411`: 无新增提交。本轮确认分支头仍为 `582efce`，提交信息为 `Improve Windows bridge deployment scripts`。
   - `codex/default-python-sync`: 是。本轮计划提交信息为 `Record 2026-04-16 GitHub sync status`。
 - 是否已推送:
-  - `codex/windows-version-20260411`: 否。当前自动化环境禁止访问 GitHub SSH，`git push origin codex/windows-version-20260411` 预计会因无法连接 `github.com:22` 失败。
-  - `codex/default-python-sync`: 否。当前自动化环境禁止访问 GitHub SSH，`git push origin codex/default-python-sync` 预计会因无法连接 `github.com:22` 失败。
+  - `codex/windows-version-20260411`: 否。已执行 `git push origin codex/windows-version-20260411`，返回 `ssh: connect to host github.com port 22: Operation not permitted`，因此远端上传失败。
+  - `codex/default-python-sync`: 否。已执行 `git push origin codex/default-python-sync`，返回 `ssh: connect to host github.com port 22: Operation not permitted`，因此远端上传失败。
 - 提交信息:
   - `codex/windows-version-20260411`: `Improve Windows bridge deployment scripts`
   - `codex/default-python-sync`: `Record 2026-04-16 GitHub sync status`
@@ -174,4 +174,4 @@
   - 未跳过同步前置检查。`windows-translation-status.md` 最新记录 `2026-04-15 22:03:43 CST` 已明确当前待同步批次的 Mac / Windows 版本都齐全。
   - `codex/default-python-sync` 本轮没有新的 `automation/python-platform-takeover/**` 源码待提交；本次默认分支仅补充自动化监控与同步记录文档。
   - `codex/windows-version-20260411` 本轮没有新的 Windows 专属工作区增量可再生成提交，因此仅尝试上传该分支既有未推送提交。
-  - 若远端上传失败，原因是当前自动化运行环境的网络限制，而不是仓库分支或提交内容异常。
+  - 远端上传失败的原因是当前自动化运行环境的网络限制，而不是仓库分支或提交内容异常。
