@@ -220,3 +220,64 @@
   - 本轮未修改任何 skill 或 automation 实现文件；仅追加状态记录并创建自动化记忆文件。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。基于 `2026-04-15` 当前已记录的 skill-change-monitor 批次，Mac 与 Windows 覆盖今日均完整；今天明确没有需要补做的 Windows 转译。
+
+## 2026-04-16 22:01:50 CST
+
+- 处理时间:
+  - `2026-04-16 22:01:50 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自上次 Windows 转译自动化运行后追加的批次:
+    - `2026-04-15 22:26:27 CST`
+    - `2026-04-15 23:26:09 CST`
+    - `2026-04-16 00:26:25 CST`
+    - `2026-04-16 01:26:25 CST`
+    - `2026-04-16 02:28:54 CST`
+    - `2026-04-16 05:26:40 CST`
+    - `2026-04-16 06:27:40 CST`
+    - `2026-04-16 07:26:10 CST`
+    - `2026-04-16 09:26:22 CST`
+    - `2026-04-16 11:25:59 CST`
+    - `2026-04-16 12:26:31 CST`
+    - `2026-04-16 14:27:14 CST`
+    - `2026-04-16 15:25:26 CST`
+    - `2026-04-16 16:26:42 CST`
+    - `2026-04-16 17:26:07 CST`
+    - `2026-04-16 18:26:13 CST`
+    - `2026-04-16 20:25:43 CST`
+    - `2026-04-16 21:26:11 CST`
+  - 其中仅 `2026-04-15 23:26:09 CST` 为非零变更批次；其余批次结果均为 `新增 0，修改 0，删除 0`。
+- 已完成的 Windows 补全:
+  - `skills/codex-feishu-bridge-skill`:
+    - 确认 `2026-04-15 23:26:09 CST` 记录的新增 Windows 入口已经在仓库中落地，无需再补新文件:
+      - `assets/template/scripts/bridge-start.ps1`
+      - `assets/template/scripts/bridge-stop.ps1`
+      - `assets/template/scripts/bridge-status.ps1`
+      - `assets/template/scripts/bridge-logs.ps1`
+      - `assets/template/scripts/run-bridge.ps1`
+      - `assets/template/scripts/configure_notify_target.ps1`
+      - `assets/template/scripts/mirror-view.ps1`
+      - `assets/template/scripts/mirror-view.cmd`
+      - `scripts/install_bridge_template.ps1`
+    - 确认命令包装和共享资源已覆盖 Windows 用法:
+      - `assets/template/scripts/run-platform-script.js` 会在 Windows 分发到 `.ps1`，在非 Windows 分发到 `.sh`
+      - `assets/template/scripts/mirror-view.js` 已作为共享 Node 渲染器供 macOS / Windows 两侧复用
+      - `assets/template/package.json` 的 `bridge:start`、`bridge:stop`、`bridge:status`、`bridge:logs`、`mirror:view` 已使用跨平台分发器
+    - 确认 Windows 文档和路径说明已覆盖本批次新增行为:
+      - `SKILL.md` 已说明 `%USERPROFILE%\\.codex-feishu-bridge`、PowerShell 启动器和模板结构
+      - `references/INSTALL-QUICKSTART.md` 已补齐 Windows 安装、`lark-cli.exe`、通知配置、启动、状态和 `mirror-view.cmd`
+      - `references/deployment.md` 已补齐 Windows 安装路径、PID / 日志、PowerShell 服务行为和 smoke test
+      - `references/user-guide.md` 已补齐 Windows 的 `.ps1` / `.cmd` 本地镜像查看入口
+    - 确认环境与推送行为已具备 Windows 等价配置:
+      - `assets/template/.bridge.env.example` 已包含 `CODEX_BRIDGE_PROGRESS_NOTIFY_CHAT_ID`
+      - `assets/template/src/bridge.js` 已支持 `/setprogresshere` 与进度推送变量，Windows 仅需更换本地启动器，无需代码分叉
+  - 结论:
+    - 本轮无需新增 Windows 补丁文件；昨晚新增的 Feishu bridge 变更本身已经把 Windows 可用版本补齐，今天后续批次也没有新增待转译项。
+- 未完成的补全:
+  - 无。
+  - `2026-04-16` 当前已记录批次里，未发现新的 Mac-only skill 行为仍缺少 Windows 等价实现。
+- 阻塞原因:
+  - 无阻塞。
+  - 本机执行了 Node 静态语法检查: `node --check skills/codex-feishu-bridge-skill/assets/template/scripts/run-platform-script.js`、`node --check skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.js`、`node --check skills/codex-feishu-bridge-skill/assets/template/src/bridge.js`，均通过。
+  - 本机未发现 `pwsh` 或 `powershell`，因此未做 PowerShell 语法解析或 Windows 实机回归；本轮判断基于仓库文件核对与 Node 静态检查。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。基于 `2026-04-16` 当前已记录的 skill-change-monitor 批次，Mac 与 Windows 覆盖已补齐；今天除状态登记外不需要新增 Windows 代码或文档补丁。
