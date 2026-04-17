@@ -281,3 +281,90 @@
   - 本机未发现 `pwsh` 或 `powershell`，因此未做 PowerShell 语法解析或 Windows 实机回归；本轮判断基于仓库文件核对与 Node 静态检查。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。基于 `2026-04-16` 当前已记录的 skill-change-monitor 批次，Mac 与 Windows 覆盖已补齐；今天除状态登记外不需要新增 Windows 代码或文档补丁。
+
+## 2026-04-17 22:06:25 CST
+
+- 处理时间:
+  - `2026-04-17 22:06:25 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自上次 Windows 转译自动化运行后追加的批次:
+    - `2026-04-16 22:26:05 CST`
+    - `2026-04-16 23:26:50 CST`
+    - `2026-04-17 00:26:28 CST`
+    - `2026-04-17 01:26:10 CST`
+    - `2026-04-17 02:26:15 CST`
+    - `2026-04-17 03:26:13 CST`
+    - `2026-04-17 04:26:38 CST`
+    - `2026-04-17 05:26:17 CST`
+    - `2026-04-17 06:26:33 CST`
+    - `2026-04-17 07:26:18 CST`
+    - `2026-04-17 08:26:18 CST`
+    - `2026-04-17 10:26:28 CST`
+    - `2026-04-17 10:34:00 CST`
+    - `2026-04-17 12:26:52 CST`
+    - `2026-04-17 15:47:35 CST`
+    - `2026-04-17 16:48:32 CST`
+    - `2026-04-17 17:49:21 CST`
+    - `2026-04-17 18:50:30 CST`
+    - `2026-04-17 19:52:55 CST`
+    - `2026-04-17 20:54:00 CST`
+    - `2026-04-17 21:54:33 CST`
+  - 其中需要实际补 Windows 侧仓库资产的非零批次为:
+    - `2026-04-17 16:48:32 CST`
+    - `2026-04-17 17:49:21 CST`
+    - `2026-04-17 19:52:55 CST`
+  - `2026-04-17 15:47:35 CST` 涉及的 `automation/python-platform-takeover/social_publisher/browser.py` 与 `content-package.2026-04-17-ai-first-replace-three-tasks.yaml` 已是跨平台行为 / 内容包，无需新增 Windows 分叉。
+- 已完成的 Windows 补全:
+  - `skill-center` 镜像总表:
+    - 更新 `skill-center/README.md` 与 `skill-center/skills-manifest.txt`，把镜像技能总数从 `61` 调整为 `63`，并登记新加入的 `seedance-video-api`、`wechat-channels-launchagent-keepalive`。
+  - `skill-center/skills/xiaoyunque-source-video`:
+    - 同步今天修改过的镜像文件，使仓库版本追平本机 `.codex` 版本:
+      - `SKILL.md`
+      - `agents/openai.yaml`
+      - `references/prompt-template.md`
+      - `references/source-video-playbook.md`
+    - 已覆盖新增的 `封面制作专用文案` 输出要求、`6到10个中文字符` 标准、封面与首帧双文案分工，以及相关 QA 规则；这批变更不需要额外 Windows 专属脚本。
+  - `skill-center/skills/seedance-video-api`:
+    - 新增完整仓库镜像:
+      - `SKILL.md`
+      - `agents/openai.yaml`
+      - `assets/examples/*.json`
+      - `references/api-basics.md`
+      - `references/workflows.md`
+      - `scripts/seedance_cli.py`
+    - 新增 Windows PowerShell 包装器:
+      - `scripts/seedance_cli.ps1`
+    - 将 `SKILL.md` 改成双平台说明，补入:
+      - PowerShell 的 `ARK_API_KEY` 设置方式
+      - Windows `seedance_cli.ps1` 调用示例
+      - Windows 路径建议使用带引号的绝对路径与 `C:/...` 正斜杠写法
+      - PowerShell 启动器的 Python 查找顺序
+    - 结论:
+      - `seedance_cli.py` 本体仍是 cross-platform，无需 Windows 代码分叉；Windows 缺口集中在入口和文档，已补齐。
+  - `skill-center/skills/wechat-channels-launchagent-keepalive`:
+    - 新增仓库镜像:
+      - `SKILL.md`
+      - `agents/openai.yaml`
+    - 新增 Windows 等价运行资产:
+      - `scripts/wechat_channels_keepalive.py`
+      - `scripts/run-keepalive.ps1`
+      - `scripts/register-keepalive-task.ps1`
+    - 将技能说明扩成 Mac / Windows 双方案，明确:
+      - macOS 继续使用 LaunchAgent + `keepalive.sh`
+      - Windows 使用 Task Scheduler + PowerShell 启动器
+      - Windows 侧先通过 `automation/python-platform-takeover/scripts/start-chrome-cdp.ps1` 拉起带 CDP 的 Chrome / Edge
+      - 成功 / 失败信号在 Windows 下对应为 `opened`、`cdp_unreachable`、`need_login`、`need_verify`、`unexpected_page`
+    - `agents/openai.yaml` 已同步更新为“双平台调度”表述。
+  - `automation/python-platform-takeover`:
+    - 确认 `BrowserSessionConfig.close_browser_on_exit` 的新增行为与新的 2026-04-17 内容包配置都是跨平台逻辑，不需要补新的 Windows 代码或 PowerShell 包装。
+- 未完成的补全:
+  - 无。
+  - `2026-04-17` 当前已记录批次里，未发现新的 Mac-only skill 行为仍缺少 Windows 等价入口、路径说明或仓库镜像。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 已执行静态校验:
+    - `python3 -m py_compile skill-center/skills/seedance-video-api/scripts/seedance_cli.py skill-center/skills/wechat-channels-launchagent-keepalive/scripts/wechat_channels_keepalive.py`
+    - `diff -u` 对比确认 `skill-center/skills/xiaoyunque-source-video/**` 已与 `~/.codex/skills/xiaoyunque-source-video/**` 同步一致
+  - 本机仍未发现 `pwsh` 或 `powershell` 可用于本地语法解析，因此本轮没有做 Windows PowerShell 实机运行；Windows 判断基于仓库脚本、路径策略和 Python 静态校验。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。基于 `2026-04-17` 当前已记录的 skill-change-monitor 批次，Mac 与 Windows 覆盖已补齐；今天新增的 skill 行为已经在仓库中具备 Windows 可用入口或明确的跨平台结论。

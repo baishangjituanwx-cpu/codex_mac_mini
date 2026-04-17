@@ -219,6 +219,7 @@
 
 - `/Users/baishangjituan/.codex/skills/cloudflare-deploy/references/kv/README.md` | `added` | Added reference material for `cloudflare-deploy` covering readme.
 
+
 ## 2026-04-16 18:26:13 CST
 - 扫描范围:
 - `/Users/baishangjituan/.codex/skills`
@@ -236,9 +237,6 @@
 
 ### 删除文件
 - 无。
-
-### 变更摘要
-- 未发现自上次运行以来的新技能或技能支撑自动化文件变更。
 
 ## 2026-04-16 19:26:06 CST
 - 扫描范围:
@@ -260,6 +258,56 @@
 
 ### 变更摘要
 - 以 `2026-04-16T10:25:10.298Z` 为基线扫描四个目录后，未发现新的技能文件、技能支撑自动化文件，或新的删除记录。
+
+## 2026-04-17 13:26:25 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T04:25:13.124Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-17T04:25:13.124Z` 为基线扫描四个目录后，未发现新的技能文件、技能支撑自动化文件，或新的删除记录。
+- 仓库中仍存在先前已发现但本轮未新增的 `skills/codex-feishu-bridge-skill/**` 未同步工作区变更；由于这些文件的文件系统时间戳早于本轮基线，因此未计入本次新增批次，也未追加到 GitHub 同步状态。
+
+## 2026-04-17 09:26:19 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T00:25:12.461Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-17T00:25:12.461Z` 为基线扫描四个目录后，未发现新的技能文件、技能支撑自动化文件，或新的删除记录。
+- 仓库当前存在的 `skills/codex-feishu-bridge-skill/**` 未暂存改动时间戳均早于本次基线，因此未计入本轮变更批次。
 - 仓库中存在较早产生的未提交技能改动，但这些文件的修改时间均早于本次基线，因此不计入本轮变更批次。
 
 ### 新增 Python 文件
@@ -4576,6 +4624,43 @@
 - `git ls-files --deleted -- skills skill-center automation` 未返回结果，因此仓库范围内未检测到新的已删除 skill 相关文件。
 - 本轮没有新的 `.py` 文件出现，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
 
+## 2026-04-17 14:48:00 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T05:25:13.250Z`
+- 结果汇总: 新增 0，修改 12，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/SKILL.md` | `modified` | Refreshed the PowerPoint runtime skill instructions, keeping the slide-deck workflow definition in sync with the updated JS-based authoring path.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/agents/openai.yaml` | `modified` | Updated the PowerPoint agent manifest that controls display metadata and the default prompt entry for the runtime skill.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/assets/file-presentation.png` | `modified` | Replaced or refreshed the PowerPoint icon asset used by the runtime skill surface.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/scripts/init_pro_deck_builder_js.js` | `modified` | Updated the JS deck-builder bootstrap script used to scaffold new editable PowerPoint builds.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/scripts/prepare_reference_prompts.js` | `modified` | Updated the helper that prepares per-slide reference and image prompt inputs for deck production.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/scripts/pro_deck_quality_check.js` | `modified` | Updated the PowerPoint quality-check helper used to validate rendered deck output before export.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/templates/build_pro_deck_template.js` | `modified` | Refreshed the PowerPoint builder template that seeds the default pro-deck structure.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/spreadsheets/SKILL.md` | `modified` | Refreshed the Excel runtime skill instructions, including the workbook-building and verification workflow guidance.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/spreadsheets/agents/openai.yaml` | `modified` | Updated the Excel agent manifest that defines the runtime skill metadata and default prompt entry.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/spreadsheets/assets/file-spreadsheet.png` | `modified` | Replaced or refreshed the Excel icon asset used by the runtime skill surface.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/spreadsheets/style_guidelines.md` | `modified` | Updated the spreadsheet style guidance covering layout, formatting hierarchy, and chart/document presentation defaults.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/spreadsheets/templates/financial_models.md` | `modified` | Refreshed the finance-model template guidance for valuation and banking-style workbook outputs.
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-17T05:25:13.250Z` 为基线按 `mtime` 进行 epoch 扫描后，仅发现 `/Users/baishangjituan/.codex/skills/codex-primary-runtime/` 下的 `slides` 与 `spreadsheets` 两组运行时技能文件在本轮发生刷新。
+- 仓库内 `skills/`、`skill-center/` 与 `automation/` 本轮没有新的 `mtime` 增量；`git status --short --untracked-files=all -- skills skill-center automation` 里仍可见 `skills/codex-feishu-bridge-skill/**` 的旧工作区改动，但这些文件时间早于本轮基线，不计入本批次。
+- 本轮没有新的 `.py` 文件出现，也没有检测到新的删除文件；由于本次运行前缺少 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`，本轮已改用基于基线时间的严格扫描，并将在运行结束时补写新的快照供下次删除检测使用。
+
 ## 2026-04-16 09:26:22 CST
 - 扫描范围:
 - `/Users/baishangjituan/.codex/skills`
@@ -4900,3 +4985,613 @@
 - `git ls-files --deleted -- skills skill-center automation` 未返回结果，因此仓库范围内没有新的 skill 相关删除文件；`/Users/baishangjituan/.codex/skills` 本轮也未观察到落在本时间窗口内的删除迹象。
 - 本轮没有新的 `.py` 文件出现，因此也没有需要单独归档的新 Python 脚本用途说明。
 - 因为未发现新的变更批次，所以没有更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-17 00:26:28 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间: `2026-04-16T15:25:11.099Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 `.py` 文件
+- 无。
+
+### 变更摘要
+- 使用基线时间 `2026-04-16T15:25:11.099Z` 创建参考时间戳后，对四个监控根目录执行文件系统扫描，未发现任何晚于 `2026-04-16 23:25:11 CST` 的技能相关文件。
+- `git status --short --untracked-files=all -- skills skill-center automation` 仍显示 `skills/codex-feishu-bridge-skill/**` 的 11 个新增文件和 8 个修改文件，但逐个核对文件修改时间后可确认它们都落在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，属于 `2026-04-15 23:26:09 CST` 已记录的旧批次，而不是本次时间窗口内的新变更。
+- `git ls-files --deleted -- skills skill-center automation` 未返回结果，因此仓库范围内没有新的 skill 相关删除文件；`/Users/baishangjituan/.codex/skills` 本轮也未观察到落在本时间窗口内的删除迹象。
+- 本轮没有新的 `.py` 文件出现，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+## 2026-04-17 01:26:10 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间: `2026-04-16T16:25:11.191Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 `.py` 文件
+- 无。
+
+### 变更摘要
+- 使用基线时间 `2026-04-16T16:25:11.191Z` 创建参考时间戳后，对四个监控根目录执行文件系统扫描，未发现任何晚于 `2026-04-17 00:25:11 CST` 的技能相关文件。
+- `git status --porcelain -- skills skill-center automation` 仍显示 `skills/codex-feishu-bridge-skill/**` 的 11 个新增文件和 8 个修改文件，但逐个核对文件修改时间后可确认它们全部停留在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，属于已记录旧批次，不应计入本轮。
+- `git ls-files --deleted -- skills skill-center automation` 未返回结果，因此仓库范围内没有新的 skill 相关删除文件；`/Users/baishangjituan/.codex/skills` 本轮也未观察到落在本时间窗口内的删除迹象。
+- 本轮没有新的 `.py` 文件出现，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+## 2026-04-17 02:26:15 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 基线时间: `2026-04-16T17:25:11.371Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 `.py` 文件
+- 无。
+
+### 变更摘要
+- 使用基线时间 `2026-04-16T17:25:11.371Z` 创建参考时间戳后，对四个监控根目录执行文件系统扫描，未发现任何晚于 `2026-04-17 01:25:11 CST` 的技能相关文件。
+- `git status --porcelain -- skills skill-center automation` 仍显示 `skills/codex-feishu-bridge-skill/**` 的 11 个新增文件和 8 个修改文件，但逐个核对文件修改时间后可确认它们全部停留在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，属于 `2026-04-15 23:26:09 CST` 已记录的旧批次，不应计入本轮。
+- `git ls-files --deleted -- skills skill-center automation` 未返回结果，因此仓库范围内没有新的 skill 相关删除文件；`/Users/baishangjituan/.codex/skills` 本轮也未观察到落在本时间窗口内的删除迹象。
+- 本轮没有新的 `.py` 文件出现，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+## 2026-04-17 03:26:13 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-16T18:25:11.517Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 `.py` 文件
+- 无。
+
+### 变更摘要
+- 未发现自上次运行以来的新技能或技能支撑自动化文件变更。
+- 当前工作区内 `skills/codex-feishu-bridge-skill/**` 仍有未提交文件，但其文件修改时间均为 `2026-04-12 22:07:15 CST` 或 `2026-04-12 22:09:39 CST`，早于本次对比基线，因此未计入本批次。
+- `git ls-files --deleted -- skills skill-center automation` 未返回结果，因此仓库范围内没有新的 skill 相关删除文件；`/Users/baishangjituan/.codex/skills` 本轮也未观察到落在本时间窗口内的删除迹象。
+- 本轮没有新的 `.py` 文件出现，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+## 2026-04-17 04:26:38 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-16T19:25:11.695Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 `.py` 文件
+- 无。
+
+### 变更摘要
+- 对四个监控根目录按基线 `2026-04-16T19:25:11.695Z` 执行文件系统扫描，未发现任何技能相关文件的新增或修改时间晚于本轮时间窗口。
+- `git status --porcelain -- skills skill-center automation` 仍显示 `skills/codex-feishu-bridge-skill/**` 的 11 个新增文件和 8 个修改文件，但这些文件的修改时间全部停留在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，属于 `2026-04-15 23:26:09 CST` 已记录的旧批次，而不是本轮新增变更。
+- `git ls-files --deleted -- skills skill-center automation` 未返回结果，因此仓库范围内没有新的 skill 相关删除文件；`/Users/baishangjituan/.codex/skills` 本轮也未观察到落在本时间窗口内的删除迹象。
+- 本轮没有新的 `.py` 文件出现，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+## 2026-04-17 05:26:17 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-16T20:25:11.863Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 `.py` 文件
+- 无。
+
+### 变更摘要
+- 对四个监控根目录按基线 `2026-04-16T20:25:11.863Z` 执行文件系统扫描，未发现任何技能相关文件的新增或修改时间晚于本轮时间窗口。
+- `git status --short --untracked-files=all -- skills skill-center automation` 仍显示 `skills/codex-feishu-bridge-skill/**` 的 11 个新增文件和 8 个修改文件，但逐个核对文件修改时间后可确认它们全部停留在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，属于 `2026-04-15 23:26:09 CST` 已记录的旧批次，不应计入本轮。
+- `git ls-files --deleted -- skills skill-center automation` 未返回结果，因此仓库范围内没有新的 skill 相关删除文件；`/Users/baishangjituan/.codex/skills` 本轮也未观察到落在本时间窗口内的删除迹象。
+- 本轮没有新的 `.py` 文件出现，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+## 2026-04-17 06:26:33 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-16T21:25:12.002Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 `.py` 文件
+- 无。
+
+### 变更摘要
+- 按基线 `2026-04-16T21:25:12.002Z` 对四个监控根目录执行 `find -type f -newermt` 扫描，未发现任何技能相关文件的新增或修改时间晚于本轮时间窗口。
+- `git status --short --untracked-files=all -- skills skill-center automation` 仍显示 `skills/codex-feishu-bridge-skill/**` 的 11 个新增文件和 8 个修改文件，但逐个抽查 `SKILL.md`、新增 `.ps1` / `.js` 脚本与文档后确认其 `mtime` 全部停留在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，属于 `2026-04-15 23:26:09 CST` 已记录的旧批次，本轮不重复计入。
+- `git ls-files --deleted -- skills skill-center automation` 未返回结果，因此仓库范围内没有新的 skill 相关删除文件；`/Users/baishangjituan/.codex/skills` 本轮也未观察到可归因于本时间窗口的删除迹象。
+- 本轮没有新的 `.py` 文件出现，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+## 2026-04-17 07:26:18 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-16T22:25:12.164Z`
+- 扫描方法: 先按文件 `mtime` 扫描，再补充检查仓库内监控目录的 git 工作区变更，避免漏掉删除或未提交文件。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 `.py` 文件
+- 无。
+
+### 变更摘要
+- 未发现自上次运行以来的新技能或技能支撑自动化文件变更。
+- 当前仓库内仍存在一批 `skills/codex-feishu-bridge-skill/**` 的未同步工作区变更，但这些文件的 `mtime` 均为 `2026-04-12T14:07:15Z` 到 `2026-04-12T14:09:39Z`，早于本次对比基线，因此不计入本轮新增变更。
+- 本轮没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+## 2026-04-17 08:26:18 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-16T23:25:12.311Z`
+- 扫描方法: 先按文件 `mtime` 执行增量扫描，再结合仓库内 `git status` / `git ls-files --deleted` 复核新增、修改和删除。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 `.py` 文件
+- 无。
+
+### 变更摘要
+- 对四个监控根目录执行基于 `2026-04-16T23:25:12.311Z` 的 `find -type f -newermt` 扫描，未发现任何技能相关文件的新增或修改时间落入本轮时间窗口。
+- `git status --short --untracked-files=all -- skills skill-center automation` 仍显示 `skills/codex-feishu-bridge-skill/**` 的旧工作区变更，但这些文件的最新 `mtime` 仍停留在 `2026-04-12 22:07:15 CST` 到 `2026-04-12 22:09:39 CST`，早于本轮基线，因此不重复计入。
+- `git ls-files --deleted -- skills skill-center automation` 未返回结果，本轮仓库内没有新的技能相关删除文件；`/Users/baishangjituan/.codex/skills` 也未观察到可归因于本时间窗口的删除迹象。
+- 本轮没有新的 `.py` 文件出现，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+## 2026-04-17 10:26:28 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T01:25:12.649Z`
+- 扫描方法: 先按文件 `mtime` 做增量扫描，再用上次快照全量对比当前路径集合确认删除项，并用仓库 `git status` / `git ls-files --deleted` 复核仓库内技能相关文件。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 `.py` 文件
+- 无。
+
+### 变更摘要
+- 对四个监控根目录执行基于 `2026-04-17T01:25:12.649Z` 的增量扫描，未发现新增或修改时间落入本轮时间窗口的技能相关文件。
+- 将当前路径集合与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json` 对比后，未发现缺失路径，因此本轮没有新的删除文件。
+- `git status --short --untracked-files=all -- skills skill-center automation` 仍仅显示 `skills/codex-feishu-bridge-skill/**` 的旧工作区改动和未跟踪 PowerShell / 脚本文件；这些项目早于本轮基线，仍不计入本次变更批次。
+- `git ls-files --deleted -- skills skill-center automation` 未返回结果，本轮仓库内没有新的技能相关删除记录。
+- 本轮没有新的 `.py` 文件出现，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+## 2026-04-17 10:34:00 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T02:25:12.770Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-17T02:25:12.770Z` 为基线扫描四个目录后，未发现新的技能文件、技能支撑自动化文件，或可检测到的删除记录。
+- 当前工作区里 `skills/codex-feishu-bridge-skill/**` 仍有未提交改动，但这些文件的修改时间均早于本次基线，不属于本轮新增变更批次。
+
+## 2026-04-17 12:26:52 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T03:25:12.936Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-17T03:25:12.936Z` 为基线扫描四个目录后，未发现 `mtime` 晚于基线的 skill 文件、skill-center 镜像文件，或技能支撑自动化文件。
+- 对比 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json` 的已知路径集合后，未发现缺失项，因此本轮没有新的删除文件。
+- `git status --short --untracked-files=all -- skills skill-center automation` 仍只显示 `skills/codex-feishu-bridge-skill/**` 的旧工作区改动；这些文件的 `mtime` 都停留在 `2026-04-12`，已早于本轮基线，不计入本次批次。
+- 本轮没有新的 `.py` 文件出现，也没有新的变更批次需要追加到 `docs/automation/github-sync-status.md`。
+
+## 2026-04-17 15:47:35 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T06:45:57.252Z`
+- 结果汇总: 新增 1，修改 1，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-17-ai-first-replace-three-tasks.yaml` | `added` | Added a new AI-first cross-platform content package for the “先替这3类活，别先裁人” campaign, with per-platform title/description payloads and linked video/cover assets for the publishing automation.
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/browser.py` | `modified` | Added `close_browser_on_exit` to `BrowserSessionConfig` and gated browser shutdown on that flag so the Playwright controller can stop its session without always closing an attached browser instance.
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 本轮新批次只落在 `automation/python-platform-takeover/**`：一项是浏览器会话退出行为的代码调整，一项是新的 2026-04-17 内容投放配置包。
+- 对比 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json` 的路径集合后，未发现删除文件。
+- 扫描时还发现两个新的 `__pycache__/*.pyc` 产物，但它们属于 Python 解释器生成缓存，不计入技能/自动化变更清单。
+
+## 2026-04-17 16:48:32 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T07:46:27.454Z`
+- 结果汇总: 新增 2，修改 1，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/.codex/skills/wechat-channels-launchagent-keepalive/SKILL.md` | `added` | Added a new custom skill definition for maintaining the local WeChat Channels keepalive LaunchAgent, including the Chrome new-tab open/close flow, `launchctl` operations, manual validation command, and success/failure signals for the current macOS setup.
+- `/Users/baishangjituan/.codex/skills/wechat-channels-launchagent-keepalive/agents/openai.yaml` | `added` | Added the agent manifest for the WeChat Channels LaunchAgent keepalive skill, with its display name, short description, and default troubleshooting prompt.
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/__pycache__/browser.cpython-311.pyc` | `modified` | Regenerated the compiled bytecode cache for `social_publisher/browser.py`, which indicates the takeover publisher browser module was executed again after the previous snapshot.
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 本轮新批次包含一个新的本地自定义技能 `wechat-channels-launchagent-keepalive`，把当前机器上的视频号保活 LaunchAgent 运行方式固化成技能说明和 agent manifest。
+- `automation/python-platform-takeover` 目录没有新的源码文件增量，但出现了 `browser.py` 对应的 `__pycache__` 字节码刷新；这是生成缓存，属于平台相关的本机 Python 运行产物，而不是新的业务脚本。
+- 以 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json` 的文件集合对比当前扫描结果后，未发现新的删除文件。
+
+## 2026-04-17 17:49:21 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T08:47:16.905Z`
+- 结果汇总: 新增 0，修改 4，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/xiaoyunque-source-video/SKILL.md` | `modified` | Expanded the skill contract so prompt-mode output must now include a separate `封面制作专用文案`, and tightened the workflow rules to keep title-poster copy and downstream static-cover copy aligned but distinct.
+- `/Users/baishangjituan/.codex/skills/xiaoyunque-source-video/agents/openai.yaml` | `modified` | Updated the skill manifest text to advertise dual output responsibility: founder-video prompt packages now include both title-poster copy and cover-specific copy.
+- `/Users/baishangjituan/.codex/skills/xiaoyunque-source-video/references/prompt-template.md` | `modified` | Revised the reusable prompt template to add `封面制作专用文案` as a required field, define its `6到10个中文字符` writing standard, add examples, and add a QA fix path for cover copy that is too vague.
+- `/Users/baishangjituan/.codex/skills/xiaoyunque-source-video/references/source-video-playbook.md` | `modified` | Updated the source-video playbook so cover packaging now explicitly requires two coordinated lines of copy: a short first-frame `主题文案` plus a separate static-cover line for later packaging.
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 本轮新批次集中在 `/Users/baishangjituan/.codex/skills/xiaoyunque-source-video/`，把“小云雀提示词”正式收紧为双文案输出规范：首帧 `主题文案` 负责视频内 `title poster`，`封面制作专用文案` 负责后续静态封面包装。
+- 这次没有新增脚本，也没有出现新的 `.py` 文件；变更全部落在技能说明、agent manifest 与两份参考规范文档。
+- 以 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json` 的文件集合对比当前扫描结果后，未发现新的删除文件。
+
+## 2026-04-17 18:50:30 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T09:47:46.932Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-17T09:47:46.932Z` 为基线重新扫描四个目录后，未发现新的技能文件、技能镜像文件或技能支撑自动化文件变更。
+- 当前运行环境中未找到 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`；本轮因此以文件系统当前状态补建快照，供下一次运行继续做删除检测。
+- 因为本轮没有发现新的变更批次，所以未向 `github-sync-status.md` 追加新的待同步提醒。
+
+## 2026-04-17 19:52:55 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T10:49:47.193Z`
+- 结果汇总: 新增 13，修改 1，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/SKILL.md` | `added` | Added a new custom skill definition for direct Volcengine Ark Seedance 2.0 / 2.0 Fast video tasks, covering env-based auth, task submission and polling flow, bundled payload templates, and multi-clip extension strategy.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/agents/openai.yaml` | `added` | Added the agent manifest for `seedance-video-api`, exposing the display name, short description, and default prompt for direct Ark video-task work.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/extend_bridge_seedance_2_0.json` | `added` | Added a bridge-extension payload template that chains 2-3 reference videos through one transition prompt for multi-clip Seedance continuation.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/extend_single_seedance_2_0.json` | `added` | Added a single-reference-video extension payload template with `return_last_frame` enabled to support follow-on chaining.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/i2v_first_frame_seedance_2_0.json` | `added` | Added a first-frame image-to-video payload template that starts from a local image reference and returns the last frame for later extension.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/multimodal_reference_seedance_2_0.json` | `added` | Added a multimodal Seedance template combining reference image, reference video, and reference audio inputs for style-controlled generation.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/t2v_seedance_2_0.json` | `added` | Added the base text-to-video example payload for the standard Seedance 2.0 model.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/t2v_seedance_2_0_fast.json` | `added` | Added the fast-model text-to-video example payload for `doubao-seedance-2-0-fast-260128`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/api-basics.md` | `added` | Added a concise API reference covering Ark endpoints, model IDs, auth rules, input constraints, duration/resolution limits, and temporary result URL behavior.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/workflows.md` | `added` | Added practical workflow recipes for text-to-video, first-frame image animation, multimodal reference generation, and staged 30-second extension plans.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/seedance_cli.py` | `added` | Added a Python CLI that validates and normalizes Seedance payloads, resolves local image/audio inputs, submits and polls Ark tasks, and downloads video or last-frame outputs.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/__pycache__/seedance_cli.cpython-314.pyc` | `added` | Generated the compiled bytecode cache for the new `seedance_cli.py`, indicating the CLI was executed locally after the skill was added.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-17-ai-first-replace-three-tasks.yaml` | `added` | Added a new cross-platform publishing package for the “先替这3类活，别先裁人” campaign, with linked video/cover assets plus per-platform titles and body copy.
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/browser.py` | `modified` | Added `close_browser_on_exit` to `BrowserSessionConfig` and only closes the attached Playwright browser when that flag is explicitly enabled, preventing unconditional browser shutdown on exit.
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/seedance_cli.py` | 用途: Seedance 直连 CLI，负责 payload 校验/规范化、本地图片与音频引用解析、任务提交/轮询，以及视频或尾帧下载。 | 相关 skill: `seedance-video-api` | 平台判断: `cross-platform`，脚本基于 Python 标准库和 HTTP API，无明显平台专属分支。
+
+### 变更摘要
+- 本轮新增批次主要由新的本地自定义技能 `seedance-video-api` 构成：技能说明、agent manifest、6 个 Ark Seedance 示例 payload、2 份参考文档和 1 个 Python CLI 同步落地。
+- 仓库内只有两项落在本时间窗口内的技能支撑自动化变更：`social_publisher/browser.py` 增加了可选的浏览器退出控制开关，以及新的 `content-package.2026-04-17-ai-first-replace-three-tasks.yaml` 发布配置包。
+- `git ls-files --deleted -- skills skill-center automation` 未返回结果，因此仓库范围内没有新的技能相关删除文件；由于本次运行开始时仍缺少 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`，本轮已在结束时重建快照以恢复下次删除检测。
+- `git status --short --untracked-files=all -- skills skill-center automation` 中出现的 `skills/codex-feishu-bridge-skill/**` 脏文件都停留在 `2026-04-12` 的旧时间戳，早于本轮基线，因此未计入本批次。
+
+## 2026-04-17 20:54:00 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T11:50:47.404Z`
+- 结果汇总: 新增 13，修改 1，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/SKILL.md` | `added` | Added the new `seedance-video-api` custom skill contract for direct Volcengine Ark Seedance 2.0 / 2.0 Fast generation, polling, extension, and download workflows.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/agents/openai.yaml` | `added` | Added the skill manifest so Codex can route Seedance API tasks into the new direct-video skill.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/extend_bridge_seedance_2_0.json` | `added` | Added a bridge-extension example payload for stitching multiple Seedance reference clips with a transition prompt.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/extend_single_seedance_2_0.json` | `added` | Added a single-reference extension payload template with follow-on chaining support.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/i2v_first_frame_seedance_2_0.json` | `added` | Added a first-frame image-to-video example payload for animating from a local image input.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/multimodal_reference_seedance_2_0.json` | `added` | Added a multimodal reference payload example that combines image, video, and audio guidance.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/t2v_seedance_2_0.json` | `added` | Added the standard Seedance 2.0 text-to-video starter payload.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/t2v_seedance_2_0_fast.json` | `added` | Added the Seedance 2.0 Fast text-to-video starter payload.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/api-basics.md` | `added` | Added the compact API reference for endpoints, model IDs, input limits, auth rules, and result URL retention.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/workflows.md` | `added` | Added working recipes for text-to-video, image-to-video, multimodal reference generation, and staged extension flows.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/seedance_cli.py` | `added` | Added the Python CLI that validates payloads, resolves local media references, submits Ark tasks, polls task state, and downloads outputs.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/__pycache__/seedance_cli.cpython-314.pyc` | `added` | Added generated bytecode cache after executing the new `seedance_cli.py` locally.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-17-ai-first-replace-three-tasks.yaml` | `added` | Added a new multi-platform publishing package for the “先替这3类活，别先裁人” campaign, with asset paths plus per-platform titles and long-form copy.
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/browser.py` | `modified` | Added `close_browser_on_exit` to `BrowserSessionConfig` and gated `self._browser.close()` behind it so attached Playwright browsers are not closed unconditionally.
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/seedance_cli.py` | 用途: Seedance 直连 CLI，负责 payload 校验、输入规范化、本地图片或音频引用解析、任务提交与轮询、产物下载。 | 相关 skill: `seedance-video-api` | 平台判断: `cross-platform`，仅依赖 Python 标准库和 HTTP API，没有明显平台专属分支。
+
+### 变更摘要
+- 以 `2026-04-17T11:50:47.404Z` 为基线，本轮确认新增批次仍然集中在新建的 `/Users/baishangjituan/.codex/skills/seedance-video-api/` 目录，以及 `automation/python-platform-takeover` 的浏览器退出控制和内容包配置更新。
+- 非仓库目录 `/Users/baishangjituan/.codex/skills/**` 由于当前不存在 `last-snapshot.json`，删除检测仍只能依赖现有文档与当前文件集合；本轮未发现可确认的删除项。
+- `git status --short --untracked-files=all -- skills skill-center automation` 中的 `skills/codex-feishu-bridge-skill/**` 变更时间早于本轮基线，因此继续排除在本批次之外。
+
+## 2026-04-17 21:54:33 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T12:52:17.672Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-17T12:52:17.672Z` 为基线重新扫描四个目录后，未发现新的技能文件、技能镜像文件或技能支撑自动化文件变更。
+- `git status --short --untracked-files=all -- skills skill-center automation` 里残留的 `skills/codex-feishu-bridge-skill/**` 与 `automation/python-platform-takeover/**` 脏文件，其文件时间均早于本轮基线，因此未重复计入本批次。
+- 当前仍未找到 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`；由于本轮没有发现新批次，也没有可确认的删除项，因此 `github-sync-status.md` 本次保持不变。
+
+## 2026-04-17 22:55:23 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T13:53:17.920Z`
+- 结果汇总: 新增 17，修改 6，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/SKILL.md` | `added` | Added the mirrored `seedance-video-api` skill guide for direct Volcengine Ark Seedance 2.0 / 2.0 Fast generation, polling, staged extension, and download workflows.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/agents/openai.yaml` | `added` | Added the Seedance skill agent manifest so the mirror can expose the new direct-video workflow in `skill-center`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/extend_bridge_seedance_2_0.json` | `added` | Added a bridge-extension payload template for prompting transitions across multiple Seedance reference clips.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/extend_single_seedance_2_0.json` | `added` | Added a single-reference extension payload template for continuing one prior Seedance clip.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/i2v_first_frame_seedance_2_0.json` | `added` | Added a first-frame image-to-video example payload for animating from a local or hosted still image.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/multimodal_reference_seedance_2_0.json` | `added` | Added a multimodal reference payload template combining image, video, and audio guidance.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/t2v_seedance_2_0.json` | `added` | Added the standard Seedance 2.0 text-to-video starter payload.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/t2v_seedance_2_0_fast.json` | `added` | Added the Seedance 2.0 Fast text-to-video starter payload.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/api-basics.md` | `added` | Added the compact API reference for Ark endpoints, model IDs, auth rules, input limits, and result URL retention.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/workflows.md` | `added` | Added concrete recipes for text-to-video, first-frame image-to-video, multimodal reference generation, and staged extension chains.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.py` | `added` | Added the Python CLI that validates payloads, normalizes local media references, submits Ark tasks, polls status, and downloads video or last-frame outputs.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.ps1` | `added` | Added the Windows PowerShell launcher that finds a usable Python 3.10+ runtime and forwards commands into `seedance_cli.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/SKILL.md` | `added` | Added a mirrored keepalive skill covering the existing macOS LaunchAgent flow and the Windows Task Scheduler equivalent for 视频号 backend tab refresh.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/agents/openai.yaml` | `added` | Added the agent manifest for the mirrored WeChat Channels keepalive maintenance skill.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/wechat_channels_keepalive.py` | `added` | Added the Playwright-over-CDP helper that opens a fresh backend tab, classifies the landing state, closes only that new tab, and restores the previous tab.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/run-keepalive.ps1` | `added` | Added the Windows launcher that checks Python and Playwright availability, resolves the CDP endpoint, and runs the keepalive helper.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/register-keepalive-task.ps1` | `added` | Added the Task Scheduler registration script for recurring Windows keepalive runs every 40 minutes.
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/README.md` | `modified` | Updated the mirrored skill count from `61` to `63` after adding the Seedance and WeChat keepalive skills.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills-manifest.txt` | `modified` | Added `seedance-video-api` and `wechat-channels-launchagent-keepalive` to the mirrored skill manifest.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/SKILL.md` | `modified` | Expanded the skill contract so prompt output now includes a separate `封面制作专用文案`, with 6-10 Chinese character guidance and alignment rules versus the first-frame title copy.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/agents/openai.yaml` | `modified` | Updated the agent description and default prompt to mention the new title-poster copy plus cover-specific copy workflow.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/prompt-template.md` | `modified` | Revised the prompt template to require a standalone cover-copy field, added writing rules for 6-10 character static-cover text, and extended the troubleshooting guidance for weak cover copy.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/source-video-playbook.md` | `modified` | Updated the playbook to distinguish first-frame `主题文案` from separate static-cover copy and clarified how both should stay directionally aligned.
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.py` | 用途: Seedance 直连 CLI，负责 payload 校验/规范化、本地图片与音频引用解析、任务提交与轮询，以及视频或尾帧下载。 | 相关 skill: `seedance-video-api` | 平台判断: `cross-platform`，仅依赖 Python 标准库和 HTTP API。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/wechat_channels_keepalive.py` | 用途: 通过 Playwright over CDP 打开并关闭视频号后台新标签页，输出保活结果 JSON，并恢复前一个标签页。 | 相关 skill: `wechat-channels-launchagent-keepalive` | 平台判断: `platform-specific`，脚本明确面向 Windows CDP / Task Scheduler 场景。
+
+### 变更摘要
+- 本轮新增批次全部落在仓库镜像侧，核心是把本地新增的 `seedance-video-api` 和 `wechat-channels-launchagent-keepalive` 技能完整同步进 `skill-center`。
+- 同一批次还把 `xiaoyunque-source-video` 的镜像规则升级为“双文案”输出：首帧 `主题文案` 之外，新增独立的 `封面制作专用文案` 字段与写法约束。
+- `skill-center/README.md` 与 `skill-center/skills-manifest.txt` 已同步反映镜像技能总数和新增技能名；本轮扫描未发现新的技能相关删除文件。
+
+## 2026-04-17 23:57:05 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T14:53:17.920Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-17T14:53:17.920Z` 为最新已持久化基线重新扫描四个目录后，未发现新的技能文件、镜像文件或技能支撑自动化文件变更。
+- `git ls-files --deleted -- skills skill-center automation` 未返回结果，因此仓库范围内没有新的技能相关删除文件。
+- 由于本轮没有新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本次保持不变。
