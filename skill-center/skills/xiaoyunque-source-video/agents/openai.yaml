@@ -1,4 +1,4 @@
 interface:
   display_name: "小云雀源视频"
-  short_description: "小云雀源视频生成、标准提示词输出、故事板调整、出片质检与封面前置工作流"
-  default_prompt: "Use $xiaoyunque-source-video to output a standards-compliant 小云雀 founder-video prompt package or to operate the full source-video workflow."
+  short_description: "小云雀源视频生成、主题文案与封面文案输出、故事板调整、出片质检与封面前置工作流"
+  default_prompt: "Use $xiaoyunque-source-video to output a standards-compliant 小云雀 founder-video prompt package with title-poster copy and cover-specific copy, or to operate the full source-video workflow."

@@ -39,6 +39,7 @@ screenshot
 security-best-practices
 security-ownership-map
 security-threat-model
+seedance-video-api
 sentry
 slides
 social-publish-automation
@@ -50,6 +51,7 @@ toutiao-publish
 transcribe
 vercel-deploy
 wechat-channels-ops
+wechat-channels-launchagent-keepalive
 wechat-desktop-ops
 wechat-moments-desktop-ops
 wechat-video-channel-share-desktop-ops
