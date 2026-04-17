@@ -1,0 +1,4 @@
+version: 1
+display_name: WeChat Channels LaunchAgent Keepalive
+short_description: Maintain the local 视频号保活 scheduler on macOS or Windows
+default_prompt: Maintain or troubleshoot the local WeChat Channels keepalive flow that opens a fresh Chrome tab to the backend and then closes that just-opened tab, using LaunchAgent on macOS or Task Scheduler plus PowerShell on Windows.

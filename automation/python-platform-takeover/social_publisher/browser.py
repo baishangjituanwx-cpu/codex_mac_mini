@@ -12,6 +12,7 @@ else:
 @dataclass
 class BrowserSessionConfig:
     cdp_url: str | None = None
+    close_browser_on_exit: bool = False
 
 
 class BrowserController:
@@ -30,7 +31,7 @@ class BrowserController:
         return self
 
     def __exit__(self, exc_type, exc, tb) -> None:
-        if self._browser is not None:
+        if self._browser is not None and self.config.close_browser_on_exit:
             self._browser.close()
         if self._playwright is not None:
             self._playwright.stop()

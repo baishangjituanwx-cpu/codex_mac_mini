@@ -1,6 +1,6 @@
 ---
 name: xiaoyunque-source-video
-description: Use when Codex needs to plan, prompt, QA, or operate 小云雀 / 剪映网页版 as an upstream short-video generator for founder口播、方法型短视频、9:16竖屏源视频、storyboard 调整、`final_video.mp4` 导出，或为小云雀任务输出主题文案、核心母题、核心判断、title poster 规则和标准化提示词。
+description: Use when Codex needs to plan, prompt, QA, or operate 小云雀 / 剪映网页版 as an upstream short-video generator for founder口播、方法型短视频、9:16竖屏源视频、storyboard 调整、`final_video.mp4` 导出，或为小云雀任务输出主题文案、封面制作专用文案、核心母题、核心判断、title poster 规则和标准化提示词。
 ---
 
 # XiaoYunque Source Video
@@ -220,18 +220,22 @@ Whenever the task asks for a 小云雀 prompt, a refined prompt, or a reusable f
 3. Keep 大陈 as the absolute lead and 小丽 as a brief support role
 4. Keep the opening `0 to 2 seconds` as a readable title poster with 大陈 front-facing
 5. Keep subtitles to a single line with at most `8` Chinese characters per line
-6. If the workspace already has a recent review under `content-library/logs/review/`, read the latest relevant review first
-7. When that review includes `下一批小云雀视频高占比倾向`, treat it as a priority input instead of optional inspiration
-8. Do not reuse a weak title-poster phrase from the previous batch if the review explicitly marks it abstract or low-conversion
+6. Output one separate `封面制作专用文案` for downstream static-cover packaging
+7. Keep `主题文案` and `封面制作专用文案` aligned in meaning but not forced to be identical
+8. Keep the cover-specific copy within `6 to 10` Chinese characters
+9. If the workspace already has a recent review under `content-library/logs/review/`, read the latest relevant review first
+10. When that review includes `下一批小云雀视频高占比倾向`, treat it as a priority input instead of optional inspiration
+11. Do not reuse a weak title-poster phrase from the previous batch if the review explicitly marks it abstract or low-conversion
 
 In prompt-only mode, output in this order unless the user asks for a different format:
 
 1. `主题文案`
-2. `核心母题`
-3. `核心判断`
-4. one full prompt block ready to paste into 小云雀
-5. a short self-check list when QA is relevant
-6. when available, one short `复盘倾向说明`
+2. `封面制作专用文案`
+3. `核心母题`
+4. `核心判断`
+5. one full prompt block ready to paste into 小云雀
+6. a short self-check list when QA is relevant
+7. when available, one short `复盘倾向说明`
 
 ### 3. Follow the stable generation order
 
