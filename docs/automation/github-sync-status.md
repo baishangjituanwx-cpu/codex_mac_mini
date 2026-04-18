@@ -218,6 +218,11 @@
 
 ## 2026-04-17 16:48:32 CST
 - 检测到新的技能变更批次: 新增 2，修改 1，删除 0。
+
+## 2026-04-18 00:58:46 CST
+- 检测到新的技能变更批次: 新增 29，修改 15，删除 0。
+- 这批变更集中在 `skill-center` 新增 `seedance-video-api` 与 `wechat-channels-launchagent-keepalive` 镜像、`xiaoyunque-source-video` 双文案规则升级，以及 `codex-feishu-bridge-skill` 的 Windows PowerShell 安装/运维脚本与跨平台 npm 分发补齐。
+- 建议后续执行 GitHub 同步，避免技能镜像、Feishu bridge 模板与支撑自动化实现继续漂移。
 - 这批变更集中在新的 `wechat-channels-launchagent-keepalive` 本地技能定义与 agent manifest，以及 `automation/python-platform-takeover/social_publisher/__pycache__/browser.cpython-311.pyc` 的运行时缓存刷新。
 - 建议后续执行 GitHub 同步，避免本地技能编排说明与自动化运行痕迹继续漂移。
 
@@ -253,6 +258,7 @@
     - `automation/python-platform-takeover/configs/content-package.2026-04-17-ai-first-replace-three-tasks.yaml`
     - `skill-center/README.md`
     - `skill-center/skills-manifest.txt`
+
     - `skill-center/skills/xiaoyunque-source-video/**`
     - `skill-center/skills/seedance-video-api/**`
     - `skill-center/skills/wechat-channels-launchagent-keepalive/**`
@@ -276,3 +282,46 @@
   - `codex/windows-version-20260411` 本轮没有新的 Windows 工作区增量，因此未生成重复提交，只继续尝试上传既有待推送提交 `582efce`。
   - 跳过了未跟踪文件 `$CODEX_HOME/automations/skill-monitor/last-snapshot.json`；这是误落到仓库根目录的本地自动化运行产物，不属于应同步的仓库内容。
   - 当前自动化运行环境仍无法访问 GitHub SSH，因此两个分支都只完成了本地提交确认，未能真正上传到远端。
+
+## 2026-04-18 01:59:57 CST
+- 检测到新的技能变更批次: 新增 11，修改 8，删除 0。
+- 这批变更集中在 `skills/codex-feishu-bridge-skill` 的 Windows PowerShell 安装器、运维脚本、镜像查看器，以及新的跨平台 npm 脚本分发器。
+- 建议后续执行 GitHub 同步，避免 Feishu bridge 技能模板与双平台操作文档继续漂移。
+
+## 2026-04-18 03:01:56 CST
+- 检测到新的技能变更批次: 新增 12，修改 0，删除 0。
+- 这批变更集中在 `~/.codex/skills/seedance-video-api/` 的新技能落地，包括 skill 定义、agent manifest、示例 payload、参考文档与 `seedance_cli.py` 直连工具；另有 1 个运行后生成的 `__pycache__` 文件。
+- 建议后续执行 GitHub 同步，至少把需要镜像入库的 Seedance 技能源码与文档同步到仓库侧，避免本地技能目录与 `skill-center` 镜像继续漂移。
+
+## 2026-04-18 11:18:00 CST
+- 处理时间:
+  - `2026-04-18 11:18:00 CST`
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - 是。
+  - `codex/default-python-sync` 已上传的关键内容:
+    - `skill-center/skills/seedance-video-api/**`
+    - `skill-center/skills/wechat-channels-launchagent-keepalive/**`
+    - `skill-center/skills/xiaoyunque-source-video/**`
+    - `automation/python-platform-takeover/social_publisher/browser.py`
+    - `automation/python-platform-takeover/configs/content-package.2026-04-17-ai-first-replace-three-tasks.yaml`
+    - `skills/codex-feishu-bridge-skill/**` 的最新双平台模板增强
+  - `codex/windows-version-20260411` 已上传的关键内容:
+    - `skills/codex-feishu-bridge-skill/**` 的 Windows PowerShell 安装器、运维脚本、镜像查看器与分发器
+- 是否已提交:
+  - `codex/default-python-sync`: 是。已确认本地提交 `b23b086`、`87fee53`、`67b7bcf`、`e2ee804` 均存在。
+  - `codex/windows-version-20260411`: 是。已确认本地提交 `582efce`、`7bff3af` 均存在。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。远端已更新到 `e2ee804564aa73e900ac583bcb4b58ca7748e67c`。
+  - `codex/windows-version-20260411`: 是。远端已更新到 `7bff3af565cde5a74c2a87b529b5eee1b26b5431`。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync 2026-04-17 skill-center and takeover updates`
+  - `codex/default-python-sync`: `Record 2026-04-17 automation status`
+  - `codex/default-python-sync`: `Record 2026-04-18 GitHub sync status`
+  - `codex/default-python-sync`: `Improve Feishu bridge deployment scripts`
+  - `codex/windows-version-20260411`: `Improve Windows bridge deployment scripts`
+  - `codex/windows-version-20260411`: `Improve Feishu bridge deployment scripts`
+- 若跳过，说明跳过原因:
+  - 无。本轮已由交互环境手动补推成功，之前自动化环境里的 `Operation not permitted` 不再阻塞当前上传任务。

@@ -259,6 +259,31 @@
 ### 变更摘要
 - 以 `2026-04-16T10:25:10.298Z` 为基线扫描四个目录后，未发现新的技能文件、技能支撑自动化文件，或新的删除记录。
 
+## 2026-04-18 05:03:59 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T20:01:12.561Z`（本地时区为 `2026-04-18 04:01:12 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 按 `2026-04-18 04:01:12 CST` 重新换算上次运行时间后扫描四个目录，未发现新的技能文件、技能支撑自动化文件，或新的删除记录。
+- 当前仓库里仍有更早时间形成但尚未同步的 `skills/codex-feishu-bridge-skill/**` 改动；它们早于本次对比基线，因此未计入这一批次。
+
 ## 2026-04-17 13:26:25 CST
 - 扫描范围:
 - `/Users/baishangjituan/.codex/skills`
@@ -5595,3 +5620,344 @@
 - 以 `2026-04-17T14:53:17.920Z` 为最新已持久化基线重新扫描四个目录后，未发现新的技能文件、镜像文件或技能支撑自动化文件变更。
 - `git ls-files --deleted -- skills skill-center automation` 未返回结果，因此仓库范围内没有新的技能相关删除文件。
 - 由于本轮没有新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本次保持不变。
+
+## 2026-04-18 00:58:46 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T15:55:48.364Z`
+- 结果汇总: 新增 29，修改 15，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-17-ai-first-replace-three-tasks.yaml` | `added` | Added a new cross-platform content package with per-platform titles and copy for the “先替这3类活，别先裁人” campaign.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/SKILL.md` | `added` | Added the mirrored `seedance-video-api` skill guide for direct Ark Seedance 2.0 / 2.0 Fast submission, polling, extension, and download workflows.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/agents/openai.yaml` | `added` | Added the agent manifest so the mirrored Seedance skill is discoverable through `skill-center`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/extend_bridge_seedance_2_0.json` | `added` | Added a bridge-extension payload template for transition prompts across multiple reference clips.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/extend_single_seedance_2_0.json` | `added` | Added a single-reference extension payload template for continuing one prior clip.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/i2v_first_frame_seedance_2_0.json` | `added` | Added a first-frame image-to-video example payload for animating from a still image.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/multimodal_reference_seedance_2_0.json` | `added` | Added a multimodal reference payload template combining image, video, and audio guidance.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/t2v_seedance_2_0.json` | `added` | Added the standard Seedance 2.0 text-to-video starter payload.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/t2v_seedance_2_0_fast.json` | `added` | Added the Seedance 2.0 Fast text-to-video starter payload.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/api-basics.md` | `added` | Added the compact API reference for Ark endpoints, model IDs, auth rules, limits, and URL retention.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/workflows.md` | `added` | Added concrete recipes for text-to-video, first-frame image-to-video, multimodal reference generation, and staged extension chains.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.ps1` | `added` | Added the Windows launcher that locates Python 3.10+ and forwards commands into the Seedance Python CLI.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.py` | `added` | Added the Python CLI that validates payloads, resolves local media refs, submits Ark tasks, polls status, and downloads outputs.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/SKILL.md` | `added` | Added a mirrored keepalive skill covering the existing macOS LaunchAgent flow and the Windows Task Scheduler equivalent for 视频号 backend tab refresh.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/agents/openai.yaml` | `added` | Added the agent manifest for the mirrored WeChat Channels keepalive skill.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/register-keepalive-task.ps1` | `added` | Added the Task Scheduler registration helper for recurring Windows keepalive runs.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/run-keepalive.ps1` | `added` | Added the Windows launcher that validates Python and Playwright availability, resolves CDP, and executes the keepalive helper.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/wechat_channels_keepalive.py` | `added` | Added the Playwright-over-CDP helper that opens a fresh backend tab, classifies the landing page, closes only that new tab, and restores the previous tab.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-logs.ps1` | `added` | Added a PowerShell log tailer for the deployed bridge’s `bridge.log`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.ps1` | `added` | Added a Windows bridge launcher that starts a detached hidden PowerShell host, writes a PID file, and prints status.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-status.ps1` | `added` | Added a Windows status script that inspects the PID file, child process tree, and recent bridge logs.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-stop.ps1` | `added` | Added a Windows stop script that kills the bridge host and descendants using the PID file or matching command lines.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/configure_notify_target.ps1` | `added` | Added a PowerShell helper that updates `.bridge.env` with the publish-notify chat ID and reminds operators to restart the bridge.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.cmd` | `added` | Added a double-clickable Windows wrapper for opening the local mirrored conversation view.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.js` | `added` | Added a shared Node mirror renderer that reads `state.json`, selects a conversation, and prints recent message history.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.ps1` | `added` | Added a PowerShell wrapper that locates Node on Windows and forwards arguments into `mirror-view.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/run-bridge.ps1` | `added` | Added a Windows runtime wrapper that loads `.bridge.env` into the environment and launches `src/bridge.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/run-platform-script.js` | `added` | Added a cross-platform Node dispatcher that routes npm scripts to `.sh` on Unix or `.ps1` on Windows.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/install_bridge_template.ps1` | `added` | Added a Windows installer that copies the bridge template, initializes `.bridge.env`, and patches install-path placeholders.
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/browser.py` | `modified` | Added `close_browser_on_exit` to `BrowserSessionConfig` and stopped auto-closing the browser unless the caller opts in.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/README.md` | `modified` | Updated the mirrored skill count from `61` to `63` after adding Seedance and WeChat keepalive.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills-manifest.txt` | `modified` | Added `seedance-video-api` and `wechat-channels-launchagent-keepalive` to the mirror manifest.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/SKILL.md` | `modified` | Expanded the skill contract so output now includes separate `封面制作专用文案` guidance alongside the first-frame title copy.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/agents/openai.yaml` | `modified` | Updated the agent prompt and description to mention the new cover-copy workflow.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/prompt-template.md` | `modified` | Revised the template to require a standalone 6-10 character cover-copy field and added troubleshooting guidance for weak cover text.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/source-video-playbook.md` | `modified` | Clarified how first-frame `主题文案` and static-cover copy should stay directionally aligned but not identical.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/SKILL.md` | `modified` | Expanded the bridge skill instructions to cover Windows install paths, the PowerShell installer, and Windows script families.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/.bridge.env.example` | `modified` | Added `CODEX_BRIDGE_PROGRESS_NOTIFY_CHAT_ID` so progress notifications can be configured separately from publish success.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/package.json` | `modified` | Switched npm operational commands from direct `zsh` calls to the new cross-platform `run-platform-script.js` dispatcher.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.command` | `modified` | Reworked the macOS double-click wrapper to resolve the script directory at runtime instead of relying on an install-path placeholder.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.sh` | `modified` | Simplified the Unix mirror view script to exec the shared Node renderer instead of embedding the renderer inline.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART.md` | `modified` | Rewrote the quickstart as a dual-platform guide with macOS and Windows install, auth, notify-target, start, status, and mirror-view steps.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/deployment.md` | `modified` | Expanded deployment guidance from macOS-only to macOS plus Windows, including service behavior, PID files, and Windows smoke-test paths.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/user-guide.md` | `modified` | Added Windows mirror-view commands and clarified that bridge state and progress-push behavior stay the same across platforms.
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.py` | 用途: Seedance 直连 CLI，负责 payload 校验/规范化、本地图片与音频引用解析、任务提交与轮询，以及视频或尾帧下载。 | 相关 skill: `seedance-video-api` | 平台判断: `cross-platform`，仅依赖 Python 标准库与 HTTP API。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/wechat_channels_keepalive.py` | 用途: 通过 Playwright over CDP 新开并关闭视频号后台标签页，输出保活结果 JSON，并尽量恢复之前活动标签页。 | 相关 skill: `wechat-channels-launchagent-keepalive` | 平台判断: `platform-specific`，逻辑明确围绕 Windows 的 CDP / Task Scheduler 运行方式。
+
+### 变更摘要
+- 本轮发现两组新批次: 一组是 `skill-center` 镜像与 `python-platform-takeover` 支撑自动化的已提交同步，另一组是 `skills/codex-feishu-bridge-skill` 的未提交 Windows 支持补齐。
+- `skill-center` 侧新增了 `seedance-video-api` 与 `wechat-channels-launchagent-keepalive` 两个镜像技能，并同步提升 `xiaoyunque-source-video` 的“双文案”输出规则。
+- `codex-feishu-bridge-skill` 本轮核心变化是把部署、运维、镜像查看和 npm 分发路径扩展为跨平台版本，重点新增 Windows PowerShell 启动/停止/状态/安装脚本。
+- `automation/python-platform-takeover` 本轮新增了 1 个内容包，并把浏览器退出行为改成显式开关；这类变更与技能落地自动化直接相关，因此纳入本次记录。
+- `find ... -newermt` 仅返回 `.pyc` 缓存文件，但它们不属于需要持久记录的技能源码或文档，本次已忽略；`git ls-files --deleted -- skills skill-center automation` 也未返回结果，因此没有新增删除项。
+
+## 2026-04-18 01:59:57 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T16:57:11.840Z`
+- 结果汇总: 新增 11，修改 8，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-logs.ps1` | `added` | Added a Windows PowerShell log-tail helper for `bridge.log`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.ps1` | `added` | Added a Windows start script that launches the bridge in a detached PowerShell host, writes `bridge.pid`, and redirects stdout/stderr logs.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-status.ps1` | `added` | Added a Windows status script that reports the host PID, child process tree, and recent bridge log lines.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-stop.ps1` | `added` | Added a Windows stop script that finds the bridge process tree from `bridge.pid` or command-line matches and terminates it.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/configure_notify_target.ps1` | `added` | Added a Windows notifier configuration script that updates `CODEX_BRIDGE_PUBLISH_NOTIFY_CHAT_ID` inside `.bridge.env`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.cmd` | `added` | Added a double-clickable Windows wrapper for opening the local mirror viewer in a console window.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.js` | `added` | Added a shared Node.js mirror viewer that reads `.codex-feishu-bridge/state.json` and prints recent mirrored conversation history.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.ps1` | `added` | Added a Windows PowerShell launcher that resolves Node and invokes `mirror-view.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/run-bridge.ps1` | `added` | Added a Windows runtime launcher that loads `.bridge.env` into the process environment and starts `src/bridge.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/run-platform-script.js` | `added` | Added a cross-platform npm script dispatcher that selects `.ps1` on Windows and `.sh` on other platforms.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/install_bridge_template.ps1` | `added` | Added a Windows installer that copies the bridge template, seeds `.bridge.env`, rewrites placeholder paths, and prints Windows-specific setup steps.
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/SKILL.md` | `modified` | Expanded the skill instructions to cover both macOS and Windows install targets, launch methods, and tracked script types.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/.bridge.env.example` | `modified` | Added `CODEX_BRIDGE_PROGRESS_NOTIFY_CHAT_ID` so progress updates can target a separate Feishu chat.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/package.json` | `modified` | Rewired bridge and mirror npm scripts to the new cross-platform `run-platform-script.js` dispatcher.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.command` | `modified` | Switched the macOS double-click launcher from a hardcoded install path to a script-relative path lookup.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.sh` | `modified` | Replaced the inline Node.js mirror parser with a thin wrapper around the new shared `mirror-view.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART.md` | `modified` | Reworked the quickstart into paired macOS and Windows install, auth, notify-target, start, status, and mirror-view steps.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/deployment.md` | `modified` | Expanded the deployment guide with Windows prerequisites, install path, service behavior, runtime files, and verification commands.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/user-guide.md` | `modified` | Added Windows mirror-view commands and clarified that progress-push behavior matches macOS while launcher formats differ.
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 本轮发现的全部增量都集中在 `skills/codex-feishu-bridge-skill`，主题是把 Feishu bridge 模板从 macOS-only 运维补齐到 Windows PowerShell 安装、运行、状态检查、停止、镜像查看与跨平台 npm 分发。
+- 本轮未发现 `.py` 新文件，也未发现删除记录；`~/.codex/skills`、`skill-center` 与 `automation` 在本次基线之后没有新的技能相关文件增量。
+
+## 2026-04-18 03:01:56 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T17:58:42.075Z`
+- 结果汇总: 新增 12，修改 0，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/SKILL.md` | `added` | Added a new `seedance-video-api` skill definition for direct Volcengine Ark Seedance 2.0 / 2.0 Fast task creation, polling, extension, and download workflows.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/agents/openai.yaml` | `added` | Added the agent manifest that routes Codex to the new Seedance direct-API workflow with environment-based auth.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/extend_bridge_seedance_2_0.json` | `added` | Added a multi-clip bridge-extension payload template for transitioning across two to three reference videos.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/extend_single_seedance_2_0.json` | `added` | Added a single-reference-video extension template that continues one clip and returns a last frame for later chaining.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/i2v_first_frame_seedance_2_0.json` | `added` | Added a first-frame image-to-video template that uses a local image reference and can return the tail frame.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/multimodal_reference_seedance_2_0.json` | `added` | Added a multimodal reference template combining image, video, and audio inputs for style-controlled generation.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/t2v_seedance_2_0.json` | `added` | Added a baseline Seedance 2.0 text-to-video payload template.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/t2v_seedance_2_0_fast.json` | `added` | Added a Seedance 2.0 Fast text-to-video payload template for quicker generation jobs.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/api-basics.md` | `added` | Added a concise reference covering Ark endpoints, model IDs, media constraints, auth handling, and task/result lifetime limits.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/workflows.md` | `added` | Added recipe documentation for t2v, i2v, multimodal reference, single-clip extension, bridge extension, and practical 30-second chaining.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/seedance_cli.py` | `added` | Added the direct API CLI that validates payloads, normalizes local image/audio references, submits and polls tasks, and downloads output video or last-frame assets.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/__pycache__/seedance_cli.cpython-314.pyc` | `added` | Added a generated Python bytecode cache file after running the new `seedance_cli.py` helper locally.
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/seedance_cli.py` | 用途: Seedance 直连 CLI，负责 payload 校验与规范化、本地图片/音频引用解析、任务提交与轮询，以及视频或尾帧下载。 | 相关 skill: `seedance-video-api` | 平台判断: `cross-platform`，仅依赖 Python 标准库和远端 HTTP API。
+
+### 变更摘要
+- 本轮新批次全部集中在 `~/.codex/skills/seedance-video-api/`，说明本地自定义技能目录新增了一套完整的 Seedance 2.0 / 2.0 Fast 直连 API 技能。
+- 这组文件同时落了技能说明、agent manifest、6 个示例 payload、两份参考文档，以及可直接提交/轮询/下载任务的 Python CLI。
+- 仓库内的 `skills/`、`skill-center/` 和 `automation/` 在本次基线之后没有新的技能相关源码或文档增量；删除项也未发现。
+- 另检测到 1 个 `__pycache__` 字节码缓存文件，属于运行新 CLI 后生成的伴生文件，已单独记录但不视为手写技能源码。
+
+## 2026-04-18 04:02:08 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T19:00:12.304Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 本轮未发现新的技能相关源码、文档或自动化支持文件增量，因此没有生成新的变更批次。
+- `find ... -newermt '2026-04-18 03:00:12'` 在四个监控根目录下未返回任何技能相关文件；`git ls-files --deleted` 也未发现删除项。
+- 当前工作区里 `skills/codex-feishu-bridge-skill/**` 仍有未提交变更，但这些文件的 mtime 均早于本次基线，已在前序批次记录，不重复计入本轮。
+- 因为没有发现新的变更批次，`github-sync-status.md` 本轮无需追加待同步提示。
+
+## 2026-04-18 06:03:31 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T21:01:42.806Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 本轮未发现自上次运行以来的新技能相关源码、文档或支撑自动化增量，因此没有新的变更批次需要同步。
+- 通过四个监控根目录的文件 `mtime` 扫描，未找到晚于 `2026-04-17T21:01:42.806Z` 的技能相关文件。
+- `git ls-files --deleted -- skills skill-center automation` 未返回结果，因此仓库内也未发现新的已跟踪删除项。
+- 当前工作区里 `skills/codex-feishu-bridge-skill/**` 与监控文档仍存在更早批次留下的未提交改动，但这些改动已在 `2026-04-18 01:59:57 CST` 记录，本轮不重复计入。
+- 因为没有新批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-04-18 07:03:55 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T22:02:43.079Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 本轮未发现自上次运行以来的新技能相关源码、文档或支撑自动化增量，因此没有新的变更批次需要同步。
+- 通过四个监控根目录的文件 `mtime` 扫描，未找到晚于 `2026-04-17T22:02:43.079Z` 的技能相关文件。
+- 仓库侧执行 `git ls-files --deleted -- skills skill-center automation` 未返回结果，因此本轮也未发现新的已跟踪删除项。
+- 自动化记忆文件 `$CODEX_HOME/automations/skill-monitor/memory.md` 在本次运行前缺失，已在本轮补建，但不计入技能变更批次。
+- 因为没有新批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-04-18 08:04:54 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-17T23:03:13.353Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-17T23:03:13.353Z` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行。
+- 仓库内的 `skills`、`skill-center`、`automation` 目录未出现新的已跟踪删除项，因此本轮没有可登记的删除记录。
+- 因为没有新的技能变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-04-18 09:06:59 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T00:04:13.571Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-18T00:04:13.571Z` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行。
+- 仓库侧执行 `git ls-files --deleted -- skills skill-center automation` 未返回结果，因此本轮没有可确认的已跟踪删除项。
+- 当前工作区中仍可见 `skills/codex-feishu-bridge-skill/**` 的历史未提交变更，但这些文件已在更早批次记录，且磁盘时间戳早于本轮基线，因此不重复计入。
+- 因为没有新的技能变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-04-18 10:08:29 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T01:05:43.838Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-18T01:05:43.838Z` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行。
+- 仓库侧执行 `git status --short --untracked-files=all -- skills skill-center automation` 后，仅看到更早批次已记录的 `skills/codex-feishu-bridge-skill/**` 变更；这些文件的磁盘时间戳均早于本轮基线，因此不重复计入。
+- 本轮未发现仓库内新的已跟踪删除项，因此删除计数保持为 0。
+- 因为没有新的技能变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-04-18 11:10:20 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T02:07:44.038Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-18T02:07:44.038Z` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行。
+- 仓库侧执行 `git ls-files --deleted -- skills skill-center automation` 未返回结果，因此本轮没有可确认的已跟踪删除项。
+- 当前工作区里仍有更早批次已经记录过的 `skills/codex-feishu-bridge-skill/**` 未提交变更，但这些文件的磁盘时间戳均早于本轮基线，因此不重复计入。
+- 因为没有新的技能变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
