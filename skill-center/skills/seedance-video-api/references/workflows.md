@@ -13,6 +13,7 @@ Recommended flow:
 2. Replace the prompt.
 3. Run `submit --dry-run`.
 4. Run `submit --wait --download ...`.
+5. Build the mandatory post-generation cover package from the finished video.
 
 ## 2. First-Frame Image To Video
 
@@ -24,6 +25,7 @@ Notes:
 
 - Keep the image local with `local://...` or switch to a public image URL.
 - Use `return_last_frame=true` if the user wants a future extension anchor.
+- If this clip is headed for multi-platform publishing, prepare the post-generation cover package immediately after the final video lands.
 
 ## 3. Multimodal Reference Video
 
@@ -35,6 +37,7 @@ Notes:
 
 - This is for reference-image / reference-video / reference-audio style control.
 - Do not mix first-frame / last-frame mode with multimodal reference mode.
+- The publishing-ready deliverable is still `video + cover package`, not `video only`.
 
 ## 4. Single-Clip Extension
 
@@ -82,9 +85,28 @@ Prefer:
 3. Extend or continue into clip C: `10-12s`
 4. Trim overlaps
 5. Stitch externally with ffmpeg or an editor
+6. Extract the best final still and export `3:4` + `4:3` PNG covers
 
 Why:
 
 - One task cannot output more than `15s`
 - One extension request cannot exceed `15s` total input reference-video duration
 - Chaining shorter segments is more stable than trying to max every clip to `15s`
+
+## 7. Mandatory Post-Generation Cover Step
+
+When the video is intended for downstream publishing, do not stop at the downloaded `mp4`.
+
+Always add:
+
+1. one `1080x1440` vertical PNG cover
+2. one `1440x1080` horizontal PNG cover
+3. both derived from a clean frame inside the final video
+4. both following the lower-third title treatment in `cover-package.md`
+5. shortlist candidate frames first if the final video has multiple usable close-up shots
+6. render the final cover PNGs from the chosen candidate still
+
+Default naming:
+
+- `cover-vertical-3x4.png`
+- `cover-horizontal-4x3.png`
