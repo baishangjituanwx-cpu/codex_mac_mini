@@ -2,11 +2,11 @@
 
 ## Scope
 
-This guide deploys the Feishu-to-Codex bridge onto a target macOS machine as a user-scoped service.
+This guide deploys the Feishu-to-Codex bridge onto a target macOS or Windows machine as a user-scoped local service.
 
 ## Prerequisites
 
-- macOS user account with access to `launchctl`
+- macOS user account with access to `launchctl`, or a Windows user account with PowerShell available on `PATH`
 - `Codex.app` installed and `codex` CLI already logged in
 - Node.js available either on `PATH` or under `~/.local/bin/node`
 - A Feishu self-built app with bot capability enabled
@@ -15,63 +15,118 @@ This guide deploys the Feishu-to-Codex bridge onto a target macOS machine as a u
 
 ## Recommended install path
 
-```text
-~/.codex-feishu-bridge
-```
+- macOS: `~/.codex-feishu-bridge`
+- Windows: `%USERPROFILE%\.codex-feishu-bridge`
 
 This keeps the bridge isolated from user workspaces and avoids path issues from folders containing spaces.
 
 ## Deployment steps
 
 1. Copy the skill directory to the target machine.
-2. Run the installer:
+2. Run the installer.
+
+macOS:
 
 ```bash
 bash <skill-dir>/scripts/install_bridge_template.sh "$HOME/.codex-feishu-bridge"
 ```
 
-3. Change into the deployed directory:
+Windows PowerShell:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File "<skill-dir>\scripts\install_bridge_template.ps1" "$HOME\.codex-feishu-bridge"
+```
+
+3. Change into the deployed directory.
+
+macOS:
 
 ```bash
 cd "$HOME/.codex-feishu-bridge"
 ```
 
-4. Install dependencies:
+Windows PowerShell:
+
+```powershell
+Set-Location "$HOME\.codex-feishu-bridge"
+```
+
+4. Install dependencies.
 
 ```bash
 npm install
 ```
 
-5. Configure Feishu CLI app credentials:
+5. Configure Feishu CLI app credentials.
+
+macOS:
 
 ```bash
 ./node_modules/@larksuite/cli/bin/lark-cli config init --app-id <APP_ID> --app-secret-stdin --brand feishu
 ```
 
+Windows PowerShell:
+
+```powershell
+.\node_modules\@larksuite\cli\bin\lark-cli.exe config init --app-id <APP_ID> --app-secret-stdin --brand feishu
+```
+
 Pipe the `App Secret` through stdin instead of placing it on the command line.
 
-6. Authenticate Feishu CLI:
+6. Authenticate Feishu CLI.
+
+macOS:
 
 ```bash
 ./node_modules/@larksuite/cli/bin/lark-cli auth login --domain im,event --recommend
 ```
 
-7. Verify auth:
+Windows PowerShell:
+
+```powershell
+.\node_modules\@larksuite\cli\bin\lark-cli.exe auth login --domain im,event --recommend
+```
+
+7. Verify auth.
+
+macOS:
 
 ```bash
 ./node_modules/@larksuite/cli/bin/lark-cli auth status
 ```
 
-8. Start the bridge service:
+Windows PowerShell:
+
+```powershell
+.\node_modules\@larksuite\cli\bin\lark-cli.exe auth status
+```
+
+8. Start the bridge service.
+
+macOS:
 
 ```bash
 ./scripts/bridge-start.sh
 ```
 
+Windows PowerShell:
+
+```powershell
+.\scripts\bridge-start.ps1
+```
+
 Before or after starting the bridge, re-confirm the push target chat for publish-success notifications:
+
+macOS:
 
 ```bash
 ./scripts/configure_notify_target.sh <CHAT_ID>
+```
+
+Windows PowerShell:
+
+```powershell
+.\scripts\configure_notify_target.ps1 <CHAT_ID>
 ```
 
 Or, once the bot is reachable in the desired Feishu chat, send:
@@ -81,23 +136,40 @@ Or, once the bot is reachable in the desired Feishu chat, send:
 /setprogresshere
 ```
 
-9. Verify service state:
+9. Verify service state.
+
+macOS:
 
 ```bash
 ./scripts/bridge-status.sh
 ```
 
-## Launchd behavior
+Windows PowerShell:
+
+```powershell
+.\scripts\bridge-status.ps1
+```
+
+## Service behavior
+
+macOS:
 
 - Label: `com.codex.feishu-bridge`
 - Plist path: `~/Library/LaunchAgents/com.codex.feishu-bridge.plist`
 - Bridge restarts automatically if it exits
+
+Windows:
+
+- The bridge is launched by `bridge-start.ps1` as a detached per-user PowerShell host.
+- Runtime PID file: `.codex-feishu-bridge\bridge.pid`
+- Use `bridge-stop.ps1` before reinstalling or when rotating credentials.
 
 ## Files created at runtime
 
 - `.codex-feishu-bridge/state.json`
 - `.codex-feishu-bridge/mirrors/*.md`
 - `.codex-feishu-bridge/mirrors/*.jsonl`
+- `.codex-feishu-bridge/bridge.pid` on Windows
 - `bridge.log`
 - `bridge.stdout.log`
 - `bridge.stderr.log`
@@ -125,10 +197,18 @@ Default success phrases include:
 
 ## Post-install smoke test
 
-1. Send a bot message to a known Feishu private chat:
+1. Send a bot message to a known Feishu private chat.
+
+macOS:
 
 ```bash
 ./node_modules/@larksuite/cli/bin/lark-cli im +messages-send --as bot --chat-id <CHAT_ID> --text "bridge online"
+```
+
+Windows PowerShell:
+
+```powershell
+.\node_modules\@larksuite\cli\bin\lark-cli.exe im +messages-send --as bot --chat-id <CHAT_ID> --text "bridge online"
 ```
 
 2. In Feishu, run:
@@ -139,6 +219,7 @@ Default success phrases include:
 ```
 
 3. Confirm a mirror file is created after the first inbound message.
+4. On Windows, double-click `scripts\mirror-view.cmd` or run `.\scripts\mirror-view.ps1 latest 60` to inspect the mirrored conversation locally.
 
 ## Restart-sensitive step
 
