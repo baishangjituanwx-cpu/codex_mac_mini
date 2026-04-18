@@ -58,13 +58,29 @@ Windows path handling rules:
 
 - Prefer quoted absolute paths.
 - Prefer `C:/...` forward-slash paths in JSON payloads so they also stay valid on macOS hosts.
-- The PowerShell launcher will try `.venv\\Scripts\\python.exe`, an active virtualenv, `py -3`, then `python`.
+- The PowerShell launcher will try `.venv\\Scripts\\python.exe`, an active virtualenv, `py -3`, `python`, then an installed `uv` managed Python.
+
+## macOS Quick Use
+
+Use the bundled shell launcher when the skill mirror is synced onto a Mac:
+
+```bash
+bash /Users/name/.codex/skills/seedance-video-api/scripts/seedance_cli.sh submit --payload /Users/name/work/payload.json --dry-run
+bash /Users/name/.codex/skills/seedance-video-api/scripts/seedance_cli.sh wait cgt-xxxx --download /Users/name/work/output.mp4
+```
+
+macOS path handling rules:
+
+- Prefer quoted absolute paths.
+- Prefer `python3` or a local virtualenv with Python `3.10+`.
+- The shell launcher will try `./.venv/bin/python`, an active virtualenv, `python3`, `python`, then an installed `uv` managed Python.
 
 ## Bundled CLI
 
 Primary script:
 
 - `scripts/seedance_cli.py`
+- `scripts/seedance_cli.sh`
 - `scripts/seedance_cli.ps1`
 
 Primary commands:
