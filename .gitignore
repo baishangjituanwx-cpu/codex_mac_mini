@@ -10,6 +10,7 @@ bridge.stderr.log
 .codex/
 .codex-skill-monitor-snapshot.txt
 .codex-feishu-bridge/
+$CODEX_HOME/
 automation/python-platform-takeover/.env
 automation/python-platform-takeover/configs/content-package.local.yaml
 workflow/content-library/assets/generated/*
