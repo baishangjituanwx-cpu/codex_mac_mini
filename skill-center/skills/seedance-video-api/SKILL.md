@@ -86,6 +86,7 @@ Copy rules:
 - Write result, replacement, or boss-benefit language instead of generic feature copy
 
 Use `references/cover-package.md` for the full standard.
+Use `references/cover-execution.md` for the helper-script flow and example commands.
 
 If the task is mainly about producing, revising, or validating the cover package itself, also use [$platform-cover-ops](/Users/baishangjituan/.codex/skills/platform-cover-ops/SKILL.md).
 
@@ -96,6 +97,7 @@ Use the bundled PowerShell launcher when the skill mirror is synced onto a Windo
 ```powershell
 powershell -ExecutionPolicy Bypass -File C:/Users/name/.codex/skills/seedance-video-api/scripts/seedance_cli.ps1 submit --payload C:/work/payload.json --dry-run
 powershell -ExecutionPolicy Bypass -File C:/Users/name/.codex/skills/seedance-video-api/scripts/seedance_cli.ps1 wait cgt-xxxx --download C:/work/output.mp4
+powershell -ExecutionPolicy Bypass -File C:/Users/name/.codex/skills/seedance-video-api/scripts/build_cover_package.ps1 --video C:/work/final_video.mp4 --output-dir C:/work/cover-package --main-title 'AI员工上岗了' --subtitle '自动跑平台' --candidate-index 2 --tag '平台执行'
 ```
 
 Windows path handling rules:
@@ -111,6 +113,7 @@ Use the bundled shell launcher when the skill mirror is synced onto a Mac:
 ```bash
 bash /Users/name/.codex/skills/seedance-video-api/scripts/seedance_cli.sh submit --payload /Users/name/work/payload.json --dry-run
 bash /Users/name/.codex/skills/seedance-video-api/scripts/seedance_cli.sh wait cgt-xxxx --download /Users/name/work/output.mp4
+python3 /Users/name/.codex/skills/seedance-video-api/scripts/build_cover_package.py --video /Users/name/work/final_video.mp4 --output-dir /Users/name/work/cover-package --main-title 'AI员工上岗了' --subtitle '自动跑平台' --candidate-index 2 --tag '平台执行'
 ```
 
 macOS path handling rules:
@@ -119,13 +122,22 @@ macOS path handling rules:
 - Prefer `python3` or a local virtualenv with Python `3.10+`.
 - The shell launcher will try `./.venv/bin/python`, an active virtualenv, `python3`, `python`, then an installed `uv` managed Python.
 
-## Bundled CLI
+## Bundled CLI And Cover Helpers
 
 Primary script:
 
 - `scripts/seedance_cli.py`
 - `scripts/seedance_cli.sh`
 - `scripts/seedance_cli.ps1`
+- `scripts/init_cover_package.py`
+- `scripts/extract_cover_candidates.py`
+- `scripts/render_cover_package.py`
+- `scripts/build_cover_package.py`
+- `scripts/init_cover_package.ps1`
+- `scripts/extract_cover_candidates.ps1`
+- `scripts/render_cover_package.ps1`
+- `scripts/build_cover_package.ps1`
+- `scripts/invoke_seedance_script.ps1`
 
 Primary commands:
 
@@ -142,6 +154,9 @@ Behavior notes:
 - Local images and audio can use `local://...` and will be converted to Base64 data URIs automatically.
 - Local video files are intentionally rejected because Ark `video_url.url` expects a public URL or `asset://...`.
 - The script supports payload normalization for `text`, `image_url`, `video_url`, `audio_url`, and `draft_task`.
+- The candidate-frame script uses local `ffmpeg` / `ffprobe` to extract stills and generate a contact sheet.
+- The render script uses Pillow plus an auto-detected Chinese font file to output final delivery PNG covers.
+- If the current shell Python lacks Pillow, the render script automatically re-runs under the Codex bundled Python runtime when that runtime is available.
 - Do not edit the bundled CLI unless the user explicitly asks to change the skill itself.
 
 ## Templates
@@ -174,6 +189,7 @@ See:
 - `references/api-basics.md`
 - `references/workflows.md`
 - `references/cover-package.md`
+- `references/cover-execution.md`
 
 ## Official Constraints To Remember
 
@@ -191,3 +207,4 @@ See:
 - `references/api-basics.md`: endpoint, model IDs, limits, and auth reminders
 - `references/workflows.md`: practical recipes for t2v, i2v, multimodal, and extension
 - `references/cover-package.md`: fixed cover output standard for multi-platform reuse after generation
+- `references/cover-execution.md`: helper-script flow for brief, candidate frame extraction, and final cover rendering

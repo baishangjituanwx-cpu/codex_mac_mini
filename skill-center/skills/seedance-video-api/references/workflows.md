@@ -105,6 +105,7 @@ Always add:
 4. both following the lower-third title treatment in `cover-package.md`
 5. shortlist candidate frames first if the final video has multiple usable close-up shots
 6. render the final cover PNGs from the chosen candidate still
+7. if the process needs repeatability or handoff, follow `cover-execution.md`
 
 Default naming:
 
