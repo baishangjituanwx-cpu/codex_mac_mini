@@ -1,6 +1,6 @@
 ---
 name: seedance-video-api
-description: Use when the user wants to create, inspect, extend, poll, or download Volcengine Ark Seedance 2.0 / 2.0 Fast video tasks through the direct API, including text-to-video, first-frame image-to-video, multimodal reference generation, 15-second extension chaining, and payload preparation with the bundled CLI; requires a locally set `ARK_API_KEY` and must never store or request the full key in chat or tracked files.
+description: Use when the user wants to create, inspect, extend, poll, or download Volcengine Ark Seedance 2.0 / 2.0 Fast video tasks through the direct API, including text-to-video, first-frame image-to-video, multimodal reference generation, 15-second extension chaining, payload preparation with the bundled CLI, and the mandatory post-generation multi-platform cover package workflow; requires a locally set `ARK_API_KEY` and must never store or request the full key in chat or tracked files.
 ---
 
 # Seedance Video API
@@ -14,6 +14,7 @@ Direct Volcengine Ark Seedance 2.0 / 2.0 Fast workflows for Codex. Use the bundl
 - The user wants payload templates for text-to-video, first-frame image-to-video, multimodal reference video, or extension
 - The user wants to build longer videos from chained `4-15s` Seedance segments
 - The user wants to download `video_url` or `last_frame_url` from an existing task
+- The user needs a fixed `3:4` + `4:3` cover package immediately after video generation for multi-platform publishing
 
 ## Authentication Rules
 
@@ -44,6 +45,49 @@ $env:ARK_API_KEY = '...'
 5. Submit the task with `scripts/seedance_cli.py`.
 6. Poll until terminal status if the user needs a finished asset.
 7. Download the video or last frame promptly because result URLs expire.
+8. Treat the generated video as incomplete until the cover package is also prepared.
+9. Extract one clean key frame from the final video and build the mandatory `3:4` and `4:3` PNG cover set.
+
+## Mandatory Cover Package
+
+For this workspace, Seedance video generation does not end at `output.mp4`.
+
+Always plan for a reusable cover package after the video is finished:
+
+- `cover-vertical-3x4.png`
+- `cover-horizontal-4x3.png`
+
+Required export specs:
+
+- Vertical: `1080x1440`
+- Horizontal: `1440x1080`
+- Format: `PNG`
+
+Required source-frame rules:
+
+- The cover image must come from the generated video, not from the original reference photo.
+- Pick the clearest frame with a sharp face, natural eyes, and a non-awkward mouth shape.
+- Keep the main subject in a real office environment.
+- Prefer half-body or close-up framing.
+- Leave the bottom `30%` visually safe for title treatment.
+
+Required packaging rules:
+
+- Use a dark semi-transparent bottom band.
+- Main title centered in large white text.
+- One short subtitle line below it.
+- Visual priority is `real face + bold title`, not decorative stickers.
+
+Copy rules:
+
+- Main title: `6-10` Chinese characters
+- Subtitle: `4-8` Chinese characters
+- Must highlight `AI员工`
+- Write result, replacement, or boss-benefit language instead of generic feature copy
+
+Use `references/cover-package.md` for the full standard.
+
+If the task is mainly about producing, revising, or validating the cover package itself, also use [$platform-cover-ops](/Users/baishangjituan/.codex/skills/platform-cover-ops/SKILL.md).
 
 ## Windows PowerShell Quick Use
 
@@ -129,6 +173,7 @@ See:
 
 - `references/api-basics.md`
 - `references/workflows.md`
+- `references/cover-package.md`
 
 ## Official Constraints To Remember
 
@@ -145,3 +190,4 @@ See:
 
 - `references/api-basics.md`: endpoint, model IDs, limits, and auth reminders
 - `references/workflows.md`: practical recipes for t2v, i2v, multimodal, and extension
+- `references/cover-package.md`: fixed cover output standard for multi-platform reuse after generation
