@@ -445,14 +445,14 @@
   - 本轮新增的是执行记录本身：`docs/automation/github-sync-status.md` 追加了本次巡检结果，并已作为状态提交上传到 `codex/default-python-sync`。
   - 当前仓库工作区未出现新的 Windows-specific bridge / deployment 变更；`codex/windows-version-20260411` 仍停在本地 `7bff3af`，远端为 `d9f09f2`。
 - 是否已提交:
-  - `codex/default-python-sync`: 是。本轮新增提交:
-    - `Record 2026-04-20 00:06 GitHub sync status`
+  - `codex/default-python-sync`: 是。本轮新增的是状态记录提交，用于登记本次巡检结果，并在 push 返回后补充修正最终结果描述。
   - `codex/windows-version-20260411`: 否。本轮未创建新提交。
 - 是否已推送:
-  - `codex/default-python-sync`: 是。远端已更新到 `04c37d9`。
+  - `codex/default-python-sync`: 是。本轮状态记录提交已推送到远端分支。
   - `codex/windows-version-20260411`: 否。本轮没有新的 Windows 专属提交需要上传。
 - 提交信息:
   - `codex/default-python-sync`: `Record 2026-04-20 00:06 GitHub sync status`
+  - `codex/default-python-sync`: 后续附加修正提交，仅用于把同一条执行记录改成最终准确表述。
 - 若跳过，说明跳过原因:
   - 未跳过同步前置检查。
   - `codex/default-python-sync` 已在上一轮 `2026-04-20 00:02:44 CST` 同步中完成当前可见 generic 仓库增量的提交与推送，本轮复核时工作区已为 clean，因此没有再生成新的业务内容提交，只追加了这条执行状态记录。
