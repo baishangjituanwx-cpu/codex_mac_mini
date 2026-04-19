@@ -219,6 +219,11 @@
 ## 2026-04-17 16:48:32 CST
 - 检测到新的技能变更批次: 新增 2，修改 1，删除 0。
 
+## 2026-04-19 23:58:42 CST
+- 检测到新的技能变更批次: 新增 3，修改 3，删除 0。
+- 这批变更集中在 `/Users/baishangjituan/.codex/skills/seedance-video-api/` 的真人素材身份锁定规则、`asset://...` 示例 payload，以及覆盖交付流程的说明补强。
+- 建议后续执行 GitHub 同步，避免 Seedance 技能规范与本地文档记录继续漂移。
+
 ## 2026-04-18 00:58:46 CST
 - 检测到新的技能变更批次: 新增 29，修改 15，删除 0。
 - 这批变更集中在 `skill-center` 新增 `seedance-video-api` 与 `wechat-channels-launchagent-keepalive` 镜像、`xiaoyunque-source-video` 双文案规则升级，以及 `codex-feishu-bridge-skill` 的 Windows PowerShell 安装/运维脚本与跨平台 npm 分发补齐。
@@ -325,3 +330,102 @@
   - `codex/windows-version-20260411`: `Improve Feishu bridge deployment scripts`
 - 若跳过，说明跳过原因:
   - 无。本轮已由交互环境手动补推成功，之前自动化环境里的 `Operation not permitted` 不再阻塞当前上传任务。
+
+## 2026-04-18 19:24:42 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `~/.codex/skills/playwright/scripts/playwright_cli.sh` 的启动保护增强，补上 macOS/Homebrew Node 证书兜底、忽略可选 npm install scripts，以及 `TMPDIR` 缩短逻辑。
+- 建议后续执行 GitHub 同步，并将该脚本的最新版本镜像到 `skill-center/skills/playwright/scripts/playwright_cli.sh`，避免本地 Codex skill 与仓库快照继续漂移。
+
+## 2026-04-18 20:23:49 CST
+- 检测到新的技能变更批次: 新增 278，修改 2，删除 0。
+- 这批变更主要是本地 `.codex/skills` 新增一整套 Lark skills（267 个文件），并继续扩展 `seedance-video-api` 的封面工作流与脚本（13 个文件）；其余相关变更 0 个文件。
+- 建议后续执行 GitHub 同步，避免本地技能定义与仓库镜像继续漂移。
+
+## 2026-04-18 21:23:43 CST
+- 检测到新的技能变更批次: 新增 1，修改 2，删除 0。
+- 这批变更集中在 `skill-center/skills/seedance-video-api` 镜像，新增 `seedance_cli.sh`，并补充 `SKILL.md` / `seedance_cli.ps1` 的双平台启动说明与 Python 解析逻辑。
+- 建议后续执行 GitHub 同步，并核对仓库镜像与 live `~/.codex/skills/seedance-video-api` 是否继续保持一致，尤其是封面工作流说明仍存在差异。
+
+## 2026-04-18 22:25:00 CST
+- 检测到新的技能变更批次: 新增 16，修改 4，删除 0。
+- 这批变更集中在 `skill-center/skills/seedance-video-api` 的封面包工作流镜像补齐，包括 4 个新的 Python helper、5 个 PowerShell 包装器、2 份封面规则参考，以及对应的 bytecode 缓存；另外同步包含 `skill-center/skills/playwright/scripts/playwright_cli.sh` 的启动保护增强。
+- 建议后续执行 GitHub 同步，避免仓库内 skill mirror 与本地使用中的 Seedance / Playwright 技能继续漂移。
+
+## 2026-04-19 00:02:01 CST
+- 处理时间:
+  - `2026-04-19 00:02:01 CST`
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - 是。
+  - 当前工作区可见待同步内容包括:
+    - `docs/automation/github-sync-status.md`
+    - `docs/automation/skill-change-monitor.md`
+    - `docs/automation/windows-translation-status.md`
+    - `skill-center/skills/playwright/scripts/playwright_cli.sh`
+    - `skill-center/skills/seedance-video-api/**`
+- 是否已提交:
+  - 否。
+  - 因为同步前置检查未通过，本轮没有为任一目标分支创建新提交。
+- 是否已推送:
+  - 否。
+  - 因为同步前置检查未通过，本轮没有执行 `git push`。
+- 提交信息:
+  - 无。
+- 若跳过，说明跳过原因:
+  - 已跳过本轮 GitHub 同步。
+  - 前置检查依据: `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-04-18 22:16:43 CST`，其结论明确写明“是否达到‘Mac / Windows 版本都齐全’: 否”。
+  - 直接原因: `2026-04-18 20:23:49 CST` 对应的 23 个新增 Lark skills 镜像仍未进入仓库 `skill-center/skills/`，因此 pending change batch 还不能宣称 Mac / Windows 版本都完整。
+  - 本轮跳过的目标分支操作:
+    - `codex/default-python-sync` 未执行提交或推送。
+    - `codex/windows-version-20260411` 未执行提交或推送。
+  - 待后续满足条件后再继续按分支归类上传:
+    - generic / Mac-compatible Python takeover 与通用 skill mirror 变更 -> `codex/default-python-sync`
+    - Windows-specific bridge / deployment 变更 -> `codex/windows-version-20260411`
+
+## 2026-04-19 00:28:02 CST
+- 检测到新的技能变更批次: 新增 272，修改 4，删除 0。
+- 这批变更主要包括 19 组新落地的 Lark skills / references、live `seedance-video-api` 的 prompt-template 与 skill/agent 刷新，以及 `skill-center/skills/seedance-video-api` 的工作流镜像更新和 4 个新的 bytecode 缓存。
+- 建议后续执行 GitHub 同步，优先镜像这批 `.codex/skills/lark-*` 与 live Seedance 变更，避免本地技能目录与仓库快照继续漂移。
+
+## 2026-04-19 22:57:39 CST
+- 检测到新的技能变更批次: 新增 267，修改 1，删除 0。
+- 这批变更集中在 `skill-center/skills/` 新增 23 组 Lark skills 镜像（共 267 个文档/模板文件），以及 `skill-center/skills/playwright/scripts/playwright_cli.sh` 的跨环境启动兼容性增强。
+- 建议后续执行 GitHub 同步，避免仓库内 Lark skill mirror 与 Playwright 启动脚本继续漂移。
+
+## 2026-04-20 00:02:44 CST
+- 处理时间:
+  - `2026-04-20 00:02:44 CST`
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 同步前置检查:
+  - 通过。
+  - 依据: `docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-04-19 22:04:23 CST`，其结论明确写明“是否达到‘Mac / Windows 版本都齐全’: 是”。
+- 是否检测到新增或修改:
+  - 是。
+  - `codex/default-python-sync` 本轮仓库增量包括:
+    - `skill-center/skills/` 新增 23 组 `lark-*` skill 镜像
+    - `skill-center/skills/playwright/scripts/playwright_cli.sh` 的启动兼容性增强
+    - `docs/mempalace-remote-sync.md`
+    - `scripts/sync_remote_mempalace.sh`
+    - `README.md`
+    - `docs/automation/skill-change-monitor.md`
+    - `docs/automation/windows-translation-status.md`
+  - `codex/windows-version-20260411` 本轮未发现新的 Windows-specific bridge / deployment 仓库增量。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。本轮新增提交:
+    - `Sync 2026-04-19 skill mirrors and repo docs`
+    - `Record 2026-04-20 GitHub sync status`
+  - `codex/windows-version-20260411`: 否。本轮未创建新提交。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。本轮提交已推送到远端分支。
+  - `codex/windows-version-20260411`: 无需推送。本轮没有新的 Windows 专属提交需要上传。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync 2026-04-19 skill mirrors and repo docs`
+  - `codex/default-python-sync`: `Record 2026-04-20 GitHub sync status`
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - 跳过了 `codex/windows-version-20260411` 的新提交与推送，因为当前仓库工作区没有新的 Windows-only bridge / deployment 变更；本轮全部实际增量都属于通用 skill mirror、文档或脚本更新，已归入 `codex/default-python-sync`。
+  - `docs/automation/skill-change-monitor.md` 最新记录的 live `~/.codex/skills/seedance-video-api` 变更未在当前仓库工作区中形成对应镜像文件，因此本轮未额外生成不在仓库内的同步提交。
