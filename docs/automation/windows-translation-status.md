@@ -368,3 +368,151 @@
   - 本机仍未发现 `pwsh` 或 `powershell` 可用于本地语法解析，因此本轮没有做 Windows PowerShell 实机运行；Windows 判断基于仓库脚本、路径策略和 Python 静态校验。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。基于 `2026-04-17` 当前已记录的 skill-change-monitor 批次，Mac 与 Windows 覆盖已补齐；今天新增的 skill 行为已经在仓库中具备 Windows 可用入口或明确的跨平台结论。
+
+## 2026-04-18 22:16:43 CST
+
+- 处理时间:
+  - `2026-04-18 22:16:43 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自上次 Windows 转译状态登记后追加的非零批次:
+    - `2026-04-17 22:55:23 CST`
+    - `2026-04-18 00:58:46 CST`
+    - `2026-04-18 01:59:57 CST`
+    - `2026-04-18 03:01:56 CST`
+    - `2026-04-18 19:24:42 CST`
+    - `2026-04-18 20:23:49 CST`
+    - `2026-04-18 21:23:43 CST`
+  - 其中这次实际需要补 Windows 侧仓库资产或说明的批次为:
+    - `2026-04-18 19:24:42 CST`
+    - `2026-04-18 20:23:49 CST`
+    - `2026-04-18 21:23:43 CST`
+  - `2026-04-17 22:55:23 CST`、`2026-04-18 00:58:46 CST`、`2026-04-18 01:59:57 CST`、`2026-04-18 03:01:56 CST` 中涉及的 Feishu bridge / WeChat keepalive / Seedance 初始镜像变更，经复核其 Windows 入口已在仓库中存在或已被今天更新覆盖，本轮未再单独补新文件。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/seedance-video-api`:
+    - 补齐 Seedance 新增的“生成后封面包”工作流仓库资产:
+      - `references/cover-package.md`
+      - `references/cover-execution.md`
+      - `scripts/init_cover_package.py`
+      - `scripts/extract_cover_candidates.py`
+      - `scripts/render_cover_package.py`
+      - `scripts/build_cover_package.py`
+    - 新增 Windows PowerShell 启动器:
+      - `scripts/invoke_seedance_script.ps1`
+      - `scripts/init_cover_package.ps1`
+      - `scripts/extract_cover_candidates.ps1`
+      - `scripts/render_cover_package.ps1`
+      - `scripts/build_cover_package.ps1`
+    - 更新既有 Windows 入口与文档:
+      - `scripts/seedance_cli.ps1` 改为复用共享 Python 解析器，和新 helper 脚本保持同一查找顺序
+      - `SKILL.md` 补入“视频生成后必须继续产出 3:4 / 4:3 PNG 封面包”的要求
+      - `SKILL.md` 补入 Windows PowerShell 封面包命令示例、Windows 路径规则与字体说明
+      - `references/workflows.md` 补入 post-generation cover step 与 `build_cover_package.py` / `render_cover_package.py` 使用流程
+    - Windows 适配结论:
+      - `init_cover_package.py` / `extract_cover_candidates.py` / `build_cover_package.py` 本体仍是 cross-platform，无需代码分叉
+      - `render_cover_package.py` 已补成 Windows 可用：默认可自动探测 `C:/Windows/Fonts/msyh.ttc`、`msyhbd.ttc`、`simhei.ttf`、`simsun.ttc` 等常见中文字体；保留 macOS 字体回退，不删除原有实现
+  - `skill-center/skills/playwright`:
+    - 同步 `scripts/playwright_cli.sh` 的最新上游保护逻辑:
+      - Homebrew Node 证书链兜底 `NODE_EXTRA_CA_CERTS`
+      - 缺省 `NPM_CONFIG_IGNORE_SCRIPTS=true`
+      - `TMPDIR` 过长时切到 `/tmp/pwcli`
+    - 结论:
+      - 这是 Unix 启动包装器更新，不需要新增 Windows 专属脚本；当前仓库没有新增的 Windows gap。
+  - 复核结论:
+    - `2026-04-17 22:55:23 CST` 到 `2026-04-18 03:01:56 CST` 涉及的 `skills/codex-feishu-bridge-skill`、`skill-center/skills/wechat-channels-launchagent-keepalive`、`skill-center/skills/seedance-video-api` 初始镜像文件，Windows 侧入口已在仓库内，不需要重复补写。
+- 未完成的补全:
+  - `2026-04-18 20:23:49 CST` 的 Lark skills 大批新增仍未镜像进仓库 `skill-center/skills/`:
+    - `lark-approval`
+    - `lark-attendance`
+    - `lark-base`
+    - `lark-calendar`
+    - `lark-contact`
+    - `lark-doc`
+    - `lark-drive`
+    - `lark-event`
+    - `lark-im`
+    - `lark-mail`
+    - `lark-minutes`
+    - `lark-okr`
+    - `lark-openapi-explorer`
+    - `lark-shared`
+    - `lark-sheets`
+    - `lark-skill-maker`
+    - `lark-slides`
+    - `lark-task`
+    - `lark-vc`
+    - `lark-whiteboard`
+    - `lark-wiki`
+    - `lark-workflow-meeting-summary`
+    - `lark-workflow-standup-report`
+  - 上述缺口当前判断为“仓库镜像未同步”，不是新增的 Windows 专属脚本 / 路径 / 快捷键问题；今天这轮未批量同步这 23 个 skill 目录。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 但本轮明确保留一个范围外缺口:
+    - `skill-center` 对 20:23 Lark skill 批次的整体镜像同步未在本自动化中完成，因此今天不能宣称仓库层面的 Mac / Windows 覆盖都完全追平。
+  - 已执行静态校验:
+    - `python3 -m py_compile skill-center/skills/seedance-video-api/scripts/build_cover_package.py skill-center/skills/seedance-video-api/scripts/init_cover_package.py skill-center/skills/seedance-video-api/scripts/extract_cover_candidates.py skill-center/skills/seedance-video-api/scripts/render_cover_package.py skill-center/skills/seedance-video-api/scripts/seedance_cli.py`
+    - `bash -n skill-center/skills/playwright/scripts/playwright_cli.sh`
+  - 本机未发现 `pwsh` 或 `powershell`，因此未做 PowerShell 语法解析或 Windows 实机回归；Windows 判断基于仓库脚本、路径策略与 Python / Bash 静态校验。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 否。
+  - `seedance-video-api` 与 `playwright` 的本轮 Windows 补全已完成，但 `2026-04-18 20:23:49 CST` 的 23 个新增 Lark skill 镜像仍未进入仓库，所以今天的仓库级 Mac / Windows 覆盖还没有全部齐平。
+
+## 2026-04-19 22:04:23 CST
+
+- 处理时间:
+  - `2026-04-19 22:04:23 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自上次 Windows 转译状态登记后追加的非零批次:
+    - `2026-04-19 00:28:02 CST`
+  - `2026-04-18 23:25:56 CST` 与 `2026-04-19 02:28:39 CST` 至 `2026-04-19 21:55:59 CST` 的后续批次结果均为 `新增 0，修改 0，删除 0`，无额外待转译项。
+- 已完成的 Windows 补全:
+  - `skill-center/skills`:
+    - 将此前缺失、导致仓库镜像不完整的 23 个新增 `lark-*` skill 目录完整镜像进仓库：
+      - `skill-center/skills/lark-approval`
+      - `skill-center/skills/lark-attendance`
+      - `skill-center/skills/lark-base`
+      - `skill-center/skills/lark-calendar`
+      - `skill-center/skills/lark-contact`
+      - `skill-center/skills/lark-doc`
+      - `skill-center/skills/lark-drive`
+      - `skill-center/skills/lark-event`
+      - `skill-center/skills/lark-im`
+      - `skill-center/skills/lark-mail`
+      - `skill-center/skills/lark-minutes`
+      - `skill-center/skills/lark-okr`
+      - `skill-center/skills/lark-openapi-explorer`
+      - `skill-center/skills/lark-shared`
+      - `skill-center/skills/lark-sheets`
+      - `skill-center/skills/lark-skill-maker`
+      - `skill-center/skills/lark-slides`
+      - `skill-center/skills/lark-task`
+      - `skill-center/skills/lark-vc`
+      - `skill-center/skills/lark-whiteboard`
+      - `skill-center/skills/lark-wiki`
+      - `skill-center/skills/lark-workflow-meeting-summary`
+      - `skill-center/skills/lark-workflow-standup-report`
+    - 这些技能本轮新增内容均为 `lark-cli` 指令说明、参考文档和白板 DSL / 场景资产；复核后未发现需要额外补写的 Windows 专属 PowerShell 启动器、路径分支、快捷键差异处理或命令包装器。
+    - 逐目录校验后，仓库镜像与 `~/.codex/skills` 的文件清单一致，23/23 个目录均匹配。
+  - `skill-center/skills/seedance-video-api`:
+    - 复核 `2026-04-19 00:28:02 CST` 同批次的镜像修改，确认仓库中已包含：
+      - `scripts/seedance_cli.ps1`
+      - `scripts/seedance_cli.sh`
+      - `scripts/build_cover_package.ps1`
+      - `scripts/extract_cover_candidates.ps1`
+      - `scripts/init_cover_package.ps1`
+      - `scripts/render_cover_package.ps1`
+      - `references/cover-package.md`
+      - `references/cover-execution.md`
+      - 更新后的 `SKILL.md` 与 `references/workflows.md`
+    - 结论：Seedance 本轮不需要追加新的 Windows 补丁文件；已有 PowerShell 入口和 Windows 路径说明已覆盖最新 workflow。
+- 未完成的补全:
+  - 无。
+  - `2026-04-19` 当前已记录批次中，未再发现新的 Windows 专属缺口或未镜像的自定义 skill 目录。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未执行 Windows PowerShell 实机回归；验证基于仓库镜像一致性核对：
+    - `skill-center/skills` 与 `~/.codex/skills` 的 23 个 `lark-*` 目录逐一比对，文件数与相对路径均一致。
+    - `skill-change-monitor.md` 复核确认 `2026-04-19 00:28:02 CST` 之后均为零变更批次。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-04-19 22:04:23 CST`，今天 monitor 中新增或修改的自定义 skill 行为已在仓库中补齐；Mac 与 Windows 覆盖今日均完整。

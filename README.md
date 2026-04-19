@@ -59,8 +59,11 @@ Set-Location automation/python-platform-takeover
   - 接管现有标签页执行手册
   - 最近成功流程时间线
   - GitHub 上传前检查表
+  - 远端 MemPalace 增量同步说明
 - `scripts/init_campaign.js`
   - 一键初始化新 campaign 的内容包和日志骨架
+- `scripts/sync_remote_mempalace.sh`
+  - 把当前仓库增量同步到远端 MemPalace 中心主机
 
 ## 当前实现方式
 

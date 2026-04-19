@@ -259,6 +259,36 @@
 ### 变更摘要
 - 以 `2026-04-16T10:25:10.298Z` 为基线扫描四个目录后，未发现新的技能文件、技能支撑自动化文件，或新的删除记录。
 
+## 2026-04-19 23:58:42 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T14:54:59.255Z`
+- 结果汇总: 新增 3，修改 3，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0.json` | `added` | Added a Seedance 2.0 asset-reference example payload that locks a real person's identity and points the workflow at an `asset://...` reference image.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0_fast.json` | `added` | Added the matching Seedance 2.0 Fast asset-reference example payload for the same real-person identity-lock workflow.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/real-person-consistency.md` | `added` | Added a dedicated reference guide for writing Seedance prompts that preserve a real person's identity, silhouette, clothing, and recognizability.
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/SKILL.md` | `modified` | Expanded the skill instructions around Seedance 2.0 / 2.0 Fast, added explicit real-person identity-preservation rules, and linked the new asset-reference payloads and cover-package workflow.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/prompt-template.md` | `modified` | Tightened the default 15-second prompt-package template with stronger real-person locking language, structured output order, and cover-copy requirements.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/workflows.md` | `modified` | Added an `asset://...` real-person reference recipe and updated the workflow guidance so post-generation cover packaging stays part of the standard delivery flow.
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 本轮只发现 `seedance-video-api` 技能有新的实质性变更，集中在真人素材身份锁定提示词、`asset://...` 参考图 payload 模板，以及视频生成后的封面包交付规范。
+- 同批次还出现了 `scripts/__pycache__/*.pyc` 更新时间，但这些是运行时生成缓存，不计入正式技能源文件变更清单。
+- 其余三个监控根目录在本次基线之后没有新的技能相关新增、修改或删除记录。
+
 ## 2026-04-18 05:03:59 CST
 - 扫描范围:
 - `/Users/baishangjituan/.codex/skills`
@@ -279,6 +309,179 @@
 
 ### 新增 `.py` 文件
 - 无。
+
+## 2026-04-19 05:31:46 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T20:29:42.064Z`（本地时区为 `2026-04-19 04:29:42 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19 04:29:42 CST` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime`、新增文件或删除记录。
+- 当前仓库技能相关路径仍存在 `skill-center/skills/playwright/scripts/playwright_cli.sh` 的未提交差异，但该文件 `mtime` 为 `2026-04-18 22:12:09 CST`，且已在 `2026-04-18 22:25:00 CST` 变更批次中记录，本轮不重复计入。
+- 仓库内技能相关路径的 `git ls-files --deleted` 结果为空，本轮没有新的删除文件可记录。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-19 11:40:44 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T02:37:43.478Z`（本地时区为 `2026-04-19 10:37:43 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19 10:37:43 CST` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行，也未发现新增文件或新的删除记录。
+- 仓库内技能相关路径的 `git status` 仍只显示既有未提交差异 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh`；该文件 `mtime` 为 `2026-04-18 22:12:09 CST`，早于本轮基线，且已在 `2026-04-18 22:25:00 CST` 变更批次中记录，因此本轮不重复计入。
+- 当前仓库技能相关路径未发现新的删除项，因此 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮无需追加新的待同步说明。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-19 01:27:13 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T16:25:10.925Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-18T16:25:10.925Z` 为基线扫描四个目录后，未发现新的 skill 文件、skill-center 镜像更新，或与自定义技能相关的自动化文件增量。
+- 删除项检查结果: 仓库内 `skills`、`skill-center`、`automation` 路径的 `git log --since` 与工作区状态均未出现新的删除记录；`~/.codex/skills` 目录本轮也未发现新的文件时间戳变化。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-19 06:33:36 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T21:30:42.278Z`（本地时区为 `2026-04-19 05:30:42 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19 05:30:42 CST` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行，也没有新的新增或删除记录。
+- 当前工作区仍可见 `skill-center/skills/playwright/scripts/playwright_cli.sh` 的未提交差异，但该文件 `mtime` 为 `2026-04-18 22:12:09 CST`，且已在 `2026-04-18 22:25:00 CST` 的变更批次中记录，本轮不重复计入。
+- 仓库内技能相关路径的 `git status` 未出现新的删除项，因此 `docs/automation/github-sync-status.md` 本轮无需追加新的待同步说明。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-19 04:30:26 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T19:28:11.808Z`（本地时区为 `2026-04-19 03:28:11 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19 03:28:11 CST` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行，也未识别到新的新增或删除文件。
+- 当前仓库技能相关路径仍只有既有未提交差异 `skill-center/skills/playwright/scripts/playwright_cli.sh`，但该文件 `mtime` 仍早于本轮基线，且已在 `2026-04-18 22:25:00 CST` 批次记录，本轮不重复计入。
+- 仓库内技能相关路径的 `git status` 未出现新的删除项；`.codex/skills` 本轮也没有发现可归因于技能或支撑自动化的新删改痕迹。
+
+### 新增 `.py` 文件
+- 无。
+
+
+
+## 2026-04-18 22:25:00 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T13:21:40.332Z`
+- 结果汇总: 新增 16，修改 4，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/cover-execution.md` | `added` | Added the execution scaffold for the post-generation cover workflow, including staged and one-command usage for brief creation, candidate extraction, and final PNG rendering.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/cover-package.md` | `added` | Added the fixed multi-platform cover standard covering required `3:4` / `4:3` PNG outputs, source-frame rules, layout rules, and title-copy constraints.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/build_cover_package.ps1` | `added` | Added the Windows wrapper that dispatches the full cover-package pipeline through the shared PowerShell launcher.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/build_cover_package.py` | `added` | Added the end-to-end helper that runs brief initialization, candidate-frame extraction, and final cover rendering in one command.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/extract_cover_candidates.ps1` | `added` | Added the Windows wrapper for the candidate-frame extraction helper.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/extract_cover_candidates.py` | `added` | Added the ffmpeg/ffprobe helper that extracts timestamped still frames, writes `cover-candidates.json`, and builds a contact sheet for cover selection.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/init_cover_package.ps1` | `added` | Added the Windows wrapper for the cover-brief and manifest initialization helper.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/init_cover_package.py` | `added` | Added the helper that creates `cover-brief.md` and `cover-manifest.json`, validates title lengths, and locks the required output filenames and layout rules.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/invoke_seedance_script.ps1` | `added` | Added the shared PowerShell launcher that resolves a usable Python 3.10+ runtime from `.venv`, active virtualenv, `py -3`, `python`, `python3`, or `uv` before dispatching Seedance helper scripts.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/render_cover_package.ps1` | `added` | Added the Windows wrapper for final cover rendering.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/render_cover_package.py` | `added` | Added the Pillow-based renderer that chooses a candidate frame or explicit image, auto-detects Chinese fonts, and exports final `cover-vertical-3x4.png` and `cover-horizontal-4x3.png`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/__pycache__/build_cover_package.cpython-314.pyc` | `added` | Added generated Python bytecode cache for `build_cover_package.py`; this is a derived artifact, not the source of truth.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/__pycache__/extract_cover_candidates.cpython-314.pyc` | `added` | Added generated Python bytecode cache for `extract_cover_candidates.py`; this is a derived artifact, not the source of truth.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/__pycache__/init_cover_package.cpython-314.pyc` | `added` | Added generated Python bytecode cache for `init_cover_package.py`; this is a derived artifact, not the source of truth.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/__pycache__/render_cover_package.cpython-314.pyc` | `added` | Added generated Python bytecode cache for `render_cover_package.py`; this is a derived artifact, not the source of truth.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/__pycache__/seedance_cli.cpython-314.pyc` | `added` | Added generated Python bytecode cache for `seedance_cli.py`; this is a derived artifact, not the source of truth.
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh` | `modified` | Hardened the Playwright launcher for macOS/Homebrew environments by auto-reusing a readable CA bundle, exporting `NPM_CONFIG_IGNORE_SCRIPTS=true`, and shortening `TMPDIR` to avoid Unix-socket path limits.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/SKILL.md` | `modified` | Expanded the mirrored skill definition to make the post-generation cover package mandatory, document cover rules, and add the new Python and PowerShell helper commands.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/workflows.md` | `modified` | Extended the workflow guide so a publishing-ready deliverable now includes video plus cover package, with staged helper-script steps and a one-command build path.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.ps1` | `modified` | Refactored the Windows Seedance launcher to reuse the new shared PowerShell runtime-resolver helper instead of carrying its own embedded Python-selection logic.
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/build_cover_package.py` | 用途: Runs the full post-video cover-package pipeline end to end. | 关联 skill: `seedance-video-api` | 形态: cross-platform。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/extract_cover_candidates.py` | 用途: Extracts candidate frames, timestamps, and a contact sheet from the finished video. | 关联 skill: `seedance-video-api` | 形态: cross-platform。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/init_cover_package.py` | 用途: Creates the cover brief and manifest with required deliverables and title checks. | 关联 skill: `seedance-video-api` | 形态: cross-platform。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/render_cover_package.py` | 用途: Renders final `3:4` and `4:3` PNG covers from a selected still frame using Pillow and auto-detected fonts. | 关联 skill: `seedance-video-api` | 形态: cross-platform with platform-specific font autodetection。
 
 ### 变更摘要
 - 按 `2026-04-18 04:01:12 CST` 重新换算上次运行时间后扫描四个目录，未发现新的技能文件、技能支撑自动化文件，或新的删除记录。
@@ -5961,3 +6164,1575 @@
 - 仓库侧执行 `git ls-files --deleted -- skills skill-center automation` 未返回结果，因此本轮没有可确认的已跟踪删除项。
 - 当前工作区里仍有更早批次已经记录过的 `skills/codex-feishu-bridge-skill/**` 未提交变更，但这些文件的磁盘时间戳均早于本轮基线，因此不重复计入。
 - 因为没有新的技能变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-04-18 12:11:51 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T03:08:44.220Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-18T03:08:44.220Z` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行。
+- 仓库侧执行 `git status --short -- skills skill-center automation` 未返回结果，因此本轮没有新的已跟踪增删改，也没有可确认的删除项。
+- 四个监控根目录的文件总量与上一轮预期一致，本轮候选文件列表为空，说明没有新的技能或配套自动化变更批次可记录。
+- 因为没有新的技能变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-04-18 13:13:43 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T04:10:44.435Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-18T04:10:44.435Z` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行。
+- 自动化目录中的上一轮快照与当前文件集合一致，前后均为 `5515` 个文件，因此没有新增或删除项。
+- 仓库侧执行 `git status --short -- skills skill-center automation` 未返回结果，因此本轮没有新的已跟踪增删改，也没有可确认的仓库内删除项。
+- 因为没有新的技能变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-04-18 14:14:00 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T05:12:44.720Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-18T05:12:44.720Z` 为基线扫描四个目录后，未发现新的技能文件、技能支撑自动化文件，或仓库内可见的技能相关删除记录。
+
+## 2026-04-18 15:15:13 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T06:13:14.985Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-18T06:13:14.985Z` 为基线扫描四个目录后，未发现新的技能文件、技能支撑自动化文件，或可识别的删除记录。
+
+## 2026-04-18 16:17:27 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T07:14:17.706Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-18T07:14:17.706Z` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行。
+- 仓库侧执行 `git status --short --untracked-files=all -- skills skill-center automation` 仅显示已存在的文档改动，未出现新的技能目录增删改记录。
+- 仓库侧执行 `git ls-files --deleted -- skills skill-center automation` 未返回结果，因此本轮没有可确认的已跟踪删除项。
+- 因为没有新的技能变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-04-18 17:17:25 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T08:16:39.475Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-18T08:16:39.475Z` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行，因此没有可记录的新增或修改文件。
+- 仓库侧执行 `git status --short --untracked-files=all -- skills skill-center automation` 未返回结果，说明仓库内受监控技能目录没有新的已跟踪或未跟踪变更。
+- 仓库侧执行 `git ls-files --deleted -- skills skill-center automation` 未返回结果；当前四个监控根目录文件总量仍为 `5515`，因此本轮没有可确认的删除项。
+- 因为没有新的技能变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-04-18 18:19:02 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T09:17:09.609Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-18T09:17:09.609Z` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行。
+- 仓库侧执行 `git status --short --untracked-files=all -- skills skill-center automation` 与 `git ls-files --deleted -- skills skill-center automation` 均未返回结果，因此仓库内没有新的技能相关增删改记录。
+- 自动化缓存中的本轮快照同样未识别出新的技能变更批次；额外看到的 `.venv/bin/python*` 差异是虚拟环境符号链接口径问题，不属于本次需要记录的技能源码或技能支撑自动化变更。
+- 因为没有新的技能变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-04-18 19:24:42 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T10:18:09.798Z`
+- 结果汇总: 新增 0，修改 1，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/playwright/scripts/playwright_cli.sh` | `modified` | 为 `playwright` skill 的 CLI 启动包装脚本补充 macOS/Homebrew Node 证书兜底，默认设置 `NPM_CONFIG_IGNORE_SCRIPTS=true` 避免可选原生依赖安装卡住，并在 `TMPDIR` 过长时切到 `/tmp/pwcli` 以规避 Unix socket 路径过长。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-18T10:18:09.798Z` 为基线扫描四个监控根目录后，只发现 `~/.codex/skills/playwright/scripts/playwright_cli.sh` 在本时间窗口内发生真实内容变更；快照哈希从 `817ad212443ad89a54f1007932420dd7c5e0c6cb` 变为 `0ff25db93f3894ace744f695efec58f2481e1b83`。
+- 与仓库镜像 `skill-center/skills/playwright/scripts/playwright_cli.sh` 对比后，确认这次修改尚未同步进 `skill-center`，当前漂移点集中在证书链兼容、npm 安装脚本抑制和临时目录缩短三处启动保护。
+- 仓库侧执行 `git ls-files --deleted -- skills skill-center automation` 未返回结果；结合上次快照路径集合对比，当前没有新的技能相关删除文件。
+- 本轮没有新的 `.py` 文件出现，因此无需追加 Python helper 清单；`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 已同步追加待后续 GitHub 同步提示。
+
+## 2026-04-18 20:23:49 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T11:20:10.019Z`
+- 结果汇总: 新增 278，修改 2，删除 0。
+- 变更摘要: 这批变更主要是本地 `.codex/skills` 新增一整套 Lark skills（267 个文件），并继续扩展 `seedance-video-api` 的封面工作流与脚本（13 个文件）；其余相关变更 0 个文件。
+
+### 新增文件
+- `/Users/baishangjituan/.codex/skills/lark-approval/SKILL.md` | `added` | Added the core skill definition for `lark-approval`.
+- `/Users/baishangjituan/.codex/skills/lark-attendance/SKILL.md` | `added` | Added the core skill definition for `lark-attendance`.
+- `/Users/baishangjituan/.codex/skills/lark-base/SKILL.md` | `added` | Added the core skill definition for `lark-base`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/dashboard-block-data-config.md` | `added` | Added the `lark-base` reference note for dashboard block data config.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/examples.md` | `added` | Added the `lark-base` reference note for examples.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/formula-field-guide.md` | `added` | Added the `lark-base` reference note for formula field guide.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-advperm-disable.md` | `added` | Added the `lark-base` reference note for lark base advperm disable.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-advperm-enable.md` | `added` | Added the `lark-base` reference note for lark base advperm enable.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-base-copy.md` | `added` | Added the `lark-base` reference note for lark base base copy.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-base-create.md` | `added` | Added the `lark-base` reference note for lark base base create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-base-get.md` | `added` | Added the `lark-base` reference note for lark base base get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-arrange.md` | `added` | Added the `lark-base` reference note for lark base dashboard arrange.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-create.md` | `added` | Added the `lark-base` reference note for lark base dashboard block create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-delete.md` | `added` | Added the `lark-base` reference note for lark base dashboard block delete.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-get.md` | `added` | Added the `lark-base` reference note for lark base dashboard block get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-list.md` | `added` | Added the `lark-base` reference note for lark base dashboard block list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-update.md` | `added` | Added the `lark-base` reference note for lark base dashboard block update.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-create.md` | `added` | Added the `lark-base` reference note for lark base dashboard create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-delete.md` | `added` | Added the `lark-base` reference note for lark base dashboard delete.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-get.md` | `added` | Added the `lark-base` reference note for lark base dashboard get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-list.md` | `added` | Added the `lark-base` reference note for lark base dashboard list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-update.md` | `added` | Added the `lark-base` reference note for lark base dashboard update.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard.md` | `added` | Added the `lark-base` reference note for lark base dashboard.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-data-query.md` | `added` | Added the `lark-base` reference note for lark base data query.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-create.md` | `added` | Added the `lark-base` reference note for lark base field create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-delete.md` | `added` | Added the `lark-base` reference note for lark base field delete.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-get.md` | `added` | Added the `lark-base` reference note for lark base field get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-list.md` | `added` | Added the `lark-base` reference note for lark base field list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-search-options.md` | `added` | Added the `lark-base` reference note for lark base field search options.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-update.md` | `added` | Added the `lark-base` reference note for lark base field update.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field.md` | `added` | Added the `lark-base` reference note for lark base field.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-create.md` | `added` | Added the `lark-base` reference note for lark base form create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-delete.md` | `added` | Added the `lark-base` reference note for lark base form delete.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-get.md` | `added` | Added the `lark-base` reference note for lark base form get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-list.md` | `added` | Added the `lark-base` reference note for lark base form list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-create.md` | `added` | Added the `lark-base` reference note for lark base form questions create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-delete.md` | `added` | Added the `lark-base` reference note for lark base form questions delete.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-list.md` | `added` | Added the `lark-base` reference note for lark base form questions list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-update.md` | `added` | Added the `lark-base` reference note for lark base form questions update.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions.md` | `added` | Added the `lark-base` reference note for lark base form questions.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-update.md` | `added` | Added the `lark-base` reference note for lark base form update.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form.md` | `added` | Added the `lark-base` reference note for lark base form.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-history.md` | `added` | Added the `lark-base` reference note for lark base history.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-batch-create.md` | `added` | Added the `lark-base` reference note for lark base record batch create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-batch-update.md` | `added` | Added the `lark-base` reference note for lark base record batch update.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-delete.md` | `added` | Added the `lark-base` reference note for lark base record delete.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-get.md` | `added` | Added the `lark-base` reference note for lark base record get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-history-list.md` | `added` | Added the `lark-base` reference note for lark base record history list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-list.md` | `added` | Added the `lark-base` reference note for lark base record list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-search.md` | `added` | Added the `lark-base` reference note for lark base record search.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-upload-attachment.md` | `added` | Added the `lark-base` reference note for lark base record upload attachment.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-upsert.md` | `added` | Added the `lark-base` reference note for lark base record upsert.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record.md` | `added` | Added the `lark-base` reference note for lark base record.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-create.md` | `added` | Added the `lark-base` reference note for lark base role create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-delete.md` | `added` | Added the `lark-base` reference note for lark base role delete.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-get.md` | `added` | Added the `lark-base` reference note for lark base role get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-list.md` | `added` | Added the `lark-base` reference note for lark base role list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-update.md` | `added` | Added the `lark-base` reference note for lark base role update.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-shortcut-field-properties.md` | `added` | Added the `lark-base` reference note for lark base shortcut field properties.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-shortcut-record-value.md` | `added` | Added the `lark-base` reference note for lark base shortcut record value.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-create.md` | `added` | Added the `lark-base` reference note for lark base table create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-delete.md` | `added` | Added the `lark-base` reference note for lark base table delete.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-get.md` | `added` | Added the `lark-base` reference note for lark base table get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-list.md` | `added` | Added the `lark-base` reference note for lark base table list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-update.md` | `added` | Added the `lark-base` reference note for lark base table update.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table.md` | `added` | Added the `lark-base` reference note for lark base table.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-create.md` | `added` | Added the `lark-base` reference note for lark base view create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-delete.md` | `added` | Added the `lark-base` reference note for lark base view delete.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-card.md` | `added` | Added the `lark-base` reference note for lark base view get card.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-filter.md` | `added` | Added the `lark-base` reference note for lark base view get filter.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-group.md` | `added` | Added the `lark-base` reference note for lark base view get group.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-sort.md` | `added` | Added the `lark-base` reference note for lark base view get sort.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-timebar.md` | `added` | Added the `lark-base` reference note for lark base view get timebar.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-visible-fields.md` | `added` | Added the `lark-base` reference note for lark base view get visible fields.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get.md` | `added` | Added the `lark-base` reference note for lark base view get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-list.md` | `added` | Added the `lark-base` reference note for lark base view list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-rename.md` | `added` | Added the `lark-base` reference note for lark base view rename.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-card.md` | `added` | Added the `lark-base` reference note for lark base view set card.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-filter.md` | `added` | Added the `lark-base` reference note for lark base view set filter.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-group.md` | `added` | Added the `lark-base` reference note for lark base view set group.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-sort.md` | `added` | Added the `lark-base` reference note for lark base view set sort.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-timebar.md` | `added` | Added the `lark-base` reference note for lark base view set timebar.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-visible-fields.md` | `added` | Added the `lark-base` reference note for lark base view set visible fields.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view.md` | `added` | Added the `lark-base` reference note for lark base view.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-create.md` | `added` | Added the `lark-base` reference note for lark base workflow create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-disable.md` | `added` | Added the `lark-base` reference note for lark base workflow disable.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-enable.md` | `added` | Added the `lark-base` reference note for lark base workflow enable.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-get.md` | `added` | Added the `lark-base` reference note for lark base workflow get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-guide.md` | `added` | Added the `lark-base` reference note for lark base workflow guide.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-list.md` | `added` | Added the `lark-base` reference note for lark base workflow list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-schema.md` | `added` | Added the `lark-base` reference note for lark base workflow schema.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-update.md` | `added` | Added the `lark-base` reference note for lark base workflow update.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow.md` | `added` | Added the `lark-base` reference note for lark base workflow.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workspace.md` | `added` | Added the `lark-base` reference note for lark base workspace.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lookup-field-guide.md` | `added` | Added the `lark-base` reference note for lookup field guide.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/role-config.md` | `added` | Added the `lark-base` reference note for role config.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/SKILL.md` | `added` | Added the core skill definition for `lark-calendar`.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-agenda.md` | `added` | Added the `lark-calendar` reference note for lark calendar agenda.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-create.md` | `added` | Added the `lark-calendar` reference note for lark calendar create.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-freebusy.md` | `added` | Added the `lark-calendar` reference note for lark calendar freebusy.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-room-find.md` | `added` | Added the `lark-calendar` reference note for lark calendar room find.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-rsvp.md` | `added` | Added the `lark-calendar` reference note for lark calendar rsvp.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-schedule-meeting.md` | `added` | Added the `lark-calendar` reference note for lark calendar schedule meeting.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-suggestion.md` | `added` | Added the `lark-calendar` reference note for lark calendar suggestion.
+- `/Users/baishangjituan/.codex/skills/lark-contact/SKILL.md` | `added` | Added the core skill definition for `lark-contact`.
+- `/Users/baishangjituan/.codex/skills/lark-contact/references/lark-contact-get-user.md` | `added` | Added the `lark-contact` reference note for lark contact get user.
+- `/Users/baishangjituan/.codex/skills/lark-contact/references/lark-contact-search-user.md` | `added` | Added the `lark-contact` reference note for lark contact search user.
+- `/Users/baishangjituan/.codex/skills/lark-doc/SKILL.md` | `added` | Added the core skill definition for `lark-doc`.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-create.md` | `added` | Added the `lark-doc` reference note for lark doc create.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-fetch.md` | `added` | Added the `lark-doc` reference note for lark doc fetch.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-media-download.md` | `added` | Added the `lark-doc` reference note for lark doc media download.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-media-insert.md` | `added` | Added the `lark-doc` reference note for lark doc media insert.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-media-preview.md` | `added` | Added the `lark-doc` reference note for lark doc media preview.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-search.md` | `added` | Added the `lark-doc` reference note for lark doc search.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-update.md` | `added` | Added the `lark-doc` reference note for lark doc update.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-whiteboard.md` | `added` | Added the `lark-doc` reference note for lark doc whiteboard.
+- `/Users/baishangjituan/.codex/skills/lark-drive/SKILL.md` | `added` | Added the core skill definition for `lark-drive`.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-add-comment.md` | `added` | Added the `lark-drive` reference note for lark drive add comment.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-create-folder.md` | `added` | Added the `lark-drive` reference note for lark drive create folder.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-create-shortcut.md` | `added` | Added the `lark-drive` reference note for lark drive create shortcut.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-delete.md` | `added` | Added the `lark-drive` reference note for lark drive delete.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-download.md` | `added` | Added the `lark-drive` reference note for lark drive download.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-export-download.md` | `added` | Added the `lark-drive` reference note for lark drive export download.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-export.md` | `added` | Added the `lark-drive` reference note for lark drive export.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-import.md` | `added` | Added the `lark-drive` reference note for lark drive import.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-move.md` | `added` | Added the `lark-drive` reference note for lark drive move.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-reactions.md` | `added` | Added the `lark-drive` reference note for lark drive reactions.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-task-result.md` | `added` | Added the `lark-drive` reference note for lark drive task result.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-upload.md` | `added` | Added the `lark-drive` reference note for lark drive upload.
+- `/Users/baishangjituan/.codex/skills/lark-event/SKILL.md` | `added` | Added the core skill definition for `lark-event`.
+- `/Users/baishangjituan/.codex/skills/lark-event/references/lark-event-subscribe.md` | `added` | Added the `lark-event` reference note for lark event subscribe.
+- `/Users/baishangjituan/.codex/skills/lark-im/SKILL.md` | `added` | Added the core skill definition for `lark-im`.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-create.md` | `added` | Added the `lark-im` reference note for lark im chat create.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-identity.md` | `added` | Added the `lark-im` reference note for lark im chat identity.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-messages-list.md` | `added` | Added the `lark-im` reference note for lark im chat messages list.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-search.md` | `added` | Added the `lark-im` reference note for lark im chat search.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-update.md` | `added` | Added the `lark-im` reference note for lark im chat update.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-mget.md` | `added` | Added the `lark-im` reference note for lark im messages mget.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-reply.md` | `added` | Added the `lark-im` reference note for lark im messages reply.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-resources-download.md` | `added` | Added the `lark-im` reference note for lark im messages resources download.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-search.md` | `added` | Added the `lark-im` reference note for lark im messages search.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-send.md` | `added` | Added the `lark-im` reference note for lark im messages send.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-reactions.md` | `added` | Added the `lark-im` reference note for lark im reactions.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-threads-messages-list.md` | `added` | Added the `lark-im` reference note for lark im threads messages list.
+- `/Users/baishangjituan/.codex/skills/lark-mail/SKILL.md` | `added` | Added the core skill definition for `lark-mail`.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-draft-create.md` | `added` | Added the `lark-mail` reference note for lark mail draft create.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-draft-edit.md` | `added` | Added the `lark-mail` reference note for lark mail draft edit.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-forward.md` | `added` | Added the `lark-mail` reference note for lark mail forward.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-message.md` | `added` | Added the `lark-mail` reference note for lark mail message.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-messages.md` | `added` | Added the `lark-mail` reference note for lark mail messages.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-reply-all.md` | `added` | Added the `lark-mail` reference note for lark mail reply all.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-reply.md` | `added` | Added the `lark-mail` reference note for lark mail reply.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-send.md` | `added` | Added the `lark-mail` reference note for lark mail send.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-signature.md` | `added` | Added the `lark-mail` reference note for lark mail signature.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-thread.md` | `added` | Added the `lark-mail` reference note for lark mail thread.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-triage.md` | `added` | Added the `lark-mail` reference note for lark mail triage.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-watch.md` | `added` | Added the `lark-mail` reference note for lark mail watch.
+- `/Users/baishangjituan/.codex/skills/lark-minutes/SKILL.md` | `added` | Added the core skill definition for `lark-minutes`.
+- `/Users/baishangjituan/.codex/skills/lark-minutes/references/lark-minutes-download.md` | `added` | Added the `lark-minutes` reference note for lark minutes download.
+- `/Users/baishangjituan/.codex/skills/lark-minutes/references/lark-minutes-search.md` | `added` | Added the `lark-minutes` reference note for lark minutes search.
+- `/Users/baishangjituan/.codex/skills/lark-okr/SKILL.md` | `added` | Added the core skill definition for `lark-okr`.
+- `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-contentblock.md` | `added` | Added the `lark-okr` reference note for lark okr contentblock.
+- `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-cycle-detail.md` | `added` | Added the `lark-okr` reference note for lark okr cycle detail.
+- `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-cycle-list.md` | `added` | Added the `lark-okr` reference note for lark okr cycle list.
+- `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-entities.md` | `added` | Added the `lark-okr` reference note for lark okr entities.
+- `/Users/baishangjituan/.codex/skills/lark-openapi-explorer/SKILL.md` | `added` | Added the core skill definition for `lark-openapi-explorer`.
+- `/Users/baishangjituan/.codex/skills/lark-shared/SKILL.md` | `added` | Added the core skill definition for `lark-shared`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/SKILL.md` | `added` | Added the core skill definition for `lark-sheets`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-add-dimension.md` | `added` | Added the `lark-sheets` reference note for lark sheets add dimension.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-append.md` | `added` | Added the `lark-sheets` reference note for lark sheets append.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-batch-set-style.md` | `added` | Added the `lark-sheets` reference note for lark sheets batch set style.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-create-filter-view-condition.md` | `added` | Added the `lark-sheets` reference note for lark sheets create filter view condition.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-create-filter-view.md` | `added` | Added the `lark-sheets` reference note for lark sheets create filter view.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-create.md` | `added` | Added the `lark-sheets` reference note for lark sheets create.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-dimension.md` | `added` | Added the `lark-sheets` reference note for lark sheets delete dimension.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-dropdown.md` | `added` | Added the `lark-sheets` reference note for lark sheets delete dropdown.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-filter-view-condition.md` | `added` | Added the `lark-sheets` reference note for lark sheets delete filter view condition.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-filter-view.md` | `added` | Added the `lark-sheets` reference note for lark sheets delete filter view.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-export.md` | `added` | Added the `lark-sheets` reference note for lark sheets export.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-find.md` | `added` | Added the `lark-sheets` reference note for lark sheets find.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-formula.md` | `added` | Added the `lark-sheets` reference note for lark sheets formula.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-get-dropdown.md` | `added` | Added the `lark-sheets` reference note for lark sheets get dropdown.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-get-filter-view-condition.md` | `added` | Added the `lark-sheets` reference note for lark sheets get filter view condition.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-get-filter-view.md` | `added` | Added the `lark-sheets` reference note for lark sheets get filter view.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-info.md` | `added` | Added the `lark-sheets` reference note for lark sheets info.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-insert-dimension.md` | `added` | Added the `lark-sheets` reference note for lark sheets insert dimension.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-list-filter-view-conditions.md` | `added` | Added the `lark-sheets` reference note for lark sheets list filter view conditions.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-list-filter-views.md` | `added` | Added the `lark-sheets` reference note for lark sheets list filter views.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-merge-cells.md` | `added` | Added the `lark-sheets` reference note for lark sheets merge cells.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-move-dimension.md` | `added` | Added the `lark-sheets` reference note for lark sheets move dimension.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-read.md` | `added` | Added the `lark-sheets` reference note for lark sheets read.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-replace.md` | `added` | Added the `lark-sheets` reference note for lark sheets replace.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-set-dropdown.md` | `added` | Added the `lark-sheets` reference note for lark sheets set dropdown.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-set-style.md` | `added` | Added the `lark-sheets` reference note for lark sheets set style.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-unmerge-cells.md` | `added` | Added the `lark-sheets` reference note for lark sheets unmerge cells.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-dimension.md` | `added` | Added the `lark-sheets` reference note for lark sheets update dimension.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-dropdown.md` | `added` | Added the `lark-sheets` reference note for lark sheets update dropdown.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-filter-view-condition.md` | `added` | Added the `lark-sheets` reference note for lark sheets update filter view condition.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-filter-view.md` | `added` | Added the `lark-sheets` reference note for lark sheets update filter view.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-write-image.md` | `added` | Added the `lark-sheets` reference note for lark sheets write image.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-write.md` | `added` | Added the `lark-sheets` reference note for lark sheets write.
+- `/Users/baishangjituan/.codex/skills/lark-skill-maker/SKILL.md` | `added` | Added the core skill definition for `lark-skill-maker`.
+- `/Users/baishangjituan/.codex/skills/lark-slides/SKILL.md` | `added` | Added the core skill definition for `lark-slides`.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/examples.md` | `added` | Added the `lark-slides` reference note for examples.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-create.md` | `added` | Added the `lark-slides` reference note for lark slides create.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-media-upload.md` | `added` | Added the `lark-slides` reference note for lark slides media upload.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-xml-presentation-slide-create.md` | `added` | Added the `lark-slides` reference note for lark slides xml presentation slide create.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-xml-presentation-slide-delete.md` | `added` | Added the `lark-slides` reference note for lark slides xml presentation slide delete.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-xml-presentations-get.md` | `added` | Added the `lark-slides` reference note for lark slides xml presentations get.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/slide-templates.md` | `added` | Added the `lark-slides` reference note for slide templates.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/slides_demo.xml` | `added` | Added the `lark-slides` XML sample/schema asset `slides_demo.xml`.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/slides_xml_schema_definition.xml` | `added` | Added the `lark-slides` XML sample/schema asset `slides_xml_schema_definition.xml`.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/xml-format-guide.md` | `added` | Added the `lark-slides` reference note for xml format guide.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/xml-schema-quick-ref.md` | `added` | Added the `lark-slides` reference note for xml schema quick ref.
+- `/Users/baishangjituan/.codex/skills/lark-task/SKILL.md` | `added` | Added the core skill definition for `lark-task`.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-assign.md` | `added` | Added the `lark-task` reference note for lark task assign.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-comment.md` | `added` | Added the `lark-task` reference note for lark task comment.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-complete.md` | `added` | Added the `lark-task` reference note for lark task complete.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-create.md` | `added` | Added the `lark-task` reference note for lark task create.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-followers.md` | `added` | Added the `lark-task` reference note for lark task followers.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-get-my-tasks.md` | `added` | Added the `lark-task` reference note for lark task get my tasks.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-get-related-tasks.md` | `added` | Added the `lark-task` reference note for lark task get related tasks.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-reminder.md` | `added` | Added the `lark-task` reference note for lark task reminder.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-reopen.md` | `added` | Added the `lark-task` reference note for lark task reopen.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-search.md` | `added` | Added the `lark-task` reference note for lark task search.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-set-ancestor.md` | `added` | Added the `lark-task` reference note for lark task set ancestor.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-subscribe-event.md` | `added` | Added the `lark-task` reference note for lark task subscribe event.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-create.md` | `added` | Added the `lark-task` reference note for lark task tasklist create.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-members.md` | `added` | Added the `lark-task` reference note for lark task tasklist members.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-search.md` | `added` | Added the `lark-task` reference note for lark task tasklist search.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-task-add.md` | `added` | Added the `lark-task` reference note for lark task tasklist task add.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-update.md` | `added` | Added the `lark-task` reference note for lark task update.
+- `/Users/baishangjituan/.codex/skills/lark-vc/SKILL.md` | `added` | Added the core skill definition for `lark-vc`.
+- `/Users/baishangjituan/.codex/skills/lark-vc/references/lark-vc-notes.md` | `added` | Added the `lark-vc` reference note for lark vc notes.
+- `/Users/baishangjituan/.codex/skills/lark-vc/references/lark-vc-recording.md` | `added` | Added the `lark-vc` reference note for lark vc recording.
+- `/Users/baishangjituan/.codex/skills/lark-vc/references/lark-vc-search.md` | `added` | Added the `lark-vc` reference note for lark vc search.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/SKILL.md` | `added` | Added the core skill definition for `lark-whiteboard`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/connectors.md` | `added` | Added the `lark-whiteboard` reference note for connectors.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/content.md` | `added` | Added the `lark-whiteboard` reference note for content.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/lark-whiteboard-query.md` | `added` | Added the `lark-whiteboard` reference note for lark whiteboard query.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/lark-whiteboard-update.md` | `added` | Added the `lark-whiteboard` reference note for lark whiteboard update.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/layout.md` | `added` | Added the `lark-whiteboard` reference note for layout.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/schema.md` | `added` | Added the `lark-whiteboard` reference note for schema.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/style.md` | `added` | Added the `lark-whiteboard` reference note for style.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/typography.md` | `added` | Added the `lark-whiteboard` reference note for typography.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/routes/dsl.md` | `added` | Added the `lark-whiteboard` route guide for dsl output.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/routes/mermaid.md` | `added` | Added the `lark-whiteboard` route guide for mermaid output.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/routes/svg.md` | `added` | Added the `lark-whiteboard` route guide for svg output.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/architecture.md` | `added` | Added the reusable `lark-whiteboard` scene template for architecture.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/bar-chart.md` | `added` | Added the reusable `lark-whiteboard` scene template for bar chart.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/comparison.md` | `added` | Added the reusable `lark-whiteboard` scene template for comparison.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/fishbone.md` | `added` | Added the reusable `lark-whiteboard` scene template for fishbone.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/flowchart.md` | `added` | Added the reusable `lark-whiteboard` scene template for flowchart.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/flywheel.md` | `added` | Added the reusable `lark-whiteboard` scene template for flywheel.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/funnel.md` | `added` | Added the reusable `lark-whiteboard` scene template for funnel.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/line-chart.md` | `added` | Added the reusable `lark-whiteboard` scene template for line chart.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/mermaid.md` | `added` | Added the reusable `lark-whiteboard` scene template for mermaid.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/milestone.md` | `added` | Added the reusable `lark-whiteboard` scene template for milestone.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/organization.md` | `added` | Added the reusable `lark-whiteboard` scene template for organization.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/pyramid.md` | `added` | Added the reusable `lark-whiteboard` scene template for pyramid.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/swimlane.md` | `added` | Added the reusable `lark-whiteboard` scene template for swimlane.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/treemap.md` | `added` | Added the reusable `lark-whiteboard` scene template for treemap.
+- `/Users/baishangjituan/.codex/skills/lark-wiki/SKILL.md` | `added` | Added the core skill definition for `lark-wiki`.
+- `/Users/baishangjituan/.codex/skills/lark-wiki/references/lark-wiki-move.md` | `added` | Added the `lark-wiki` reference note for lark wiki move.
+- `/Users/baishangjituan/.codex/skills/lark-wiki/references/lark-wiki-node-create.md` | `added` | Added the `lark-wiki` reference note for lark wiki node create.
+- `/Users/baishangjituan/.codex/skills/lark-workflow-meeting-summary/SKILL.md` | `added` | Added the core skill definition for `lark-workflow-meeting-summary`.
+- `/Users/baishangjituan/.codex/skills/lark-workflow-standup-report/SKILL.md` | `added` | Added the core skill definition for `lark-workflow-standup-report`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/cover-execution.md` | `added` | Added the `seedance-video-api` reference note for cover execution.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/cover-package.md` | `added` | Added the `seedance-video-api` reference note for cover package.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/__pycache__/build_cover_package.cpython-314.pyc` | `added` | Added the Python bytecode cache for `seedance-video-api` helper `build_cover_package.cpython-314`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/__pycache__/extract_cover_candidates.cpython-314.pyc` | `added` | Added the Python bytecode cache for `seedance-video-api` helper `extract_cover_candidates.cpython-314`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/__pycache__/init_cover_package.cpython-314.pyc` | `added` | Added the Python bytecode cache for `seedance-video-api` helper `init_cover_package.cpython-314`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/__pycache__/render_cover_package.cpython-314.pyc` | `added` | Added the Python bytecode cache for `seedance-video-api` helper `render_cover_package.cpython-314`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/__pycache__/seedance_cli.cpython-314.pyc` | `added` | Added the Python bytecode cache for `seedance-video-api` helper `seedance_cli.cpython-314`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/build_cover_package.py` | `added` | Added the one-command cover-package pipeline that chains brief initialization, candidate extraction, and final cover rendering.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/extract_cover_candidates.py` | `added` | Added the helper that extracts timestamped candidate stills and contact-sheet assets from a finished video.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/init_cover_package.py` | `added` | Added the helper that initializes the cover-package manifest and brief metadata for a finished video.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/render_cover_package.py` | `added` | Added the Pillow-based renderer that outputs the final 3:4 and 4:3 PNG covers, with bundled-runtime fallback.
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/SKILL.md` | `modified` | Updated the skill definition to make the post-generation cover package mandatory and document the new cover helper scripts.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/workflows.md` | `modified` | Expanded workflow recipes with the full cover-package path: init brief, extract candidate frames, render final PNGs, and one-command build flow.
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/build_cover_package.py` | 用途: Runs the full post-video cover pipeline end to end. | 关联 skill: `seedance-video-api` | 形态: cross-platform。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/extract_cover_candidates.py` | 用途: Extracts candidate frames and preview assets from the generated video. | 关联 skill: `seedance-video-api` | 形态: cross-platform。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/init_cover_package.py` | 用途: Creates the cover-package manifest and brief scaffold. | 关联 skill: `seedance-video-api` | 形态: cross-platform。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/render_cover_package.py` | 用途: Renders the final vertical and horizontal PNG covers. | 关联 skill: `seedance-video-api` | 形态: platform-specific (macOS default font path, but bundled-runtime fallback is cross-platform leaning)。
+
+## 2026-04-18 21:23:43 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T12:21:10.142Z`
+- 结果汇总: 新增 1，修改 2，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.sh` | `added` | Added a macOS/Linux shell launcher that finds a usable Python 3.10+ runtime from `.venv`, active virtualenv, system Python, or `uv`, then dispatches to `seedance_cli.py`.
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/SKILL.md` | `modified` | Reworked the mirror doc to add Windows PowerShell and macOS launcher usage, path rules, and bundled launcher references; this mirror still does not include the live `~/.codex` skill's mandatory cover-package workflow sections.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.ps1` | `modified` | Refreshed the Windows launcher to resolve Python from local `.venv`, active virtualenv, `py -3`, `python`, or `uv`-managed installs before running `seedance_cli.py`.
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-18 23:25:56 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T14:23:40.481Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 本轮未发现晚于 `2026-04-18T14:23:40.481Z` 的技能相关文件变更，因此没有新的技能变更批次需要追加记录或触发 GitHub 同步备注。
+- 当前工作区中可见的 `skill-center/skills/seedance-video-api/**` 与 `skill-center/skills/playwright/scripts/playwright_cli.sh` 候选改动文件，mtime 均落在 `2026-04-18 22:12:09 CST` 到 `2026-04-18 22:16:12 CST`，早于本次对比基线。
+
+### 新增 `.py` 文件
+- 无。
+## 2026-04-19 00:28:02 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T15:24:40.722Z`
+- 结果汇总: 新增 272，修改 4，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/.codex/skills/lark-approval/SKILL.md` | `added` | Added the core skill definition for `lark-approval`.
+- `/Users/baishangjituan/.codex/skills/lark-attendance/SKILL.md` | `added` | Added the core skill definition for `lark-attendance`.
+- `/Users/baishangjituan/.codex/skills/lark-base/SKILL.md` | `added` | Added the core skill definition for `lark-base`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/dashboard-block-data-config.md` | `added` | Added the `lark-base` reference note for dashboard block data config.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/examples.md` | `added` | Added the `lark-base` reference note for examples.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/formula-field-guide.md` | `added` | Added the `lark-base` reference note for formula field guide.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-advperm-disable.md` | `added` | Added the `lark-base` reference note for lark base advperm disable.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-advperm-enable.md` | `added` | Added the `lark-base` reference note for lark base advperm enable.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-base-copy.md` | `added` | Added the `lark-base` reference note for lark base base copy.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-base-create.md` | `added` | Added the `lark-base` reference note for lark base base create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-base-get.md` | `added` | Added the `lark-base` reference note for lark base base get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-arrange.md` | `added` | Added the `lark-base` reference note for lark base dashboard arrange.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-create.md` | `added` | Added the `lark-base` reference note for lark base dashboard block create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-delete.md` | `added` | Added the `lark-base` reference note for lark base dashboard block delete.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-get.md` | `added` | Added the `lark-base` reference note for lark base dashboard block get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-list.md` | `added` | Added the `lark-base` reference note for lark base dashboard block list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-update.md` | `added` | Added the `lark-base` reference note for lark base dashboard block update.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-create.md` | `added` | Added the `lark-base` reference note for lark base dashboard create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-delete.md` | `added` | Added the `lark-base` reference note for lark base dashboard delete.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-get.md` | `added` | Added the `lark-base` reference note for lark base dashboard get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-list.md` | `added` | Added the `lark-base` reference note for lark base dashboard list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-update.md` | `added` | Added the `lark-base` reference note for lark base dashboard update.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard.md` | `added` | Added the `lark-base` reference note for lark base dashboard.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-data-query.md` | `added` | Added the `lark-base` reference note for lark base data query.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-create.md` | `added` | Added the `lark-base` reference note for lark base field create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-delete.md` | `added` | Added the `lark-base` reference note for lark base field delete.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-get.md` | `added` | Added the `lark-base` reference note for lark base field get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-list.md` | `added` | Added the `lark-base` reference note for lark base field list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-search-options.md` | `added` | Added the `lark-base` reference note for lark base field search options.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-update.md` | `added` | Added the `lark-base` reference note for lark base field update.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field.md` | `added` | Added the `lark-base` reference note for lark base field.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-create.md` | `added` | Added the `lark-base` reference note for lark base form create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-delete.md` | `added` | Added the `lark-base` reference note for lark base form delete.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-get.md` | `added` | Added the `lark-base` reference note for lark base form get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-list.md` | `added` | Added the `lark-base` reference note for lark base form list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-create.md` | `added` | Added the `lark-base` reference note for lark base form questions create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-delete.md` | `added` | Added the `lark-base` reference note for lark base form questions delete.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-list.md` | `added` | Added the `lark-base` reference note for lark base form questions list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-update.md` | `added` | Added the `lark-base` reference note for lark base form questions update.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions.md` | `added` | Added the `lark-base` reference note for lark base form questions.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-update.md` | `added` | Added the `lark-base` reference note for lark base form update.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form.md` | `added` | Added the `lark-base` reference note for lark base form.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-history.md` | `added` | Added the `lark-base` reference note for lark base history.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-batch-create.md` | `added` | Added the `lark-base` reference note for lark base record batch create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-batch-update.md` | `added` | Added the `lark-base` reference note for lark base record batch update.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-delete.md` | `added` | Added the `lark-base` reference note for lark base record delete.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-get.md` | `added` | Added the `lark-base` reference note for lark base record get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-history-list.md` | `added` | Added the `lark-base` reference note for lark base record history list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-list.md` | `added` | Added the `lark-base` reference note for lark base record list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-search.md` | `added` | Added the `lark-base` reference note for lark base record search.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-upload-attachment.md` | `added` | Added the `lark-base` reference note for lark base record upload attachment.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-upsert.md` | `added` | Added the `lark-base` reference note for lark base record upsert.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record.md` | `added` | Added the `lark-base` reference note for lark base record.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-create.md` | `added` | Added the `lark-base` reference note for lark base role create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-delete.md` | `added` | Added the `lark-base` reference note for lark base role delete.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-get.md` | `added` | Added the `lark-base` reference note for lark base role get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-list.md` | `added` | Added the `lark-base` reference note for lark base role list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-update.md` | `added` | Added the `lark-base` reference note for lark base role update.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-shortcut-field-properties.md` | `added` | Added the `lark-base` reference note for lark base shortcut field properties.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-shortcut-record-value.md` | `added` | Added the `lark-base` reference note for lark base shortcut record value.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-create.md` | `added` | Added the `lark-base` reference note for lark base table create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-delete.md` | `added` | Added the `lark-base` reference note for lark base table delete.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-get.md` | `added` | Added the `lark-base` reference note for lark base table get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-list.md` | `added` | Added the `lark-base` reference note for lark base table list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-update.md` | `added` | Added the `lark-base` reference note for lark base table update.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table.md` | `added` | Added the `lark-base` reference note for lark base table.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-create.md` | `added` | Added the `lark-base` reference note for lark base view create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-delete.md` | `added` | Added the `lark-base` reference note for lark base view delete.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-card.md` | `added` | Added the `lark-base` reference note for lark base view get card.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-filter.md` | `added` | Added the `lark-base` reference note for lark base view get filter.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-group.md` | `added` | Added the `lark-base` reference note for lark base view get group.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-sort.md` | `added` | Added the `lark-base` reference note for lark base view get sort.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-timebar.md` | `added` | Added the `lark-base` reference note for lark base view get timebar.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-visible-fields.md` | `added` | Added the `lark-base` reference note for lark base view get visible fields.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get.md` | `added` | Added the `lark-base` reference note for lark base view get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-list.md` | `added` | Added the `lark-base` reference note for lark base view list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-rename.md` | `added` | Added the `lark-base` reference note for lark base view rename.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-card.md` | `added` | Added the `lark-base` reference note for lark base view set card.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-filter.md` | `added` | Added the `lark-base` reference note for lark base view set filter.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-group.md` | `added` | Added the `lark-base` reference note for lark base view set group.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-sort.md` | `added` | Added the `lark-base` reference note for lark base view set sort.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-timebar.md` | `added` | Added the `lark-base` reference note for lark base view set timebar.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-visible-fields.md` | `added` | Added the `lark-base` reference note for lark base view set visible fields.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view.md` | `added` | Added the `lark-base` reference note for lark base view.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-create.md` | `added` | Added the `lark-base` reference note for lark base workflow create.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-disable.md` | `added` | Added the `lark-base` reference note for lark base workflow disable.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-enable.md` | `added` | Added the `lark-base` reference note for lark base workflow enable.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-get.md` | `added` | Added the `lark-base` reference note for lark base workflow get.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-guide.md` | `added` | Added the `lark-base` reference note for lark base workflow guide.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-list.md` | `added` | Added the `lark-base` reference note for lark base workflow list.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-schema.md` | `added` | Added the `lark-base` reference note for lark base workflow schema.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-update.md` | `added` | Added the `lark-base` reference note for lark base workflow update.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow.md` | `added` | Added the `lark-base` reference note for lark base workflow.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workspace.md` | `added` | Added the `lark-base` reference note for lark base workspace.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lookup-field-guide.md` | `added` | Added the `lark-base` reference note for lookup field guide.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/role-config.md` | `added` | Added the `lark-base` reference note for role config.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/SKILL.md` | `added` | Added the core skill definition for `lark-calendar`.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-agenda.md` | `added` | Added the `lark-calendar` reference note for lark calendar agenda.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-create.md` | `added` | Added the `lark-calendar` reference note for lark calendar create.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-freebusy.md` | `added` | Added the `lark-calendar` reference note for lark calendar freebusy.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-room-find.md` | `added` | Added the `lark-calendar` reference note for lark calendar room find.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-rsvp.md` | `added` | Added the `lark-calendar` reference note for lark calendar rsvp.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-schedule-meeting.md` | `added` | Added the `lark-calendar` reference note for lark calendar schedule meeting.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-suggestion.md` | `added` | Added the `lark-calendar` reference note for lark calendar suggestion.
+- `/Users/baishangjituan/.codex/skills/lark-contact/SKILL.md` | `added` | Added the core skill definition for `lark-contact`.
+- `/Users/baishangjituan/.codex/skills/lark-contact/references/lark-contact-get-user.md` | `added` | Added the `lark-contact` reference note for lark contact get user.
+- `/Users/baishangjituan/.codex/skills/lark-contact/references/lark-contact-search-user.md` | `added` | Added the `lark-contact` reference note for lark contact search user.
+- `/Users/baishangjituan/.codex/skills/lark-doc/SKILL.md` | `added` | Added the core skill definition for `lark-doc`.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-create.md` | `added` | Added the `lark-doc` reference note for lark doc create.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-fetch.md` | `added` | Added the `lark-doc` reference note for lark doc fetch.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-media-download.md` | `added` | Added the `lark-doc` reference note for lark doc media download.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-media-insert.md` | `added` | Added the `lark-doc` reference note for lark doc media insert.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-media-preview.md` | `added` | Added the `lark-doc` reference note for lark doc media preview.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-search.md` | `added` | Added the `lark-doc` reference note for lark doc search.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-update.md` | `added` | Added the `lark-doc` reference note for lark doc update.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-whiteboard.md` | `added` | Added the `lark-doc` reference note for lark doc whiteboard.
+- `/Users/baishangjituan/.codex/skills/lark-drive/SKILL.md` | `added` | Added the core skill definition for `lark-drive`.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-add-comment.md` | `added` | Added the `lark-drive` reference note for lark drive add comment.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-create-folder.md` | `added` | Added the `lark-drive` reference note for lark drive create folder.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-create-shortcut.md` | `added` | Added the `lark-drive` reference note for lark drive create shortcut.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-delete.md` | `added` | Added the `lark-drive` reference note for lark drive delete.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-download.md` | `added` | Added the `lark-drive` reference note for lark drive download.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-export-download.md` | `added` | Added the `lark-drive` reference note for lark drive export download.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-export.md` | `added` | Added the `lark-drive` reference note for lark drive export.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-import.md` | `added` | Added the `lark-drive` reference note for lark drive import.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-move.md` | `added` | Added the `lark-drive` reference note for lark drive move.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-reactions.md` | `added` | Added the `lark-drive` reference note for lark drive reactions.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-task-result.md` | `added` | Added the `lark-drive` reference note for lark drive task result.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-upload.md` | `added` | Added the `lark-drive` reference note for lark drive upload.
+- `/Users/baishangjituan/.codex/skills/lark-event/SKILL.md` | `added` | Added the core skill definition for `lark-event`.
+- `/Users/baishangjituan/.codex/skills/lark-event/references/lark-event-subscribe.md` | `added` | Added the `lark-event` reference note for lark event subscribe.
+- `/Users/baishangjituan/.codex/skills/lark-im/SKILL.md` | `added` | Added the core skill definition for `lark-im`.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-create.md` | `added` | Added the `lark-im` reference note for lark im chat create.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-identity.md` | `added` | Added the `lark-im` reference note for lark im chat identity.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-messages-list.md` | `added` | Added the `lark-im` reference note for lark im chat messages list.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-search.md` | `added` | Added the `lark-im` reference note for lark im chat search.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-update.md` | `added` | Added the `lark-im` reference note for lark im chat update.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-mget.md` | `added` | Added the `lark-im` reference note for lark im messages mget.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-reply.md` | `added` | Added the `lark-im` reference note for lark im messages reply.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-resources-download.md` | `added` | Added the `lark-im` reference note for lark im messages resources download.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-search.md` | `added` | Added the `lark-im` reference note for lark im messages search.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-send.md` | `added` | Added the `lark-im` reference note for lark im messages send.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-reactions.md` | `added` | Added the `lark-im` reference note for lark im reactions.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-threads-messages-list.md` | `added` | Added the `lark-im` reference note for lark im threads messages list.
+- `/Users/baishangjituan/.codex/skills/lark-mail/SKILL.md` | `added` | Added the core skill definition for `lark-mail`.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-draft-create.md` | `added` | Added the `lark-mail` reference note for lark mail draft create.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-draft-edit.md` | `added` | Added the `lark-mail` reference note for lark mail draft edit.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-forward.md` | `added` | Added the `lark-mail` reference note for lark mail forward.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-message.md` | `added` | Added the `lark-mail` reference note for lark mail message.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-messages.md` | `added` | Added the `lark-mail` reference note for lark mail messages.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-reply-all.md` | `added` | Added the `lark-mail` reference note for lark mail reply all.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-reply.md` | `added` | Added the `lark-mail` reference note for lark mail reply.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-send.md` | `added` | Added the `lark-mail` reference note for lark mail send.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-signature.md` | `added` | Added the `lark-mail` reference note for lark mail signature.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-thread.md` | `added` | Added the `lark-mail` reference note for lark mail thread.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-triage.md` | `added` | Added the `lark-mail` reference note for lark mail triage.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-watch.md` | `added` | Added the `lark-mail` reference note for lark mail watch.
+- `/Users/baishangjituan/.codex/skills/lark-minutes/SKILL.md` | `added` | Added the core skill definition for `lark-minutes`.
+- `/Users/baishangjituan/.codex/skills/lark-minutes/references/lark-minutes-download.md` | `added` | Added the `lark-minutes` reference note for lark minutes download.
+- `/Users/baishangjituan/.codex/skills/lark-minutes/references/lark-minutes-search.md` | `added` | Added the `lark-minutes` reference note for lark minutes search.
+- `/Users/baishangjituan/.codex/skills/lark-okr/SKILL.md` | `added` | Added the core skill definition for `lark-okr`.
+- `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-contentblock.md` | `added` | Added the `lark-okr` reference note for lark okr contentblock.
+- `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-cycle-detail.md` | `added` | Added the `lark-okr` reference note for lark okr cycle detail.
+- `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-cycle-list.md` | `added` | Added the `lark-okr` reference note for lark okr cycle list.
+- `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-entities.md` | `added` | Added the `lark-okr` reference note for lark okr entities.
+- `/Users/baishangjituan/.codex/skills/lark-openapi-explorer/SKILL.md` | `added` | Added the core skill definition for `lark-openapi-explorer`.
+- `/Users/baishangjituan/.codex/skills/lark-shared/SKILL.md` | `added` | Added the core skill definition for `lark-shared`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/SKILL.md` | `added` | Added the core skill definition for `lark-sheets`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-add-dimension.md` | `added` | Added the `lark-sheets` reference note for lark sheets add dimension.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-append.md` | `added` | Added the `lark-sheets` reference note for lark sheets append.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-batch-set-style.md` | `added` | Added the `lark-sheets` reference note for lark sheets batch set style.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-create-filter-view-condition.md` | `added` | Added the `lark-sheets` reference note for lark sheets create filter view condition.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-create-filter-view.md` | `added` | Added the `lark-sheets` reference note for lark sheets create filter view.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-create.md` | `added` | Added the `lark-sheets` reference note for lark sheets create.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-dimension.md` | `added` | Added the `lark-sheets` reference note for lark sheets delete dimension.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-dropdown.md` | `added` | Added the `lark-sheets` reference note for lark sheets delete dropdown.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-filter-view-condition.md` | `added` | Added the `lark-sheets` reference note for lark sheets delete filter view condition.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-filter-view.md` | `added` | Added the `lark-sheets` reference note for lark sheets delete filter view.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-export.md` | `added` | Added the `lark-sheets` reference note for lark sheets export.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-find.md` | `added` | Added the `lark-sheets` reference note for lark sheets find.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-formula.md` | `added` | Added the `lark-sheets` reference note for lark sheets formula.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-get-dropdown.md` | `added` | Added the `lark-sheets` reference note for lark sheets get dropdown.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-get-filter-view-condition.md` | `added` | Added the `lark-sheets` reference note for lark sheets get filter view condition.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-get-filter-view.md` | `added` | Added the `lark-sheets` reference note for lark sheets get filter view.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-info.md` | `added` | Added the `lark-sheets` reference note for lark sheets info.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-insert-dimension.md` | `added` | Added the `lark-sheets` reference note for lark sheets insert dimension.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-list-filter-view-conditions.md` | `added` | Added the `lark-sheets` reference note for lark sheets list filter view conditions.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-list-filter-views.md` | `added` | Added the `lark-sheets` reference note for lark sheets list filter views.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-merge-cells.md` | `added` | Added the `lark-sheets` reference note for lark sheets merge cells.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-move-dimension.md` | `added` | Added the `lark-sheets` reference note for lark sheets move dimension.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-read.md` | `added` | Added the `lark-sheets` reference note for lark sheets read.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-replace.md` | `added` | Added the `lark-sheets` reference note for lark sheets replace.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-set-dropdown.md` | `added` | Added the `lark-sheets` reference note for lark sheets set dropdown.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-set-style.md` | `added` | Added the `lark-sheets` reference note for lark sheets set style.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-unmerge-cells.md` | `added` | Added the `lark-sheets` reference note for lark sheets unmerge cells.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-dimension.md` | `added` | Added the `lark-sheets` reference note for lark sheets update dimension.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-dropdown.md` | `added` | Added the `lark-sheets` reference note for lark sheets update dropdown.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-filter-view-condition.md` | `added` | Added the `lark-sheets` reference note for lark sheets update filter view condition.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-filter-view.md` | `added` | Added the `lark-sheets` reference note for lark sheets update filter view.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-write-image.md` | `added` | Added the `lark-sheets` reference note for lark sheets write image.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-write.md` | `added` | Added the `lark-sheets` reference note for lark sheets write.
+- `/Users/baishangjituan/.codex/skills/lark-skill-maker/SKILL.md` | `added` | Added the core skill definition for `lark-skill-maker`.
+- `/Users/baishangjituan/.codex/skills/lark-slides/SKILL.md` | `added` | Added the core skill definition for `lark-slides`.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/examples.md` | `added` | Added the `lark-slides` reference note for examples.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-create.md` | `added` | Added the `lark-slides` reference note for lark slides create.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-media-upload.md` | `added` | Added the `lark-slides` reference note for lark slides media upload.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-xml-presentation-slide-create.md` | `added` | Added the `lark-slides` reference note for lark slides xml presentation slide create.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-xml-presentation-slide-delete.md` | `added` | Added the `lark-slides` reference note for lark slides xml presentation slide delete.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-xml-presentations-get.md` | `added` | Added the `lark-slides` reference note for lark slides xml presentations get.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/slide-templates.md` | `added` | Added the `lark-slides` reference note for slide templates.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/slides_demo.xml` | `added` | Added the `lark-slides` reference note for slides_demo.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/slides_xml_schema_definition.xml` | `added` | Added the `lark-slides` reference note for slides_xml_schema_definition.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/xml-format-guide.md` | `added` | Added the `lark-slides` reference note for xml format guide.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/xml-schema-quick-ref.md` | `added` | Added the `lark-slides` reference note for xml schema quick ref.
+- `/Users/baishangjituan/.codex/skills/lark-task/SKILL.md` | `added` | Added the core skill definition for `lark-task`.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-assign.md` | `added` | Added the `lark-task` reference note for lark task assign.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-comment.md` | `added` | Added the `lark-task` reference note for lark task comment.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-complete.md` | `added` | Added the `lark-task` reference note for lark task complete.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-create.md` | `added` | Added the `lark-task` reference note for lark task create.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-followers.md` | `added` | Added the `lark-task` reference note for lark task followers.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-get-my-tasks.md` | `added` | Added the `lark-task` reference note for lark task get my tasks.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-get-related-tasks.md` | `added` | Added the `lark-task` reference note for lark task get related tasks.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-reminder.md` | `added` | Added the `lark-task` reference note for lark task reminder.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-reopen.md` | `added` | Added the `lark-task` reference note for lark task reopen.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-search.md` | `added` | Added the `lark-task` reference note for lark task search.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-set-ancestor.md` | `added` | Added the `lark-task` reference note for lark task set ancestor.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-subscribe-event.md` | `added` | Added the `lark-task` reference note for lark task subscribe event.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-create.md` | `added` | Added the `lark-task` reference note for lark task tasklist create.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-members.md` | `added` | Added the `lark-task` reference note for lark task tasklist members.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-search.md` | `added` | Added the `lark-task` reference note for lark task tasklist search.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-task-add.md` | `added` | Added the `lark-task` reference note for lark task tasklist task add.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-update.md` | `added` | Added the `lark-task` reference note for lark task update.
+- `/Users/baishangjituan/.codex/skills/lark-vc/SKILL.md` | `added` | Added the core skill definition for `lark-vc`.
+- `/Users/baishangjituan/.codex/skills/lark-vc/references/lark-vc-notes.md` | `added` | Added the `lark-vc` reference note for lark vc notes.
+- `/Users/baishangjituan/.codex/skills/lark-vc/references/lark-vc-recording.md` | `added` | Added the `lark-vc` reference note for lark vc recording.
+- `/Users/baishangjituan/.codex/skills/lark-vc/references/lark-vc-search.md` | `added` | Added the `lark-vc` reference note for lark vc search.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/SKILL.md` | `added` | Added the core skill definition for `lark-whiteboard`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/connectors.md` | `added` | Added the `lark-whiteboard` reference note for connectors.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/content.md` | `added` | Added the `lark-whiteboard` reference note for content.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/lark-whiteboard-query.md` | `added` | Added the `lark-whiteboard` reference note for lark whiteboard query.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/lark-whiteboard-update.md` | `added` | Added the `lark-whiteboard` reference note for lark whiteboard update.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/layout.md` | `added` | Added the `lark-whiteboard` reference note for layout.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/schema.md` | `added` | Added the `lark-whiteboard` reference note for schema.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/style.md` | `added` | Added the `lark-whiteboard` reference note for style.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/typography.md` | `added` | Added the `lark-whiteboard` reference note for typography.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/routes/dsl.md` | `added` | Added the `lark-whiteboard` support file `dsl.md`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/routes/mermaid.md` | `added` | Added the `lark-whiteboard` support file `mermaid.md`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/routes/svg.md` | `added` | Added the `lark-whiteboard` support file `svg.md`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/architecture.md` | `added` | Added the `lark-whiteboard` support file `architecture.md`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/bar-chart.md` | `added` | Added the `lark-whiteboard` support file `bar-chart.md`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/comparison.md` | `added` | Added the `lark-whiteboard` support file `comparison.md`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/fishbone.md` | `added` | Added the `lark-whiteboard` support file `fishbone.md`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/flowchart.md` | `added` | Added the `lark-whiteboard` support file `flowchart.md`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/flywheel.md` | `added` | Added the `lark-whiteboard` support file `flywheel.md`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/funnel.md` | `added` | Added the `lark-whiteboard` support file `funnel.md`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/line-chart.md` | `added` | Added the `lark-whiteboard` support file `line-chart.md`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/mermaid.md` | `added` | Added the `lark-whiteboard` support file `mermaid.md`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/milestone.md` | `added` | Added the `lark-whiteboard` support file `milestone.md`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/organization.md` | `added` | Added the `lark-whiteboard` support file `organization.md`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/pyramid.md` | `added` | Added the `lark-whiteboard` support file `pyramid.md`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/swimlane.md` | `added` | Added the `lark-whiteboard` support file `swimlane.md`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/treemap.md` | `added` | Added the `lark-whiteboard` support file `treemap.md`.
+- `/Users/baishangjituan/.codex/skills/lark-wiki/SKILL.md` | `added` | Added the core skill definition for `lark-wiki`.
+- `/Users/baishangjituan/.codex/skills/lark-wiki/references/lark-wiki-move.md` | `added` | Added the `lark-wiki` reference note for lark wiki move.
+- `/Users/baishangjituan/.codex/skills/lark-wiki/references/lark-wiki-node-create.md` | `added` | Added the `lark-wiki` reference note for lark wiki node create.
+- `/Users/baishangjituan/.codex/skills/lark-workflow-meeting-summary/SKILL.md` | `added` | Added the core skill definition for `lark-workflow-meeting-summary`.
+- `/Users/baishangjituan/.codex/skills/lark-workflow-standup-report/SKILL.md` | `added` | Added the core skill definition for `lark-workflow-standup-report`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/prompt-template.md` | `added` | Added the reusable prompt template reference for Seedance generation requests.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/__pycache__/build_cover_package.cpython-311.pyc` | `added` | Added the Python bytecode cache for `seedance-video-api` helper `build_cover_package`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/__pycache__/extract_cover_candidates.cpython-311.pyc` | `added` | Added the Python bytecode cache for `seedance-video-api` helper `extract_cover_candidates`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/__pycache__/init_cover_package.cpython-311.pyc` | `added` | Added the Python bytecode cache for `seedance-video-api` helper `init_cover_package`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/__pycache__/render_cover_package.cpython-311.pyc` | `added` | Added the Python bytecode cache for `seedance-video-api` helper `render_cover_package`.
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/SKILL.md` | `modified` | Updated the skill definition to extend the mandatory cover-package workflow and reference the prompt-template asset.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/agents/openai.yaml` | `modified` | Updated the agent manifest for `seedance-video-api`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/SKILL.md` | `modified` | Updated the skill definition to extend the mandatory cover-package workflow and reference the prompt-template asset.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/workflows.md` | `modified` | Updated the mirrored workflow guide to match the latest cover-package steps and launcher flow.
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- `.codex/skills` 新增了 19 组 Lark 相关 skills / references，共 267 个文件；live `seedance-video-api` 补充了 prompt 模板并刷新了 skill/agent，共 3 个文件；`skill-center` 中的 Seedance 镜像同步了工作流说明并生成 4 个 `__pycache__` 文件，共 6 个文件。
+- 删除项检查结果: 仓库内技能相关路径的 `git status` 未出现删除记录，本轮也没有可比的上次快照差异，因此未识别到新的删除文件。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-19 02:28:39 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T17:26:11.271Z`（本地时区为 `2026-04-19 01:26:11 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19 01:26:11 CST` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行。
+- 当前工作区仍可见 `skill-center/skills/playwright/scripts/playwright_cli.sh` 的未提交差异，但该文件 `mtime` 为 `2026-04-18 22:12:09 CST`，且已在 `2026-04-18 22:25:00 CST` 变更批次中记录，本轮不重复计入。
+- 仓库内技能相关路径的 `git status` 未出现新的删除记录，因此本轮没有新的删除文件可记录。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-19 03:29:28 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T18:27:41.553Z`（本地时区为 `2026-04-19 02:27:41 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19 02:27:41 CST` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime`、新增文件，或新的删除记录。
+- 当前仓库技能相关路径未出现新的 `git status` 删除项；上一轮已记录的 `skill-center/skills/playwright/scripts/playwright_cli.sh` 未提交差异，其 `mtime` 仍早于本轮基线，因此不重复计入。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-19 07:35:22 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T22:32:42.547Z`（本地时区为 `2026-04-19 06:32:42 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19 06:32:42 CST` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime`、新增文件，或新的删除记录。
+- 当前仓库技能相关路径未出现新的 `git status` 删除项；`skill-center/skills/playwright/scripts/playwright_cli.sh` 仍有未提交差异，但其 `mtime` 为 `2026-04-18 22:12:09 CST`，早于本轮基线，因此不重复计入。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-19 08:37:26 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-18T23:34:42.813Z`（本地时区为 `2026-04-19 07:34:42 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19 07:34:42 CST` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime`、新增文件，或新的删除记录。
+- 当前仓库技能相关路径仍只有既有未提交差异 `skill-center/skills/playwright/scripts/playwright_cli.sh`；该文件 `mtime` 为 `2026-04-18 22:12:09 CST`，早于本轮基线，且已在 `2026-04-18 22:25:00 CST` 变更批次中记录，本轮不重复计入。
+- 仓库内技能相关路径未出现新的删除项，因此 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮无需追加新的待同步说明。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-19 09:37:45 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T00:36:43.062Z`（本地时区为 `2026-04-19 08:36:43 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19 08:36:43 CST` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行，也未发现新增文件。
+- `.codex/skills` 目录复扫结果为 0 个晚于基线的文件；仓库内技能相关路径的 `git status` 仅显示既有未提交差异 `skill-center/skills/playwright/scripts/playwright_cli.sh`，其修改时间早于本轮基线，因此不重复计入。
+- 当前仓库技能相关路径未出现新的删除项，因此 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮无需追加新的待同步说明。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-19 10:29:56 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T01:37:13.253Z`（本地时区为 `2026-04-19 09:37:13 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19 09:37:13 CST` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行，也未发现新增文件或新的删除记录。
+- 仓库内技能相关路径的 `git status` 仍只显示既有未提交差异 `skill-center/skills/playwright/scripts/playwright_cli.sh`；该文件 `mtime` 为 `2026-04-18 22:12:09 CST`，早于本轮基线，且已在 `2026-04-18 22:25:00 CST` 变更批次中记录，因此本轮不重复计入。
+- 由于本轮没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本次未追加待同步说明。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-19 12:42:30 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T03:39:43.839Z`（本地时区为 `2026-04-19 11:39:43 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19 11:39:43 CST` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行，也未发现新增文件或新的删除记录。
+- 本轮初始化了自动化记忆快照 `/Users/baishangjituan/.codex/automations/skill-monitor/snapshot-2026-04-19T03-39-43.839Z.json`，共收录 5813 个监控文件，后续运行可据此补强删除检测。
+- 由于本轮没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本次未追加待同步说明。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-19 13:46:09 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T04:41:44.050Z`（本地时区为 `2026-04-19 12:41:44 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19 12:41:44 CST` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行，也未发现新增文件。
+- 将当前完整路径集与 `/Users/baishangjituan/.codex/automations/skill-monitor/current-snapshot.txt` 对比，前后均为 `5813` 个文件，新增 0、删除 0，因此本轮没有新的删除记录。
+- 写入前的 `git status` 仍只包含既有未提交差异 `skill-center/skills/playwright/scripts/playwright_cli.sh` 和自动化文档自身修改；其中 playwright 脚本 `mtime` 为 `2026-04-18 22:12:09 CST`，早于本轮基线，且已在 `2026-04-18 22:25:00 CST` 变更批次中记录，因此本轮不重复计入。
+- 由于本轮没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本次未追加待同步说明。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-19 14:44:51 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T05:42:44.151Z`（本地时区为 `2026-04-19 13:42:44 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19 13:42:44 CST` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行，也未发现新增文件或新的删除记录。
+- 将当前完整路径集与 `/Users/baishangjituan/.codex/automations/skill-monitor/current-snapshot.txt` 对比，前后均为 `5813` 个文件，新增 0、删除 0，因此本轮没有新的删除记录。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步说明。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-19 15:45:42 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T06:43:14.296Z`（本地时区为 `2026-04-19 14:43:14 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19 14:43:14 CST` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行，也未发现新增文件。
+- 将当前完整路径集与 `/Users/baishangjituan/.codex/automations/skill-monitor/current-snapshot.txt` 对比，前后均为 `5813` 个文件，新增 0、删除 0，因此本轮没有新的删除记录。
+- 仓库内技能相关路径的 `git status` 仍只显示既有未提交差异 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh`；该文件 `mtime` 为 `2026-04-18 22:12:09 CST`，早于本轮基线，且已在更早批次中记录，因此本轮不重复计入。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步说明。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-19 16:48:08 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T07:44:44.545Z`（本地时区为 `2026-04-19 15:44:44 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19 15:44:44 CST` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行，也未发现新增文件。
+- 将当前完整路径集与 `/Users/baishangjituan/.codex/automations/skill-monitor/current-snapshot.txt` 对比，前后均为 `5813` 个文件，新增 0、删除 0，因此本轮没有新的删除记录。
+- 仓库内技能相关路径的 `git status` 仍可见既有未提交差异 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh`；该文件 `mtime` 为 `2026-04-18 22:12:09 CST`，早于本轮基线，且已在更早批次中记录，因此本轮不重复计入。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步说明。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-19 17:49:30 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T08:46:57.620Z`（本地时区为 `2026-04-19 16:46:57 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19 16:46:57 CST` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行，也未发现新增文件。
+- 将当前完整路径集与 `/Users/baishangjituan/.codex/automations/skill-monitor/current-snapshot.txt` 对比，前后均为 `5813` 个文件，新增 0、删除 0，因此本轮没有新的删除记录。
+- 仓库内技能相关路径的 `git status` 仍只显示既有未提交差异 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh`；该文件 `mtime` 为 `2026-04-18 22:12:09 CST`，早于本轮基线，且已在更早批次中记录，因此本轮不重复计入。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步说明。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-19 18:50:53 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T09:47:57.731Z`（本地时区为 `2026-04-19 17:47:57 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19 17:47:57 CST` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行，也未发现新增文件。
+- 将当前完整路径集与 `/Users/baishangjituan/.codex/automations/skill-monitor/current-snapshot.txt` 对比，前后均为 `5813` 个文件，新增 0、删除 0，因此本轮没有新的删除记录。
+- 仓库内技能相关路径的 `git status` 仍只显示既有未提交差异 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh`；该文件 `mtime` 为 `2026-04-18 22:12:09 CST`，早于本轮基线，且已在更早批次中记录，因此本轮不重复计入。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步说明。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-19 19:52:31 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T10:49:57.984Z`（本地时区为 `2026-04-19 18:49:57 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19 18:49:57 CST` 为基线扫描四个监控根目录后，未发现新的技能相关文件 `mtime` 晚于上次运行，也未发现新增文件。
+- 将当前完整路径集与 `/Users/baishangjituan/.codex/automations/skill-monitor/current-snapshot.txt` 对比，前后均为 `5813` 个文件，新增 0、删除 0，因此本轮没有新的删除记录。
+- 仓库内技能相关路径的 `git status` 仍只显示既有未提交差异 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh`；该文件 `mtime` 为 `2026-04-18 22:12:09 CST`，早于本轮基线，且已在更早批次中记录，因此本轮不重复计入。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步说明。
+
+### 新增 `.py` 文件
+- 无。
+
+## 2026-04-19 20:52:47 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T11:50:58.246Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19T11:50:58.246Z` 为基线复扫四个监控目录后，未发现新的技能相关文件 `mtime` 晚于上次运行，也未发现新的新增文件或技能相关删除文件。
+- 仓库内技能相关路径的 `git status` 仍只显示既有未提交差异 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh`；该文件 `mtime` 为 `2026-04-18 22:12:09 CST`，早于本轮基线，因此不计入本次变更批次。
+- `current-snapshot.txt` 与当前路径集仅相差 3 个 `automation/python-platform-takeover/.venv/bin/python*` 解释器链接，属于环境产物，不作为技能相关删除记录。
+
+## 2026-04-19 21:55:59 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T12:51:28.565Z`（本地时区为 `2026-04-19 20:51:28 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19 20:51:28 CST` 为基线独立复算四个监控目录的文件清单与内容哈希后，未发现新的技能相关文件新增、修改或删除。
+- 旧快照 `/Users/baishangjituan/.codex/automations/skill-monitor/skill-file-snapshot.tsv` 仍是 `5813` 条 tracked regular-file 记录；当前 live regular-file 集合为 `5810` 条，差异仅为 `automation/python-platform-takeover/.venv/bin/python`、`python3`、`python3.11` 三个解释器链接缺失，继续视为环境产物，不计入技能删除。
+- 仓库内技能相关路径的 `git status` 仍只显示更早批次已记录的 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh` 差异；该文件 `mtime` 为 `2026-04-18 22:12:09 CST`，早于本轮基线，因此不重复计入。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-04-19 22:57:39 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T13:52:58.840Z`（本地时区为 `2026-04-19 21:52:58 CST`）
+- 结果汇总: 新增 267，修改 1，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-approval/SKILL.md` | `added` | Added skill definition and routing guide for `lark-approval`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-attendance/SKILL.md` | `added` | Added skill definition and routing guide for `lark-attendance`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/SKILL.md` | `added` | Added skill definition and routing guide for `lark-base`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/dashboard-block-data-config.md` | `added` | Added reference material for `lark-base` covering dashboard block data config.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/examples.md` | `added` | Added reference material for `lark-base` covering examples.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/formula-field-guide.md` | `added` | Added reference material for `lark-base` covering formula field guide.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-advperm-disable.md` | `added` | Added reference material for `lark-base` covering lark base advperm disable.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-advperm-enable.md` | `added` | Added reference material for `lark-base` covering lark base advperm enable.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-base-copy.md` | `added` | Added reference material for `lark-base` covering lark base base copy.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-base-create.md` | `added` | Added reference material for `lark-base` covering lark base base create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-base-get.md` | `added` | Added reference material for `lark-base` covering lark base base get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-arrange.md` | `added` | Added reference material for `lark-base` covering lark base dashboard arrange.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-create.md` | `added` | Added reference material for `lark-base` covering lark base dashboard block create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-delete.md` | `added` | Added reference material for `lark-base` covering lark base dashboard block delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-get.md` | `added` | Added reference material for `lark-base` covering lark base dashboard block get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-list.md` | `added` | Added reference material for `lark-base` covering lark base dashboard block list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-update.md` | `added` | Added reference material for `lark-base` covering lark base dashboard block update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-create.md` | `added` | Added reference material for `lark-base` covering lark base dashboard create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-delete.md` | `added` | Added reference material for `lark-base` covering lark base dashboard delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-get.md` | `added` | Added reference material for `lark-base` covering lark base dashboard get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-list.md` | `added` | Added reference material for `lark-base` covering lark base dashboard list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-update.md` | `added` | Added reference material for `lark-base` covering lark base dashboard update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard.md` | `added` | Added reference material for `lark-base` covering lark base dashboard.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-data-query.md` | `added` | Added reference material for `lark-base` covering lark base data query.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-create.md` | `added` | Added reference material for `lark-base` covering lark base field create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-delete.md` | `added` | Added reference material for `lark-base` covering lark base field delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-get.md` | `added` | Added reference material for `lark-base` covering lark base field get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-list.md` | `added` | Added reference material for `lark-base` covering lark base field list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-search-options.md` | `added` | Added reference material for `lark-base` covering lark base field search options.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-update.md` | `added` | Added reference material for `lark-base` covering lark base field update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field.md` | `added` | Added reference material for `lark-base` covering lark base field.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-create.md` | `added` | Added reference material for `lark-base` covering lark base form create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-delete.md` | `added` | Added reference material for `lark-base` covering lark base form delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-get.md` | `added` | Added reference material for `lark-base` covering lark base form get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-list.md` | `added` | Added reference material for `lark-base` covering lark base form list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-create.md` | `added` | Added reference material for `lark-base` covering lark base form questions create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-delete.md` | `added` | Added reference material for `lark-base` covering lark base form questions delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-list.md` | `added` | Added reference material for `lark-base` covering lark base form questions list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-update.md` | `added` | Added reference material for `lark-base` covering lark base form questions update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions.md` | `added` | Added reference material for `lark-base` covering lark base form questions.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-update.md` | `added` | Added reference material for `lark-base` covering lark base form update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form.md` | `added` | Added reference material for `lark-base` covering lark base form.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-history.md` | `added` | Added reference material for `lark-base` covering lark base history.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-batch-create.md` | `added` | Added reference material for `lark-base` covering lark base record batch create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-batch-update.md` | `added` | Added reference material for `lark-base` covering lark base record batch update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-delete.md` | `added` | Added reference material for `lark-base` covering lark base record delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-get.md` | `added` | Added reference material for `lark-base` covering lark base record get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-history-list.md` | `added` | Added reference material for `lark-base` covering lark base record history list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-list.md` | `added` | Added reference material for `lark-base` covering lark base record list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-search.md` | `added` | Added reference material for `lark-base` covering lark base record search.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-upload-attachment.md` | `added` | Added reference material for `lark-base` covering lark base record upload attachment.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-upsert.md` | `added` | Added reference material for `lark-base` covering lark base record upsert.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record.md` | `added` | Added reference material for `lark-base` covering lark base record.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-create.md` | `added` | Added reference material for `lark-base` covering lark base role create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-delete.md` | `added` | Added reference material for `lark-base` covering lark base role delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-get.md` | `added` | Added reference material for `lark-base` covering lark base role get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-list.md` | `added` | Added reference material for `lark-base` covering lark base role list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-update.md` | `added` | Added reference material for `lark-base` covering lark base role update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-shortcut-field-properties.md` | `added` | Added reference material for `lark-base` covering lark base shortcut field properties.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-shortcut-record-value.md` | `added` | Added reference material for `lark-base` covering lark base shortcut record value.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-create.md` | `added` | Added reference material for `lark-base` covering lark base table create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-delete.md` | `added` | Added reference material for `lark-base` covering lark base table delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-get.md` | `added` | Added reference material for `lark-base` covering lark base table get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-list.md` | `added` | Added reference material for `lark-base` covering lark base table list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-update.md` | `added` | Added reference material for `lark-base` covering lark base table update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table.md` | `added` | Added reference material for `lark-base` covering lark base table.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-create.md` | `added` | Added reference material for `lark-base` covering lark base view create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-delete.md` | `added` | Added reference material for `lark-base` covering lark base view delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-card.md` | `added` | Added reference material for `lark-base` covering lark base view get card.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-filter.md` | `added` | Added reference material for `lark-base` covering lark base view get filter.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-group.md` | `added` | Added reference material for `lark-base` covering lark base view get group.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-sort.md` | `added` | Added reference material for `lark-base` covering lark base view get sort.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-timebar.md` | `added` | Added reference material for `lark-base` covering lark base view get timebar.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-visible-fields.md` | `added` | Added reference material for `lark-base` covering lark base view get visible fields.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get.md` | `added` | Added reference material for `lark-base` covering lark base view get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-list.md` | `added` | Added reference material for `lark-base` covering lark base view list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-rename.md` | `added` | Added reference material for `lark-base` covering lark base view rename.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-card.md` | `added` | Added reference material for `lark-base` covering lark base view set card.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-filter.md` | `added` | Added reference material for `lark-base` covering lark base view set filter.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-group.md` | `added` | Added reference material for `lark-base` covering lark base view set group.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-sort.md` | `added` | Added reference material for `lark-base` covering lark base view set sort.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-timebar.md` | `added` | Added reference material for `lark-base` covering lark base view set timebar.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-visible-fields.md` | `added` | Added reference material for `lark-base` covering lark base view set visible fields.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view.md` | `added` | Added reference material for `lark-base` covering lark base view.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-create.md` | `added` | Added reference material for `lark-base` covering lark base workflow create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-disable.md` | `added` | Added reference material for `lark-base` covering lark base workflow disable.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-enable.md` | `added` | Added reference material for `lark-base` covering lark base workflow enable.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-get.md` | `added` | Added reference material for `lark-base` covering lark base workflow get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-guide.md` | `added` | Added reference material for `lark-base` covering lark base workflow guide.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-list.md` | `added` | Added reference material for `lark-base` covering lark base workflow list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-schema.md` | `added` | Added reference material for `lark-base` covering lark base workflow schema.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-update.md` | `added` | Added reference material for `lark-base` covering lark base workflow update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow.md` | `added` | Added reference material for `lark-base` covering lark base workflow.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workspace.md` | `added` | Added reference material for `lark-base` covering lark base workspace.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lookup-field-guide.md` | `added` | Added reference material for `lark-base` covering lookup field guide.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/role-config.md` | `added` | Added reference material for `lark-base` covering role config.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/SKILL.md` | `added` | Added skill definition and routing guide for `lark-calendar`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-agenda.md` | `added` | Added reference material for `lark-calendar` covering lark calendar agenda.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-create.md` | `added` | Added reference material for `lark-calendar` covering lark calendar create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-freebusy.md` | `added` | Added reference material for `lark-calendar` covering lark calendar freebusy.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-room-find.md` | `added` | Added reference material for `lark-calendar` covering lark calendar room find.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-rsvp.md` | `added` | Added reference material for `lark-calendar` covering lark calendar rsvp.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-schedule-meeting.md` | `added` | Added reference material for `lark-calendar` covering lark calendar schedule meeting.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-suggestion.md` | `added` | Added reference material for `lark-calendar` covering lark calendar suggestion.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-contact/SKILL.md` | `added` | Added skill definition and routing guide for `lark-contact`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-contact/references/lark-contact-get-user.md` | `added` | Added reference material for `lark-contact` covering lark contact get user.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-contact/references/lark-contact-search-user.md` | `added` | Added reference material for `lark-contact` covering lark contact search user.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/SKILL.md` | `added` | Added skill definition and routing guide for `lark-doc`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-create.md` | `added` | Added reference material for `lark-doc` covering lark doc create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-fetch.md` | `added` | Added reference material for `lark-doc` covering lark doc fetch.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-media-download.md` | `added` | Added reference material for `lark-doc` covering lark doc media download.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-media-insert.md` | `added` | Added reference material for `lark-doc` covering lark doc media insert.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-media-preview.md` | `added` | Added reference material for `lark-doc` covering lark doc media preview.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-search.md` | `added` | Added reference material for `lark-doc` covering lark doc search.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-update.md` | `added` | Added reference material for `lark-doc` covering lark doc update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-whiteboard.md` | `added` | Added reference material for `lark-doc` covering lark doc whiteboard.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/SKILL.md` | `added` | Added skill definition and routing guide for `lark-drive`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-add-comment.md` | `added` | Added reference material for `lark-drive` covering lark drive add comment.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-create-folder.md` | `added` | Added reference material for `lark-drive` covering lark drive create folder.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-create-shortcut.md` | `added` | Added reference material for `lark-drive` covering lark drive create shortcut.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-delete.md` | `added` | Added reference material for `lark-drive` covering lark drive delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-download.md` | `added` | Added reference material for `lark-drive` covering lark drive download.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-export-download.md` | `added` | Added reference material for `lark-drive` covering lark drive export download.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-export.md` | `added` | Added reference material for `lark-drive` covering lark drive export.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-import.md` | `added` | Added reference material for `lark-drive` covering lark drive import.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-move.md` | `added` | Added reference material for `lark-drive` covering lark drive move.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-reactions.md` | `added` | Added reference material for `lark-drive` covering lark drive reactions.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-task-result.md` | `added` | Added reference material for `lark-drive` covering lark drive task result.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-upload.md` | `added` | Added reference material for `lark-drive` covering lark drive upload.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-event/SKILL.md` | `added` | Added skill definition and routing guide for `lark-event`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-event/references/lark-event-subscribe.md` | `added` | Added reference material for `lark-event` covering lark event subscribe.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/SKILL.md` | `added` | Added skill definition and routing guide for `lark-im`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-create.md` | `added` | Added reference material for `lark-im` covering lark im chat create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-identity.md` | `added` | Added reference material for `lark-im` covering lark im chat identity.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-messages-list.md` | `added` | Added reference material for `lark-im` covering lark im chat messages list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-search.md` | `added` | Added reference material for `lark-im` covering lark im chat search.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-update.md` | `added` | Added reference material for `lark-im` covering lark im chat update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-mget.md` | `added` | Added reference material for `lark-im` covering lark im messages mget.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-reply.md` | `added` | Added reference material for `lark-im` covering lark im messages reply.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-resources-download.md` | `added` | Added reference material for `lark-im` covering lark im messages resources download.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-search.md` | `added` | Added reference material for `lark-im` covering lark im messages search.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-send.md` | `added` | Added reference material for `lark-im` covering lark im messages send.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-reactions.md` | `added` | Added reference material for `lark-im` covering lark im reactions.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-threads-messages-list.md` | `added` | Added reference material for `lark-im` covering lark im threads messages list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/SKILL.md` | `added` | Added skill definition and routing guide for `lark-mail`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-draft-create.md` | `added` | Added reference material for `lark-mail` covering lark mail draft create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-draft-edit.md` | `added` | Added reference material for `lark-mail` covering lark mail draft edit.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-forward.md` | `added` | Added reference material for `lark-mail` covering lark mail forward.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-message.md` | `added` | Added reference material for `lark-mail` covering lark mail message.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-messages.md` | `added` | Added reference material for `lark-mail` covering lark mail messages.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-reply-all.md` | `added` | Added reference material for `lark-mail` covering lark mail reply all.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-reply.md` | `added` | Added reference material for `lark-mail` covering lark mail reply.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-send.md` | `added` | Added reference material for `lark-mail` covering lark mail send.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-signature.md` | `added` | Added reference material for `lark-mail` covering lark mail signature.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-thread.md` | `added` | Added reference material for `lark-mail` covering lark mail thread.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-triage.md` | `added` | Added reference material for `lark-mail` covering lark mail triage.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-watch.md` | `added` | Added reference material for `lark-mail` covering lark mail watch.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-minutes/SKILL.md` | `added` | Added skill definition and routing guide for `lark-minutes`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-minutes/references/lark-minutes-download.md` | `added` | Added reference material for `lark-minutes` covering lark minutes download.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-minutes/references/lark-minutes-search.md` | `added` | Added reference material for `lark-minutes` covering lark minutes search.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/SKILL.md` | `added` | Added skill definition and routing guide for `lark-okr`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-contentblock.md` | `added` | Added reference material for `lark-okr` covering lark okr contentblock.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-cycle-detail.md` | `added` | Added reference material for `lark-okr` covering lark okr cycle detail.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-cycle-list.md` | `added` | Added reference material for `lark-okr` covering lark okr cycle list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-entities.md` | `added` | Added reference material for `lark-okr` covering lark okr entities.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-openapi-explorer/SKILL.md` | `added` | Added skill definition and routing guide for `lark-openapi-explorer`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-shared/SKILL.md` | `added` | Added skill definition and routing guide for `lark-shared`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/SKILL.md` | `added` | Added skill definition and routing guide for `lark-sheets`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-add-dimension.md` | `added` | Added reference material for `lark-sheets` covering lark sheets add dimension.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-append.md` | `added` | Added reference material for `lark-sheets` covering lark sheets append.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-batch-set-style.md` | `added` | Added reference material for `lark-sheets` covering lark sheets batch set style.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-create-filter-view-condition.md` | `added` | Added reference material for `lark-sheets` covering lark sheets create filter view condition.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-create-filter-view.md` | `added` | Added reference material for `lark-sheets` covering lark sheets create filter view.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-create.md` | `added` | Added reference material for `lark-sheets` covering lark sheets create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-dimension.md` | `added` | Added reference material for `lark-sheets` covering lark sheets delete dimension.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-dropdown.md` | `added` | Added reference material for `lark-sheets` covering lark sheets delete dropdown.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-filter-view-condition.md` | `added` | Added reference material for `lark-sheets` covering lark sheets delete filter view condition.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-filter-view.md` | `added` | Added reference material for `lark-sheets` covering lark sheets delete filter view.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-export.md` | `added` | Added reference material for `lark-sheets` covering lark sheets export.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-find.md` | `added` | Added reference material for `lark-sheets` covering lark sheets find.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-formula.md` | `added` | Added reference material for `lark-sheets` covering lark sheets formula.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-get-dropdown.md` | `added` | Added reference material for `lark-sheets` covering lark sheets get dropdown.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-get-filter-view-condition.md` | `added` | Added reference material for `lark-sheets` covering lark sheets get filter view condition.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-get-filter-view.md` | `added` | Added reference material for `lark-sheets` covering lark sheets get filter view.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-info.md` | `added` | Added reference material for `lark-sheets` covering lark sheets info.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-insert-dimension.md` | `added` | Added reference material for `lark-sheets` covering lark sheets insert dimension.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-list-filter-view-conditions.md` | `added` | Added reference material for `lark-sheets` covering lark sheets list filter view conditions.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-list-filter-views.md` | `added` | Added reference material for `lark-sheets` covering lark sheets list filter views.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-merge-cells.md` | `added` | Added reference material for `lark-sheets` covering lark sheets merge cells.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-move-dimension.md` | `added` | Added reference material for `lark-sheets` covering lark sheets move dimension.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-read.md` | `added` | Added reference material for `lark-sheets` covering lark sheets read.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-replace.md` | `added` | Added reference material for `lark-sheets` covering lark sheets replace.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-set-dropdown.md` | `added` | Added reference material for `lark-sheets` covering lark sheets set dropdown.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-set-style.md` | `added` | Added reference material for `lark-sheets` covering lark sheets set style.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-unmerge-cells.md` | `added` | Added reference material for `lark-sheets` covering lark sheets unmerge cells.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-dimension.md` | `added` | Added reference material for `lark-sheets` covering lark sheets update dimension.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-dropdown.md` | `added` | Added reference material for `lark-sheets` covering lark sheets update dropdown.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-filter-view-condition.md` | `added` | Added reference material for `lark-sheets` covering lark sheets update filter view condition.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-filter-view.md` | `added` | Added reference material for `lark-sheets` covering lark sheets update filter view.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-write-image.md` | `added` | Added reference material for `lark-sheets` covering lark sheets write image.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-write.md` | `added` | Added reference material for `lark-sheets` covering lark sheets write.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-skill-maker/SKILL.md` | `added` | Added skill definition and routing guide for `lark-skill-maker`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/SKILL.md` | `added` | Added skill definition and routing guide for `lark-slides`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/examples.md` | `added` | Added reference material for `lark-slides` covering examples.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-create.md` | `added` | Added reference material for `lark-slides` covering lark slides create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-media-upload.md` | `added` | Added reference material for `lark-slides` covering lark slides media upload.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-xml-presentation-slide-create.md` | `added` | Added reference material for `lark-slides` covering lark slides xml presentation slide create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-xml-presentation-slide-delete.md` | `added` | Added reference material for `lark-slides` covering lark slides xml presentation slide delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-xml-presentations-get.md` | `added` | Added reference material for `lark-slides` covering lark slides xml presentations get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/slide-templates.md` | `added` | Added reference material for `lark-slides` covering slide templates.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/slides_demo.xml` | `added` | Added reference material for `lark-slides` covering slides_demo.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/slides_xml_schema_definition.xml` | `added` | Added reference material for `lark-slides` covering slides_xml_schema_definition.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/xml-format-guide.md` | `added` | Added reference material for `lark-slides` covering xml format guide.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/xml-schema-quick-ref.md` | `added` | Added reference material for `lark-slides` covering xml schema quick ref.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/SKILL.md` | `added` | Added skill definition and routing guide for `lark-task`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-assign.md` | `added` | Added reference material for `lark-task` covering lark task assign.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-comment.md` | `added` | Added reference material for `lark-task` covering lark task comment.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-complete.md` | `added` | Added reference material for `lark-task` covering lark task complete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-create.md` | `added` | Added reference material for `lark-task` covering lark task create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-followers.md` | `added` | Added reference material for `lark-task` covering lark task followers.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-get-my-tasks.md` | `added` | Added reference material for `lark-task` covering lark task get my tasks.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-get-related-tasks.md` | `added` | Added reference material for `lark-task` covering lark task get related tasks.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-reminder.md` | `added` | Added reference material for `lark-task` covering lark task reminder.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-reopen.md` | `added` | Added reference material for `lark-task` covering lark task reopen.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-search.md` | `added` | Added reference material for `lark-task` covering lark task search.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-set-ancestor.md` | `added` | Added reference material for `lark-task` covering lark task set ancestor.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-subscribe-event.md` | `added` | Added reference material for `lark-task` covering lark task subscribe event.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-create.md` | `added` | Added reference material for `lark-task` covering lark task tasklist create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-members.md` | `added` | Added reference material for `lark-task` covering lark task tasklist members.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-search.md` | `added` | Added reference material for `lark-task` covering lark task tasklist search.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-task-add.md` | `added` | Added reference material for `lark-task` covering lark task tasklist task add.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-update.md` | `added` | Added reference material for `lark-task` covering lark task update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/SKILL.md` | `added` | Added skill definition and routing guide for `lark-vc`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/references/lark-vc-notes.md` | `added` | Added reference material for `lark-vc` covering lark vc notes.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/references/lark-vc-recording.md` | `added` | Added reference material for `lark-vc` covering lark vc recording.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/references/lark-vc-search.md` | `added` | Added reference material for `lark-vc` covering lark vc search.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/SKILL.md` | `added` | Added skill definition and routing guide for `lark-whiteboard`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/connectors.md` | `added` | Added reference material for `lark-whiteboard` covering connectors.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/content.md` | `added` | Added reference material for `lark-whiteboard` covering content.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/lark-whiteboard-query.md` | `added` | Added reference material for `lark-whiteboard` covering lark whiteboard query.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/lark-whiteboard-update.md` | `added` | Added reference material for `lark-whiteboard` covering lark whiteboard update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/layout.md` | `added` | Added reference material for `lark-whiteboard` covering layout.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/schema.md` | `added` | Added reference material for `lark-whiteboard` covering schema.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/style.md` | `added` | Added reference material for `lark-whiteboard` covering style.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/typography.md` | `added` | Added reference material for `lark-whiteboard` covering typography.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/routes/dsl.md` | `added` | Added route template for `lark-whiteboard` covering dsl input conversion.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/routes/mermaid.md` | `added` | Added route template for `lark-whiteboard` covering mermaid input conversion.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/routes/svg.md` | `added` | Added route template for `lark-whiteboard` covering svg input conversion.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/architecture.md` | `added` | Added scene template for `lark-whiteboard` covering architecture visualization.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/bar-chart.md` | `added` | Added scene template for `lark-whiteboard` covering bar chart visualization.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/comparison.md` | `added` | Added scene template for `lark-whiteboard` covering comparison visualization.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/fishbone.md` | `added` | Added scene template for `lark-whiteboard` covering fishbone visualization.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/flowchart.md` | `added` | Added scene template for `lark-whiteboard` covering flowchart visualization.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/flywheel.md` | `added` | Added scene template for `lark-whiteboard` covering flywheel visualization.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/funnel.md` | `added` | Added scene template for `lark-whiteboard` covering funnel visualization.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/line-chart.md` | `added` | Added scene template for `lark-whiteboard` covering line chart visualization.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/mermaid.md` | `added` | Added scene template for `lark-whiteboard` covering mermaid visualization.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/milestone.md` | `added` | Added scene template for `lark-whiteboard` covering milestone visualization.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/organization.md` | `added` | Added scene template for `lark-whiteboard` covering organization visualization.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/pyramid.md` | `added` | Added scene template for `lark-whiteboard` covering pyramid visualization.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/swimlane.md` | `added` | Added scene template for `lark-whiteboard` covering swimlane visualization.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/treemap.md` | `added` | Added scene template for `lark-whiteboard` covering treemap visualization.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-wiki/SKILL.md` | `added` | Added skill definition and routing guide for `lark-wiki`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-wiki/references/lark-wiki-move.md` | `added` | Added reference material for `lark-wiki` covering lark wiki move.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-wiki/references/lark-wiki-node-create.md` | `added` | Added reference material for `lark-wiki` covering lark wiki node create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-workflow-meeting-summary/SKILL.md` | `added` | Added skill definition and routing guide for `lark-workflow-meeting-summary`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-workflow-standup-report/SKILL.md` | `added` | Added skill definition and routing guide for `lark-workflow-standup-report`.
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh` | `modified` | Hardened Playwright CLI bootstrap by auto-exporting a readable CA bundle, skipping optional npm install scripts, and shortening TMPDIR for Unix socket limits on macOS.
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 本批次新增的是 `skill-center/skills/` 下 23 组 Lark skill 镜像，共 267 个文件，覆盖审批、考勤、多维表格、日历、通讯录、云文档、云盘、事件订阅、即时消息、邮箱、妙记、OKR、OpenAPI 探索、共享认证、电子表格、skill 制作、飞书幻灯片、任务、视频会议、画板、知识库，以及两个工作流 skill。
+- 其中体量最大的新增目录是 `lark-base`（94 个文件）、`lark-sheets`（34 个文件）和 `lark-whiteboard`（26 个文件）；`lark-whiteboard` 还额外带入了 routes 与 scenes 模板，说明这批镜像不只是基础说明，还包含画板生成路由与场景模板。
+- `playwright_cli.sh` 的修改集中在首轮启动可靠性：补了 Node 证书链兜底、关闭可选 npm install scripts 以避免卡住、并将过长 `TMPDIR` 缩短到 `/tmp/pwcli` 以规避 macOS Unix socket 路径上限。
+- 本轮未发现新的技能相关删除，也未发现新增 `.py` helper；新增内容全部是 Markdown / XML 技能镜像与说明文件。
