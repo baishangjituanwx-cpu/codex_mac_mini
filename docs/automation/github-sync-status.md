@@ -430,11 +430,33 @@
   - 跳过了 `codex/windows-version-20260411` 的新提交与推送，因为当前仓库工作区没有新的 Windows-only bridge / deployment 变更；本轮全部实际增量都属于通用 skill mirror、文档或脚本更新，已归入 `codex/default-python-sync`。
   - `docs/automation/skill-change-monitor.md` 最新记录的 live `~/.codex/skills/seedance-video-api` 变更未在当前仓库工作区中形成对应镜像文件，因此本轮未额外生成不在仓库内的同步提交。
 
-<<<<<<< Updated upstream
 ## 2026-04-20 00:06:22 CST
 - 处理时间:
   - `2026-04-20 00:06:22 CST`
-=======
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 同步前置检查:
+  - 通过。
+  - 依据: `docs/automation/windows-translation-status.md` 最新 dated entry 仍为 `2026-04-19 22:04:23 CST`，其结论明确写明“是否达到‘Mac / Windows 版本都齐全’: 是”。
+- 是否检测到新增或修改:
+  - 否。
+  - 当前仓库工作区已清空待同步增量；`codex/default-python-sync` 本地与远端同为 `62d1a17`，本轮没有新的 generic / Mac-compatible 内容需要再提交。
+  - 当前仓库工作区也未出现新的 Windows-specific bridge / deployment 变更；`codex/windows-version-20260411` 仍停在本地 `7bff3af`，远端为 `d9f09f2`。
+- 是否已提交:
+  - 否。
+  - 本轮没有创建新的本地提交。
+- 是否已推送:
+  - 否。
+  - 本轮没有执行 `git push`，因为没有新的内容需要上传。
+- 提交信息:
+  - 无。
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - `codex/default-python-sync` 已在上一轮 `2026-04-20 00:02:44 CST` 同步中完成当前可见 generic 仓库增量的提交与推送，本轮复核时工作区已为 clean。
+  - `codex/windows-version-20260411` 本轮仍无新的 Windows-only bridge / deployment 工作区增量，因此继续跳过新提交与推送。
+  - 虽然本地 `codex/windows-version-20260411` 分支落后远端 4 个提交，但这不是当前仓库工作区的新待同步内容；为避免混入非本轮增量，本自动化没有改写或回推该分支历史。
+
 ## 2026-04-20 15:15:11 CST
 - 检测到新的技能变更批次: 新增 1，修改 1，删除 0。
 - 这批变更集中在 live `~/.codex/skills/seedance-video-api` 的 `seedance_cli.py` SSL 证书链兜底增强，以及运行后生成的 `__pycache__/seedance_cli.cpython-314.pyc`。
@@ -453,34 +475,11 @@
 ## 2026-04-21 00:03:02 CST
 - 处理时间:
   - `2026-04-21 00:03:02 CST`
->>>>>>> Stashed changes
 - 本次检查的分支:
   - `codex/default-python-sync`
   - `codex/windows-version-20260411`
 - 同步前置检查:
   - 通过。
-<<<<<<< Updated upstream
-  - 依据: `docs/automation/windows-translation-status.md` 最新 dated entry 仍为 `2026-04-19 22:04:23 CST`，其结论明确写明“是否达到‘Mac / Windows 版本都齐全’: 是”。
-- 是否检测到新增或修改:
-  - 是。
-  - 当前仓库工作区已清空待同步业务增量；`codex/default-python-sync` 在复核开始时本地与远端同为 `62d1a17`，没有新的 generic / Mac-compatible 内容需要再提交。
-  - 本轮新增的是执行记录本身：`docs/automation/github-sync-status.md` 追加了本次巡检结果，并已作为状态提交上传到 `codex/default-python-sync`。
-  - 当前仓库工作区未出现新的 Windows-specific bridge / deployment 变更；`codex/windows-version-20260411` 仍停在本地 `7bff3af`，远端为 `d9f09f2`。
-- 是否已提交:
-  - `codex/default-python-sync`: 是。本轮新增的是状态记录提交，用于登记本次巡检结果，并在 push 返回后补充修正最终结果描述。
-  - `codex/windows-version-20260411`: 否。本轮未创建新提交。
-- 是否已推送:
-  - `codex/default-python-sync`: 是。本轮状态记录提交已推送到远端分支。
-  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows 专属提交需要上传。
-- 提交信息:
-  - `codex/default-python-sync`: `Record 2026-04-20 00:06 GitHub sync status`
-  - `codex/default-python-sync`: 后续附加修正提交，仅用于把同一条执行记录改成最终准确表述。
-- 若跳过，说明跳过原因:
-  - 未跳过同步前置检查。
-  - `codex/default-python-sync` 已在上一轮 `2026-04-20 00:02:44 CST` 同步中完成当前可见 generic 仓库增量的提交与推送，本轮复核时工作区已为 clean，因此没有再生成新的业务内容提交，只追加了这条执行状态记录。
-  - `codex/windows-version-20260411` 本轮仍无新的 Windows-only bridge / deployment 工作区增量，因此继续跳过新提交与推送。
-  - 虽然本地 `codex/windows-version-20260411` 分支落后远端 4 个提交，但这不是当前仓库工作区的新待同步内容；为避免混入非本轮增量，本自动化没有改写或回推该分支历史。
-=======
   - 依据: `docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-04-20 22:03:47 CST`，其结论明确写明“是否达到‘Mac / Windows 版本都齐全’: 是”。
 - 是否检测到新增或修改:
   - 是。
@@ -497,13 +496,14 @@
     - `Record 2026-04-21 GitHub sync status`
   - `codex/windows-version-20260411`: 否。本轮未创建新提交。
 - 是否已推送:
-  - `codex/default-python-sync`: 是。本轮提交已推送到远端分支。
+  - `codex/default-python-sync`: 是。首次 `git push` 因远端分支已前进而返回 `fetch first`；随后执行 `git fetch origin`、`git rebase origin/codex/default-python-sync` 后重试推送成功。
   - `codex/windows-version-20260411`: 无需推送。本轮没有新的 Windows 专属提交需要上传。
 - 提交信息:
   - `codex/default-python-sync`: `Sync Seedance TLS mirror and takeover package`
   - `codex/default-python-sync`: `Record 2026-04-21 GitHub sync status`
+  - `codex/default-python-sync`: `Fix 2026-04-21 GitHub sync status log`
 - 若跳过，说明跳过原因:
   - 未跳过同步前置检查。
   - 跳过了 `codex/windows-version-20260411` 的新提交与推送，因为当前仓库工作区没有新的 Windows-only bridge / deployment 变更；本轮实际增量都属于通用 skill 镜像、自动化状态文档或 Mac-compatible Python takeover 内容包。
+  - `codex/windows-sync` 上遗留的本地提交 `57c7427` 经 `git cherry origin/codex/windows-version-20260411 codex/windows-sync` 复核已被标记为 patch-equivalent（`-`），说明没有剩余的独立 Windows payload 需要再上传到 `codex/windows-version-20260411`。
   - 跳过了 live `~/.codex/skills/codex-primary-runtime/{slides,spreadsheets}` 的 metadata-only refresh，因为内容 hash 未变，不构成需要同步到仓库的新内容。
->>>>>>> Stashed changes
