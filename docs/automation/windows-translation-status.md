@@ -516,3 +516,73 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-19 22:04:23 CST`，今天 monitor 中新增或修改的自定义 skill 行为已在仓库中补齐；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-04-20 22:02:21 CST
+
+- 处理时间:
+  - `2026-04-20 22:02:21 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自上次 Windows 转译状态登记后追加的非零批次:
+    - `2026-04-20 15:15:11 CST`
+    - `2026-04-20 16:15:55 CST`
+    - `2026-04-20 19:20:10 CST`
+  - 其中实际涉及自定义 skill / automation 行为补齐判断的条目为:
+    - `~/.codex/skills/seedance-video-api/scripts/seedance_cli.py` 的 HTTPS / CA bundle 兼容更新
+    - `automation/python-platform-takeover/configs/content-package.2026-04-20-ai-content-platform-execution.yaml` 的新增内容包配置
+  - `2026-04-20 19:20:10 CST` 的 `codex-primary-runtime/{slides,spreadsheets}` 变更经 monitor 复核为 SHA 未变的 metadata-only refresh，不构成新的自定义 skill 行为差异。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/seedance-video-api`:
+    - 将 live skill 的 TLS 兼容更新同步进仓库镜像:
+      - `scripts/seedance_cli.py`
+    - 具体补齐内容:
+      - 新增 `build_ssl_context()`，优先尝试 `SSL_CERT_FILE`、OpenSSL 默认 `cafile`、以及常见 Unix CA bundle 路径
+      - `submit/get/wait/download` 共用的 `urllib` 请求与下载流程统一复用 `SSL_CONTEXT`
+      - 当 Windows PowerShell 通过既有 `scripts/seedance_cli.ps1` 调起该 Python 脚本时，同样继承这套 TLS 兼容逻辑，因此不需要新增额外 `.ps1` 包装器
+    - 结论:
+      - 这次改动属于跨平台网络兼容增强；Windows 侧缺口已通过同步仓库镜像补齐
+  - `automation/python-platform-takeover`:
+    - 复核新增内容包 `configs/content-package.2026-04-20-ai-content-platform-execution.yaml` 后，确认它是当日执行用的 campaign 配置，不是新的脚本接口或 skill 行为
+    - 现有 Windows 支撑仍然足够:
+      - `automation/python-platform-takeover/scripts/social-publisher.ps1`
+      - `automation/python-platform-takeover/scripts/start-chrome-cdp.ps1`
+      - `automation/python-platform-takeover/README.md` 中的 Windows 路径与命令说明
+    - 本轮未新增 Windows 专属副本，因为该内容包里的绝对素材路径本身就是当前主机的运行时路径，不适合作为仓库级 Windows 模板分叉
+- 未完成的补全:
+  - 无。
+  - `2026-04-20` 当前已记录批次中，未发现仍缺少 Windows PowerShell 入口、路径处理、快捷键差异说明、命令包装器或仓库镜像同步的自定义 skill 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 已执行静态校验:
+    - `python3 -m py_compile skill-center/skills/seedance-video-api/scripts/seedance_cli.py`
+    - `diff -u ~/.codex/skills/seedance-video-api/scripts/seedance_cli.py skill-center/skills/seedance-video-api/scripts/seedance_cli.py`
+  - 本机仍未执行 Windows PowerShell 实机回归；Windows 判断基于仓库 PowerShell 启动器复核、脚本镜像一致性核对，以及 Python 静态校验。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-04-20 22:02:21 CST`，今天 monitor 中新增或修改的自定义 skill / automation 行为已完成 Windows 可用性复核；需要同步的仓库镜像已补齐，其余新增项无需额外 Windows 分叉。
+
+## 2026-04-20 22:03:47 CST
+
+- 处理时间:
+  - `2026-04-20 22:03:47 CST`
+- 输入来源:
+  - 复核 `skill-change-monitor.md` 到最新的 `2026-04-20 21:22:45 CST` / `2026-04-20 21:22:40 CST` 批次
+  - 对照本文件已有的 `2026-04-20 22:02:21 CST` 记录，确认今天的非零批次仍只有:
+    - `2026-04-20 15:15:11 CST`
+    - `2026-04-20 16:15:55 CST`
+    - `2026-04-20 19:20:10 CST`
+- 已完成的 Windows 补全:
+  - 无新增补丁文件。
+  - 复核确认 `skill-center/skills/seedance-video-api/scripts/seedance_cli.py` 当前仓库镜像与 live `~/.codex/skills/seedance-video-api/scripts/seedance_cli.py` 一致，既有 `seedance_cli.ps1` / `invoke_seedance_script.ps1` 已可直接复用，无需额外新增 PowerShell 启动器。
+  - 复核确认 `automation/python-platform-takeover/configs/content-package.2026-04-20-ai-content-platform-execution.yaml` 仍只是当日内容包资产，不引入新的 Windows 路径处理分支、命令包装器或快捷键差异要求。
+- 未完成的补全:
+  - 无。
+  - 本次复核后，未发现比 `2026-04-20 22:02:21 CST` 更晚、仍未转译的 monitor 批次。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮执行了:
+    - `cmp -s skill-center/skills/seedance-video-api/scripts/seedance_cli.py ~/.codex/skills/seedance-video-api/scripts/seedance_cli.py`
+    - `python3 -m py_compile skill-center/skills/seedance-video-api/scripts/seedance_cli.py`
+  - 本机仍未做 Windows PowerShell 实机回归；当前判断基于仓库脚本复核、镜像一致性与 Python 静态校验。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-04-20 22:03:47 CST`，今天 monitor 中新增或修改的自定义 skill / automation 行为已全部完成 Windows 可用性复核；本次运行没有发现新的待补 Windows 缺口。

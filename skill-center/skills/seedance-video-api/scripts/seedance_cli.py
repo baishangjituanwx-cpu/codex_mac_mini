@@ -9,6 +9,7 @@ import json
 import mimetypes
 import os
 import pathlib
+import ssl
 import sys
 import time
 import urllib.error
@@ -42,6 +43,35 @@ def load_json(path: pathlib.Path) -> dict[str, Any]:
 
 def dump_json(data: Any) -> str:
     return json.dumps(data, ensure_ascii=False, indent=2, sort_keys=False)
+
+
+def build_ssl_context() -> ssl.SSLContext:
+    verify_paths = ssl.get_default_verify_paths()
+    candidates = [
+        os.getenv("SSL_CERT_FILE"),
+        verify_paths.cafile,
+        verify_paths.openssl_cafile,
+        "/etc/ssl/cert.pem",
+        "/etc/ssl/certs/ca-certificates.crt",
+        "/etc/pki/tls/certs/ca-bundle.crt",
+    ]
+
+    seen: set[str] = set()
+    for candidate in candidates:
+        if not candidate or candidate in seen:
+            continue
+        seen.add(candidate)
+        if not os.path.exists(candidate):
+            continue
+        try:
+            return ssl.create_default_context(cafile=candidate)
+        except OSError:
+            continue
+
+    return ssl.create_default_context()
+
+
+SSL_CONTEXT = build_ssl_context()
 
 
 def require_api_key(args: argparse.Namespace) -> str:
@@ -237,7 +267,7 @@ def api_request(
 
     request = urllib.request.Request(url, data=data, headers=headers, method=method)
     try:
-        with urllib.request.urlopen(request, timeout=timeout) as response:
+        with urllib.request.urlopen(request, timeout=timeout, context=SSL_CONTEXT) as response:
             raw = response.read().decode("utf-8")
     except urllib.error.HTTPError as exc:
         raw = exc.read().decode("utf-8", errors="replace")
@@ -303,7 +333,7 @@ def download_url(url: str, output_path: pathlib.Path) -> pathlib.Path:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     request = urllib.request.Request(url, headers={"Accept": "*/*"})
     try:
-        with urllib.request.urlopen(request, timeout=300) as response:
+        with urllib.request.urlopen(request, timeout=300, context=SSL_CONTEXT) as response:
             with output_path.open("wb") as file_obj:
                 while True:
                     chunk = response.read(1024 * 1024)

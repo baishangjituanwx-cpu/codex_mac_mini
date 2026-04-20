@@ -259,6 +259,32 @@
 ### 变更摘要
 - 以 `2026-04-16T10:25:10.298Z` 为基线扫描四个目录后，未发现新的技能文件、技能支撑自动化文件，或新的删除记录。
 
+## 2026-04-20 00:58:19 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T15:56:29.481Z`
+- 上次运行对应本地时间: `2026-04-19 23:56:29 CST`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新增 `.py` 文件
+- 无。
+
+### 变更摘要
+- 以 `2026-04-19T15:56:29.481Z` 为基线扫描四个目录后，未发现新的技能文件、技能镜像文件，或与自定义技能相关的支撑自动化文件变更。
+- `docs/automation/github-sync-status.md` 本轮未追加记录，因为没有发现新的待同步变更批次。
+
 ## 2026-04-19 23:58:42 CST
 - 扫描范围:
 - `/Users/baishangjituan/.codex/skills`
@@ -7736,3 +7762,682 @@
 - 其中体量最大的新增目录是 `lark-base`（94 个文件）、`lark-sheets`（34 个文件）和 `lark-whiteboard`（26 个文件）；`lark-whiteboard` 还额外带入了 routes 与 scenes 模板，说明这批镜像不只是基础说明，还包含画板生成路由与场景模板。
 - `playwright_cli.sh` 的修改集中在首轮启动可靠性：补了 Node 证书链兜底、关闭可选 npm install scripts 以避免卡住、并将过长 `TMPDIR` 缩短到 `/tmp/pwcli` 以规避 macOS Unix socket 路径上限。
 - 本轮未发现新的技能相关删除，也未发现新增 `.py` helper；新增内容全部是 Markdown / XML 技能镜像与说明文件。
+
+## 2026-04-20 01:58:38 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T16:57:29.801Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 通过 `git log --since='2026-04-19T16:57:29.801Z' -- skills skill-center automation` 检查仓库历史，以及 `find /Users/baishangjituan/.codex/skills -type f -newermt '2026-04-19 16:57:29 UTC'` 检查 live skills 文件系统窗口后，未发现新的技能相关文件新增、修改或删除。
+- 工作区内 `skills`、`skill-center`、`automation` 目录当前也没有未提交差异，因此本次没有形成新的技能变更批次。
+- 因为没有新批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 03:00:24 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T17:57:30.125Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 通过参考时间戳文件对四个监控根目录执行 `find -type f -newer`，未发现基线之后被新增或修改的技能相关文件。
+- 仓库内 `skills`、`skill-center`、`automation` 目录的 `git status --short`、`git diff --name-status` 与 `git log --since='2026-04-19T17:57:30.125Z'` 结果均为空，本轮没有新的受版本控制技能变更，也没有可确认的删除记录。
+- 因为没有形成新的变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 04:02:47 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T18:59:00.506Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 对四个监控根目录执行 `find -type f -newermt '2026-04-20 02:59:00'` 后，未发现基线之后新增或修改的技能相关文件；`~/.codex/skills` 不是 Git 仓库，因此删除项只能依赖后续快照或文档基线追踪，本轮未检测到可确认删除。
+- 仓库内 `skills`、`skill-center`、`automation` 目录的 `git status --short` 与 `git diff --name-status` 结果均为空，说明自本次传入基线 `2026-04-19T18:59:00.506Z` 以来没有新的受版本控制技能文件增量，也没有待记录的删除。
+- 因为没有形成新的技能变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 05:03:48 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T20:01:00.811Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-19T20:01:00.811Z` 为基线，对四个监控根目录执行基于 mtime 的扫描，未发现新的技能相关文件新增或修改。
+- 仓库内 `skills`、`skill-center`、`automation` 目录的 `git log --since='2026-04-19T20:01:00.811Z'`、`git diff --name-status` 与 `git status --short` 均未返回技能相关增量，因此本轮也没有可确认的受版本控制删除项。
+- 因为没有形成新的技能变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 06:05:05 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T21:02:31.112Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-19T21:02:31.112Z` 为基线，对四个监控根目录执行基于 mtime 的扫描；`/Users/baishangjituan/.codex/skills` 下 `find -type f -newermt '2026-04-19 21:02:31 UTC'` 结果为空，未发现 live skill 文件新增或修改。
+- 仓库内 `skills`、`skill-center`、`automation` 目录的 `git log --since='2026-04-19T21:02:31.112Z'`、`git diff --name-status` 与 `git status --short -- skills skill-center automation` 均未返回技能相关增量，因此本轮也没有可确认的受版本控制删除项。
+- 因为没有形成新的技能变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 07:06:47 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T22:04:01.473Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-19T22:04:01.473Z` 为基线，对四个监控根目录执行基于 mtime 的扫描；四个目录的结果均为空，没有发现新增或修改的技能相关文件。
+- 仓库内 `skills`、`skill-center`、`automation` 目录的 `git log --since='2026-04-19T22:04:01.473Z'`、`git diff --name-status HEAD -- skills skill-center automation` 与 `git status --short --untracked-files=all -- ...` 均未返回技能相关增量，因此本轮也没有可确认的受版本控制删除项。
+- `/Users/baishangjituan/.codex/skills` 当前不是 Git 仓库，本轮未发现 mtime 变化文件，也没有额外快照可用来确认删除；因此该目录删除项仍只能在后续快照对比中确认。
+- 因为没有形成新的技能变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 08:08:36 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-19T23:05:31.851Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-19T23:05:31.851Z` 为基线，对四个监控根目录执行排除 `.venv/`、`__pycache__/`、`.pyc`、`.pyo` 的基于 mtime 精确扫描；四个目录结果均为空，没有发现新的技能或技能支撑自动化文件增量。
+- 仓库内 `skills`、`skill-center`、`automation` 的 `git status --short -- skills skill-center automation` 未返回技能相关变更；因此本轮没有可确认的受版本控制删除或重命名项。
+- `/Users/baishangjituan/.codex/skills` 不是 Git 仓库，本轮也没有新快照差异来源；因此该目录删除项仍只能依赖后续快照对比确认。
+- 因为没有发现新的变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 10:10:12 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-20T01:08:02.555Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-20T01:08:02.555Z` 为基线，对四个监控根目录执行排除 `.git/`、`.venv/`、`node_modules/`、`__pycache__/`、`.pyc`、`.pyo` 的基于 mtime 精确扫描；未发现新增或修改的技能相关文件。
+- 仓库 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 上执行 `git log --since='2026-04-20T01:08:02.555Z' --name-status -- skills skill-center automation`、`git status --short --untracked-files=all -- skills skill-center automation` 均为空，因此本轮没有可确认的受版本控制新增、修改或删除项。
+- `/Users/baishangjituan/.codex/skills` 当前不是 Git 仓库；本轮文件扫描同样为空，所以没有可确认的 live skill 删除记录。
+- 因为没有形成新的技能变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 11:10:36 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-20T02:09:03.436Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-20T02:09:03.436Z` 为基线，对四个监控根目录执行基于文件 birth time 与 mtime 的扫描；未发现新增或修改的技能相关文件。
+- 仓库 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 上执行 `git diff --name-status HEAD -- skills skill-center automation` 与 `git status --short --untracked-files=all -- skills skill-center automation docs/automation/skill-change-monitor.md docs/automation/github-sync-status.md`，没有发现新的技能相关受版本控制增量或删除项。
+- `/Users/baishangjituan/.codex/skills` 当前不是 Git 仓库，本轮文件扫描同样为空，因此没有可确认的 live skill 删除记录。
+- 因为没有形成新的技能变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 12:11:31 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-20T03:09:45.346Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-20T03:09:45.346Z` 为基线，对四个监控根目录执行基于 mtime 的精确扫描；未发现新增或修改的技能相关文件。
+- 仓库 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 上执行 `git diff --name-status -- skills skill-center automation` 与 `git status --short --untracked-files=all -- skills skill-center automation docs/automation/skill-change-monitor.md docs/automation/github-sync-status.md`，没有发现新的技能相关受版本控制增量或删除项。
+- `/Users/baishangjituan/.codex/skills` 当前不是 Git 仓库，本轮文件扫描同样为空，因此没有可确认的 live skill 删除记录。
+- 因为没有形成新的技能变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 12:11:50 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-20T03:09:45.346Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-20T03:09:45.346Z` 为基线，对四个监控根目录执行基于 mtime 的精确扫描；未发现新增或修改的技能相关文件。
+- 仓库 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 上执行 `git diff --name-status -- skills skill-center automation` 与 `git status --short --untracked-files=all -- skills skill-center automation docs/automation/skill-change-monitor.md docs/automation/github-sync-status.md`；除监控日志自身外，没有发现新的技能相关受版本控制增量或删除项。
+- `/Users/baishangjituan/.codex/skills` 当前不是 Git 仓库，本轮文件扫描同样为空，因此没有可确认的 live skill 删除记录。
+- 因为没有形成新的技能变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 13:13:18 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-20T04:10:45.567Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-20T04:10:45.567Z` 为基线，对四个监控根目录执行基于 mtime 的精确扫描；未发现新增或修改的技能相关文件。
+- 仓库 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 上执行 `git diff --name-status -- skills skill-center automation`、`git log --since='2026-04-20T04:10:45Z' --name-status -- docs/automation skills skill-center automation` 与 `git status --short --untracked-files=all -- skills skill-center automation docs/automation/skill-change-monitor.md docs/automation/github-sync-status.md`；除监控日志自身外，没有发现新的技能相关受版本控制增量或删除项。
+- `/Users/baishangjituan/.codex/skills` 当前不是 Git 仓库，且 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md` 没有可用于差分删除项的上一轮目录快照，因此本轮没有可确认的 live skill 删除记录。
+- 因为没有形成新的技能变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 13:12:56 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-20T04:10:45.567Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-20T04:10:45.567Z` 为基线，对四个监控根目录执行基于 mtime 的精确扫描；未发现新增或修改的技能相关文件。
+- 仓库 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 上执行 `git diff --name-status -- skills skill-center automation` 与 `git status --short --untracked-files=all -- skills skill-center automation docs/automation/skill-change-monitor.md docs/automation/github-sync-status.md`；除监控日志自身外，没有发现新的技能相关受版本控制增量或删除项。
+- `/Users/baishangjituan/.codex/skills` 当前不是 Git 仓库，本轮文件扫描同样为空，因此没有可确认的 live skill 删除记录。
+- 因为没有形成新的技能变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 14:23:13 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-20T05:11:45.835Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-20T05:11:45.835Z` 为基线，对四个监控根目录执行基于 mtime 的精确扫描；没有发现新的技能相关文件新增或修改。
+- 仓库 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 上执行 `git status --short --untracked-files=all -- skills skill-center automation`；结果为空，因此没有新的受版本控制技能相关增量或删除项。
+- `/Users/baishangjituan/.codex/skills` 当前不是 Git 仓库，本轮文件扫描同样为空；由于没有上一轮目录快照，也没有发现可确认的 live skill 删除记录。
+- 因为没有形成新的技能变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 14:24:06 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-20T05:11:45.835Z`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-20T05:11:45.835Z` 为基线，对四个监控根目录执行基于 mtime 的精确扫描；未发现新增或修改的技能相关文件。
+- 仓库 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 上执行 `git status --short --untracked-files=all -- skills skill-center automation`；结果为空，因此没有新的受版本控制技能相关增量或删除项。
+- `/Users/baishangjituan/.codex/skills` 当前不是 Git 仓库，且自动化 memory 中没有目录快照可用于严格识别 live 删除项；因此本轮没有可确认的技能文件删除记录。
+- 因为没有形成新的技能变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 15:15:11 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-20T06:12:15.966Z`
+- 结果汇总: 新增 1，修改 1，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/__pycache__/seedance_cli.cpython-314.pyc` | `added` | Generated Python bytecode cache for the Seedance direct API CLI after the updated script was executed.
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/seedance_cli.py` | `modified` | Added explicit SSL context discovery with fallback CA bundle paths and reused that context for API requests and downloads, hardening HTTPS execution across environments with inconsistent certificate locations.
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-20T06:12:15.966Z` 为基线，对四个监控根目录执行基于 mtime 的精确扫描；仅发现 `~/.codex/skills/seedance-video-api` 下 1 个脚本修改和 1 个派生缓存文件新增。
+- 通过对比 live skill 脚本与仓库镜像 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.py`，确认本次 Python 变更聚焦于 SSL 证书链定位与 `urllib` 请求/下载复用同一 TLS context，而非命令接口或任务协议变更。
+- 仓库 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 上执行 `git status --short --untracked-files=all -- skills skill-center automation` 与 `git diff --name-status --find-renames -- skills skill-center automation`；结果为空，因此当前变更批次仍停留在 live `~/.codex/skills`，尚未同步进仓库镜像。
+
+## 2026-04-20 16:15:55 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-20T07:13:46.113Z`（本地时区为 `2026-04-20 15:13:46 CST`）
+- 结果汇总: 新增 1，修改 0，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-20-ai-content-platform-execution.yaml` | `added` | Added a new multi-platform content package for the `python-platform-takeover` automation, wiring campaign ID `2026-04-20-ai-content-platform-execution`, shared video and cover assets, and platform-specific titles/descriptions for Weibo, Douyin, WeChat Channels, Kuaishou, Baijiahao, Toutiao, Zhihu, and Xiaohongshu.
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-20T07:13:46.113Z` 为基线，对四个监控根目录执行排除 `.git/`、`node_modules/`、`.venv/`、`__pycache__/` 的基于 mtime 精确扫描；仅发现 `automation/python-platform-takeover/configs/` 下新增 1 个内容包配置文件。
+- `stat` 显示该文件 birth time 与 mtime 均为 `2026-04-20 15:55:12 CST`，因此本轮按新增处理而非修改；该变更属于自定义技能支撑自动化的配置增量，不涉及新的 Python 实现文件。
+- 仓库 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 上执行 `git status --short --untracked-files=all -- skills skill-center automation`，仅返回该 YAML 为未跟踪文件；`git log --since='2026-04-20T07:13:46.113Z' --name-status -- skills skill-center automation` 为空，因此本轮没有可确认的受版本控制修改或删除项。
+
+## 2026-04-20 17:18:05 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-20T08:14:46.317Z`（本地时区为 `2026-04-20 16:14:46 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-20T08:14:46.317Z` 为基线，对四个监控根目录执行基于 mtime 的精确扫描；未发现新增或修改的技能相关文件，新增 `.py` 文件数量为 0。
+- 仓库 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 上执行 `git status --short -- skills skill-center automation`，仍只看到 `automation/python-platform-takeover/configs/content-package.2026-04-20-ai-content-platform-execution.yaml` 为未跟踪文件；其 birth time 与 mtime 为 `2026-04-20 15:55:12 CST`，早于本轮基线，且已在 `2026-04-20 16:15:55 CST` 的监控记录中登记，因此不重复计入本批次。
+- `git log --since='2026-04-20T08:14:46Z' --name-status -- skills skill-center automation` 为空；`/Users/baishangjituan/.codex/skills`、仓库 `skills/`、`skill-center/` 与 `automation/` 目录中也没有任何文件 mtime 晚于基线，因此本轮没有可确认的新增、修改或删除项。
+- 因为没有形成新的技能变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 18:19:22 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-20T09:16:46.522Z`（本地时区为 `2026-04-20 17:16:46 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-20T09:16:46.522Z` 为基线，对四个监控根目录执行排除 `.git/`、`node_modules/`、`.venv/`、`__pycache__/` 的基于 mtime 精确扫描；没有任何技能相关文件的 mtime 晚于基线，因此未发现新增或修改项。
+- 仓库 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 上执行 `git status --short --untracked-files=all -- skills skill-center automation`，仍只返回先前已记录的 `automation/python-platform-takeover/configs/content-package.2026-04-20-ai-content-platform-execution.yaml`；该文件早于本轮基线，故不重复计入本批次。
+- `git log --since='2026-04-20T09:16:46.522Z' --name-status -- skills skill-center automation` 为空，说明仓库内没有自上次运行以来的新提交级技能相关增量，也没有可确认的 tracked 删除项。
+- 因为没有形成新的技能变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 19:20:10 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-20T10:18:16.754Z`（本地时区为 `2026-04-20 18:18:16 CST`）
+- 结果汇总: 新增 0，修改 12，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/SKILL.md` | `modified` | Runtime skill bundle refresh retouched the PowerPoint skill instructions; SHA1 still matches the persisted snapshot, so this is a metadata-only update rather than a new instruction revision.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/agents/openai.yaml` | `modified` | Runtime bundle refresh retouched the Slides agent manifest; SHA1 is unchanged versus the persisted snapshot.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/assets/file-presentation.png` | `modified` | Runtime bundle refresh retouched the Slides icon asset; SHA1 is unchanged versus the persisted snapshot.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/scripts/init_pro_deck_builder_js.js` | `modified` | Runtime bundle refresh retouched the deck-builder bootstrap helper; SHA1 is unchanged versus the persisted snapshot.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/scripts/prepare_reference_prompts.js` | `modified` | Runtime bundle refresh retouched the reference-prompt generator; SHA1 is unchanged versus the persisted snapshot.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/scripts/pro_deck_quality_check.js` | `modified` | Runtime bundle refresh retouched the PPTX quality-check helper; SHA1 is unchanged versus the persisted snapshot.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/templates/build_pro_deck_template.js` | `modified` | Runtime bundle refresh retouched the pro-deck template scaffold; SHA1 is unchanged versus the persisted snapshot.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/spreadsheets/SKILL.md` | `modified` | Runtime skill bundle refresh retouched the spreadsheet authoring instructions; SHA1 still matches the persisted snapshot, so this is a metadata-only update.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/spreadsheets/agents/openai.yaml` | `modified` | Runtime bundle refresh retouched the Spreadsheets agent manifest; SHA1 is unchanged versus the persisted snapshot.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/spreadsheets/assets/file-spreadsheet.png` | `modified` | Runtime bundle refresh retouched the spreadsheet icon asset; SHA1 is unchanged versus the persisted snapshot.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/spreadsheets/style_guidelines.md` | `modified` | Runtime bundle refresh retouched the spreadsheet styling guide; SHA1 is unchanged versus the persisted snapshot.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/spreadsheets/templates/financial_models.md` | `modified` | Runtime bundle refresh retouched the finance template guidance; SHA1 is unchanged versus the persisted snapshot.
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-20T10:18:16.754Z` 为基线执行扫描；没有任何仓库内 `skills/`、`skill-center/`、`automation/` 文件晚于该基线，因此本轮不存在新增文件。
+- `~/.codex/skills/codex-primary-runtime/` 下有 12 个文件的 mtime 统一刷新到 `2026-04-20 18:42:33 CST`，集中在 `slides` 与 `spreadsheets` 两个运行时技能，覆盖 `SKILL.md`、agent manifest、图标资源、JS helper script、模板和样式/金融指南。
+- 进一步对比 `/Users/baishangjituan/.codex/automations/skill-monitor/skill-file-snapshot.tsv` 中的持久化 SHA1，确认这 12 个文件当前内容与快照完全一致；因此本批次属于 runtime skill bundle 的 metadata-only refresh，而不是新的源码或文档内容变更。
+- 本轮未发现新的 `.py` 文件，也未通过仓库 `git status --short --untracked-files=all -- skills skill-center automation` 或 `git diff --name-status -- skills skill-center automation` 观察到任何技能相关删除项。
+
+## 2026-04-20 20:22:17 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-20T11:19:46.942Z`（本地时区为 `2026-04-20 19:19:46 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-20T11:19:46.942Z` 为基线，对四个监控根目录执行排除 `.git/`、`node_modules/`、`.venv/`、`__pycache__/` 的基于 mtime 精确扫描；没有任何技能相关文件的 mtime 晚于该基线，因此本轮未发现新增或修改项。
+- 复核最近候选文件后，确认 `automation/python-platform-takeover/configs/content-package.2026-04-20-ai-content-platform-execution.yaml` 的 mtime 为 `2026-04-20 15:55:12 CST`，live `~/.codex/skills/codex-primary-runtime/{slides,spreadsheets}` 的 runtime bundle refresh mtime 为 `2026-04-20 18:42:33 CST`；这些都早于本轮基线，且已在更早记录中登记，因此不重复计入本批次。
+- 仓库 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 上执行 `git log --since='2026-04-20T11:19:46.942Z' --name-status -- skills skill-center automation` 结果为空；当前工作区在相关目录下也没有新的 tracked 删除项，因此本轮没有可确认的删除文件。
+- 因为没有形成新的技能变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 21:22:45 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-20T12:20:17.109Z`（本地时区为 `2026-04-20 20:20:17 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-20T12:20:17.109Z` 为基线，对四个监控根目录执行基于 mtime 的文件扫描；没有任何技能相关文件的 mtime 晚于该基线，因此未发现新增或修改项。
+- 仓库 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 上执行 `git status --short --untracked-files=all -- skills skill-center automation` 时，仍只看到 `automation/python-platform-takeover/configs/content-package.2026-04-20-ai-content-platform-execution.yaml`；该文件 mtime 为 `2026-04-20 15:55:12 CST`，早于本轮基线，且已在更早批次记录中登记，因此不重复计入本次结果。
+- `git log --since='2026-04-20T12:20:17.109Z' --name-status -- skills skill-center automation` 为空，说明仓库内没有自上次运行以来的新提交级技能相关增量，也没有可确认的 tracked 删除项。
+- 因为没有形成新的技能变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 21:22:40 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-20T12:20:17.109Z`（本地时区为 `2026-04-20 20:20:17 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-20T12:20:17.109Z` 为基线，对四个监控根目录执行基于 mtime 的文件扫描；没有任何技能相关文件的 mtime 晚于该基线，因此本轮未发现新增或修改项。
+- 复核仓库工作区 `git status --short --untracked-files=all -- skills skill-center automation` 后，唯一候选仍是 `automation/python-platform-takeover/configs/content-package.2026-04-20-ai-content-platform-execution.yaml`；其 mtime 为 `2026-04-20 15:55:12 CST`，早于本轮基线，且已在 `2026-04-20 16:15:55 CST` 批次中登记，因此不重复计入。
+- 仓库 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 上执行 `git log --since='2026-04-20T12:20:17.109Z' --name-status -- skills skill-center automation` 结果为空，当前也没有新的 tracked 删除项，因此本轮没有可确认的删除文件。
+- 因为没有形成新的技能变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 23:26:02 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-20T14:22:47.638Z`（本地时区为 `2026-04-20 22:22:47 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-20T14:22:47.638Z` 为基线，对四个监控根目录执行排除 `.git/`、`node_modules/`、`.venv/`、`__pycache__/` 的基于 mtime 精确扫描；结果为空，没有任何技能相关文件的 mtime 晚于该基线。
+- 复核仓库 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 的 `git status --short --untracked-files=all -- docs/automation skills skill-center automation` 后，可见的未提交项仍只有更早时段已存在的 `docs/automation/{github-sync-status.md,skill-change-monitor.md,windows-translation-status.md}`、`skill-center/skills/seedance-video-api/scripts/seedance_cli.py`，以及 `automation/python-platform-takeover/configs/content-package.2026-04-20-ai-content-platform-execution.yaml`；这些文件的 mtime 分别为 `2026-04-20 19:24:28 CST`、`2026-04-20 21:23:11 CST`、`2026-04-20 22:04:25 CST`、`2026-04-20 22:02:43 CST`、`2026-04-20 15:55:12 CST`，都早于本轮基线，因此不重复计入。
+- 执行 `git log --since='2026-04-20T14:22:47.638Z' --name-status -- skills skill-center automation` 结果为空；当前工作区在目标目录下也没有新的 tracked 删除项，因此本轮没有可确认的删除文件。
+- 因为没有形成新的技能变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
+
+## 2026-04-20 23:25:44 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-20T14:22:47.638Z`（本地时区为 `2026-04-20 22:22:47 CST`）
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 以自动化提供的上次运行时间 `2026-04-20T14:22:47.638Z` 为基线，对四个监控根目录执行基于 mtime 的扫描；没有任何技能相关文件晚于该基线，因此本轮未发现新增或修改项。
+- 复核仓库工作区 `git status --short --untracked-files=all -- skills skill-center automation` 后，仍只看到 `skill-center/skills/seedance-video-api/scripts/seedance_cli.py` 与 `automation/python-platform-takeover/configs/content-package.2026-04-20-ai-content-platform-execution.yaml` 两个既有候选；它们都早于本轮基线，且已分别在 `2026-04-20 15:15:11 CST` 与 `2026-04-20 16:15:55 CST` 批次中登记，因此不重复计入。
+- 仓库 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 上执行 `git log --since='2026-04-20T14:22:47.638Z' --name-status -- skills skill-center automation` 结果为空；当前没有新的 tracked 删除项，因此本轮没有可确认的删除文件。
+- 因为没有形成新的技能变更批次，本轮未更新 `docs/automation/github-sync-status.md`。
