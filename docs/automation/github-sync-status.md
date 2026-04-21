@@ -219,6 +219,11 @@
 ## 2026-04-17 16:48:32 CST
 - 检测到新的技能变更批次: 新增 2，修改 1，删除 0。
 
+## 2026-04-21 15:44:17 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `~/.codex/skills/data-review/references/docker-dashboard-contract.md`，主要是 Docker 看板契约字段和 companion JSON / `footerLinks` 说明的细化。
+- 建议后续执行 GitHub 同步，避免 live `data-review` 技能规则与仓库记录继续漂移。
+
 ## 2026-04-19 23:58:42 CST
 - 检测到新的技能变更批次: 新增 3，修改 3，删除 0。
 - 这批变更集中在 `/Users/baishangjituan/.codex/skills/seedance-video-api/` 的真人素材身份锁定规则、`asset://...` 示例 payload，以及覆盖交付流程的说明补强。
@@ -507,3 +512,101 @@
   - 跳过了 `codex/windows-version-20260411` 的新提交与推送，因为当前仓库工作区没有新的 Windows-only bridge / deployment 变更；本轮实际增量都属于通用 skill 镜像、自动化状态文档或 Mac-compatible Python takeover 内容包。
   - `codex/windows-sync` 上遗留的本地提交 `57c7427` 经 `git cherry origin/codex/windows-version-20260411 codex/windows-sync` 复核已被标记为 patch-equivalent（`-`），说明没有剩余的独立 Windows payload 需要再上传到 `codex/windows-version-20260411`。
   - 跳过了 live `~/.codex/skills/codex-primary-runtime/{slides,spreadsheets}` 的 metadata-only refresh，因为内容 hash 未变，不构成需要同步到仓库的新内容。
+
+## 2026-04-21 00:28:37 CST
+- 检测到新的技能变更批次: 新增 0，修改 4，删除 0。
+- 这批变更集中在 live `~/.codex/skills/seedance-video-api` 的提示词模板、真人一致性规则，以及两份 `asset://...` 保真人示例 payload 刷新。
+- 建议后续决定是否把这组 live Seedance 参考资料回写到仓库镜像，避免本地 skill 指南与 GitHub 中的 `skill-center` 版本继续漂移。
+
+## 2026-04-21 12:40:19 CST
+- 检测到新的技能变更批次: 新增 1，修改 2，删除 0。
+- 这批变更集中在 live `~/.codex/skills/data-review` 的 8 平台 Docker 看板导出能力，包括新增的数据契约、固定模板映射段落，以及 `data-review` 主技能规则同步收紧。
+- 建议后续把这组 live `data-review` 更新回写到仓库镜像，避免本地 skill 与 `skill-center` 版本继续漂移。
+
+## 2026-04-21 13:42:12 CST
+- 检测到新的技能变更批次: 新增 2，修改 2，删除 0。
+- 这批变更继续集中在 live `~/.codex/skills/data-review`，新增了 Docker 看板 companion JSON 导出模板，并把主技能规则与固定复盘模板进一步绑定到 8 平台卡片字段和数值型导出约束。
+- 建议后续把这组 live `data-review` 更新回写到仓库镜像，避免本地 skill 与 `skill-center` 版本继续漂移。
+
+## 2026-04-21 13:43:34 CST
+- 检测到新的技能变更批次: 新增 1，修改 736，删除 0。
+- 这批变更集中在 `data-review` 新增仪表盘导出模板，并补充 Docker 仪表盘契约、指标口径、诊断规则与报告模板。；Feishu bridge 技能模板在 live 技能目录与仓库技能镜像两侧同步刷新，覆盖安装说明、部署文档、模板脚本与桥接运行文件。；`clash-verge-standard-env` 更新了技能说明、agent manifest、规则增强 YAML、模板配置与标准环境应用脚本。；Codex runtime 的 `slides` 与 `spreadsheets` 技能刷新了说明、agent manifest、图标、脚本和模板指南。；`coze-seedance15pro-sales-workflow` 刷新了工作流配置、导出工作流、运行时说明与执行脚本。；Lark 系列技能在 live 与 `skill-center` 镜像中发生大批量参考文档刷新，覆盖 Base、Sheets、Slides、Calendar、IM、Mail 等技能。；`skill-center` 中的 `seedance-video-api` 增补了示例素材、执行文档以及 PowerShell / Python / shell 辅助脚本。；`wechat-channels-launchagent-keepalive` 刷新了 keepalive 技能说明、agent 配置与 Windows 侧保活脚本。
+- 建议后续执行 GitHub 同步，避免本地技能目录、skill-center 镜像和仓库技能模板继续漂移。
+
+## 2026-04-21 15:44:21 CST
+- 检测到新的技能变更批次: 新增 1，修改 1，删除 0。
+- 这批变更集中在 live `~/.codex/skills/data-review/references/docker-dashboard-contract.md` 的导出契约收紧，以及 `automation/python-platform-takeover/configs/content-package.2026-04-21-platform-execution-next-round.yaml` 这份新的多平台执行配置包。
+- 后续 GitHub 同步应拆成两部分处理: 仓库内新增的 takeover 配置包可以直接纳入同步，而 live `data-review` 文档是否回写到仓库镜像仍需先做镜像决策。
+
+## 2026-04-21 17:46:24 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 live `~/.codex/skills/data-review/references/docker-dashboard-contract.md`，新增了面向 Docker 看板用户界面的字段展示约束，明确禁止未标注的数字串直接进入 headline / baseline note / compact metrics 等显示位。
+- 建议后续先决定是否把这份 live `data-review` 契约回写到仓库镜像；在镜像决策完成前，这批变更仍应保留为待同步提示，避免本地 skill 规则与 `skill-center` 版本继续漂移。
+
+## 2026-04-21 21:50:40 CST
+- 检测到新的技能变更批次: 新增 1，修改 0，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/configs/`，新增了 `content-package.2026-04-21-platform-execution-next-round.yaml`，用于“平台执行链”主题的 8 平台分发内容包配置。
+- 建议后续执行 GitHub 同步，避免发布配置包与自动化监控记录继续漂移。
+
+## 2026-04-21 22:53:05 CST
+- 检测到新的技能变更批次: 新增 9，修改 6，删除 0。
+- 这批变更集中在 `skill-center/skills/data-review/**` 与 `skills/multi-platform-content-review-skill/**` 的 8 平台 Docker 看板导出能力补全，包括数据契约、companion JSON 模板、账号切片分析、账户维度诊断规则与固定映射模板；同时 `skill-center/skills/seedance-video-api/**` 新增了 15 秒提示词标准、真人一致性规则与两份保真人示例 payload。
+- 建议后续执行 GitHub 同步，避免仓库技能镜像、看板导出规范与 Seedance 参考资料继续漂移。
+
+## 2026-04-21 23:54:39 CST
+- 检测到新的技能变更批次: 新增 10，修改 9，删除 0。
+- 这批变更覆盖 `automation/python-platform-takeover/configs/content-package.2026-04-21-platform-execution-next-round.yaml`、`skill-center/skills/data-review/**`、`skills/multi-platform-content-review-skill/**`、`skill-center/skills/seedance-video-api/**`，并同步刷新了三份 supporting automation 监控文档。
+- 建议后续执行 GitHub 同步，优先处理 review-skill / Seedance 镜像与 takeover 配置包，避免仓库技能镜像和自动化状态记录继续漂移。
+
+## 2026-04-22 00:04:07 CST
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-04-21 22:18:06 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮继续执行 GitHub 同步。
+- 本轮同步分支:
+  - `codex/default-python-sync`: 是。本轮写入并推送新的通用内容提交。
+  - `codex/windows-version-20260411`: 否。本轮未创建新的 Windows 专属提交。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。推送内容包含本轮的通用 skill 镜像、Seedance 参考资料、Python takeover 配置包，以及本条同步状态记录。
+  - `codex/windows-version-20260411`: 无需推送。本轮未发现新的 Windows-only bridge / deployment 更新。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync review dashboard skills and Seedance references`
+  - `codex/default-python-sync`: `Record 2026-04-22 GitHub sync status`
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - 跳过了 `codex/windows-version-20260411` 的新提交与推送，因为当前仓库新增或更新的内容仅包含通用 review skill 镜像、`skill-center` Seedance 参考资料、自动化状态文档，以及 Mac-compatible 的 `automation/python-platform-takeover` 内容包配置，没有新的 Windows 专属 bridge / deployment payload。
+
+## 2026-04-22 00:03:43 CST
+- 处理时间:
+  - `2026-04-22 00:03:43 CST`
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 同步前置检查:
+  - 通过。
+  - 依据: `docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-04-21 22:18:06 CST`，其结论明确写明“是否达到‘Mac / Windows 版本都齐全’: 是”。
+- 是否检测到新增或修改:
+  - 是。
+  - `codex/default-python-sync` 本轮仓库增量包括:
+    - `automation/python-platform-takeover/configs/content-package.2026-04-21-platform-execution-next-round.yaml`
+    - `skill-center/skills/data-review/**`
+    - `skills/multi-platform-content-review-skill/**`
+    - `skill-center/skills/seedance-video-api/**`
+    - `docs/automation/skill-change-monitor.md`
+    - `docs/automation/windows-translation-status.md`
+    - `docs/automation/github-sync-status.md`
+  - `codex/windows-version-20260411` 本轮未发现新的 Windows-specific bridge / deployment 仓库增量。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。本轮计划新增提交:
+    - `Sync review mirrors, Seedance refs, and takeover package`
+    - `Record 2026-04-22 GitHub sync status`
+  - `codex/windows-version-20260411`: 否。本轮不创建新提交。
+- 是否已推送:
+  - `codex/default-python-sync`: 待本次运行提交后推送。
+  - `codex/windows-version-20260411`: 无需推送。本轮没有新的 Windows 专属提交需要上传。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync review mirrors, Seedance refs, and takeover package`
+  - `codex/default-python-sync`: `Record 2026-04-22 GitHub sync status`
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - 跳过了 `codex/windows-version-20260411` 的新提交与推送，因为当前仓库工作区没有新的 Windows-only bridge / deployment 变更；本轮实际增量都属于通用 skill 镜像、自动化状态文档或 Mac-compatible Python takeover 内容包。
+  - `automation/python-platform-takeover/configs/content-package.2026-04-21-platform-execution-next-round.yaml` 属于通用内容包配置；虽然素材路径取自当前主机，但它不引入新的 Windows 分支脚本接口，因此继续归入 `codex/default-python-sync`。

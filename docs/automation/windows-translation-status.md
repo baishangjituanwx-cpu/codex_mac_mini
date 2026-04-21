@@ -586,3 +586,120 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-20 22:03:47 CST`，今天 monitor 中新增或修改的自定义 skill / automation 行为已全部完成 Windows 可用性复核；本次运行没有发现新的待补 Windows 缺口。
+
+## 2026-04-21 22:03:34 CST
+
+- 处理时间:
+  - `2026-04-21 22:03:34 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自上次 Windows 转译状态登记后追加的非零批次:
+    - `2026-04-21 15:44:21 CST`
+    - `2026-04-21 17:46:24 CST`
+    - `2026-04-21 21:50:40 CST`
+  - 上述批次实际涉及的待转译行为为:
+    - live `~/.codex/skills/data-review` 新增 / 收紧 Docker 看板导出契约
+    - `automation/python-platform-takeover/configs/content-package.2026-04-21-platform-execution-next-round.yaml` 新增内容包配置
+  - `2026-04-21 16:45:35 CST`、`2026-04-21 18:48:02 CST`、`2026-04-21 19:48:44 CST`、`2026-04-21 20:49:52 CST`、`2026-04-21 21:51:19 CST` 均为 `新增 0，修改 0，删除 0`，无额外待转译项。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/data-review`:
+    - 将 live `data-review` 的 Docker 看板导出能力同步进仓库镜像:
+      - `skill-center/skills/data-review/SKILL.md`
+      - `skill-center/skills/data-review/references/report-template.md`
+      - `skill-center/skills/data-review/references/docker-dashboard-contract.md`
+      - `skill-center/skills/data-review/references/dashboard-export-template.json`
+    - 具体补齐内容:
+      - `SKILL.md` 现已覆盖 8 平台 Docker 看板导出场景，要求固定 8 张平台卡片、board 摘要块、companion JSON 起始模板，以及缺失数据时的保留规则。
+      - `report-template.md` 新增 `## 9. Docker 看板数据映射` 固定区段，明确 JSON 交接、8 平台必填字段、`primaryValue` 数值约束与 `footerLinks` 条件输出。
+      - 新增 `docker-dashboard-contract.md`，把用户可见字段的标签化展示、`headline` / `baselineNote` / compact `metrics` 的输出规则写清楚，避免未命名数字串直接进入看板。
+      - 新增 `dashboard-export-template.json`，为后续导出流程提供固定 8 平台结构的起始文件。
+    - Windows 适配结论:
+      - 本轮 `data-review` 变更属于跨平台文档 / JSON 契约增强，不涉及新的 PowerShell 启动器、Windows 路径分支、键盘快捷键差异或命令包装器。
+      - 契约中的 `windows` 字段指看板里的 `今日 / 近7日账号 / 近30日账号` 时间窗口，不是 Windows 操作系统专属入口；因此仓库只需同步镜像即可完成 Windows 侧覆盖。
+  - `automation/python-platform-takeover`:
+    - 复核新增内容包 `configs/content-package.2026-04-21-platform-execution-next-round.yaml` 后，确认它仍是当日 campaign 资产配置，不是新的脚本接口或技能运行分支。
+    - 现有 Windows 入口仍足够覆盖:
+      - `automation/python-platform-takeover/scripts/social-publisher.ps1`
+      - `automation/python-platform-takeover/scripts/start-chrome-cdp.ps1`
+      - `automation/python-platform-takeover/scripts/quickstart-windows.ps1`
+      - `automation/python-platform-takeover/README.md` 中的 Windows 路径与执行说明
+    - 本轮未新增 Windows 专属副本，因为该 YAML 中的素材绝对路径属于当前主机运行时资产，不适合作为仓库级 Windows 模板分叉。
+- 未完成的补全:
+  - 无。
+  - `2026-04-21` 当前已记录批次中，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、快捷键差异说明、命令包装器或仓库镜像同步的自定义 skill 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 已执行静态校验:
+    - `diff -u skill-center/skills/data-review/SKILL.md ~/.codex/skills/data-review/SKILL.md`
+    - `diff -u skill-center/skills/data-review/references/report-template.md ~/.codex/skills/data-review/references/report-template.md`
+    - `diff -u skill-center/skills/data-review/references/docker-dashboard-contract.md ~/.codex/skills/data-review/references/docker-dashboard-contract.md`
+    - `python3 -m json.tool skill-center/skills/data-review/references/dashboard-export-template.json`
+  - 本机仍未做 Windows PowerShell 实机回归；当前判断基于仓库 PowerShell 入口复核、live skill 镜像一致性与 JSON 静态校验。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-04-21 22:03:34 CST`，今天 monitor 中新增或修改的自定义 skill / automation 行为已完成 Windows 可用性复核；需要同步的仓库镜像已补齐，其余新增项无需额外 Windows 分叉。
+
+## 2026-04-21 22:18:06 CST
+
+- 处理时间:
+  - `2026-04-21 22:18:06 CST`
+- 输入来源:
+  - 对 `skill-change-monitor.md` 中自 `2026-04-20 22:03:47 CST` 之后的非零批次做补充复核，重点回看:
+    - `2026-04-21 00:28:37 CST`
+    - `2026-04-21 12:40:19 CST`
+    - `2026-04-21 13:42:12 CST`
+    - `2026-04-21 13:43:34 CST`
+    - `2026-04-21 15:44:17 CST`
+    - `2026-04-21 15:44:21 CST`
+    - `2026-04-21 17:46:24 CST`
+    - `2026-04-21 21:50:40 CST`
+  - 本次补记实际补到仓库的遗漏项为:
+    - live `~/.codex/skills/data-review` 对应的通用 skill 镜像 `skills/multi-platform-content-review-skill/**`
+    - live `~/.codex/skills/seedance-video-api` 在 `2026-04-21 00:28:37 CST` 新增 / 修改但仓库 `skill-center` 尚未存在的 4 个资产文件
+  - `automation/python-platform-takeover/configs/content-package.2026-04-21-platform-execution-next-round.yaml` 仍仅是当日内容包配置，继续判定为“不需要额外 Windows 分叉”。
+- 已完成的 Windows 补全:
+  - `skills/multi-platform-content-review-skill`:
+    - 补齐通用 skill 镜像，使其与今天新增的 Docker 看板导出行为一致:
+      - `skills/multi-platform-content-review-skill/SKILL.md`
+      - `skills/multi-platform-content-review-skill/references/diagnosis-and-decisions.md`
+      - `skills/multi-platform-content-review-skill/references/platform-metrics.md`
+      - `skills/multi-platform-content-review-skill/references/report-template.md`
+      - `skills/multi-platform-content-review-skill/references/account-slice-analysis.md`
+      - `skills/multi-platform-content-review-skill/references/docker-dashboard-contract.md`
+      - `skills/multi-platform-content-review-skill/references/dashboard-export-template.json`
+    - 具体补齐内容:
+      - 通用 skill 现在与 live `data-review` 一样支持 8 平台 Docker 看板导出、companion JSON 起始模板、账号维度对照分析、Feishu 压缩同步，以及固定 8 卡片字段约束。
+      - 这部分没有新增 Windows 专属脚本需求；Windows 侧仍只是复用现有 cross-platform 文档 / JSON 契约。
+  - `skill-center/skills/seedance-video-api`:
+    - 将 `2026-04-21 00:28:37 CST` 对应的 live 资产补入仓库镜像:
+      - `skill-center/skills/seedance-video-api/references/prompt-template.md`
+      - `skill-center/skills/seedance-video-api/references/real-person-consistency.md`
+      - `skill-center/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0.json`
+      - `skill-center/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0_fast.json`
+    - Windows 适配结论:
+      - 这 4 个文件属于提示词规范与示例 payload 资产，不引入新的 PowerShell 启动器、路径分支、快捷键差异或命令包装器。
+      - 现有 `seedance_cli.ps1` / `invoke_seedance_script.ps1` 入口即可直接消费这些资产，无需新增 Windows 包装层。
+  - `skill-center/skills/data-review`:
+    - 复核确认当前仓库镜像已与 live `~/.codex/skills/data-review` 对齐:
+      - `SKILL.md`
+      - `references/report-template.md`
+      - `references/docker-dashboard-contract.md`
+      - `references/dashboard-export-template.json`
+    - 其中看板契约里的 `windows` 字段仍仅表示 `今日 / 近7日账号 / 近30日账号` 三个时间窗口，不是 Windows 操作系统专属分支。
+- 未完成的补全:
+  - 无。
+  - 本次补记后，`2026-04-21` 已记录的非零批次里，未再发现缺少 Windows PowerShell 入口、Windows 路径处理、快捷键差异说明、命令包装器，或缺失 repo 资产的自定义 skill 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 已执行静态校验:
+    - 逐文件 byte-level 对比 live 与仓库镜像:
+      - `skill-center/skills/data-review/**` 关键文件
+      - `skill-center/skills/seedance-video-api/**` 本次补入的 4 个文件
+    - `python3` JSON 解析校验:
+      - `skill-center/skills/data-review/references/dashboard-export-template.json`
+      - `skills/multi-platform-content-review-skill/references/dashboard-export-template.json`
+      - `skill-center/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0.json`
+      - `skill-center/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0_fast.json`
+  - 本轮没有新增 PowerShell 脚本，因此未做额外的 PowerShell 语法解析或 Windows 实机回归；Windows 判断基于镜像一致性、现有 Windows 入口复核与 JSON 静态校验。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-04-21 22:18:06 CST`，今天 monitor 中新增或修改的自定义 skill / automation 行为已全部补齐到仓库；Mac 与 Windows 覆盖今日均完整。
