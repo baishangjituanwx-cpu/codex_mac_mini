@@ -1,0 +1,31 @@
+campaign_id: "2026-04-21-platform-execution-next-round"
+theme: "写完内容不等于结束，很多团队最耗人的不是想法，而是后面的平台执行链。"
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-21-platform-execution-next-round.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-21-platform-execution-next-round_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-21-platform-execution-next-round_cover_package/cover-horizontal-4x3.png"
+platforms:
+  weibo:
+    title: "别再手动跑平台：内容团队真正耗人的其实是后面的执行链"
+    description: "很多团队写完内容以后，以为工作结束了。其实最耗人的，不是想法，是后面的平台执行链。改写适配、分发执行、回填链接和复盘，这一段更该先交给 AI 员工。人做判断，AI 跑平台。#AI员工 #平台执行 #内容分发"
+  douyin:
+    title: "别再手动跑平台"
+    description: "很多团队写完内容以后，以为工作结束了。其实最耗人的，不是想法，是后面的平台执行链。改写适配、分发执行、回填链接和复盘，这一段更该先交给 AI 员工。人做判断，AI 跑平台。#AI员工 #平台执行 #内容分发 #智能体应用"
+  wechat_channels:
+    title: "先替平台执行"
+    description: "很多团队写完内容以后，以为工作已经结束了。其实最耗人的，不是想法，而是后面的平台执行链。内容改写适配、平台分发执行、回填链接和复盘，这三类动作更该先交给 AI 员工。人做判断，AI 跑平台。"
+  kuaishou:
+    title: "AI接手平台执行"
+    description: "写完内容不等于结束。真正耗人的，往往是后面的平台执行链。内容改写适配、平台分发执行、回填链接和复盘，这三类活更该先交给 AI。人做判断，AI 跑流程。"
+  baijiahao:
+    title: "写完内容不等于结束：很多团队真正卡住的是后面的平台执行链"
+    description: "很多内容团队真正被拖慢的，常常不是写内容本身，而是写完之后的那一整段平台执行链。\n\n一条内容完成以后，还要改成不同平台的版本、上传封面、逐个平台分发、回填链接、同步复盘。越往后越重复，越重复越适合先交给 AI。\n\n更值得第一批交给 AI 员工的，不是创意判断，而是这三类动作：内容改写适配、平台分发执行、回填链接和复盘。\n\n人把时间拿回来，继续做选题判断、表达方向和结果决策。"
+  toutiao:
+    title: "很多团队内容做不动，不是不会写，而是卡在后面的平台执行链"
+    description: "很多团队写完内容以后，总觉得最难的是选题和表达。\n\n但真正把效率拖慢的，往往不是前面的创意，而是后面的平台执行链：改写适配、分发执行、回填链接、同步复盘。\n\n这一段重复动作，更适合先交给 AI 员工。人继续做判断，AI 去跑平台。"
+  zhihu:
+    title: "为什么很多内容团队最该先交给 AI 的，不是创意，而是平台执行？"
+    description: "我越来越认同一个判断：很多内容团队最耗人的，不是想法，而是后面的平台执行链。\n\n一条内容写完以后，还要改成不同平台的版本、逐个平台发、回填链接、同步复盘。这一段既重复又稳定，更适合第一批交给 AI 员工。\n\n更该先交给 AI 的，不是创意判断，而是三类动作：内容改写适配、平台分发执行、回填链接和复盘。\n\n人把时间拿回来，继续做选题判断、表达方向和结果决策。"
+  xiaohongshu:
+    title: "别再人工一条条发平台：内容团队最耗人的其实不是写内容"
+    description: "很多团队做内容，最累的不是想法，而是写完以后还要继续手动跑平台。\n\n改写适配、分发执行、回填链接、同步复盘，这一段更该先交给 AI 员工。\n\n我更建议先让 AI 接三类动作：\n1. 内容改写适配\n2. 平台分发执行\n3. 回填链接和复盘\n\n人做判断，AI 跑平台。"

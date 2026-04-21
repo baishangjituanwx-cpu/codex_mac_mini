@@ -1,0 +1,24 @@
+{
+  "model": "doubao-seedance-2-0-260128",
+  "content": [
+    {
+      "type": "text",
+      "text": "严格参考这位真人素材，严格保持原有人物身份稳定，严格保持原有人物大型轮廓、面型结构、五官位置、眼神、肤色、年龄感稳定，严格保持原有人物体态、体型、身材比例稳定，严格保持原有人物发型、服装款式、服装颜色、配饰和整体气质稳定，不要换脸，不要改服装，不要改变体态，不要改变年龄感，不要年轻化，不要美颜化，不要网红化，不要变装，不要多替身，不要变成另一个演员。人物在真实办公环境中自然看向镜头并向前走两步，镜头轻微推进，光线真实柔和，整体写实稳定，音画同步。"
+    },
+    {
+      "type": "image_url",
+      "role": "reference_image",
+      "image_url": {
+        "url": "asset://replace-with-your-real-person-asset-id"
+      }
+    }
+  ],
+  "resolution": "720p",
+  "ratio": "9:16",
+  "duration": 8,
+  "seed": -1,
+  "camera_fixed": false,
+  "watermark": false,
+  "generate_audio": true,
+  "return_last_frame": true
+}

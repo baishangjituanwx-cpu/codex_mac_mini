@@ -70,3 +70,34 @@ Use these platform-specific priorities:
 - Compare within the same format and the same time window before calling winners and losers.
 - If a post published late at night, it is acceptable to review it on the next morning and state that timing explicitly.
 - If the platform does not expose a metric, do not infer it from other fields unless the user explicitly asks for estimation.
+
+## Account-dimension metrics
+
+When the review must cover the platform account and not just one post, collect these trend signals where visible:
+
+- recent comparable items count
+- how many recent items were truly published
+- how many recent items remained under review or route-blocked
+- how many recent items were near-zero distribution
+- whether the current item is above, near, or below the account's recent band
+- whether one format is consistently stronger than another on the same platform account
+
+Prefer simple account-language over fake composite scores:
+
+- distribution floor stable / unstable
+- account warming / flat / weakening
+- article stronger than video
+- video stronger than article
+- route stable / route unstable
+- moderation drag visible / not visible
+
+## Platform-specific account clues
+
+- 视频号: trust comments, private-domain sharing, whether several recent posts stay low despite successful publish
+- 抖音: repeated zero or near-zero play starts, missing descriptions, unstable creator-center publish outcomes
+- 快手: repeated low but non-zero starts, comment practicality, plain-language engagement consistency
+- B站: whether recent posts can clear the same low floor, and whether saves / coins appear at all
+- 微博: whether recent mixed posts trigger discussion or stay silent, and whether public-topic fit is weakening
+- 百家号: whether recent图文 keeps getting recommendation, and whether search-type long tail exists
+- 知乎: whether recent回答 / 文章 keeps getting trust interactions even when early traffic is small
+- 头条号: whether repeated审核中 or delayed recommendation is throttling the account more than the content

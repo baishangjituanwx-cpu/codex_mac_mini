@@ -27,6 +27,7 @@ Use it to answer:
 - the user wants the review pushed to a Feishu chat after completion
 - the user wants 最近几条视频 or 最近几篇图文的连续对比
 - the user wants a 平台账号维度, 账号盘面, or 趋势型数据分析
+- the user wants to update the 8-platform Docker dashboard or export the review into a fixed dashboard data contract
 
 ## Scope and inputs
 
@@ -62,6 +63,11 @@ In this workspace, look first in:
 - `content-library/assets/generated/<date-topic>/`
 - any dated review notes that reveal platform/account carry-over effects
 
+When the user wants to update the LAN Docker dashboard, also read:
+
+- [docker-dashboard-contract.md](./references/docker-dashboard-contract.md)
+- [dashboard-export-template.json](./references/dashboard-export-template.json)
+
 When browser checks are required, route through:
 
 - `[$platform-ops-hub](/Users/baishangjituan/.codex/skills/platform-ops-hub/SKILL.md)` for platform routing
@@ -75,6 +81,7 @@ When browser checks are required, route through:
 - list the platforms and formats that were supposed to go out
 - separate `published`, `duplicate-skipped`, `blocked`, `under review`, and `not found`
 - define the comparison window for each platform account: current batch only, last 3 posts, last 7 days, or last 30 days
+- if the target is the 8-platform Docker dashboard, force one explicit platform block for 视频号、抖音、快手、B站、微博、百家号、知乎、头条号 even when some are `not found` or `未完成内容级核验`
 
 2. Collect raw evidence:
 - capture exact visible metrics with exact labels
@@ -87,6 +94,8 @@ When browser checks are required, route through:
 - `公开页已核验`
 - `未完成内容级核验`
 - when the account content list is accessible, review all currently visible same-format published rows before writing the platform conclusion
+- when the target is the Docker dashboard, also collect or derive the exact card fields the dashboard needs: `latestTitle`, `publishTime`, `contentType`, one numeric `primaryValue`, one comparison baseline, `今日 / 近7日账号 / 近30日账号` three windows, four compact metrics, one short `diagnosis`, and one short `action`
+- when writing a companion JSON export, start from [dashboard-export-template.json](./references/dashboard-export-template.json) so all 8 cards and all fixed fields stay present
 
 3. Read the numbers in layers:
 - publish success: did the content actually land
@@ -105,6 +114,7 @@ When browser checks are required, route through:
 - use [diagnosis-and-decisions.md](./references/diagnosis-and-decisions.md) to separate hook, title, cover, structure, account-state, and route failures
 - do not flatten every failure into "content weak"
 - do not flatten repeated weak distribution into one-post bad luck if the same account has shown the same pattern across several recent items
+- when exporting to the Docker dashboard, derive one CSS-safe `status` from the supported set `steady`, `watch`, `warning`, `weak`, `opportunity`, then write a Chinese `statusLabel` that stays grounded in the verified evidence
 
 5. Decide the next move:
 - choose `Keep`, `Cut`, or `Retest`
@@ -122,6 +132,7 @@ When browser checks are required, route through:
 - whether tomorrow should prioritize fresh distribution tests or account repair / verification
 - one `下一批图文内容高占比倾向`
 - one `下一批小云雀视频高占比倾向`
+- when the target is the Docker dashboard, also produce the board-level fields `title`, `dateLabel`, `subtitle`, `northStar`, exactly 4 `summary` tiles, exactly 3 `keep` items, exactly 3 `cut` items, and exactly 3 `next` items
 
 7. Write back reusable lessons:
 - repeated objections
@@ -178,10 +189,13 @@ When browser checks are required, route through:
 - If the account history is too sparse, say `insufficient account history` instead of pretending to see a trend.
 - Repeated `审核中`, repeated `0`, or repeated route breakage across recent posts should be treated as account or operations evidence, not isolated accidents.
 - If one post is weak but the previous few were normal, favor a single-post packaging diagnosis before calling account decline.
-- Every final review must end with:
+- Every final review must include:
 - `下一批图文内容高占比倾向`
 - `下一批小云雀视频高占比倾向`
 - `未完成核验项`
+- If the user asks to update the 8-platform Docker dashboard, append the Docker dashboard mapping block defined in [docker-dashboard-contract.md](./references/docker-dashboard-contract.md), or write the same object to a companion JSON export file when the workflow needs a file-based handoff.
+- When exporting to the Docker dashboard, never omit a platform card; keep the card and mark gaps as `未完成内容级核验`, `暂未可见`, or numeric `0` according to the contract.
+- When exporting to the Docker dashboard, `primaryValue` must stay numeric so the ranking and ring chart do not break.
 
 ## Output format
 
@@ -192,3 +206,5 @@ If the user asks for Feishu同步, keep the main Codex output in the fixed repor
 For metrics vocabulary and platform-specific priorities, read [platform-metrics.md](./references/platform-metrics.md).
 For recent-post and account-slice comparison, read [account-slice-analysis.md](./references/account-slice-analysis.md).
 For diagnosis and `Keep / Cut / Retest`, read [diagnosis-and-decisions.md](./references/diagnosis-and-decisions.md).
+When the review must feed the Docker dashboard, also read [docker-dashboard-contract.md](./references/docker-dashboard-contract.md).
+When the review must write a companion JSON file, also use [dashboard-export-template.json](./references/dashboard-export-template.json) as the starting structure.

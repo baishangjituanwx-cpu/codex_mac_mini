@@ -74,6 +74,48 @@ Next move:
 - verify management-list visibility and moderation state
 - do not blame the topic until account-state is cleared
 
+### Account baseline weakness
+
+Common signs:
+
+- several recent comparable posts are all near the low end
+- current post is not an outlier; it matches a weak recent baseline
+- no single hook or title fix fully explains the repeated softness
+
+Next move:
+
+- diagnose at the account level, not only the post level
+- reduce blind repetition
+- test one sharper topic or one stronger format reset
+- verify whether route, permissions, or moderation drag is depressing the whole account
+
+### Format mismatch
+
+Common signs:
+
+- one format repeatedly works on the same platform account while another format repeatedly underperforms
+- the topic family is fine elsewhere, but this format keeps missing on this platform
+
+Next move:
+
+- keep the topic
+- shift to the format the account actually carries better
+- do not Cut the platform prematurely if the mismatch is format-specific
+
+### Pattern fatigue
+
+Common signs:
+
+- recent titles or hooks are too similar
+- audience response flattens across several posts with nearly identical framing
+- no fresh entry signal appears even when publication is normal
+
+Next move:
+
+- reset the promise
+- vary the lead conflict, question, or proof style
+- keep only the core judgment, not the repeated packaging shell
+
 ### Login or publish-route breakage
 
 Common signs:
@@ -139,6 +181,9 @@ Action:
 - modest traffic + strong comments or DMs => keep or retest; do not cut too early
 - high traffic + low-value noise only => packaging mismatch or wrong audience
 - platform says published but management list cannot confirm => publish-route issue
+- several recent posts all weak in the same way => account baseline issue or format mismatch
+- one weak post surrounded by normal recent posts => single-post packaging miss
+- repeated review delays or missing metadata => route instability before content weakness
 
 ## Minimum return for each platform
 
@@ -147,3 +192,13 @@ Action:
 - tomorrow's action
 - Keep / Cut / Retest
 - one sentence explaining why that decision fits
+
+## Minimum return for each platform account
+
+- comparison window
+- current item position vs recent baseline
+- account health signal
+- repeated win pattern
+- repeated loss pattern
+- recurring operations issue
+- one sentence saying whether tomorrow should push, pause, repair, or switch format

@@ -1,0 +1,465 @@
+{
+  "meta": {
+    "sourceBatch": "replace-with-batch-id",
+    "sourceReviewDate": "YYYY-MM-DD",
+    "mode": "manual-review-export"
+  },
+  "board": {
+    "title": "8 平台最新数据看板",
+    "dateLabel": "YYYY-MM-DD 最新已确认数据",
+    "subtitle": "用一两句话写清这轮看板的基线、补充证据和当前判断口径。",
+    "northStar": "用一句短判断概括本轮北极星",
+    "summary": [
+      {
+        "label": "摘要卡 1",
+        "value": "待填写",
+        "note": "已确认样本覆盖、数量或口径说明。",
+        "tone": "cool"
+      },
+      {
+        "label": "摘要卡 2",
+        "value": "待填写",
+        "note": "当前最强已确认样本。",
+        "tone": "steady"
+      },
+      {
+        "label": "摘要卡 3",
+        "value": "待填写",
+        "note": "最大阻塞或最大质量风险。",
+        "tone": "warning"
+      },
+      {
+        "label": "摘要卡 4",
+        "value": "待填写",
+        "note": "下一轮主母题或主判断。",
+        "tone": "hot"
+      }
+    ],
+    "keep": [
+      "待填写 Keep 1",
+      "待填写 Keep 2",
+      "待填写 Keep 3"
+    ],
+    "cut": [
+      "待填写 Cut 1",
+      "待填写 Cut 2",
+      "待填写 Cut 3"
+    ],
+    "next": [
+      "待填写 Next 1",
+      "待填写 Next 2",
+      "待填写 Next 3"
+    ]
+  },
+  "platforms": [
+    {
+      "key": "kuaishou",
+      "name": "快手",
+      "status": "watch",
+      "statusLabel": "待填写",
+      "latestTitle": "待填写快手当前作品标题",
+      "publishTime": "待填写快手发布时间或状态",
+      "contentType": "视频",
+      "primaryLabel": "播放",
+      "primaryValue": 0,
+      "compareLabel": "同账号近 3 条",
+      "baselineValue": 0,
+      "baselineNote": "待填写基线说明",
+      "windows": [
+        {
+          "label": "今日",
+          "headline": "待填写今日 headline",
+          "metrics": {}
+        },
+        {
+          "label": "近7日账号",
+          "headline": "待填写 7 日 headline",
+          "metrics": {}
+        },
+        {
+          "label": "近30日账号",
+          "headline": "待填写 30 日 headline",
+          "metrics": {}
+        }
+      ],
+      "metrics": [
+        {
+          "label": "指标1",
+          "value": "待填"
+        },
+        {
+          "label": "指标2",
+          "value": "待填"
+        },
+        {
+          "label": "指标3",
+          "value": "待填"
+        },
+        {
+          "label": "指标4",
+          "value": "待填"
+        }
+      ],
+      "diagnosis": "待填写快手卡片复盘。",
+      "action": "待填写快手下一步动作。"
+    },
+    {
+      "key": "wechat",
+      "name": "视频号",
+      "status": "watch",
+      "statusLabel": "待填写",
+      "latestTitle": "待填写视频号当前作品标题",
+      "publishTime": "待填写视频号发布时间或状态",
+      "contentType": "视频",
+      "primaryLabel": "播放",
+      "primaryValue": 0,
+      "compareLabel": "同账号近 3 条",
+      "baselineValue": 0,
+      "baselineNote": "待填写基线说明",
+      "windows": [
+        {
+          "label": "今日",
+          "headline": "待填写今日 headline",
+          "metrics": {}
+        },
+        {
+          "label": "近7日账号",
+          "headline": "待填写 7 日 headline",
+          "metrics": {}
+        },
+        {
+          "label": "近30日账号",
+          "headline": "待填写 30 日 headline",
+          "metrics": {}
+        }
+      ],
+      "metrics": [
+        {
+          "label": "指标1",
+          "value": "待填"
+        },
+        {
+          "label": "指标2",
+          "value": "待填"
+        },
+        {
+          "label": "指标3",
+          "value": "待填"
+        },
+        {
+          "label": "指标4",
+          "value": "待填"
+        }
+      ],
+      "diagnosis": "待填写视频号卡片复盘。",
+      "action": "待填写视频号下一步动作。"
+    },
+    {
+      "key": "weibo",
+      "name": "微博",
+      "status": "watch",
+      "statusLabel": "待填写",
+      "latestTitle": "待填写微博当前作品标题",
+      "publishTime": "待填写微博发布时间或状态",
+      "contentType": "视频",
+      "primaryLabel": "阅读",
+      "primaryValue": 0,
+      "compareLabel": "同账号近 3 条",
+      "baselineValue": 0,
+      "baselineNote": "待填写基线说明",
+      "windows": [
+        {
+          "label": "今日",
+          "headline": "待填写今日 headline",
+          "metrics": {}
+        },
+        {
+          "label": "近7日账号",
+          "headline": "待填写 7 日 headline",
+          "metrics": {}
+        },
+        {
+          "label": "近30日账号",
+          "headline": "待填写 30 日 headline",
+          "metrics": {}
+        }
+      ],
+      "metrics": [
+        {
+          "label": "指标1",
+          "value": "待填"
+        },
+        {
+          "label": "指标2",
+          "value": "待填"
+        },
+        {
+          "label": "指标3",
+          "value": "待填"
+        },
+        {
+          "label": "指标4",
+          "value": "待填"
+        }
+      ],
+      "diagnosis": "待填写微博卡片复盘。",
+      "action": "待填写微博下一步动作。"
+    },
+    {
+      "key": "toutiao",
+      "name": "头条号",
+      "status": "watch",
+      "statusLabel": "待填写",
+      "latestTitle": "待填写头条号当前作品标题",
+      "publishTime": "待填写头条号发布时间或状态",
+      "contentType": "图文",
+      "primaryLabel": "阅读",
+      "primaryValue": 0,
+      "compareLabel": "同账号近 3 条",
+      "baselineValue": 0,
+      "baselineNote": "待填写基线说明",
+      "windows": [
+        {
+          "label": "今日",
+          "headline": "待填写今日 headline",
+          "metrics": {}
+        },
+        {
+          "label": "近7日账号",
+          "headline": "待填写 7 日 headline",
+          "metrics": {}
+        },
+        {
+          "label": "近30日账号",
+          "headline": "待填写 30 日 headline",
+          "metrics": {}
+        }
+      ],
+      "metrics": [
+        {
+          "label": "指标1",
+          "value": "待填"
+        },
+        {
+          "label": "指标2",
+          "value": "待填"
+        },
+        {
+          "label": "指标3",
+          "value": "待填"
+        },
+        {
+          "label": "指标4",
+          "value": "待填"
+        }
+      ],
+      "diagnosis": "待填写头条号卡片复盘。",
+      "action": "待填写头条号下一步动作。"
+    },
+    {
+      "key": "baijiahao",
+      "name": "百家号",
+      "status": "watch",
+      "statusLabel": "待填写",
+      "latestTitle": "待填写百家号当前作品标题",
+      "publishTime": "待填写百家号发布时间或状态",
+      "contentType": "图文",
+      "primaryLabel": "阅读",
+      "primaryValue": 0,
+      "compareLabel": "同账号近 3 条",
+      "baselineValue": 0,
+      "baselineNote": "待填写基线说明",
+      "windows": [
+        {
+          "label": "今日",
+          "headline": "待填写今日 headline",
+          "metrics": {}
+        },
+        {
+          "label": "近7日账号",
+          "headline": "待填写 7 日 headline",
+          "metrics": {}
+        },
+        {
+          "label": "近30日账号",
+          "headline": "待填写 30 日 headline",
+          "metrics": {}
+        }
+      ],
+      "metrics": [
+        {
+          "label": "指标1",
+          "value": "待填"
+        },
+        {
+          "label": "指标2",
+          "value": "待填"
+        },
+        {
+          "label": "指标3",
+          "value": "待填"
+        },
+        {
+          "label": "指标4",
+          "value": "待填"
+        }
+      ],
+      "diagnosis": "待填写百家号卡片复盘。",
+      "action": "待填写百家号下一步动作。"
+    },
+    {
+      "key": "douyin",
+      "name": "抖音",
+      "status": "watch",
+      "statusLabel": "待填写",
+      "latestTitle": "待填写抖音当前作品标题",
+      "publishTime": "待填写抖音发布时间或状态",
+      "contentType": "视频",
+      "primaryLabel": "播放",
+      "primaryValue": 0,
+      "compareLabel": "同账号近 3 条",
+      "baselineValue": 0,
+      "baselineNote": "待填写基线说明",
+      "windows": [
+        {
+          "label": "今日",
+          "headline": "待填写今日 headline",
+          "metrics": {}
+        },
+        {
+          "label": "近7日账号",
+          "headline": "待填写 7 日 headline",
+          "metrics": {}
+        },
+        {
+          "label": "近30日账号",
+          "headline": "待填写 30 日 headline",
+          "metrics": {}
+        }
+      ],
+      "metrics": [
+        {
+          "label": "指标1",
+          "value": "待填"
+        },
+        {
+          "label": "指标2",
+          "value": "待填"
+        },
+        {
+          "label": "指标3",
+          "value": "待填"
+        },
+        {
+          "label": "指标4",
+          "value": "待填"
+        }
+      ],
+      "diagnosis": "待填写抖音卡片复盘。",
+      "action": "待填写抖音下一步动作。"
+    },
+    {
+      "key": "bilibili",
+      "name": "B站",
+      "status": "watch",
+      "statusLabel": "待填写",
+      "latestTitle": "待填写 B站当前作品标题",
+      "publishTime": "待填写 B站发布时间或状态",
+      "contentType": "视频",
+      "primaryLabel": "播放",
+      "primaryValue": 0,
+      "compareLabel": "同账号近 3 条",
+      "baselineValue": 0,
+      "baselineNote": "待填写基线说明",
+      "windows": [
+        {
+          "label": "今日",
+          "headline": "待填写今日 headline",
+          "metrics": {}
+        },
+        {
+          "label": "近7日账号",
+          "headline": "待填写 7 日 headline",
+          "metrics": {}
+        },
+        {
+          "label": "近30日账号",
+          "headline": "待填写 30 日 headline",
+          "metrics": {}
+        }
+      ],
+      "metrics": [
+        {
+          "label": "指标1",
+          "value": "待填"
+        },
+        {
+          "label": "指标2",
+          "value": "待填"
+        },
+        {
+          "label": "指标3",
+          "value": "待填"
+        },
+        {
+          "label": "指标4",
+          "value": "待填"
+        }
+      ],
+      "diagnosis": "待填写 B站卡片复盘。",
+      "action": "待填写 B站下一步动作。"
+    },
+    {
+      "key": "zhihu",
+      "name": "知乎",
+      "status": "watch",
+      "statusLabel": "待填写",
+      "latestTitle": "待填写知乎当前作品标题",
+      "publishTime": "待填写知乎发布时间或状态",
+      "contentType": "图文",
+      "primaryLabel": "阅读",
+      "primaryValue": 0,
+      "compareLabel": "同账号近 3 条",
+      "baselineValue": 0,
+      "baselineNote": "待填写基线说明",
+      "windows": [
+        {
+          "label": "今日",
+          "headline": "待填写今日 headline",
+          "metrics": {}
+        },
+        {
+          "label": "近7日账号",
+          "headline": "待填写 7 日 headline",
+          "metrics": {}
+        },
+        {
+          "label": "近30日账号",
+          "headline": "待填写 30 日 headline",
+          "metrics": {}
+        }
+      ],
+      "metrics": [
+        {
+          "label": "指标1",
+          "value": "待填"
+        },
+        {
+          "label": "指标2",
+          "value": "待填"
+        },
+        {
+          "label": "指标3",
+          "value": "待填"
+        },
+        {
+          "label": "指标4",
+          "value": "待填"
+        }
+      ],
+      "diagnosis": "待填写知乎卡片复盘。",
+      "action": "待填写知乎下一步动作。"
+    }
+  ],
+  "footerLinks": []
+}
