@@ -12,6 +12,16 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-04-22 22:21:54 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/README.md`，核心是把 `wechat_channels` 在 Windows / macOS 共用的发布与二次复核标准写清，包括发布前字段精确回读、发布后管理页最新记录标题/描述/封面缩略图三项校验。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的实际发布准则与仓库文档说明继续漂移。
+
+## 2026-04-22 18:17:22 CST
+- 检测到新的技能变更批次: 新增 0，修改 4，删除 0。
+- 这批变更集中在 live `~/.codex/skills` 与 `skill-center` 镜像中的 `dachen-founder-flywheel` 和 `social-publish-automation`，核心是把“同平台禁因 UI 不稳重发”与“视频号管理页精确二次复核”写成正式技能规则。
+- 建议后续执行 GitHub 同步，避免 live skill 与仓库镜像的发布防重规则继续漂移。
+
 ## 2026-04-12 18:26:21 CST
 - 检测到新的技能变更批次: 新增 952，修改 0，删除 0。
 - 建议后续执行 GitHub 同步，避免本地技能与自动化变更长期未入库。
@@ -573,4 +583,60 @@
   - `codex/default-python-sync`: `Record 2026-04-22 GitHub sync status`
 - 若跳过，说明跳过原因:
   - 未跳过同步前置检查。
-  - 跳过了 `codex/windows-version-20260411` 的新提交与推送，因为当前仓库新增或更新的内容仅包含通用 review skill 镜像、`skill-center` Seedance 参考资料、自动化状态文档，以及 Mac-compatible 的 `automation/python-platform-takeover` 内容包配置，没有新的 Windows 专属 bridge / deployment payload。
+- 跳过了 `codex/windows-version-20260411` 的新提交与推送，因为当前仓库新增或更新的内容仅包含通用 review skill 镜像、`skill-center` Seedance 参考资料、自动化状态文档，以及 Mac-compatible 的 `automation/python-platform-takeover` 内容包配置，没有新的 Windows 专属 bridge / deployment payload。
+
+## 2026-04-22 00:55:42 CST
+- 检测到新的技能变更批次: 新增 0，修改 2，删除 0。
+- 这批变更集中在 live `~/.codex/skills/seedance-video-api/references/workflows.md` 和 `real-person-consistency.md`，内容包括 `asset://...` 真人素材保真人约束收紧，以及视频生成后封面包执行链路的脚本化说明补全。
+- 建议后续决定是否把这组 live Seedance 文档回写到仓库镜像；在镜像同步前，这批变更应保留为待同步状态，避免 live skill 与 `skill-center` 版本继续漂移。
+
+## 2026-04-22 00:56:54 CST
+- 检测到新的技能变更批次: 新增 10，修改 8，删除 0。
+- 这批变更覆盖 `data-review` / `multi-platform-content-review-skill` 的 Docker 看板导出与账号切片复盘规则、`skill-center/skills/seedance-video-api` 的提示词与真人锁定资料，以及 live `~/.codex/skills/seedance-video-api` 的两份继续演进文档。
+- 仓库内提交批次已存在，但 live Seedance 文档仍有未完全回写镜像的增量；建议后续补一次镜像同步，避免 `~/.codex/skills` 与仓库版本继续漂移。
+## 2026-04-22 12:10:26 CST
+- 检测到新的技能变更批次: 新增 0，修改 749，删除 0。
+- 这批变更主要集中在 `lark-base` 188 files, `lark-sheets` 68 files, `lark-whiteboard` 52 files, `seedance-video-api` 49 files, `python-platform-takeover` 45 files, `lark-task` 36 files, `codex-feishu-bridge-skill` 31 files, `lark-drive` 26 files。
+- 建议后续执行 GitHub 同步，避免本地技能镜像、模板脚本与运行时说明继续漂移。
+
+## 2026-04-22 13:09:55 CST
+- 检测到新的技能变更批次: 新增 1，修改 5，删除 0。
+- 这批变更集中在 `social-publish-automation` 的视频号平台说明，以及 `automation/python-platform-takeover` 的视频号发布映射、发布器实现、README 和新增测试；核心收紧点是旧草稿禁复用、封面已应用确认，以及发布后必须在管理页同一条记录完成二次复核。
+- 建议后续执行 GitHub 同步，避免 live skill、`skill-center` 镜像和视频号自动发布 supporting automation 继续漂移。
+
+## 2026-04-22 15:13:32 CST
+- 检测到新的技能变更批次: 新增 1，修改 9，删除 0。
+- 这批变更集中在视频号发布链路的“框架状态 + 管理页最新行”双重复核收紧，以及 `social-publish-automation` / `wechat-channels-ops` 在 live `~/.codex/skills` 与 `skill-center` 镜像中的同步规则更新。
+- 建议后续执行 GitHub 同步，避免 live skill、仓库镜像和视频号 supporting automation 测试继续漂移。
+
+## 2026-04-22 16:15:37 CST
+- 检测到新的技能变更批次: 新增 1，修改 0，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/configs/content-package.2026-04-22-platform-execution-three-steps.yaml`，新增了一组“平台执行三步”内容分发包，包含主视频、封面素材与 8 平台投放文案映射。
+- 建议后续执行 GitHub 同步，避免新的内容包配置与技能 supporting automation 记录继续漂移。
+
+## 2026-04-22 18:17:39 CST
+- 检测到新的技能变更批次: 新增 0，修改 4，删除 0。
+- 这批变更集中在 live `~/.codex/skills` 与 `skill-center` 镜像中的 `dachen-founder-flywheel` / `social-publish-automation` 规则更新，核心是禁止因 UI 不稳而重发，并把视频号成功判定收紧到平台管理行数据。
+- 建议后续执行 GitHub 同步，避免 live skill 与仓库镜像的发布规则继续漂移。
+
+## 2026-04-22 22:21:55 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/README.md`，新增了微信视频号在 Windows PowerShell 与 macOS 共用同一套发布/管理页复核逻辑的说明，并把封面应用信号与管理页同条记录二次复核写成正式成功标准。
+- 建议后续执行 GitHub 同步，避免 supporting automation 文档与现有视频号发布实现继续漂移。
+
+## 2026-04-23 00:04:13 CST
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-04-22 22:02:51 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮继续执行 GitHub 同步。
+- 本轮同步分支:
+  - `codex/default-python-sync`: 是。本轮写入并推送新的通用内容提交。
+  - `codex/windows-version-20260411`: 否。本轮未创建新的 Windows 专属提交。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。已推送视频号发布链路收紧、`skill-center` 镜像规则同步、内容包与测试，以及本条同步状态记录。
+  - `codex/windows-version-20260411`: 无需推送。本轮未发现新的 Windows-only bridge / deployment 更新。
+- 提交信息:
+  - `codex/default-python-sync`: `Tighten WeChat Channels publish verification`
+  - `codex/default-python-sync`: `Record 2026-04-23 GitHub sync status`
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - 跳过了 `codex/windows-version-20260411` 的新提交与推送，因为当前仓库新增或更新的内容是 cross-platform 的视频号发布实现、`skill-center` 规则镜像、内容包、测试与自动化状态文档，没有新的 Windows 专属 bridge / deployment payload。

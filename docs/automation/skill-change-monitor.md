@@ -12,6 +12,224 @@
 - 变更摘要
 - 如果有新建 `.py` 文件，单独列出路径、用途、以及与哪个 skill 相关
 
+## 2026-04-22 23:22:41 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T14:20:08.631Z`（本地时区为 `2026-04-22 22:20:08 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对候选文件逐个校验 `stat` 时间戳与差异内容
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `git status` 中仍可见的以下候选文件全部早于本轮基线，因此判定为上一批或更早的旧改动，不重复登记：
+- `automation/python-platform-takeover/README.md`
+- `automation/python-platform-takeover/configs/platform-mappings/wechat_channels.yaml`
+- `automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py`
+- `automation/python-platform-takeover/configs/content-package.2026-04-22-platform-execution-three-steps.yaml`
+- `automation/python-platform-takeover/tests/test_wechat_channels.py`
+- `skill-center/skills/dachen-founder-flywheel/SKILL.md`
+- `skill-center/skills/social-publish-automation/SKILL.md`
+- `skill-center/skills/social-publish-automation/references/platform-notes.md`
+- `skill-center/skills/wechat-channels-ops/SKILL.md`
+- `skill-center/skills/wechat-channels-ops/references/platform-notes.md`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T14:20:08.631Z` 以来，四个扫描目录内没有出现新的技能相关文件增量。
+- 当前工作区里可见的 `wechat_channels` 发布修复、内容包、测试，以及 `skill-center` 中的 founder / social-publish / wechat-channels 规则更新，文件时间全部早于本轮基线，只做复核，不重复记为新批次。
+- 因为本轮没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 未追加新的待同步提醒。
+
+## 2026-04-22 22:21:54 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T13:19:38.360Z`（本地时区为 `2026-04-22 21:19:38 CST`）
+- 判定依据:
+- Python `os.walk` + `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 对候选文件逐个校验 `stat` 时间戳与差异内容
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `automation/python-platform-takeover/.pytest_cache/**` 属于测试缓存，不计入技能或支撑自动化文件变更。
+- 工作区中仍存在的 `wechat_channels`、`social-publish-automation` 与 `dachen-founder-flywheel` 相关未提交文件，其 `mtime` 全部早于本轮基线，属于此前已记录内容，不重复登记。
+- 结果汇总: 新增 0，修改 1，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md` | `modified` | 补充 Windows PowerShell 与 macOS 共用同一套 `wechat_channels` 发布/复核逻辑的说明，新增视频号发布前 `短标题` / `视频描述` 精确回读，以及发布后必须通过管理页最新一条标题、描述、封面缩略图二次复核的成功标准与失败判据。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T13:19:38.360Z` 以来，四个扫描目录中只发现一处新的技能支撑自动化变更：`python-platform-takeover` README 把视频号在 Windows 与 macOS 下的统一执行方式、封面确认信号和管理页二次复核标准写成正式操作说明。
+- 本轮没有新的 skill 定义文件、镜像文件或 `.py` 脚本增量，也没有发现可确认的删除项。
+- 因为发现了新的变更批次，已同步在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 追加待后续 GitHub 同步提醒。
+
+## 2026-04-22 21:20:41 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T12:19:08.112Z`（本地时区为 `2026-04-22 20:19:08 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 对工作区候选文件逐个校验 `stat` 时间戳
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- 当前工作区里仍存在的 `social-publish-automation`、`wechat-channels-ops`、`wechat_channels` 与 `python-platform-takeover` 相关未提交文件，其 `mtime` 全部早于本轮基线，属于上一批已记录内容，不重复登记。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T12:19:08.112Z` 以来，四个扫描目录内没有出现新的技能相关文件增量。
+- `git status` 中仍可见的候选文件都在本轮基线之前已发生变化，本轮只完成复核，不重复记为新批次。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新待同步提醒。
+
+## 2026-04-22 20:19:56 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T11:17:07.910Z`（本地时区为 `2026-04-22 19:17:07 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 对候选文件逐个校验 `stat` 时间戳
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- 工作区中仍存在的 `wechat_channels`、`social-publish-automation`、`dachen-founder-flywheel` 与 `python-platform-takeover` 相关未提交文件，其 `mtime` 全部早于本轮基线，属于上一批已记录内容，不重复登记。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T11:17:07.910Z` 以来，四个扫描目录内没有出现新的技能相关文件增量。
+- `git status` 中可见的候选文件都在本轮基线之前已发生变化，本次只完成复核，不重复记为新批次。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新待同步提醒。
+
+## 2026-04-22 19:17:45 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T10:16:07.760Z`（本地时区为 `2026-04-22 18:16:07 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all`
+- 对候选文件逐个校验 `stat` 时间戳
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- 工作区中仍存在的 `wechat_channels` 相关技能镜像与自动化文件虽然处于未提交状态，但它们的 `mtime` 全部早于本轮基线，属于上一轮 `2026-04-22 18:17:22 CST` 已记录批次。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T10:16:07.760Z` 之后，四个扫描目录内没有出现新的技能相关文件增量。
+- `~/.codex/skills` 本轮没有任何晚于基线的文件变更。
+- 仓库里可见的 `wechat_channels` 发布修复、测试和 skill-center 规则更新仍是上一批次内容，本轮不重复登记，也不追加新的 GitHub 同步提醒。
+
+## 2026-04-22 18:17:22 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T09:14:37.588Z`（本地时区为 `2026-04-22 17:14:37 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- 本轮 `git status` 中仍可见的 `wechat_channels` 发布链路、内容包和测试文件，`mtime` 早于本轮基线，属于上一批已记录变更，不重复计入。
+- 结果汇总: 新增 0，修改 4，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/dachen-founder-flywheel/SKILL.md` | `modified` | 补充 founder 飞轮的防重发规则，明确 UI 不稳、表现差或流程不清都不能作为同平台重发理由，只有旧内容已处理且存在结构性错误时才允许替换。
+- `/Users/baishangjituan/.codex/skills/social-publish-automation/SKILL.md` | `modified` | 同步强化 live 发布自动化总规则，新增同平台重发前置判定、Vue/React 框架态校验，以及视频号必须用管理页最新行精确核对 `shortTitle`、`description` 和封面缩略图的成功标准。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/SKILL.md` | `modified` | 仓库镜像同步加入 founder 飞轮的 duplicate control 段落，禁止因点击不稳或表现差而重复发布同日内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/SKILL.md` | `modified` | 仓库镜像同步加入 anti-duplicate guard，要求发布前先查管理页与公开页，视频号场景下以平台侧最新管理行的精确字段和封面结果作为最终验收。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-22T09:14:37.588Z`，本轮新变化只出现在 live `~/.codex/skills` 与 `skill-center` 镜像中的两份技能说明文件。
+- 这批改动把“同平台不因 UI 不稳而重发”和“视频号发布成功必须做平台侧精确二次复核”正式固化为技能规则，收紧了 founder 飞轮与通用发布自动化的操作边界。
+- 本轮没有新的 `.py` 文件，也没有删除项；支持视频号发布实现的代码与测试仍在工作区中，但属于上一批已记录增量。
+- 因为发现了新的技能变更批次，已同步在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 追加后续 GitHub 同步提醒。
+
 ## 2026-04-12 18:26:21 CST
 - 扫描范围:
 - `/Users/baishangjituan/.codex/skills`
@@ -237,6 +455,67 @@
 
 ### 删除文件
 - 无。
+
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-22T02:04:06.236Z`，四个目标目录内没有新的技能相关文件新增、修改或删除。
+- 文件系统 `mtime` 增量扫描为空，仓库 `git status` 与 `git diff` 复核也为空，本轮没有发现未提交或已跟踪的技能相关增量。
+- 本轮没有出现新的 `.py` 文件，也没有形成新的待同步变更批次，因此未更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-04-22 01:55:35 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-21T16:54:04.122Z`（本地时区为 `2026-04-22 00:54:04 CST`）
+- 判定依据:
+- `find ... -newer <ref>` 文件系统时间戳扫描
+- `git status --short --untracked-files=all -- skills skill-center automation`
+- `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+
+## 2026-04-22 11:05:49 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T02:04:06.236Z`（本地时区为 `2026-04-22 10:04:06 CST`）
+- 判定依据:
+- 四个目录的文件系统 `mtime` 增量扫描
+- `git status --short --untracked-files=all -- skills skill-center automation`
+- `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 本轮未发现自上次运行以来的技能相关新增、修改或删除文件。
+- `docs/automation/github-sync-status.md` 未追加新条目，因为没有新的待同步 change batch。
 
 ## 2026-04-16 19:26:06 CST
 - 扫描范围:
@@ -10102,3 +10381,1719 @@
 - 基于工作区 `git status --short --untracked-files=all` 与目标目录扫描，本轮自 `2026-04-21T14:51:03.694Z` 以来的真实技能相关增量共有 19 个文件，主要分成三类：`data-review` / `multi-platform-content-review-skill` 的 Docker 看板导出链路补全，`seedance-video-api` 的 15 秒提示词与真人身份锁定资料入库，以及 `python-platform-takeover` 的新内容包配置。
 - `~/.codex/skills/` 当前没有文件晚于该基线；本轮 live skill 侧没有新的未镜像文件继续长出来，新增内容都落在仓库镜像、automation 配置和配套监控文档里。
 - 复核当前快照与工作区状态后，没有发现可确认的删除路径；本轮也没有新的 `.py` 文件出现，因此无需额外登记跨平台或平台专属 Python 脚本。
+
+## 2026-04-22 00:55:42 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`
+- 对比基线: `2026-04-21T15:52:33.940Z`（本地时区为 `2026-04-21 23:52:33 CST`）
+- 结果汇总: 新增 0，修改 2，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/real-person-consistency.md` | `modified` | Tightened the live Seedance真人一致性规则 to version `2026-04-22`, explicitly defaulting `asset://...` 人像输入 to 图生视频, adding `严格保真人`, locking skin tone and eyewear, and forbidding random background drift across the short, long, and checklist examples.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/workflows.md` | `modified` | Expanded the live Seedance workflow recipes with a cover-package execution chain (`init_cover_package.py`, `extract_cover_candidates.py`, `render_cover_package.py`), a fastest `build_cover_package.py` path, an `asset://...` real-person reference section, and updated post-generation cover handoff order for automated publishing.
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 本轮相对 `2026-04-21T15:52:33.940Z` 仅识别到 2 个真实增量，全部位于 live `~/.codex/skills/seedance-video-api/references/`，仓库镜像、repo-hosted skills 和 `automation/` 目录在该时间窗内没有新增、修改或删除的技能相关文件。
+- `real-person-consistency.md` 本次收紧的核心是把 `asset://...` 真人素材明确提升为“身份锁定参考”，并补写了 `严格保真人`、肤色/眼镜稳定和背景不可随意漂移等硬约束，说明 live Seedance skill 正在进一步降低真人形象漂移风险。
+- `workflows.md` 本次则把“出视频后继续产出封面包”的执行链路写实了，新增 3 个 cover-package 脚本步骤和一个极速封面生成路径，同时把 `asset://...` 真人素材 workflow 独立成单节，方便后续回写仓库镜像或同步到 GitHub。
+
+## 2026-04-22 00:56:54 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`
+- 对比基线: `2026-04-21T15:52:33.940Z`（本地时区为 `2026-04-21 23:52:33 CST`）
+- 判定依据:
+- `multi-platform-content-pipeline` 仓库提交 `96e2433bc768aaad60feb3ddc1a6e4c501115a01`
+- `~/.codex/skills` 文件系统 `birthtime` / `mtime`
+- 结果汇总: 新增 10，修改 8，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-21-platform-execution-next-round.yaml` | `added` | Added a new platform-execution content package for the next Python takeover round so the supporting automation can run a dated follow-up batch.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/dashboard-export-template.json` | `added` | Added the fixed 8-platform dashboard JSON skeleton used when `data-review` needs a companion export for the LAN Docker dashboard.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/docker-dashboard-contract.md` | `added` | Added the Docker dashboard field contract for `data-review`, defining required board-level fields, eight platform cards, and numeric export constraints.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0.json` | `added` | Added a Seedance 2.0 example payload for `asset://...` real-person identity-lock image-to-video generation.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0_fast.json` | `added` | Added the fast-mode variant of the Seedance real-person identity-lock payload so the skill can switch to the lower-latency recipe without rewriting the structure.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/prompt-template.md` | `added` | Added the standard Seedance 15-second prompt package template covering default mode, duration, ratio, resolution, cover titles, and ready-to-submit JSON payloads.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/real-person-consistency.md` | `added` | Added a dedicated real-person consistency guide for Seedance, making identity lock the default for真人素材 and listing hard constraints against face, clothing, age, or style drift.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/account-slice-analysis.md` | `added` | Added account-slice analysis guidance so the review skill can compare the current item against recent same-account history instead of judging from a single post.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/dashboard-export-template.json` | `added` | Added the mirrored fixed dashboard export template for the repo-hosted review skill so Docker dashboard handoff uses a stable JSON shape.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/docker-dashboard-contract.md` | `added` | Added the mirrored Docker dashboard contract for the repo-hosted review skill, aligning required board metadata and per-platform card fields with the LAN dashboard.
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/real-person-consistency.md` | `modified` | Tightened the live Seedance真人一致性规则 to version `2026-04-22`, explicitly defaulting `asset://...` inputs to 图生视频, adding `严格保真人`, locking skin tone and eyewear, and forbidding random background drift.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/workflows.md` | `modified` | Expanded the live Seedance workflow recipes with a dedicated `asset://...` real-person reference flow, a scripted cover-package chain (`init_cover_package.py`, `extract_cover_candidates.py`, `render_cover_package.py`), and a faster `build_cover_package.py` path after video generation.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/SKILL.md` | `modified` | Extended `data-review` so it can output the fixed 8-platform Docker dashboard contract, keep all cards present, and derive required board-level and card-level export fields.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/report-template.md` | `modified` | Appended a mandatory Docker dashboard mapping section to the report template, including board metadata, fixed platform list, field-level requirements, and numeric `primaryValue` rules.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/SKILL.md` | `modified` | Broadened the review skill from single-post diagnosis to account-slice analysis, Feishu sync output, verification-grade tracking, and Docker dashboard export requirements.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/diagnosis-and-decisions.md` | `modified` | Added decision rules for account baseline weakness, format mismatch, pattern fatigue, and the minimum return expected for each platform account.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/platform-metrics.md` | `modified` | Added account-dimension metrics and per-platform account clues so reviews can distinguish content misses from account warming, weakening, moderation drag, or format mismatch.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/report-template.md` | `modified` | Replaced the older English outline with the current Chinese fixed review structure, adding verification grade, account slice, next-batch content bias, unfinished verification items, and Docker dashboard mapping.
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 本轮相对 `2026-04-21T15:52:33.940Z` 识别到 18 个技能相关增量，主要分成三块: `data-review` / `multi-platform-content-review-skill` 的 Docker 看板导出链路与账号维度复盘补全，`seedance-video-api` 的 15 秒提示词与真人身份锁定资料入库，以及 `python-platform-takeover` 的新一轮内容包配置。
+- `skill-center` 与仓库内 `skills/` 已经落地了 10 个新增文件和 6 个规则升级文件，说明这批 review 与 Seedance 资料已经形成可同步的镜像批次。
+- live `~/.codex/skills/seedance-video-api/references/` 还额外出现 2 个未在本次仓库提交里完整镜像的文档更新；尤其 `workflows.md` 的 cover-package 执行链和 `real-person-consistency.md` 的 `2026-04-22` 版保真人规则，后续仍建议回写仓库镜像以消除漂移。
+
+## 2026-04-22 01:55:30 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`
+- 对比基线: `2026-04-21T16:54:04.122Z`（本地时区为 `2026-04-22 00:54:04 CST`）
+- 判定依据:
+- `find ... -type f -newer <baseline-file>` 文件系统时间扫描
+- `git status --short --untracked-files=all -- skills skill-center automation` 仓库工作区状态复核
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-21T16:54:04.122Z`，四个目标目录内没有新的技能相关文件新增、修改或删除；当前能看到的工作区变化仍只有监控文档自身，不属于本轮要登记的技能或支撑自动化增量。
+- `~/.codex/skills/` 目录在该时间窗内没有任何文件 `mtime` 晚于基线；仓库内 `skills/`、`skill-center/`、`automation/` 也没有新的未跟踪、已修改或已删除技能相关路径。
+- 本轮没有出现新的 `.py` 文件，因此无需追加 Python 脚本用途、关联 skill 或跨平台属性说明；同时也没有发现新的待同步变更批次，所以未更新 `github-sync-status.md`。
+
+## 2026-04-22 02:56:47 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`
+- 对比基线: `2026-04-21T17:54:34.345Z`（本地时区为 `2026-04-22 01:54:34 CST`）
+- 判定依据:
+- 递归文件系统时间扫描，筛选 `mtime` 晚于基线的技能相关文件
+- `git status --short --untracked-files=all -- skills skill-center automation` 仓库工作区状态复核
+- `git log --since='2026-04-21T17:54:34Z' --name-status -- skills skill-center automation` 删除与提交历史复核
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-21T17:54:34.345Z`，四个目标目录中没有任何技能相关文件新增、修改或删除；本轮唯一可见的仓库工作区变化仍是监控文档本身，不计入本批次。
+- `~/.codex/skills/` 没有文件 `mtime` 晚于基线；仓库内 `skills/`、`skill-center/`、`automation/` 在 `git status` 中也没有新的已修改、未跟踪或已删除路径。
+- 本轮没有新建 `.py` 文件，也没有发现新的待同步变更批次，因此未更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-04-22 02:58:14 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`
+- 对比基线: `2026-04-21T17:54:34.345Z`（本地时区为 `2026-04-22 01:54:34 CST`）
+- 判定依据:
+- 递归文件系统时间扫描，筛选 `mtime` 晚于基线的技能相关文件
+- `git status --short --untracked-files=all -- skills skill-center automation` 仓库工作区状态复核
+- `git diff --name-status --find-renames HEAD -- skills skill-center automation` 工作区增删改复核
+- `git log --since='2026-04-21T17:54:34.345Z' --name-status -- skills skill-center automation` 提交历史复核
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-21T17:54:34.345Z`，四个目标目录中没有新的技能相关文件新增、修改或删除；`automation/` 下也没有与自定义技能支撑链路相关的新变更需要登记。
+- 文件系统扫描、`git status`、`git diff` 与 `git log` 四个视角结果一致，说明这轮没有漏记的删除、重命名或仅存在于 Git 记录中的目录级变更。
+- 本轮没有出现新的 `.py` 文件，也没有发现新的待同步变更批次，因此未更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-04-22 03:58:22 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`
+- 对比基线: `2026-04-21T18:56:04.613Z`（本地时区为 `2026-04-22 02:56:04 CST`）
+- 判定依据:
+- 递归文件系统时间扫描，筛选 `mtime` 晚于基线的技能相关文件
+- `git status --short --untracked-files=all -- skills skill-center automation` 仓库工作区状态复核
+- `git log --since='2026-04-21T18:56:04Z' --name-status -- skills skill-center automation` 提交历史复核
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-21T18:56:04.613Z`，四个目标目录内没有新的技能相关文件新增、修改或删除；当前可见工作区变化仍只有监控文档自身，不计入本轮技能变更批次。
+- 文件系统扫描没有发现任何目标文件的 `mtime` 晚于基线；仓库内 `skills/`、`skill-center/`、`automation/` 在 `git status` 与 `git log` 中也没有新的技能或支撑自动化增量。
+- 本轮没有出现新的 `.py` 文件，也没有发现新的待同步变更批次，因此未更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-04-22 04:59:10 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`
+- 对比基线: `2026-04-21T19:57:34.822Z`（本地时区为 `2026-04-22 03:57:34 CST`）
+- 判定依据:
+- `/Users/baishangjituan/.codex/automations/skill-monitor/snapshot.json` 与当前 live 文件树的路径集合和 `mtime` 对比
+- 递归文件系统扫描，筛选基线之后的目标文件
+- 仓库 `skills/`、`skill-center/`、`automation/` 的 Git 工作区与提交历史复核
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-21T19:57:34.822Z`，四个目标目录内没有新的技能相关文件新增、修改或删除；当前快照与 live 文件树一致。
+- `/Users/baishangjituan/.codex/automations/skill-monitor/snapshot.json` 记录的 2450 条文件路径与当前扫描结果完全匹配，没有识别出缺失路径，因此删除项为 0。
+- 本轮没有出现新的 `.py` 文件，也没有发现新的待同步变更批次，因此未更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-04-22 06:00:56 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`
+- 对比基线: `2026-04-21T20:58:05.014Z`（本地时区为 `2026-04-22 04:58:05 CST`）
+- 判定依据:
+- `/Users/baishangjituan/.codex/automations/skill-monitor/snapshot.json` 与当前 live 文件树的路径集合和 `mtime` 对比
+- 递归文件系统时间扫描，筛选 `mtime` 晚于基线的技能相关文件
+- `git status --short --untracked-files=all -- skills skill-center automation` 仓库工作区状态复核
+- `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation` 工作区增删改复核
+- `git log --since='2026-04-21T20:58:05.014Z' --name-status -- skills skill-center automation` 提交历史复核
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-21T20:58:05.014Z`，四个目标目录内没有新的技能相关文件新增、修改或删除；当前快照与 live 文件树一致。
+- `/Users/baishangjituan/.codex/automations/skill-monitor/snapshot.json` 的 2450 条文件路径与当前扫描结果完全匹配，且没有任何目标文件的 `mtime` 晚于本轮基线，因此新增、修改、删除均为 0。
+- 仓库侧 `skills/`、`skill-center/`、`automation/` 的 `git status`、`git diff` 与 `git log --since` 结果一致为空，说明没有漏记的删除、重命名或仅存在于 Git 记录中的技能支撑变更。
+- 本轮没有出现新的 `.py` 文件，也没有发现新的待同步变更批次，因此未更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-04-22 07:01:25 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`
+- 对比基线: `2026-04-21T21:58:35.296Z`（本地时区为 `2026-04-22 05:58:35 CST`）
+- 判定依据:
+- 递归文件系统时间扫描，筛选 `mtime` 晚于基线的技能相关文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 仓库的 `git status --short -- skills skill-center automation` 工作区状态复核
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 仓库的 `git diff --name-status -- skills skill-center automation` 工作区增删改复核
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 仓库的 `git log --since='2026-04-21T21:58:35Z' --name-status -- skills skill-center automation` 提交历史复核
+- `.codex` 自动化快照目录 `/Users/baishangjituan/.codex/automations/skill-monitor/` 现有状态文件交叉参考
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-21T21:58:35.296Z`，四个目标目录内没有识别出新的技能相关文件新增、修改或删除。
+- 文件系统 `mtime` 扫描为空；仓库侧 `git status`、`git diff`、`git log --since` 结果也为空，说明没有漏记的未提交或已提交技能变更。
+- 本轮没有出现新的 `.py` 文件，也没有发现新的待同步变更批次，因此未更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-04-22 08:03:11 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`
+- 对比基线: `2026-04-21T23:00:05.528Z`（本地时区为 `2026-04-22 07:00:05 CST`）
+- 判定依据:
+- 递归文件系统时间扫描，筛选 `mtime` 晚于基线的技能相关文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 仓库的 `git status --short --untracked-files=all -- skills skill-center automation` 工作区状态复核
+- 技能与自动化目录的最新 `mtime` 排序抽样复核，确认最近文件时间均早于本轮基线
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-21T23:00:05.528Z`，四个目标目录内没有识别出新的技能相关文件新增、修改或删除。
+- 文件系统 `mtime` 扫描结果为空，且目标目录最近文件时间仍停留在本轮基线之前，因此没有需要展开记录的技能或支撑自动化增量。
+- 仓库侧 `skills/`、`skill-center/`、`automation/` 的 `git status` 结果为空，没有可确认的删除或未跟踪技能变更。
+- 本轮没有出现新的 `.py` 文件，也没有发现新的待同步变更批次，因此未更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-04-22 08:04:48 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`
+- 对比基线: `2026-04-21T23:00:05.528Z`（本地时区为 `2026-04-22 07:00:05 CST`）
+- 判定依据:
+- 递归文件系统时间扫描，筛选 `mtime` 晚于基线的技能相关文件
+- `/Users/baishangjituan/.codex/automations/skill-monitor/snapshot.json` 与当前 live 文件树的路径集合交叉比对
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 仓库的 `git diff --name-status --find-renames -- skills skill-center automation` 工作区增删改复核
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 仓库的 `git log --since='2026-04-21T23:00:05.528Z' --name-status -- skills skill-center automation` 提交历史复核
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-21T23:00:05.528Z`，四个目标目录内没有新的技能相关文件新增、修改或删除。
+- 文件系统 `mtime` 扫描、仓库 `git diff`、仓库 `git log --since` 结果均为空，说明没有漏记的已提交或未提交技能变更。
+- 快照交叉比对中仅识别出 5 条 `automation/python-platform-takeover/.pytest_cache/**` 历史缓存路径差异；这些路径属于测试缓存，不计入技能或配套自动化变更，本轮有效删除仍为 0。
+- 本轮没有出现新的 `.py` 文件，也没有发现新的待同步变更批次，因此未更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-04-22 09:04:19 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`
+- 对比基线: `2026-04-22T00:01:35.689Z`（本地时区为 `2026-04-22 08:01:35 CST`）
+- 判定依据:
+- 递归文件系统时间扫描，筛选 `mtime` 晚于基线的技能相关文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 仓库的 `git diff --name-status --find-renames -- skills skill-center automation` 工作区增删改复核
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 仓库的 `git log --since='2026-04-22T00:01:35.689Z' --name-status -- skills skill-center automation` 提交历史复核
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-22T00:01:35.689Z`，四个目标目录内没有识别出新的技能相关文件新增、修改或删除。
+- 文件系统 `mtime` 扫描结果为空，仓库 `git diff` 与 `git log --since` 结果也为空，本轮没有发现未提交或已提交的技能增量。
+- 本轮没有出现新的 `.py` 文件，也没有形成新的待同步变更批次，因此未更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-04-22 09:05:30 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`
+- 对比基线: `2026-04-22T00:04:48Z`（本地时区为 `2026-04-22 08:04:48 CST`）
+- 判定依据:
+- `/Users/baishangjituan/.codex/automations/skill-monitor/snapshot.json` 与当前 live 文件树的路径和 `mtime` 精确比对
+- 递归文件系统时间扫描，筛选 `mtime` 晚于 `2026-04-22 08:04:48 CST` 的技能相关文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 仓库的 `git log --since='2026-04-22T00:04:48Z' --name-status -- skills skill-center automation` 提交历史复核
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-22T00:04:48Z`，四个目标目录内没有识别出新的技能相关文件新增、修改或删除。
+- `snapshot.json` 与当前 live 文件树对比结果为 0 差异；额外的 `find -newermt` 扫描和仓库 `git log --since` 复核也都为空，没有漏记的文件增量或删除。
+- 本轮没有出现新的 `.py` 文件，也没有形成新的待同步变更批次，因此未更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-04-22 10:05:22 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`
+- 对比基线: `2026-04-22T01:03:05.917Z`（本地时区为 `2026-04-22 09:03:05 CST`）
+- 判定依据:
+- `/Users/baishangjituan/.codex/automations/skill-monitor/snapshot.json` 与当前 live 文件树的路径精确比对
+- `find ... -newer` 文件系统时间戳扫描，筛选晚于 `2026-04-22 09:03:05 CST` 的技能相关文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 仓库的 `git status --short --untracked-files=all -- skills skill-center automation docs/automation` 与 `git diff --name-status --find-renames -- skills skill-center automation docs/automation` 复核
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-22T01:03:05.917Z`，四个目标目录内没有识别出新的技能相关文件新增、修改或删除。
+- `snapshot.json` 路径集合与当前 live 文件树一致；`find ... -newer` 扫描为空，仓库 `git status` 与 `git diff` 也没有提供技能目录内的新批次证据。
+- 本轮没有出现新的 `.py` 文件，也没有形成新的待同步变更批次，因此未更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-04-22 10:05:26 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`
+- 对比基线: `2026-04-22T01:03:05.917000Z`（本地时区为 `2026-04-22 09:03:05 CST`）
+- 判定依据:
+- 递归文件系统时间扫描，筛选 `mtime` 晚于基线的技能相关文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 仓库的 `git status --short --untracked-files=all -- skills skill-center automation` 工作区增删改复核
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 仓库的 `git log --since='2026-04-22T01:03:05.917Z' --name-status -- skills skill-center automation` 提交历史复核
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-22T01:03:05.917000Z`，四个目标目录内没有新的技能相关文件新增、修改或删除。
+- 文件系统 `mtime` 扫描结果为空；仓库 `git status` 与 `git log --since` 复核也都为空，本轮没有发现未提交或已提交的技能增量。
+- 本轮没有出现新的 `.py` 文件，也没有形成新的待同步变更批次，因此未更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-04-22 11:06:32 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`
+- 对比基线: `2026-04-22T02:04:06.236Z`（本地时区为 `2026-04-22 10:04:06 CST`）
+- 判定依据:
+- `/Users/baishangjituan/.codex/automations/skill-monitor/snapshot.json` 与当前 live 文件树的路径和 `mtime` 精确比对
+- 递归文件系统时间扫描，筛选 `mtime` 晚于 `2026-04-22 10:04:06 CST` 的技能相关文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 仓库的 `git status --short --untracked-files=all -- skills skill-center automation` 工作区增删改复核
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 仓库的 `git log --since='2026-04-22T02:04:06.236Z' --name-status -- skills skill-center automation` 提交历史复核
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-22T02:04:06.236Z`，四个目标目录内没有新的技能相关文件新增、修改或删除。
+- `snapshot.json` 的 2445 条文件记录与当前 live 文件树完全一致；额外的 `find -newermt`、仓库 `git status` 与 `git log --since` 复核也都为空。
+- 本轮没有出现新的 `.py` 文件，也没有形成新的待同步变更批次，因此未更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-04-22 11:05:49 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T02:04:06.236Z`（本地时区为 `2026-04-22 10:04:06 CST`）
+- 判定依据:
+- 四个目录的文件系统 `mtime` 增量扫描
+- `git status --short --untracked-files=all -- skills skill-center automation`
+- `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+## 2026-04-22 12:09:18 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`
+- 对比基线: `2026-04-22T03:04:36.508Z`（本地时区为 `2026-04-22 11:04:36 CST`）
+- 判定依据:
+- 递归文件系统时间扫描，筛选 `mtime` 晚于 `2026-04-22 11:04:36 CST` 的技能相关文件，并排除 `.git`、`.venv`、`venv`、`node_modules`、`.pytest_cache`、`__pycache__` 与 `.DS_Store`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 仓库的 `git status --short --untracked-files=all -- skills skill-center automation` 工作区增删改复核
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline` 仓库的 `git log --since='2026-04-22T03:04:36.508Z' --name-status -- skills skill-center automation` 提交历史复核
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-22T03:04:36.508Z`，四个目标目录内没有新的技能相关文件新增、修改或删除。
+- 递归 `mtime` 扫描为空；仓库 `git status` 与 `git log --since` 复核也为空；排除缓存和虚拟环境目录后，当前仍是 2445 条受监控文件记录。
+- 本轮没有出现新的 `.py` 文件，也没有形成新的待同步变更批次，因此未更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+## 2026-04-22 12:10:26 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T04:09:37Z`（上一轮完成时间；上一轮使用基线为 `2026-04-22T03:04:36.508Z`）
+- 判定依据:
+- `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json` 与当前 live 文件树的路径和 `mtime` 精确比对
+- 递归文件系统扫描，排除 `.git`、`.venv`、`.pytest_cache`、`node_modules`、`__pycache__` 等非技能快照目录
+- 结果汇总: 新增 0，修改 749，删除 0。
+- 任务元数据提供的 `Last run` 为 `2026-04-22T03:04:36.508Z`，但本地持久化快照状态记录上一轮已完成于 `2026-04-22T04:09:37Z`；本轮以较新的本地快照为准，避免重复记录已扫描过的批次。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/SKILL.md` | `modified` | Updated skill instructions for `clash-verge-standard-env`.
+- `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/agents/openai.yaml` | `modified` | Updated agent manifest for `clash-verge-standard-env`.
+- `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/references/rules-enhancement.yaml` | `modified` | Updated reference doc for `clash-verge-standard-env` covering `rules enhancement`.
+- `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/references/verge.template.yaml` | `modified` | Updated reference doc for `clash-verge-standard-env` covering `verge.template`.
+- `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/scripts/apply_standard_env.py` | `modified` | Updated helper script for `clash-verge-standard-env`: `apply_standard_env.py`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/SKILL.md` | `modified` | Updated skill instructions for `codex-feishu-bridge`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/agents/openai.yaml` | `modified` | Updated agent manifest for `codex-feishu-bridge`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/.bridge.env.example` | `modified` | Updated bridge template asset for `codex-feishu-bridge`: `.bridge.env.example`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/launchd/com.codex.feishu-bridge.plist` | `modified` | Updated bridge template asset for `codex-feishu-bridge`: `com.codex.feishu-bridge.plist`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/package.json` | `modified` | Updated bridge template asset for `codex-feishu-bridge`: `package.json`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/bridge-logs.sh` | `modified` | Updated bridge template script for `codex-feishu-bridge`: `bridge-logs.sh`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/bridge-start.sh` | `modified` | Updated bridge template script for `codex-feishu-bridge`: `bridge-start.sh`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/bridge-status.sh` | `modified` | Updated bridge template script for `codex-feishu-bridge`: `bridge-status.sh`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/bridge-stop.sh` | `modified` | Updated bridge template script for `codex-feishu-bridge`: `bridge-stop.sh`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/configure_notify_target.sh` | `modified` | Updated bridge template script for `codex-feishu-bridge`: `configure_notify_target.sh`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/mirror-view.command` | `modified` | Updated bridge template script for `codex-feishu-bridge`: `mirror-view.command`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/mirror-view.sh` | `modified` | Updated bridge template script for `codex-feishu-bridge`: `mirror-view.sh`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/run-bridge.sh` | `modified` | Updated bridge template script for `codex-feishu-bridge`: `run-bridge.sh`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/src/bridge.js` | `modified` | Updated bridge template source for `codex-feishu-bridge`: `bridge.js`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/references/INSTALL-QUICKSTART.md` | `modified` | Updated reference doc for `codex-feishu-bridge` covering `INSTALL QUICKSTART`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/references/architecture.md` | `modified` | Updated reference doc for `codex-feishu-bridge` covering `architecture`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/references/deployment.md` | `modified` | Updated reference doc for `codex-feishu-bridge` covering `deployment`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/references/user-guide.md` | `modified` | Updated reference doc for `codex-feishu-bridge` covering `user guide`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/scripts/install_bridge_template.sh` | `modified` | Updated helper script for `codex-feishu-bridge`: `install_bridge_template.sh`.
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/scripts/package_skill_bundle.sh` | `modified` | Updated helper script for `codex-feishu-bridge`: `package_skill_bundle.sh`.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/SKILL.md` | `modified` | Updated skill instructions for `codex-primary-runtime`.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/agents/openai.yaml` | `modified` | Updated agent manifest for `codex-primary-runtime`.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/assets/file-presentation.png` | `modified` | Updated asset for `codex-primary-runtime`: `file-presentation.png`.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/scripts/init_pro_deck_builder_js.js` | `modified` | Updated helper script for `codex-primary-runtime`: `init_pro_deck_builder_js.js`.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/scripts/prepare_reference_prompts.js` | `modified` | Updated helper script for `codex-primary-runtime`: `prepare_reference_prompts.js`.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/scripts/pro_deck_quality_check.js` | `modified` | Updated helper script for `codex-primary-runtime`: `pro_deck_quality_check.js`.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/slides/templates/build_pro_deck_template.js` | `modified` | Updated template for `codex-primary-runtime`: `build_pro_deck_template.js`.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/spreadsheets/SKILL.md` | `modified` | Updated skill instructions for `codex-primary-runtime`.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/spreadsheets/agents/openai.yaml` | `modified` | Updated agent manifest for `codex-primary-runtime`.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/spreadsheets/assets/file-spreadsheet.png` | `modified` | Updated asset for `codex-primary-runtime`: `file-spreadsheet.png`.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/spreadsheets/style_guidelines.md` | `modified` | Updated supporting file for `codex-primary-runtime`: `style_guidelines.md`.
+- `/Users/baishangjituan/.codex/skills/codex-primary-runtime/spreadsheets/templates/financial_models.md` | `modified` | Updated template for `codex-primary-runtime`: `financial_models.md`.
+- `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/SKILL.md` | `modified` | Updated skill instructions for `coze-seedance15pro-sales-workflow`.
+- `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/agents/openai.yaml` | `modified` | Updated agent manifest for `coze-seedance15pro-sales-workflow`.
+- `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/config.json` | `modified` | Updated config for `coze-seedance15pro-sales-workflow`: `config.json`.
+- `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/references/exported-workflow.yaml` | `modified` | Updated reference doc for `coze-seedance15pro-sales-workflow` covering `exported workflow`.
+- `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/references/manifest.yml` | `modified` | Updated reference doc for `coze-seedance15pro-sales-workflow` covering `manifest`.
+- `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/references/runtime-config.md` | `modified` | Updated reference doc for `coze-seedance15pro-sales-workflow` covering `runtime config`.
+- `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/references/workflow-summary.md` | `modified` | Updated reference doc for `coze-seedance15pro-sales-workflow` covering `workflow summary`.
+- `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/scripts/run_workflow.py` | `modified` | Updated helper script for `coze-seedance15pro-sales-workflow`: `run_workflow.py`.
+- `/Users/baishangjituan/.codex/skills/dachen-founder-flywheel/SKILL.md` | `modified` | Updated skill instructions for `dachen-founder-flywheel`.
+- `/Users/baishangjituan/.codex/skills/dachen-founder-flywheel/references/review-scorecard.md` | `modified` | Updated reference doc for `dachen-founder-flywheel` covering `review scorecard`.
+- `/Users/baishangjituan/.codex/skills/data-review/SKILL.md` | `modified` | Updated skill instructions for `data-review`.
+- `/Users/baishangjituan/.codex/skills/data-review/agents/openai.yaml` | `modified` | Updated agent manifest for `data-review`.
+- `/Users/baishangjituan/.codex/skills/data-review/references/account-slice-analysis.md` | `modified` | Updated reference doc for `data-review` covering `account slice analysis`.
+- `/Users/baishangjituan/.codex/skills/data-review/references/dashboard-export-template.json` | `modified` | Updated reference doc for `data-review` covering `dashboard export template`.
+- `/Users/baishangjituan/.codex/skills/data-review/references/diagnosis-and-decisions.md` | `modified` | Updated reference doc for `data-review` covering `diagnosis and decisions`.
+- `/Users/baishangjituan/.codex/skills/data-review/references/docker-dashboard-contract.md` | `modified` | Updated reference doc for `data-review` covering `docker dashboard contract`.
+- `/Users/baishangjituan/.codex/skills/data-review/references/platform-metrics.md` | `modified` | Updated reference doc for `data-review` covering `platform metrics`.
+- `/Users/baishangjituan/.codex/skills/data-review/references/report-template.md` | `modified` | Updated reference doc for `data-review` covering `report template`.
+- `/Users/baishangjituan/.codex/skills/lark-approval/SKILL.md` | `modified` | Updated skill instructions for `lark-approval`.
+- `/Users/baishangjituan/.codex/skills/lark-attendance/SKILL.md` | `modified` | Updated skill instructions for `lark-attendance`.
+- `/Users/baishangjituan/.codex/skills/lark-base/SKILL.md` | `modified` | Updated skill instructions for `lark-base`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/dashboard-block-data-config.md` | `modified` | Updated reference doc for `lark-base` covering `dashboard block data config`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/examples.md` | `modified` | Updated reference doc for `lark-base` covering `examples`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/formula-field-guide.md` | `modified` | Updated reference doc for `lark-base` covering `formula field guide`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-advperm-disable.md` | `modified` | Updated reference doc for `lark-base` covering `lark base advperm disable`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-advperm-enable.md` | `modified` | Updated reference doc for `lark-base` covering `lark base advperm enable`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-base-copy.md` | `modified` | Updated reference doc for `lark-base` covering `lark base base copy`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-base-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base base create`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-base-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base base get`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-arrange.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard arrange`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard block create`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-delete.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard block delete`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard block get`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard block list`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-update.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard block update`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard create`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-delete.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard delete`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard get`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard list`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-update.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard update`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-data-query.md` | `modified` | Updated reference doc for `lark-base` covering `lark base data query`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base field create`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-delete.md` | `modified` | Updated reference doc for `lark-base` covering `lark base field delete`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base field get`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base field list`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-search-options.md` | `modified` | Updated reference doc for `lark-base` covering `lark base field search options`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-update.md` | `modified` | Updated reference doc for `lark-base` covering `lark base field update`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field.md` | `modified` | Updated reference doc for `lark-base` covering `lark base field`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form create`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-delete.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form delete`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form get`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form list`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form questions create`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-delete.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form questions delete`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form questions list`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-update.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form questions update`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form questions`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-update.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form update`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-history.md` | `modified` | Updated reference doc for `lark-base` covering `lark base history`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-batch-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record batch create`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-batch-update.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record batch update`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-delete.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record delete`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record get`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-history-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record history list`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record list`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-search.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record search`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-upload-attachment.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record upload attachment`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-upsert.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record upsert`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base role create`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-delete.md` | `modified` | Updated reference doc for `lark-base` covering `lark base role delete`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base role get`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base role list`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-update.md` | `modified` | Updated reference doc for `lark-base` covering `lark base role update`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-shortcut-field-properties.md` | `modified` | Updated reference doc for `lark-base` covering `lark base shortcut field properties`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-shortcut-record-value.md` | `modified` | Updated reference doc for `lark-base` covering `lark base shortcut record value`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base table create`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-delete.md` | `modified` | Updated reference doc for `lark-base` covering `lark base table delete`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base table get`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base table list`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-update.md` | `modified` | Updated reference doc for `lark-base` covering `lark base table update`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table.md` | `modified` | Updated reference doc for `lark-base` covering `lark base table`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view create`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-delete.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view delete`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-card.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view get card`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-filter.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view get filter`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-group.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view get group`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-sort.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view get sort`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-timebar.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view get timebar`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-visible-fields.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view get visible fields`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view get`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view list`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-rename.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view rename`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-card.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view set card`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-filter.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view set filter`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-group.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view set group`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-sort.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view set sort`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-timebar.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view set timebar`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-visible-fields.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view set visible fields`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workflow create`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-disable.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workflow disable`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-enable.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workflow enable`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workflow get`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-guide.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workflow guide`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workflow list`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-schema.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workflow schema`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-update.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workflow update`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workflow`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workspace.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workspace`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lookup-field-guide.md` | `modified` | Updated reference doc for `lark-base` covering `lookup field guide`.
+- `/Users/baishangjituan/.codex/skills/lark-base/references/role-config.md` | `modified` | Updated reference doc for `lark-base` covering `role config`.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/SKILL.md` | `modified` | Updated skill instructions for `lark-calendar`.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-agenda.md` | `modified` | Updated reference doc for `lark-calendar` covering `lark calendar agenda`.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-create.md` | `modified` | Updated reference doc for `lark-calendar` covering `lark calendar create`.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-freebusy.md` | `modified` | Updated reference doc for `lark-calendar` covering `lark calendar freebusy`.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-room-find.md` | `modified` | Updated reference doc for `lark-calendar` covering `lark calendar room find`.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-rsvp.md` | `modified` | Updated reference doc for `lark-calendar` covering `lark calendar rsvp`.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-schedule-meeting.md` | `modified` | Updated reference doc for `lark-calendar` covering `lark calendar schedule meeting`.
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-suggestion.md` | `modified` | Updated reference doc for `lark-calendar` covering `lark calendar suggestion`.
+- `/Users/baishangjituan/.codex/skills/lark-contact/SKILL.md` | `modified` | Updated skill instructions for `lark-contact`.
+- `/Users/baishangjituan/.codex/skills/lark-contact/references/lark-contact-get-user.md` | `modified` | Updated reference doc for `lark-contact` covering `lark contact get user`.
+- `/Users/baishangjituan/.codex/skills/lark-contact/references/lark-contact-search-user.md` | `modified` | Updated reference doc for `lark-contact` covering `lark contact search user`.
+- `/Users/baishangjituan/.codex/skills/lark-doc/SKILL.md` | `modified` | Updated skill instructions for `lark-doc`.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-create.md` | `modified` | Updated reference doc for `lark-doc` covering `lark doc create`.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-fetch.md` | `modified` | Updated reference doc for `lark-doc` covering `lark doc fetch`.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-media-download.md` | `modified` | Updated reference doc for `lark-doc` covering `lark doc media download`.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-media-insert.md` | `modified` | Updated reference doc for `lark-doc` covering `lark doc media insert`.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-media-preview.md` | `modified` | Updated reference doc for `lark-doc` covering `lark doc media preview`.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-search.md` | `modified` | Updated reference doc for `lark-doc` covering `lark doc search`.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-update.md` | `modified` | Updated reference doc for `lark-doc` covering `lark doc update`.
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-whiteboard.md` | `modified` | Updated reference doc for `lark-doc` covering `lark doc whiteboard`.
+- `/Users/baishangjituan/.codex/skills/lark-drive/SKILL.md` | `modified` | Updated skill instructions for `lark-drive`.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-add-comment.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive add comment`.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-create-folder.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive create folder`.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-create-shortcut.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive create shortcut`.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-delete.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive delete`.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-download.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive download`.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-export-download.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive export download`.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-export.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive export`.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-import.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive import`.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-move.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive move`.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-reactions.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive reactions`.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-task-result.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive task result`.
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-upload.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive upload`.
+- `/Users/baishangjituan/.codex/skills/lark-event/SKILL.md` | `modified` | Updated skill instructions for `lark-event`.
+- `/Users/baishangjituan/.codex/skills/lark-event/references/lark-event-subscribe.md` | `modified` | Updated reference doc for `lark-event` covering `lark event subscribe`.
+- `/Users/baishangjituan/.codex/skills/lark-im/SKILL.md` | `modified` | Updated skill instructions for `lark-im`.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-create.md` | `modified` | Updated reference doc for `lark-im` covering `lark im chat create`.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-identity.md` | `modified` | Updated reference doc for `lark-im` covering `lark im chat identity`.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-messages-list.md` | `modified` | Updated reference doc for `lark-im` covering `lark im chat messages list`.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-search.md` | `modified` | Updated reference doc for `lark-im` covering `lark im chat search`.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-update.md` | `modified` | Updated reference doc for `lark-im` covering `lark im chat update`.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-mget.md` | `modified` | Updated reference doc for `lark-im` covering `lark im messages mget`.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-reply.md` | `modified` | Updated reference doc for `lark-im` covering `lark im messages reply`.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-resources-download.md` | `modified` | Updated reference doc for `lark-im` covering `lark im messages resources download`.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-search.md` | `modified` | Updated reference doc for `lark-im` covering `lark im messages search`.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-send.md` | `modified` | Updated reference doc for `lark-im` covering `lark im messages send`.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-reactions.md` | `modified` | Updated reference doc for `lark-im` covering `lark im reactions`.
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-threads-messages-list.md` | `modified` | Updated reference doc for `lark-im` covering `lark im threads messages list`.
+- `/Users/baishangjituan/.codex/skills/lark-mail/SKILL.md` | `modified` | Updated skill instructions for `lark-mail`.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-draft-create.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail draft create`.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-draft-edit.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail draft edit`.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-forward.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail forward`.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-message.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail message`.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-messages.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail messages`.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-reply-all.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail reply all`.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-reply.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail reply`.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-send.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail send`.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-signature.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail signature`.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-thread.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail thread`.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-triage.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail triage`.
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-watch.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail watch`.
+- `/Users/baishangjituan/.codex/skills/lark-minutes/SKILL.md` | `modified` | Updated skill instructions for `lark-minutes`.
+- `/Users/baishangjituan/.codex/skills/lark-minutes/references/lark-minutes-download.md` | `modified` | Updated reference doc for `lark-minutes` covering `lark minutes download`.
+- `/Users/baishangjituan/.codex/skills/lark-minutes/references/lark-minutes-search.md` | `modified` | Updated reference doc for `lark-minutes` covering `lark minutes search`.
+- `/Users/baishangjituan/.codex/skills/lark-okr/SKILL.md` | `modified` | Updated skill instructions for `lark-okr`.
+- `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-contentblock.md` | `modified` | Updated reference doc for `lark-okr` covering `lark okr contentblock`.
+- `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-cycle-detail.md` | `modified` | Updated reference doc for `lark-okr` covering `lark okr cycle detail`.
+- `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-cycle-list.md` | `modified` | Updated reference doc for `lark-okr` covering `lark okr cycle list`.
+- `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-entities.md` | `modified` | Updated reference doc for `lark-okr` covering `lark okr entities`.
+- `/Users/baishangjituan/.codex/skills/lark-openapi-explorer/SKILL.md` | `modified` | Updated skill instructions for `lark-openapi-explorer`.
+- `/Users/baishangjituan/.codex/skills/lark-shared/SKILL.md` | `modified` | Updated skill instructions for `lark-shared`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/SKILL.md` | `modified` | Updated skill instructions for `lark-sheets`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-add-dimension.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets add dimension`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-append.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets append`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-batch-set-style.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets batch set style`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-create-filter-view-condition.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets create filter view condition`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-create-filter-view.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets create filter view`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-create.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets create`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-dimension.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets delete dimension`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-dropdown.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets delete dropdown`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-filter-view-condition.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets delete filter view condition`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-filter-view.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets delete filter view`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-export.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets export`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-find.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets find`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-formula.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets formula`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-get-dropdown.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets get dropdown`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-get-filter-view-condition.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets get filter view condition`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-get-filter-view.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets get filter view`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-info.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets info`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-insert-dimension.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets insert dimension`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-list-filter-view-conditions.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets list filter view conditions`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-list-filter-views.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets list filter views`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-merge-cells.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets merge cells`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-move-dimension.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets move dimension`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-read.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets read`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-replace.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets replace`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-set-dropdown.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets set dropdown`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-set-style.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets set style`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-unmerge-cells.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets unmerge cells`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-dimension.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets update dimension`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-dropdown.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets update dropdown`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-filter-view-condition.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets update filter view condition`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-filter-view.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets update filter view`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-write-image.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets write image`.
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-write.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets write`.
+- `/Users/baishangjituan/.codex/skills/lark-skill-maker/SKILL.md` | `modified` | Updated skill instructions for `lark-skill-maker`.
+- `/Users/baishangjituan/.codex/skills/lark-slides/SKILL.md` | `modified` | Updated skill instructions for `lark-slides`.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/examples.md` | `modified` | Updated reference doc for `lark-slides` covering `examples`.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-create.md` | `modified` | Updated reference doc for `lark-slides` covering `lark slides create`.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-media-upload.md` | `modified` | Updated reference doc for `lark-slides` covering `lark slides media upload`.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-xml-presentation-slide-create.md` | `modified` | Updated reference doc for `lark-slides` covering `lark slides xml presentation slide create`.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-xml-presentation-slide-delete.md` | `modified` | Updated reference doc for `lark-slides` covering `lark slides xml presentation slide delete`.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-xml-presentations-get.md` | `modified` | Updated reference doc for `lark-slides` covering `lark slides xml presentations get`.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/slide-templates.md` | `modified` | Updated reference doc for `lark-slides` covering `slide templates`.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/slides_demo.xml` | `modified` | Updated reference doc for `lark-slides` covering `slides demo`.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/slides_xml_schema_definition.xml` | `modified` | Updated reference doc for `lark-slides` covering `slides xml schema definition`.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/xml-format-guide.md` | `modified` | Updated reference doc for `lark-slides` covering `xml format guide`.
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/xml-schema-quick-ref.md` | `modified` | Updated reference doc for `lark-slides` covering `xml schema quick ref`.
+- `/Users/baishangjituan/.codex/skills/lark-task/SKILL.md` | `modified` | Updated skill instructions for `lark-task`.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-assign.md` | `modified` | Updated reference doc for `lark-task` covering `lark task assign`.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-comment.md` | `modified` | Updated reference doc for `lark-task` covering `lark task comment`.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-complete.md` | `modified` | Updated reference doc for `lark-task` covering `lark task complete`.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-create.md` | `modified` | Updated reference doc for `lark-task` covering `lark task create`.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-followers.md` | `modified` | Updated reference doc for `lark-task` covering `lark task followers`.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-get-my-tasks.md` | `modified` | Updated reference doc for `lark-task` covering `lark task get my tasks`.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-get-related-tasks.md` | `modified` | Updated reference doc for `lark-task` covering `lark task get related tasks`.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-reminder.md` | `modified` | Updated reference doc for `lark-task` covering `lark task reminder`.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-reopen.md` | `modified` | Updated reference doc for `lark-task` covering `lark task reopen`.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-search.md` | `modified` | Updated reference doc for `lark-task` covering `lark task search`.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-set-ancestor.md` | `modified` | Updated reference doc for `lark-task` covering `lark task set ancestor`.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-subscribe-event.md` | `modified` | Updated reference doc for `lark-task` covering `lark task subscribe event`.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-create.md` | `modified` | Updated reference doc for `lark-task` covering `lark task tasklist create`.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-members.md` | `modified` | Updated reference doc for `lark-task` covering `lark task tasklist members`.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-search.md` | `modified` | Updated reference doc for `lark-task` covering `lark task tasklist search`.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-task-add.md` | `modified` | Updated reference doc for `lark-task` covering `lark task tasklist task add`.
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-update.md` | `modified` | Updated reference doc for `lark-task` covering `lark task update`.
+- `/Users/baishangjituan/.codex/skills/lark-vc/SKILL.md` | `modified` | Updated skill instructions for `lark-vc`.
+- `/Users/baishangjituan/.codex/skills/lark-vc/references/lark-vc-notes.md` | `modified` | Updated reference doc for `lark-vc` covering `lark vc notes`.
+- `/Users/baishangjituan/.codex/skills/lark-vc/references/lark-vc-recording.md` | `modified` | Updated reference doc for `lark-vc` covering `lark vc recording`.
+- `/Users/baishangjituan/.codex/skills/lark-vc/references/lark-vc-search.md` | `modified` | Updated reference doc for `lark-vc` covering `lark vc search`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/SKILL.md` | `modified` | Updated skill instructions for `lark-whiteboard`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/connectors.md` | `modified` | Updated reference doc for `lark-whiteboard` covering `connectors`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/content.md` | `modified` | Updated reference doc for `lark-whiteboard` covering `content`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/lark-whiteboard-query.md` | `modified` | Updated reference doc for `lark-whiteboard` covering `lark whiteboard query`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/lark-whiteboard-update.md` | `modified` | Updated reference doc for `lark-whiteboard` covering `lark whiteboard update`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/layout.md` | `modified` | Updated reference doc for `lark-whiteboard` covering `layout`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/schema.md` | `modified` | Updated reference doc for `lark-whiteboard` covering `schema`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/style.md` | `modified` | Updated reference doc for `lark-whiteboard` covering `style`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/typography.md` | `modified` | Updated reference doc for `lark-whiteboard` covering `typography`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/routes/dsl.md` | `modified` | Updated route guide for `lark-whiteboard` covering `dsl`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/routes/mermaid.md` | `modified` | Updated route guide for `lark-whiteboard` covering `mermaid`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/routes/svg.md` | `modified` | Updated route guide for `lark-whiteboard` covering `svg`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/architecture.md` | `modified` | Updated scene template for `lark-whiteboard` covering `architecture`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/bar-chart.md` | `modified` | Updated scene template for `lark-whiteboard` covering `bar chart`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/comparison.md` | `modified` | Updated scene template for `lark-whiteboard` covering `comparison`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/fishbone.md` | `modified` | Updated scene template for `lark-whiteboard` covering `fishbone`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/flowchart.md` | `modified` | Updated scene template for `lark-whiteboard` covering `flowchart`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/flywheel.md` | `modified` | Updated scene template for `lark-whiteboard` covering `flywheel`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/funnel.md` | `modified` | Updated scene template for `lark-whiteboard` covering `funnel`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/line-chart.md` | `modified` | Updated scene template for `lark-whiteboard` covering `line chart`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/mermaid.md` | `modified` | Updated scene template for `lark-whiteboard` covering `mermaid`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/milestone.md` | `modified` | Updated scene template for `lark-whiteboard` covering `milestone`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/organization.md` | `modified` | Updated scene template for `lark-whiteboard` covering `organization`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/pyramid.md` | `modified` | Updated scene template for `lark-whiteboard` covering `pyramid`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/swimlane.md` | `modified` | Updated scene template for `lark-whiteboard` covering `swimlane`.
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/treemap.md` | `modified` | Updated scene template for `lark-whiteboard` covering `treemap`.
+- `/Users/baishangjituan/.codex/skills/lark-wiki/SKILL.md` | `modified` | Updated skill instructions for `lark-wiki`.
+- `/Users/baishangjituan/.codex/skills/lark-wiki/references/lark-wiki-move.md` | `modified` | Updated reference doc for `lark-wiki` covering `lark wiki move`.
+- `/Users/baishangjituan/.codex/skills/lark-wiki/references/lark-wiki-node-create.md` | `modified` | Updated reference doc for `lark-wiki` covering `lark wiki node create`.
+- `/Users/baishangjituan/.codex/skills/lark-workflow-meeting-summary/SKILL.md` | `modified` | Updated skill instructions for `lark-workflow-meeting-summary`.
+- `/Users/baishangjituan/.codex/skills/lark-workflow-standup-report/SKILL.md` | `modified` | Updated skill instructions for `lark-workflow-standup-report`.
+- `/Users/baishangjituan/.codex/skills/platform-ops-hub/SKILL.md` | `modified` | Updated skill instructions for `platform-ops-hub`.
+- `/Users/baishangjituan/.codex/skills/playwright/scripts/playwright_cli.sh` | `modified` | Updated helper script for `playwright`: `playwright_cli.sh`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/SKILL.md` | `modified` | Updated skill instructions for `seedance-video-api`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/agents/openai.yaml` | `modified` | Updated agent manifest for `seedance-video-api`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0.json` | `modified` | Updated example asset for `seedance-video-api`: `asset_reference_identity_lock_seedance_2_0.json`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0_fast.json` | `modified` | Updated example asset for `seedance-video-api`: `asset_reference_identity_lock_seedance_2_0_fast.json`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/extend_bridge_seedance_2_0.json` | `modified` | Updated example asset for `seedance-video-api`: `extend_bridge_seedance_2_0.json`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/extend_single_seedance_2_0.json` | `modified` | Updated example asset for `seedance-video-api`: `extend_single_seedance_2_0.json`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/i2v_first_frame_seedance_2_0.json` | `modified` | Updated example asset for `seedance-video-api`: `i2v_first_frame_seedance_2_0.json`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/multimodal_reference_seedance_2_0.json` | `modified` | Updated example asset for `seedance-video-api`: `multimodal_reference_seedance_2_0.json`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/t2v_seedance_2_0.json` | `modified` | Updated example asset for `seedance-video-api`: `t2v_seedance_2_0.json`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/t2v_seedance_2_0_fast.json` | `modified` | Updated example asset for `seedance-video-api`: `t2v_seedance_2_0_fast.json`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/api-basics.md` | `modified` | Updated reference doc for `seedance-video-api` covering `api basics`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/cover-execution.md` | `modified` | Updated reference doc for `seedance-video-api` covering `cover execution`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/cover-package.md` | `modified` | Updated reference doc for `seedance-video-api` covering `cover package`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/prompt-template.md` | `modified` | Updated reference doc for `seedance-video-api` covering `prompt template`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/real-person-consistency.md` | `modified` | Updated reference doc for `seedance-video-api` covering `real person consistency`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/workflows.md` | `modified` | Updated reference doc for `seedance-video-api` covering `workflows`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/build_cover_package.py` | `modified` | Updated helper script for `seedance-video-api`: `build_cover_package.py`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/extract_cover_candidates.py` | `modified` | Updated helper script for `seedance-video-api`: `extract_cover_candidates.py`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/init_cover_package.py` | `modified` | Updated helper script for `seedance-video-api`: `init_cover_package.py`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/render_cover_package.py` | `modified` | Updated helper script for `seedance-video-api`: `render_cover_package.py`.
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/seedance_cli.py` | `modified` | Updated helper script for `seedance-video-api`: `seedance_cli.py`.
+- `/Users/baishangjituan/.codex/skills/social-publish-automation/SKILL.md` | `modified` | Updated skill instructions for `social-publish-automation`.
+- `/Users/baishangjituan/.codex/skills/wechat-channels-launchagent-keepalive/SKILL.md` | `modified` | Updated skill instructions for `wechat-channels-launchagent-keepalive`.
+- `/Users/baishangjituan/.codex/skills/wechat-channels-launchagent-keepalive/agents/openai.yaml` | `modified` | Updated agent manifest for `wechat-channels-launchagent-keepalive`.
+- `/Users/baishangjituan/.codex/skills/xiaoyunque-source-video/SKILL.md` | `modified` | Updated skill instructions for `xiaoyunque-source-video`.
+- `/Users/baishangjituan/.codex/skills/xiaoyunque-source-video/agents/openai.yaml` | `modified` | Updated agent manifest for `xiaoyunque-source-video`.
+- `/Users/baishangjituan/.codex/skills/xiaoyunque-source-video/references/prompt-template.md` | `modified` | Updated reference doc for `xiaoyunque-source-video` covering `prompt template`.
+- `/Users/baishangjituan/.codex/skills/xiaoyunque-source-video/references/source-video-playbook.md` | `modified` | Updated reference doc for `xiaoyunque-source-video` covering `source video playbook`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/.env.example` | `modified` | Updated supporting file for `python-platform-takeover`: `.env.example`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md` | `modified` | Updated supporting file for `python-platform-takeover`: `README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-17-ai-first-replace-three-tasks.yaml` | `modified` | Updated config/example for `python-platform-takeover`: `content-package.2026-04-17-ai-first-replace-three-tasks.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-20-ai-content-platform-execution.yaml` | `modified` | Updated config/example for `python-platform-takeover`: `content-package.2026-04-20-ai-content-platform-execution.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-21-platform-execution-next-round.yaml` | `modified` | Updated config/example for `python-platform-takeover`: `content-package.2026-04-21-platform-execution-next-round.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.demo.yaml` | `modified` | Updated config/example for `python-platform-takeover`: `content-package.demo.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.example.yaml` | `modified` | Updated config/example for `python-platform-takeover`: `content-package.example.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/baijiahao.yaml` | `modified` | Updated config/example for `python-platform-takeover`: `baijiahao.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/douyin.yaml` | `modified` | Updated config/example for `python-platform-takeover`: `douyin.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/kuaishou.yaml` | `modified` | Updated config/example for `python-platform-takeover`: `kuaishou.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/toutiao.yaml` | `modified` | Updated config/example for `python-platform-takeover`: `toutiao.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/wechat_channels.yaml` | `modified` | Updated config/example for `python-platform-takeover`: `wechat_channels.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/weibo.yaml` | `modified` | Updated config/example for `python-platform-takeover`: `weibo.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/zhihu.yaml` | `modified` | Updated config/example for `python-platform-takeover`: `zhihu.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platforms.example.yaml` | `modified` | Updated config/example for `python-platform-takeover`: `platforms.example.yaml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/pyproject.toml` | `modified` | Updated config for `python-platform-takeover`: `pyproject.toml`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/quickstart-mac.sh` | `modified` | Updated helper script for `python-platform-takeover`: `quickstart-mac.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/quickstart-windows.ps1` | `modified` | Updated helper script for `python-platform-takeover`: `quickstart-windows.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/social-publisher.ps1` | `modified` | Updated helper script for `python-platform-takeover`: `social-publisher.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/social-publisher.sh` | `modified` | Updated helper script for `python-platform-takeover`: `social-publisher.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/start-chrome-cdp.ps1` | `modified` | Updated helper script for `python-platform-takeover`: `start-chrome-cdp.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/start-chrome-cdp.sh` | `modified` | Updated helper script for `python-platform-takeover`: `start-chrome-cdp.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/__init__.py` | `modified` | Updated supporting file for `python-platform-takeover`: `__init__.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/__main__.py` | `modified` | Updated supporting file for `python-platform-takeover`: `__main__.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/browser.py` | `modified` | Updated supporting file for `python-platform-takeover`: `browser.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/cli.py` | `modified` | Updated supporting file for `python-platform-takeover`: `cli.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/content_package.py` | `modified` | Updated supporting file for `python-platform-takeover`: `content_package.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/doctor.py` | `modified` | Updated supporting file for `python-platform-takeover`: `doctor.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/env.py` | `modified` | Updated supporting file for `python-platform-takeover`: `env.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platform_mapping.py` | `modified` | Updated supporting file for `python-platform-takeover`: `platform_mapping.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/__init__.py` | `modified` | Updated supporting file for `python-platform-takeover`: `__init__.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/baijiahao.py` | `modified` | Updated supporting file for `python-platform-takeover`: `baijiahao.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/base.py` | `modified` | Updated supporting file for `python-platform-takeover`: `base.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/douyin.py` | `modified` | Updated supporting file for `python-platform-takeover`: `douyin.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/kuaishou.py` | `modified` | Updated supporting file for `python-platform-takeover`: `kuaishou.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/toutiao.py` | `modified` | Updated supporting file for `python-platform-takeover`: `toutiao.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py` | `modified` | Updated supporting file for `python-platform-takeover`: `wechat_channels.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/weibo.py` | `modified` | Updated supporting file for `python-platform-takeover`: `weibo.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/xiaohongshu.py` | `modified` | Updated supporting file for `python-platform-takeover`: `xiaohongshu.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/zhihu.py` | `modified` | Updated supporting file for `python-platform-takeover`: `zhihu.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_browser_controller.py` | `modified` | Updated supporting file for `python-platform-takeover`: `test_browser_controller.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_content_package.py` | `modified` | Updated supporting file for `python-platform-takeover`: `test_content_package.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_doctor.py` | `modified` | Updated supporting file for `python-platform-takeover`: `test_doctor.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_env.py` | `modified` | Updated supporting file for `python-platform-takeover`: `test_env.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_platform_base.py` | `modified` | Updated supporting file for `python-platform-takeover`: `test_platform_base.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/README.md` | `modified` | Updated supporting file for `skill-center`: `README.md`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/scripts/sync-skills.ps1` | `modified` | Updated helper script for `scripts`: `sync-skills.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/scripts/sync-skills.sh` | `modified` | Updated helper script for `scripts`: `sync-skills.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills-manifest.txt` | `modified` | Updated supporting file for `skill-center`: `skills-manifest.txt`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/SKILL.md` | `modified` | Updated skill instructions for `data-review`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/dashboard-export-template.json` | `modified` | Updated reference doc for `data-review` covering `dashboard export template`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/docker-dashboard-contract.md` | `modified` | Updated reference doc for `data-review` covering `docker dashboard contract`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/report-template.md` | `modified` | Updated reference doc for `data-review` covering `report template`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-approval/SKILL.md` | `modified` | Updated skill instructions for `lark-approval`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-attendance/SKILL.md` | `modified` | Updated skill instructions for `lark-attendance`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/SKILL.md` | `modified` | Updated skill instructions for `lark-base`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/dashboard-block-data-config.md` | `modified` | Updated reference doc for `lark-base` covering `dashboard block data config`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/examples.md` | `modified` | Updated reference doc for `lark-base` covering `examples`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/formula-field-guide.md` | `modified` | Updated reference doc for `lark-base` covering `formula field guide`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-advperm-disable.md` | `modified` | Updated reference doc for `lark-base` covering `lark base advperm disable`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-advperm-enable.md` | `modified` | Updated reference doc for `lark-base` covering `lark base advperm enable`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-base-copy.md` | `modified` | Updated reference doc for `lark-base` covering `lark base base copy`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-base-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base base create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-base-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base base get`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-arrange.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard arrange`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard block create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-delete.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard block delete`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard block get`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard block list`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-update.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard block update`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-delete.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard delete`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard get`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard list`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-update.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard update`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard.md` | `modified` | Updated reference doc for `lark-base` covering `lark base dashboard`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-data-query.md` | `modified` | Updated reference doc for `lark-base` covering `lark base data query`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base field create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-delete.md` | `modified` | Updated reference doc for `lark-base` covering `lark base field delete`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base field get`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base field list`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-search-options.md` | `modified` | Updated reference doc for `lark-base` covering `lark base field search options`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-update.md` | `modified` | Updated reference doc for `lark-base` covering `lark base field update`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field.md` | `modified` | Updated reference doc for `lark-base` covering `lark base field`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-delete.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form delete`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form get`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form list`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form questions create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-delete.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form questions delete`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form questions list`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-update.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form questions update`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form questions`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-update.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form update`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form.md` | `modified` | Updated reference doc for `lark-base` covering `lark base form`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-history.md` | `modified` | Updated reference doc for `lark-base` covering `lark base history`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-batch-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record batch create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-batch-update.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record batch update`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-delete.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record delete`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record get`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-history-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record history list`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record list`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-search.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record search`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-upload-attachment.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record upload attachment`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-upsert.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record upsert`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record.md` | `modified` | Updated reference doc for `lark-base` covering `lark base record`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base role create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-delete.md` | `modified` | Updated reference doc for `lark-base` covering `lark base role delete`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base role get`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base role list`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-update.md` | `modified` | Updated reference doc for `lark-base` covering `lark base role update`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-shortcut-field-properties.md` | `modified` | Updated reference doc for `lark-base` covering `lark base shortcut field properties`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-shortcut-record-value.md` | `modified` | Updated reference doc for `lark-base` covering `lark base shortcut record value`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base table create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-delete.md` | `modified` | Updated reference doc for `lark-base` covering `lark base table delete`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base table get`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base table list`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-update.md` | `modified` | Updated reference doc for `lark-base` covering `lark base table update`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table.md` | `modified` | Updated reference doc for `lark-base` covering `lark base table`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-delete.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view delete`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-card.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view get card`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-filter.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view get filter`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-group.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view get group`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-sort.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view get sort`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-timebar.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view get timebar`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-visible-fields.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view get visible fields`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view get`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view list`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-rename.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view rename`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-card.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view set card`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-filter.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view set filter`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-group.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view set group`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-sort.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view set sort`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-timebar.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view set timebar`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-visible-fields.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view set visible fields`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view.md` | `modified` | Updated reference doc for `lark-base` covering `lark base view`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-create.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workflow create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-disable.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workflow disable`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-enable.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workflow enable`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-get.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workflow get`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-guide.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workflow guide`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-list.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workflow list`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-schema.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workflow schema`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-update.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workflow update`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workflow`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workspace.md` | `modified` | Updated reference doc for `lark-base` covering `lark base workspace`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lookup-field-guide.md` | `modified` | Updated reference doc for `lark-base` covering `lookup field guide`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/role-config.md` | `modified` | Updated reference doc for `lark-base` covering `role config`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/SKILL.md` | `modified` | Updated skill instructions for `lark-calendar`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-agenda.md` | `modified` | Updated reference doc for `lark-calendar` covering `lark calendar agenda`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-create.md` | `modified` | Updated reference doc for `lark-calendar` covering `lark calendar create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-freebusy.md` | `modified` | Updated reference doc for `lark-calendar` covering `lark calendar freebusy`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-room-find.md` | `modified` | Updated reference doc for `lark-calendar` covering `lark calendar room find`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-rsvp.md` | `modified` | Updated reference doc for `lark-calendar` covering `lark calendar rsvp`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-schedule-meeting.md` | `modified` | Updated reference doc for `lark-calendar` covering `lark calendar schedule meeting`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-suggestion.md` | `modified` | Updated reference doc for `lark-calendar` covering `lark calendar suggestion`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-contact/SKILL.md` | `modified` | Updated skill instructions for `lark-contact`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-contact/references/lark-contact-get-user.md` | `modified` | Updated reference doc for `lark-contact` covering `lark contact get user`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-contact/references/lark-contact-search-user.md` | `modified` | Updated reference doc for `lark-contact` covering `lark contact search user`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/SKILL.md` | `modified` | Updated skill instructions for `lark-doc`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-create.md` | `modified` | Updated reference doc for `lark-doc` covering `lark doc create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-fetch.md` | `modified` | Updated reference doc for `lark-doc` covering `lark doc fetch`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-media-download.md` | `modified` | Updated reference doc for `lark-doc` covering `lark doc media download`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-media-insert.md` | `modified` | Updated reference doc for `lark-doc` covering `lark doc media insert`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-media-preview.md` | `modified` | Updated reference doc for `lark-doc` covering `lark doc media preview`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-search.md` | `modified` | Updated reference doc for `lark-doc` covering `lark doc search`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-update.md` | `modified` | Updated reference doc for `lark-doc` covering `lark doc update`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-whiteboard.md` | `modified` | Updated reference doc for `lark-doc` covering `lark doc whiteboard`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/SKILL.md` | `modified` | Updated skill instructions for `lark-drive`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-add-comment.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive add comment`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-create-folder.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive create folder`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-create-shortcut.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive create shortcut`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-delete.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive delete`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-download.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive download`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-export-download.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive export download`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-export.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive export`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-import.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive import`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-move.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive move`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-reactions.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive reactions`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-task-result.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive task result`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-upload.md` | `modified` | Updated reference doc for `lark-drive` covering `lark drive upload`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-event/SKILL.md` | `modified` | Updated skill instructions for `lark-event`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-event/references/lark-event-subscribe.md` | `modified` | Updated reference doc for `lark-event` covering `lark event subscribe`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/SKILL.md` | `modified` | Updated skill instructions for `lark-im`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-create.md` | `modified` | Updated reference doc for `lark-im` covering `lark im chat create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-identity.md` | `modified` | Updated reference doc for `lark-im` covering `lark im chat identity`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-messages-list.md` | `modified` | Updated reference doc for `lark-im` covering `lark im chat messages list`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-search.md` | `modified` | Updated reference doc for `lark-im` covering `lark im chat search`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-update.md` | `modified` | Updated reference doc for `lark-im` covering `lark im chat update`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-mget.md` | `modified` | Updated reference doc for `lark-im` covering `lark im messages mget`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-reply.md` | `modified` | Updated reference doc for `lark-im` covering `lark im messages reply`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-resources-download.md` | `modified` | Updated reference doc for `lark-im` covering `lark im messages resources download`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-search.md` | `modified` | Updated reference doc for `lark-im` covering `lark im messages search`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-send.md` | `modified` | Updated reference doc for `lark-im` covering `lark im messages send`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-reactions.md` | `modified` | Updated reference doc for `lark-im` covering `lark im reactions`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-threads-messages-list.md` | `modified` | Updated reference doc for `lark-im` covering `lark im threads messages list`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/SKILL.md` | `modified` | Updated skill instructions for `lark-mail`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-draft-create.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail draft create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-draft-edit.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail draft edit`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-forward.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail forward`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-message.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail message`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-messages.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail messages`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-reply-all.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail reply all`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-reply.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail reply`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-send.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail send`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-signature.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail signature`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-thread.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail thread`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-triage.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail triage`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-watch.md` | `modified` | Updated reference doc for `lark-mail` covering `lark mail watch`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-minutes/SKILL.md` | `modified` | Updated skill instructions for `lark-minutes`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-minutes/references/lark-minutes-download.md` | `modified` | Updated reference doc for `lark-minutes` covering `lark minutes download`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-minutes/references/lark-minutes-search.md` | `modified` | Updated reference doc for `lark-minutes` covering `lark minutes search`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/SKILL.md` | `modified` | Updated skill instructions for `lark-okr`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-contentblock.md` | `modified` | Updated reference doc for `lark-okr` covering `lark okr contentblock`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-cycle-detail.md` | `modified` | Updated reference doc for `lark-okr` covering `lark okr cycle detail`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-cycle-list.md` | `modified` | Updated reference doc for `lark-okr` covering `lark okr cycle list`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-entities.md` | `modified` | Updated reference doc for `lark-okr` covering `lark okr entities`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-openapi-explorer/SKILL.md` | `modified` | Updated skill instructions for `lark-openapi-explorer`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-shared/SKILL.md` | `modified` | Updated skill instructions for `lark-shared`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/SKILL.md` | `modified` | Updated skill instructions for `lark-sheets`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-add-dimension.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets add dimension`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-append.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets append`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-batch-set-style.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets batch set style`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-create-filter-view-condition.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets create filter view condition`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-create-filter-view.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets create filter view`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-create.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-dimension.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets delete dimension`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-dropdown.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets delete dropdown`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-filter-view-condition.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets delete filter view condition`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-filter-view.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets delete filter view`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-export.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets export`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-find.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets find`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-formula.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets formula`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-get-dropdown.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets get dropdown`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-get-filter-view-condition.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets get filter view condition`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-get-filter-view.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets get filter view`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-info.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets info`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-insert-dimension.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets insert dimension`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-list-filter-view-conditions.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets list filter view conditions`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-list-filter-views.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets list filter views`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-merge-cells.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets merge cells`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-move-dimension.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets move dimension`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-read.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets read`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-replace.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets replace`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-set-dropdown.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets set dropdown`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-set-style.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets set style`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-unmerge-cells.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets unmerge cells`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-dimension.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets update dimension`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-dropdown.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets update dropdown`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-filter-view-condition.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets update filter view condition`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-filter-view.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets update filter view`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-write-image.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets write image`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-write.md` | `modified` | Updated reference doc for `lark-sheets` covering `lark sheets write`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-skill-maker/SKILL.md` | `modified` | Updated skill instructions for `lark-skill-maker`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/SKILL.md` | `modified` | Updated skill instructions for `lark-slides`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/examples.md` | `modified` | Updated reference doc for `lark-slides` covering `examples`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-create.md` | `modified` | Updated reference doc for `lark-slides` covering `lark slides create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-media-upload.md` | `modified` | Updated reference doc for `lark-slides` covering `lark slides media upload`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-xml-presentation-slide-create.md` | `modified` | Updated reference doc for `lark-slides` covering `lark slides xml presentation slide create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-xml-presentation-slide-delete.md` | `modified` | Updated reference doc for `lark-slides` covering `lark slides xml presentation slide delete`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-xml-presentations-get.md` | `modified` | Updated reference doc for `lark-slides` covering `lark slides xml presentations get`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/slide-templates.md` | `modified` | Updated reference doc for `lark-slides` covering `slide templates`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/slides_demo.xml` | `modified` | Updated reference doc for `lark-slides` covering `slides demo`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/slides_xml_schema_definition.xml` | `modified` | Updated reference doc for `lark-slides` covering `slides xml schema definition`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/xml-format-guide.md` | `modified` | Updated reference doc for `lark-slides` covering `xml format guide`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/xml-schema-quick-ref.md` | `modified` | Updated reference doc for `lark-slides` covering `xml schema quick ref`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/SKILL.md` | `modified` | Updated skill instructions for `lark-task`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-assign.md` | `modified` | Updated reference doc for `lark-task` covering `lark task assign`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-comment.md` | `modified` | Updated reference doc for `lark-task` covering `lark task comment`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-complete.md` | `modified` | Updated reference doc for `lark-task` covering `lark task complete`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-create.md` | `modified` | Updated reference doc for `lark-task` covering `lark task create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-followers.md` | `modified` | Updated reference doc for `lark-task` covering `lark task followers`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-get-my-tasks.md` | `modified` | Updated reference doc for `lark-task` covering `lark task get my tasks`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-get-related-tasks.md` | `modified` | Updated reference doc for `lark-task` covering `lark task get related tasks`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-reminder.md` | `modified` | Updated reference doc for `lark-task` covering `lark task reminder`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-reopen.md` | `modified` | Updated reference doc for `lark-task` covering `lark task reopen`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-search.md` | `modified` | Updated reference doc for `lark-task` covering `lark task search`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-set-ancestor.md` | `modified` | Updated reference doc for `lark-task` covering `lark task set ancestor`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-subscribe-event.md` | `modified` | Updated reference doc for `lark-task` covering `lark task subscribe event`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-create.md` | `modified` | Updated reference doc for `lark-task` covering `lark task tasklist create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-members.md` | `modified` | Updated reference doc for `lark-task` covering `lark task tasklist members`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-search.md` | `modified` | Updated reference doc for `lark-task` covering `lark task tasklist search`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-task-add.md` | `modified` | Updated reference doc for `lark-task` covering `lark task tasklist task add`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-update.md` | `modified` | Updated reference doc for `lark-task` covering `lark task update`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/SKILL.md` | `modified` | Updated skill instructions for `lark-vc`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/references/lark-vc-notes.md` | `modified` | Updated reference doc for `lark-vc` covering `lark vc notes`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/references/lark-vc-recording.md` | `modified` | Updated reference doc for `lark-vc` covering `lark vc recording`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/references/lark-vc-search.md` | `modified` | Updated reference doc for `lark-vc` covering `lark vc search`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/SKILL.md` | `modified` | Updated skill instructions for `lark-whiteboard`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/connectors.md` | `modified` | Updated reference doc for `lark-whiteboard` covering `connectors`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/content.md` | `modified` | Updated reference doc for `lark-whiteboard` covering `content`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/lark-whiteboard-query.md` | `modified` | Updated reference doc for `lark-whiteboard` covering `lark whiteboard query`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/lark-whiteboard-update.md` | `modified` | Updated reference doc for `lark-whiteboard` covering `lark whiteboard update`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/layout.md` | `modified` | Updated reference doc for `lark-whiteboard` covering `layout`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/schema.md` | `modified` | Updated reference doc for `lark-whiteboard` covering `schema`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/style.md` | `modified` | Updated reference doc for `lark-whiteboard` covering `style`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/typography.md` | `modified` | Updated reference doc for `lark-whiteboard` covering `typography`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/routes/dsl.md` | `modified` | Updated route guide for `lark-whiteboard` covering `dsl`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/routes/mermaid.md` | `modified` | Updated route guide for `lark-whiteboard` covering `mermaid`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/routes/svg.md` | `modified` | Updated route guide for `lark-whiteboard` covering `svg`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/architecture.md` | `modified` | Updated scene template for `lark-whiteboard` covering `architecture`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/bar-chart.md` | `modified` | Updated scene template for `lark-whiteboard` covering `bar chart`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/comparison.md` | `modified` | Updated scene template for `lark-whiteboard` covering `comparison`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/fishbone.md` | `modified` | Updated scene template for `lark-whiteboard` covering `fishbone`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/flowchart.md` | `modified` | Updated scene template for `lark-whiteboard` covering `flowchart`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/flywheel.md` | `modified` | Updated scene template for `lark-whiteboard` covering `flywheel`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/funnel.md` | `modified` | Updated scene template for `lark-whiteboard` covering `funnel`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/line-chart.md` | `modified` | Updated scene template for `lark-whiteboard` covering `line chart`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/mermaid.md` | `modified` | Updated scene template for `lark-whiteboard` covering `mermaid`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/milestone.md` | `modified` | Updated scene template for `lark-whiteboard` covering `milestone`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/organization.md` | `modified` | Updated scene template for `lark-whiteboard` covering `organization`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/pyramid.md` | `modified` | Updated scene template for `lark-whiteboard` covering `pyramid`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/swimlane.md` | `modified` | Updated scene template for `lark-whiteboard` covering `swimlane`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/treemap.md` | `modified` | Updated scene template for `lark-whiteboard` covering `treemap`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-wiki/SKILL.md` | `modified` | Updated skill instructions for `lark-wiki`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-wiki/references/lark-wiki-move.md` | `modified` | Updated reference doc for `lark-wiki` covering `lark wiki move`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-wiki/references/lark-wiki-node-create.md` | `modified` | Updated reference doc for `lark-wiki` covering `lark wiki node create`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-workflow-meeting-summary/SKILL.md` | `modified` | Updated skill instructions for `lark-workflow-meeting-summary`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-workflow-standup-report/SKILL.md` | `modified` | Updated skill instructions for `lark-workflow-standup-report`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh` | `modified` | Updated helper script for `playwright`: `playwright_cli.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/SKILL.md` | `modified` | Updated skill instructions for `seedance-video-api`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/agents/openai.yaml` | `modified` | Updated agent manifest for `seedance-video-api`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0.json` | `modified` | Updated example asset for `seedance-video-api`: `asset_reference_identity_lock_seedance_2_0.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0_fast.json` | `modified` | Updated example asset for `seedance-video-api`: `asset_reference_identity_lock_seedance_2_0_fast.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/extend_bridge_seedance_2_0.json` | `modified` | Updated example asset for `seedance-video-api`: `extend_bridge_seedance_2_0.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/extend_single_seedance_2_0.json` | `modified` | Updated example asset for `seedance-video-api`: `extend_single_seedance_2_0.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/i2v_first_frame_seedance_2_0.json` | `modified` | Updated example asset for `seedance-video-api`: `i2v_first_frame_seedance_2_0.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/multimodal_reference_seedance_2_0.json` | `modified` | Updated example asset for `seedance-video-api`: `multimodal_reference_seedance_2_0.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/t2v_seedance_2_0.json` | `modified` | Updated example asset for `seedance-video-api`: `t2v_seedance_2_0.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/t2v_seedance_2_0_fast.json` | `modified` | Updated example asset for `seedance-video-api`: `t2v_seedance_2_0_fast.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/api-basics.md` | `modified` | Updated reference doc for `seedance-video-api` covering `api basics`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/cover-execution.md` | `modified` | Updated reference doc for `seedance-video-api` covering `cover execution`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/cover-package.md` | `modified` | Updated reference doc for `seedance-video-api` covering `cover package`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/prompt-template.md` | `modified` | Updated reference doc for `seedance-video-api` covering `prompt template`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/real-person-consistency.md` | `modified` | Updated reference doc for `seedance-video-api` covering `real person consistency`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/workflows.md` | `modified` | Updated reference doc for `seedance-video-api` covering `workflows`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/build_cover_package.ps1` | `modified` | Updated helper script for `seedance-video-api`: `build_cover_package.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/build_cover_package.py` | `modified` | Updated helper script for `seedance-video-api`: `build_cover_package.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/extract_cover_candidates.ps1` | `modified` | Updated helper script for `seedance-video-api`: `extract_cover_candidates.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/extract_cover_candidates.py` | `modified` | Updated helper script for `seedance-video-api`: `extract_cover_candidates.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/init_cover_package.ps1` | `modified` | Updated helper script for `seedance-video-api`: `init_cover_package.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/init_cover_package.py` | `modified` | Updated helper script for `seedance-video-api`: `init_cover_package.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/invoke_seedance_script.ps1` | `modified` | Updated helper script for `seedance-video-api`: `invoke_seedance_script.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/render_cover_package.ps1` | `modified` | Updated helper script for `seedance-video-api`: `render_cover_package.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/render_cover_package.py` | `modified` | Updated helper script for `seedance-video-api`: `render_cover_package.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.ps1` | `modified` | Updated helper script for `seedance-video-api`: `seedance_cli.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.py` | `modified` | Updated helper script for `seedance-video-api`: `seedance_cli.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.sh` | `modified` | Updated helper script for `seedance-video-api`: `seedance_cli.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/SKILL.md` | `modified` | Updated skill instructions for `wechat-channels-launchagent-keepalive`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/agents/openai.yaml` | `modified` | Updated agent manifest for `wechat-channels-launchagent-keepalive`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/register-keepalive-task.ps1` | `modified` | Updated helper script for `wechat-channels-launchagent-keepalive`: `register-keepalive-task.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/run-keepalive.ps1` | `modified` | Updated helper script for `wechat-channels-launchagent-keepalive`: `run-keepalive.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/wechat_channels_keepalive.py` | `modified` | Updated helper script for `wechat-channels-launchagent-keepalive`: `wechat_channels_keepalive.py`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/SKILL.md` | `modified` | Updated skill instructions for `xiaoyunque-source-video`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/agents/openai.yaml` | `modified` | Updated agent manifest for `xiaoyunque-source-video`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/prompt-template.md` | `modified` | Updated reference doc for `xiaoyunque-source-video` covering `prompt template`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/source-video-playbook.md` | `modified` | Updated reference doc for `xiaoyunque-source-video` covering `source video playbook`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/SKILL.md` | `modified` | Updated skill instructions for `codex-feishu-bridge-skill`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/agents/openai.yaml` | `modified` | Updated agent manifest for `codex-feishu-bridge-skill`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/.bridge.env.example` | `modified` | Updated bridge template asset for `codex-feishu-bridge-skill`: `.bridge.env.example`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/launchd/com.codex.feishu-bridge.plist` | `modified` | Updated bridge template asset for `codex-feishu-bridge-skill`: `com.codex.feishu-bridge.plist`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/package.json` | `modified` | Updated bridge template asset for `codex-feishu-bridge-skill`: `package.json`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-logs.ps1` | `modified` | Updated bridge template script for `codex-feishu-bridge-skill`: `bridge-logs.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-logs.sh` | `modified` | Updated bridge template script for `codex-feishu-bridge-skill`: `bridge-logs.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.ps1` | `modified` | Updated bridge template script for `codex-feishu-bridge-skill`: `bridge-start.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.sh` | `modified` | Updated bridge template script for `codex-feishu-bridge-skill`: `bridge-start.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-status.ps1` | `modified` | Updated bridge template script for `codex-feishu-bridge-skill`: `bridge-status.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-status.sh` | `modified` | Updated bridge template script for `codex-feishu-bridge-skill`: `bridge-status.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-stop.ps1` | `modified` | Updated bridge template script for `codex-feishu-bridge-skill`: `bridge-stop.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-stop.sh` | `modified` | Updated bridge template script for `codex-feishu-bridge-skill`: `bridge-stop.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/configure_notify_target.ps1` | `modified` | Updated bridge template script for `codex-feishu-bridge-skill`: `configure_notify_target.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/configure_notify_target.sh` | `modified` | Updated bridge template script for `codex-feishu-bridge-skill`: `configure_notify_target.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.cmd` | `modified` | Updated bridge template script for `codex-feishu-bridge-skill`: `mirror-view.cmd`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.command` | `modified` | Updated bridge template script for `codex-feishu-bridge-skill`: `mirror-view.command`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.js` | `modified` | Updated bridge template script for `codex-feishu-bridge-skill`: `mirror-view.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.ps1` | `modified` | Updated bridge template script for `codex-feishu-bridge-skill`: `mirror-view.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.sh` | `modified` | Updated bridge template script for `codex-feishu-bridge-skill`: `mirror-view.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/run-bridge.ps1` | `modified` | Updated bridge template script for `codex-feishu-bridge-skill`: `run-bridge.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/run-bridge.sh` | `modified` | Updated bridge template script for `codex-feishu-bridge-skill`: `run-bridge.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/run-platform-script.js` | `modified` | Updated bridge template script for `codex-feishu-bridge-skill`: `run-platform-script.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/src/bridge.js` | `modified` | Updated bridge template source for `codex-feishu-bridge-skill`: `bridge.js`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART.md` | `modified` | Updated reference doc for `codex-feishu-bridge-skill` covering `INSTALL QUICKSTART`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/architecture.md` | `modified` | Updated reference doc for `codex-feishu-bridge-skill` covering `architecture`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/deployment.md` | `modified` | Updated reference doc for `codex-feishu-bridge-skill` covering `deployment`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/user-guide.md` | `modified` | Updated reference doc for `codex-feishu-bridge-skill` covering `user guide`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/install_bridge_template.ps1` | `modified` | Updated helper script for `codex-feishu-bridge-skill`: `install_bridge_template.ps1`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/install_bridge_template.sh` | `modified` | Updated helper script for `codex-feishu-bridge-skill`: `install_bridge_template.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/package_skill_bundle.sh` | `modified` | Updated helper script for `codex-feishu-bridge-skill`: `package_skill_bundle.sh`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/SKILL.md` | `modified` | Updated skill instructions for `multi-platform-content-review-skill`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/agents/openai.yaml` | `modified` | Updated agent manifest for `multi-platform-content-review-skill`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/account-slice-analysis.md` | `modified` | Updated reference doc for `multi-platform-content-review-skill` covering `account slice analysis`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/dashboard-export-template.json` | `modified` | Updated reference doc for `multi-platform-content-review-skill` covering `dashboard export template`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/diagnosis-and-decisions.md` | `modified` | Updated reference doc for `multi-platform-content-review-skill` covering `diagnosis and decisions`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/docker-dashboard-contract.md` | `modified` | Updated reference doc for `multi-platform-content-review-skill` covering `docker dashboard contract`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/platform-metrics.md` | `modified` | Updated reference doc for `multi-platform-content-review-skill` covering `platform metrics`.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/report-template.md` | `modified` | Updated reference doc for `multi-platform-content-review-skill` covering `report template`.
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-22T04:09:37Z`，四个目标目录内识别出技能相关变更 749 项，全部为修改，无新增或删除。
+- 变更最集中的批次包括 `lark-base` 188 files, `lark-sheets` 68 files, `lark-whiteboard` 52 files, `seedance-video-api` 49 files, `python-platform-takeover` 45 files, `lark-task` 36 files, `codex-feishu-bridge-skill` 31 files, `lark-drive` 26 files。
+- 本轮没有出现新的 `.py` 文件；因为发现了新的变更批次，需在 GitHub 同步状态文档中补记后续待同步提醒。
+
+
+## 2026-04-22 13:09:55 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T04:06:36.664Z`（本地时区为 `2026-04-22 12:06:36 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all`
+- 仓库 `git diff --no-ext-diff`
+- 忽略项:
+- `__pycache__/`, `.pyc`, `.pytest_cache/` 等运行缓存未计入技能相关变更。
+- 结果汇总: 新增 1，修改 5，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_wechat_channels.py` | `added` | Added pytest coverage for 视频号发布链路，校验管理页 URL 切到 `platform/post/list`，并覆盖旧草稿拦截、精确字段匹配和发布后二次复核判定。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/social-publish-automation/references/platform-notes.md` | `modified` | Tightened 视频号操作说明：禁止复用“已上传视频但标题/描述不匹配”的旧草稿，并把发布成功标准收紧为发布前字段回读、封面已应用、发布后列表行复核三段式校验。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/references/platform-notes.md` | `modified` | Mirrored the same 视频号平台说明更新到仓库技能镜像，保持 live skill 与 `skill-center` 版本一致。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md` | `modified` | Refined 视频号人工接管判断，新增“封面未出现明确已应用信号”和“管理页新条目未通过标题/描述二次复核”这两类失败场景。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/wechat_channels.yaml` | `modified` | Expanded 视频号平台映射，增加管理页 frame/row 选择器、封面已应用与待确认信号、以及管理页最多扫描候选条数，用于发布后列表复核。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py` | `modified` | Reworked 视频号发布器：管理页改到 `platform/post/list`，发布前后都强制校验短标题和描述，封面上传后等待“已应用”状态，并只在管理页同一条记录同时命中状态和内容片段时才认定发布成功。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_wechat_channels.py` | Purpose: 为 `wechat_channels` 发布器补充 URL、旧草稿拦截、字段精确匹配和管理页二次复核的回归测试。 | Related skill: supporting automation for `social-publish-automation` / 视频号发布接管链路。 | Platform scope: cross-platform（纯 pytest 断言，无平台专属系统调用）。
+
+### 变更摘要
+- 相对 `2026-04-22T04:06:36.664Z`，本轮识别出 6 项技能相关变更，核心主题是把视频号发布从“点击发表即成功”收紧为“字段精确回读 + 封面已应用 + 管理页同条目复核”。
+- 本轮没有删除文件；新增的 `.py` 文件仅有 1 个测试文件，属于 supporting automation，不是新的运行时入口。
+- 由于发现了新的变更批次，已同步在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 追加待后续 GitHub 同步提醒。
+
+## 2026-04-22 14:12:01 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T05:08:36.858Z`（本地时区为 `2026-04-22 13:08:36 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all`
+- 仓库 `git diff --name-status --find-renames`
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的既有未提交改动不计入本轮技能变更批次。
+- `__pycache__/`, `.pyc`, `.pytest_cache/` 等运行缓存未计入技能相关变更。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-22T05:08:36.858Z`，四个目标目录内没有新的技能相关文件新增、修改或删除。
+- 当前仓库里仍能看到 `social-publish-automation` / `python-platform-takeover` 那组未提交改动，但它们已在 `2026-04-22 13:09:55 CST` 的上一轮监控记录中入账，本轮 `mtime` 扫描未发现该基线之后的新文件变化。
+- 因为本轮没有发现新的变更批次，所以没有更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+
+## 2026-04-22 14:11:26 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T05:08:36.858Z`（本地时区为 `2026-04-22 13:08:36 CST`）
+- 判定依据:
+- 文件系统 `mtime` / `birthtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all`
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自上次运行 `2026-04-22T05:08:36.858Z` 以来，四个目标目录内未识别到新的技能相关文件新增、修改或删除。
+- 当前仓库里仍存在视频号发布链路相关未提交文件，但这些文件的 `mtime` 均早于本轮基线，属于上一批已记录变更，不重复计入本次扫描。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新待同步提醒。
+
+## 2026-04-22 15:13:32 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T06:10:37.031Z`（本地时区为 `2026-04-22 14:10:37 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all`
+- 仓库 `git ls-files --deleted`
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `__pycache__/`, `.pyc`, `.pytest_cache/`, `.venv/` 等运行缓存与虚拟环境文件未计入技能相关变更。
+- 结果汇总: 新增 1，修改 9，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_wechat_channels.py` | `added` | Added pytest coverage for 视频号管理页 URL、旧草稿拦截、字段精确匹配、自见可见过滤，以及“最新管理行是否真的是新发布内容”的判定逻辑。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py` | `modified` | Tightened 视频号发布器 to use `platform/post/list`, read management-row Vue payloads, reject stale drafts with uploaded video but mismatched fields, re-check title/description before and after cover upload, and only mark success after newest-row verification passes.
+- `/Users/baishangjituan/.codex/skills/social-publish-automation/SKILL.md` | `modified` | Tightened the live publishing skill so Vue/React-managed platforms require framework-aware setters or payload verification, and 视频号 success now requires exact newest-row title/description plus expected cover confirmation.
+- `/Users/baishangjituan/.codex/skills/social-publish-automation/references/platform-notes.md` | `modified` | Strengthened 视频号 platform notes with “old draft with uploaded video but mismatched title/description must not be reused” and a stricter second-verification standard based on framework state and newest management-row data.
+- `/Users/baishangjituan/.codex/skills/wechat-channels-ops/SKILL.md` | `modified` | Updated live 视频号操作规则 to treat title/description as framework-bound fields, require payload-level verification before publish, and require newest management-row title, description, and cover thumbnail as the final proof of success.
+- `/Users/baishangjituan/.codex/skills/wechat-channels-ops/references/platform-notes.md` | `modified` | Added a 2026-04-22 repair note documenting that create-page text can diverge from the final published row, so verification must come from management-row component data and saved cover thumbnail.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/SKILL.md` | `modified` | Mirrored the live `social-publish-automation` rule tightening into `skill-center`, keeping framework-aware field verification and newest-row proof requirements aligned.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/references/platform-notes.md` | `modified` | Mirrored the stricter 视频号 platform notes into the repository skill mirror, including old-draft rejection and second-verification requirements.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/SKILL.md` | `modified` | Mirrored the live 视频号 skill update into `skill-center`, including framework-state verification before publish and newest-row exact-match checks after publish.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/references/platform-notes.md` | `modified` | Mirrored the 2026-04-22 视频号 root-cause note and the new management-row verification standard into the repository reference file.
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_wechat_channels.py` | Purpose: 为视频号发布 supporting automation 增加管理页二次复核、旧草稿拦截和字段精确匹配的回归测试。 | Related skill: `social-publish-automation` / `wechat-channels-ops` supporting automation。 | Platform scope: cross-platform（纯 pytest 逻辑测试，无系统专属调用）。
+
+### 变更摘要
+- 相对 `2026-04-22T06:10:37.031Z`，本轮识别出 10 项技能相关变更，集中在视频号发布链路从“可见 DOM 文本 + create 页信号”升级为“框架状态/管理行数据双重复核”。
+- 变更同时覆盖 live `~/.codex/skills` 与仓库 `skill-center` 镜像，说明此次规则收紧已经开始同步到技能文档层，而不仅是 supporting automation 代码层。
+- 本轮没有删除文件；新增 `.py` 文件仅有 1 个，为视频号回归测试。
+- 因为发现了新的变更批次，已同步在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 追加待后续 GitHub 同步提醒。
+
+## 2026-04-22 16:15:37 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T07:12:07.203Z`（本地时区为 `2026-04-22 15:12:07 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all`
+- 仓库 `git ls-files --deleted`
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `__pycache__/`, `.pyc`, `.pytest_cache/`, `.venv/` 等运行缓存与虚拟环境文件未计入技能相关变更。
+- 上一轮已记录但仍未提交的 `social-publish-automation` / `wechat-channels-ops` / `wechat_channels` 相关改动，不因工作区仍脏而重复计入。
+- 结果汇总: 新增 1，修改 0，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-22-platform-execution-three-steps.yaml` | `added` | Added a new `python-platform-takeover` content package for campaign `2026-04-22-platform-execution-three-steps`, wiring the generated video and cover assets plus platform-specific titles/descriptions for Weibo, Douyin, 视频号, 快手, 百家号, 头条, 知乎, and 小红书.
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-22T07:12:07.203Z`，本轮只识别到 1 项新的技能相关变更，为 `python-platform-takeover` supporting automation 新增的跨平台内容包配置。
+- 该文件不是新的运行时代码，而是一次具体分发批次的输入配置，主要承载视频、封面素材路径和 8 个平台的文案映射。
+- 本轮没有新的 `.py` 文件，也没有删除项；仓库里其余未提交技能改动均已在上一轮监控中入账。
+- 因为发现了新的变更批次，已同步在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 追加后续 GitHub 同步提醒。
+
+## 2026-04-22 17:16:21 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T08:14:07.374Z`（本地时区为 `2026-04-22 16:14:07 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all`
+- 仓库 `git ls-files --deleted`
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `__pycache__/`, `.pyc`, `.pytest_cache/`, `.venv/` 等运行缓存与虚拟环境文件未计入技能相关变更。
+- 上一轮已记录但仍未提交的 `social-publish-automation` / `wechat-channels-ops` / `wechat_channels` / `python-platform-takeover` 相关改动，不因工作区仍脏而重复计入。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-22T08:14:07.374Z`，四个目标目录内没有新的技能相关文件新增、修改或删除。
+- 仓库工作区里当前可见的 `wechat_channels` 发布链路文件、`skill-center` 镜像文件和 `python-platform-takeover` 内容包/测试文件，`mtime` 都早于本轮基线，属于上一批已记录变更，不重复计入。
+- 因为本轮没有发现新的变更批次，所以没有更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-04-22 17:16:04 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T08:14:07.374Z`（本地时区为 `2026-04-22 16:14:07 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all`
+- 仓库 `git ls-files --deleted`
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `__pycache__/`, `.pyc`, `.pytest_cache/`, `.venv/` 等运行缓存与虚拟环境文件未计入技能相关变更。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自上次运行 `2026-04-22T08:14:07.374Z` 以来，四个目标目录内未识别到新的技能相关文件新增、修改或删除。
+- 当前仓库里仍存在 `wechat_channels`、`social-publish-automation` 与 `python-platform-takeover` 相关未提交文件，但这些文件的 `mtime` 均早于本轮基线，属于上一批已记录变更，不重复计入本次扫描。
+- 本轮未发现新的 `.py` 文件，也未发现删除项。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新待同步提醒。
+
+## 2026-04-22 18:17:39 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T09:14:37.588Z`（本地时区为 `2026-04-22 17:14:37 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all`
+- 仓库外 live skill 目录按当前内容与同批镜像文档交叉核对
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `automation/python-platform-takeover/**` 中 `mtime` 早于 `2026-04-22 17:14:37 CST` 的既有未提交文件不重复计入。
+- 结果汇总: 新增 0，修改 4，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/dachen-founder-flywheel/SKILL.md` | `modified` | Added a new duplicate-control section that forbids same-platform reposts after shaky browser runs unless the old item has a real packaging defect and has already been removed or abandoned.
+- `/Users/baishangjituan/.codex/skills/social-publish-automation/SKILL.md` | `modified` | Tightened anti-duplicate and verification rules, including framework-aware field writes, platform-payload checks, and WeChat Channels success criteria based on newest management-row title, description, and cover.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/SKILL.md` | `modified` | Mirrored the live `dachen-founder-flywheel` duplicate-control policy into the repo snapshot so daily founder-IP publishing no longer treats unstable UI behavior as a reason to repost.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/SKILL.md` | `modified` | Mirrored the live `social-publish-automation` rule update that blocks same-item reposts by default and requires exact WeChat Channels post-publish verification from platform-managed data.
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 相对 `2026-04-22T09:14:37.588Z`，本轮识别到 4 项新的技能相关修改，全部是 live `~/.codex/skills` 与 `skill-center` 镜像中的技能说明同步更新。
+- 这批变更的核心是把“界面不稳不等于允许重发”写成硬规则，并把视频号校验标准收紧到框架态字段与管理页最新记录级别。
+- 本轮没有新的 `.py` 文件，也没有删除项。
+- 因为发现了新的变更批次，已同步在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 追加后续 GitHub 同步提醒。
+
+## 2026-04-22 21:21:12 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T12:19:08.112Z`（本地时区为 `2026-04-22 20:19:08 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 对候选文件逐个校验 `stat` 时间戳
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- 工作区里仍可见的 `social-publish-automation`、`wechat-channels-ops`、`wechat_channels` 与 `python-platform-takeover` 相关未提交文件，`mtime` 全部早于本轮基线，因此归入上一批已记录内容，不重复登记。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T12:19:08.112Z` 以来，四个扫描目录内没有出现新的技能相关文件增量。
+- 仓库当前可见的候选改动主要是视频号发布校验、微信视频号 skill 说明和相关测试/内容包，但这些文件的实际修改时间都早于本轮基线，本轮仅完成去重复核。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮不追加新的待同步提醒。
+
+## 2026-04-22 22:21:55 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T13:19:38.360Z`（本地时区为 `2026-04-22 21:19:38 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation docs/automation`
+- 对工作区候选文件逐个校验 `stat` 时间戳
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `automation/python-platform-takeover/.pytest_cache/v/cache/nodeids` 属于测试缓存，不作为技能或 supporting automation 文件登记。
+- `git status` 中仍可见的 `wechat_channels`、`social-publish-automation`、`wechat-channels-ops` 与 `dachen-founder-flywheel` 相关变更，`mtime` 均早于本轮基线，因此归入上一批已记录内容，不重复登记。
+- 结果汇总: 新增 0，修改 1，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md` | `modified` | 补充微信视频号发布规则的双端说明，明确 Windows PowerShell 与 macOS 共用同一套发布与管理页复核逻辑，并把“封面已应用信号”和“管理页同条记录内容级二次复核”写入失败/成功判定。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T13:19:38.360Z` 以来，本轮只发现 1 项新的 supporting automation 文档修改，位置在 `python-platform-takeover` 的 README。
+- 这次增量没有引入新的 `.py` 文件；晚于基线的另一个文件仅为 `.pytest_cache` 缓存，已排除。
+- 因为发现了新的变更批次，已同步在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 追加后续 GitHub 同步提醒。
+
+## 2026-04-22 23:22:47 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T14:20:08.631Z`（本地时区为 `2026-04-22 22:20:08 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation docs/automation`
+- 对候选文件逐个校验 `stat` 时间戳
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `docs/automation/windows-translation-status.md` 虽在工作区中有更新，但它属于自动化状态记录，不属于本任务要求登记的 custom skill 或 supporting automation 变更。
+- `git status` 中仍可见的 `wechat_channels`、`social-publish-automation`、`wechat-channels-ops`、`dachen-founder-flywheel` 与 `python-platform-takeover` 相关改动，`mtime` 全部早于本轮基线，因此归入上一批已记录内容，不重复登记。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T14:20:08.631Z` 以来，四个扫描目录内没有出现新的技能相关文件增量。
+- 仓库当前仍能看到上一批视频号发布链路与 skill 镜像的未提交改动，但这些文件的实际修改时间都早于本轮基线，本轮仅完成去重复核。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮不追加新的待同步提醒。

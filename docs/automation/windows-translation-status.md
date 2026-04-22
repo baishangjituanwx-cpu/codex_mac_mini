@@ -703,3 +703,64 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-21 22:18:06 CST`，今天 monitor 中新增或修改的自定义 skill / automation 行为已全部补齐到仓库；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-04-22 22:02:51 CST
+
+- 处理时间:
+  - `2026-04-22 22:02:51 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-04-21 22:18:06 CST` 之后追加的非零批次:
+    - `2026-04-22 12:10:26 CST`
+    - `2026-04-22 13:09:55 CST`
+    - `2026-04-22 15:13:32 CST`
+    - `2026-04-22 16:15:37 CST`
+    - `2026-04-22 18:17:39 CST`
+  - 上述批次里，落到当前仓库且与 Windows 完整性直接相关的行为主要是:
+    - `automation/python-platform-takeover` 的视频号发布链路收紧
+    - `skill-center/skills/social-publish-automation/**` 的视频号规则与平台说明同步
+    - `skill-center/skills/wechat-channels-ops/**` 的视频号规则与平台说明同步
+    - `skill-center/skills/dachen-founder-flywheel/SKILL.md` 的 duplicate-control 规则同步
+    - `automation/python-platform-takeover/configs/content-package.2026-04-22-platform-execution-three-steps.yaml` 的新增内容包
+  - `2026-04-22 17:16:21 CST`、`2026-04-22 20:19:56 CST`、`2026-04-22 21:20:41 CST`、`2026-04-22 21:21:12 CST` 均为 `新增 0，修改 0，删除 0`，无额外待转译项。
+- 已完成的 Windows 补全:
+  - `automation/python-platform-takeover`:
+    - 复核 `social_publisher/platforms/wechat_channels.py`、`configs/platform-mappings/wechat_channels.yaml` 与 `tests/test_wechat_channels.py` 后，确认这批新行为仍是 cross-platform Python / pytest 逻辑，不需要新增 Windows 代码分叉。
+    - 现有 Windows 入口继续足够覆盖今天的视频号发布链路收紧:
+      - `scripts/quickstart-windows.ps1`
+      - `scripts/social-publisher.ps1`
+      - `scripts/start-chrome-cdp.ps1`
+    - `README.md` 已追加 Windows 侧显式说明:
+      - `.\scripts\social-publisher.ps1 publish wechat_channels ... --execute` 直接走与 macOS 相同的严格 视频号核验链路
+      - 共享清空重输逻辑在 Windows 使用 `Control+A`，在 macOS 使用 `Meta+A`
+      - 发布成功标准要求发布前字段精确回读，发布后管理页最新一条同时通过 `shortTitle`、`description` 与封面缩略图二次复核
+  - `skill-center/skills/social-publish-automation`:
+    - 复核 `SKILL.md` 与 `references/platform-notes.md` 后，确认仓库镜像已带上今天新增的 framework-aware setter / payload 校验、视频号 newest-row 精确匹配与 anti-duplicate 规则。
+    - 这些变更是浏览器工作流规则，不引入新的 PowerShell 启动器、Windows 路径差异、快捷键差异或命令包装器。
+  - `skill-center/skills/wechat-channels-ops`:
+    - 复核 `SKILL.md` 与 `references/platform-notes.md` 后，确认仓库镜像已带上今天新增的 payload 级预检、管理页 component-data 复核与封面缩略图确认标准。
+    - 这批规则直接复用现有 Windows 接管命令即可，无需新增 `.ps1`、`.cmd` 或 Windows 专属资源。
+  - `skill-center/skills/dachen-founder-flywheel`:
+    - duplicate-control 收紧为运营规则更新，不涉及操作系统差异；Windows 侧无需新增分叉。
+  - `automation/python-platform-takeover/configs/content-package.2026-04-22-platform-execution-three-steps.yaml`:
+    - 该文件是当日 campaign 内容包，不是新的运行时入口；继续沿用现有 Windows PowerShell 包装器即可消费，不需要单独 Windows 模板。
+  - 结论:
+    - 今天没有需要新增的 Windows 专属脚本或资源文件。
+    - 本轮仓库补丁是 Windows README 桥接说明加状态记录；Windows 分支已由现有 PowerShell 入口和今天同步到仓库的 cross-platform 逻辑完整覆盖。
+- 未完成的补全:
+  - 无。
+  - `2026-04-22` 目前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产同步的自定义 skill 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 已执行验证:
+    - `diff -u ~/.codex/skills/social-publish-automation/SKILL.md skill-center/skills/social-publish-automation/SKILL.md`
+    - `diff -u ~/.codex/skills/social-publish-automation/references/platform-notes.md skill-center/skills/social-publish-automation/references/platform-notes.md`
+    - `diff -u ~/.codex/skills/wechat-channels-ops/SKILL.md skill-center/skills/wechat-channels-ops/SKILL.md`
+    - `diff -u ~/.codex/skills/wechat-channels-ops/references/platform-notes.md skill-center/skills/wechat-channels-ops/references/platform-notes.md`
+    - `automation/python-platform-takeover/.venv/bin/python -m pytest tests/test_wechat_channels.py -q`
+  - 验证结果:
+    - 4 组 live skill 与仓库镜像 diff 均为空。
+    - `tests/test_wechat_channels.py` 结果为 `9 passed`。
+  - 本机仍未做 Windows PowerShell 实机回归；当前判断基于仓库 PowerShell 入口复核、live / repo 镜像一致性与跨平台 pytest 校验。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-04-22 22:02:51 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧复核；Mac 与 Windows 覆盖今日均完整，且今天明确没有需要新增的 Windows 专属补丁。
