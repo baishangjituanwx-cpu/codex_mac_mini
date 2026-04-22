@@ -118,6 +118,15 @@ Reason:
 - long-form surfaces need stronger packaging after the topic is proven
 - 快手 follows once the short-video package is stable
 
+Duplicate control:
+
+- Do not treat a shaky browser click as permission to re-post the same platform item.
+- Before any retry on the same platform, verify the management list and the public-facing profile or works feed.
+- If the same-day item already exists, do not publish a second copy unless the old one has a real structural defect and has already been manually removed or explicitly abandoned.
+- `表现差` is not a reason to重发.
+- `流程没核清楚` is not a reason to重发.
+- `标题 / 正文 / 封面 / 视频素材本身错误` is a valid reason to replace, but only after the old item is handled.
+
 ### Step 4. Handle comments and private messages
 
 - Treat interaction as product research, not after-sales support.

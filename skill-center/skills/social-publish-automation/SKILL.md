@@ -31,6 +31,12 @@ Prefer it when the task involves:
 - Confirm local asset paths, title, body, declarations, and platform-specific extras.
 - Avoid mid-flow content rewriting unless the platform rejects the original package.
 - Before any retry or补发, check the target platform's management list for the exact same title or asset first. If an item already exists in a terminal or near-terminal state such as `已发布`, `审核中`, or `审核未通过`, stop and resolve that item instead of auto-reposting.
+- Default rule: do not re-publish the same platform item just because this round's UI flow looked unstable.
+- A same-platform re-publish is allowed only when all of the following are true:
+- the published item has a real structural defect, such as wrong正文、错误标题、错误封面、错误视频、关键字段缺失
+- the old item has already been manually deleted,转仅自己可见, or explicitly marked by the user as obsolete
+- the replacement package has been re-checked against the intended content library entry before re-submit
+- If the problem is only weak performance, slow review, or uncertain button behavior, do not re-publish. Verify first.
 
 4. Prefer real interactive nodes over visible text.
 - Use snapshot refs or stable selectors instead of naive DOM text clicks.
@@ -40,6 +46,7 @@ Prefer it when the task involves:
 5. Use realistic input for editors.
 - Prefer bridge typing for titles, descriptions, and rich-text editors when plain DOM assignment does not activate validation.
 - Re-read page state after typing instead of trusting the write call.
+- If the platform is Vue- or React-driven and the visible editor still diverges from the eventual published result, escalate to a framework-aware setter path and verify the platform's own payload or store state before submit.
 - For remote CDP sessions, large local videos may fail through normal `setInputFiles` transfer. In that case, set files through CDP with a page- or frame-side input handle and a local filesystem path.
 
 6. Treat risk controls as manual checkpoints.
@@ -49,6 +56,7 @@ Prefer it when the task involves:
 7. Verify outcomes outside the click itself.
 - Confirm with visible status text, management pages, creator lists, public URLs, or intercepted responses.
 - Distinguish `已发布`, `已提交`, `审核中`, and `请求已发出但未入库`.
+- When the platform exposes framework-managed row data or API payloads, prefer those exact fields over partial visible snippets.
 
 ## Operating Rules
 
@@ -58,6 +66,7 @@ Prefer it when the task involves:
 - If a platform-specific section exists for the target site, read the matching section in [platform-notes.md](references/platform-notes.md) first.
 - For 今日头条 / 头条号图文发布, also check the platform section for entry path, login gates, and verification expectations before automating the editor.
 - If the browser stays on the compose URL after submit, do not assume failure. Some platforms surface a reliable in-page terminal state such as `已发表` without redirecting.
+- For 微信视频号, do not accept create-page `已发表` or DOM-visible editor text as sufficient proof by themselves. Require exact post-publish verification from the newest management-row data, including title, description, and expected cover thumbnail.
 
 ## Feishu Notify Rule
 
@@ -94,5 +103,25 @@ After a publish attempt, record:
 - API response if interceptable
 
 If the click succeeds but the status is ambiguous, treat the result as unconfirmed until one of those signals resolves it.
+
+## Anti-Duplicate Guard
+
+- For each platform in the current batch, always run this decision order before any retry:
+- `先查管理页`
+- `再查公开页 / 主页 / 作品流`
+- `最后才决定是否允许重发`
+- If the management list or public profile already shows a same-day item with the same core title, same video, or same正文片段, treat it as an existing publish candidate, not as a failed attempt.
+- When an existing item is found, the default action is:
+- `不重发`
+- `先修正旧条` or `先确认旧条状态`
+- Only after the user has made the old item unavailable or clearly approved replacement should a new publish be attempted.
+
+For 微信视频号 in this workspace, the minimum verified-success standard is:
+
+- pre-publish exact editor readback of `短标题` and `视频描述`
+- if needed, framework-level payload or store check that those values will really be submitted
+- post-publish newest-row exact match on platform-side `shortTitle`
+- post-publish newest-row exact match on platform-side `description`
+- newest-row thumbnail consistent with the intended uploaded cover
 
 Once the result is confirmed and notify-worthy, send the Feishu push immediately, then continue to the next platform.

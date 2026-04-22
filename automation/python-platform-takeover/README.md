@@ -284,6 +284,12 @@ Windows PowerShell:
 - 哪些字段已经和发布包匹配
 - 哪些 tab 属于旧草稿、登录页或缺关键 frame，应该停止接管
 
+针对今天补强过的 `wechat_channels` 规则，Windows 不需要单独维护第二套发布逻辑:
+
+- 直接走 `.\scripts\social-publisher.ps1 publish wechat_channels configs/content-package.local.yaml --execute`
+- 共享清空重输逻辑会在 Windows 自动使用 `Control+A`，在 macOS 自动使用 `Meta+A`
+- `微信视频号` 的成功标准在两端一致: 发布前要求 `短标题` / `视频描述` 精确回读，发布后要求管理页最新一条同时通过 `shortTitle` / `description` / 封面缩略图二次复核
+
 注意:
 
 当前状态分两层:
@@ -335,8 +341,12 @@ Windows PowerShell:
 - 平台弹出验证码
 - 当前标签页残留的是另一篇旧草稿
 - 管理页已经出现重复内容
-- 封面裁切结果需要人工确认
+- 视频号封面没有出现明确的已应用信号
 - 发布按钮点击后，没有出现成功信号，也没有在管理页看到新条目
+- 视频号管理页新条目没有同时通过内容级二次复核
+  - 复核至少包括：目标描述片段命中管理页同一条记录
+  - 发布前的短标题、描述回读与内容包完全一致
+  - Windows PowerShell 入口和 macOS 共用同一套复核逻辑，不需要额外脚本分叉
 
 ## 本地运行复盘后，什么值得补充到 GitHub
 

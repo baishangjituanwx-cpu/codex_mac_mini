@@ -19,14 +19,20 @@ If the task requires real browser execution, also use `$social-publish-automatio
 - For browser-side execution, route through `$social-publish-automation`.
 - Use `视频号助手` as the main desktop operation surface.
 - Treat `视频描述` and `短标题` as required packaging fields for video posts, not optional extras.
-- For this workspace, descriptions and short titles must be entered through real typing, not only DOM assignment.
+- For this workspace, descriptions and short titles are framework-bound fields. Do not trust plain DOM assignment alone.
+- Prefer real typing first. If the visible editor text and platform payload diverge, use a framework-aware setter path that updates the page's own component state, then verify the payload again before publish.
 - For 小云雀 founder videos in this workspace, generate the video first, then immediately build the prepared cover set: one vertical `3:4` cover and one horizontal `4:3` cover, each with one 8 to 10 Chinese-character theme.
 - Before clicking `发表`, read both fields back from the editor and stop if either one did not persist.
+- For 视频号 specifically, editor readback is necessary but not sufficient. The stronger pre-publish check is that the page's framework-managed publish payload also contains the exact target `短标题` and `视频描述`.
 - For custom cover upload, do not stop at opening the modal or seeing the uploaded preview. Always upload a prepared local cover inside `编辑封面`, confirm the modal through the inner primary action button, and then verify the compose page has accepted that uploaded cover.
 - Before any retry or republish, check `视频管理` first. If the same video is already present in the list, stop instead of publishing a duplicate.
 - Verify that the current WeChat account has the correct operator role before spending time inside the editor.
 - Confirm final state from the content list or visible `已发表` signal, not only from the submit button.
-- For retries, the strongest final proof is the list page showing the new row with the expected right-side description snippet, not only create-page text.
+- For retries, the strongest final proof is the management list's newest row carrying the expected title and description in the platform-side row data, not only create-page text or a partial visible snippet.
+- Do not mark success until the newest management-row payload shows:
+- exact `shortTitle`
+- exact `description`
+- expected cover thumbnail on the newest row
 
 ### 2. Data Analysis
 
@@ -86,6 +92,11 @@ If the task requires real browser execution, also use `$social-publish-automatio
 - the transient `封面已更新` toast is useful but not durable enough to be the only success check
 - the final verification should include the list row itself showing the expected description snippet
 - if `视频管理` already shows the same video, do not retry publish from a stale draft or a second `post/create` tab
+- A later 2026-04-22 verified path tightened this further:
+- visible create-page text alone is not enough; the page can render the right body text while the published row still lands with empty `description`
+- for 视频号, publish success should be judged from the newest list-row component data, not only visible text
+- the current robust standard is: pre-publish exact editor readback + framework-payload check, then post-publish newest-row exact `shortTitle` and exact `description` check
+- the same 2026-04-22 run also confirmed the correct cover should be validated from the saved newest-row thumbnail, not only the compose-page preview
 - Keep QR codes, login details, and private operator information out of notes and artifacts.
 
 ## Reference File

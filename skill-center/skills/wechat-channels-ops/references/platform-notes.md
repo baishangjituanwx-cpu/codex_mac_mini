@@ -110,3 +110,18 @@ Key points:
 - The toast `封面已更新` was transient and disappeared from `innerText` quickly. Do not require it as a lasting DOM string before publish; use the saved screenshot plus the list-page result as the stronger final proof.
 - The local 3:4 PNG `/Users/z/Downloads/Codex/outputs/dachen-next-video-frames-2026-04-05/frame-30s-wechat-3x4-retitle.png` was accepted after this fix path and the list page showed a new row at `2026年04月05日 21:07` with the expected description snippet.
 - 2026-04-06 operating rule: for 视频号, `same video do not republish` is now a hard stop. If the list page already contains the same video, handle cleanup or edit instead of running another publish.
+- 2026-04-22 confirmed a stricter root cause and fix:
+- the create page can visibly show the correct `视频描述` and `短标题`, while the newest published row still lands with empty `description`
+- this means DOM-visible text is not a sufficient success signal for 视频号
+- for 视频号, treat `视频描述` and `短标题` as framework-managed publish data, not plain DOM fields
+- if real typing still does not survive into the final row, escalate to a framework-aware setter path that updates the page's own component state before publish
+- before publish, the stronger check is that the form's framework-managed state or payload already contains the exact target `短标题` and `视频描述`
+- after publish, open `视频管理` and read the newest row's component data directly; only count success when:
+- `shortTitle` exactly matches the content package
+- `description` exactly matches the content package
+- `visibleType` is the intended state for that run
+- the newest-row thumbnail still reflects the intended uploaded cover
+- on the verified 2026-04-22 repair, the newest correct row was `2026年04月22日 14:24`; its component data carried:
+- `shortTitle = 先替平台执行`
+- full expected `description`
+- custom cover thumbnail matching the uploaded 3:4 cover

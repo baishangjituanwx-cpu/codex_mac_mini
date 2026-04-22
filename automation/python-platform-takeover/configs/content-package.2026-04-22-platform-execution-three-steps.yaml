@@ -1,0 +1,31 @@
+campaign_id: "2026-04-22-platform-execution-three-steps"
+theme: "写完内容不等于结束，很多团队真正耗人的，不是想法，而是后面的平台执行三步。"
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-22-platform-execution-three-steps.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-22-platform-execution-three-steps_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-22-platform-execution-three-steps_cover_package/cover-horizontal-4x3.png"
+platforms:
+  weibo:
+    title: "写完内容这才刚开始：最耗人的其实是后面的平台执行三步"
+    description: "很多团队写完内容以后，以为工作结束了。其实刚刚开始。真正耗人的，不是想法，而是后面的平台执行三步：改写适配、分发执行、回填链接和复盘。这三步更该先交给 AI 员工。人做判断，AI 跑平台。#AI员工 #平台执行 #内容分发"
+  douyin:
+    title: "写完内容这才刚开始"
+    description: "很多团队写完内容以后，以为工作结束了。其实刚刚开始。真正耗人的，不是想法，而是后面的平台执行三步：先改写适配，再分发执行，最后回填链接和复盘。这三步更该先交给 AI 员工。人做判断，AI 跑平台。#AI员工 #平台执行 #内容分发 #智能体应用"
+  wechat_channels:
+    title: "先替平台执行"
+    description: "很多团队写完内容以后，以为工作已经结束了。其实刚刚开始。真正耗人的，不是想法，而是后面的平台执行三步：先改写适配，再分发执行，最后回填链接和复盘。这三步更该先交给 AI 员工。人做判断，AI 跑平台。"
+  kuaishou:
+    title: "先替平台执行"
+    description: "写完内容不等于结束。真正耗人的，是后面的三步执行：改写、分发、回填复盘。这三步更该先交给 AI。人做判断，AI 跑平台。"
+  baijiahao:
+    title: "写完内容不等于结束：很多团队真正耗人的，是后面的平台执行三步"
+    description: "很多内容团队总觉得产能不够，是因为前面不会想、不会写。但真正把效率拖慢的，往往不是创意本身，而是写完以后后面的平台执行三步：改写适配、平台分发、回填复盘。这三步高频、重复、流程清晰，更适合第一批交给 AI 员工。人把时间拿回来，继续做选题判断、表达方向和结果决策。"
+  toutiao:
+    title: "很多团队内容做不动，不是不会写，而是卡在后面的平台执行三步"
+    description: "很多团队写完内容以后，总觉得最难的是选题和表达。但真正把效率拖慢的，往往不是前面的创意，而是后面的平台执行三步：改写适配、平台分发、回填复盘。更适合先交给 AI 员工的，不是创意，而是平台执行。人继续做判断，AI 去跑平台。"
+  zhihu:
+    title: "为什么很多内容团队真正该先交给 AI 的，不是创意，而是平台执行三步？"
+    description: "我越来越认同一个判断：很多内容团队最耗人的，不是想法本身，而是写完内容以后后面的平台执行三步。改写成不同平台版本、逐个平台分发执行、回填链接并做复盘记录，这些动作高频、重复、流程相对稳定，更适合先交给 AI 员工。人更该把时间留给选题判断、表达方向和结果决策。"
+  xiaohongshu:
+    title: "写完内容这才刚开始：内容团队最耗人的其实是后面的平台执行三步"
+    description: "很多团队做内容，最累的不是想法，而是写完以后还要继续手动跑完整条执行链。真正最耗人的，通常是三步：改写适配、平台分发、回填复盘。这三步高频、重复、流程清晰，更该先交给 AI 员工。人做判断，AI 跑平台。"

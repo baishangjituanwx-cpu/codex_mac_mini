@@ -83,6 +83,7 @@ Read only the section for the current platform.
 - On 视频号, multiple open `channels.weixin.qq.com/platform/post/create` tabs can exist at the same time with the same URL but different draft state.
 - Before retrying a publish, scan the open create tabs and the `视频管理` list, otherwise the automation can target the wrong draft and create duplicate publishes.
 - On 视频号, duplicate publishing is now treated as a hard failure condition. If the same video already exists in `视频管理`, stop and do not retry publish from another draft.
+- If a create tab already contains an uploaded video but the current `视频描述` and `短标题` do not both match the target content package, treat that tab as an unsafe old draft and do not reuse it.
 - If the custom-cover upload route is unstable, a practical fallback is to reopen `编辑`, choose a frontal keyframe from `img.key-frames`, wait for the page to show `封面已更新`, and only then continue to publish.
 - If the user deletes a previous 视频号 post and asks for a clean republish, do not trust the previous draft state after refresh.
 - Re-read the live form and make sure all three are visibly present again before publish:
@@ -90,6 +91,16 @@ Read only the section for the current platform.
 - `视频描述`
 - `短标题`
 - After a 视频号 republish, use the list page as the final truth source. A valid success is the new row itself carrying the expected right-side description snippet, not only a create-page `已发表` state.
+- Do not count 视频号 as success until the second verification passes:
+- pre-publish exact readback of `短标题` and `视频描述`
+- confirmed cover-applied state after cover handling
+- post-publish list-row verification against the standard content package
+- A stricter 2026-04-22 update now applies:
+- do not trust create-page visible text alone for 视频号
+- if the page is Vue-managed and the final published row can diverge from DOM-visible text, verify the framework-managed state or payload before submit
+- after submit, read the newest management-row component data directly when possible
+- for 视频号, exact newest-row `shortTitle` and exact newest-row `description` are stronger than partial list snippets
+- cover verification should use the newest-row thumbnail as the final proof, not only the compose-page preview
 - For founder-IP videos, the 3:4 cover should prefer a frontal keyframe or custom cover that clearly shows the person's face, hairline, and upper body, not only the background scene.
 
 ## 知乎
