@@ -56,6 +56,8 @@ Read only the section for the current platform.
 
 ## 微信视频号
 
+- As of the user-provided 2026-04-23 operating rule in this workspace, the standard initial publish URL is `https://channels.weixin.qq.com/platform/post/create`.
+- Use `platform/post/list` as a management and verification surface, not as the default first page for a new publish run.
 - The real publish form lives inside the `micro/content/post/create` frame, not the outer shell page.
 - A visible logged-in home page at `https://channels.weixin.qq.com/platform` does not guarantee that `platform/post/create` is still usable.
 - In the verified 2026-04-05 blocker, the home dashboard stayed logged in while direct navigation to `https://channels.weixin.qq.com/platform/post/create` redirected to `login.html`.
@@ -81,6 +83,7 @@ Read only the section for the current platform.
 - A successful publish can keep the top URL on `/platform/post/create` while the page itself shows visible `已发表`.
 - Permission failures are still real platform states: if a visible dialog says `你还不能发表视频`, stop and treat it as an operator-role problem.
 - On 视频号, multiple open `channels.weixin.qq.com/platform/post/create` tabs can exist at the same time with the same URL but different draft state.
+- If only a shell or list tab is currently open, reuse that tab and navigate it to `https://channels.weixin.qq.com/platform/post/create` before starting the publish flow.
 - Before retrying a publish, scan the open create tabs and the `视频管理` list, otherwise the automation can target the wrong draft and create duplicate publishes.
 - On 视频号, duplicate publishing is now treated as a hard failure condition. If the same video already exists in `视频管理`, stop and do not retry publish from another draft.
 - If a create tab already contains an uploaded video but the current `视频描述` and `短标题` do not both match the target content package, treat that tab as an unsafe old draft and do not reuse it.
@@ -120,6 +123,7 @@ Read only the section for the current platform.
 - In CDP-attached remote Playwright, `setInputFiles` can fail over 50 MB with `Cannot transfer files larger than 50Mb...`.
 - The stable workaround is to set the local file through CDP `DOM.setFileInputFiles` against the page-side file input.
 - After submit, `笔记管理` may lag. Recheck list state before classifying the attempt as failed.
+- The verified manager path for duplicate checks in this workspace is `https://creator.xiaohongshu.com/new/note-manager?source=official`.
 - Use the real publish button node, not wrapper text or container divs.
 - `修改封面` is not reliably clickable as plain visible text in the resting page state.
 - The stable path in this workspace was:
@@ -130,6 +134,13 @@ Read only the section for the current platform.
 - upload the prepared cover image through the modal-side image input
 - confirm, then publish
 - In the verified local path, the best success signal was `success: true` plus `share_link`, then `笔记管理` showing the new note in `审核中`.
+- The 2026-04-23 duplicate-publish incident showed that `笔记管理` lag by itself is not enough to justify a retry.
+- The hard-stop duplicate guard is:
+- local receipt at `automation/python-platform-takeover/state/publish-receipts/<campaign_id>.json`
+- then `笔记管理`
+- then public note visibility if available
+- if any side confirms `submitted / published / under_review / success / verified`, do not republish the same campaign/platform.
+- Only clear the receipt or force replacement after the old item has been deleted, made private, or explicitly abandoned.
 
 ## 抖音
 
@@ -192,6 +203,13 @@ Read only the section for the current platform.
 ## B站
 
 - Login may require SMS verification before reaching投稿.
+- In this workspace, B站 upload can surface a short-message verification modal during or right after video upload.
+- If the modal falls into a stale state such as `验证码过期，请重试`, do not keep hammering `获取验证码` in place.
+- Stable recovery path:
+- click the modal's top-right close button first
+- wait for the verification modal to auto-appear again
+- then click `获取验证码` one more time from the fresh modal
+- only after that should the run pause for the user's SMS code
 - Default founder-video rule in this workspace changed on 2026-04-05: upload a prepared local cover before final submit instead of leaving the default frame.
 - For 小云雀 founder videos in this workspace, the same prepared cover set should include a B站-ready horizontal cover carrying the same 8 to 10 Chinese-character theme.
 - `创作声明` is hidden under `更多设置`.

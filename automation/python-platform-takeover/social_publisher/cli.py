@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
+from datetime import datetime, timezone
 
 import typer
 
@@ -11,6 +12,14 @@ from social_publisher.doctor import format_doctor_report, run_doctor
 from social_publisher.env import load_dotenv_if_present
 from social_publisher.platforms.base import pick_takeover_candidate
 from social_publisher.platforms import build_publisher
+from social_publisher.publish_receipts import (
+    clear_receipt,
+    get_receipt,
+    PublishReceipt,
+    receipt_path_for,
+    should_block_republish,
+    upsert_receipt,
+)
 
 app = typer.Typer(help="Multi-platform browser takeover scaffold.")
 
@@ -133,6 +142,11 @@ def publish(
         "--execute",
         help="Run the live publish flow when the platform implementation supports it.",
     ),
+    force: bool = typer.Option(
+        False,
+        "--force",
+        help="Bypass the local publish receipt guard. Use only after the old item is removed or abandoned.",
+    ),
 ) -> None:
     publisher = build_publisher(platform)
     content_package = load_package(package)
@@ -147,6 +161,21 @@ def publish(
         typer.echo("\n".join(publisher.readiness_lines()))
         typer.echo("")
         typer.echo("如果要真正执行，追加 --execute。")
+        return
+
+    existing_receipt = get_receipt(package, content_package.campaign_id, platform)
+    if should_block_republish(existing_receipt) and not force:
+        typer.echo("status: stopped_receipt_duplicate")
+        typer.echo("ok: False")
+        typer.echo("message: 本地发布台账已记录该 campaign/platform 已成功提交，停止重复发布。")
+        typer.echo(f"receipt_path: {receipt_path_for(package, content_package.campaign_id)}")
+        typer.echo(f"recorded_at: {existing_receipt.recorded_at}")
+        typer.echo(f"receipt_status: {existing_receipt.status}")
+        typer.echo(f"title: {existing_receipt.title}")
+        if existing_receipt.current_url:
+            typer.echo(f"current_url: {existing_receipt.current_url}")
+        if existing_receipt.management_url:
+            typer.echo(f"management_url: {existing_receipt.management_url}")
         return
 
     config = BrowserSessionConfig(cdp_url=os.getenv("BROWSER_CDP_URL"))
@@ -174,6 +203,114 @@ def publish(
         typer.echo("notes:")
         for note in result.notes:
             typer.echo(f"- {note}")
+    if result.ok and result.status.strip().lower() in {
+        "submitted",
+        "published",
+        "under_review",
+        "success",
+        "verified",
+    }:
+        receipt = PublishReceipt(
+            campaign_id=content_package.campaign_id,
+            platform_id=platform,
+            title=content_package.platforms[platform].title,
+            status=result.status.strip().lower(),
+            recorded_at=datetime.now(timezone.utc).isoformat(),
+            current_url=result.current_url,
+            management_url=result.management_url,
+            notes=result.notes,
+        )
+        receipt_path = upsert_receipt(package, receipt)
+        typer.echo(f"receipt_path: {receipt_path}")
+
+
+@app.command("receipt-status")
+def receipt_status(
+    package: Path,
+    platform: str = typer.Option(
+        ...,
+        "--platform",
+        help="Inspect the local publish receipt for one platform.",
+    ),
+) -> None:
+    content_package = load_package(package)
+    receipt = get_receipt(package, content_package.campaign_id, platform)
+    if receipt is None:
+        typer.echo("status: missing")
+        typer.echo("ok: False")
+        return
+    typer.echo("status: found")
+    typer.echo("ok: True")
+    typer.echo(f"receipt_path: {receipt_path_for(package, content_package.campaign_id)}")
+    typer.echo(f"platform: {receipt.platform_id}")
+    typer.echo(f"title: {receipt.title}")
+    typer.echo(f"receipt_status: {receipt.status}")
+    typer.echo(f"recorded_at: {receipt.recorded_at}")
+    if receipt.current_url:
+        typer.echo(f"current_url: {receipt.current_url}")
+    if receipt.management_url:
+        typer.echo(f"management_url: {receipt.management_url}")
+    if receipt.external_id:
+        typer.echo(f"external_id: {receipt.external_id}")
+    if receipt.share_link:
+        typer.echo(f"share_link: {receipt.share_link}")
+    if receipt.notes:
+        typer.echo("notes:")
+        for note in receipt.notes:
+            typer.echo(f"- {note}")
+
+
+@app.command("record-receipt")
+def record_receipt(
+    package: Path,
+    platform: str = typer.Option(
+        ...,
+        "--platform",
+        help="Platform id to record.",
+    ),
+    status: str = typer.Option(
+        ...,
+        "--status",
+        help="Receipt status such as submitted/published/under_review.",
+    ),
+    current_url: str = typer.Option("", "--current-url"),
+    management_url: str = typer.Option("", "--management-url"),
+    external_id: str = typer.Option("", "--external-id"),
+    share_link: str = typer.Option("", "--share-link"),
+) -> None:
+    content_package = load_package(package)
+    if platform not in content_package.platforms:
+        raise typer.BadParameter(f"{platform} not found in package.")
+    receipt = PublishReceipt(
+        campaign_id=content_package.campaign_id,
+        platform_id=platform,
+        title=content_package.platforms[platform].title,
+        status=status.strip().lower(),
+        recorded_at=datetime.now(timezone.utc).isoformat(),
+        current_url=current_url or None,
+        management_url=management_url or None,
+        external_id=external_id or None,
+        share_link=share_link or None,
+    )
+    receipt_path = upsert_receipt(package, receipt)
+    typer.echo("status: recorded")
+    typer.echo("ok: True")
+    typer.echo(f"receipt_path: {receipt_path}")
+
+
+@app.command("clear-receipt")
+def clear_receipt_command(
+    package: Path,
+    platform: str = typer.Option(
+        ...,
+        "--platform",
+        help="Platform id to clear from the local publish receipt ledger.",
+    ),
+) -> None:
+    content_package = load_package(package)
+    removed = clear_receipt(package, content_package.campaign_id, platform)
+    typer.echo(f"status: {'cleared' if removed else 'missing'}")
+    typer.echo(f"ok: {removed}")
 
 
 def main() -> None:

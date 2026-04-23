@@ -56,8 +56,11 @@ platforms:
       - "公开文章页可见"
   xiaohongshu:
     compose_urls:
-      - "https://creator.xiaohongshu.com"
-    management_urls:
+      - "https://creator.xiaohongshu.com/publish/publish?source=official"
       - "https://creator.xiaohongshu.com/publish/publish"
+    management_urls:
+      - "https://creator.xiaohongshu.com/new/note-manager?source=official"
+      - "https://creator.xiaohongshu.com/new/note-manager"
     success_signals:
+      - "success: true + share_link"
       - "笔记管理出现新条目"

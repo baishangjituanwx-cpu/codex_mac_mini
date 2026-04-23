@@ -30,11 +30,13 @@ Prefer it when the task involves:
 3. Prepare the publish package before touching the UI.
 - Confirm local asset paths, title, body, declarations, and platform-specific extras.
 - Avoid mid-flow content rewriting unless the platform rejects the original package.
+- Before any retry or补发, check the local publish receipt ledger first. The hard-stop ledger for this workspace lives under `automation/python-platform-takeover/state/publish-receipts/<campaign_id>.json`.
 - Before any retry or补发, check the target platform's management list for the exact same title or asset first. If an item already exists in a terminal or near-terminal state such as `已发布`, `审核中`, or `审核未通过`, stop and resolve that item instead of auto-reposting.
 - Default rule: do not re-publish the same platform item just because this round's UI flow looked unstable.
 - A same-platform re-publish is allowed only when all of the following are true:
 - the published item has a real structural defect, such as wrong正文、错误标题、错误封面、错误视频、关键字段缺失
 - the old item has already been manually deleted,转仅自己可见, or explicitly marked by the user as obsolete
+- the local publish receipt has been cleared, or the operator is explicitly forcing replacement after verifying the old item is gone
 - the replacement package has been re-checked against the intended content library entry before re-submit
 - If the problem is only weak performance, slow review, or uncertain button behavior, do not re-publish. Verify first.
 
@@ -57,6 +59,7 @@ Prefer it when the task involves:
 - Confirm with visible status text, management pages, creator lists, public URLs, or intercepted responses.
 - Distinguish `已发布`, `已提交`, `审核中`, and `请求已发出但未入库`.
 - When the platform exposes framework-managed row data or API payloads, prefer those exact fields over partial visible snippets.
+- For 微信视频号 publishing in this workspace, use `https://channels.weixin.qq.com/platform/post/create` as the standard direct-entry URL. Treat the list page as a verification surface, not the default initial publish surface.
 
 ## Operating Rules
 
@@ -107,19 +110,28 @@ If the click succeeds but the status is ambiguous, treat the result as unconfirm
 ## Anti-Duplicate Guard
 
 - For each platform in the current batch, always run this decision order before any retry:
+- `先查本地发布台账`
 - `先查管理页`
 - `再查公开页 / 主页 / 作品流`
 - `最后才决定是否允许重发`
+- Treat local receipt statuses `submitted / published / under_review / success / verified` as blocking states by default.
 - If the management list or public profile already shows a same-day item with the same core title, same video, or same正文片段, treat it as an existing publish candidate, not as a failed attempt.
+- For 微信视频号, the anti-duplicate guard is stricter than exact-match blocking:
+- if any recent management-row item reuses the same `短标题` and the platform-side `description` is still highly similar to the current package, stop before publish
+- do not rely on “different date” or “slightly changed wording” as proof that it is a new item
+- when this near-duplicate condition is hit, the operator must first change the title or the body skeleton, not just replace a few nouns
 - When an existing item is found, the default action is:
 - `不重发`
 - `先修正旧条` or `先确认旧条状态`
 - Only after the user has made the old item unavailable or clearly approved replacement should a new publish be attempted.
+- For 小红书 specifically, `success: true`, `share_link`, or a blocking local receipt means the note has crossed the success threshold. `笔记管理` lag is not a reason to repeat-publish.
+- If a manual browser path succeeds before the manager list catches up, immediately record the local receipt. Do not rely on memory alone.
 
 For 微信视频号 in this workspace, the minimum verified-success standard is:
 
 - pre-publish exact editor readback of `短标题` and `视频描述`
 - if needed, framework-level payload or store check that those values will really be submitted
+- pre-publish recent-content duplicate check against the newest management rows; same `短标题` plus highly similar `description` is a hard stop
 - post-publish newest-row exact match on platform-side `shortTitle`
 - post-publish newest-row exact match on platform-side `description`
 - newest-row thumbnail consistent with the intended uploaded cover

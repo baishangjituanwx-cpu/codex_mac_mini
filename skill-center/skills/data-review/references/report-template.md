@@ -90,9 +90,15 @@
 - 明天必须复查的点：
 - 账号趋势要继续观察的平台：
 
-## 9. Docker 看板数据映射（如需更新 8 平台 Docker 看板则必填）
+## 9. Docker 看板数据映射（晚间复盘自动化 / 需更新 8 平台 Docker 看板时必填）
 - 推荐直接给一个 `json` 代码块；如果流程需要文件交接，也可以把同一对象写成 companion JSON 文件
 - 如果用了 companion JSON 文件，在这里明确写一行：`- companion JSON 文件：/absolute/path/to/export.json`
+- 如果这是当前工作区的晚间复盘自动化，再额外写明：
+  - `- contract 校验结果：`
+  - `- latest.json 路径：/absolute/path/to/latest.json`
+  - `- 目标账号组：`
+  - `- 数据面板同步状态：已上传 / 上传失败待补`
+  - `- 同步审计日志：/absolute/path/to/content-library/logs/review/dashboard-sync/latest-status.md`
 - `board.title`：
 - `board.dateLabel`：
 - `board.subtitle`：
@@ -132,4 +138,4 @@
 - 复盘中必须写绝对日期，不用“今天”“昨天”代替。
 - 当用户要求趋势复盘、最近几条对比或账号维度时，`账号盘面` 和 `近几条对照` 两项是强制项。
 - 飞书同步稿必须基于这份结构压缩，且只允许中文输出。
-- 如果本次复盘要更新 Docker 看板，`## 9. Docker 看板数据映射` 是强制项，并且要遵守 [docker-dashboard-contract.md](./docker-dashboard-contract.md)。
+- 如果本次复盘要更新 Docker 看板，或任务本身就是当前工作区的晚间复盘自动化，`## 9. Docker 看板数据映射` 是强制项，并且要遵守 [docker-dashboard-contract.md](./docker-dashboard-contract.md)。

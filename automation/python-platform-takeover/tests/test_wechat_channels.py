@@ -1,9 +1,12 @@
 from social_publisher.platforms.wechat_channels import (
+    description_similarity_ratio,
+    is_recent_duplicate_content,
     management_entry_component_from_mapping,
     management_entry_is_newer,
     management_entry_is_self_visible,
     ManagementEntryComponent,
     ManagementListBaseline,
+    RECENT_DUPLICATE_DESCRIPTION_SIMILARITY,
     WeChatChannelsPublisher,
     match_management_entry_text,
     resolve_management_status,
@@ -23,6 +26,36 @@ def test_wechat_channels_management_url_uses_shell_page() -> None:
 def test_text_matches_exactly_requires_full_match() -> None:
     assert text_matches_exactly("先替平台执行", "先替平台执行") is True
     assert text_matches_exactly("先替平台执行", "先替平台执行，后面还有补充") is False
+
+
+def test_description_similarity_ratio_detects_high_overlap_recent_copy() -> None:
+    current = "很多团队写完内容以后，以为工作已经结束了。其实刚刚开始。真正耗人的，不是想法，而是后面的平台执行三步：先改写适配，再分发执行，最后回填链接和复盘。"
+    target = "很多团队写完内容以后，以为工作已经结束了。其实刚刚开始。真正耗人的，不是创意，而是后面的平台执行三步：先改写适配，再平台分发，最后回填复盘表字段。"
+
+    assert description_similarity_ratio(current, target) > RECENT_DUPLICATE_DESCRIPTION_SIMILARITY
+
+
+def test_is_recent_duplicate_content_requires_same_short_title_and_high_similarity() -> None:
+    component = ManagementEntryComponent(
+        short_title="先替平台执行",
+        description="很多团队写完内容以后，以为工作已经结束了。其实刚刚开始。真正耗人的，不是想法，而是后面的平台执行三步：先改写适配，再分发执行，最后回填链接和复盘。",
+    )
+
+    assert is_recent_duplicate_content(
+        component,
+        "先替平台执行",
+        "很多团队写完内容以后，以为工作已经结束了。其实刚刚开始。真正耗人的，不是创意，而是后面的平台执行三步：先改写适配，再平台分发，最后回填复盘表字段。",
+    ) is True
+    assert is_recent_duplicate_content(
+        component,
+        "换个标题",
+        "很多团队写完内容以后，以为工作已经结束了。其实刚刚开始。真正耗人的，不是创意，而是后面的平台执行三步：先改写适配，再平台分发，最后回填复盘表字段。",
+    ) is False
+    assert is_recent_duplicate_content(
+        component,
+        "先替平台执行",
+        "今天真正卡住团队的，不是分发，而是销售跟进里重复追问和重复填表。",
+    ) is False
 
 
 def test_existing_video_candidate_without_matching_fields_must_stop() -> None:

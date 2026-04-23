@@ -22,6 +22,7 @@ Use it to answer:
 - the user asks for 发布后数据复盘, 多平台复盘, 8 平台复盘, or 内容效果分析
 - the user wants to compare one topic across multiple creator platforms
 - the user wants a reusable nightly review flow or automation prompt
+- the user wants the workspace's nightly review automation, which by default must also export, validate, and upload the dashboard data after the review
 - the user wants next-day title, cover, hook, or topic optimization after publishing
 - the user wants to separate content weakness from moderation, login, or publish-route failures
 - the user wants the review pushed to a Feishu chat after completion
@@ -63,7 +64,7 @@ In this workspace, look first in:
 - `content-library/assets/generated/<date-topic>/`
 - any dated review notes that reveal platform/account carry-over effects
 
-When the user wants to update the LAN Docker dashboard, also read:
+When the user wants to update the LAN Docker dashboard, or when this workspace's nightly review automation must finish the dashboard handoff, also read:
 
 - [docker-dashboard-contract.md](./references/docker-dashboard-contract.md)
 - [dashboard-export-template.json](./references/dashboard-export-template.json)
@@ -82,6 +83,7 @@ When browser checks are required, route through:
 - separate `published`, `duplicate-skipped`, `blocked`, `under review`, and `not found`
 - define the comparison window for each platform account: current batch only, last 3 posts, last 7 days, or last 30 days
 - if the target is the 8-platform Docker dashboard, force one explicit platform block for 视频号、抖音、快手、B站、微博、百家号、知乎、头条号 even when some are `not found` or `未完成内容级核验`
+- if the task is this workspace's nightly review automation, treat the 8-platform Docker dashboard as a required downstream target, not an optional appendix
 
 2. Collect raw evidence:
 - capture exact visible metrics with exact labels
@@ -169,6 +171,18 @@ When browser checks are required, route through:
 - prefer `lark-cli im +messages-send --as bot --chat-id <chatId> --markdown ...` because it reliably renders as a Feishu rich-text post
 - confirm success with the returned `message_id`
 
+9. Sync the dashboard export when required:
+- if the task is this workspace's nightly review automation, or the user explicitly asks for dashboard sync, always produce the companion JSON export under `content-library/logs/review/dashboard-export/`
+- validate the export against [docker-dashboard-contract.md](./references/docker-dashboard-contract.md); if the repo provides a validator script, prefer that instead of ad-hoc checking
+- for this workspace, prefer a single command that closes the whole chain: `node scripts/dashboard-sync-review.js --review-date YYYY-MM-DD`
+- the sync step is not complete unless it does all of the following:
+- write the companion JSON export
+- validate the contract
+- refresh `content-library/logs/review/dashboard-export/latest.json`
+- upload the export into the remote dashboard account group API, so `8080` actually changes
+- refresh the fixed sync audit files under `content-library/logs/review/dashboard-sync/`
+- if export generation, validation, `latest.json` refresh, or remote account-group upload fails, report that as a separate incomplete branch; do not collapse it into "review completed"
+
 ## Review rules
 
 - Use raw visible numbers first. Do not invent hidden metrics.
@@ -193,6 +207,8 @@ When browser checks are required, route through:
 - `下一批图文内容高占比倾向`
 - `下一批小云雀视频高占比倾向`
 - `未完成核验项`
+- For this workspace's nightly review automation, dashboard export, contract validation, `dashboard-export/latest.json` refresh, and remote dashboard account-group upload are all required completion steps.
+- For this workspace's nightly review automation, the fixed sync audit files `content-library/logs/review/dashboard-sync/latest-status.json` and `latest-status.md` must reflect the final result of the run.
 - If the user asks to update the 8-platform Docker dashboard, append the Docker dashboard mapping block defined in [docker-dashboard-contract.md](./references/docker-dashboard-contract.md), or write the same object to a companion JSON export file when the workflow needs a file-based handoff.
 - When exporting to the Docker dashboard, never omit a platform card; keep the card and mark gaps as `未完成内容级核验`, `暂未可见`, or numeric `0` according to the contract.
 - When exporting to the Docker dashboard, `primaryValue` must stay numeric so the ranking and ring chart do not break.
@@ -202,6 +218,8 @@ When browser checks are required, route through:
 Always use the fixed structure in [report-template.md](./references/report-template.md).
 
 If the user asks for Feishu同步, keep the main Codex output in the fixed report structure, then send a compressed Feishu-rich-text version to the requested chat.
+
+If the task is this workspace's nightly review automation, always include `## 9. Docker 看板数据映射`, plus the real companion export path, validation result, `dashboard-export/latest.json` path, target dashboard account group, upload result, and the fixed sync audit log path in the final write-up.
 
 For metrics vocabulary and platform-specific priorities, read [platform-metrics.md](./references/platform-metrics.md).
 For recent-post and account-slice comparison, read [account-slice-analysis.md](./references/account-slice-analysis.md).

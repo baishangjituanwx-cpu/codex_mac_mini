@@ -33,6 +33,8 @@ Observed on:
 
 Key points:
 - These are the actual official login, publish, and content-list surfaces seen in local operation.
+- As of the user-provided 2026-04-23 operating rule in this workspace, the standard publish entry should be treated as `https://channels.weixin.qq.com/platform/post/create`.
+- Use `platform/post/list` for dedupe checks and post-publish verification, not as the default first page for a new publish run.
 
 ## Operating Guidance
 
@@ -43,6 +45,7 @@ Key points:
 ## Local Practice Notes
 
 - Current workspace lessons:
+- standard publish entry is `https://channels.weixin.qq.com/platform/post/create`
 - a fresh WeChat scan may be required before the assistant can continue
 - the actual publish form lives inside `iframe[name="content"]`
 - without admin or operator permission, the platform can block publish with `你还不能发表视频`
@@ -70,6 +73,7 @@ Key points:
 - on 2026-04-04, a fresh publish with `xyq-ai-founder-video-2026-04-04.mp4` and a custom 3:4 cover succeeded and the list page showed a new item at `2026年04月04日 16:28`
 - on 2026-04-04, repeated retries left multiple `channels.weixin.qq.com/platform/post/create` tabs open with the same URL but different draft states
 - before acting on 视频号, scan all open `post/create` tabs and choose the one whose frame text matches the intended draft, otherwise retries can target the wrong draft and create duplicate publishes
+- if only a list tab or shell tab is open, reuse that same tab and navigate it to `https://channels.weixin.qq.com/platform/post/create` instead of opening a separate fresh tab by default
 - before any republish, open `视频管理` first and check whether the same video row or the same description snippet is already present; if it is, stop and do not publish a duplicate
 - when the custom-cover upload path is unstable, a stable fallback is:
 - reopen `编辑`
@@ -121,6 +125,9 @@ Key points:
 - `description` exactly matches the content package
 - `visibleType` is the intended state for that run
 - the newest-row thumbnail still reflects the intended uploaded cover
+- 2026-04-23 added the next hard stop:
+- if the newest recent rows already contain the same `shortTitle` and a highly similar `description`, do not publish again
+- for 视频号, changing only a few nouns or one extra clause is not enough to qualify as a new content package
 - on the verified 2026-04-22 repair, the newest correct row was `2026年04月22日 14:24`; its component data carried:
 - `shortTitle = 先替平台执行`
 - full expected `description`

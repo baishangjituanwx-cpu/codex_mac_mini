@@ -18,7 +18,11 @@ If the task requires real browser execution, also use `$social-publish-automatio
 - Build the package first: cover, title, note body, tags, media assets, and intended CTA.
 - For browser-side publishing or troubleshooting, route through `$social-publish-automation`.
 - Do not trust page access alone. On 小红书, UI availability and moderation outcome are separate states.
+- Before any retry, check both `笔记管理` and the local publish receipt for this campaign. If either already shows the same note in a blocking state, stop and do not publish again.
 - Verify from `笔记管理`, the returned publish response, or the public note URL when available.
+- `笔记管理` lag is a recheck problem, not a republish signal.
+- If this run already returned `success: true` or `share_link`, record the local publish receipt immediately and treat the note as already submitted until disproven.
+- A re-publish is allowed only after the old item has a real structural defect and has already been deleted, turned private, or explicitly abandoned.
 
 ### 2. Data Analysis
 
@@ -67,6 +71,7 @@ If the task requires real browser execution, also use `$social-publish-automatio
 - the real publish target is the true button node, not a wrapper div
 - in CDP-attached remote Playwright, normal `setInputFiles` can fail above 50 MB; the stable workaround was page-side CDP `DOM.setFileInputFiles`
 - the strongest success signal was `success: true` plus `share_link`, then `笔记管理` showing the new note in `审核中`
+- the hard-stop duplicate guard is `笔记管理` plus the local publish receipt ledger under `automation/python-platform-takeover/state/publish-receipts/`
 - Keep credentials, verification codes, and private account details out of notes and artifacts.
 
 ## Reference File

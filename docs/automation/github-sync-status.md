@@ -12,6 +12,21 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-04-23 00:24:50 CST
+- 检测到新的技能变更批次: 新增 0，修改 4，删除 0。
+- 这批变更集中在 live `~/.codex/skills` 与 `skill-center` 镜像中的 `data-review` 技能和 `report-template`，核心是把晚间复盘自动化的 Docker 看板导出、contract 校验和 `dashboard-export/latest.json` 刷新升级为默认必做交付。
+- 建议后续执行 GitHub 同步，避免 live skill 与仓库镜像的夜间复盘交接规则继续漂移。
+
+## 2026-04-23 18:48:15 CST
+- 检测到新的技能变更批次: 新增 0，修改 2，删除 0。
+- 这批变更集中在 live `~/.codex/skills` 与 `skill-center` 镜像中的 `social-publish-automation/references/platform-notes.md`，核心是把 B 站短信验证码弹窗过期后的稳定恢复流程写成正式平台规则。
+- 建议后续执行 GitHub 同步，避免 live skill 与仓库镜像的 B 站发布排障说明继续漂移。
+
+## 2026-04-23 20:51:30 CST
+- 检测到新的技能变更批次: 新增 0，修改 12，删除 0。
+- 这批变更集中在 live `~/.codex/skills` 与 `skill-center` 镜像中的 `clash-verge-standard-env`、`dachen-founder-flywheel`、`social-publish-automation`、`wechat-channels-ops`，以及 `automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py` 和对应测试；核心是补充 B 站直连规则、统一视频号标准发布入口，并把“同短标题 + 高正文相似度”的近似重复拦截写成技能规则和自动化逻辑。
+- 建议后续执行 GitHub 同步，避免 live skill、仓库镜像和视频号发布自动化的防重规则继续漂移。
+
 ## 2026-04-22 22:21:54 CST
 - 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
 - 这批变更集中在 `automation/python-platform-takeover/README.md`，核心是把 `wechat_channels` 在 Windows / macOS 共用的发布与二次复核标准写清，包括发布前字段精确回读、发布后管理页最新记录标题/描述/封面缩略图三项校验。
@@ -203,6 +218,11 @@
 - 是否已提交:
   - `codex/default-python-sync`: 是。本轮新增提交 `Record 2026-04-17 automation status`，并追加同步记录提交 `Record 2026-04-17 GitHub sync status`。
   - `codex/windows-version-20260411`: 无新增提交。本轮确认工作区中的 `skills/codex-feishu-bridge-skill/**` Windows 文件内容与本地提交 `582efce` 完全一致，因此继续复用现有提交 `Improve Windows bridge deployment scripts` 作为待上传版本。
+
+## 2026-04-23 22:54:53 CST
+- 检测到新的技能变更批次: 新增 0，修改 3，删除 0。
+- 这批变更集中在 `skill-center/skills/data-review/SKILL.md`、`skill-center/skills/data-review/references/report-template.md` 和 `automation/python-platform-takeover/README.md`，核心是把晚间复盘自动化的 Docker 看板导出/校验/上传交接写成硬性要求，并补齐 Windows 本地发布台账与防重状态码说明。
+- 建议后续执行 GitHub 同步，避免 `data-review` 仓库镜像与 `python-platform-takeover` 操作说明继续漂移。
 - 是否已推送:
   - `codex/windows-version-20260411`: 否。执行 `git push origin codex/windows-version-20260411` 时返回 `ssh: connect to host github.com port 22: Operation not permitted`，远端上传失败。
   - `codex/default-python-sync`: 否。执行 `git push origin codex/default-python-sync` 时返回 `ssh: connect to host github.com port 22: Operation not permitted`，远端上传失败。
@@ -640,3 +660,48 @@
 - 若跳过，说明跳过原因:
   - 未跳过同步前置检查。
   - 跳过了 `codex/windows-version-20260411` 的新提交与推送，因为当前仓库新增或更新的内容是 cross-platform 的视频号发布实现、`skill-center` 规则镜像、内容包、测试与自动化状态文档，没有新的 Windows 专属 bridge / deployment payload。
+
+## 2026-04-23 00:24:52 CST
+- 检测到新的技能变更批次: 新增 0，修改 4，删除 0。
+- 这批变更集中在 live `~/.codex/skills` 与仓库 `skill-center` 镜像中的 `data-review` 技能及其 `report-template`，核心是把夜间复盘自动化的 Docker 看板 companion JSON 导出、contract 校验和 `dashboard-export/latest.json` 刷新改成默认必做交付。
+- 建议后续执行 GitHub 同步，避免 live skill 与仓库镜像对夜间复盘闭环要求继续漂移。
+
+## 2026-04-23 12:40:29 CST
+- 检测到新的技能变更批次: 新增 1，修改 0，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml`，新增了一组围绕“平台执行三步 + 回填字段”的跨平台内容包配置，包含主视频、双比例封面和 8 平台分发文案。
+- 建议后续执行 GitHub 同步，避免 supporting automation 内容包配置与监控记录继续漂移。
+
+## 2026-04-23 15:45:14 CST
+- 检测到新的技能变更批次: 新增 3，修改 13，删除 0。
+- 这批变更集中在 live `~/.codex/skills` 与仓库 `skill-center` 镜像中的 `social-publish-automation`、`xiaohongshu-ops`、`dachen-founder-flywheel`，以及 `automation/python-platform-takeover` 里的小红书正式 URL 与本地发布回执台账实现。
+- 建议后续执行 GitHub 同步，避免小红书防重规则、live skill 镜像和 supporting automation 实现继续漂移。
+
+## 2026-04-23 16:46:03 CST
+- 检测到新的技能变更批次: 新增 0，修改 8，删除 0。
+- 这批变更集中在 live `~/.codex/skills` 与仓库 `skill-center` 镜像中的 `social-publish-automation`、`wechat-channels-ops`，核心是把视频号标准发布入口统一到 `platform/post/create`，并把列表页固定为查重与发布后二次核验页面。
+- 建议后续执行 GitHub 同步，避免视频号发布入口与防重规则在 live skill 和仓库镜像之间继续漂移。
+
+## 2026-04-23 18:48:13 CST
+- 检测到新的技能变更批次: 新增 0，修改 2，删除 0。
+- 这批变更集中在 live `~/.codex/skills` 与仓库 `skill-center` 镜像中的 `social-publish-automation/references/platform-notes.md`，补充了视频号 create 页标签复用、小红书本地回执优先防重，以及 B 站短信校验弹窗失效后的稳定恢复步骤。
+- 建议后续执行 GitHub 同步，避免最新平台执行注记在 live skill 与仓库镜像之间继续漂移。
+
+## 2026-04-23 19:23:54 CST
+- 检测到新的技能变更批次: 新增 0，修改 2，删除 0。
+- 这批变更集中在 live `~/.codex/skills/data-review/**`，核心是把晚间复盘自动化的 dashboard 同步闭环补强到远端账号组上传和固定审计日志刷新。
+- 建议后续执行 GitHub 同步，避免 live `data-review` 技能与仓库镜像对夜间复盘交付闭环的要求继续漂移。
+
+## 2026-04-23 19:49:44 CST
+- 检测到新的技能变更批次: 新增 0，修改 2，删除 0。
+- 这批变更集中在 live `~/.codex/skills/data-review` 及其 `report-template`，核心是把晚间复盘自动化的完成条件从本地看板导出提升为“导出 + contract 校验 + 刷新 `dashboard-export/latest.json` + 上传远端 dashboard account group + 刷新固定 `dashboard-sync` 审计文件”。
+- 建议后续执行 GitHub 同步，避免 live `data-review` 技能与仓库 `skill-center` 镜像对晚间复盘交付闭环的要求继续漂移。
+
+## 2026-04-23 20:51:38 CST
+- 检测到新的技能变更批次: 新增 0，修改 12，删除 0。
+- 这批变更集中在 live `~/.codex/skills`、`skill-center` 镜像和 `automation/python-platform-takeover` 的视频号防重规则升级，以及 `clash-verge-standard-env` 的 B 站直连规则补充。
+- 建议后续执行 GitHub 同步，避免技能规则、镜像文档和视频号自动化实现继续漂移。
+
+## 2026-04-23 22:54:34 CST
+- 检测到新的技能变更批次: 新增 0，修改 3，删除 0。
+- 这批变更集中在 `skill-center/skills/data-review/**` 与 `automation/python-platform-takeover/README.md`，核心是把晚间复盘自动化的 Docker 看板交付闭环继续收紧，并补齐 Windows 下本地 `publish-receipts` 台账防重的操作说明。
+- 建议后续执行 GitHub 同步，避免 `data-review` 技能镜像与 `python-platform-takeover` 文档说明继续漂移。

@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from difflib import SequenceMatcher
 from pathlib import Path
+import re
 from typing import Any, TYPE_CHECKING
 
 try:
@@ -125,6 +127,23 @@ class WeChatChannelsPublisher(PlatformPublisher):
                 current_url=management_page.url,
                 management_url=management_page.url,
                 notes=duplicate.notes,
+            )
+
+        recent_duplicate = self._find_recent_duplicate_entry(
+            management_frame,
+            mapping,
+            expected_title=platform_content.title,
+            expected_description=platform_content.description,
+            ignore_self_visible=True,
+        )
+        if recent_duplicate:
+            return PublishResult(
+                ok=False,
+                status="stopped_recent_content_duplicate",
+                message="视频号最近内容与当前内容包高度重复，停止发布。必须先更换标题或正文骨架。",
+                current_url=management_page.url,
+                management_url=management_page.url,
+                notes=recent_duplicate.notes,
             )
 
         compose_page, frame, compose_notes = self._select_compose_page(
@@ -579,6 +598,61 @@ class WeChatChannelsPublisher(PlatformPublisher):
                 status=status or "<missing>",
                 matched_markers=matched_markers,
                 notes=notes,
+        )
+        return None
+
+    def _find_recent_duplicate_entry(
+        self,
+        frame: Frame,
+        mapping: dict,
+        *,
+        expected_title: str,
+        expected_description: str,
+        ignore_self_visible: bool = False,
+    ) -> "ManagementEntryMatch | None":
+        statuses = mapping["verify"]["management_status"]
+        selector, locator, count = self._resolve_management_entries(frame, mapping)
+        if not locator or count <= 0:
+            return None
+        recent_limit = min(count, RECENT_DUPLICATE_WINDOW)
+        for index in range(recent_limit):
+            entry = locator.nth(index)
+            try:
+                text = normalize_text(entry.inner_text(timeout=600))
+            except Exception:  # noqa: BLE001
+                continue
+            if not text:
+                continue
+            component = self._read_management_component(entry)
+            if component is None:
+                continue
+            if ignore_self_visible and management_entry_is_self_visible(text, component):
+                continue
+            similarity = description_similarity_ratio(
+                component.description,
+                expected_description,
+            )
+            if not is_recent_duplicate_content(
+                component,
+                expected_title,
+                expected_description,
+            ):
+                continue
+            status = resolve_management_status(text, statuses)
+            return ManagementEntryMatch(
+                selector=selector,
+                index=index,
+                text=text,
+                status=status or "<missing>",
+                matched_markers=[component.short_title, f"similarity={similarity:.3f}"],
+                notes=[
+                    f"management_selector: {selector}",
+                    f"management_entry_index: {index}",
+                    f"management_status: {status or '<missing>'}",
+                    f"management_recent_duplicate_title: {component.short_title or '<empty>'}",
+                    f"management_recent_duplicate_similarity: {similarity:.3f}",
+                    f"management_recent_duplicate_description: {component.description[:120] or '<empty>'}",
+                ],
             )
         return None
 
@@ -788,10 +862,44 @@ class ManagementListBaseline:
     top_create_time: int | None = None
 
 
+RECENT_DUPLICATE_WINDOW = 5
+RECENT_DUPLICATE_DESCRIPTION_SIMILARITY = 0.88
+
+
 def text_matches_exactly(current: str, target: str) -> bool:
     normalized_current = normalize_text(current)
     normalized_target = normalize_text(target)
     return bool(normalized_current) and normalized_current == normalized_target
+
+
+def normalize_similarity_text(value: str) -> str:
+    normalized = normalize_text(value)
+    return re.sub(r"[^0-9A-Za-z\u4e00-\u9fff]+", "", normalized)
+
+
+def description_similarity_ratio(current: str, target: str) -> float:
+    normalized_current = normalize_similarity_text(current)
+    normalized_target = normalize_similarity_text(target)
+    if not normalized_current or not normalized_target:
+        return 0.0
+    return SequenceMatcher(None, normalized_current, normalized_target).ratio()
+
+
+def is_recent_duplicate_content(
+    component: ManagementEntryComponent | None,
+    expected_title: str,
+    expected_description: str,
+    *,
+    min_description_similarity: float = RECENT_DUPLICATE_DESCRIPTION_SIMILARITY,
+) -> bool:
+    if component is None:
+        return False
+    if not text_matches_exactly(component.short_title, expected_title):
+        return False
+    return description_similarity_ratio(
+        component.description,
+        expected_description,
+    ) >= min_description_similarity
 
 
 def should_stop_existing_video_candidate(

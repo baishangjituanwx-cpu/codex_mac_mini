@@ -1,0 +1,50 @@
+selectors:
+  title_input_candidates:
+    - "input[placeholder*='填写标题']"
+    - "input[placeholder*='标题']"
+    - "input"
+  description_input_candidates:
+    - "div[contenteditable='true']"
+    - "textarea"
+    - "[role='textbox']"
+  video_file_input_candidates:
+    - "input[type='file'][accept*='video']"
+    - "input[type='file']"
+  cover_file_input_candidates:
+    - "input[type='file'][accept*='image']"
+    - "input[type='file']"
+buttons:
+  cover_entry:
+    - "修改封面"
+    - "设置封面"
+  cover_confirm:
+    - "确定"
+    - "完成"
+    - "应用"
+  publish:
+    - "发布"
+signals:
+  login_required:
+    - "登录后继续"
+    - "手机号登录"
+    - "验证码登录"
+  existing_video:
+    - "重新上传"
+    - "更换视频"
+    - "修改封面"
+  pending_upload:
+    - "上传中"
+    - "处理中"
+    - "%"
+  success:
+    - "发布成功"
+    - "share_link"
+checkpoints:
+  manual:
+    - "登录态恢复"
+    - "社区规范校验"
+    - "封面上传后人工确认"
+verify:
+  management_status:
+    - "审核中"
+    - "已发布"

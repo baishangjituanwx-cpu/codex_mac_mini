@@ -12,6 +12,763 @@
 - 变更摘要
 - 如果有新建 `.py` 文件，单独列出路径、用途、以及与哪个 skill 相关
 
+## 2026-04-23 11:38:40 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T02:37:11.654Z`（本地时区为 `2026-04-23 10:37:11 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（`find -newermt '2026-04-23 10:37:11'` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对仍处于修改态的 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md`，以及 live 镜像 `/Users/baishangjituan/.codex/skills/data-review/` 对应文件补充 `stat` 与 `git diff` 复核；四个文件 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 仍处于修改态，但它们与 live 镜像对应文件的 `mtime` 都早于本轮基线，且 `git diff` 内容仍是上一批已登记的“晚间复盘自动化必须刷新 Docker 看板导出并校验 contract”规则，因此本轮仅复核，不重复登记。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T02:37:11.654Z` 以来，四个扫描目录内没有出现新的技能相关新增、修改或可确认删除。
+- 当前工作区里仍能看到 `data-review` 技能定义与报告模板的未提交差异，但它们和 live 镜像对应文件的实际修改时间都停留在 `2026-04-23 00:11:24 CST`，属于上一批已登记内容。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+
+## 2026-04-23 20:51:30 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T11:48:31.595Z`（本地时区为 `2026-04-23 19:48:31 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（`find -newermt '2026-04-23 19:48:31'` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对 live `~/.codex/skills` 与 `skill-center` 镜像对应文件执行 `diff -u` 复核；本轮命中的 `clash-verge-standard-env`、`dachen-founder-flywheel`、`social-publish-automation`、`wechat-channels-ops` 文件内容两侧一致
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `automation/python-platform-takeover/social_publisher/platforms/__pycache__/wechat_channels.cpython-314.pyc` 与 `automation/python-platform-takeover/tests/__pycache__/test_wechat_channels.cpython-314.pyc` 虽然 `mtime` 晚于基线，但属于解释器缓存，不计入技能相关源码变更。
+- `automation/python-platform-takeover/configs/platforms.example.yaml`、`social_publisher/cli.py`、`social_publisher/platforms/xiaohongshu.py`、`skill-center/skills/data-review/**`、`skill-center/skills/social-publish-automation/references/platform-notes.md`、`skill-center/skills/xiaohongshu-ops/**` 仍处于修改或未跟踪态，但本轮 `mtime` 未晚于基线，属于旧批次，不重复登记。
+- `automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml`、`configs/platform-mappings/xiaohongshu.yaml`、`social_publisher/publish_receipts.py`、`tests/test_publish_receipts.py` 当前仍是未跟踪文件，但本轮 `mtime` 未晚于基线，不属于自上次运行以来的新批次。
+- 结果汇总: 新增 0，修改 12，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/references/rules-enhancement.yaml`
+  - `modified`
+  - 为 Clash Verge 直连规则补充 B 站相关域名和关键词（`bilibili.com`、`b23.tv`、`hdslb.com`、`bilivideo.com`、`acgvideo.com` 及对应 keyword），把 B 站发布/运营链路明确排除在代理外。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`
+  - `modified`
+  - 与 live skill 镜像同步同一批 B 站直连规则，保持仓库镜像和运行态配置一致。
+- `/Users/baishangjituan/.codex/skills/dachen-founder-flywheel/SKILL.md`
+  - `modified`
+  - 收紧创始人飞轮里的防重发规则：重试前必须同时核对本地发布台账和平台侧页面，并把“视频号同短标题+高正文相似度”与“小红书 success/share_link 已成立时不得因后台延迟重发”写成硬性停止条件。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/SKILL.md`
+  - `modified`
+  - 与 live skill 镜像同步同一批跨平台防重发规则，强调本地台账与平台管理页联合判定。
+- `/Users/baishangjituan/.codex/skills/social-publish-automation/SKILL.md`
+  - `modified`
+  - 为社媒发布自动化补上本地 `publish-receipts` 台账优先检查、视频号标准入口固定为 `platform/post/create`、视频号近似重复内容硬拦截，以及小红书在 `success: true` / `share_link` 已出现后的禁止重发规则。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/SKILL.md`
+  - `modified`
+  - 与 live skill 镜像同步同一批发布防重、标准入口和本地台账规则更新。
+- `/Users/baishangjituan/.codex/skills/wechat-channels-ops/SKILL.md`
+  - `modified`
+  - 把视频号发布入口标准化为 `https://channels.weixin.qq.com/platform/post/create`，要求优先接管现有 create/list tab，再导航到 create；同时新增“最近管理行同短标题且正文高度相似即停止发布”的硬规则，并明确 `platform/post/list` 只用于发布前去重和发布后二次核验。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/SKILL.md`
+  - `modified`
+  - 与 live skill 镜像同步同一批视频号入口、接管和近似重复硬拦截规则。
+- `/Users/baishangjituan/.codex/skills/wechat-channels-ops/references/platform-notes.md`
+  - `modified`
+  - 平台笔记补记视频号实操准则：create URL 是标准发布入口，list 页只做去重/验收；若当前只开着 shell 或 list tab，应复用该 tab 导航到 create；最近管理行里同 `shortTitle` 加高相似 `description` 必须视为重复内容停止发布。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/references/platform-notes.md`
+  - `modified`
+  - 与 live skill 镜像同步同一批视频号平台笔记更新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py`
+  - `modified`
+  - 在视频号发布器里新增最近内容重复检测：发布前扫描最近管理列表，要求同 `shortTitle` 且正文相似度超过阈值时直接返回 `stopped_recent_content_duplicate`；同时新增文本归一化、相似度计算和最近重复判定辅助函数。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_wechat_channels.py`
+  - `modified`
+  - 为视频号最近重复检测补上单测，覆盖正文高相似判定，以及“必须同短标题且正文高相似才阻断”的条件组合。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T11:48:31.595Z` 以来，发现一批新的技能相关修改，核心集中在三件事：B 站直连规则补充、跨平台发布防重规则收紧，以及视频号发布入口和近似重复拦截逻辑落地到技能文档与自动化代码。
+- live `~/.codex/skills` 与 `skill-center` 镜像本轮命中的文件内容一致，说明规则已经同步到运行态和仓库态。
+- 本轮没有发现新的 `.py` 文件，也没有确认到技能相关删除项；命中的 `.pyc` 仅作为缓存文件被忽略。
+
+## 2026-04-23 14:43:44 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T05:40:53.174Z`（本地时区为 `2026-04-23 13:40:53 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（`find -newermt '2026-04-23 13:40:53'` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对 `skill-center/skills/data-review/SKILL.md`、`skill-center/skills/data-review/references/report-template.md` 及 live 镜像 `/Users/baishangjituan/.codex/skills/data-review/` 对应文件补充 `stat` 与 `git diff` 复核；四个文件 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线
+- 对 `automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml` 补充 `stat` 与内容检查；文件 `mtime` 为 `2026-04-23 12:16:17 CST`，也早于本轮基线
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 仍处于修改态，但 `git diff` 内容仍是上一批已登记的“晚间复盘自动化必须刷新 Docker 看板导出并校验 contract”规则，且 live 镜像对应文件 `mtime` 同样早于本轮基线，因此本轮仅复核，不重复登记。
+- `automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml` 当前是未跟踪文件，但它的 `mtime` 早于本轮基线，不属于自上次运行以来的新批次。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T05:40:53.174Z` 以来，四个扫描目录内没有出现新的技能相关新增、修改或可确认删除。
+- 当前可见的 `data-review` 技能差异与 `python-platform-takeover` 内容包 YAML 都早于本轮基线，属于旧变更或旧候选，不重复计入新批次。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+
+## 2026-04-23 10:39:42 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T02:37:11.654Z`（本地时区为 `2026-04-23 10:37:11 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（基线时间戳文件 + `find -newer` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对仍处于修改态的 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md`，以及 live 镜像 `/Users/baishangjituan/.codex/skills/data-review/` 对应文件补充 `stat` 与 `git diff` 复核；四个文件 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 仍处于修改态，但它们与 live 镜像对应文件的 `mtime` 都早于本轮基线，且 `git diff` 内容与上一批已登记的“晚间复盘自动化默认刷新 Docker 看板导出”规则一致，因此本轮仅复核，不重复登记。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T02:37:11.654Z` 以来，四个扫描目录内没有出现新的技能相关新增、修改或可确认删除。
+- 当前工作区里仍能看到 `data-review` 技能定义与报告模板的未提交差异，但它们和 live 镜像对应文件的实际修改时间都停留在 `2026-04-23 00:11:24 CST`，属于上一批已登记内容。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+
+## 2026-04-23 11:38:58 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T01:36:11.422Z`（本地时区为 `2026-04-23 09:36:11 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（基线时间戳文件 + `find -newer` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对仍处于修改态的 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md`，以及 live 镜像 `/Users/baishangjituan/.codex/skills/data-review/` 对应文件补充 `stat` 与 `git diff` 复核；四个文件 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 仍处于修改态，但它们与 live 镜像对应文件的 `mtime` 都早于本轮基线，且 `git diff` 内容与上一批已登记的“晚间复盘自动化默认刷新 Docker 看板导出”规则一致，因此本轮仅复核，不重复登记。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T01:36:11.422Z` 以来，四个扫描目录内没有出现新的技能相关新增、修改或可确认删除。
+- 当前工作区里仍能看到 `data-review` 技能定义与报告模板的未提交差异，但它们和 live 镜像对应文件的实际修改时间都停留在 `2026-04-23 00:11:24 CST`，属于上一批已登记内容。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+
+## 2026-04-23 09:37:28 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T00:34:11.168Z`（本地时区为 `2026-04-23 08:34:11 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（四个目录递归核对晚于基线的文件）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对仍处于修改态的 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md`，以及 live 镜像 `/Users/baishangjituan/.codex/skills/data-review/` 对应文件补充 `stat` 与 `git diff` 复核；四个文件 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 仍处于修改态，但它们与 live 镜像对应文件的 `mtime` 都早于本轮基线，且差异内容与上一批已登记的“晚间复盘自动化默认刷新 Docker 看板导出”规则一致，因此本轮仅复核，不重复登记。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T00:34:11.168Z` 以来，四个扫描目录内没有出现新的技能相关新增、修改或可确认删除。
+
+## 2026-04-23 22:54:53 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T13:51:32.102Z`（本地时区为 `2026-04-23 21:51:32 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（`find -newermt '2026-04-23 21:51:32'` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对 `skill-center/skills/data-review/SKILL.md`、`skill-center/skills/data-review/references/report-template.md`、live 镜像 `/Users/baishangjituan/.codex/skills/data-review/` 对应文件，以及 `automation/python-platform-takeover/README.md` 补充 `stat` 与 `git diff` 复核；live 镜像两个文件 `mtime` 仍是 `2026-04-23 19:16:52 CST` / `19:16:59 CST`，早于本轮基线，因此不计入本批
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `automation/python-platform-takeover/.pytest_cache/**` 与 `automation/python-platform-takeover/**/__pycache__/*.pyc` 虽然 `mtime` 晚于基线，但属于测试缓存，不计入技能相关源码变更。
+- 其他仍处于修改或未跟踪态的 `skill-center/skills/clash-verge-standard-env/**`、`dachen-founder-flywheel/**`、`social-publish-automation/**`、`wechat-channels-ops/**`、`xiaohongshu-ops/**`，以及 `automation/python-platform-takeover/configs/platforms.example.yaml`、`social_publisher/cli.py`、`social_publisher/platforms/wechat_channels.py`、`social_publisher/platforms/xiaohongshu.py`、`tests/test_wechat_channels.py`、`configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml`、`configs/platform-mappings/xiaohongshu.yaml`、`social_publisher/publish_receipts.py`、`tests/test_publish_receipts.py` 本轮 `mtime` 未晚于基线，属于旧批次，不重复登记。
+- 结果汇总: 新增 0，修改 3，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/SKILL.md`
+  - `modified`
+  - 把“当前工作区的晚间复盘自动化必须同步 Docker 看板数据”写成硬性要求，新增 dashboard handoff 触发条件、固定下游步骤、失败分支披露要求，以及最终输出里必须包含 companion export、`latest.json`、账号组上传结果和同步审计日志。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/report-template.md`
+  - `modified`
+  - 收紧复盘模板的第 9 节，把晚间复盘自动化纳入 Docker 看板映射必填场景，并要求显式记录 contract 校验结果、`latest.json` 路径、目标账号组、面板同步状态和固定审计日志路径。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md`
+  - `modified`
+  - 为 Windows 发布流程补写本地 `publish-receipts` 台账操作说明，覆盖 `receipt-status`、`clear-receipt`、`record-receipt` 命令，以及 `stopped_receipt_duplicate`、`stopped_recent_content_duplicate`、`stopped_duplicate` 三个防重状态码的含义。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T13:51:32.102Z` 以来，发现 1 批新的技能相关修改，集中在 `data-review` skill-center 镜像和 `python-platform-takeover` README。
+- 这一批的核心是把“晚间复盘自动化必须完成 Docker 看板导出、校验、`latest.json` 刷新和上传交接”写死到技能说明与报告模板里，同时补齐 Windows 侧的本地发布台账/防重操作手册。
+- live `~/.codex/skills/data-review/` 对应文件本轮 `mtime` 仍早于基线，说明这次新增批次发生在仓库镜像和自动化说明层，而不是 live skill 文件再次被修改。
+
+## 2026-04-23 21:52:42 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T12:50:01.902Z`（本地时区为 `2026-04-23 20:50:01 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（`find -newermt '2026-04-23 20:50:01'` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对当前工作区里仍处于修改或未跟踪态的技能/自动化候选文件补充 `stat` 复核；`clash-verge-standard-env`、`dachen-founder-flywheel`、`social-publish-automation`、`wechat-channels-ops`、`xiaohongshu-ops` 以及 `python-platform-takeover` 相关文件的 `mtime` 都早于本轮基线，属于上一批或更早的记录
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 仍处于修改态，但 `mtime` 仍是 `2026-04-23 00:11:24 CST`，属于旧批次，不重复登记。
+- `automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml`、`configs/platform-mappings/xiaohongshu.yaml`、`social_publisher/publish_receipts.py`、`tests/test_publish_receipts.py` 当前仍是未跟踪文件，但 `mtime` 分别停留在 `2026-04-23 12:16:17 CST` 或 `2026-04-23 15:09:40/15:19:55 CST`，早于本轮基线，不属于自上次运行以来的新批次。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T12:50:01.902Z` 以来，四个扫描目录内没有出现新的技能相关新增、修改或可确认删除。
+- 当前能看到的技能定义、参考资料和 `python-platform-takeover` 代码改动都早于本轮基线，属于上一批已记录内容。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+- 当前工作区里仍能看到 `data-review` 技能定义与报告模板的未提交差异，但它们和 live 镜像对应文件的实际修改时间都停留在 `2026-04-23 00:11:24 CST`，属于上一批已登记内容。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+
+## 2026-04-23 08:35:23 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T23:32:10.888Z`（本地时区为 `2026-04-23 07:32:10 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（四个目录递归核对晚于基线的文件）
+
+## 2026-04-23 18:48:15 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T09:45:53.840Z`（本地时区为 `2026-04-23 17:45:53 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（`find -newermt '2026-04-23 17:45:53'` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 对候选文件补充 `stat`、`git diff` 与 live/repo 镜像一致性复核
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `automation/python-platform-takeover/**` 下当前可见的 `platforms.example.yaml`、`cli.py`、`platforms/xiaohongshu.py`、`platform-mappings/xiaohongshu.yaml`、`publish_receipts.py`、`test_publish_receipts.py` 以及 `skill-center/skills/**` 中若干 `SKILL.md` / notes 文件虽然仍处于修改态，但它们的 `mtime` 都早于本轮基线，属于上一批或更早的变更，不重复登记。
+- `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 仍处于修改态，但其 `mtime` 仍是 `2026-04-23 00:11:24 CST`，继续仅复核，不重记。
+- 结果汇总: 新增 0，修改 2，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/social-publish-automation/references/platform-notes.md`
+  - `modified`
+  - 在 B 站操作说明里补充短信验证码弹窗失效时的恢复路径：先关闭过期弹窗，等待新弹窗自动出现，再重新点击 `获取验证码`，避免在 stale modal 上反复重试。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/references/platform-notes.md`
+  - `modified`
+  - 与 live skill 镜像同步同一条 B 站验证码恢复规则，确保仓库镜像和 `~/.codex/skills` 的平台实操说明保持一致。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T09:45:53.840Z` 以来，只发现 `social-publish-automation` 的平台说明文档出现一批新的技能相关变更，内容集中在 B 站短信验证码弹窗过期后的稳定恢复步骤。
+- live skill 与 `skill-center` 镜像的这两个 `platform-notes.md` 文件内容一致，说明这次改动已经同步到运行态与仓库态两侧。
+- 本轮没有发现新的 `.py` 文件，也没有确认到技能相关删除项。
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对仍处于修改态的 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md`，以及 live 镜像 `/Users/baishangjituan/.codex/skills/data-review/` 对应文件补充 `stat` 复核；四个文件 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- 本轮开始前 automation memory 缺失；删除项仍按当前文件系统和仓库差异联合确认，本轮未发现可确认的技能相关删除文件。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T23:32:10.888Z` 以来，四个扫描目录内没有出现新的技能相关新增、修改或可确认删除。
+- 工作区里仍可见 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 的未提交差异，但它们和 live 镜像对应文件的 `mtime` 都早于本轮基线，因此仅复核，不计入新批次。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+
+## 2026-04-23 06:32:54 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T21:29:40.370Z`（本地时区为 `2026-04-23 05:29:40 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（四个目录递归核对晚于基线的文件）
+- 仓库 `git status --short -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status -- skill-center/skills/data-review/SKILL.md skill-center/skills/data-review/references/report-template.md`
+- 对 `skill-center` 与 live `~/.codex/skills` 的 `data-review` 两个对应文件补充 `stat` 复核
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 仍处于修改态，但仓库镜像与 live 镜像四个文件的 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线，属于已登记的上一批改动。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T21:29:40.370Z` 以来，四个扫描目录内没有出现新的技能相关新增、修改或可确认删除。
+- 当前唯一可见的技能候选仍是 `data-review` 的技能定义与报告模板，但它们的实际修改时间停留在上一批记录对应的 `2026-04-23 00:11:24 CST`，本轮仅复核，不重复登记。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+
+
+## 2026-04-23 05:30:28 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T20:27:40.104Z`（本地时区为 `2026-04-23 04:27:40 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（以基线时间戳文件配合 `find -newer` 复核四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对仍处于修改态的 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md`，以及 live 镜像 `/Users/baishangjituan/.codex/skills/data-review/` 对应文件补充 `stat` 复核；四个文件 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- 本轮未发现晚于基线的技能相关新增、修改或可确认删除；仓库里仍可见的 `data-review` 两个镜像文件改动属于上一批已登记内容，不重复记录。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T20:27:40.104Z` 以来，四个扫描目录内没有出现新的技能相关文件增量。
+- 工作区中仍挂着 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 的未提交改动，但它们及 live 镜像对应文件的 `mtime` 都早于本轮基线，因此只做复核，不算新批次。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+
+## 2026-04-23 06:32:52 CST
+
+## 2026-04-23 13:41:54 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T04:39:12.092Z`（本地时区为 `2026-04-23 12:39:12 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（`find -newermt '2026-04-23 12:39:12 CST'` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对 `skill-center/skills/data-review/SKILL.md`、`skill-center/skills/data-review/references/report-template.md` 及 live 镜像 `/Users/baishangjituan/.codex/skills/data-review/` 对应文件补充 `stat` 与 `git diff` 复核；四个文件 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线
+- 对 `automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml` 补充 `stat` 与内容检查；其 `mtime` 为 `2026-04-23 12:16:17 CST`，早于本轮基线
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 仍处于修改态，但 `mtime` 早于本轮基线，且差异内容仍是上一批已登记的“晚间复盘自动化默认必须完成 Docker 看板导出、contract 校验和 latest.json 刷新”规则，因此本轮仅复核，不重复登记。
+- `automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml` 当前为未跟踪文件，但其 `mtime` 早于本轮基线，因此不计入本轮新变更批次。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T04:39:12.092Z` 以来，四个扫描目录内没有出现新的技能相关新增、修改或可确认删除。
+- 当前可见的技能候选差异仍是 `data-review` 两个镜像文件，以及一个 `python-platform-takeover` 内容包配置文件；它们的实际修改时间都早于本轮基线，因此都不属于本次新增批次。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T21:29:40.370Z`（本地时区为 `2026-04-23 05:29:40 CST`）
+- 判定依据:
+- 文件系统 `find -newermt` 增量扫描四个目标目录
+- 仓库 `git status --short --untracked-files=all`
+- 仓库 `git diff --name-status -- skills skill-center automation`
+- 对 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 读取差异内容，确认仍是上一批已记录的 `data-review` 技能规则与报告模板改动
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- 本轮开始前 automation memory 缺失，因此删除项仍只能按当前文件系统与仓库差异确认；本轮未发现可确认的技能相关删除文件。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T21:29:40.370Z` 以来，四个扫描目录内没有出现新的技能相关文件增量。
+- 工作区里仍可见 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 的未提交差异，但它们与上一批已登记的晚间复盘 Docker 看板交接规则一致，本轮不重复记为新变更。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+
+## 2026-04-23 04:29:08 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T19:27:09.863Z`（本地时区为 `2026-04-23 03:27:09 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（基线时间戳文件 + `find -newer`）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对仍处于修改态的 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 补充 `stat` 与 `git diff` 复核，确认内容与上一批记录一致，且 `mtime` 为 `2026-04-23 00:11:24 CST`，早于本轮基线
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- 本轮开始前 automation memory 仍缺失，因此删除项继续只按当前文件系统与仓库差异确认；未发现可确认的技能相关删除文件。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T19:27:09.863Z` 以来，四个扫描目录内没有出现新的技能相关文件增量。
+- 仓库里仍可见的 `data-review` 两个镜像文件改动已在上一批登记；本轮再次核对后确认既没有新时间戳，也没有新的技能支撑自动化批次需要补记。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+
+## 2026-04-23 03:28:33 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T18:26:09.583Z`（本地时区为 `2026-04-23 02:26:09 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对仍处于修改态的 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 补充 `stat` 与 `git diff` 复核，确认内容与上一批记录一致，且 `mtime` 为 `2026-04-23 00:11:24 CST`，早于本轮基线
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- 当前 automation memory 在本轮开始前仍缺失，因此删除项继续只按当前文件系统与仓库差异确认；未发现可确认的技能相关删除文件。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T18:26:09.583Z` 以来，四个扫描目录内没有出现新的技能相关文件增量。
+
+## 2026-04-23 09:37:14 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T00:34:11.168Z`（本地时区为 `2026-04-23 08:34:11 CST`）
+- 判定依据:
+- 文件系统 `find -newermt '2026-04-23 08:34:11'` 增量扫描四个目标目录
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 对 `skill-center/skills/data-review/SKILL.md`、`skill-center/skills/data-review/references/report-template.md` 以及 live 镜像 `/Users/baishangjituan/.codex/skills/data-review/` 对应文件补充 `stat` 与 `git diff` 复核
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- 仓库中仍可见 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 的未提交差异，但四个对应文件的 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线，属于上一批已登记改动。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T00:34:11.168Z` 以来，四个扫描目录内没有出现新的技能相关新增、修改或可确认删除。
+- 当前唯一仍处于修改态的 `data-review` 技能定义与报告模板，经过 `mtime` 复核后确认都停留在 `2026-04-23 00:11:24 CST`，早于本轮基线，因此本轮不重复登记。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+- 仓库里仍可见的 `data-review` 两个镜像文件改动已在上一轮登记；本轮再次核对后确认既没有新时间戳，也没有新的技能支撑自动化批次需要补记。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+
+## 2026-04-23 02:26:52 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T17:25:09.329Z`（本地时区为 `2026-04-23 01:25:09 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对仍处于修改态的 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 补充 `stat` 与 `git diff` 复核，确认内容与上一批记录一致，且 `mtime` 为 `2026-04-23 00:11:24 CST`，早于本轮基线
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- 当前 automation memory 在本轮开始前缺失，因此删除项仍只按当前文件系统与仓库差异确认；未发现可确认的技能相关删除文件。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T17:25:09.329Z` 以来，四个扫描目录内没有出现新的技能相关文件增量。
+- 仓库里仍可见的 `data-review` 两个镜像文件改动已在上一轮登记；本轮再次核对后确认既没有新时间戳，也没有新的技能支撑自动化批次需要补记。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+
+## 2026-04-23 01:26:41 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T16:23:09.054Z`（本地时区为 `2026-04-23 00:23:09 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对遗留候选文件补充 `stat` 与 `git diff` 复核，确认是否晚于本轮基线
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- 本轮 automation memory 仍缺失，因此删除项只按当前文件系统与仓库差异确认；未发现可确认的技能相关删除文件。
+- `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 虽仍处于修改态，但 `mtime` 为 `2026-04-23 00:11:24 CST`，早于本轮基线，属于上一批已记录改动，不重复登记。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T16:23:09.054Z` 以来，四个扫描目录内没有出现新的技能相关文件增量。
+- 本轮唯一可见的技能候选仍是 `data-review` 两个镜像文件，但它们的修改时间落在上一轮基线之前，因此仅复核，不计入新批次。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+
+## 2026-04-23 00:24:50 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T15:21:08.838Z`（本地时区为 `2026-04-22 23:21:08 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- live `~/.codex/skills` 与 `skill-center` 镜像逐文件 `diff -u` 对照，确认镜像内容同步
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- 本轮自动化 memory 文件缺失，因此删除项只基于当前文件系统与仓库差异确认；未发现可确认的技能相关删除文件。
+- 结果汇总: 新增 0，修改 4，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/data-review/SKILL.md` | `modified` | live `data-review` 技能补充“当前工作区的晚间复盘自动化”触发条件，并把 8 平台 Docker 看板导出、contract 校验和 `dashboard-export/latest.json` 刷新提升为自动化默认必做收尾步骤。
+- `/Users/baishangjituan/.codex/skills/data-review/references/report-template.md` | `modified` | live 报告模板把 `## 9. Docker 看板数据映射` 改成晚间复盘自动化强制项，新增 companion JSON 路径、contract 校验结果、`latest.json` 路径和数据面板同步状态字段。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/SKILL.md` | `modified` | 仓库镜像同步加入晚间复盘自动化必须完成 Docker 看板 JSON 导出、contract 校验与 `latest.json` 刷新的规则，并要求最终报告显式写出这些交付结果。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/report-template.md` | `modified` | 仓库镜像模板同步补齐晚间自动化专用的看板交接字段，要求在第 9 节记录导出文件、校验结果和 `latest.json` 刷新状态。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T15:21:08.838Z` 以来，只发现 `data-review` 技能及其 `report-template` 在 live 技能源与 `skill-center` 镜像中的同步修改。
+- 这批改动把“晚间复盘自动化结束后必须交付并验证 8 平台 Docker 看板数据”写成硬性规则，不再把 dashboard export 当作可选附录。
+- 本轮没有新增 `.py` 文件，也没有发现可确认的删除项；因为发现了新的技能变更批次，已在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 追加后续 GitHub 同步提醒。
+
 ## 2026-04-22 23:22:41 CST
 - 扫描范围:
 - `/Users/baishangjituan/.codex/skills`
@@ -12097,3 +12854,838 @@
 - 自 `2026-04-22T14:20:08.631Z` 以来，四个扫描目录内没有出现新的技能相关文件增量。
 - 仓库当前仍能看到上一批视频号发布链路与 skill 镜像的未提交改动，但这些文件的实际修改时间都早于本轮基线，本轮仅完成去重复核。
 - 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮不追加新的待同步提醒。
+
+## 2026-04-23 00:24:52 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T15:21:08.838Z`（本地时区为 `2026-04-22 23:21:08 CST`）
+- 判定依据:
+- Python `Path.rglob` + `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对候选文件逐个校验 `stat` 时间戳与 `git diff` 内容
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `automation/python-platform-takeover/.pytest_cache/v/cache/nodeids` 虽然 `mtime` 晚于基线，但属于测试缓存，不作为 custom skill 或 supporting automation 文件登记。
+- 结果汇总: 新增 0，修改 4，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/data-review/SKILL.md` | `modified` | 补充 `data-review` 技能对当前工作区晚间复盘自动化的专门规则，把 8 平台 Docker 看板导出、contract 校验和 `dashboard-export/latest.json` 刷新提升为默认必做的下游交付步骤。
+- `/Users/baishangjituan/.codex/skills/data-review/references/report-template.md` | `modified` | 更新复盘报告模板的 `## 9. Docker 看板数据映射` 说明，新增晚间复盘自动化场景下必须填写 companion JSON 路径、contract 校验结果、`latest.json` 路径和同步状态。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/SKILL.md` | `modified` | 仓库镜像同步加入同样的夜间复盘收口要求，明确 dashboard export 不是可选附录，而是自动化完成定义的一部分。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/report-template.md` | `modified` | 仓库镜像模板同步收紧 Docker 看板映射段落，要求夜间复盘自动化显式记录导出文件、contract 校验和 `latest.json` 刷新结果。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T15:21:08.838Z` 以来，扫描目录里发现 1 组新的 `data-review` 技能文档批次，分别落在 live `~/.codex/skills` 与仓库 `skill-center` 镜像，两侧内容一致。
+- 这批变更的核心是把夜间复盘自动化的完成条件从“生成复盘文案”收紧为“复盘 + Docker 看板 companion JSON 导出 + contract 校验 + latest.json 刷新”整体闭环。
+- 本轮没有发现新的 `.py` 文件，也没有确认到删除项；唯一晚于基线的 `automation/python-platform-takeover/.pytest_cache` 文件已按缓存排除。
+- 因为发现了新的变更批次，已同步在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 追加后续 GitHub 同步提醒。
+
+## 2026-04-23 01:26:38 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T16:23:09.054Z`（本地时区为 `2026-04-23 00:23:09 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对残留候选文件逐个校验 `stat` 时间戳与 `git diff --stat`
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- 仓库中仍处于未提交状态的 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md`，其 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线，属于上一批已记录变更，不重复登记。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T16:23:09.054Z` 以来，四个扫描目录内没有出现新的技能相关文件增量。
+- 本轮重新核对了仓库里仍可见的 `data-review` 镜像改动，确认它们发生在 `2026-04-23 00:11:24 CST`，已被上一批记录覆盖，本次只做复核。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮不追加新的待同步提醒。
+
+## 2026-04-23 03:28:18 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T18:26:09.583Z`（本地时区为 `2026-04-23 02:26:09 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对仍处于修改态的 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 补充 `stat` 复核，确认两者 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- 未发现晚于基线的新增、修改或可确认删除的技能相关文件；非仓库目录删除项在缺少历史快照时无法额外推断，本轮未发现需要补记的线索。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T18:26:09.583Z` 以来，四个扫描目录内没有出现新的技能相关文件增量。
+- 仓库里仍可见的 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 属于更早一批已登记改动，本轮仅复核，不重复入账。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+
+## 2026-04-23 07:33:35 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T22:31:40.653Z`（本地时区为 `2026-04-23 06:31:40 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描：`find <monitored paths> -type f -newermt '2026-04-23 06:31:40'`
+- 仓库 `git status --short --untracked-files=all`
+- 仓库 `git log --since='2026-04-22T22:31:40.653Z' --name-status -- skills skill-center automation`
+- 对残留候选文件逐个校验 `stat` 与 `git diff`
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- 仓库中仍处于未提交状态的 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md`，其 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线，属于上一批已记录变更，不重复登记。
+- 非仓库目录删除项在缺少上轮文件快照时无法独立反推；本轮未发现需要补记删除的线索。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T22:31:40.653Z` 以来，四个扫描目录内没有出现新的技能相关文件增量。
+- 本轮复核了仓库里仍可见的 `data-review` 技能改动，确认它们发生在上一轮基线之前，继续沿用既有记录，不重复入账。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-04-23 08:35:37 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-22T23:32:10.888Z`（本地时区为 `2026-04-23 07:32:10 CST`）
+- 判定依据:
+- 递归文件系统 `mtime` 扫描，核对四个目录内所有晚于基线的文件
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D -- skills skill-center automation`
+- 对 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 以及 live 镜像 `/Users/baishangjituan/.codex/skills/data-review/` 对应文件补充 `stat` 复核
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 仍处于修改态，但仓库镜像与 live 镜像四个对应文件的 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线，属于已登记的上一批 `data-review` 晚间复盘 Docker 看板交接规则改动。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-22T23:32:10.888Z` 以来，四个扫描目录内没有出现新的技能相关新增、修改或可确认删除。
+- 本轮唯一需要复核的仍是 `data-review` 两个仓库镜像文件及其 live 镜像，但它们的修改时间全部早于本轮基线，因此不记为新批次。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+
+## 2026-04-23 10:39:32 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T01:36:11.422Z`（本地时区为 `2026-04-23 09:36:11 CST`）
+- 判定依据:
+- 递归文件系统 `mtime` 扫描，核对四个目录内所有晚于基线的文件
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 以及 live 镜像 `/Users/baishangjituan/.codex/skills/data-review/` 对应文件补充 `stat` 复核
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 仍处于修改态，但仓库镜像与 live 镜像四个对应文件的 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线，属于已登记的上一批 `data-review` 晚间复盘 Docker 看板交接规则改动。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T01:36:11.422Z` 以来，四个扫描目录内没有出现新的技能相关新增、修改或可确认删除。
+- 本轮复核到的唯一技能候选仍是 `data-review` 的两个仓库镜像文件及其 live 镜像，但四个文件的修改时间都停留在 `2026-04-23 00:11:24 CST`，早于本轮基线，因此不重复登记。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-04-23 12:40:29 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T03:37:41.901Z`（本地时区为 `2026-04-23 11:37:41 CST`）
+- 判定依据:
+- 递归文件系统 `mtime` 扫描，核对四个目录内所有晚于基线的文件
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git ls-files --deleted -- skills skill-center automation`
+- 对 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 以及 live 镜像 `/Users/baishangjituan/.codex/skills/data-review/` 对应文件补充 `stat` 复核
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 仍处于修改态，但仓库镜像与 live 镜像四个对应文件的 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线，属于已登记的上一批夜间复盘 Docker 看板交付规则改动。
+- 结果汇总: 新增 1，修改 0，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml`：新增一组“平台执行三步 + 回填字段”内容包配置，绑定 `2026-04-23-platform-execution-feedback-fields` campaign，并为微博、抖音、视频号、快手、百家号、头条号、知乎、小红书写入对应标题、描述和素材路径，供 supporting automation 直接分发使用。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T03:37:41.901Z` 以来，四个扫描目录内确认到 1 个新的 supporting automation 相关技能文件增量，位于 `automation/python-platform-takeover/configs/`。
+- 本轮未发现新的 `.py` 文件，也没有可确认的技能相关删除；仓库中 `data-review` 的未提交改动仍早于本轮基线，因此不重复入账。
+- 已将这批新内容包配置登记为待后续 GitHub 同步批次，并在 `github-sync-status.md` 追加短提醒。
+
+## 2026-04-23 12:40:24 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T03:37:41.901Z`（本地时区为 `2026-04-23 11:37:41 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（四个目录递归核对所有晚于基线的文件）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 以及 live 镜像 `/Users/baishangjituan/.codex/skills/data-review/` 对应文件补充 `stat` 与 `git diff` 复核
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 仍处于修改态，但它们及 live 镜像对应文件的 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线，且差异内容仍是上一批已登记的晚间复盘 Docker 看板交接规则，不重复登记。
+- 结果汇总: 新增 1，修改 0，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml` Added. 新增一份 `python-platform-takeover` 内容包配置，绑定 `2026-04-23-platform-execution-feedback-fields` 主题，指定主视频、两张封面，以及微博、抖音、视频号、快手、百家号、头条、知乎、小红书的标题和描述文案，供跨平台发布接管自动化直接消费。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T03:37:41.901Z` 以来，确认只有一个新的技能相关支持文件进入批次：`python-platform-takeover` 的内容包 YAML。
+- 这份新增文件属于支持自动化执行的发布配置，不是技能定义本体，但直接驱动技能依赖的跨平台接管链路，因此计入本次技能相关变更。
+- 没有发现新的 `.py` 文件，也没有发现可确认的技能相关删除。
+
+## 2026-04-23 13:42:58 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T04:39:12.092Z`（本地时区为 `2026-04-23 12:39:12 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（四个目录递归核对所有晚于基线的文件）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git ls-files --deleted -- skills skill-center automation`
+- 对 `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 以及 live 镜像 `/Users/baishangjituan/.codex/skills/data-review/` 对应文件补充 `stat` 与 `git diff` 复核
+- 对 `automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml` 补充 `stat` 复核，确认 `mtime` 为 `2026-04-23 12:16:17 CST`，早于本轮基线
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 仍处于修改态，但它们及 live 镜像对应文件的 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线，且差异内容仍是上一批已登记的晚间复盘 Docker 看板交接规则，不重复登记。
+- `automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml` 仍处于未跟踪状态，但 `mtime` 为 `2026-04-23 12:16:17 CST`，属于上一轮 `12:40` 已登记新增文件，不重复登记。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T04:39:12.092Z` 以来，四个扫描目录内没有出现新的技能相关新增、修改或可确认删除。
+- 当前工作区里仍可见上一批已登记的 supporting automation YAML，以及更早的 `data-review` 技能定义与报告模板差异，但它们的实际修改时间都早于本轮基线，因此本轮只做复核，不重复入账。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-04-23 14:43:48 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T05:40:53.174Z`（本地时区为 `2026-04-23 13:40:53 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（四个目录递归核对所有晚于基线的文件）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git ls-files --deleted -- skills skill-center automation`
+- 对 `skill-center/skills/data-review/SKILL.md`、`skill-center/skills/data-review/references/report-template.md`、live 镜像 `/Users/baishangjituan/.codex/skills/data-review/` 对应文件，以及 `automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml` 补充 `stat` 复核
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `skill-center/skills/data-review/SKILL.md`、`skill-center/skills/data-review/references/report-template.md` 及 live 镜像对应文件的 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线，且差异内容仍是前一批已登记的夜间复盘规则更新，不重复登记。
+- `automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml` 仍处于未跟踪状态，但 `mtime` 为 `2026-04-23 12:16:17 CST`，属于前一轮 `12:40` 已登记新增文件，不重复登记。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T05:40:53.174Z` 以来，四个扫描目录内没有出现新的技能相关新增、修改或可确认删除。
+- 当前工作区仍存在前几轮已登记的 `data-review` 技能差异与 `python-platform-takeover` 内容包 YAML，但它们的实际修改时间都早于本轮基线，因此本轮仅复核，不重复入账。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-04-23 15:45:14 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T06:42:23.312Z`（本地时区为 `2026-04-23 14:42:23 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（`find -newermt '2026-04-23 14:42:23'` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对 live `~/.codex/skills` 与 `skill-center` 镜像的 5 个同步改动文件做 `diff -q` 复核，确认内容完全一致
+- 对 `automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml` 补充 `stat` 复核，确认 `mtime` 为 `2026-04-23 12:16:17 CST`，早于本轮基线
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `skill-center/skills/data-review/SKILL.md`、`skill-center/skills/data-review/references/report-template.md` 及 live 镜像对应文件仍处于修改态，但 `mtime` 都是 `2026-04-23 00:11:24 CST`，早于本轮基线，不重复登记。
+- `automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml` 仍是未跟踪文件，但 `mtime` 早于本轮基线，属于上一批已登记内容，不重复登记。
+- 生成产物 `.pytest_cache/**`、`__pycache__/**`、`*.pyc` 不计入技能相关变更清单。
+- 结果汇总: 新增 3，修改 13，删除 0。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/xiaohongshu.yaml` `added`：新增小红书平台映射，补齐标题、正文、视频/封面文件输入、封面确认、发布按钮、登录/上传/成功信号与管理页审核状态选择器，为小红书接管流程提供独立配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/publish_receipts.py` `added`：新增本地发布回执台账模块，定义 `PublishReceipt` 数据结构、阻断重复发布的状态集合，以及回执读取、写入、查询、清理逻辑。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_publish_receipts.py` `added`：新增发布回执测试，覆盖回执 round-trip、成功态阻断重发判定，以及清空最后一条回执后删除 campaign 文件。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/dachen-founder-flywheel/SKILL.md` `modified`：把“本地发布台账 + 平台侧页面”写成同平台重试前的双重核验要求，并补充“小红书出现 `success: true`、`share_link` 或 blocking receipt 后不得因管理页延迟重发”规则。
+- `/Users/baishangjituan/.codex/skills/social-publish-automation/SKILL.md` `modified`：把 `automation/python-platform-takeover/state/publish-receipts/<campaign_id>.json` 明确列为硬性防重台账，要求重发前先查本地回执，再查管理页和公开页，并说明清回执或强制替换的前提条件。
+- `/Users/baishangjituan/.codex/skills/social-publish-automation/references/platform-notes.md` `modified`：补充小红书管理页正式校验路径 `new/note-manager?source=official`，并把“本地回执 -> 管理页 -> 公开页”的防重顺序写成平台注记。
+- `/Users/baishangjituan/.codex/skills/xiaohongshu-ops/SKILL.md` `modified`：新增小红书发布重试前必须同时检查本地回执与 `笔记管理` 的规则，并把 `success: true`、`share_link` 视为应立即记录本地回执的成功阈值。
+- `/Users/baishangjituan/.codex/skills/xiaohongshu-ops/references/platform-notes.md` `modified`：记录 2026-04-23 小红书重复发布事故结论，明确 `笔记管理` 可见性延迟不能单独触发重发，必须先看本地回执。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/SKILL.md` `modified`：与 live skill 同步，把本地发布回执加入重发前必查项，并明确小红书 blocking receipt 会阻断补发。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/SKILL.md` `modified`：与 live skill 同步，把本地回执台账地址、阻断状态和强制替换前提写入正式发布自动化规则。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/references/platform-notes.md` `modified`：与 live 注记同步，新增小红书管理页正式路径和本地回执优先的防重链路说明。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/SKILL.md` `modified`：与 live skill 同步，把本地回执与 `笔记管理` 双重校验、`share_link` 成功阈值和重发前置条件写入操作规范。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/references/platform-notes.md` `modified`：与 live 注记同步，新增 2026-04-23 重复发布故障复盘与本地回执清理条件。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platforms.example.yaml` `modified`：把小红书默认发布页改为 `publish/publish?source=official`，把管理页改为 `new/note-manager?source=official`，并新增 `success: true + share_link` 成功信号。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/cli.py` `modified`：在 `publish` 命令加入本地回执防重拦截和 `--force` 绕过开关，并新增 `receipt-status`、`record-receipt`、`clear-receipt` 三个台账运维命令。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/xiaohongshu.py` `modified`：更新小红书平台元数据，切换到正式发布/管理 URL，并把“先查本地回执”“blocking receipt 直接停止”与 `share_link` 成功信号写进预检、成功判定和停止条件。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/publish_receipts.py`
+  - 用途: 维护 campaign/platform 级别的本地发布回执台账，阻断重复发布，并支持查询、写入、清理。
+  - 关联 skill / automation: supporting automation `python-platform-takeover`；直接支撑 `social-publish-automation`、`xiaohongshu-ops`、`dachen-founder-flywheel` 新增的防重规则。
+  - 平台属性: cross-platform；只依赖文件系统 JSON 读写，没有明显的 macOS / Windows 专属分支。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_publish_receipts.py`
+  - 用途: 验证本地发布回执台账的写入、阻断判定和清理行为。
+  - 关联 skill / automation: supporting automation `python-platform-takeover`；为上面的回执台账能力提供回归保护。
+  - 平台属性: cross-platform；纯单元测试，使用 `tmp_path` 和本地文件系统，不含平台专属调用。
+
+### 变更摘要
+- 自 `2026-04-23T06:42:23.312Z` 以来，出现了一批新的技能与 supporting automation 变更，核心是把“小红书重复发布防护”从经验规则升级为正式的“本地发布回执台账 + 管理页 + 公开页”三层判定。
+- 技能侧同时更新了 live `~/.codex/skills` 和仓库 `skill-center` 镜像，五个同步文件内容完全一致，重点统一到“`success: true`、`share_link`、blocking receipt 都应阻断重发”。
+- supporting automation 侧新增本地回执模块和测试，并在 CLI 与小红书平台配置里接入回执检查、正式 URL 与成功信号；这批内容应在后续 GitHub 同步时一起入库。
+
+## 2026-04-23 16:46:03 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T07:43:23.533Z`（本地时区为 `2026-04-23 15:43:23 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（`find -newermt '2026-04-23 15:43:23'` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对 8 个命中的技能文件补充 `stat` 与 `git diff` 复核；它们的 `mtime` 都是 `2026-04-23 16:10:23 CST`
+- 对新增 Python 文件候选 `automation/python-platform-takeover/social_publisher/publish_receipts.py` 与 `automation/python-platform-takeover/tests/test_publish_receipts.py` 补充 `stat` 复核；两者 `mtime` 都是 `2026-04-23 15:09:40 CST`，早于本轮基线
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `skill-center/skills/dachen-founder-flywheel/SKILL.md`、`skill-center/skills/data-review/SKILL.md`、`skill-center/skills/data-review/references/report-template.md`、`skill-center/skills/xiaohongshu-ops/SKILL.md` 与 `skill-center/skills/xiaohongshu-ops/references/platform-notes.md` 仍处于修改态，但它们的已知变更批次早于本轮基线，本轮未出现新的 `mtime` 增量，不重复登记。
+- `automation/python-platform-takeover/social_publisher/publish_receipts.py` 与 `automation/python-platform-takeover/tests/test_publish_receipts.py` 虽然当前仍是新增候选，但 `mtime` 早于本轮基线，因此不计入“自上次运行以来”的新 Python 文件。
+- 结果汇总: 新增 0，修改 8，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/social-publish-automation/SKILL.md` `modified`：把本地发布回执台账写进正式规则，要求重试前先查 `publish-receipts/<campaign_id>.json`，并把微信视频号标准发布入口固定为 `platform/post/create`。
+- `/Users/baishangjituan/.codex/skills/social-publish-automation/references/platform-notes.md` `modified`：补充微信视频号“先复用现有壳页或列表页并导航到 `platform/post/create`”的实操规则，并把小红书的本地回执优先防重链路写成平台注记。
+- `/Users/baishangjituan/.codex/skills/wechat-channels-ops/SKILL.md` `modified`：明确视频号发布默认从 `https://channels.weixin.qq.com/platform/post/create` 直达，列表页只用于重发前查重和发布后二次核验。
+- `/Users/baishangjituan/.codex/skills/wechat-channels-ops/references/platform-notes.md` `modified`：同步记录视频号标准入口 URL，并新增“若当前只有壳页或列表页标签，则复用该标签并导航到 create 页”的操作说明。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/SKILL.md` `modified`：与 live skill 同步，把本地回执优先、视频号直达 create 页和小红书 blocking receipt 阻断重发写入正式技能规则。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/references/platform-notes.md` `modified`：与 live 注记同步，补充视频号 create 页直达规则、现有标签页复用策略，以及小红书防重顺序。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/SKILL.md` `modified`：与 live skill 同步，把 `platform/post/create` 固定为发布入口，并把 `platform/post/list` 限定为查重和复核用途。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/references/platform-notes.md` `modified`：与 live 注记同步，记录 create 页优先和列表页仅作校验用途，并补充复用现有标签页再导航的规则。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T07:43:23.533Z` 以来，出现了一批新的技能文档同步更新，核心是统一视频号发布入口到 `platform/post/create`，并把列表页明确降级为“查重 + 发布后二次核验”页面。
+- `social-publish-automation` 同时补上了本地发布回执优先的防重顺序，要求在任何补发或重试前先查本地台账，再查管理页和公开页。
+- 本轮没有新的 supporting automation 文件增量进入基线之后的时间窗口，也没有新的 `.py` 文件出现；`publish_receipts.py` 与对应测试虽然存在，但属于上一批已登记内容。
+
+## 2026-04-23 17:46:21 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T08:44:53.664Z`（本地时区为 `2026-04-23 16:44:53 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（`find -newermt '2026-04-23 16:44:53'` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对当前仍处于差异态的技能与 automation 候选文件补充 `stat`、`git diff` 与最近提交时间复核
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `skill-center/skills/dachen-founder-flywheel/SKILL.md`、`skill-center/skills/social-publish-automation/SKILL.md`、`skill-center/skills/social-publish-automation/references/platform-notes.md`、`skill-center/skills/wechat-channels-ops/SKILL.md`、`skill-center/skills/wechat-channels-ops/references/platform-notes.md`、`skill-center/skills/xiaohongshu-ops/SKILL.md`、`skill-center/skills/xiaohongshu-ops/references/platform-notes.md` 以及对应 live `~/.codex/skills` 镜像虽然仍有未提交差异，但 `mtime` 分别停留在 `2026-04-23 15:19:55 CST` 或 `2026-04-23 16:10:23 CST`，都早于本轮基线。
+- `automation/python-platform-takeover/configs/platforms.example.yaml`、`social_publisher/cli.py`、`social_publisher/platforms/xiaohongshu.py`、`configs/platform-mappings/xiaohongshu.yaml`、`social_publisher/publish_receipts.py`、`tests/test_publish_receipts.py` 与候选内容包 YAML 仍可见于工作区，但它们的 `mtime` 最晚为 `2026-04-23 15:19:55 CST`，同样早于本轮基线，不属于“自上次运行以来”的新批次。
+- `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 仍处于旧修改态，`mtime` 仍为 `2026-04-23 00:11:24 CST`，继续排除。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T08:44:53.664Z` 以来，四个扫描目录内没有出现新的技能相关新增、修改或可确认删除。
+- 当前工作区里可见的 skill / automation 差异都早于本轮基线，属于上一批已登记内容或更早的旧差异，本轮只做复核，不重复登记。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+
+## 2026-04-23 18:48:13 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T09:45:53.840Z`（本地时区为 `2026-04-23 17:45:53 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（`find -newermt '2026-04-23 17:45:53'` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对命中的 live skill 与 `skill-center` 镜像文件补充 `stat`、`git diff` 与 `cmp` 复核；两份 `platform-notes.md` 的 `mtime` 都是 `2026-04-23 18:02:26 CST`，且内容一致
+- 对当前仍处于差异态的其他 skill / automation 文件补充 `stat` 复核；它们的 `mtime` 最晚停留在 `2026-04-23 16:10:23 CST` 或更早，均早于本轮基线
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `skill-center/skills/social-publish-automation/SKILL.md`、`skill-center/skills/wechat-channels-ops/SKILL.md`、`skill-center/skills/wechat-channels-ops/references/platform-notes.md`、`skill-center/skills/xiaohongshu-ops/SKILL.md`、`skill-center/skills/xiaohongshu-ops/references/platform-notes.md`、`skill-center/skills/dachen-founder-flywheel/SKILL.md` 以及 `automation/python-platform-takeover/**` 当前仍可见旧差异，但 `mtime` 都早于本轮基线，本轮不重复登记。
+- `automation/python-platform-takeover/social_publisher/publish_receipts.py` 与 `automation/python-platform-takeover/tests/test_publish_receipts.py` 仍是旧的新增 Python 候选，`mtime` 均为 `2026-04-23 15:09:40 CST`，不属于本轮新出现文件。
+- 结果汇总: 新增 0，修改 2，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/social-publish-automation/references/platform-notes.md` `modified`：补充三条已验证的平台执行注记，分别是视频号必须优先复用现有壳页或列表页并导航到 `https://channels.weixin.qq.com/platform/post/create`，小红书查重要以本地 `publish-receipts/<campaign_id>.json` 加 `笔记管理` 作为硬阻断链路，以及 B 站短信校验弹窗过期时应先关闭旧弹窗再等待新弹窗重开后请求验证码。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/references/platform-notes.md` `modified`：与 live skill 镜像同步了同一批平台注记更新，重点是视频号 create 页复用规则、小红书本地回执优先防重顺序，以及 B 站验证码弹窗的稳定恢复步骤。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T09:45:53.840Z` 以来，出现了一批新的技能文档变更，范围收敛到 live `social-publish-automation` 注记文件及其 `skill-center` 镜像。
+- 这批更新把三个新近验证的操作规则正式写入注记：视频号发布前优先复用现有标签并直达 create 页，小红书防重必须先查本地发布回执再查 `笔记管理`，B 站短信校验弹窗过期时先关旧弹窗再等新弹窗重开。
+- 本轮没有 supporting automation 新增量进入基线之后的时间窗口，也没有新的 `.py` 文件出现。
+
+## 2026-04-23 19:23:54 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T10:47:01.413Z`（本地时区为 `2026-04-23 18:47:01 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（`find -newermt '2026-04-23 18:47:01'` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 对候选文件补充 `stat`、`git diff` 与 live/repo 镜像一致性复核
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `automation/python-platform-takeover/social_publisher/__pycache__/cli.cpython-314.pyc` 是本轮新生成缓存文件，不属于技能源码或需登记的支持自动化变更。
+- `/Users/baishangjituan/.codex/skills/social-publish-automation/references/platform-notes.md` 与 repo 镜像 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/references/platform-notes.md` 虽然当前仍是最新差异，但两者 `mtime` 都是 `2026-04-23 18:02:26 CST`，早于本轮基线，属于上一批已登记内容。
+- `automation/python-platform-takeover/configs/platforms.example.yaml`、`social_publisher/cli.py`、`platforms/xiaohongshu.py`、`publish_receipts.py`、`test_publish_receipts.py`、`platform-mappings/xiaohongshu.yaml`、`content-package.2026-04-23-platform-execution-feedback-fields.yaml` 仍处于修改或未跟踪态，但 `mtime` 都早于本轮基线，属于上一批或更早变更，不重复登记。
+- 结果汇总: 新增 0，修改 2，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/data-review/SKILL.md`
+  - 状态: 修改
+  - 摘要: 把晚间复盘自动化的看板同步要求从“导出后刷新 latest.json”升级为完整闭环，明确优先使用 `node scripts/dashboard-sync-review.js --review-date YYYY-MM-DD`，并要求导出、contract 校验、`latest.json` 刷新、远端 dashboard 账号组上传以及固定同步审计文件刷新全部完成才算收尾。
+- `/Users/baishangjituan/.codex/skills/data-review/references/report-template.md`
+  - 状态: 修改
+  - 摘要: 在晚间复盘模板里新增 dashboard 同步必填项，要求显式记录目标账号组与 `content-library/logs/review/dashboard-sync/latest-status.md` 审计日志路径。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T10:47:01.413Z` 以来，发现一批新的技能相关变更，范围收敛到 live `data-review` 的两处补强。
+- 这批更新把晚间复盘自动化的 dashboard 同步闭环定义得更严格，并把目标账号组与固定同步审计日志路径写进了输出模板。
+- 本轮没有新的 `.py` 源文件，也没有发现可确认删除的技能相关文件。
+
+## 2026-04-23 19:49:44 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T10:47:01.413Z`（本地时区为 `2026-04-23 18:47:01 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（`find -newermt '2026-04-23 18:47:01'` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对命中的 live `data-review` skill 文件与 `skill-center` 镜像文件补充 `stat` 与 `diff -u` 复核；live 文件 `mtime` 分别是 `2026-04-23 19:16:52 CST` 与 `2026-04-23 19:16:59 CST`，仓库镜像仍停留在 `2026-04-23 00:11:24 CST`
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `automation/python-platform-takeover/social_publisher/__pycache__/cli.cpython-314.pyc` 虽然 `mtime` 晚于基线，但属于运行时缓存，不计入技能相关源码或 supporting automation 变更。
+- `skill-center/skills/data-review/SKILL.md` 与 `skill-center/skills/data-review/references/report-template.md` 仍处于旧差异态，但其 `mtime` 早于本轮基线；本轮登记的是 live `~/.codex/skills/data-review/**` 的新增修改，不把仓库镜像重复计入。
+- 结果汇总: 新增 0，修改 2，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/data-review/SKILL.md` `modified`：把当前工作区晚间复盘自动化的默认闭环要求从“导出看板 JSON + contract 校验 + 刷新 `latest.json`”升级为“单命令执行导出、contract 校验、刷新 `dashboard-export/latest.json`、上传到远端 dashboard account group，并刷新固定 `dashboard-sync/latest-status.{json,md}` 审计文件”，同时要求最终报告必须写出目标账号组、上传结果和审计日志路径。
+- `/Users/baishangjituan/.codex/skills/data-review/references/report-template.md` `modified`：在晚间复盘自动化的 Docker 看板映射模板里新增 `目标账号组` 与 `同步审计日志` 字段，补齐远端上传和固定审计文件的交付位。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T10:47:01.413Z` 以来，只发现 live `~/.codex/skills/data-review` 出现一批新的技能文档变更，仓库 `skill-center` 镜像尚未同步这两处更新。
+- 这批更新把晚间复盘自动化的完成定义继续收紧到“看板数据已真正上传到远端账号组，且固定审计文件已刷新”，不再只停留在本地 JSON 导出和 `latest.json` 刷新。
+- 本轮没有新的 supporting automation 源码变更，也没有新的 `.py` 文件出现。
+
+## 2026-04-23 20:51:38 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T11:48:31.595Z`（本地时区为 `2026-04-23 19:48:31 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（`find -newermt '2026-04-23 19:48:31'` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对候选文件补充 `git diff` 逐项核对，确认 live `~/.codex/skills` 中晚于基线的文件与 `skill-center` 镜像改动一致
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `automation/python-platform-takeover/social_publisher/platforms/__pycache__/wechat_channels.cpython-314.pyc` 与 `automation/python-platform-takeover/tests/__pycache__/test_wechat_channels.cpython-314.pyc` 为解释器缓存文件，不计入技能相关文件变更。
+- `git status` 中仍可见但 `mtime` 早于本轮基线的 `data-review`、`xiaohongshu-ops` 及部分 `python-platform-takeover` 文件仅复核，不重复登记。
+- 结果汇总: 新增 0，修改 12，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/references/rules-enhancement.yaml`
+  - `modified`
+  - 补充 B 站直连规则，新增 `bilibili.com`、`b23.tv`、`hdslb.com`、`bilivideo.com`、`acgvideo.com` 及对应关键词直连匹配，避免 Clash 代理干扰 B 站链路。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`
+  - `modified`
+  - 与 live skill 同步同一批 B 站直连规则，保持仓库镜像和运行态配置一致。
+- `/Users/baishangjituan/.codex/skills/dachen-founder-flywheel/SKILL.md`
+  - `modified`
+  - 强化创始人飞轮的防重发规则，要求补发前同时核对本地发布台账和平台端列表，并把视频号“同短标题 + 高正文相似度”以及小红书 receipt 阻断写成硬性停止条件。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/SKILL.md`
+  - `modified`
+  - 与 live skill 同步同一批防重发约束，避免仓库镜像落后于运行态规则。
+- `/Users/baishangjituan/.codex/skills/social-publish-automation/SKILL.md`
+  - `modified`
+  - 将 `publish-receipts` 本地台账提升为重试前必查项，明确视频号默认从 `platform/post/create` 直达发布页进入，并把视频号近似重复内容判定与小红书 receipt 成功阈值写入通用发布规范。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/SKILL.md`
+  - `modified`
+  - 与 live skill 同步同一批发布自动化防重与入口规范。
+- `/Users/baishangjituan/.codex/skills/wechat-channels-ops/SKILL.md`
+  - `modified`
+  - 把视频号标准入口固定为 `https://channels.weixin.qq.com/platform/post/create`，要求优先接管现有 create/list tab，并新增“最近行同短标题 + 高相似正文即停止发布”的规则。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/SKILL.md`
+  - `modified`
+  - 与 live skill 同步同一批视频号直达入口、tab 复用与近似重复阻断规则。
+- `/Users/baishangjituan/.codex/skills/wechat-channels-ops/references/platform-notes.md`
+  - `modified`
+  - 更新视频号平台笔记，明确 `platform/post/create` 是默认发布入口、`platform/post/list` 只用于查重和发布后二次校验，并补充 recent rows 近似重复的硬性停止条件。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/references/platform-notes.md`
+  - `modified`
+  - 与 live skill 同步同一批视频号平台操作说明，保持镜像一致。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py`
+  - `modified`
+  - 新增 recent duplicate 检测：对最近管理列表项按 `short_title` 精确匹配和 `description` 相似度阈值拦截，命中后返回 `stopped_recent_content_duplicate`，阻止视频号近似重复发布。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_wechat_channels.py`
+  - `modified`
+  - 补充视频号 recent duplicate 判定测试，覆盖正文相似度计算、同短标题高相似正文命中，以及标题或正文不满足条件时不阻断的分支。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T11:48:31.595Z` 以来，发现一批新的技能相关变更，核心主题是收紧视频号重复发布防线，并把本地 `publish-receipts` 台账纳入重试前必查证据。
+- 这批改动同时覆盖 live `~/.codex/skills`、`skill-center` 镜像以及 `automation/python-platform-takeover` 的视频号实现与测试，说明规则和执行链路在同一批次内一起升级。
+- 另有一组 `clash-verge-standard-env` 配置更新，为 B 站域名和关键词补充直连规则，属于支持发布/运营环境稳定性的技能参考配置改动。
+- 本轮没有发现新的 `.py` 文件，也没有确认到技能相关删除项。
+
+## 2026-04-23 21:52:55 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T12:50:01.902Z`（本地时区为 `2026-04-23 20:50:01 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（基线时间戳文件 + `find -newer` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对当前仍处于修改态或未跟踪态的 skill / automation 候选文件补充 `stat` 复核；命中文件的 `mtime` 最晚为 `2026-04-23 20:18:23 CST`，仍早于本轮基线
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `skill-center/skills/data-review/**`、`skill-center/skills/xiaohongshu-ops/**`、`automation/python-platform-takeover/social_publisher/cli.py`、`social_publisher/platforms/xiaohongshu.py`、`configs/platforms.example.yaml`、`configs/platform-mappings/xiaohongshu.yaml`、`social_publisher/publish_receipts.py`、`tests/test_publish_receipts.py`、`configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml` 虽仍显示为修改或未跟踪，但其 `mtime` 都早于本轮基线，属于旧批次，不重复登记。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T12:50:01.902Z` 以来，四个扫描目录内没有出现新的技能相关新增、修改或可确认删除。
+- 当前工作区里仍能看到若干 skill-center 与 `python-platform-takeover` 的未提交差异，但它们的实际修改时间都停留在 `2026-04-23 20:18:23 CST` 或更早，属于上一批已登记内容。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+
+## 2026-04-23 22:54:34 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T13:51:32.102Z`（本地时区为 `2026-04-23 21:51:32 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（`find -newermt '2026-04-23 21:51:32'` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对本轮命中的 `automation/python-platform-takeover/README.md`、`skill-center/skills/data-review/SKILL.md`、`skill-center/skills/data-review/references/report-template.md` 补充 `stat` 与 `git diff` 复核；三者 `mtime` 分别为 `2026-04-23 22:02:54 CST`、`2026-04-23 22:02:40 CST`、`2026-04-23 22:02:40 CST`
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `automation/python-platform-takeover/.pytest_cache/v/cache/nodeids`、`social_publisher/platforms/__pycache__/wechat_channels.cpython-311.pyc`、`tests/__pycache__/test_wechat_channels.cpython-311-pytest-9.0.3.pyc` 虽然 `mtime` 晚于基线，但属于测试缓存或解释器缓存，不计入技能相关源码变更。
+- 工作区其余 `skill-center` / `automation` 差异虽然仍存在，但本轮 `mtime` 未晚于基线，属于旧批次，不重复登记。
+- 结果汇总: 新增 0，修改 3，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md`
+  - `modified`
+  - 为 Windows PowerShell 补写本地 `publish-receipts` 台账的 `receipt-status`、`clear-receipt`、`record-receipt` 用法，并把 `stopped_receipt_duplicate`、`stopped_recent_content_duplicate`、`stopped_duplicate` 三类防重状态码解释成跨平台一致的运维规则。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/SKILL.md`
+  - `modified`
+  - 把当前工作区的晚间复盘自动化要求进一步写死到技能流程里：夜间复盘默认必须补齐 Docker 看板导出、contract 校验、`dashboard-export/latest.json` 刷新、远端 dashboard account group 上传，以及 `dashboard-sync` 固定审计文件刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/report-template.md`
+  - `modified`
+  - 在固定报告模板的 `## 9. Docker 看板数据映射` 下补充夜间复盘自动化必填字段，要求明确 companion JSON 路径、contract 校验结果、`latest.json` 路径、目标账号组、上传状态和审计日志位置。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T13:51:32.102Z` 以来，发现一批新的技能相关变更，集中在 `data-review` 技能镜像与 `python-platform-takeover` 文档补充。
+- 这批改动的核心是把晚间复盘自动化的 Docker 看板交付闭环继续收紧，并补齐 Windows 下本地发布台账防重的操作说明。
+- 本轮没有发现新的 `.py` 文件，也没有确认到技能相关删除项。
+
+## 2026-04-23 23:55:51 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T14:53:32.361Z`（本地时区为 `2026-04-23 22:53:32 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（`find -newermt '2026-04-23 22:53:32'` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对当前仍处于修改或未跟踪态的 `automation/python-platform-takeover/**`、`skill-center/skills/**` 命中文件补充 `stat` 复核；对应 `mtime` 全部早于本轮基线，其中最晚的是 `automation/python-platform-takeover/README.md`（`2026-04-23 22:02:54 CST`）以及 `skill-center/skills/data-review/{SKILL.md,references/report-template.md}`（`2026-04-23 22:02:40 CST`）
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml`、`configs/platform-mappings/xiaohongshu.yaml`、`social_publisher/publish_receipts.py`、`tests/test_publish_receipts.py` 虽然当前仍是未跟踪文件，但 `mtime` 分别停留在 `2026-04-23 11:36:17 CST` 和 `2026-04-23 14:56:21 CST`，早于本轮基线，属于旧批次候选，不重复登记。
+- `automation/python-platform-takeover/README.md`、`social_publisher/platforms/wechat_channels.py`、`tests/test_wechat_channels.py` 以及 `skill-center/skills/{clash-verge-standard-env,dachen-founder-flywheel,data-review,social-publish-automation,wechat-channels-ops,xiaohongshu-ops}/**` 仍处于修改态，但文件 `mtime` 全部早于本轮基线，属于上一批已登记内容，本轮仅复核。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T14:53:32.361Z` 以来，四个扫描目录内没有出现新的技能相关新增、修改或可确认删除。
+- 当前工作区里仍能看到 `python-platform-takeover` 与多份 `skill-center` 文件的未提交差异，但它们的实际修改时间都早于本轮基线，属于上一批已登记内容。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。
+
+## 2026-04-23 23:55:42 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线: `2026-04-23T14:53:32.361Z`（本地时区为 `2026-04-23 22:53:32 CST`）
+- 判定依据:
+- 文件系统 `mtime` 增量扫描（`find -newermt '2026-04-23 22:53:32'` 递归核对四个目录）
+- 仓库 `git status --short --untracked-files=all -- skills skill-center automation docs/automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=ACDMR HEAD -- skills skill-center automation`
+- 仓库 `git diff --name-status --find-renames --diff-filter=D HEAD -- skills skill-center automation`
+- 对当前仍处于修改态或未跟踪态的 skill / automation 候选文件补充 `stat` 复核；命中文件的 `mtime` 最晚为 `2026-04-23 22:02:54 CST`，仍早于本轮基线
+- 忽略项:
+- `docs/automation/skill-change-monitor.md` 与 `docs/automation/github-sync-status.md` 的记录性改动不计入技能变更批次。
+- `automation/python-platform-takeover/README.md`、`configs/platforms.example.yaml`、`social_publisher/cli.py`、`social_publisher/platforms/wechat_channels.py`、`social_publisher/platforms/xiaohongshu.py`、`tests/test_wechat_channels.py`、`configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml`、`configs/platform-mappings/xiaohongshu.yaml`、`social_publisher/publish_receipts.py`、`tests/test_publish_receipts.py` 以及 `skill-center/skills/clash-verge-standard-env/**`、`dachen-founder-flywheel/**`、`data-review/**`、`social-publish-automation/**`、`wechat-channels-ops/**`、`xiaohongshu-ops/**` 虽仍显示为修改或未跟踪，但其 `mtime` 都早于本轮基线，属于旧批次，不重复登记。
+- 结果汇总: 新增 0，修改 0，删除 0。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。
+
+### 变更摘要
+- 自 `2026-04-23T14:53:32.361Z` 以来，四个扫描目录内没有出现新的技能相关新增、修改或可确认删除。
+- 当前工作区里仍能看到若干 `skill-center` 与 `python-platform-takeover` 的未提交差异，但它们的实际修改时间都停留在 `2026-04-23 22:02:54 CST` 或更早，属于上一批已登记内容。
+- 因为没有发现新的变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮未追加新的待同步提醒。

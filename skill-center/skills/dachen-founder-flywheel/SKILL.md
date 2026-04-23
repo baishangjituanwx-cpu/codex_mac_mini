@@ -121,11 +121,15 @@ Reason:
 Duplicate control:
 
 - Do not treat a shaky browser click as permission to re-post the same platform item.
+- Before any retry on the same platform, verify the local publish receipt ledger as well as the creator-side pages.
 - Before any retry on the same platform, verify the management list and the public-facing profile or works feed.
 - If the same-day item already exists, do not publish a second copy unless the old one has a real structural defect and has already been manually removed or explicitly abandoned.
+- For 视频号, do not treat “换了几个词” as a new package if the latest rows still show the same `短标题` and a highly similar正文骨架.
+- For 视频号, same `短标题` plus high正文相似度 means `停止发布`, even across different calendar days.
 - `表现差` is not a reason to重发.
 - `流程没核清楚` is not a reason to重发.
 - `标题 / 正文 / 封面 / 视频素材本身错误` is a valid reason to replace, but only after the old item is handled.
+- For 小红书, manager lag is not a reason to重发 once `success: true`, `share_link`, or a blocking local receipt already exists.
 
 ### Step 4. Handle comments and private messages
 
@@ -203,6 +207,7 @@ Use the review to decide:
 
 - Native note packaging matters more than “brand awareness” aesthetics.
 - Strong saves and high-intent comments matter more than empty views.
+- Duplicate prevention must use `本地发布台账 + 笔记管理` together, not either one alone.
 
 ### 视频号
 

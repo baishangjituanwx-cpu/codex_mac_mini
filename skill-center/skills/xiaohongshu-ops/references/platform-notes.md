@@ -51,6 +51,13 @@ Key points:
 - submit response `success: true`
 - captured `share_link`
 - `笔记管理` shows the new note in `审核中`
+- the verified manager path for duplicate checks is `https://creator.xiaohongshu.com/new/note-manager?source=official`
+- the 2026-04-23 duplicate-publish failure happened because manager visibility lagged while there was no hard local receipt ledger to stop retries
+- the hard-stop rule now is:
+- check local receipt `automation/python-platform-takeover/state/publish-receipts/<campaign_id>.json`
+- then check `笔记管理`
+- if either side shows a blocking state such as `submitted / published / under_review / success / verified`, do not republish
+- only clear the receipt after the old note is deleted, made private, or explicitly abandoned
 - in the verified custom-cover path on 2026-04-03, `修改封面` lived behind the cover hover operator rather than a stable visible text button
 - the real modal success signal was `上传图片`; waiting on the page section title `设置封面` was a false positive
 - after custom cover upload and confirm, `笔记管理` showed the new short video `AI智能体把事做完 / 2026年04月03日 17:14 / 审核中`

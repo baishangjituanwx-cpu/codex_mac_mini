@@ -290,6 +290,33 @@ Windows PowerShell:
 - 共享清空重输逻辑会在 Windows 自动使用 `Control+A`，在 macOS 自动使用 `Meta+A`
 - `微信视频号` 的成功标准在两端一致: 发布前要求 `短标题` / `视频描述` 精确回读，发布后要求管理页最新一条同时通过 `shortTitle` / `description` / 封面缩略图二次复核
 
+针对 `2026-04-23` 新增的本地发布台账 / 近似重复拦截规则，Windows 直接复用同一套 CLI 包装器:
+
+- 先查本地台账:
+
+```powershell
+.\scripts\social-publisher.ps1 receipt-status configs/content-package.local.yaml --platform wechat_channels
+.\scripts\social-publisher.ps1 receipt-status configs/content-package.local.yaml --platform xiaohongshu
+```
+
+- 如果手工确认旧内容已经删除、转私密或明确废弃，再清掉对应平台台账:
+
+```powershell
+.\scripts\social-publisher.ps1 clear-receipt configs/content-package.local.yaml --platform wechat_channels
+.\scripts\social-publisher.ps1 clear-receipt configs/content-package.local.yaml --platform xiaohongshu
+```
+
+- 如果是手工路径已经成功且拿到了小红书 `share_link`，立刻补记本地台账，避免因为 `笔记管理` 延迟而重复发布:
+
+```powershell
+.\scripts\social-publisher.ps1 record-receipt configs/content-package.local.yaml --platform xiaohongshu --status success --share-link "https://www.xiaohongshu.com/..."
+```
+
+- 这批状态码在 Windows / macOS 含义一致:
+  - `stopped_receipt_duplicate`: 本地台账已经拦下同一 campaign 的重复补发
+  - `stopped_recent_content_duplicate`: 视频号最近管理行已出现同 `短标题` 且正文高度相似的内容，必须先改标题或正文骨架
+  - `stopped_duplicate`: 管理页已经存在同标题或同描述片段的条目，先处理旧条再继续
+
 注意:
 
 当前状态分两层:
