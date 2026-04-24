@@ -1,0 +1,82 @@
+# Dashboard Sync Runbook
+
+这套脚本把晚间复盘的 Docker 看板同步收口成同一条链路，适合其他 Codex 设备直接接入。
+
+## 入口
+
+- 导出 companion JSON: `node scripts/dashboard-export-review.js --review-date YYYY-MM-DD`
+- contract 校验: `node scripts/validate-dashboard-export.js --file /absolute/path/to/export.json`
+- 一键闭环: `node scripts/dashboard-sync-review.js --review-date YYYY-MM-DD`
+
+优先使用一键闭环命令。它会依次完成:
+
+1. 从复盘正文 `## 3. 分平台详细状态` 生成真实 platform cards
+2. 校验 JSON contract
+3. 刷新 `dashboard-export/latest.json`
+4. 上传到远端 dashboard account group
+5. 写入固定同步审计文件
+
+## 环境准备
+
+仓库默认会自动寻找两种内容库布局:
+
+- `workflow/content-library`
+- `content-library`
+
+如果你的设备不是这两种布局，在仓库根目录创建 `.env.dashboard` 或 `.env.dashboard.local`，并设置:
+
+```dotenv
+CONTENT_LIBRARY_ROOT=workflow/content-library
+```
+
+同一个文件里还需要配置 dashboard 上传目标:
+
+```dotenv
+DASHBOARD_API_BASE=http://your-dashboard-host:8080
+DASHBOARD_ACCOUNT_NAME=your-account-group
+DASHBOARD_WORKSPACE_NAME=your-workspace-name
+DASHBOARD_ADMIN_USERNAME=your-admin-username
+DASHBOARD_ADMIN_PASSWORD=your-admin-password
+```
+
+参考模板在 [`.env.dashboard.example`](</Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/.env.dashboard.example>)。
+
+## 必要输入
+
+- 一份按固定模板写好的复盘文件
+- 复盘文件中必须包含 `## 3. 分平台详细状态`
+- 如果要上传 dashboard，复盘中必须补 `## 9. Docker 看板数据映射`
+- 运行设备必须能访问远端 dashboard API
+
+## 产物
+
+运行 `dashboard-sync-review.js` 后，会写入:
+
+- companion export:
+  `workflow/content-library/logs/review/dashboard-export/<batch>-dashboard-export.json`
+- latest 指针:
+  `workflow/content-library/logs/review/dashboard-export/latest.json`
+- latest meta:
+  `workflow/content-library/logs/review/dashboard-export/latest.meta.json`
+- 同步审计:
+  `workflow/content-library/logs/review/dashboard-sync/latest-status.json`
+  `workflow/content-library/logs/review/dashboard-sync/latest-status.md`
+  `workflow/content-library/logs/review/dashboard-sync/history.jsonl`
+
+如果当前工作区使用顶层 `content-library/` 布局，路径会自动切换到对应目录。
+
+## 失败边界
+
+- 如果导出结果仍是 `local-package-review-export` 这类占位模式，脚本会直接失败
+- 如果 contract 不通过，不会继续上传
+- 如果远端 dashboard 账号组上传失败，会在同步审计文件里记录失败阶段和错误文本
+- `latest-status.json` 才是最终成功与否的准信号，不要只看终端输出
+
+## 多设备接入
+
+其他 Codex 设备接入时，最少要做到这 4 点:
+
+1. 仓库根目录存在这套 `scripts/`
+2. 本机内容库布局能被脚本解析到
+3. `.env.dashboard` 填入该设备自己的 dashboard API 和管理员凭证
+4. 复盘文件严格遵守 `data-review` 模板，不省略 8 平台卡片

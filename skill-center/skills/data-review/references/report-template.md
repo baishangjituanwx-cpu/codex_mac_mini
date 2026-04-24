@@ -89,6 +89,46 @@
 - 需要写回 skill / memory 的经验：
 - 明天必须复查的点：
 - 账号趋势要继续观察的平台：
+
+## 9. Docker 看板数据映射（晚间复盘自动化 / 需更新 8 平台 Docker 看板时必填）
+- 推荐直接给一个 `json` 代码块；如果流程需要文件交接，也可以把同一对象写成 companion JSON 文件
+- 如果用了 companion JSON 文件，在这里明确写一行：`- companion JSON 文件：/absolute/path/to/export.json`
+- 如果这是当前工作区的晚间复盘自动化，再额外写明：
+  - `- contract 校验结果：`
+  - `- latest.json 路径：/absolute/path/to/latest.json`
+  - `- 目标账号组：`
+  - `- 数据面板同步状态：已上传 / 上传失败待补`
+  - `- 同步审计日志：/absolute/path/to/content-library/logs/review/dashboard-sync/latest-status.md`
+- 首次在新设备接入时，先配置仓库根目录 `.env.dashboard` 或 `.env.dashboard.local`
+- 这一步优先使用仓库脚本：`node scripts/dashboard-sync-review.js --review-date YYYY-MM-DD`
+- `board.title`：
+- `board.dateLabel`：
+- `board.subtitle`：
+- `board.northStar`：
+- `board.summary`：必须正好 4 项；每项都写 `label / value / note / tone`
+- `board.keep`：必须正好 3 项
+- `board.cut`：必须正好 3 项
+- `board.next`：必须正好 3 项
+- `platforms`：必须正好 8 项，并覆盖 `快手 / 视频号 / 微博 / 头条号 / 百家号 / 抖音 / B站 / 知乎`
+- 每个平台卡片都必须写出：
+  - `key`
+  - `name`
+  - `status`
+  - `statusLabel`
+  - `latestTitle`
+  - `publishTime`
+  - `contentType`
+  - `primaryLabel`
+  - `primaryValue`
+  - `compareLabel`
+  - `baselineValue`
+  - `baselineNote`
+  - `windows`：固定 `今日 / 近7日账号 / 近30日账号`
+  - `metrics`：正好 4 项
+  - `diagnosis`
+  - `action`
+- `primaryValue` 必须保持数值型，缺失时写 `0`，不要写 `—`
+- `footerLinks`：只有在真实文件存在时才补
 ```
 
 ## 模板规则
@@ -100,3 +140,4 @@
 - 复盘中必须写绝对日期，不用“今天”“昨天”代替。
 - 当用户要求趋势复盘、最近几条对比或账号维度时，`账号盘面` 和 `近几条对照` 两项是强制项。
 - 飞书同步稿必须基于这份结构压缩，且只允许中文输出。
+- 如果本次复盘要更新 Docker 看板，或任务本身就是当前工作区的晚间复盘自动化，`## 9. Docker 看板数据映射` 是强制项，并且要遵守 [docker-dashboard-contract.md](./docker-dashboard-contract.md)。

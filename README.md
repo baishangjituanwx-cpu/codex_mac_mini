@@ -61,6 +61,12 @@ Set-Location automation/python-platform-takeover
   - GitHub 上传前检查表
 - `scripts/init_campaign.js`
   - 一键初始化新 campaign 的内容包和日志骨架
+- `scripts/dashboard-export-review.js`
+  - 从复盘正文生成 8 平台 dashboard companion JSON
+- `scripts/dashboard-sync-review.js`
+  - 导出、校验、刷新 `latest.json`、上传远端 dashboard、写同步审计的一键入口
+- `scripts/sync_remote_mempalace.sh`
+  - 把当前仓库增量同步到远端 MemPalace 中心主机
 
 ## 当前实现方式
 
@@ -207,6 +213,17 @@ node scripts/init_campaign.js --id 2026-04-11-ai-workflow --theme "这里写母�
 
 来做 batch review。
 
+如果这轮复盘还要同步 8 平台 Docker 看板，用仓库根目录的一键命令:
+
+```bash
+npm run dashboard:sync -- --review-date YYYY-MM-DD
+```
+
+首次接入先配置:
+
+- [`.env.dashboard.example`](</Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/.env.dashboard.example>)
+- [`docs/dashboard-sync-runbook.md`](</Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/dashboard-sync-runbook.md>)
+
 ### 6. Python 接管脚本从这里开始
 
 如果你准备把“接管现有标签页”逐步沉淀成独立 Python 工程，直接看:
@@ -240,6 +257,141 @@ node scripts/init_campaign.js --id 2026-04-11-ai-workflow --theme "这里写母�
 2. 头条号
 3. 微信视频号
 
+### 7. Mac 直接使用说明
+
+如果你现在就在 `Mac` 上跑这套 Python 接管脚本，可以直接按下面走。
+
+先说边界:
+
+- 这是“接管现有浏览器会话”的方案
+- 不是从零启动一个全新匿名浏览器帮你登录所有平台
+- 更不是 8 平台全部稳定量产的一键发布器
+
+#### 7.1 你需要先准备好的东西
+
+- `macOS` 本机
+- `Python 3.10+`
+- `Google Chrome` 或其他 Chromium 内核浏览器
+- 已经登录好的平台后台
+- 一份内容包 YAML
+- 本地视频和封面素材绝对路径
+
+#### 7.2 在 Mac 上启动一个可接管的浏览器
+
+推荐单独开一个 Chrome profile，不要污染你日常浏览器。
+
+示例命令:
+
+```bash
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+  --remote-debugging-port=9222 \
+  --user-data-dir="$HOME/.codex-chrome-takeover"
+```
+
+### 8. 数据看板同步
+
+这套仓库现在已经把“复盘 -> 导出 -> 校验 -> 上传面板”收成了固定脚本链。
+
+常用命令:
+
+```bash
+npm run dashboard:export -- --review-date YYYY-MM-DD
+npm run dashboard:sync -- --review-date YYYY-MM-DD
+```
+
+注意:
+
+- dashboard 上传不再内置任何默认 API 地址、账号组或管理员账号
+- 先在仓库根目录创建 `.env.dashboard` 或 `.env.dashboard.local`
+- 需要填写自己的 `DASHBOARD_API_BASE`、`DASHBOARD_ACCOUNT_NAME`、`DASHBOARD_ADMIN_USERNAME`、`DASHBOARD_ADMIN_PASSWORD`
+- 仓库会自动兼容 `workflow/content-library` 和 `content-library` 两种内容库布局
+
+启动后，用这个浏览器窗口手动登录你要发的平台。后面的 Python 脚本会通过 `CDP` 接管这组标签页。
+
+#### 7.3 安装 Python 接管环境
+
+```bash
+cd automation/python-platform-takeover
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e '.[dev]'
+playwright install chromium
+cp .env.example .env
+```
+
+`.env` 里最关键的是:
+
+- `BROWSER_CDP_URL=http://127.0.0.1:9222`
+- `DEFAULT_TAKEOVER_MODE=existing-tab`
+
+#### 7.4 准备内容包
+
+先复制一份示例:
+
+```bash
+cp configs/content-package.example.yaml configs/content-package.local.yaml
+```
+
+然后至少改这几项:
+
+- `campaign_id`
+- `assets.main_video`
+- `assets.cover_3_4`
+- `assets.cover_4_3`
+- 你要发布的平台标题和正文
+
+这里的素材路径建议全部写绝对路径，少踩一次路径坑，心情会更好一点。
+
+#### 7.5 先检查浏览器标签页是否接得上
+
+```bash
+source .venv/bin/activate
+social-publisher inspect-tabs --url-contains channels.weixin.qq.com
+```
+
+如果能看到当前打开的后台标签页，说明 Mac 这边的 `CDP` 接管已经通了。
+
+#### 7.6 先跑安全模式
+
+先不要急着真发，先看规则:
+
+```bash
+social-publisher readiness wechat_channels
+social-publisher publish wechat_channels configs/content-package.local.yaml
+```
+
+这一步默认只会输出 readiness 和接管条件，不会真实点击发布。
+
+#### 7.7 再跑真实接管
+
+确认浏览器里就是你要接管的那组登录态和标签页后，再执行:
+
+```bash
+social-publisher publish wechat_channels configs/content-package.local.yaml --execute
+```
+
+目前已经接上真实接管链路的平台有:
+
+- `kuaishou`
+- `toutiao`
+- `weibo`
+- `baijiahao`
+- `zhihu`
+- `douyin`
+- `wechat_channels`
+
+#### 7.8 Mac 直接使用时的几个硬规则
+
+- 发布前先看管理页或列表页，避免重复发
+- 旧标签页里如果残留的是别的草稿，脚本会停止接管
+- 脚本点击了发布，不等于平台一定成功入库，还要看返回的验证结果
+- 遇到验证码、风控、人工确认封面这类检查点，要人工接手
+
+如果你想把“Mac 上直接使用”这条线继续稳定下来，优先做的是:
+
+1. 用你自己的已登录浏览器标签页跑一轮 `inspect-tabs`
+2. 先试 `wechat_channels / toutiao / kuaishou`
+3. 跑完后把真实 selector 偏差和人工检查点补回代码
 ## 最近成功基线
 
 当前这份仓库主要依据两条本地成功证据整理:
