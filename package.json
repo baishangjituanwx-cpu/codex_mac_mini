@@ -5,6 +5,7 @@
   "type": "commonjs",
   "scripts": {
     "init:campaign": "node scripts/init_campaign.js",
+    "dashboard:doctor": "node scripts/dashboard-doctor.js",
     "dashboard:export": "node scripts/dashboard-export-review.js",
     "dashboard:validate": "node scripts/validate-dashboard-export.js",
     "dashboard:upload": "node scripts/dashboard-upload.js",

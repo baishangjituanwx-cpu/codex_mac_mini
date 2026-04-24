@@ -174,7 +174,9 @@ When browser checks are required, route through:
 9. Sync the dashboard export when required:
 - if the task is this workspace's nightly review automation, or the user explicitly asks for dashboard sync, always produce the companion JSON export under `content-library/logs/review/dashboard-export/`
 - validate the export against [docker-dashboard-contract.md](./references/docker-dashboard-contract.md); if the repo provides a validator script, prefer that instead of ad-hoc checking
+- before the first real sync on a device, run `node scripts/dashboard-doctor.js --review-date YYYY-MM-DD`
 - for this workspace, prefer a single command that closes the whole chain: `node scripts/dashboard-sync-review.js --review-date YYYY-MM-DD`
+- if the operator wants a wrapper entry, use `bash scripts/dashboard-sync.sh --review-date YYYY-MM-DD` on macOS / Linux or `.\scripts\dashboard-sync.ps1 --review-date YYYY-MM-DD` on Windows
 - before the first upload on a new device, configure `.env.dashboard` or `.env.dashboard.local` in the repo root; required keys are `DASHBOARD_API_BASE`, `DASHBOARD_ACCOUNT_NAME`, `DASHBOARD_ADMIN_USERNAME`, and `DASHBOARD_ADMIN_PASSWORD`
 - the repo scripts now auto-detect `workflow/content-library` and `content-library`; if the device uses another layout, set `CONTENT_LIBRARY_ROOT`
 - the sync step is not complete unless it does all of the following:
