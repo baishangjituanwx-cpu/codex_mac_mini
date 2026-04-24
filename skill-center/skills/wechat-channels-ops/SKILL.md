@@ -28,6 +28,9 @@ If the task requires real browser execution, also use `$social-publish-automatio
 - Before clicking `发表`, read both fields back from the editor and stop if either one did not persist.
 - For 视频号 specifically, editor readback is necessary but not sufficient. The stronger pre-publish check is that the page's framework-managed publish payload also contains the exact target `短标题` and `视频描述`.
 - For custom cover upload, do not stop at opening the modal or seeing the uploaded preview. Always upload a prepared local cover inside `编辑封面`, confirm the modal through the inner primary action button, and then verify the compose page has accepted that uploaded cover.
+- Cover acceptance requires visual readability, not just a non-empty thumbnail URL. Before clicking `发表`, check the cover at a small management-list-like size and confirm the main cover title is readable.
+- If the published cover is wrong or unreadable, use the existing row's `修改描述和封面` repair flow. Do not republish the same video only to fix a cover.
+- After `修改描述和封面`, click the outer `完成`, then the final `确认修改`; if the row shows `修改审核中，预计30分钟内审核完成`, record the state as `cover_repair_under_review` and verify again after review before marking the cover fully fixed.
 - Before any retry or republish, check `视频管理` first. If the same video is already present in the list, stop instead of publishing a duplicate.
 - Before any fresh publish, check the newest management rows for recent near-duplicates.
 - If a recent row already uses the same `短标题` and the platform-side `description` is still highly similar to the current package, stop before publish. That is a content-repeat incident, not a new post.
@@ -41,6 +44,7 @@ If the task requires real browser execution, also use `$social-publish-automatio
 - exact `shortTitle`
 - exact `description`
 - expected cover thumbnail on the newest row
+- readable cover title in the newest-row thumbnail, or an explicit `cover_repair_under_review` state if a submitted cover repair is still pending platform review
 
 ### 2. Data Analysis
 

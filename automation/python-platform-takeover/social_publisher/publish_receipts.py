@@ -13,6 +13,8 @@ BLOCKING_RECEIPT_STATUSES = frozenset(
         "under_review",
         "success",
         "verified",
+        "cover_repair_under_review",
+        "verified_cover_repair_under_review",
     }
 )
 
@@ -67,7 +69,10 @@ def get_receipt(
 def should_block_republish(receipt: PublishReceipt | None) -> bool:
     if receipt is None:
         return False
-    return receipt.status.strip().lower() in BLOCKING_RECEIPT_STATUSES
+    status = receipt.status.strip().lower()
+    if status in BLOCKING_RECEIPT_STATUSES:
+        return True
+    return status.endswith("_cover_repair_under_review")
 
 
 def upsert_receipt(

@@ -167,7 +167,7 @@ def publish(
     if should_block_republish(existing_receipt) and not force:
         typer.echo("status: stopped_receipt_duplicate")
         typer.echo("ok: False")
-        typer.echo("message: 本地发布台账已记录该 campaign/platform 已成功提交，停止重复发布。")
+        typer.echo("message: 本地发布台账已记录该 campaign/platform 进入阻断态，先修复或复核现有条目，不要重复发布。")
         typer.echo(f"receipt_path: {receipt_path_for(package, content_package.campaign_id)}")
         typer.echo(f"recorded_at: {existing_receipt.recorded_at}")
         typer.echo(f"receipt_status: {existing_receipt.status}")

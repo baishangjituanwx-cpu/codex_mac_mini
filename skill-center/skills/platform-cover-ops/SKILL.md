@@ -84,6 +84,14 @@ If the task also requires real browser actions, use this skill together with `$s
 - is the text still readable?
 - does the title and cover tell the same story?
 - if the cover becomes unreadable at roughly 25 percent scale, redo it
+- For video-platform covers in this workspace, `cover exists` is not a pass condition. The cover must pass a 25 percent scale readability check before submit:
+- render or export a small preview, for example about `300x400` for a `3:4` cover
+- main cover title must be readable without opening the original image
+- key text must not be covered by人物、原视频字幕、进度条、平台角标, or crop edges
+- if readability is uncertain, stop and rebuild the cover rather than publishing
+- After publishing or cover repair, verify the management-list thumbnail, not only the upload/editor preview.
+- If an already-published item has a wrong or unreadable cover, repair that existing item first. Do not republish the same content unless the old item has been deleted, hidden, or explicitly marked obsolete by the user.
+- The receipt note must distinguish `cover_thumbnail_present` from `cover_readability_passed`; only the latter can close a cover-sensitive platform task.
 
 ## Platform Map
 
@@ -134,6 +142,8 @@ If the task also requires real browser actions, use this skill together with `$s
 - uploading a custom cover
 - checking homepage and share-card preview
 - For 小云雀 founder videos in this workspace, default to the uploaded custom cover path rather than frame-only cover selection.
+- Before final submit or repair submit, the uploaded cover must be checked as a small list-card thumbnail; if the cover title cannot be read there, replace the cover before clicking `发表` or `确认修改`.
+- After `修改描述和封面`, a `修改审核中` row means the repair was submitted, not fully verified. Keep the item in pending repair state until the management-list thumbnail updates and passes readability.
 
 ### 快手
 

@@ -1,0 +1,27 @@
+{
+  "campaign_id": "2026-04-24-platform-execution-writeback-fields",
+  "receipts": {
+    "wechat_channels": {
+      "campaign_id": "2026-04-24-platform-execution-writeback-fields",
+      "current_url": "https://channels.weixin.qq.com/platform/post/list",
+      "external_id": "export/UzFfBgAAxJOjCGM4bwKKjczT4DCaT26KXY6vLjkH1S3BoQSjKQ",
+      "management_url": "https://channels.weixin.qq.com/platform/post/list",
+      "notes": [
+        "newest_row_short_title_exact: 复盘别再错位",
+        "newest_row_description_exact: true",
+        "newest_row_cover_thumbnail_present: true",
+        "cover_readability_passed: false",
+        "cover_repair_asset: /Users/baishangjituan/Documents/seedance/outputs/2026-04-24-platform-execution-writeback-fields_cover_package/cover-vertical-3x4-fixed.png",
+        "cover_repair_submitted_at: 2026-04-24T18:40:49+08:00",
+        "cover_repair_status: 修改审核中，预计30分钟内审核完成",
+        "cover_repair_pending_final_thumbnail_review: true",
+        "feishu_message_id: om_x100b518774529098b3c81a2ff4e5bad"
+      ],
+      "platform_id": "wechat_channels",
+      "recorded_at": "2026-04-24T17:11:06+08:00",
+      "share_link": null,
+      "status": "verified_cover_repair_under_review",
+      "title": "复盘别再错位"
+    }
+  }
+}

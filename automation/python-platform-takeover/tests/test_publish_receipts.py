@@ -58,6 +58,18 @@ def test_should_block_republish_only_for_success_like_statuses() -> None:
     assert should_block_republish(None) is False
 
 
+def test_should_block_republish_for_cover_repair_review_status() -> None:
+    repair_pending = PublishReceipt(
+        campaign_id="2026-04-24-demo",
+        platform_id="wechat_channels",
+        title="title",
+        status="verified_cover_repair_under_review",
+        recorded_at="2026-04-24T10:00:00+00:00",
+    )
+
+    assert should_block_republish(repair_pending) is True
+
+
 def test_clear_receipt_removes_file_when_campaign_becomes_empty(tmp_path: Path) -> None:
     package = tmp_path / "automation" / "configs" / "content-package.test.yaml"
     package.parent.mkdir(parents=True, exist_ok=True)

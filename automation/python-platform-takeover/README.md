@@ -312,10 +312,26 @@ Windows PowerShell:
 .\scripts\social-publisher.ps1 record-receipt configs/content-package.local.yaml --platform xiaohongshu --status success --share-link "https://www.xiaohongshu.com/..."
 ```
 
+- 对 `2026-04-24` 新增的封面修复待复核场景，也直接用同一个台账命令查看，不要另开第二套 Windows 流程:
+
+```powershell
+.\scripts\social-publisher.ps1 receipt-status configs/content-package.local.yaml --platform wechat_channels
+```
+
+- 如果输出里出现下面这些 note，表示当前条目已经进入“先修原条、等复核，不要重发”的状态:
+  - `newest_row_cover_thumbnail_present: true`
+  - `cover_readability_passed: false`
+  - `cover_repair_pending_final_thumbnail_review: true`
+  - `cover_repair_status: 修改审核中...`
+  - `receipt_status: verified_cover_repair_under_review`
+- Windows 下执行视频号发布前，先把 `assets.cover_3_4` 缩到大约 `25%` 的列表卡片尺寸自行复核。通过标准不是“封面文件存在”，而是缩略图主标题仍可读。
+- 如果管理列表里封面“有图但不可读”，不要重发同一个视频；直接对现有条目走 `修改描述和封面`，并保持 `verified_cover_repair_under_review` / 待复核状态，直到缩略图刷新后再次通过。
+- Windows 下记录这类修复封面素材路径时，继续优先写 PowerShell 也能直接识别的绝对路径，例如 `C:/content-pipeline/covers/fixed-cover.png` 或 `C:\\content-pipeline\\covers\\fixed-cover.png`。
 - 这批状态码在 Windows / macOS 含义一致:
   - `stopped_receipt_duplicate`: 本地台账已经拦下同一 campaign 的重复补发
   - `stopped_recent_content_duplicate`: 视频号最近管理行已出现同 `短标题` 且正文高度相似的内容，必须先改标题或正文骨架
   - `stopped_duplicate`: 管理页已经存在同标题或同描述片段的条目，先处理旧条再继续
+  - `verified_cover_repair_under_review`: 原视频已提交封面修复，但管理列表缩略图还没完成最终复核；此时继续修原条，不要重发新条
 
 注意:
 
