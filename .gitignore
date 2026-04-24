@@ -4,6 +4,8 @@ node_modules/
 __pycache__/
 *.egg-info/
 .bridge.env
+.env.dashboard
+.env.dashboard.local
 bridge.log
 bridge.stdout.log
 bridge.stderr.log
@@ -17,3 +19,9 @@ workflow/content-library/assets/generated/*
 !workflow/content-library/assets/generated/.gitkeep
 workflow/content-library/assets/shared/*
 !workflow/content-library/assets/shared/.gitkeep
+workflow/content-library/logs/review/dashboard-export/latest.json
+workflow/content-library/logs/review/dashboard-export/latest.meta.json
+workflow/content-library/logs/review/dashboard-sync/*
+content-library/logs/review/dashboard-export/latest.json
+content-library/logs/review/dashboard-export/latest.meta.json
+content-library/logs/review/dashboard-sync/*

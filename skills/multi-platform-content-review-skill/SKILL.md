@@ -193,6 +193,9 @@ When browser checks are required, route through:
 - `下一批图文内容高占比倾向`
 - `下一批小云雀视频高占比倾向`
 - `未完成核验项`
+- if the repo includes `scripts/dashboard-sync-review.js`, prefer that single command over manual export + upload steps
+- before the first dashboard upload on a new device, configure `.env.dashboard` or `.env.dashboard.local` in the repo root; required keys are `DASHBOARD_API_BASE`, `DASHBOARD_ACCOUNT_NAME`, `DASHBOARD_ADMIN_USERNAME`, and `DASHBOARD_ADMIN_PASSWORD`
+- if the device uses neither `workflow/content-library` nor `content-library`, set `CONTENT_LIBRARY_ROOT`
 - If the user asks to update the 8-platform Docker dashboard, append the Docker dashboard mapping block defined in [docker-dashboard-contract.md](./references/docker-dashboard-contract.md), or write the same object to a companion JSON export file when the workflow needs a file-based handoff.
 - When exporting to the Docker dashboard, never omit a platform card; keep the card and mark gaps as `未完成内容级核验`, `暂未可见`, or numeric `0` according to the contract.
 - When exporting to the Docker dashboard, `primaryValue` must stay numeric so the ranking and ring chart do not break.
@@ -208,3 +211,5 @@ For recent-post and account-slice comparison, read [account-slice-analysis.md](.
 For diagnosis and `Keep / Cut / Retest`, read [diagnosis-and-decisions.md](./references/diagnosis-and-decisions.md).
 When the review must feed the Docker dashboard, also read [docker-dashboard-contract.md](./references/docker-dashboard-contract.md).
 When the review must write a companion JSON file, also use [dashboard-export-template.json](./references/dashboard-export-template.json) as the starting structure.
+
+For first-time device setup of the dashboard chain, also read [docs/dashboard-sync-runbook.md](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/dashboard-sync-runbook.md).

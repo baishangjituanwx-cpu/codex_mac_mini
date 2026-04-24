@@ -99,6 +99,8 @@
   - `- 目标账号组：`
   - `- 数据面板同步状态：已上传 / 上传失败待补`
   - `- 同步审计日志：/absolute/path/to/content-library/logs/review/dashboard-sync/latest-status.md`
+- 首次在新设备接入时，先配置仓库根目录 `.env.dashboard` 或 `.env.dashboard.local`
+- 这一步优先使用仓库脚本：`node scripts/dashboard-sync-review.js --review-date YYYY-MM-DD`
 - `board.title`：
 - `board.dateLabel`：
 - `board.subtitle`：

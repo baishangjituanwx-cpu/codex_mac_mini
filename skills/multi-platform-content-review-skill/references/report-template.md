@@ -93,6 +93,8 @@
 ## 9. Docker 看板数据映射（如需更新 8 平台 Docker 看板则必填）
 - 推荐直接给一个 `json` 代码块；如果流程需要文件交接，也可以把同一对象写成 companion JSON 文件
 - 如果用了 companion JSON 文件，在这里明确写一行：`- companion JSON 文件：/absolute/path/to/export.json`
+- 首次在新设备接入时，先配置仓库根目录 `.env.dashboard` 或 `.env.dashboard.local`
+- 这一步优先使用仓库脚本：`node scripts/dashboard-sync-review.js --review-date YYYY-MM-DD`
 - `board.title`：
 - `board.dateLabel`：
 - `board.subtitle`：

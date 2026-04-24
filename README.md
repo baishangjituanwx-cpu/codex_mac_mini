@@ -62,6 +62,10 @@ Set-Location automation/python-platform-takeover
   - 远端 MemPalace 增量同步说明
 - `scripts/init_campaign.js`
   - 一键初始化新 campaign 的内容包和日志骨架
+- `scripts/dashboard-export-review.js`
+  - 从复盘正文生成 8 平台 dashboard companion JSON
+- `scripts/dashboard-sync-review.js`
+  - 导出、校验、刷新 `latest.json`、上传远端 dashboard、写同步审计的一键入口
 - `scripts/sync_remote_mempalace.sh`
   - 把当前仓库增量同步到远端 MemPalace 中心主机
 
@@ -194,6 +198,17 @@ node scripts/init_campaign.js --id 2026-04-11-ai-workflow --theme "这里写母�
 
 来做 batch review。
 
+如果这轮复盘还要同步 8 平台 Docker 看板，用仓库根目录的一键命令:
+
+```bash
+npm run dashboard:sync -- --review-date YYYY-MM-DD
+```
+
+首次接入先配置:
+
+- [`.env.dashboard.example`](</Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/.env.dashboard.example>)
+- [`docs/dashboard-sync-runbook.md`](</Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/dashboard-sync-runbook.md>)
+
 ### 6. Python 接管脚本从这里开始
 
 如果你准备把“接管现有标签页”逐步沉淀成独立 Python 工程，直接看:
@@ -258,6 +273,24 @@ node scripts/init_campaign.js --id 2026-04-11-ai-workflow --theme "这里写母�
   --remote-debugging-port=9222 \
   --user-data-dir="$HOME/.codex-chrome-takeover"
 ```
+
+### 8. 数据看板同步
+
+这套仓库现在已经把“复盘 -> 导出 -> 校验 -> 上传面板”收成了固定脚本链。
+
+常用命令:
+
+```bash
+npm run dashboard:export -- --review-date YYYY-MM-DD
+npm run dashboard:sync -- --review-date YYYY-MM-DD
+```
+
+注意:
+
+- dashboard 上传不再内置任何默认 API 地址、账号组或管理员账号
+- 先在仓库根目录创建 `.env.dashboard` 或 `.env.dashboard.local`
+- 需要填写自己的 `DASHBOARD_API_BASE`、`DASHBOARD_ACCOUNT_NAME`、`DASHBOARD_ADMIN_USERNAME`、`DASHBOARD_ADMIN_PASSWORD`
+- 仓库会自动兼容 `workflow/content-library` 和 `content-library` 两种内容库布局
 
 启动后，用这个浏览器窗口手动登录你要发的平台。后面的 Python 脚本会通过 `CDP` 接管这组标签页。
 
