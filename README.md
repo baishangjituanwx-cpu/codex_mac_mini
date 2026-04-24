@@ -64,8 +64,14 @@ Set-Location automation/python-platform-takeover
   - 一键初始化新 campaign 的内容包和日志骨架
 - `scripts/dashboard-export-review.js`
   - 从复盘正文生成 8 平台 dashboard companion JSON
+- `scripts/dashboard-doctor.js`
+  - 检查 Node 版本、dashboard 环境变量、内容库路径和指定日期复盘文件
 - `scripts/dashboard-sync-review.js`
   - 导出、校验、刷新 `latest.json`、上传远端 dashboard、写同步审计的一键入口
+- `scripts/dashboard-sync.sh`
+  - macOS / Linux 一键预检 + 同步入口
+- `scripts/dashboard-sync.ps1`
+  - Windows PowerShell 一键预检 + 同步入口
 - `scripts/sync_remote_mempalace.sh`
   - 把当前仓库增量同步到远端 MemPalace 中心主机
 
@@ -204,6 +210,16 @@ node scripts/init_campaign.js --id 2026-04-11-ai-workflow --theme "这里写母�
 npm run dashboard:sync -- --review-date YYYY-MM-DD
 ```
 
+或者直接用平台包装器:
+
+```bash
+bash scripts/dashboard-sync.sh --review-date YYYY-MM-DD
+```
+
+```powershell
+.\scripts\dashboard-sync.ps1 --review-date YYYY-MM-DD
+```
+
 首次接入先配置:
 
 - [`.env.dashboard.example`](</Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/.env.dashboard.example>)
@@ -281,8 +297,19 @@ npm run dashboard:sync -- --review-date YYYY-MM-DD
 常用命令:
 
 ```bash
+npm run dashboard:doctor -- --review-date YYYY-MM-DD
 npm run dashboard:export -- --review-date YYYY-MM-DD
 npm run dashboard:sync -- --review-date YYYY-MM-DD
+```
+
+双平台入口:
+
+```bash
+bash scripts/dashboard-sync.sh --review-date YYYY-MM-DD
+```
+
+```powershell
+.\scripts\dashboard-sync.ps1 --review-date YYYY-MM-DD
 ```
 
 注意:
@@ -291,6 +318,7 @@ npm run dashboard:sync -- --review-date YYYY-MM-DD
 - 先在仓库根目录创建 `.env.dashboard` 或 `.env.dashboard.local`
 - 需要填写自己的 `DASHBOARD_API_BASE`、`DASHBOARD_ACCOUNT_NAME`、`DASHBOARD_ADMIN_USERNAME`、`DASHBOARD_ADMIN_PASSWORD`
 - 仓库会自动兼容 `workflow/content-library` 和 `content-library` 两种内容库布局
+- 预检命令会检查 `Node.js 18+`、环境变量和复盘文件是否齐全
 
 启动后，用这个浏览器窗口手动登录你要发的平台。后面的 Python 脚本会通过 `CDP` 接管这组标签页。
 

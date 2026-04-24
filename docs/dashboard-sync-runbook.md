@@ -4,9 +4,12 @@
 
 ## 入口
 
+- 预检: `node scripts/dashboard-doctor.js --review-date YYYY-MM-DD`
 - 导出 companion JSON: `node scripts/dashboard-export-review.js --review-date YYYY-MM-DD`
 - contract 校验: `node scripts/validate-dashboard-export.js --file /absolute/path/to/export.json`
 - 一键闭环: `node scripts/dashboard-sync-review.js --review-date YYYY-MM-DD`
+- macOS / Linux 包装器: `bash scripts/dashboard-sync.sh --review-date YYYY-MM-DD`
+- Windows PowerShell 包装器: `.\scripts\dashboard-sync.ps1 --review-date YYYY-MM-DD`
 
 优先使用一键闭环命令。它会依次完成:
 
@@ -17,6 +20,8 @@
 5. 写入固定同步审计文件
 
 ## 环境准备
+
+Node.js 18+ 是必需项，因为 `dashboard-upload.js` 使用了原生 `fetch`。
 
 仓库默认会自动寻找两种内容库布局:
 
@@ -40,6 +45,12 @@ DASHBOARD_ADMIN_PASSWORD=your-admin-password
 ```
 
 参考模板在 [`.env.dashboard.example`](</Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/.env.dashboard.example>)。
+
+建议首次接入按这个顺序跑:
+
+1. `node scripts/dashboard-doctor.js --review-date YYYY-MM-DD`
+2. `bash scripts/dashboard-sync.sh --review-date YYYY-MM-DD`
+3. 或 Windows 下 `.\scripts\dashboard-sync.ps1 --review-date YYYY-MM-DD`
 
 ## 必要输入
 
