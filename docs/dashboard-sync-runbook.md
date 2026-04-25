@@ -2,6 +2,44 @@
 
 这套脚本把晚间复盘的 Docker 看板同步收口成同一条链路，适合其他 Codex 设备直接接入。
 
+## 先分清两条接入流
+
+当前工作区里，“新设备接入 dashboard”和“脚本自动上传 dashboard”不是一回事。
+
+### A. 浏览器设备绑定流
+
+适用场景：
+
+- 新 Codex 设备只需要在 `8080` 页面里上传复盘 JSON
+- 设备操作者不运行仓库内脚本
+- 设备操作者不应持有管理员用户名和密码
+
+正确流程：
+
+1. 管理员打开 `8081` 管理端并登录
+2. 进入目标工作账号和目标账号组
+3. 生成一次性 `设备接入码` 或 `接入链接`
+4. 把接入码或接入链接发给新设备操作者
+5. 新设备操作者打开 `8080`
+6. 走 `新 Codex 设备接入 -> 使用接入码绑定设备`
+7. 绑定成功后，这台设备只对对应账号组拥有上传权限
+
+这一条流：
+
+- 不使用 `工作账号登录`
+- 不要求 `.env.dashboard`
+- 不要求管理员凭证落到设备本地
+
+### B. 仓库脚本自动上传流
+
+适用场景：
+
+- 设备要运行 `dashboard-sync-review.js`
+- 设备要从本地复盘 Markdown 自动导出 companion JSON 并直接写远端 account group
+- 设备需要跑 `dashboard-doctor -> export -> validate -> upload` 整条链
+
+这一条流才需要下面的 `.env.dashboard` 配置和管理员凭证。
+
 ## 入口
 
 - 预检: `node scripts/dashboard-doctor.js --review-date YYYY-MM-DD`
@@ -34,7 +72,7 @@ Node.js 18+ 是必需项，因为 `dashboard-upload.js` 使用了原生 `fetch`�
 CONTENT_LIBRARY_ROOT=workflow/content-library
 ```
 
-同一个文件里还需要配置 dashboard 上传目标:
+如果设备走的是“仓库脚本自动上传流”，同一个文件里还需要配置 dashboard 上传目标：
 
 ```dotenv
 DASHBOARD_API_BASE=http://your-dashboard-host:8080
@@ -51,6 +89,8 @@ DASHBOARD_ADMIN_PASSWORD=your-admin-password
 1. `node scripts/dashboard-doctor.js --review-date YYYY-MM-DD`
 2. `bash scripts/dashboard-sync.sh --review-date YYYY-MM-DD`
 3. 或 Windows 下 `.\scripts\dashboard-sync.ps1 --review-date YYYY-MM-DD`
+
+如果设备走的是“浏览器设备绑定流”，不要先配 `.env.dashboard`。先让管理员在 `8081` 里发一次性接入码，再在 `8080` 里绑定设备。
 
 ## 必要输入
 
@@ -140,5 +180,6 @@ node scripts/dashboard-sync-review.js --review-date YYYY-MM-DD
 
 1. 仓库根目录存在这套 `scripts/`
 2. 本机内容库布局能被脚本解析到
-3. `.env.dashboard` 填入该设备自己的 dashboard API 和管理员凭证
-4. 复盘文件严格遵守 `data-review` 模板，不省略 8 平台卡片
+3. 如果设备要跑脚本自动上传，`.env.dashboard` 填入该设备自己的 dashboard API 和管理员凭证
+4. 如果设备只走浏览器上传，改用管理员发放的一次性 `设备接入码`，不要把管理员凭证下发到该设备
+5. 复盘文件严格遵守 `data-review` 模板，不省略 8 平台卡片

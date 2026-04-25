@@ -2,6 +2,27 @@
 
 这份文档定义的是 dashboard companion export 从本地仓库写入远端数据面板时，脚本实际依赖的 API contract。
 
+## 适用范围
+
+这份文档只描述“仓库脚本自动上传流”。
+
+也就是：
+
+- 设备本地运行 `dashboard-upload.js`
+- 用管理员用户名和密码换取 `adminToken`
+- 再把 companion export 写进目标 account group
+
+它不描述下面这条流：
+
+- 管理员在 `8081` 管理端生成一次性 `设备接入码`
+- 新设备在 `8080` 页面通过 `新 Codex 设备接入` 完成设备绑定
+- 浏览器端用绑定后的设备身份上传 JSON
+
+所以：
+
+- 如果你要接入“脚本自动上传设备”，看这份文档
+- 如果你要接入“浏览器上传设备”，不要照着这份文档给管理员密码
+
 ## 配置入口
 
 上传脚本是：
@@ -15,6 +36,8 @@
 - `DASHBOARD_ADMIN_USERNAME`
 - `DASHBOARD_ADMIN_PASSWORD`
 - 可选：`DASHBOARD_WORKSPACE_NAME`
+
+这些变量只给“脚本自动上传流”使用，不给浏览器设备绑定流使用。
 
 ## 调用顺序
 
@@ -159,3 +182,8 @@ X-Admin-Token: <adminToken>
 2. 使用同一套上传接口顺序
 3. 先跑 `dashboard-doctor.js`
 4. 上传成功与否只看 `latest-status.json` 和远端 account group，不看口头描述
+
+补充边界：
+
+- 如果设备是浏览器上传设备，管理员应发一次性 `设备接入码` 或接入链接，而不是下发管理员凭证
+- 只有要运行仓库脚本的设备，才需要 `DASHBOARD_ADMIN_USERNAME` 和 `DASHBOARD_ADMIN_PASSWORD`

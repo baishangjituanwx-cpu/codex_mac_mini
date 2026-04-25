@@ -178,7 +178,8 @@ When browser checks are required, route through:
 - for this workspace, prefer a single command that closes the whole chain: `node scripts/dashboard-sync-review.js --review-date YYYY-MM-DD`
 - if the operator wants a wrapper entry, use `bash scripts/dashboard-sync.sh --review-date YYYY-MM-DD` on macOS / Linux or `.\scripts\dashboard-sync.ps1 --review-date YYYY-MM-DD` on Windows
 - if the device is only checking fields or preparing a handoff, stop after `dashboard-export-review.js + validate-dashboard-export.js`; do not upload test data into the remote dashboard
-- before the first upload on a new device, configure `.env.dashboard` or `.env.dashboard.local` in the repo root; required keys are `DASHBOARD_API_BASE`, `DASHBOARD_ACCOUNT_NAME`, `DASHBOARD_ADMIN_USERNAME`, and `DASHBOARD_ADMIN_PASSWORD`
+- if the device only uses the browser binding flow, do not configure `.env.dashboard` and do not distribute admin credentials; the admin must generate a one-time `设备接入码` in `8081`, and the operator must bind the device from `8080`
+- only when the device will run the repo upload scripts, configure `.env.dashboard` or `.env.dashboard.local` in the repo root; required keys are `DASHBOARD_API_BASE`, `DASHBOARD_ACCOUNT_NAME`, `DASHBOARD_ADMIN_USERNAME`, and `DASHBOARD_ADMIN_PASSWORD`
 - the repo scripts now auto-detect `workflow/content-library` and `content-library`; if the device uses another layout, set `CONTENT_LIBRARY_ROOT`
 - the sync step is not complete unless it does all of the following:
 - write the companion JSON export
