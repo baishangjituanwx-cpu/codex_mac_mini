@@ -10,8 +10,9 @@ selectors:
     - "input[placeholder*='6-16']"
     - "input"
   cover_file_inputs:
-    - "input[type='file']"
-  cover_file_input_index: 1
+    - "input[type='file'][accept*='image']"
+    - "input[accept*='image']"
+  cover_file_input_index: 0
   management_entry_candidates:
     - "tr"
     - "li"
@@ -25,6 +26,7 @@ buttons:
     - "编辑"
     - "编辑封面"
   cover_confirm:
+    - "确认"
     - "确定"
   publish:
     - "发表"

@@ -27,10 +27,18 @@ If the task requires real browser execution, also use `$social-publish-automatio
 - For 小云雀 founder videos in this workspace, generate the video first, then immediately build the prepared cover set: one vertical `3:4` cover and one horizontal `4:3` cover, each with one 8 to 10 Chinese-character theme.
 - Before clicking `发表`, read both fields back from the editor and stop if either one did not persist.
 - For 视频号 specifically, editor readback is necessary but not sufficient. The stronger pre-publish check is that the page's framework-managed publish payload also contains the exact target `短标题` and `视频描述`.
+- When submitting, click the actual visible `button` whose normalized text is `发表`. Do not click a surrounding `DIV` / `.weui-desktop-btn_wrp` wrapper unless it contains no real button and a follow-up state check proves the click submitted. Wrapper clicks can be no-ops.
 - For custom cover upload, do not stop at opening the modal or seeing the uploaded preview. Always upload a prepared local cover inside `编辑封面`, confirm the modal through the inner primary action button, and then verify the compose page has accepted that uploaded cover.
-- Cover acceptance requires visual readability, not just a non-empty thumbnail URL. Before clicking `发表`, check the cover at a small management-list-like size and confirm the main cover title is readable.
+- Do not use page-side JavaScript to fake `input.files` for 视频号 cover upload. It can make the UI look changed without calling the platform's real upload service. Use one of the real file-injection paths only:
+- Playwright `locator.set_input_files(<local_cover_path>)`
+- OpenCLI `page.setFileInput([<local_cover_path>], 'input[type="file"][accept*="image"]')`
+- CDP `DOM.setFileInputFiles` on the frame-side image file input
+- The image selector must target `accept*="image"`; never use a generic `input[type=file]` if a video file input is also present.
+- Do not use macOS native file chooser path typing through AppleScript for 视频号 cover upload. It has produced malformed paths in this environment and can silently select nothing. If direct file injection cannot reach the input, stop and report the blocker instead of typing a path into the system dialog.
+- Cover acceptance requires visual readability, not just a non-empty thumbnail URL. Before clicking `发表`, check the cover at a small management-list-like size and confirm the main cover title is readable and the founder人物/主体 is clearly visible. If the title is readable but the人物 is hidden by a dark overlay, treat it as a cover failure.
 - If the published cover is wrong or unreadable, use the existing row's `修改描述和封面` repair flow. Do not republish the same video only to fix a cover.
 - After `修改描述和封面`, click the outer `完成`, then the final `确认修改`; if the row shows `修改审核中，预计30分钟内审核完成`, record the state as `cover_repair_under_review` and verify again after review before marking the cover fully fixed.
+- If the newest row later shows `作者修改过视频信息` and the row's `修改描述和封面` action has class `disabled`, the post-publish repair path is closed. At that point, do not keep retrying hidden routes; the only safe options are waiting for the platform to reopen editing, or replacing the item after the old item is deleted/hidden/explicitly marked obsolete.
 - Before any retry or republish, check `视频管理` first. If the same video is already present in the list, stop instead of publishing a duplicate.
 - Before any fresh publish, check the newest management rows for recent near-duplicates.
 - If a recent row already uses the same `短标题` and the platform-side `description` is still highly similar to the current package, stop before publish. That is a content-repeat incident, not a new post.
@@ -111,6 +119,9 @@ If the task requires real browser execution, also use `$social-publish-automatio
 - the current robust standard is: pre-publish exact editor readback + framework-payload check, then post-publish newest-row exact `shortTitle` and exact `description` check
 - the same 2026-04-22 run also confirmed the correct cover should be validated from the saved newest-row thumbnail, not only the compose-page preview
 - a later 2026-04-23 failure confirmed one more hard rule: same `短标题` plus high正文相似度 across recent rows must stop the publish before submit, even if the calendar date changed
+- A 2026-04-25 cover postmortem confirmed a harder cover rule: JS assignment to `input.files` did not upload the prepared PNG; the saved row used a video frame thumbnail instead. The correct method is real file injection against `input[type="file"][accept*="image"]`, followed by list-thumbnail visual verification. That verification must include both cover text readability and人物主体可见性. If the row says `作者修改过视频信息`, the edit action can become disabled after one failed repair.
+- A later 2026-04-25 retry also confirmed that AppleScript path entry in the macOS file chooser can mangle the path and fail to find the file. Do not use that route for cover uploads.
+- A verified 2026-04-25 replacement publish confirmed the safe path after the old bad item was manually deleted: Browser Bridge real file injection for the video, real file injection for the image cover input, exact editor readback, click the real `button` `发表`, then verify the new management-row `objectId`, exact `shortTitle`, exact `description`, and uploaded cover key in the list thumbnail.
 - Keep QR codes, login details, and private operator information out of notes and artifacts.
 
 ## Reference File

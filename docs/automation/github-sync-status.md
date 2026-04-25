@@ -12,6 +12,36 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-04-25 15:45:56 CST
+- 检测到新的技能变更批次: 新增 0，修改 7，删除 0。
+- 这批变更集中在视频号封面上传与替换发布规则的再次收紧：live skill 和 `skill-center` 镜像新增人物主体可见性、真实图片输入上传、禁用 AppleScript 路径输入、要求点击真实 `发表` 按钮，并把替换发布后的新对象 ID、`under_review` 状态和验证截图写回 `publish-receipts`。
+- 建议后续执行 GitHub 同步，避免 live skill、`skill-center` 镜像和 `python-platform-takeover` 的发布留痕继续漂移。
+
+## 2026-04-25 14:43:54 CST
+- 检测到新的技能变更批次: 新增 0，修改 7，删除 0。
+- 这批变更集中在视频号发布与封面规则的二次收紧：live skill 和 `skill-center` 镜像新增真实文件注入、禁用 AppleScript 路径输入、要求点击真实 `发表` 按钮，并把替换发布后的新对象 ID、封面 key 与验证截图写回 `publish-receipts`。
+- 建议后续执行 GitHub 同步，避免 live skill、`skill-center` 镜像和 `python-platform-takeover` 发布回执继续漂移。
+
+## 2026-04-25 13:42:15 CST
+- 检测到新的技能变更批次: 新增 0，修改 12，删除 0。
+- 这批变更分成两组：仓库提交 `a2cf2fef60615a0fa80e84680fbac0afc2db879d` 为 `multi-platform-content-review-skill` / `data-review` 补充 dashboard 设备绑定流，另一组工作区修改则集中在视频号封面上传与修复规则，覆盖 live skill、`skill-center` 镜像以及 `python-platform-takeover` 的 selector、发布器和回执状态。
+- 建议后续执行 GitHub 同步，避免 dashboard 接入规则与视频号封面修复逻辑在 live skill、`skill-center` 镜像和自动化实现之间继续漂移。
+
+## 2026-04-25 12:41:37 CST
+- 检测到新的技能变更批次: 新增 0，修改 6，删除 0。
+- 这批变更分成两组：live `~/.codex/skills` 中的 `seedance-video-api` 与 `xiaoyunque-source-video` 继续收紧 prompt-package、口播脚本、返工矩阵和封面帧规则；仓库中的 `skills/multi-platform-content-review-skill/SKILL.md` 与 `skill-center/skills/data-review/SKILL.md` 则补上 dashboard 只导出校验、不上传测试数据的 handoff 约束。
+- 建议后续执行 GitHub 同步，避免 live 视频技能、仓库 review skill 与 `skill-center` 镜像继续漂移。
+
+## 2026-04-25 11:42:34 CST
+- 检测到新的技能变更批次: 新增 0，修改 2，删除 0。
+- 这批变更集中在本地 `~/.codex/skills/xiaoyunque-source-video/` 的 `SKILL.md` 与 `references/prompt-template.md`；核心是把小云雀提示词交付继续收紧到共享模板，并补齐 `封面制作专用文案`、复盘输入项与完整 founder 口播示例。
+- 建议后续执行 GitHub 同步，避免本地小云雀技能规则与仓库镜像继续漂移。
+
+## 2026-04-25 00:27:56 CST
+- 检测到新的技能变更批次: 新增 0，修改 2，删除 0。
+- 这批变更集中在 `skills/multi-platform-content-review-skill/SKILL.md` 和 `skill-center/skills/data-review/SKILL.md`；核心是为 nightly data-review dashboard 链路补充首次同步前的 `dashboard-doctor` 体检要求，以及 macOS/Linux 与 Windows 的 wrapper 启动入口。
+- 建议后续执行 GitHub 同步，避免仓库技能定义与 `skill-center` 镜像的 dashboard 同步操作说明继续漂移。
+
 ## 2026-04-24 22:25:43 CST
 - 检测到新的技能变更批次: 新增 0，修改 4，删除 0。
 - 这批变更集中在 `automation/python-platform-takeover/README.md`、`social_publisher/cli.py`、`social_publisher/publish_receipts.py` 和 `tests/test_publish_receipts.py`；核心是把“封面修复待最终缩略图复核”纳入正式阻断态，避免视频号原条修封面期间被重复补发。
@@ -838,3 +868,8 @@
 - 若跳过，说明跳过原因:
   - 未跳过同步前置检查。
   - 跳过了 `codex/windows-version-20260411` 的新提交与推送，因为当前仓库新增或更新的内容是 cross-platform 的 `python-platform-takeover` 代码 / 样例、`skill-center` 规则镜像，以及自动化状态文档，没有新的 Windows 专属 bridge / deployment payload。
+
+## 2026-04-25 13:41:51 CST
+- 检测到新的技能变更批次: 新增 0，修改 12，删除 0。
+- 这批变更分成三组：`multi-platform-content-review-skill` 与 `data-review` 新增 dashboard 设备绑定流和脚本上传流的分离规则；`platform-cover-ops`、`social-publish-automation`、`wechat-channels-ops` 把“必须对图片文件输入框做真实上传、禁止伪造 `input.files`”写成硬约束；`python-platform-takeover` 的视频号内容包、映射、实现和回执则跟进封面修复失败后的锁定态。
+- 建议后续执行 GitHub 同步，避免 live skill、`skill-center` 镜像与 `python-platform-takeover` 的视频号封面规则继续漂移。

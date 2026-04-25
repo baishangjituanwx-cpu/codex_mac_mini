@@ -32,6 +32,8 @@ Prefer it when the task involves:
 - Avoid mid-flow content rewriting unless the platform rejects the original package.
 - For video platforms with a custom cover, run a cover-readability preflight before opening the platform editor: view or render the cover at roughly 25 percent scale and confirm the main title is readable in the small preview.
 - If the cover depends on text, a thumbnail URL or uploaded-file state is not sufficient. The package is incomplete until the cover title is visually readable in a list-card-sized preview.
+- For browser-side cover uploads, never use page-side JavaScript to assign `input.files`; that can bypass the platform upload service. Use Playwright `set_input_files`, OpenCLI `setFileInput`, or CDP `DOM.setFileInputFiles` on an image-only file input.
+- Do not type local file paths into a macOS native file chooser through AppleScript as an automation fallback. If direct file injection fails, stop and surface the blocker; mistyped or mangled paths can create false confidence and broken uploads.
 - Before any retry or补发, check the local publish receipt ledger first. The hard-stop ledger for this workspace lives under `automation/python-platform-takeover/state/publish-receipts/<campaign_id>.json`.
 - Before any retry or补发, check the target platform's management list for the exact same title or asset first. If an item already exists in a terminal or near-terminal state such as `已发布`, `审核中`, or `审核未通过`, stop and resolve that item instead of auto-reposting.
 - Default rule: do not re-publish the same platform item just because this round's UI flow looked unstable.
@@ -72,7 +74,8 @@ Prefer it when the task involves:
 - For 今日头条 / 头条号图文发布, also check the platform section for entry path, login gates, and verification expectations before automating the editor.
 - If the browser stays on the compose URL after submit, do not assume failure. Some platforms surface a reliable in-page terminal state such as `已发表` without redirecting.
 - For 微信视频号, do not accept create-page `已发表` or DOM-visible editor text as sufficient proof by themselves. Require exact post-publish verification from the newest management-row data, including title, description, and expected cover thumbnail.
-- For cover-sensitive platforms, especially 微信视频号、小红书、头条号, `expected cover thumbnail` must mean visually readable at management-list size. If it is only present but unreadable, treat the publish as structurally defective and repair the existing item instead of republishing.
+- For cover-sensitive platforms, especially 微信视频号、小红书、头条号, `expected cover thumbnail` must mean visually readable at management-list size and the main人物/主体 must remain recognizable. If it is only present but unreadable, or the text is readable while the人物 is hidden by a dark overlay, treat the publish as structurally defective and repair the existing item instead of republishing.
+- If a platform marks an item as already modified and disables the edit action, stop the repair loop. Do not force hidden edit URLs; treat the item as locked until editing reopens or the old item is intentionally replaced.
 
 ## Feishu Notify Rule
 
@@ -84,6 +87,7 @@ Prefer it when the task involves:
 - `提交成功`
 - `已提交`
 - `审核中` with confirmed list-entry or success-page landing
+- For 微信视频号, `处理中` with a confirmed newest management-row object ID, exact title/description, and readable intended cover thumbnail is also notify-worthy.
 - Use a separate message per platform. Do not merge multiple platforms into one message unless the user explicitly asks.
 - Default send toolchain:
 - prefer `./node_modules/@larksuite/cli/bin/lark-cli` from `/Users/baishangjituan/Documents/New project`
@@ -138,6 +142,7 @@ For 微信视频号 in this workspace, the minimum verified-success standard is:
 - post-publish newest-row exact match on platform-side `shortTitle`
 - post-publish newest-row exact match on platform-side `description`
 - newest-row thumbnail consistent with the intended uploaded cover
-- newest-row thumbnail title readable at list-card size, or row state explicitly shows `修改审核中` after a submitted cover repair
+- newest-row thumbnail title readable at list-card size and founder人物/主体 visible, or row state explicitly shows `修改审核中` after a submitted cover repair
+- submit-click validation that the real `button` was clicked; if only a wrapper `DIV` was clicked and no list state changes, treat the submit as not executed
 
 Once the result is confirmed and notify-worthy, send the Feishu push immediately, then continue to the next platform.

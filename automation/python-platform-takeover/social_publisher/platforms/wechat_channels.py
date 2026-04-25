@@ -484,15 +484,24 @@ class WeChatChannelsPublisher(PlatformPublisher):
             raise FileNotFoundError(f"Cover file not found: {cover_path}")
         self._click_button(frame, mapping["buttons"]["cover_entry"])
         page.wait_for_timeout(800)
-        file_inputs = frame.locator(mapping["selectors"]["cover_file_inputs"])
-        input_count = file_inputs.count()
-        if not input_count:
-            raise RuntimeError("No cover file input found on WeChat Channels.")
-        index = min(mapping["selectors"]["cover_file_input_index"], input_count - 1)
-        file_inputs.nth(index).set_input_files(str(cover_path))
+        file_input = self._cover_file_input(frame, mapping)
+        file_input.set_input_files(str(cover_path))
         page.wait_for_timeout(1200)
         self._click_button(frame, mapping["buttons"]["cover_confirm"])
         self._wait_for_cover_apply(frame, mapping, page)
+
+    def _cover_file_input(self, frame: Frame, mapping: dict) -> Locator:
+        selectors = mapping["selectors"].get("cover_file_inputs", [])
+        if isinstance(selectors, str):
+            selectors = [selectors]
+        for selector in selectors:
+            file_inputs = frame.locator(selector)
+            input_count = file_inputs.count()
+            if not input_count:
+                continue
+            index = min(mapping["selectors"].get("cover_file_input_index", 0), input_count - 1)
+            return file_inputs.nth(index)
+        raise RuntimeError("No image cover file input found on WeChat Channels.")
 
     def _click_publish(self, page: Page, frame: Frame, mapping: dict) -> None:
         self._click_button(frame, mapping["buttons"]["publish"])
