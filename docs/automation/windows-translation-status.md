@@ -965,3 +965,104 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-24 22:04:37 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧补齐或复核；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-04-25 22:03:06 CST
+
+- 处理时间:
+  - `2026-04-25 22:03:06 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-04-24 22:05:25 CST` 之后追加的非零批次:
+    - `2026-04-25 12:41:37 CST`
+    - `2026-04-25 13:42:15 CST`
+    - `2026-04-25 14:43:54 CST`
+    - `2026-04-25 15:45:56 CST`
+  - `2026-04-25 16:47:16 CST`、`17:48:25 CST`、`18:50:08 CST`、`18:50:17 CST`、`20:53:24 CST` 均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+  - 上述非零批次里，与 Windows 完整性直接相关的新增行为主要是:
+    - `skills/multi-platform-content-review-skill/SKILL.md` 与 `skill-center/skills/data-review/SKILL.md` 的 dashboard 设备绑定流 / 脚本上传流拆分，以及 Windows wrapper `.\scripts\dashboard-sync.ps1`
+    - `skill-center/skills/platform-cover-ops/SKILL.md`
+    - `skill-center/skills/social-publish-automation/SKILL.md`
+    - `skill-center/skills/wechat-channels-ops/SKILL.md`
+    - `automation/python-platform-takeover/{configs/platform-mappings/wechat_channels.yaml,social_publisher/platforms/wechat_channels.py,state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json}`
+    - 这些文件新增了真实图片输入上传、禁止伪造 `input.files`、封面人物主体可见性、`作者修改过视频信息` 锁定态、旧稿删除后替换发布，以及 `under_review / 处理中` 新回执语义。
+- 已完成的 Windows 补全:
+  - `skills/multi-platform-content-review-skill` / `skill-center/skills/data-review`:
+    - 复核后确认今天新增的 dashboard 双路径接入说明已经具备 Windows 等价入口，无需再新建脚本:
+      - 仓库已有 `scripts/dashboard-sync.ps1`
+      - `docs/dashboard-sync-runbook.md` 已写明 Windows PowerShell 用法 `.\scripts\dashboard-sync.ps1 --review-date YYYY-MM-DD`
+    - 这批更新主要是流程边界与凭据分发规则收紧，不涉及新的 Windows 路径兼容层、快捷键差异或额外 repo 资产。
+  - `automation/python-platform-takeover`:
+    - 更新 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md`](/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md)，补齐今天视频号封面事故复盘在 Windows 下的准确操作说明，明确:
+      - Windows PowerShell 继续通过 `.\scripts\social-publisher.ps1 publish wechat_channels ... --execute` 复用同一套真实图片输入上传链路，不单开第二套发布器
+      - 封面上传必须命中 `accept*="image"` 的图片输入框，不能伪造 `input.files`
+      - 提交必须点击真实 `button` `发表`，不能把 wrapper `DIV` 误判成成功提交
+      - 25% 列表卡片预检标准在 Windows 侧提升为“标题可读 + 人物主体可见”
+      - `verified_cover_repair_failed_locked`、`cover_repair_edit_disabled: true`、`cover_repair_row_status: 作者修改过视频信息` 在 Windows 下表示必须停手，等待平台重开编辑或先处置旧条
+      - 旧条已人工删除 / 转私密 / 明确废弃后，Windows 替换发布统一走:
+        - `.\scripts\social-publisher.ps1 clear-receipt ... --platform wechat_channels`
+        - `.\scripts\social-publisher.ps1 publish wechat_channels ... --execute`
+        - `.\scripts\social-publisher.ps1 receipt-status ... --platform wechat_channels`
+      - 替换发布后的 `under_review / 处理中`、新 `objectId`、新 `cover_key` 在 Windows 下如何解读为“已提交成功、等待审核，不要重复补发”
+    - 复核现有 Windows 包装器后，确认无需新增:
+      - `automation/python-platform-takeover/scripts/social-publisher.ps1`
+      - `automation/python-platform-takeover/scripts/quickstart-windows.ps1`
+      - `automation/python-platform-takeover/scripts/start-chrome-cdp.ps1`
+    - 复核 `wechat_channels.py`、`wechat_channels.yaml` 与回执样本后，确认今天新增的图片输入 selector、真实文件注入、锁定态停手和替换发布状态判定均为共享 Python / YAML 逻辑，不需要单独 Windows 代码分叉。
+- 未完成的补全:
+  - 无。
+  - `2026-04-25` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产同步的自定义 skill 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 已执行复核:
+    - `scripts/dashboard-sync.ps1`
+    - `docs/dashboard-sync-runbook.md`
+    - `automation/python-platform-takeover/README.md`
+    - `automation/python-platform-takeover/scripts/{social-publisher.ps1,quickstart-windows.ps1,start-chrome-cdp.ps1}`
+    - `automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py`
+    - `automation/python-platform-takeover/configs/platform-mappings/wechat_channels.yaml`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json`
+  - 本机未做 Windows PowerShell 实机回归；当前判断基于现有 PowerShell 入口复核、Windows README 补记，以及共享逻辑 / 回执字段检查。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-04-25 22:03:06 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧补齐或复核；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-04-25 22:05:00 CST
+
+- 处理时间:
+  - `2026-04-25 22:05:00 CST`
+- 输入来源:
+  - 复核 `skill-change-monitor.md` 到当前最新的 `2026-04-25 21:54:08 CST` 批次。
+  - 对照本文件已有的 `2026-04-25 22:03:06 CST` 记录，确认今天新增或修改的非零批次仍只有:
+    - `2026-04-25 12:41:37 CST`
+    - `2026-04-25 13:42:15 CST`
+    - `2026-04-25 14:43:54 CST`
+    - `2026-04-25 15:45:56 CST`
+  - `2026-04-25 16:47:16 CST`、`17:48:23 CST` / `17:48:25 CST`、`18:50:08 CST`、`18:50:17 CST`、`19:52:12 CST`、`20:53:24 CST` / `20:53:36 CST`、`21:54:00 CST` / `21:54:08 CST` 仍然全部是 `新增 0，修改 0，删除 0`。
+- 已完成的 Windows 补全:
+  - `automation/python-platform-takeover/README.md`:
+    - 追加 Windows 视频号说明，明确今天这批新规则在 PowerShell 入口下的等价执行口径:
+      - 继续复用 `.\scripts\social-publisher.ps1 publish wechat_channels ... --execute`
+      - 封面上传只允许对 `accept*="image"` 的图片输入框做真实文件注入，不允许伪造 `input.files`
+      - 提交时必须点击真实 `button` `发表`，不能把 wrapper `DIV` 误判成成功提交
+      - 25% 列表卡片预检标准在 Windows 侧提升为“标题可读 + 人物主体可见”
+      - `verified_cover_repair_failed_locked`、`cover_repair_edit_disabled: true`、`cover_repair_row_status: 作者修改过视频信息` 在 Windows 下表示必须停手，等待平台重开编辑或先处置旧条
+      - 旧条已人工删除 / 转私密 / 明确废弃后，Windows 替换发布统一走:
+        - `.\scripts\social-publisher.ps1 clear-receipt ... --platform wechat_channels`
+        - `.\scripts\social-publisher.ps1 publish wechat_channels ... --execute`
+        - `.\scripts\social-publisher.ps1 receipt-status ... --platform wechat_channels`
+      - 替换发布后的 `under_review / 处理中`、新 `objectId`、新 `cover_key` 在 Windows 下如何解读为“已提交成功、等待审核，不要重复补发”
+  - 复核确认本文件 `2026-04-25 22:03:06 CST` 已覆盖今天这批 monitor 其余非零变更的 Windows 等价说明，包括:
+    - `skills/multi-platform-content-review-skill` / `skill-center/skills/data-review` 的 dashboard doctor 与 `dashboard-sync.ps1`
+    - `platform-cover-ops`、`social-publish-automation`、`wechat-channels-ops` 对真实图片输入上传、封面人物主体可见性、锁定态停手、替换发布条件的规则同步
+  - 现有 Windows 入口继续足够覆盖今天所有相关行为:
+    - `automation/python-platform-takeover/scripts/social-publisher.ps1`
+    - `automation/python-platform-takeover/scripts/start-chrome-cdp.ps1`
+    - `scripts/dashboard-sync.ps1`
+- 未完成的补全:
+  - 无。
+  - 本次复核后，未发现比 `2026-04-25 22:03:06 CST` 更晚、仍未转译的 monitor 批次。
+- 阻塞原因:
+  - 无阻塞。
+  - 本轮新增的是 README 文档桥接，没有新增 Windows 专属脚本，因此未做额外 PowerShell 语法解析或 Windows 实机回归。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-04-25 22:05:00 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为仍已完成 Windows 侧补齐或复核；本次运行没有发现新的待补 Windows 缺口。

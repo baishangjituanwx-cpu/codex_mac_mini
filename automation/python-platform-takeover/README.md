@@ -288,6 +288,8 @@ Windows PowerShell:
 
 - 直接走 `.\scripts\social-publisher.ps1 publish wechat_channels configs/content-package.local.yaml --execute`
 - 共享清空重输逻辑会在 Windows 自动使用 `Control+A`，在 macOS 自动使用 `Meta+A`
+- 视频号封面上传在 Windows / macOS 共用同一套真实上传链路: 只对 `accept*="image"` 的图片输入框做真实文件注入，不伪造 `input.files`
+- 提交时两端都必须点真实 `button` `发表`；只点外层 wrapper `DIV` 不算成功提交
 - `微信视频号` 的成功标准在两端一致: 发布前要求 `短标题` / `视频描述` 精确回读，发布后要求管理页最新一条同时通过 `shortTitle` / `description` / 封面缩略图二次复核
 
 针对 `2026-04-23` 新增的本地发布台账 / 近似重复拦截规则，Windows 直接复用同一套 CLI 包装器:
@@ -324,14 +326,37 @@ Windows PowerShell:
   - `cover_repair_pending_final_thumbnail_review: true`
   - `cover_repair_status: 修改审核中...`
   - `receipt_status: verified_cover_repair_under_review`
-- Windows 下执行视频号发布前，先把 `assets.cover_3_4` 缩到大约 `25%` 的列表卡片尺寸自行复核。通过标准不是“封面文件存在”，而是缩略图主标题仍可读。
+- Windows 下执行视频号发布前，先把 `assets.cover_3_4` 缩到大约 `25%` 的列表卡片尺寸自行复核。通过标准不是“封面文件存在”，而是缩略图主标题仍可读，且人物主体明确可见。
 - 如果管理列表里封面“有图但不可读”，不要重发同一个视频；直接对现有条目走 `修改描述和封面`，并保持 `verified_cover_repair_under_review` / 待复核状态，直到缩略图刷新后再次通过。
 - Windows 下记录这类修复封面素材路径时，继续优先写 PowerShell 也能直接识别的绝对路径，例如 `C:/content-pipeline/covers/fixed-cover.png` 或 `C:\\content-pipeline\\covers\\fixed-cover.png`。
+- 如果后续 `receipt-status` 或 `state/publish-receipts/<campaign_id>.json` 出现下面这些信号，说明视频号已经把原条目锁住，Windows 侧也不要继续强闯隐藏编辑路径:
+  - `receipt_status: verified_cover_repair_failed_locked`
+  - `cover_repair_edit_disabled: true`
+  - `cover_repair_row_status: 作者修改过视频信息`
+- 进入 `verified_cover_repair_failed_locked` 后，安全动作只有两种:
+  - 等平台重新开放 `修改描述和封面`
+  - 先人工删除 / 转私密 / 明确废弃旧条，再执行替换发布
+- 如果旧条已经人工删除、隐藏或明确废弃，再按 Windows PowerShell 走替换发布，不要手抄第二套命令:
+
+```powershell
+.\scripts\social-publisher.ps1 clear-receipt configs/content-package.local.yaml --platform wechat_channels
+.\scripts\social-publisher.ps1 publish wechat_channels configs/content-package.local.yaml --execute
+.\scripts\social-publisher.ps1 receipt-status configs/content-package.local.yaml --platform wechat_channels
+```
+
+- 替换发布后如果本地台账显示这些信号，表示新的对象已经提交成功并进入平台审核，可通知但不要重复补发:
+  - `receipt_status: under_review`
+  - `publish_state_text: 处理中`
+  - `publish_state_label: 处理中`
+  - `new_object_id` 或新的管理行 `objectId`
+  - `cover_key` / `new_cover_key`
 - 这批状态码在 Windows / macOS 含义一致:
   - `stopped_receipt_duplicate`: 本地台账已经拦下同一 campaign 的重复补发
   - `stopped_recent_content_duplicate`: 视频号最近管理行已出现同 `短标题` 且正文高度相似的内容，必须先改标题或正文骨架
   - `stopped_duplicate`: 管理页已经存在同标题或同描述片段的条目，先处理旧条再继续
   - `verified_cover_repair_under_review`: 原视频已提交封面修复，但管理列表缩略图还没完成最终复核；此时继续修原条，不要重发新条
+  - `verified_cover_repair_failed_locked`: 原视频封面修复失败且平台已锁定编辑；不要继续修原条，等平台重开或先处置旧条再替换发布
+  - `under_review`: 替换发布的新视频已经提交成功，平台仍在审核；此时等待管理列表复核，不要把它当成失败重发
 
 注意:
 
