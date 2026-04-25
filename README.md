@@ -224,6 +224,7 @@ bash scripts/dashboard-sync.sh --review-date YYYY-MM-DD
 
 - [`.env.dashboard.example`](</Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/.env.dashboard.example>)
 - [`docs/dashboard-sync-runbook.md`](</Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/dashboard-sync-runbook.md>)
+- [`docs/dashboard-upload-api-contract.md`](</Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/dashboard-upload-api-contract.md>)
 
 ### 6. Python 接管脚本从这里开始
 
@@ -319,6 +320,8 @@ bash scripts/dashboard-sync.sh --review-date YYYY-MM-DD
 - 需要填写自己的 `DASHBOARD_API_BASE`、`DASHBOARD_ACCOUNT_NAME`、`DASHBOARD_ADMIN_USERNAME`、`DASHBOARD_ADMIN_PASSWORD`
 - 仓库会自动兼容 `workflow/content-library` 和 `content-library` 两种内容库布局
 - 预检命令会检查 `Node.js 18+`、环境变量和复盘文件是否齐全
+- 固定 smoke test：`npm run dashboard:fixture`
+- GitHub Actions 会自动跑 dashboard fixture smoke，防止脚本回归
 
 启动后，用这个浏览器窗口手动登录你要发的平台。后面的 Python 脚本会通过 `CDP` 接管这组标签页。
 

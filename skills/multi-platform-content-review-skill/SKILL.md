@@ -196,6 +196,7 @@ When browser checks are required, route through:
 - before the first real dashboard sync on a device, run `node scripts/dashboard-doctor.js --review-date YYYY-MM-DD`
 - if the repo includes `scripts/dashboard-sync-review.js`, prefer that single command over manual export + upload steps
 - if the operator wants a wrapper entry, use `bash scripts/dashboard-sync.sh --review-date YYYY-MM-DD` on macOS / Linux or `.\scripts\dashboard-sync.ps1 --review-date YYYY-MM-DD` on Windows
+- if the device is only checking field mapping or preparing a handoff, stop after export + validate; do not upload test data into the remote dashboard
 - before the first dashboard upload on a new device, configure `.env.dashboard` or `.env.dashboard.local` in the repo root; required keys are `DASHBOARD_API_BASE`, `DASHBOARD_ACCOUNT_NAME`, `DASHBOARD_ADMIN_USERNAME`, and `DASHBOARD_ADMIN_PASSWORD`
 - if the device uses neither `workflow/content-library` nor `content-library`, set `CONTENT_LIBRARY_ROOT`
 - If the user asks to update the 8-platform Docker dashboard, append the Docker dashboard mapping block defined in [docker-dashboard-contract.md](./references/docker-dashboard-contract.md), or write the same object to a companion JSON export file when the workflow needs a file-based handoff.
@@ -214,4 +215,4 @@ For diagnosis and `Keep / Cut / Retest`, read [diagnosis-and-decisions.md](./ref
 When the review must feed the Docker dashboard, also read [docker-dashboard-contract.md](./references/docker-dashboard-contract.md).
 When the review must write a companion JSON file, also use [dashboard-export-template.json](./references/dashboard-export-template.json) as the starting structure.
 
-For first-time device setup of the dashboard chain, also read [docs/dashboard-sync-runbook.md](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/dashboard-sync-runbook.md).
+For first-time device setup of the dashboard chain, also read [docs/dashboard-sync-runbook.md](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/dashboard-sync-runbook.md) and [docs/dashboard-upload-api-contract.md](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/dashboard-upload-api-contract.md).

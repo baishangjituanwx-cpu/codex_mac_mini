@@ -83,6 +83,57 @@ DASHBOARD_ADMIN_PASSWORD=your-admin-password
 - 如果远端 dashboard 账号组上传失败，会在同步审计文件里记录失败阶段和错误文本
 - `latest-status.json` 才是最终成功与否的准信号，不要只看终端输出
 
+## 只导出不上传
+
+如果当前设备只是要生成 companion JSON，不要直接跑上传链。
+
+用这两步：
+
+```bash
+node scripts/dashboard-export-review.js --review-date YYYY-MM-DD
+node scripts/validate-dashboard-export.js --file /absolute/path/to/export.json
+```
+
+这种模式适合：
+
+- 本地先检查复盘字段有没有被正确抽出来
+- 在测试环境确认 export 长相
+- 不希望把测试数据写进远端 dashboard
+
+只有确定要写远端 account group 时，才跑：
+
+```bash
+node scripts/dashboard-sync-review.js --review-date YYYY-MM-DD
+```
+
+## 多设备写入规则
+
+多台 Codex 设备接入同一个 dashboard 时，按这 4 条执行：
+
+1. 同一天同一批次，只允许一个设备负责最终上传
+2. 如果只是辅助检查或字段修正，只跑导出和校验，不直接上传
+3. `latest.json` 和 `latest.meta.json` 只代表最后一次成功上传，不代表历史全貌
+4. 冲突排查先看：
+   - `dashboard-sync/history.jsonl`
+   - `dashboard-sync/latest-status.json`
+   - 远端 account group 当前显示的 `sourceBatch`
+
+如果两台设备都要处理同一天数据，先约定唯一的 `sourceBatch` 负责人，否则最后一次上传会覆盖前一次的 latest 指针。
+
+## 哪些文件不入库
+
+下面这些属于运行产物或本地配置，不应该提交到 GitHub：
+
+- `.env.dashboard`
+- `.env.dashboard.local`
+- `workflow/content-library/logs/review/dashboard-export/latest.json`
+- `workflow/content-library/logs/review/dashboard-export/latest.meta.json`
+- `workflow/content-library/logs/review/dashboard-sync/latest-status.json`
+- `workflow/content-library/logs/review/dashboard-sync/latest-status.md`
+- `workflow/content-library/logs/review/dashboard-sync/history.jsonl`
+
+如果你的工作区使用顶层 `content-library/` 布局，同样规则适用到对应目录。
+
 ## 多设备接入
 
 其他 Codex 设备接入时，最少要做到这 4 点:

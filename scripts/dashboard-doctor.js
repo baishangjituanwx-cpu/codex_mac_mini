@@ -72,13 +72,6 @@ function main() {
   console.log(`- content root: ${contentRoot}`);
   console.log(`- node version: ${process.versions.node}`);
 
-  if (loadedEnvFiles.length > 0) {
-    printCheck(true, "dashboard env", loadedEnvFiles.join(", "));
-  } else {
-    printCheck(false, "dashboard env", "create .env.dashboard or .env.dashboard.local from .env.dashboard.example");
-    ok = false;
-  }
-
   if (nodeMajor >= 18) {
     printCheck(true, "node runtime", "Node.js 18+");
   } else {
@@ -93,6 +86,15 @@ function main() {
     "DASHBOARD_ADMIN_PASSWORD",
   ];
   const missingEnv = collectMissingEnv(requiredEnv);
+  if (loadedEnvFiles.length > 0) {
+    printCheck(true, "dashboard env", loadedEnvFiles.join(", "));
+  } else if (missingEnv.length === 0) {
+    printCheck(true, "dashboard env", "using process environment variables");
+  } else {
+    printCheck(false, "dashboard env", "create .env.dashboard / .env.dashboard.local or provide env vars");
+    ok = false;
+  }
+
   if (missingEnv.length === 0) {
     printCheck(true, "dashboard credentials", requiredEnv.join(", "));
   } else {

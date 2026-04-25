@@ -177,6 +177,7 @@ When browser checks are required, route through:
 - before the first real sync on a device, run `node scripts/dashboard-doctor.js --review-date YYYY-MM-DD`
 - for this workspace, prefer a single command that closes the whole chain: `node scripts/dashboard-sync-review.js --review-date YYYY-MM-DD`
 - if the operator wants a wrapper entry, use `bash scripts/dashboard-sync.sh --review-date YYYY-MM-DD` on macOS / Linux or `.\scripts\dashboard-sync.ps1 --review-date YYYY-MM-DD` on Windows
+- if the device is only checking fields or preparing a handoff, stop after `dashboard-export-review.js + validate-dashboard-export.js`; do not upload test data into the remote dashboard
 - before the first upload on a new device, configure `.env.dashboard` or `.env.dashboard.local` in the repo root; required keys are `DASHBOARD_API_BASE`, `DASHBOARD_ACCOUNT_NAME`, `DASHBOARD_ADMIN_USERNAME`, and `DASHBOARD_ADMIN_PASSWORD`
 - the repo scripts now auto-detect `workflow/content-library` and `content-library`; if the device uses another layout, set `CONTENT_LIBRARY_ROOT`
 - the sync step is not complete unless it does all of the following:
@@ -225,7 +226,7 @@ If the user asks for Feishu同步, keep the main Codex output in the fixed repor
 
 If the task is this workspace's nightly review automation, always include `## 9. Docker 看板数据映射`, plus the real companion export path, validation result, `dashboard-export/latest.json` path, target dashboard account group, upload result, and the fixed sync audit log path in the final write-up.
 
-For first-time device setup of the dashboard chain, also read [docs/dashboard-sync-runbook.md](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/dashboard-sync-runbook.md).
+For first-time device setup of the dashboard chain, also read [docs/dashboard-sync-runbook.md](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/dashboard-sync-runbook.md) and [docs/dashboard-upload-api-contract.md](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/dashboard-upload-api-contract.md).
 
 For metrics vocabulary and platform-specific priorities, read [platform-metrics.md](./references/platform-metrics.md).
 For recent-post and account-slice comparison, read [account-slice-analysis.md](./references/account-slice-analysis.md).

@@ -1,0 +1,714 @@
+{
+  "meta": {
+    "sourceBatch": "dashboard-fixture",
+    "sourceReviewDate": "2026-04-25",
+    "mode": "review-section-export",
+    "verifiedAt": "2026-04-25"
+  },
+  "board": {
+    "title": "8 平台最新数据看板",
+    "dateLabel": "2026-04-25 晚间复盘已同步（6 / 8 已核验）",
+    "subtitle": "已从复盘正文抽取真实平台核验：快手、微博、头条号、百家号、抖音、知乎；视频号 仍待补内容级核验；B站 本批次无发布项。",
+    "northStar": "AI 先替平台执行，人回到判断",
+    "summary": [
+      {
+        "label": "页面核验",
+        "value": "6 / 8",
+        "note": "待补：视频号；B站。",
+        "tone": "warning"
+      },
+      {
+        "label": "当前最高可见",
+        "value": "抖音 320",
+        "note": "抖音 当前可见主值为 320（播放）。",
+        "tone": "cool"
+      },
+      {
+        "label": "最大风险",
+        "value": "重复与标题漂移",
+        "note": "标题可用",
+        "tone": "warning"
+      },
+      {
+        "label": "下一主动作",
+        "value": "补视频号核验",
+        "note": "补页面核验",
+        "tone": "hot"
+      }
+    ],
+    "keep": [
+      "继续图文",
+      "真人判断",
+      "平台字段"
+    ],
+    "cut": [
+      "切掉重复发布或删改后不回填字段的操作，先修运营问题再看内容效果。",
+      "切掉标题与实际后台落地不一致却不回填的做法。",
+      "切掉把早窗 0、审核中或未入账直接写成内容失败的复盘口径。"
+    ],
+    "next": [
+      "补页面核验",
+      "24 小时后补抓播放、阅读、展现与互动。",
+      "快手"
+    ]
+  },
+  "platforms": [
+    {
+      "key": "kuaishou",
+      "name": "快手",
+      "status": "steady",
+      "statusLabel": "后台已核验",
+      "latestTitle": "测试快手标题",
+      "publishTime": "2026-04-25 · 已发布",
+      "contentType": "视频",
+      "primaryLabel": "播放",
+      "primaryValue": 120,
+      "compareLabel": "近几条对照",
+      "baselineValue": 80,
+      "baselineNote": "播放 80 点赞 5 评论 1",
+      "windows": [
+        {
+          "label": "今日",
+          "headline": "后台标题显示为「测试快手标题」",
+          "metrics": [
+            {
+              "label": "播放",
+              "value": 120
+            },
+            {
+              "label": "点赞",
+              "value": 8
+            },
+            {
+              "label": "评论",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "label": "近7日账号",
+          "headline": "播放 80 点赞 5 评论 1",
+          "metrics": [
+            {
+              "label": "播放",
+              "value": 80
+            },
+            {
+              "label": "点赞",
+              "value": 5
+            },
+            {
+              "label": "评论",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "label": "近30日账号",
+          "headline": "近30日 播放 500 点赞 30",
+          "metrics": [
+            {
+              "label": "播放",
+              "value": 500
+            },
+            {
+              "label": "点赞",
+              "value": 30
+            }
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "核验等级",
+          "value": "后台已核验"
+        },
+        {
+          "label": "发布状态",
+          "value": "已发布"
+        },
+        {
+          "label": "播放",
+          "value": 120
+        },
+        {
+          "label": "决策",
+          "value": "Keep"
+        }
+      ],
+      "diagnosis": "首窗正常",
+      "action": "继续复查"
+    },
+    {
+      "key": "wechat",
+      "name": "视频号",
+      "status": "warning",
+      "statusLabel": "未完成内容级核验",
+      "latestTitle": "测试视频号标题",
+      "publishTime": "2026-04-25 · 待补核验",
+      "contentType": "视频",
+      "primaryLabel": "播放",
+      "primaryValue": 0,
+      "compareLabel": "近几条对照",
+      "baselineValue": 0,
+      "baselineNote": "播放 0",
+      "windows": [
+        {
+          "label": "今日",
+          "headline": "后台标题显示为「测试视频号标题」",
+          "metrics": [
+            {
+              "label": "状态",
+              "value": "待补核验"
+            },
+            {
+              "label": "播放",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "label": "近7日账号",
+          "headline": "播放 0",
+          "metrics": [
+            {
+              "label": "播放",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "label": "近30日账号",
+          "headline": "近30日 播放 0",
+          "metrics": [
+            {
+              "label": "播放",
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "核验等级",
+          "value": "未完成内容级核验"
+        },
+        {
+          "label": "发布状态",
+          "value": "待补核验"
+        },
+        {
+          "label": "播放",
+          "value": 0
+        },
+        {
+          "label": "决策",
+          "value": "Retest"
+        }
+      ],
+      "diagnosis": "需要补页面核验",
+      "action": "补抓管理页"
+    },
+    {
+      "key": "weibo",
+      "name": "微博",
+      "status": "steady",
+      "statusLabel": "后台已核验",
+      "latestTitle": "测试微博标题",
+      "publishTime": "2026-04-25 · 已发布",
+      "contentType": "视频",
+      "primaryLabel": "播放",
+      "primaryValue": 90,
+      "compareLabel": "近几条对照",
+      "baselineValue": 60,
+      "baselineNote": "播放 60 点赞 4 评论 1",
+      "windows": [
+        {
+          "label": "今日",
+          "headline": "标题显示为「测试微博标题」",
+          "metrics": [
+            {
+              "label": "播放",
+              "value": 90
+            },
+            {
+              "label": "点赞",
+              "value": 6
+            },
+            {
+              "label": "评论",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "label": "近7日账号",
+          "headline": "播放 60 点赞 4 评论 1",
+          "metrics": [
+            {
+              "label": "播放",
+              "value": 60
+            },
+            {
+              "label": "点赞",
+              "value": 4
+            },
+            {
+              "label": "评论",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "label": "近30日账号",
+          "headline": "近30日 播放 300 点赞 20",
+          "metrics": [
+            {
+              "label": "播放",
+              "value": 300
+            },
+            {
+              "label": "点赞",
+              "value": 20
+            }
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "核验等级",
+          "value": "后台已核验"
+        },
+        {
+          "label": "发布状态",
+          "value": "已发布"
+        },
+        {
+          "label": "播放",
+          "value": 90
+        },
+        {
+          "label": "决策",
+          "value": "Keep"
+        }
+      ],
+      "diagnosis": "正常",
+      "action": "继续观察"
+    },
+    {
+      "key": "toutiao",
+      "name": "头条号",
+      "status": "steady",
+      "statusLabel": "后台已核验",
+      "latestTitle": "测试头条标题",
+      "publishTime": "2026-04-25 · 已发布",
+      "contentType": "图文",
+      "primaryLabel": "阅读",
+      "primaryValue": 210,
+      "compareLabel": "近几条对照",
+      "baselineValue": 180,
+      "baselineNote": "阅读 180 点赞 10 评论 2",
+      "windows": [
+        {
+          "label": "今日",
+          "headline": "标题显示为「测试头条标题」",
+          "metrics": [
+            {
+              "label": "阅读",
+              "value": 210
+            },
+            {
+              "label": "点赞",
+              "value": 12
+            },
+            {
+              "label": "评论",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "label": "近7日账号",
+          "headline": "阅读 180 点赞 10 评论 2",
+          "metrics": [
+            {
+              "label": "阅读",
+              "value": 180
+            },
+            {
+              "label": "点赞",
+              "value": 10
+            },
+            {
+              "label": "评论",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "label": "近30日账号",
+          "headline": "近30日 阅读 900 点赞 55",
+          "metrics": [
+            {
+              "label": "阅读",
+              "value": 900
+            },
+            {
+              "label": "点赞",
+              "value": 55
+            }
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "核验等级",
+          "value": "后台已核验"
+        },
+        {
+          "label": "发布状态",
+          "value": "已发布"
+        },
+        {
+          "label": "阅读",
+          "value": 210
+        },
+        {
+          "label": "决策",
+          "value": "Keep"
+        }
+      ],
+      "diagnosis": "图文稳定",
+      "action": "继续复查"
+    },
+    {
+      "key": "baijiahao",
+      "name": "百家号",
+      "status": "steady",
+      "statusLabel": "后台已核验",
+      "latestTitle": "测试百家号标题",
+      "publishTime": "2026-04-25 · 已发布",
+      "contentType": "图文",
+      "primaryLabel": "阅读",
+      "primaryValue": 160,
+      "compareLabel": "近几条对照",
+      "baselineValue": 140,
+      "baselineNote": "阅读 140 点赞 5 评论 1",
+      "windows": [
+        {
+          "label": "今日",
+          "headline": "标题显示为「测试百家号标题」",
+          "metrics": [
+            {
+              "label": "阅读",
+              "value": 160
+            },
+            {
+              "label": "点赞",
+              "value": 7
+            },
+            {
+              "label": "评论",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "label": "近7日账号",
+          "headline": "阅读 140 点赞 5 评论 1",
+          "metrics": [
+            {
+              "label": "阅读",
+              "value": 140
+            },
+            {
+              "label": "点赞",
+              "value": 5
+            },
+            {
+              "label": "评论",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "label": "近30日账号",
+          "headline": "近30日 阅读 700 点赞 35",
+          "metrics": [
+            {
+              "label": "阅读",
+              "value": 700
+            },
+            {
+              "label": "点赞",
+              "value": 35
+            }
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "核验等级",
+          "value": "后台已核验"
+        },
+        {
+          "label": "发布状态",
+          "value": "已发布"
+        },
+        {
+          "label": "阅读",
+          "value": 160
+        },
+        {
+          "label": "决策",
+          "value": "Keep"
+        }
+      ],
+      "diagnosis": "稳定",
+      "action": "继续复查"
+    },
+    {
+      "key": "douyin",
+      "name": "抖音",
+      "status": "steady",
+      "statusLabel": "后台已核验",
+      "latestTitle": "测试抖音标题",
+      "publishTime": "2026-04-25 · 已发布",
+      "contentType": "视频",
+      "primaryLabel": "播放",
+      "primaryValue": 320,
+      "compareLabel": "近几条对照",
+      "baselineValue": 250,
+      "baselineNote": "播放 250 点赞 12 评论 3",
+      "windows": [
+        {
+          "label": "今日",
+          "headline": "标题显示为「测试抖音标题」",
+          "metrics": [
+            {
+              "label": "播放",
+              "value": 320
+            },
+            {
+              "label": "点赞",
+              "value": 18
+            },
+            {
+              "label": "评论",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "label": "近7日账号",
+          "headline": "播放 250 点赞 12 评论 3",
+          "metrics": [
+            {
+              "label": "播放",
+              "value": 250
+            },
+            {
+              "label": "点赞",
+              "value": 12
+            },
+            {
+              "label": "评论",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "label": "近30日账号",
+          "headline": "近30日 播放 1200 点赞 90",
+          "metrics": [
+            {
+              "label": "播放",
+              "value": 1200
+            },
+            {
+              "label": "点赞",
+              "value": 90
+            }
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "核验等级",
+          "value": "后台已核验"
+        },
+        {
+          "label": "发布状态",
+          "value": "已发布"
+        },
+        {
+          "label": "播放",
+          "value": 320
+        },
+        {
+          "label": "决策",
+          "value": "Keep"
+        }
+      ],
+      "diagnosis": "表现最佳",
+      "action": "继续放量"
+    },
+    {
+      "key": "bilibili",
+      "name": "B站",
+      "status": "watch",
+      "statusLabel": "本批次未发现发布项",
+      "latestTitle": "-",
+      "publishTime": "2026-04-25 · 待补",
+      "contentType": "视频",
+      "primaryLabel": "播放",
+      "primaryValue": 0,
+      "compareLabel": "近几条对照",
+      "baselineValue": 0,
+      "baselineNote": "播放 0",
+      "windows": [
+        {
+          "label": "今日",
+          "headline": "无发布项",
+          "metrics": [
+            {
+              "label": "状态",
+              "value": "待补"
+            },
+            {
+              "label": "播放",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "label": "近7日账号",
+          "headline": "播放 0",
+          "metrics": [
+            {
+              "label": "播放",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "label": "近30日账号",
+          "headline": "近30日 播放 0",
+          "metrics": [
+            {
+              "label": "播放",
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "核验等级",
+          "value": "本批次未发现发布项"
+        },
+        {
+          "label": "发布状态",
+          "value": "待补"
+        },
+        {
+          "label": "播放",
+          "value": 0
+        },
+        {
+          "label": "决策",
+          "value": "Retest"
+        }
+      ],
+      "diagnosis": "无发布项",
+      "action": "观察即可"
+    },
+    {
+      "key": "zhihu",
+      "name": "知乎",
+      "status": "steady",
+      "statusLabel": "后台已核验",
+      "latestTitle": "测试知乎标题",
+      "publishTime": "2026-04-25 · 已发布",
+      "contentType": "图文",
+      "primaryLabel": "阅读",
+      "primaryValue": 130,
+      "compareLabel": "近几条对照",
+      "baselineValue": 110,
+      "baselineNote": "阅读 110 赞同 4 评论 1",
+      "windows": [
+        {
+          "label": "今日",
+          "headline": "标题显示为「测试知乎标题」",
+          "metrics": [
+            {
+              "label": "阅读",
+              "value": 130
+            },
+            {
+              "label": "评论",
+              "value": 1
+            },
+            {
+              "label": "赞同",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "label": "近7日账号",
+          "headline": "阅读 110 赞同 4 评论 1",
+          "metrics": [
+            {
+              "label": "阅读",
+              "value": 110
+            },
+            {
+              "label": "评论",
+              "value": 1
+            },
+            {
+              "label": "赞同",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "label": "近30日账号",
+          "headline": "近30日 阅读 600 赞同 24",
+          "metrics": [
+            {
+              "label": "阅读",
+              "value": 600
+            },
+            {
+              "label": "赞同",
+              "value": 24
+            }
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "label": "核验等级",
+          "value": "后台已核验"
+        },
+        {
+          "label": "发布状态",
+          "value": "已发布"
+        },
+        {
+          "label": "阅读",
+          "value": 130
+        },
+        {
+          "label": "决策",
+          "value": "Keep"
+        }
+      ],
+      "diagnosis": "稳定",
+      "action": "继续复查"
+    }
+  ],
+  "footerLinks": []
+}
