@@ -72,6 +72,9 @@ Set-Location automation/python-platform-takeover
   - macOS / Linux 一键预检 + 同步入口
 - `scripts/dashboard-sync.ps1`
   - Windows PowerShell 一键预检 + 同步入口
+- `docs/dashboard-sync-runbook.md`
+  - 写清楚 `8080` 新设备接入和仓库脚本自动上传是两条不同链路
+  - 新设备如果只走浏览器绑定流，不需要 `工作账号登录`，也不需要把管理员凭证落到本地
 - `scripts/sync_remote_mempalace.sh`
   - 把当前仓库增量同步到远端 MemPalace 中心主机
 

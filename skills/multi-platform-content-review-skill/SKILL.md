@@ -197,7 +197,8 @@ When browser checks are required, route through:
 - if the repo includes `scripts/dashboard-sync-review.js`, prefer that single command over manual export + upload steps
 - if the operator wants a wrapper entry, use `bash scripts/dashboard-sync.sh --review-date YYYY-MM-DD` on macOS / Linux or `.\scripts\dashboard-sync.ps1 --review-date YYYY-MM-DD` on Windows
 - if the device is only checking field mapping or preparing a handoff, stop after export + validate; do not upload test data into the remote dashboard
-- before the first dashboard upload on a new device, configure `.env.dashboard` or `.env.dashboard.local` in the repo root; required keys are `DASHBOARD_API_BASE`, `DASHBOARD_ACCOUNT_NAME`, `DASHBOARD_ADMIN_USERNAME`, and `DASHBOARD_ADMIN_PASSWORD`
+- if the device only uses the browser binding flow, do not configure `.env.dashboard` and do not distribute admin credentials; the admin must generate a one-time `设备接入码` in `8081`, and the operator must bind the device from `8080`
+- only when the device will run the repo upload scripts, configure `.env.dashboard` or `.env.dashboard.local` in the repo root; required keys are `DASHBOARD_API_BASE`, `DASHBOARD_ACCOUNT_NAME`, `DASHBOARD_ADMIN_USERNAME`, and `DASHBOARD_ADMIN_PASSWORD`
 - if the device uses neither `workflow/content-library` nor `content-library`, set `CONTENT_LIBRARY_ROOT`
 - If the user asks to update the 8-platform Docker dashboard, append the Docker dashboard mapping block defined in [docker-dashboard-contract.md](./references/docker-dashboard-contract.md), or write the same object to a companion JSON export file when the workflow needs a file-based handoff.
 - When exporting to the Docker dashboard, never omit a platform card; keep the card and mark gaps as `未完成内容级核验`, `暂未可见`, or numeric `0` according to the contract.
