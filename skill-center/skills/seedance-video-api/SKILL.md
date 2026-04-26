@@ -1,6 +1,6 @@
 ---
 name: seedance-video-api
-description: Use when the user wants to create, inspect, extend, poll, or download Volcengine Ark Seedance 2.0 / 2.0 Fast video tasks through the direct API, including text-to-video, first-frame image-to-video, multimodal reference generation, 15-second extension chaining, payload preparation with the bundled CLI, and the mandatory post-generation multi-platform cover package workflow; requires a locally set `ARK_API_KEY` and must never store or request the full key in chat or tracked files.
+description: Use when the user wants to create, inspect, extend, poll, or download Volcengine Ark Seedance 2.0 / 2.0 Fast video tasks through the direct API, including text-to-video, first-frame image-to-video, multimodal reference generation, 15-second extension chaining, payload preparation with the bundled CLI, and the mandatory post-generation multi-platform cover package plus publish-copy package workflow; requires a locally set `ARK_API_KEY` and must never store or request the full key in chat or tracked files.
 ---
 
 # Seedance Video API
@@ -12,6 +12,7 @@ Direct Volcengine Ark Seedance 2.0 / 2.0 Fast workflows for Codex. Use the bundl
 - The user wants direct API access to `Seedance 2.0` or `Seedance 2.0 Fast`
 - The user wants to submit or poll Ark video-generation tasks
 - The user wants payload templates for text-to-video, first-frame image-to-video, multimodal reference video, or extension
+- The user wants a publish-ready video content package with per-platform titles and concrete copy after generation
 - The user wants to build longer videos from chained `4-15s` Seedance segments
 - The user wants to download `video_url` or `last_frame_url` from an existing task
 - The user needs a fixed `3:4` + `4:3` cover package immediately after video generation for multi-platform publishing
@@ -47,6 +48,7 @@ $env:ARK_API_KEY = '...'
 7. Download the video or last frame promptly because result URLs expire.
 8. Treat the generated video as incomplete until the cover package is also prepared.
 9. Extract one clean key frame from the final video and build the mandatory `3:4` and `4:3` PNG cover set.
+10. Treat the content package as incomplete until the publish-copy package is also prepared with per-platform titles and concrete copy.
 
 ## Mandatory Cover Package
 
@@ -89,6 +91,56 @@ Use `references/cover-package.md` for the full standard.
 Use `references/cover-execution.md` for the helper-script flow and example commands.
 
 If the task is mainly about producing, revising, or validating the cover package itself, also use [$platform-cover-ops](/Users/baishangjituan/.codex/skills/platform-cover-ops/SKILL.md).
+
+## Mandatory Publish Package
+
+For this workspace, a generated video is not a finished `内容包` until the downstream publish-copy files also exist.
+
+Minimum required deliverables for a publish-ready video campaign:
+
+- one Seedance prompt package
+- one final `mp4`
+- one `3:4` + `4:3` cover package
+- one video publish package with platform-specific titles and concrete copy
+
+The video publish package must contain real, paste-ready copy, not placeholders or title direction only.
+
+Minimum required video-platform fields:
+
+- 抖音：`标题` + `文案`
+- 快手：`标题` + `文案`
+- 视频号：`短标题` + `描述`
+- 微博视频：`标题` + `配文`
+
+If the same campaign is intended for B站 or downstream article / note platforms, also add:
+
+- B站：`标题` + `简介`
+- 百家号 / 头条号 / 知乎 / 小红书：`标题` + `正文/描述`
+
+Package rules:
+
+- use one unified topic, but do not force one identical title across all platforms
+- keep the platform title aligned with the same problem the cover is selling
+- prefer `问题句 > 动作句 > 角色句` unless current review evidence says otherwise
+- 视频号 `短标题` must be generated together with `视频描述`
+- if a file is marked `ready_for_publish`, empty title or copy sections are invalid
+
+Preferred output files in this workspace:
+
+- `content-library/posts/shared/<campaign>-all-platform-publish-package.md`
+- `content-library/posts/video/<campaign>-video-publish-package.md`
+
+Windows-ready handoff rules for this repo:
+
+- If the downstream publisher uses `automation/python-platform-takeover`, mirror the same final copy into `automation/python-platform-takeover/configs/content-package.local.yaml` or a dated `content-package.<campaign>.yaml`.
+- Field mapping stays shared across macOS and Windows:
+  - `platforms.douyin.title` / `description` = 抖音 `标题` / `文案`
+  - `platforms.kuaishou.title` / `description` = 快手 `标题` / `文案`
+  - `platforms.wechat_channels.title` / `description` = 视频号 `短标题` / `描述`
+  - `platforms.weibo.title` / `description` = 微博视频 `标题` / `配文`
+  - `platforms.baijiahao` / `toutiao` / `zhihu` / `xiaohongshu` = 各平台 `标题` / `正文或描述`
+- On Windows, keep `assets.main_video`, `assets.cover_3_4`, and `assets.cover_4_3` as quoted absolute paths, preferably `C:/...`.
+- Do not mark the campaign `ready_for_publish` until the markdown publish package exists and `.\scripts\social-publisher.ps1 validate-package automation/python-platform-takeover/configs/content-package.local.yaml` passes with those final titles and descriptions.
 
 ## Windows PowerShell Quick Use
 

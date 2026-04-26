@@ -134,9 +134,9 @@ def maybe_warn(label: str, text: str, min_len: int, max_len: int) -> None:
 
 
 def title_size(length: int, large: int, medium: int, small: int) -> int:
-    if length <= 8:
+    if length <= 6:
         return large
-    if length <= 10:
+    if length <= 8:
         return medium
     return small
 
@@ -229,26 +229,26 @@ def render_cover(
     overlay = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(overlay)
 
-    band_y = int(round(target_h * 0.70))
-    draw.rectangle((0, band_y, target_w, target_h), fill=(0, 0, 0, 144))
+    band_y = int(round(target_h * 0.74))
+    draw.rectangle((0, band_y, target_w, target_h), fill=(0, 0, 0, 128))
 
-    main_stroke = 6 if main_font_size >= 90 else 5
-    subtitle_stroke = 3
-    main_font = fit_font(draw, main_title, font_path, main_font_size, max(54, main_font_size - 30), target_w - 140, main_stroke)
-    subtitle_font = fit_font(draw, subtitle, font_path, subtitle_font_size, max(28, subtitle_font_size - 18), target_w - 180, subtitle_stroke)
+    main_stroke = 5 if main_font_size >= 86 else 4
+    subtitle_stroke = 2
+    main_font = fit_font(draw, main_title, font_path, main_font_size, max(54, main_font_size - 30), target_w - 180, main_stroke)
+    subtitle_font = fit_font(draw, subtitle, font_path, subtitle_font_size, max(28, subtitle_font_size - 18), target_w - 220, subtitle_stroke)
 
     if tag:
         tag_font = fit_font(draw, tag, font_path, tag_font_size, max(20, tag_font_size - 10), 240, 0)
         tag_bbox = draw.textbbox((0, 0), tag, font=tag_font)
-        tag_w = max(180, min(320, (tag_bbox[2] - tag_bbox[0]) + 56))
-        tag_h = max(62, (tag_bbox[3] - tag_bbox[1]) + 32)
+        tag_w = max(160, min(280, (tag_bbox[2] - tag_bbox[0]) + 44))
+        tag_h = max(54, (tag_bbox[3] - tag_bbox[1]) + 24)
         tag_x = 70
-        tag_y = int(round(target_h * 0.725))
-        draw.rounded_rectangle((tag_x, tag_y, tag_x + tag_w, tag_y + tag_h), radius=20, fill=(233, 138, 41, 247))
+        tag_y = int(round(target_h * 0.765))
+        draw.rounded_rectangle((tag_x, tag_y, tag_x + tag_w, tag_y + tag_h), radius=18, fill=(233, 138, 41, 247))
         draw_centered_text(draw, text=tag, center_x=tag_x + (tag_w / 2), center_y=tag_y + (tag_h / 2), font=tag_font, fill=(255, 255, 255, 255), shadow_fill=(0, 0, 0, 0))
 
-    draw_centered_text(draw, text=main_title, center_x=target_w / 2, center_y=target_h * 0.772, font=main_font, fill=(255, 255, 255, 255), stroke_fill=(0, 0, 0, 148), stroke_width=main_stroke, shadow_offset=(0, 6), shadow_fill=(0, 0, 0, 76))
-    draw_centered_text(draw, text=subtitle, center_x=target_w / 2, center_y=target_h * 0.853, font=subtitle_font, fill=(229, 195, 107, 255), stroke_fill=(0, 0, 0, 114), stroke_width=subtitle_stroke, shadow_offset=(0, 3), shadow_fill=(0, 0, 0, 52))
+    draw_centered_text(draw, text=main_title, center_x=target_w / 2, center_y=target_h * 0.815, font=main_font, fill=(255, 255, 255, 255), stroke_fill=(0, 0, 0, 148), stroke_width=main_stroke, shadow_offset=(0, 4), shadow_fill=(0, 0, 0, 56))
+    draw_centered_text(draw, text=subtitle, center_x=target_w / 2, center_y=target_h * 0.885, font=subtitle_font, fill=(229, 195, 107, 255), stroke_fill=(0, 0, 0, 114), stroke_width=subtitle_stroke, shadow_offset=(0, 2), shadow_fill=(0, 0, 0, 40))
 
     final_image = Image.alpha_composite(canvas, overlay).convert("RGB")
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -260,6 +260,10 @@ def update_manifest(package_dir: pathlib.Path, source_image: pathlib.Path, sourc
     if not manifest_path.exists():
         return
     manifest = load_json(manifest_path)
+    titles = manifest.get("titles")
+    if isinstance(titles, dict):
+        titles["main_title"] = main_title
+        titles["subtitle"] = subtitle
     manifest["selected_cover_source"] = {"image_path": str(source_image), "candidate": source_candidate}
     manifest["rendered_covers"] = {
         "vertical": str(package_dir / VERTICAL_NAME),
@@ -302,8 +306,8 @@ def main() -> int:
 
         with Image.open(source_image_path) as source:
             source = source.convert("RGB")
-            render_cover(source, target_w=1080, target_h=1440, crop_y_bias=0.18, font_path=font_path, main_title=main_title, subtitle=subtitle, tag=args.tag, main_font_size=title_size(len(main_title), 112, 98, 90), subtitle_font_size=title_size(len(subtitle), 56, 52, 48), tag_font_size=30, output_path=package_dir / VERTICAL_NAME)
-            render_cover(source, target_w=1440, target_h=1080, crop_y_bias=0.12, font_path=font_path, main_title=main_title, subtitle=subtitle, tag=args.tag, main_font_size=title_size(len(main_title), 96, 88, 80), subtitle_font_size=title_size(len(subtitle), 48, 44, 40), tag_font_size=28, output_path=package_dir / HORIZONTAL_NAME)
+            render_cover(source, target_w=1080, target_h=1440, crop_y_bias=0.18, font_path=font_path, main_title=main_title, subtitle=subtitle, tag=args.tag, main_font_size=title_size(len(main_title), 96, 88, 80), subtitle_font_size=title_size(len(subtitle), 44, 40, 36), tag_font_size=24, output_path=package_dir / VERTICAL_NAME)
+            render_cover(source, target_w=1440, target_h=1080, crop_y_bias=0.12, font_path=font_path, main_title=main_title, subtitle=subtitle, tag=args.tag, main_font_size=title_size(len(main_title), 84, 76, 70), subtitle_font_size=title_size(len(subtitle), 40, 36, 34), tag_font_size=22, output_path=package_dir / HORIZONTAL_NAME)
 
         update_manifest(package_dir, source_image_path, source_candidate, main_title, subtitle, args.tag)
         print(f"[ok] 竖版封面: {package_dir / VERTICAL_NAME}")

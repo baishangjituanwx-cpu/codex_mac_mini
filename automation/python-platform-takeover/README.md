@@ -253,6 +253,17 @@ Copy-Item configs/content-package.example.yaml configs/content-package.local.yam
 
 素材路径建议都写绝对路径。
 
+如果上游内容包来自今天更新过的 `seedance-video-api` 流程，Windows 下还要额外遵守这 4 条交接规则:
+
+- 不要把“视频已生成 + 封面已出图”误当成完成；只有平台文案包也落地后，才能继续往 `ready_for_publish` 走。
+- 先把最终版平台文案落到 markdown 内容包，例如 `content-library/posts/shared/<campaign>-all-platform-publish-package.md` 或 `content-library/posts/video/<campaign>-video-publish-package.md`；如果仓库里暂时没有这两个目录，就在当前 campaign 工作目录按同样命名新建。
+- 再把同一份最终文案镜像进 `configs/content-package.local.yaml` 或日期化的 `configs/content-package.<campaign>.yaml`，字段映射保持一致:
+  - `platforms.wechat_channels.title` = 视频号 `短标题`
+  - `platforms.wechat_channels.description` = 视频号 `描述`
+  - `platforms.weibo.title` / `description` = 微博视频 `标题` / `配文`
+  - `platforms.douyin` / `kuaishou` / `baijiahao` / `toutiao` / `zhihu` / `xiaohongshu` 继续写各自最终 `标题` / `文案或正文`
+- Windows 侧只有在 markdown 文案包已存在且 `.\scripts\social-publisher.ps1 validate-package configs/content-package.local.yaml` 通过后，才算完成今天新增的 `ready_for_publish` 交付标准。
+
 ## 示例命令
 
 macOS / Linux:
@@ -289,6 +300,16 @@ Windows PowerShell:
 - 直接走 `.\scripts\social-publisher.ps1 publish wechat_channels configs/content-package.local.yaml --execute`
 - 共享清空重输逻辑会在 Windows 自动使用 `Control+A`，在 macOS 自动使用 `Meta+A`
 - 视频号封面上传在 Windows / macOS 共用同一套真实上传链路: 只对 `accept*="image"` 的图片输入框做真实文件注入，不伪造 `input.files`
+- 如果 Browser Bridge / OpenCLI 暂时够不到真实编辑器，但已登录的 `platform/post/create` 页面就在前台 Chrome 里，Windows 允许走短临时路径回退，不过必须先复制成真实文件:
+
+```powershell
+Copy-Item C:/content-pipeline/video.mp4 "$env:TEMP\\vhvideo-real.mp4" -Force
+Copy-Item C:/content-pipeline/cover.png "$env:TEMP\\vhcover-standard.png" -Force
+```
+
+- 走这条回退时，不要用 Explorer 搜索结果、`.lnk` 快捷方式、OneDrive 占位文件或 symlink；直接把 `$env:TEMP\\vhvideo-real.mp4` / `$env:TEMP\\vhcover-standard.png` 这种短真实路径粘进 Windows 文件选择器的“文件名”输入框，再点 `打开`
+- 如果同一轮里 `platform/post/list` 标签页也开着，每次传文件、写字段、点 `发表` 前都重新确认当前活动页还是 `platform/post/create`
+- Shadow DOM 字段映射在 Windows / macOS 一致: `视频描述` 走 shadow-root `.input-editor`，`短标题` 走 `input[placeholder="概括视频主要内容，字数建议6-16个字符"]`，写入后必须从同一 shadow root 精确回读
 - 提交时两端都必须点真实 `button` `发表`；只点外层 wrapper `DIV` 不算成功提交
 - `微信视频号` 的成功标准在两端一致: 发布前要求 `短标题` / `视频描述` 精确回读，发布后要求管理页最新一条同时通过 `shortTitle` / `description` / 封面缩略图二次复核
 

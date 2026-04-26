@@ -64,8 +64,10 @@ Read only the section for the current platform.
 - Treat that state as a real relogin checkpoint for the publish route, not as a frame-selector bug.
 - If Playwright frame locators are flaky, use the frame's default CDP execution context instead of an isolated world.
 - For local video upload, the stable large-file path is `DOM.setFileInputFiles` with the frame-side input `objectId`.
-- 2026-04-26 verified front-Chrome fallback: when Browser Bridge/OpenCLI cannot access the real editor but the logged-in Chrome publish page is visible, copy the real video and standalone cover to short non-symlink `/tmp` paths, use the native chooser `Cmd+Shift+G` to select those exact paths, and verify each accepted upload before continuing.
-- In that fallback, never use a symlink such as `/tmp/vhvideo.mp4`; use a real copied file such as `/tmp/vhvideo-real.mp4`. The cover should likewise be a real copied standalone PNG such as `/tmp/vhcover-standard.png`.
+- 2026-04-26 verified front-Chrome fallback: when Browser Bridge/OpenCLI cannot access the real editor but the logged-in Chrome publish page is visible, copy the real video and standalone cover to short non-symlink temp paths, use the native chooser to enter those exact paths, and verify each accepted upload before continuing.
+- macOS path entry: use short real `/tmp` paths with `Cmd+Shift+G`, for example `/tmp/vhvideo-real.mp4` and `/tmp/vhcover-standard.png`.
+- Windows path entry: use short real `%TEMP%` paths such as `$env:TEMP\\vhvideo-real.mp4` and `$env:TEMP\\vhcover-standard.png`, paste the exact real path into the chooser's file-name box, and confirm `Open`.
+- In that fallback, never use a symlink or shortcut path such as `/tmp/vhvideo.mp4` or `%TEMP%\\vhvideo.lnk`; use real copied files only.
 - After upload, wait until the page no longer shows transient upload state such as `请上传视频`, `取消上传`, or `0%` before editing cover or publishing.
 - On 视频号, after custom-cover editing the page can still show `文件上传中，请等待完成后再发表。` while the description and short title already look filled.
 - Treat that as an upload-in-progress state, not as a field failure. Wait until the upload text disappears and the `发表` button loses `weui-desktop-btn_disabled`, then publish.

@@ -135,8 +135,9 @@ Key points:
 - 2026-04-26 verified replacement publish after the user deleted the bad old item:
 - when direct bridge control cannot reach the real editor but the logged-in Chrome publish page is visible, use the existing `platform/post/create` tab and explicitly reactivate it before every action
 - if a `platform/post/list` tab is also open, it may steal focus after file selection; do not type or submit until the active tab URL is checked again
-- copy the real video and standalone cover to short non-symlink `/tmp` paths before native file selection, e.g. `/tmp/vhvideo-real.mp4` and `/tmp/vhcover-standard.png`
-- upload video from the visible upload box with native chooser `Cmd+Shift+G`, wait for the video preview and `封面预览`
+- macOS short-path fallback: copy the real video and standalone cover to short non-symlink `/tmp` paths before native file selection, e.g. `/tmp/vhvideo-real.mp4` and `/tmp/vhcover-standard.png`
+- Windows short-path fallback: copy the real video and standalone cover to short non-symlink `%TEMP%` paths such as `$env:TEMP\\vhvideo-real.mp4` and `$env:TEMP\\vhcover-standard.png`, then paste the exact path into the chooser's file-name box
+- upload video from the visible upload box with the OS-native exact-path chooser flow, wait for the video preview and `封面预览`
 - open `编辑` under `封面预览`, use the same short-path chooser fallback to upload the standalone cover, then click the inner modal `确认`
 - verify the compose cover preview changes to the intended text-cover style before filling fields
 - for the current Shadow DOM UI, field targets are `.input-editor` for `视频描述` and `input[placeholder="概括视频主要内容，字数建议6-16个字符"]` for `短标题`; write through native setter/input events or real typing and read exact values back from the same shadow root

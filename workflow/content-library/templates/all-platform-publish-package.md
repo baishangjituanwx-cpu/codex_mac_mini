@@ -10,6 +10,10 @@ cover_frame_secondary: "{{ASSET_ROOT}}/covers/cover_frame_secondary.jpg"
 
 # 全平台发布主包
 
+> 这是方向总包，不替代分平台具体发布文案。
+> 只生成标题方向还不算完成。
+> 每次新内容包至少还要同时交付一个视频平台发布包，里面必须有可直接粘贴的真实标题和具体文案。
+
 ## 一、今日母题
 
 - 母题:
@@ -35,6 +39,12 @@ cover_frame_secondary: "{{ASSET_ROOT}}/covers/cover_frame_secondary.jpg"
 - 视频号:
 - 微博:
 
+## 四点五、分平台具体文案交付要求
+
+- 视频平台发布包必须包含：抖音 `标题+文案`、快手 `标题+文案`、视频号 `短标题+描述`、微博 `标题+配文`
+- 如果本批次覆盖 B站，也要同时给出 `标题+简介`
+- 如果本批次覆盖图文平台，还要继续产出对应正文包，不能只停在标题矩阵
+
 ## 五、图文平台标题矩阵
 
 - 知乎:
@@ -58,4 +68,3 @@ cover_frame_secondary: "{{ASSET_ROOT}}/covers/cover_frame_secondary.jpg"
 - 主视频: `{{ASSET_ROOT}}/master.mp4`
 - 竖版封面: `{{ASSET_ROOT}}/covers/cover_vertical_3x4.jpg`
 - 横版封面: `{{ASSET_ROOT}}/covers/cover_horizontal_4x3.jpg`
-

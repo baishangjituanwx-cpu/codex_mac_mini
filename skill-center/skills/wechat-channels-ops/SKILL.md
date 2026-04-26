@@ -38,7 +38,9 @@ If the task requires real browser execution, also use `$social-publish-automatio
 - CDP `DOM.setFileInputFiles` on the frame-side image file input
 - The image selector must target `accept*="image"`; never use a generic `input[type=file]` if a video file input is also present.
 - Native macOS file chooser path typing is not the default 视频号 upload path. Long paths, Finder search strings, and symlinks have produced malformed selections in this environment.
-- If direct file injection cannot reach the input but the visible Chrome publish page is healthy, a controlled fallback is allowed: copy the asset to a short real `/tmp/<simple-name>` path, use `Cmd+Shift+G` to select that exact path, and immediately verify the UI accepted the upload. Never use a symlink for this fallback.
+- Native Windows chooser fallback is also restricted: do not rely on Explorer search results, `.lnk` shortcuts, cloud-placeholder paths, or symlink targets as the upload source.
+- If direct file injection cannot reach the input but the visible Chrome publish page is healthy, a controlled macOS fallback is allowed: copy the asset to a short real `/tmp/<simple-name>` path, use `Cmd+Shift+G` to select that exact path, and immediately verify the UI accepted the upload. Never use a symlink for this fallback.
+- If direct file injection cannot reach the input on Windows but the visible Chrome publish page is healthy, a controlled Windows fallback is allowed: copy the asset to a short real `%TEMP%\\<simple-name>` path such as `$env:TEMP\\vhvideo-real.mp4`, paste that exact path into the chooser's file-name box, confirm `Open`, and immediately verify the UI accepted the upload. Never use a shortcut or symlink for this fallback.
 - Cover acceptance requires visual readability, not just a non-empty thumbnail URL. Before clicking `发表`, check the cover at a small management-list-like size and confirm the main cover title is readable and the founder人物/主体 is clearly visible. If the title is readable but the人物 is hidden by a dark overlay, treat it as a cover failure.
 - If the published cover is wrong or unreadable, use the existing row's `修改描述和封面` repair flow. Do not republish the same video only to fix a cover.
 - After `修改描述和封面`, click the outer `完成`, then the final `确认修改`; if the row shows `修改审核中，预计30分钟内审核完成`, record the state as `cover_repair_under_review` and verify again after review before marking the cover fully fixed.
@@ -130,6 +132,7 @@ If the task requires real browser execution, also use `$social-publish-automatio
 - close or ignore the extra list tab and explicitly reactivate the intended `platform/post/create` tab before each action
 - copy the real video and real standalone cover to short non-symlink temp files such as `/tmp/vhvideo-real.mp4` and `/tmp/vhcover-standard.png`
 - upload the video through the visible upload box plus native chooser `Cmd+Shift+G` short path, then wait for the video preview and `封面预览`
+- Windows uses the same fallback shape with short real temp files such as `$env:TEMP\\vhvideo-real.mp4` and `$env:TEMP\\vhcover-standard.png`; paste the exact path into the chooser's file-name box instead of relying on Explorer search results or shortcuts
 - open `编辑` under `封面预览`, upload the standalone cover with the same short-path chooser fallback, click the inner modal `确认`, and verify the compose preview changes to the intended text-cover style
 - write `视频描述` and `短标题` through the Shadow DOM field map, then read both exact values back before final submit
 - scroll the shadow `.app-body` to the bottom, click the real `发表` button only after final operator authorization, then verify the list row count increased and the newest row shows the expected date, description snippet, and standalone cover thumbnail

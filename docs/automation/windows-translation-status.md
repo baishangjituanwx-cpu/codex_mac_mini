@@ -1066,3 +1066,113 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-25 22:05:00 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为仍已完成 Windows 侧补齐或复核；本次运行没有发现新的待补 Windows 缺口。
+
+## 2026-04-26 22:04:26 CST
+
+- 处理时间:
+  - `2026-04-26 22:04:26 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-04-25 22:05:00 CST` 之后追加的非零批次:
+    - `2026-04-26 11:09:02 CST`
+    - `2026-04-26 12:10:33 CST`
+    - `2026-04-26 13:12:56 CST`
+    - `2026-04-26 17:18:30 CST`
+    - `2026-04-26 18:19:44 CST`
+    - `2026-04-26 20:21:49 CST`
+  - 其中真正需要 Windows 侧补记的是视频号 front-Chrome fallback / Shadow DOM / create-list 抢焦点这批 skill 规则，涉及:
+    - `skill-center/skills/social-publish-automation/SKILL.md`
+    - `skill-center/skills/social-publish-automation/references/platform-notes.md`
+    - `skill-center/skills/wechat-channels-ops/SKILL.md`
+    - `skill-center/skills/wechat-channels-ops/references/platform-notes.md`
+    - `automation/python-platform-takeover/README.md`
+  - `2026-04-26 18:19:44 CST` 的 `seedance-video-api` publish-copy 升级与 `2026-04-26 11:09:02 CST` / `20:21:49 CST` 的 publish-receipt 样例更新已复核，现有 Windows PowerShell 启动器、路径规则与共享回执语义已覆盖，无需新增 Windows 脚本或 repo 资产。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/social-publish-automation`:
+    - 将短路径上传回退正式拆成 macOS / Windows 两套等价说明:
+      - macOS 继续使用真实 `/tmp/<simple-name>` + `Cmd+Shift+G`
+      - Windows 新增真实 `%TEMP%\\<simple-name>` + 文件选择器“文件名”精确路径输入
+    - 明确 Windows 侧禁止使用 Explorer 搜索结果、`.lnk` 快捷方式、symlink 目标或云占位文件作为上传源。
+    - 将视频号 front-Chrome fallback 改写为跨平台表述，写明 Windows 与 macOS 共用同一套 create-tab、Shadow DOM、最新管理行复核规则。
+  - `skill-center/skills/wechat-channels-ops`:
+    - 补入 Windows 原生选择器的受控回退规则，要求先复制成短真实 `%TEMP%` 文件，再把精确路径粘到 chooser 的“文件名”输入框。
+    - 在 `2026-04-26` 已验证替换发布笔记里补入 Windows 等价示例路径:
+      - `$env:TEMP\\vhvideo-real.mp4`
+      - `$env:TEMP\\vhcover-standard.png`
+    - 明确 Windows 下也必须每步重锁 `platform/post/create`，并沿用相同的 Shadow DOM 字段回读与最终列表行复核。
+  - `automation/python-platform-takeover/README.md`:
+    - 新增 Windows PowerShell 可直接执行的短临时路径复制示例:
+      - `Copy-Item ... "$env:TEMP\\vhvideo-real.mp4" -Force`
+      - `Copy-Item ... "$env:TEMP\\vhcover-standard.png" -Force`
+    - 写明 Windows chooser 的正确操作是把真实短路径直接粘进“文件名”框，而不是依赖搜索结果或快捷方式。
+    - 补记 create/list 双标签抢焦点风险和 Shadow DOM 字段映射在 Windows 下的具体口径。
+  - `skill-center/skills/seedance-video-api` / `automation/python-platform-takeover/state/publish-receipts/*.json`:
+    - 本轮未新增 Windows 文件。
+    - 已复核 `seedance-video-api` 当前仓库版本已经具备 `seedance_cli.ps1`、`build_cover_package.ps1`、Windows 路径规则，以及 `ready_for_publish` 需要封面包 + publish-copy package 的说明。
+    - 已复核 `published_verified`、`under_review`、`处理中` 等回执状态在 Windows / macOS 含义一致，不需要单独分叉。
+- 未完成的补全:
+  - 无。
+  - 截至本次处理，`2026-04-26` monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产同步的项。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮变更全部是仓库文档桥接，没有新增需要实机解析的 `.ps1` 脚本。
+  - 已计划执行静态复核: 目标文件 diff / `git diff --check`；本机仍未做 Windows PowerShell 实机回归。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-04-26 22:04:26 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧补齐或复核；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-04-26 22:03:33 CST
+
+- 处理时间:
+  - `2026-04-26 22:03:33 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-04-25 22:05:00 CST` 之后追加的批次:
+    - `2026-04-26 17:18:30 CST`
+    - `2026-04-26 18:19:44 CST`
+    - `2026-04-26 20:23:39 CST`
+    - `2026-04-26 21:23:54 CST`
+  - 其中真正需要 Windows 侧补桥接的非零 skill 变更是:
+    - `skill-center/skills/social-publish-automation/{SKILL.md,references/platform-notes.md}` 的视频号 front-Chrome fallback、短 `/tmp` 实体文件上传、create/list 页聚焦与 Shadow DOM 回读规则
+    - `skill-center/skills/wechat-channels-ops/{SKILL.md,references/platform-notes.md}` 的 create/list 入口职责、短 `/tmp` 实体文件 fallback 与最新 `视频管理` 行校验
+    - `skill-center/skills/seedance-video-api/SKILL.md`
+    - `skill-center/skills/seedance-video-api/references/workflows.md`
+    - `automation/python-platform-takeover/configs/content-package.2026-04-25-platform-execution-six-writeback-fields.yaml`
+  - `2026-04-26 20:23:39 CST` 的 publish receipt 新增与 `2026-04-26 21:23:54 CST` 的零变更批次不引入新的 Windows 专属缺口，只需要纳入本轮复核结论。
+- 已完成的 Windows 补全:
+  - `social-publish-automation` / `wechat-channels-ops`:
+    - 复核后确认这批视频号规则更新仍然复用现有 Windows 入口，无需新增 PowerShell 启动器、命令包装器或快捷键分叉:
+      - `automation/python-platform-takeover/scripts/social-publisher.ps1`
+      - `automation/python-platform-takeover/scripts/start-chrome-cdp.ps1`
+    - 共享逻辑已覆盖 Windows 差异:
+      - 清空重输仍由共享逻辑自动使用 `Control+A`
+      - create/list 页聚焦、短 `/tmp` 实体文件上传、Shadow DOM 字段回读、以及 `视频管理` 最新行校验都在同一套跨平台 Python / YAML 流程里，不需要单独 Windows 代码补丁
+  - `seedance-video-api`:
+    - 更新 `skill-center/skills/seedance-video-api/SKILL.md`，把今天新增的“视频 + 封面 + 平台发布文案包”完成标准补成 Windows 可执行交接说明，明确:
+      - Windows 下要把最终平台文案同时落到 markdown publish package 与 `automation/python-platform-takeover/configs/content-package.local.yaml` 或日期化 YAML
+      - `platforms.wechat_channels.title` / `description` 分别对应视频号 `短标题` / `描述`
+      - `assets.main_video`、`assets.cover_3_4`、`assets.cover_4_3` 在 Windows 侧继续优先写 `C:/...` 绝对路径
+      - 只有 markdown 文案包存在且 `.\scripts\social-publisher.ps1 validate-package ...` 通过，才能把 campaign 视为 `ready_for_publish`
+    - 更新 `skill-center/skills/seedance-video-api/references/workflows.md`，补记 Windows handoff 规则，把“mandatory publish copy step”落到 PowerShell 可验证的 YAML / 校验命令上。
+  - `automation/python-platform-takeover`:
+    - 更新 `automation/python-platform-takeover/README.md`，补齐 Windows 交接口径，明确:
+      - Seedance 上游现在必须同时交视频、封面、平台文案包
+      - markdown publish package 与 `configs/content-package.local.yaml` / `configs/content-package.<campaign>.yaml` 的字段映射关系
+      - 仓库暂时没有 `content-library/` 目录时，可以在当前 campaign 工作目录按同样命名创建文案包文件
+      - Windows 侧以 `.\scripts\social-publisher.ps1 validate-package ...` 作为新增 `ready_for_publish` 标准的落地校验
+  - repo 资产结论:
+    - `automation/python-platform-takeover/configs/content-package.2026-04-25-platform-execution-six-writeback-fields.yaml` 本身已是跨平台 YAML 资产；本轮只补文档桥接，不需要新增 `.ps1` / `.cmd` 文件。
+- 未完成的补全:
+  - 无。
+  - `2026-04-26` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产同步的自定义 skill 行为。
+- 阻塞原因:
+  - 无阻塞。
+  - 本轮新增内容全部是 Windows 文档桥接，没有新增 PowerShell 脚本或 Python 分支。
+  - 已执行复核:
+    - `skill-center/skills/seedance-video-api/SKILL.md`
+    - `skill-center/skills/seedance-video-api/references/workflows.md`
+    - `automation/python-platform-takeover/README.md`
+    - `automation/python-platform-takeover/configs/content-package.example.yaml`
+    - `automation/python-platform-takeover/scripts/{social-publisher.ps1,start-chrome-cdp.ps1}`
+  - 本机未做 Windows PowerShell 实机回归；当前判断基于现有 `.ps1` 入口复核、Windows 路径规则检查，以及新增文档桥接是否覆盖今天 monitor 的 skill 行为。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-04-26 22:03:33 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧补齐或复核；Mac 与 Windows 覆盖今日均完整。

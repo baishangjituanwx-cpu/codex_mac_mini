@@ -1,0 +1,113 @@
+{
+  "campaign_id": "2026-04-25-platform-execution-six-writeback-fields",
+  "receipts": {
+    "baijiahao": {
+      "campaign_id": "2026-04-25-platform-execution-six-writeback-fields",
+      "current_url": "https://baijiahao.baidu.com/builder/rc/content?currentPage=1&pageSize=10&search=&type=&collection=&startDate=&endDate=",
+      "external_id": null,
+      "management_url": "https://baijiahao.baidu.com/builder/rc/content?currentPage=1&pageSize=10&search=&type=&collection=&startDate=&endDate=",
+      "notes": [],
+      "platform_id": "baijiahao",
+      "recorded_at": "2026-04-26T14:22:04.662412+00:00",
+      "share_link": null,
+      "status": "published",
+      "title": "为什么很多团队复盘总错位？问题往往不在分析，而在发完内容后没先写回6个真实字段"
+    },
+    "bilibili": {
+      "campaign_id": "2026-04-25-platform-execution-six-writeback-fields",
+      "current_url": "https://member.bilibili.com/platform/upload-manager/article",
+      "external_id": null,
+      "management_url": "https://member.bilibili.com/platform/upload-manager/article",
+      "notes": [],
+      "platform_id": "bilibili",
+      "recorded_at": "2026-04-26T15:24:57.520963+00:00",
+      "share_link": null,
+      "status": "published",
+      "title": "为什么复盘总错位：发完内容后，第一件事不是分析，而是写回6个真实字段"
+    },
+    "douyin": {
+      "campaign_id": "2026-04-25-platform-execution-six-writeback-fields",
+      "current_url": "https://creator.douyin.com/creator-micro/content/manage",
+      "external_id": null,
+      "management_url": "https://creator.douyin.com/creator-micro/content/manage",
+      "notes": [],
+      "platform_id": "douyin",
+      "recorded_at": "2026-04-26T15:00:56.896724+00:00",
+      "share_link": null,
+      "status": "under_review",
+      "title": "为什么复盘总错位"
+    },
+    "kuaishou": {
+      "campaign_id": "2026-04-25-platform-execution-six-writeback-fields",
+      "current_url": "https://cp.kuaishou.com/article/manage/video",
+      "external_id": null,
+      "management_url": "https://cp.kuaishou.com/article/manage/video",
+      "notes": [],
+      "platform_id": "kuaishou",
+      "recorded_at": "2026-04-26T15:05:54.169307+00:00",
+      "share_link": null,
+      "status": "under_review",
+      "title": "先写回6字段"
+    },
+    "toutiao": {
+      "campaign_id": "2026-04-25-platform-execution-six-writeback-fields",
+      "current_url": "https://mp.toutiao.com/profile_v4/graphic/articles",
+      "external_id": null,
+      "management_url": "https://mp.toutiao.com/profile_v4/graphic/articles",
+      "notes": [],
+      "platform_id": "toutiao",
+      "recorded_at": "2026-04-26T14:31:45.765067+00:00",
+      "share_link": null,
+      "status": "under_review",
+      "title": "为什么很多团队第二天复盘总错位？真正漏掉的，是发完内容后先写回这6个真实字段"
+    },
+    "wechat_channels": {
+      "campaign_id": "2026-04-25-platform-execution-six-writeback-fields",
+      "current_url": "https://channels.weixin.qq.com/platform/post/list",
+      "external_id": null,
+      "management_url": "https://channels.weixin.qq.com/platform/post/list",
+      "notes": [],
+      "platform_id": "wechat_channels",
+      "recorded_at": "2026-04-26T15:22:52.489700+00:00",
+      "share_link": null,
+      "status": "published",
+      "title": "先写回6字段"
+    },
+    "weibo": {
+      "campaign_id": "2026-04-25-platform-execution-six-writeback-fields",
+      "current_url": "https://weibo.com/u/2326772703",
+      "external_id": null,
+      "management_url": "https://weibo.com/u/2326772703",
+      "notes": [],
+      "platform_id": "weibo",
+      "recorded_at": "2026-04-26T11:55:45.091599+00:00",
+      "share_link": null,
+      "status": "published",
+      "title": "为什么复盘总错位：很多团队发完内容后，漏掉的是先写回这6个真实字段"
+    },
+    "xiaohongshu": {
+      "campaign_id": "2026-04-25-platform-execution-six-writeback-fields",
+      "current_url": "https://creator.xiaohongshu.com/publish/success?source=official",
+      "external_id": null,
+      "management_url": "https://creator.xiaohongshu.com/new/note-manager?source=official",
+      "notes": [],
+      "platform_id": "xiaohongshu",
+      "recorded_at": "2026-04-26T11:31:33.622124+00:00",
+      "share_link": null,
+      "status": "under_review",
+      "title": "复盘错位？先补6字段"
+    },
+    "zhihu": {
+      "campaign_id": "2026-04-25-platform-execution-six-writeback-fields",
+      "current_url": "https://zhuanlan.zhihu.com/p/2031821852427957615",
+      "external_id": null,
+      "management_url": "https://www.zhihu.com/creator/content",
+      "notes": [],
+      "platform_id": "zhihu",
+      "recorded_at": "2026-04-26T11:51:08.716628+00:00",
+      "share_link": "https://zhuanlan.zhihu.com/p/2031821852427957615",
+      "status": "published",
+      "title": "为什么很多团队第二天复盘会对错内容？问题往往不在分析，而在发完内容后没有先把6个真实字段写回"
+    }
+  }
+}

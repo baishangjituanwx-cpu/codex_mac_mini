@@ -14,6 +14,8 @@ Recommended flow:
 3. Run `submit --dry-run`.
 4. Run `submit --wait --download ...`.
 5. Build the mandatory post-generation cover package from the finished video.
+6. Build the video publish package with platform-specific titles and concrete copy.
+7. Do not call the campaign `ready_for_publish` until both the cover package and publish-copy package exist.
 
 ## 2. First-Frame Image To Video
 
@@ -26,6 +28,7 @@ Notes:
 - Keep the image local with `local://...` or switch to a public image URL.
 - Use `return_last_frame=true` if the user wants a future extension anchor.
 - If this clip is headed for multi-platform publishing, prepare the post-generation cover package immediately after the final video lands.
+- If this clip is headed for multi-platform publishing, also prepare the video publish package immediately after the cover package lands.
 
 ## 3. Multimodal Reference Video
 
@@ -37,7 +40,7 @@ Notes:
 
 - This is for reference-image / reference-video / reference-audio style control.
 - Do not mix first-frame / last-frame mode with multimodal reference mode.
-- The publishing-ready deliverable is still `video + cover package`, not `video only`.
+- The publishing-ready deliverable is `video + cover package + publish-copy package`, not `video only`.
 
 ## 4. Single-Clip Extension
 
@@ -106,6 +109,28 @@ Always add:
 5. shortlist candidate frames first if the final video has multiple usable close-up shots
 6. render the final cover PNGs from the chosen candidate still
 7. if the process needs repeatability or handoff, follow `cover-execution.md`
+
+## 8. Mandatory Post-Generation Publish Copy Step
+
+If the user says `内容包`, `可发布`, `准备发平台`, or anything equivalent, the work is still incomplete after the cover package.
+
+Also generate one video publish package with concrete copy:
+
+1. 抖音 `标题` + `文案`
+2. 快手 `标题` + `文案`
+3. 视频号 `短标题` + `描述`
+4. 微博视频 `标题` + `配文`
+5. B站 `标题` + `简介` when the campaign also goes to B站
+
+Rules:
+
+- these fields must be paste-ready final copy, not placeholders
+- keep one unified topic but adapt title tone by platform
+- for 视频号, treat `短标题` and `描述` as mandatory paired fields
+- if article / note platforms are in scope, continue with their正文包 as a separate downstream step
+- on Windows handoff, copy the same final fields into `automation/python-platform-takeover/configs/content-package.local.yaml` or a dated `content-package.<campaign>.yaml`
+- treat `platforms.wechat_channels.title` as 视频号 `短标题` and `platforms.wechat_channels.description` as 视频号 `描述`
+- do not call the campaign `ready_for_publish` until the markdown publish package exists and `.\scripts\social-publisher.ps1 validate-package ...` passes against the finished YAML
 
 Default naming:
 

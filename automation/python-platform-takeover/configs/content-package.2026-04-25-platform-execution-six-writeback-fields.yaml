@@ -1,0 +1,41 @@
+campaign_id: "2026-04-25-platform-execution-six-writeback-fields"
+theme: "很多团队复盘总错位，不是不会分析，而是发完内容以后没有先把6个真实字段写回。"
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-25-platform-execution-six-writeback-fields.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-25-platform-execution-six-writeback-fields_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-25-platform-execution-six-writeback-fields_cover_package/cover-horizontal-4x3.png"
+publish_constraints:
+  reuse_logged_in_publish_page: true
+  skip_duplicate_if_already_published: true
+  prefer_repair_existing_post_over_republish: true
+  require_cover_thumbnail_check_25pct: true
+  require_management_page_verification: true
+  require_title_description_cover_alignment: true
+platforms:
+  weibo:
+    title: "为什么复盘总错位：很多团队发完内容后，漏掉的是先写回这6个真实字段"
+    description: "很多团队第二天复盘总在对错内容。问题不在不会分析，而在发完内容以后没有先把真实标题、真实链接、发布时间、状态词、一句诊断和下一步动作这 6 个字段写回。先把证据写回，再谈复盘结论。比如标题写回“AI员工补字段”，状态写回“已发布”，动作写回“24小时后补抓数据”。人做判断，AI 负责补字段。#AI员工 #内容复盘 #字段写回"
+  douyin:
+    title: "为什么复盘总错位"
+    description: "很多团队第二天复盘总在对错内容，问题不在不会分析，而在发完内容以后没有先把证据字段写回。最该先补的是这 6 个真实字段：真实标题、真实链接、发布时间、状态词、一句诊断、下一步动作。比如标题写回“AI员工补字段”，状态写回“已发布”，动作写回“24小时后补抓数据”。人做判断，AI 负责补字段。#AI员工 #内容复盘 #字段写回 #平台执行"
+  wechat_channels:
+    title: "先写回6字段"
+    description: "很多团队第二天复盘总在对错内容，问题不在不会分析，而是发完内容以后没有先把真实字段写回。最该先补的是这 6 个真实字段：真实标题、真实链接、发布时间、状态词、一句诊断、下一步动作。比如标题写回“AI员工补字段”，状态写回“已发布”，动作写回“24小时后补抓数据”。人做判断，AI 负责补字段。"
+  kuaishou:
+    title: "先写回6字段"
+    description: "很多团队复盘会错位，不是不会看数据，而是发完以后没先写回真实字段。先补这 6 个：标题、链接、时间、状态、诊断、动作。人做判断，AI 负责补字段。"
+  baijiahao:
+    title: "为什么很多团队复盘总错位？问题往往不在分析，而在发完内容后没先写回6个真实字段"
+    description: "很多团队第二天复盘会对错内容，不是因为不会分析，而是前一步就没做好。内容发完以后，没有先把真实标题、真实链接、发布时间、状态词、一句诊断和下一步动作写回字段，第二天再看表，证据已经错位。真正该先交给 AI 员工的，不是抽象复盘，而是先把这 6 个真实字段写回。"
+  toutiao:
+    title: "为什么很多团队第二天复盘总错位？真正漏掉的，是发完内容后先写回这6个真实字段"
+    description: "很多团队复盘做不准，不是不会看数据，而是发完内容以后没有先把真实后台标题、真实链接、发布时间和状态写回字段。结果第二天一比平台数据，内容和证据已经对不上。更该先交给 AI 员工的，不是空洞复盘，而是先把 6 个真实字段写回。"
+  zhihu:
+    title: "为什么很多团队第二天复盘会对错内容？问题往往不在分析，而在发完内容后没有先把6个真实字段写回"
+    description: "我越来越认同一个判断：很多团队复盘做不准，不是因为不会分析，而是发完内容以后没有先把真实后台字段写回。真正该先补的是这 6 个真实字段：真实标题、真实链接、发布时间、状态词、一句诊断、下一步动作。比如标题写回“AI员工补字段”，状态写回“已发布”，动作写回“24小时后补抓数据”。人保留判断，AI 负责补字段。"
+  xiaohongshu:
+    title: "复盘错位？先补6字段"
+    description: "很多团队第二天复盘总在对错内容，不是不会分析，而是发完内容以后没先把真实字段写回。最该先补的是这 6 个：标题、链接、时间、状态、诊断、动作。比如标题写回“AI员工补字段”，状态写回“已发布”，动作写回“24小时后补抓数据”。人做判断，AI 负责补字段。"
+  bilibili:
+    title: "为什么复盘总错位：发完内容后，第一件事不是分析，而是写回6个真实字段"
+    description: "很多团队第二天复盘会对错内容，问题不在分析，而在发完内容以后没有先把真实后台字段写回。真正该先补的是这 6 个真实字段：真实标题、真实链接、发布时间、状态词、一句诊断、下一步动作。比如标题写回“AI员工补字段”，状态写回“已发布”，动作写回“24小时后补抓数据”。人保留判断，AI 负责补字段。"
