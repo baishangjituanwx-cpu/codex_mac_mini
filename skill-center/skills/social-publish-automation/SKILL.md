@@ -33,7 +33,8 @@ Prefer it when the task involves:
 - For video platforms with a custom cover, run a cover-readability preflight before opening the platform editor: view or render the cover at roughly 25 percent scale and confirm the main title is readable in the small preview.
 - If the cover depends on text, a thumbnail URL or uploaded-file state is not sufficient. The package is incomplete until the cover title is visually readable in a list-card-sized preview.
 - For browser-side cover uploads, never use page-side JavaScript to assign `input.files`; that can bypass the platform upload service. Use Playwright `set_input_files`, OpenCLI `setFileInput`, or CDP `DOM.setFileInputFiles` on an image-only file input.
-- Do not type local file paths into a macOS native file chooser through AppleScript as an automation fallback. If direct file injection fails, stop and surface the blocker; mistyped or mangled paths can create false confidence and broken uploads.
+- Do not type long local paths, Finder search strings, or symlink paths into a macOS native file chooser through AppleScript as a normal automation fallback. If direct file injection fails, stop unless the platform has a verified short-path fallback.
+- Verified short-path fallback rule: copy the real asset to a short non-symlink `/tmp/<simple-name>` path, select it with the native chooser `Cmd+Shift+G`, and immediately verify the platform UI accepted the upload. If the UI does not visibly accept the upload, stop instead of continuing.
 - Before any retry or补发, check the local publish receipt ledger first. The hard-stop ledger for this workspace lives under `automation/python-platform-takeover/state/publish-receipts/<campaign_id>.json`.
 - Before any retry or补发, check the target platform's management list for the exact same title or asset first. If an item already exists in a terminal or near-terminal state such as `已发布`, `审核中`, or `审核未通过`, stop and resolve that item instead of auto-reposting.
 - Default rule: do not re-publish the same platform item just because this round's UI flow looked unstable.
@@ -64,6 +65,7 @@ Prefer it when the task involves:
 - Distinguish `已发布`, `已提交`, `审核中`, and `请求已发出但未入库`.
 - When the platform exposes framework-managed row data or API payloads, prefer those exact fields over partial visible snippets.
 - For 微信视频号 publishing in this workspace, use `https://channels.weixin.qq.com/platform/post/create` as the standard direct-entry URL. Treat the list page as a verification surface, not the default initial publish surface.
+- For 微信视频号, if Browser Bridge / OpenCLI cannot reach the real editor but the logged-in Chrome page is visible and healthy, use the verified front-Chrome fallback: target the existing create tab, upload video and cover from short real `/tmp` paths through the native chooser, write Shadow DOM fields, verify exact values, then submit and verify the newest management row.
 
 ## Operating Rules
 
@@ -144,5 +146,6 @@ For 微信视频号 in this workspace, the minimum verified-success standard is:
 - newest-row thumbnail consistent with the intended uploaded cover
 - newest-row thumbnail title readable at list-card size and founder人物/主体 visible, or row state explicitly shows `修改审核中` after a submitted cover repair
 - submit-click validation that the real `button` was clicked; if only a wrapper `DIV` was clicked and no list state changes, treat the submit as not executed
+- if list and create tabs coexist, reselect the create tab before every upload, field write, and submit; list-tab focus jumps are a known source of false input and stale verification
 
 Once the result is confirmed and notify-worthy, send the Feishu push immediately, then continue to the next platform.

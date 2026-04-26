@@ -21,9 +21,12 @@ If the task requires real browser execution, also use `$social-publish-automatio
 - For video publishing in this workspace, treat `https://channels.weixin.qq.com/platform/post/create` as the standard direct-entry URL.
 - If a correct `platform/post/create` tab is already open, take over that tab directly.
 - If only a 视频号助手 shell or list tab is open, reuse that existing tab and navigate it to `https://channels.weixin.qq.com/platform/post/create` before starting the publish flow.
+- If both `platform/post/create` and `platform/post/list` tabs are open, explicitly target the create tab before every upload, field write, and submit action. The list tab can steal focus after file selection; never type or click based on the last active tab without rechecking the URL.
+- If multiple create tabs exist, use only the tab whose live draft matches the intended package. Do not reuse an old draft with a different video, description, short title, or cover.
 - Treat `视频描述` and `短标题` as required packaging fields for video posts, not optional extras.
 - For this workspace, descriptions and short titles are framework-bound fields. Do not trust plain DOM assignment alone.
 - Prefer real typing first. If the visible editor text and platform payload diverge, use a framework-aware setter path that updates the page's own component state, then verify the payload again before publish.
+- If the publish form is exposed through Shadow DOM, the verified field targets are the shadow-root `.input-editor` for `视频描述` and `input[placeholder="概括视频主要内容，字数建议6-16个字符"]` for `短标题`. Use native setters / input events or real typing, then read back both exact values from the same shadow root before submit.
 - For 小云雀 founder videos in this workspace, generate the video first, then immediately build the prepared cover set: one vertical `3:4` cover and one horizontal `4:3` cover, each with one 8 to 10 Chinese-character theme.
 - Before clicking `发表`, read both fields back from the editor and stop if either one did not persist.
 - For 视频号 specifically, editor readback is necessary but not sufficient. The stronger pre-publish check is that the page's framework-managed publish payload also contains the exact target `短标题` and `视频描述`.
@@ -34,7 +37,8 @@ If the task requires real browser execution, also use `$social-publish-automatio
 - OpenCLI `page.setFileInput([<local_cover_path>], 'input[type="file"][accept*="image"]')`
 - CDP `DOM.setFileInputFiles` on the frame-side image file input
 - The image selector must target `accept*="image"`; never use a generic `input[type=file]` if a video file input is also present.
-- Do not use macOS native file chooser path typing through AppleScript for 视频号 cover upload. It has produced malformed paths in this environment and can silently select nothing. If direct file injection cannot reach the input, stop and report the blocker instead of typing a path into the system dialog.
+- Native macOS file chooser path typing is not the default 视频号 upload path. Long paths, Finder search strings, and symlinks have produced malformed selections in this environment.
+- If direct file injection cannot reach the input but the visible Chrome publish page is healthy, a controlled fallback is allowed: copy the asset to a short real `/tmp/<simple-name>` path, use `Cmd+Shift+G` to select that exact path, and immediately verify the UI accepted the upload. Never use a symlink for this fallback.
 - Cover acceptance requires visual readability, not just a non-empty thumbnail URL. Before clicking `发表`, check the cover at a small management-list-like size and confirm the main cover title is readable and the founder人物/主体 is clearly visible. If the title is readable but the人物 is hidden by a dark overlay, treat it as a cover failure.
 - If the published cover is wrong or unreadable, use the existing row's `修改描述和封面` repair flow. Do not republish the same video only to fix a cover.
 - After `修改描述和封面`, click the outer `完成`, then the final `确认修改`; if the row shows `修改审核中，预计30分钟内审核完成`, record the state as `cover_repair_under_review` and verify again after review before marking the cover fully fixed.
@@ -120,8 +124,15 @@ If the task requires real browser execution, also use `$social-publish-automatio
 - the same 2026-04-22 run also confirmed the correct cover should be validated from the saved newest-row thumbnail, not only the compose-page preview
 - a later 2026-04-23 failure confirmed one more hard rule: same `短标题` plus high正文相似度 across recent rows must stop the publish before submit, even if the calendar date changed
 - A 2026-04-25 cover postmortem confirmed a harder cover rule: JS assignment to `input.files` did not upload the prepared PNG; the saved row used a video frame thumbnail instead. The correct method is real file injection against `input[type="file"][accept*="image"]`, followed by list-thumbnail visual verification. That verification must include both cover text readability and人物主体可见性. If the row says `作者修改过视频信息`, the edit action can become disabled after one failed repair.
-- A later 2026-04-25 retry also confirmed that AppleScript path entry in the macOS file chooser can mangle the path and fail to find the file. Do not use that route for cover uploads.
+- A later 2026-04-25 retry confirmed that long-path AppleScript entry in the macOS file chooser can mangle the path and fail to find the file. Do not use that long-path route for cover uploads; use direct file injection first, or the verified short `/tmp` real-file fallback below.
 - A verified 2026-04-25 replacement publish confirmed the safe path after the old bad item was manually deleted: Browser Bridge real file injection for the video, real file injection for the image cover input, exact editor readback, click the real `button` `发表`, then verify the new management-row `objectId`, exact `shortTitle`, exact `description`, and uploaded cover key in the list thumbnail.
+- A verified 2026-04-26 replacement publish confirmed a stable front-Chrome fallback when direct bridge control cannot access the real editor but the logged-in page is visible:
+- close or ignore the extra list tab and explicitly reactivate the intended `platform/post/create` tab before each action
+- copy the real video and real standalone cover to short non-symlink temp files such as `/tmp/vhvideo-real.mp4` and `/tmp/vhcover-standard.png`
+- upload the video through the visible upload box plus native chooser `Cmd+Shift+G` short path, then wait for the video preview and `封面预览`
+- open `编辑` under `封面预览`, upload the standalone cover with the same short-path chooser fallback, click the inner modal `确认`, and verify the compose preview changes to the intended text-cover style
+- write `视频描述` and `短标题` through the Shadow DOM field map, then read both exact values back before final submit
+- scroll the shadow `.app-body` to the bottom, click the real `发表` button only after final operator authorization, then verify the list row count increased and the newest row shows the expected date, description snippet, and standalone cover thumbnail
 - Keep QR codes, login details, and private operator information out of notes and artifacts.
 
 ## Reference File

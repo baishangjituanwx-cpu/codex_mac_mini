@@ -64,6 +64,8 @@ Read only the section for the current platform.
 - Treat that state as a real relogin checkpoint for the publish route, not as a frame-selector bug.
 - If Playwright frame locators are flaky, use the frame's default CDP execution context instead of an isolated world.
 - For local video upload, the stable large-file path is `DOM.setFileInputFiles` with the frame-side input `objectId`.
+- 2026-04-26 verified front-Chrome fallback: when Browser Bridge/OpenCLI cannot access the real editor but the logged-in Chrome publish page is visible, copy the real video and standalone cover to short non-symlink `/tmp` paths, use the native chooser `Cmd+Shift+G` to select those exact paths, and verify each accepted upload before continuing.
+- In that fallback, never use a symlink such as `/tmp/vhvideo.mp4`; use a real copied file such as `/tmp/vhvideo-real.mp4`. The cover should likewise be a real copied standalone PNG such as `/tmp/vhcover-standard.png`.
 - After upload, wait until the page no longer shows transient upload state such as `请上传视频`, `取消上传`, or `0%` before editing cover or publishing.
 - On 视频号, after custom-cover editing the page can still show `文件上传中，请等待完成后再发表。` while the description and short title already look filled.
 - Treat that as an upload-in-progress state, not as a field failure. Wait until the upload text disappears and the `发表` button loses `weui-desktop-btn_disabled`, then publish.
@@ -84,6 +86,7 @@ Read only the section for the current platform.
 - Permission failures are still real platform states: if a visible dialog says `你还不能发表视频`, stop and treat it as an operator-role problem.
 - On 视频号, multiple open `channels.weixin.qq.com/platform/post/create` tabs can exist at the same time with the same URL but different draft state.
 - If only a shell or list tab is currently open, reuse that tab and navigate it to `https://channels.weixin.qq.com/platform/post/create` before starting the publish flow.
+- If a create tab and a list tab are both open, reactivate the create tab before each upload, field write, cover edit, and final submit. The list tab can steal focus after native file selection.
 - Before retrying a publish, scan the open create tabs and the `视频管理` list, otherwise the automation can target the wrong draft and create duplicate publishes.
 - On 视频号, duplicate publishing is now treated as a hard failure condition. If the same video already exists in `视频管理`, stop and do not retry publish from another draft.
 - If a create tab already contains an uploaded video but the current `视频描述` and `短标题` do not both match the target content package, treat that tab as an unsafe old draft and do not reuse it.
@@ -104,6 +107,8 @@ Read only the section for the current platform.
 - after submit, read the newest management-row component data directly when possible
 - for 视频号, exact newest-row `shortTitle` and exact newest-row `description` are stronger than partial list snippets
 - cover verification should use the newest-row thumbnail as the final proof, not only the compose-page preview
+- 2026-04-26 verified Shadow DOM field path: find the shadow root that contains `.input-editor`, write `视频描述` into `.input-editor`, write `短标题` into `input[placeholder="概括视频主要内容，字数建议6-16个字符"]`, dispatch input/change events or use real typing, then read both exact values back from the same shadow root before pressing `发表`.
+- In the same successful run, scroll the shadow `.app-body` to the bottom and click the real visible `发表` button only after all pre-submit checks pass. The final proof was the list count increasing and the newest row showing the expected date, description snippet, and standalone cover thumbnail.
 - For founder-IP videos, the 3:4 cover should prefer a frontal keyframe or custom cover that clearly shows the person's face, hairline, and upper body, not only the background scene.
 
 ## 知乎
