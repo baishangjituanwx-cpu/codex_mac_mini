@@ -12,6 +12,31 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-04-26 23:25:30 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-25-platform-execution-six-writeback-fields.json`；核心是继续补写 Bilibili、抖音、快手、头条号、视频号五端回执，把该 campaign 从 4 平台记录扩展到 9 平台，并标明新增平台当前分别处于 `published` / `under_review` / `under_review` / `under_review` / `published` 状态。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的多平台发布回执与实际投放状态继续漂移。
+
+## 2026-04-26 22:23:32 CST
+- 检测到新的技能变更批次: 新增 0，修改 8，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/README.md`、`automation/python-platform-takeover/state/publish-receipts/2026-04-25-platform-execution-six-writeback-fields.json`、`skill-center/skills/seedance-video-api/**`、`skill-center/skills/social-publish-automation/**` 和 `skill-center/skills/wechat-channels-ops/**`；核心是把 Seedance 可发布交付标准正式升级为“视频 + 封面包 + 平台文案包”，把视频号 front-Chrome 上传回退写成 macOS `/tmp` 与 Windows `%TEMP%` 双平台的受控 exact-path 流程，并在既有 receipt 上补齐百家号发布留痕。
+- 建议后续执行 GitHub 同步，避免 `skill-center` 镜像与 `python-platform-takeover` 的交付规则、Windows 上传回退说明和最新跨平台发布回执继续漂移。
+
+## 2026-04-26 20:23:39 CST
+- 检测到新的技能变更批次: 新增 1，修改 0，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-25-platform-execution-six-writeback-fields.json`；核心是为 `2026-04-25-platform-execution-six-writeback-fields` 补录微博、小红书、知乎的发布回执与复核入口，明确当前分别处于 `published` / `under_review` / `published` 状态。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的跨平台发布回执与实际投放状态继续漂移。
+
+## 2026-04-26 18:19:44 CST
+- 检测到新的技能变更批次: 新增 1，修改 4，删除 0。
+- 这批变更集中在 live `~/.codex/skills/seedance-video-api`、`skill-center/skills/seedance-video-api/**` 和 `automation/python-platform-takeover/configs/content-package.2026-04-25-platform-execution-six-writeback-fields.yaml`；核心是把 Seedance 交付标准正式扩展为“视频 + 封面包 + 平台发布文案包”，并新增对应 campaign 的多平台成稿内容包配置。
+- 建议后续执行 GitHub 同步，避免 `skill-center` 镜像与 `python-platform-takeover` 的 Seedance 可发布内容包标准继续漂移。
+
+## 2026-04-26 17:18:30 CST
+- 检测到新的技能变更批次: 新增 0，修改 5，删除 0。
+- 这批变更集中在 `skill-center/skills/social-publish-automation/**`、`skill-center/skills/wechat-channels-ops/**` 和 `automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json`；核心是把视频号 front-Chrome fallback 固化为短 `/tmp` 实体文件上传 + create 页重聚焦 + Shadow DOM 字段精确回读 + 列表终验，并把对应 publish receipt 正式收敛到 `published_verified`。
+- 建议后续执行 GitHub 同步，避免 `skill-center` 镜像与 `python-platform-takeover` 的视频号发布规则和回执状态继续漂移。
+
 ## 2026-04-26 17:05:22 CST
 - 处理时间:
   - `2026-04-26 17:05:22 CST`
@@ -966,3 +991,35 @@
 - 检测到新的技能变更批次: 新增 0，修改 6，删除 0。
 - 这批变更集中在 live `~/.codex/skills` 与 `skill-center` 镜像里的 `social-publish-automation/references/platform-notes.md`、`wechat-channels-ops/references/platform-notes.md` 和 `wechat-channels-ops/SKILL.md`；核心是把视频号前台 Chrome 回退、短 `/tmp` 非 symlink 真文件上传、`create` / `list` 双标签防串页、Shadow DOM 字段精确写回，以及 `2026-04-26` 已验证的替换发布步骤补成正式规则。
 - 建议后续执行 GitHub 同步，避免 live skill 与 `skill-center` 镜像的最新视频号接管规则继续漂移。
+
+## 2026-04-26 20:21:49 CST
+- 检测到新的技能变更批次: 新增 1，修改 0，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-25-platform-execution-six-writeback-fields.json`；核心是为 `2026-04-25-platform-execution-six-writeback-fields` 新增一份多平台发布回执样例，固化微博 / 知乎的已发布状态、小红书的审核中状态，以及对应标题和管理链接。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的发布回执样例与实际执行留痕继续漂移。
+
+## 2026-04-26 23:25:43 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-25-platform-execution-six-writeback-fields.json`；核心是把上一轮仅覆盖百家号 / 微博 / 小红书 / 知乎的回执继续扩展成九平台总账，新增 B 站 / 抖音 / 快手 / 头条 / 视频号五端条目，并固化各端标题、管理 URL、记录时间和最新状态。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的多平台发布回执样例继续落后于真实执行状态。
+
+## 2026-04-27 00:02:08 CST
+- 处理时间:
+  - `2026-04-27 00:02:08 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-04-26 22:04:26 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本轮同步分支:
+  - `codex/default-python-sync`: 是。同步 `python-platform-takeover` 的 Seedance publish-copy handoff 规则、`2026-04-25-platform-execution-six-writeback-fields` 配置与九平台回执、`skill-center` 技能镜像、内容包模板，以及监控 / Windows 完整性文档。
+  - `codex/windows-version-20260411`: 否。本轮没有新增的 Windows-specific bridge / deployment payload；当前更新虽然补充了 Windows 说明，但都落在共享 skill / README / receipt / template 文件里，不属于需要单独推到 Windows 分支的桥接或部署资产。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。内容提交信息为 `Sync publish package handoff and receipt updates`；并补充本条同步记录提交 `Record 2026-04-27 GitHub sync execution`。
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows-only 提交需要生成。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。应将上述两笔提交推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 无需推送。本轮没有新的 Windows-only 变更，且该分支当前不领先远端。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync publish package handoff and receipt updates`
+  - `codex/default-python-sync`: `Record 2026-04-27 GitHub sync execution`
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - 跳过了 `codex/windows-version-20260411` 的新提交与推送，因为当前仓库没有新的 Windows 专属 bridge / deployment payload 需要上传。
