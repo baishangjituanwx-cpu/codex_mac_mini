@@ -12,6 +12,41 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-04-26 17:05:22 CST
+- 处理时间:
+  - `2026-04-26 17:05:22 CST`
+- 本次检查的分支:
+  - `codex/default-python-sync`
+- 是否检测到新增或修改:
+  - 是。
+  - 本轮同步的是视频号发布流程的状态与交接记录，不再重复提交 skill 规则本体。
+  - 待同步内容:
+    - `automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json`
+    - `docs/automation/skill-change-monitor.md`
+    - `docs/automation/github-sync-status.md`
+- 是否已提交:
+  - 是。本轮将以独立状态提交同步。
+- 是否已推送:
+  - 待本条记录随状态提交推送后生效。
+- 提交信息:
+  - `Record WeChat Channels publish verification state`
+- 若跳过，说明跳过原因:
+  - 未跳过。该批次用于让其他 Codex 设备复用同一视频号执行状态，避免后续误判为未完成或重复发布。
+
+## 2026-04-26 11:09:02 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json`；核心是把视频号回执从 `under_review` 更新为 `published_verified`，补记 2026-04-26 09:25 的替换重发成功、管理列表校验通过，以及新的封面/视频素材与验证截图留痕。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的 publish receipt 状态与实际发布结果继续漂移。
+
+## 2026-04-26 13:12:03 CST
+- 检测到新的技能变更批次: 新增 0，修改 6，删除 0。
+- 这批变更集中在 live `~/.codex/skills` 与仓库 `skill-center` 镜像的 `social-publish-automation`、`wechat-channels-ops`；核心是把视频号发布 fallback 收紧成已验证流程：短 `/tmp` 实体文件上传、避免 list/create 页抢焦点、Shadow DOM 字段精确回读，以及最终以 `视频管理` 最新行做成功校验。
+- 建议后续执行 GitHub 同步，避免 live skill 与 `skill-center` 镜像的视频号规则继续漂移。
+
+## 2026-04-26 00:57:46 CST
+- 技能变更监控在上一轮基线后确认到 1 个新批次：`automation/python-platform-takeover/README.md` 与 `automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json`。
+- 该批次已经在 `2026-04-26 00:02:21 CST` 随提交 `6737cde` 同步到 `codex/default-python-sync`，当前没有额外待补的 GitHub 同步动作。
+
 ## 2026-04-26 00:01:35 CST
 - 处理时间:
   - `2026-04-26 00:01:35 CST`
@@ -916,3 +951,18 @@
 - 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
 - 这批变更集中在 `automation/python-platform-takeover/README.md`；核心是把视频号封面上传必须走真实图片输入框、提交必须点击真实 `发表` 按钮，以及封面修复失败锁定态 / 替换发布后 `under_review` 回执解释写成正式规则。
 - 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的 README 操作规范与实际技能执行口径继续漂移。
+
+## 2026-04-26 10:07:44 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json`；核心是把视频号 `wechat_channels` 样例回执从 `under_review` 更新为 `published_verified`，补记替换重发成功后的最终素材路径、列表校验时间和验证截图。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的样例发布回执与实际执行结果继续漂移。
+
+## 2026-04-26 12:10:33 CST
+- 检测到新的技能变更批次: 新增 0，修改 5，删除 0。
+- 这批变更分成两组：live `~/.codex/skills` 与 `skill-center` 镜像里的 `social-publish-automation`、`wechat-channels-ops` 同步补上视频号前台 Chrome 接管、短 `/tmp` 非 symlink 原生上传回退、Shadow DOM 字段精确回读，以及 create/list 双标签防串页规则；`automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json` 则把同一案例的回执状态收敛到 `published_verified`。
+- 建议后续执行 GitHub 同步，避免 live skill、`skill-center` 镜像和 `python-platform-takeover` 的视频号发布规则与实操回执继续漂移。
+
+## 2026-04-26 13:12:56 CST
+- 检测到新的技能变更批次: 新增 0，修改 6，删除 0。
+- 这批变更集中在 live `~/.codex/skills` 与 `skill-center` 镜像里的 `social-publish-automation/references/platform-notes.md`、`wechat-channels-ops/references/platform-notes.md` 和 `wechat-channels-ops/SKILL.md`；核心是把视频号前台 Chrome 回退、短 `/tmp` 非 symlink 真文件上传、`create` / `list` 双标签防串页、Shadow DOM 字段精确写回，以及 `2026-04-26` 已验证的替换发布步骤补成正式规则。
+- 建议后续执行 GitHub 同步，避免 live skill 与 `skill-center` 镜像的最新视频号接管规则继续漂移。

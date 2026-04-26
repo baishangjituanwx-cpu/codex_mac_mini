@@ -7,26 +7,23 @@
       "external_id": "export/UzFfBgAAxO2jGBYcdzOVjczT4DCaNenqQ40T8qZf4-y35xvDKA",
       "management_url": "https://channels.weixin.qq.com/platform/post/list",
       "notes": [
-        "management_status: 处理中",
+        "replacement_publish_authorized_by_user: old item manually deleted",
+        "republished_at: 2026-04-26T09:25:00+08:00",
+        "management_status: 已进入视频管理列表",
+        "newest_row_date: 2026年04月26日 09:25",
         "newest_row_short_title_exact: 复盘别再错位",
         "newest_row_description_exact: true",
-        "cover_asset_original_bad: /Users/baishangjituan/Documents/seedance/outputs/2026-04-24-platform-execution-writeback-fields_cover_package/cover-vertical-3x4-fixed.png",
-        "cover_key: VOjwhVydQxM2HfbResuUMOAxo2yIh6Ub",
-        "cover_readability_passed: false",
-        "cover_person_visibility_failed: true",
-        "cover_repair_asset: /Users/baishangjituan/Documents/seedance/outputs/2026-04-24-platform-execution-writeback-fields_cover_package/cover-vertical-3x4-person-visible.png",
-        "cover_repair_submitted_at: 2026-04-25T14:51:00+08:00",
-        "cover_repair_status: 修改审核中，预计30分钟内审核完成",
-        "cover_repair_screenshot: /Users/baishangjituan/Documents/seedance/outputs/2026-04-24-platform-execution-writeback-fields_cover_package/wechat-cover-repair-person-visible-2026-04-25.png",
-        "cover_repair_feishu_message_id: om_x100b51f21f0c44a0b2966a33dd9f5a8",
-        "verification_screenshot: /Users/baishangjituan/Documents/seedance/outputs/2026-04-24-platform-execution-writeback-fields_cover_package/wechat-republish-list-verify-2026-04-25.png",
-        "replacement_publish_authorized_by_user: old item manually deleted",
-        "feishu_message_id: om_x100b51f1804ab8a8b48b340bea72fbc"
+        "cover_asset_used: /Users/baishangjituan/Documents/seedance/outputs/2026-04-24-platform-execution-writeback-fields_cover_package/cover-vertical-3x4.png",
+        "cover_style_verified: standalone generated cover with visible title and AI员工补字段 bottom band",
+        "video_asset_used: /Users/baishangjituan/Documents/seedance/outputs/2026-04-24-platform-execution-writeback-fields.mp4",
+        "verification_screenshot: /Users/baishangjituan/Documents/seedance/outputs/2026-04-24-platform-execution-writeback-fields_cover_package/wechat-republish-list-verify-2026-04-26.png",
+        "feishu_message_id: om_x100b51e308a564a0b2dc36394a2b166",
+        "previous_failed_cover_notes: 2026-04-25 attempts used invalid generated/fallback cover variants and were deleted/replaced"
       ],
       "platform_id": "wechat_channels",
-      "recorded_at": "2026-04-25T06:18:40.108106+00:00",
+      "recorded_at": "2026-04-26T01:25:00+00:00",
       "share_link": null,
-      "status": "under_review",
+      "status": "published_verified",
       "title": "复盘别再错位"
     }
   }
