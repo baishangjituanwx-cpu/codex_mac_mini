@@ -27,14 +27,16 @@
     },
     "douyin": {
       "campaign_id": "2026-04-25-platform-execution-six-writeback-fields",
-      "current_url": "https://creator.douyin.com/creator-micro/content/manage",
+      "current_url": "https://creator.douyin.com/creator-micro/content/manage?enter_from=edit_item",
       "external_id": null,
       "management_url": "https://creator.douyin.com/creator-micro/content/manage",
-      "notes": [],
+      "notes": [
+        "cover_fix_2026-04-26: replaced vertical and horizontal covers on existing item mid=7633082991387921707; manage page returned 修改审核中; new standard cover package title=先补6字段 / 复盘不跑偏; verification_screenshot=/private/tmp/douyin-manage-cover-fixed.png"
+      ],
       "platform_id": "douyin",
-      "recorded_at": "2026-04-26T15:00:56.896724+00:00",
+      "recorded_at": "2026-04-27T00:13:43.023435+08:00",
       "share_link": null,
-      "status": "under_review",
+      "status": "cover_fix_under_review",
       "title": "为什么复盘总错位"
     },
     "kuaishou": {

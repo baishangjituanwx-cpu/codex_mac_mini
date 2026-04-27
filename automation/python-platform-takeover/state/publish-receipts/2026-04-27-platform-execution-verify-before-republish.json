@@ -1,0 +1,122 @@
+{
+  "campaign_id": "2026-04-27-platform-execution-verify-before-republish",
+  "receipts": {
+    "weibo": {
+      "campaign_id": "2026-04-27-platform-execution-verify-before-republish",
+      "current_url": "https://me.weibo.com/content/video",
+      "external_id": null,
+      "management_url": "https://me.weibo.com/content/video",
+      "notes": [],
+      "platform_id": "weibo",
+      "recorded_at": "2026-04-27T13:39:00+08:00",
+      "share_link": null,
+      "status": "published",
+      "title": "未核验不等于失败：先查发布状态，别急着重发"
+    },
+    "toutiao": {
+      "campaign_id": "2026-04-27-platform-execution-verify-before-republish",
+      "current_url": "https://mp.toutiao.com/profile_v4/graphic/articles",
+      "external_id": null,
+      "management_url": "https://mp.toutiao.com/profile_v4/graphic/articles",
+      "notes": [],
+      "platform_id": "toutiao",
+      "recorded_at": "2026-04-27T13:20:00+08:00",
+      "share_link": null,
+      "status": "published",
+      "title": "先核验发布状态，再决定修旧条还是重发"
+    },
+    "baijiahao": {
+      "campaign_id": "2026-04-27-platform-execution-verify-before-republish",
+      "current_url": "https://baijiahao.baidu.com/builder/rc/content?currentPage=1&pageSize=10&search=&type=&collection=&startDate=&endDate=",
+      "external_id": null,
+      "management_url": "https://baijiahao.baidu.com/builder/rc/content",
+      "notes": [
+        "pending_2026-04-27: previous edit tab was corrupted with body text typed into title field; reopen clean compose before publishing"
+      ],
+      "platform_id": "baijiahao",
+      "recorded_at": "2026-04-27T15:10:11+08:00",
+      "share_link": null,
+      "status": "published",
+      "title": "很多团队一看到数据没出来就急着重发，真正正确动作是先去管理列表确认发布状态"
+    },
+    "zhihu": {
+      "campaign_id": "2026-04-27-platform-execution-verify-before-republish",
+      "current_url": "https://zhuanlan.zhihu.com/p/2032088332319052487",
+      "external_id": null,
+      "management_url": "https://www.zhihu.com/creator/content",
+      "notes": [
+        "published_2026-04-27: current creator content URL returns 404 under this login; success verified via public article page"
+      ],
+      "platform_id": "zhihu",
+      "recorded_at": "2026-04-27T15:16:00+08:00",
+      "share_link": "https://zhuanlan.zhihu.com/p/2032088332319052487",
+      "status": "published",
+      "title": "为什么很多团队会把未核验写成失败？问题往往不在内容，而在发布状态没有先核验"
+    },
+    "douyin": {
+      "campaign_id": "2026-04-27-platform-execution-verify-before-republish",
+      "current_url": null,
+      "external_id": null,
+      "management_url": "https://creator.douyin.com/creator-micro/content/manage",
+      "notes": [
+        "pending_2026-04-27: opencli draft flow timed out waiting for cover processing; likely needs explicit vertical and horizontal cover handling"
+      ],
+      "platform_id": "douyin",
+      "recorded_at": null,
+      "share_link": null,
+      "status": "pending",
+      "title": "未核验别重发"
+    },
+    "wechat_channels": {
+      "campaign_id": "2026-04-27-platform-execution-verify-before-republish",
+      "current_url": "https://channels.weixin.qq.com/platform/post/list",
+      "external_id": null,
+      "management_url": "https://channels.weixin.qq.com/platform/post/list",
+      "notes": [
+        "repair_submitted_2026-04-27: existing 2026-04-27 18:04 row was corrected through 修改描述和封面 using 短标题=先核验别重发 and the standard package description",
+        "repair_review_status_2026-04-27: management list now shows 修改审核中，预计30分钟内审核完成; do not republish while this review is pending"
+      ],
+      "platform_id": "wechat_channels",
+      "recorded_at": "2026-04-27T19:48:00+08:00",
+      "share_link": null,
+      "status": "under_review",
+      "title": "先核验别重发"
+    },
+    "kuaishou": {
+      "campaign_id": "2026-04-27-platform-execution-verify-before-republish",
+      "current_url": "https://cp.kuaishou.com/article/manage/video",
+      "external_id": null,
+      "management_url": "https://cp.kuaishou.com/article/manage/video",
+      "notes": [],
+      "platform_id": "kuaishou",
+      "recorded_at": "2026-04-27T14:40:00+08:00",
+      "share_link": null,
+      "status": "under_review",
+      "title": "先看状态再重发"
+    },
+    "xiaohongshu": {
+      "campaign_id": "2026-04-27-platform-execution-verify-before-republish",
+      "current_url": "https://creator.xiaohongshu.com/new/note-manager?source=official",
+      "external_id": null,
+      "management_url": "https://creator.xiaohongshu.com/new/note-manager?source=official",
+      "notes": [],
+      "platform_id": "xiaohongshu",
+      "recorded_at": "2026-04-27T14:31:00+08:00",
+      "share_link": null,
+      "status": "under_review",
+      "title": "未核验别重发：很多团队漏的是先看发布状态"
+    },
+    "bilibili": {
+      "campaign_id": "2026-04-27-platform-execution-verify-before-republish",
+      "current_url": null,
+      "external_id": null,
+      "management_url": "https://member.bilibili.com/platform/upload-manager/video",
+      "notes": [],
+      "platform_id": "bilibili",
+      "recorded_at": null,
+      "share_link": null,
+      "status": "pending",
+      "title": "未核验不等于失败：先看列表状态，再决定重发还是修旧条"
+    }
+  }
+}

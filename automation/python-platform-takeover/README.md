@@ -253,6 +253,8 @@ Copy-Item configs/content-package.example.yaml configs/content-package.local.yam
 
 素材路径建议都写绝对路径。
 
+如果你是从仓库里拿日期化的现成样例开工，例如 `configs/content-package.2026-04-27-platform-execution-verify-before-republish.yaml` 这类文件里已经写死了 macOS 的 `/Users/...` 素材路径，不要直接在 Windows 上原样复用。先复制到你自己的 `configs/content-package.local.yaml` 或新的 `configs/content-package.<campaign>.yaml`，再把 `assets.*` 改成真实存在的 `C:/...` 或其他 Windows 绝对路径，平台文案和发布约束保持不变即可。
+
 如果上游内容包来自今天更新过的 `seedance-video-api` 流程，Windows 下还要额外遵守这 4 条交接规则:
 
 - 不要把“视频已生成 + 封面已出图”误当成完成；只有平台文案包也落地后，才能继续往 `ready_for_publish` 走。
