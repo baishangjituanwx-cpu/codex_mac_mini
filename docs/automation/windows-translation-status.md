@@ -1176,3 +1176,79 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-26 22:03:33 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧补齐或复核；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-04-27 22:01:59 CST
+
+- 处理时间:
+  - `2026-04-27 22:01:59 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-04-26 22:04:26 CST` 之后追加的非零批次:
+    - `2026-04-26 23:25:43 CST`
+    - `2026-04-27 10:39:56 CST`
+    - `2026-04-27 14:44:03 CST`
+    - `2026-04-27 15:47:05 CST`
+    - `2026-04-27 19:51:47 CST`
+  - `2026-04-27 11:42:55 CST`、`16:46:52 CST`、`20:51:37 CST`、`21:52:39 CST` 均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+  - 上述非零批次里，真正新增到仓库可执行面的只有:
+    - `automation/python-platform-takeover/configs/content-package.2026-04-27-platform-execution-verify-before-republish.yaml`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-04-27-platform-execution-verify-before-republish.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-04-25-platform-execution-six-writeback-fields.json`
+  - 这些变更的核心是新增 `verify-before-republish` campaign 配置，以及继续补写多平台 receipt 状态；`skills/`、`skill-center/` 和 live `~/.codex/skills` 在这几个批次里没有新的 skill 文案或脚本规则变更。
+- 已完成的 Windows 补全:
+  - `automation/python-platform-takeover/README.md`:
+    - 追加 Windows 路径桥接说明，明确日期化 campaign 样例 YAML 如果内含 macOS `/Users/...` 素材路径，Windows 侧必须先复制到本地 `configs/content-package.local.yaml` 或新的 `configs/content-package.<campaign>.yaml`，再把 `assets.*` 改成真实存在的 `C:/...` 绝对路径；平台文案与发布约束保持不变。
+  - `automation/python-platform-takeover/configs/content-package.2026-04-27-platform-execution-verify-before-republish.yaml`:
+    - 复核后确认新增行为本身仍是跨平台内容包语义，不需要单独新增 `.ps1` 启动器、命令包装器、快捷键分叉或第二份 Windows 专属 YAML；Windows 缺口只在样例素材路径写法，已由 README 补齐。
+  - `automation/python-platform-takeover/state/publish-receipts/{2026-04-27-platform-execution-verify-before-republish.json,2026-04-25-platform-execution-six-writeback-fields.json}`:
+    - 复核后确认这两份新增 / 修改都是回执状态推进，不是新的 Mac-only skill 行为。
+    - `published`、`under_review`、`pending`、以及视频号“修改审核中、预计 30 分钟内完成，期间不得重发”的语义在 Windows 与 macOS 下一致，现有 `.\scripts\social-publisher.ps1 receipt-status` / `clear-receipt` / `publish --execute` 入口已可直接消费，无需额外脚本或 repo 资产。
+- 未完成的补全:
+  - 无。
+  - `2026-04-27` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理说明、Windows 文档、快捷键差异说明、命令包装器或 repo 资产同步的自定义 skill 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮没有新增 PowerShell 脚本；当前补丁仅覆盖 Windows 路径说明和状态记录。
+  - 本机未做 Windows PowerShell 实机回归；判断基于 monitor 批次复核、YAML / receipt 内容检查，以及现有 README / PowerShell 入口是否已覆盖新增行为。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-04-27 22:01:59 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧补齐或复核；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-04-27 22:00:00 CST
+
+- 处理时间:
+  - `2026-04-27 22:00:00 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-04-26 22:04:26 CST` 之后追加的非零批次:
+    - `2026-04-27 14:44:03 CST`
+    - `2026-04-27 15:47:05 CST`
+    - `2026-04-27 19:51:47 CST`
+  - `2026-04-27 11:42:55 CST`、`16:46:52 CST`、`17:48:04 CST`、`18:49:05 CST`、`20:51:37 CST`、`21:52:39 CST` / `21:52:46 CST` 均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+  - 上述非零批次实际涉及的仓库文件只有:
+    - `automation/python-platform-takeover/configs/content-package.2026-04-27-platform-execution-verify-before-republish.yaml`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-04-27-platform-execution-verify-before-republish.json`
+- 已完成的 Windows 补全:
+  - 无新增 Windows 补丁文件、PowerShell 启动器或文档分叉需要落地。
+  - 已复核现有 Windows 覆盖足以承接这批新增行为，无需再改仓库实现:
+    - `automation/python-platform-takeover/README.md` 已覆盖 Windows 路径写法、`.\scripts\social-publisher.ps1` / `.\scripts\quickstart-windows.ps1` 入口、以及视频号 `under_review / 处理中`、`修改描述和封面`、短真实 `%TEMP%` 路径回退等既有规则
+    - `skill-center/skills/social-publish-automation/SKILL.md` 与 `references/platform-notes.md` 已覆盖 Windows chooser 的 `%TEMP%\\<simple-name>` 精确路径输入、禁止 `.lnk` / symlink / 搜索结果路径，以及 `under_review` 视为阻塞状态的跨平台语义
+    - `skill-center/skills/wechat-channels-ops/SKILL.md` 与 `references/platform-notes.md` 已覆盖 Windows 下的 `修改描述和封面` 修复流程、`修改审核中` / `cover_repair_under_review` 语义、以及短真实 `%TEMP%` 文件上传回退
+  - 对本轮新增 / 修改内容的结论:
+    - 新 campaign YAML 只是新增跨平台内容包样例，虽然素材路径写成当前作者机的 macOS 绝对路径，但仓库已有 Windows 路径规范说明，未引入新的 Windows 行为缺口
+    - 同一 campaign receipt 的三次推进只是在回执里补写 `published`、`pending`、`under_review`、`修改审核中` 等执行留痕；这些状态在现有 Windows 文档里都已有等价解释，不需要单独 Windows 分叉
+- 未完成的补全:
+  - 无。
+  - `2026-04-27` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产同步的自定义 skill 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未修改 skill / automation 实现文件；只追加 Windows 转译状态记录。
+  - 复核范围:
+    - `automation/python-platform-takeover/configs/content-package.2026-04-27-platform-execution-verify-before-republish.yaml`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-04-27-platform-execution-verify-before-republish.json`
+    - `automation/python-platform-takeover/README.md`
+    - `skill-center/skills/social-publish-automation/SKILL.md`
+    - `skill-center/skills/social-publish-automation/references/platform-notes.md`
+    - `skill-center/skills/wechat-channels-ops/SKILL.md`
+    - `skill-center/skills/wechat-channels-ops/references/platform-notes.md`
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-04-27 22:00:00 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为都已具备现成的 Windows 等价覆盖；今天明确没有新的 Windows 缺口需要补写。
