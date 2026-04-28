@@ -26,14 +26,17 @@
     - `Sync April 28 publish guard and Seedance packaging updates`
     - `Record 2026-04-29 GitHub sync execution`
     - `Record 2026-04-29 sync follow-up status`
+    - `Record 2026-04-29 skill monitor follow-up`
+    - `Record 2026-04-28 zero-delta skill monitor checkpoint`
   - `codex/windows-version-20260411`: 否。本轮没有新的 Windows-only bridge / deployment payload 需要生成提交。
 - 是否已推送:
-  - `codex/default-python-sync`: 待补上最新 `skill-change-monitor.md` 的零增量快照记录后，与上述提交一并推送到 `origin/codex/default-python-sync`。
+  - `codex/default-python-sync`: 是。上述提交已推送到 `origin/codex/default-python-sync`。
   - `codex/windows-version-20260411`: 无需推送。本轮没有新的 Windows-only 变更。
 - 提交信息:
   - `codex/default-python-sync`: `Sync April 28 publish guard and Seedance packaging updates`
   - `codex/default-python-sync`: `Record 2026-04-29 GitHub sync execution`
   - `codex/default-python-sync`: `Record 2026-04-29 sync follow-up status`
+  - `codex/default-python-sync`: `Record 2026-04-29 skill monitor follow-up`
   - `codex/default-python-sync`: `Record 2026-04-28 zero-delta skill monitor checkpoint`
 - 若跳过，说明跳过原因:
   - 未跳过同步前置检查。
