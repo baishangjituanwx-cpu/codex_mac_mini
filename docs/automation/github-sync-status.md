@@ -22,15 +22,19 @@
   - `codex/default-python-sync`: 是。
   - `codex/windows-version-20260411`: 否。
 - 是否已提交:
-  - `codex/default-python-sync`: 是。当前待推送 payload 已由现有本地提交承载:
+  - `codex/default-python-sync`: 是。当前待推送内容已由现有本地提交承载:
     - `Sync April 28 publish guard and Seedance packaging updates`
+    - `Record 2026-04-29 GitHub sync execution`
+    - `Record 2026-04-29 sync follow-up status`
   - `codex/windows-version-20260411`: 否。本轮没有新的 Windows-only bridge / deployment payload 需要生成提交。
 - 是否已推送:
-  - `codex/default-python-sync`: 待本条执行记录提交后，与 payload 一并推送到 `origin/codex/default-python-sync`。
+  - `codex/default-python-sync`: 待补上最新 `skill-change-monitor.md` 的零增量快照记录后，与上述提交一并推送到 `origin/codex/default-python-sync`。
   - `codex/windows-version-20260411`: 无需推送。本轮没有新的 Windows-only 变更。
 - 提交信息:
   - `codex/default-python-sync`: `Sync April 28 publish guard and Seedance packaging updates`
   - `codex/default-python-sync`: `Record 2026-04-29 GitHub sync execution`
+  - `codex/default-python-sync`: `Record 2026-04-29 sync follow-up status`
+  - `codex/default-python-sync`: `Record 2026-04-28 zero-delta skill monitor checkpoint`
 - 若跳过，说明跳过原因:
   - 未跳过同步前置检查。
   - 跳过了 `codex/windows-version-20260411` 的提交与推送，因为当前批次只有通用 / Mac 兼容的 `python-platform-takeover`、`skill-center`、内容模板、回执与自动化状态记录更新，没有新的 Windows 专属 bridge 或 deployment 脚本、模板资源、安装器或支线部署说明需要单独上传。
