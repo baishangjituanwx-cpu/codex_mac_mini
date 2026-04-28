@@ -55,16 +55,17 @@
     },
     "douyin": {
       "campaign_id": "2026-04-27-platform-execution-verify-before-republish",
-      "current_url": null,
-      "external_id": null,
+      "current_url": "https://creator.douyin.com/creator-micro/content/manage",
+      "external_id": "7633686839034973503",
       "management_url": "https://creator.douyin.com/creator-micro/content/manage",
       "notes": [
-        "pending_2026-04-27: opencli draft flow timed out waiting for cover processing; likely needs explicit vertical and horizontal cover handling"
+        "pending_2026-04-27: opencli draft flow timed out waiting for cover processing; likely needs explicit vertical and horizontal cover handling",
+        "published_2026-04-28: reopened publish page, recovered the video asset with creator-side draft state, rewrote title/body, and verified success via Douyin API list response"
       ],
       "platform_id": "douyin",
-      "recorded_at": null,
+      "recorded_at": "2026-04-28T14:04:13+08:00",
       "share_link": null,
-      "status": "pending",
+      "status": "published",
       "title": "未核验别重发"
     },
     "wechat_channels": {
@@ -74,12 +75,14 @@
       "management_url": "https://channels.weixin.qq.com/platform/post/list",
       "notes": [
         "repair_submitted_2026-04-27: existing 2026-04-27 18:04 row was corrected through 修改描述和封面 using 短标题=先核验别重发 and the standard package description",
-        "repair_review_status_2026-04-27: management list now shows 修改审核中，预计30分钟内审核完成; do not republish while this review is pending"
+        "repair_review_status_2026-04-27: management list now shows 修改审核中，预计30分钟内审核完成; do not republish while this review is pending",
+        "verified_2026-04-28: management list shows the 2026-04-27 18:04 row with the expected package description and readable target cover thumbnail; repair entry is locked by platform toast 已修改过描述，当前仅支持修改一次, so no duplicate republish was attempted",
+        "incident_2026-04-28: the older 04-27 package was accidentally reused while the active 04-28 package already existed; duplicate/wrong-package WeChat Channels rows were created around 19:26 and 19:27 and the user manually deleted the duplicate new rows. Do not use this 04-27 receipt as evidence for any 04-28 publishing task."
       ],
       "platform_id": "wechat_channels",
-      "recorded_at": "2026-04-27T19:48:00+08:00",
+      "recorded_at": "2026-04-28T15:50:26+08:00",
       "share_link": null,
-      "status": "under_review",
+      "status": "published",
       "title": "先核验别重发"
     },
     "kuaishou": {
@@ -108,14 +111,17 @@
     },
     "bilibili": {
       "campaign_id": "2026-04-27-platform-execution-verify-before-republish",
-      "current_url": null,
-      "external_id": null,
+      "current_url": "https://member.bilibili.com/platform/upload-manager/article",
+      "external_id": "BV1HM96BmE3o",
       "management_url": "https://member.bilibili.com/platform/upload-manager/video",
-      "notes": [],
+      "notes": [
+        "pending_2026-04-28: reopened the local unfinished upload draft; video, title, and intro are present, but the cover settings entry still does not reliably open to the 4:3 and 16:9 upload inputs, so submit was not executed",
+        "published_2026-04-28: reopened the draft, uploaded the prepared 4:3 and 16:9 cover files through Bilibili's cover modal, selected 作者声明：该视频使用人工智能合成技术, submitted successfully, and verified the newest manager row plus public BV link"
+      ],
       "platform_id": "bilibili",
-      "recorded_at": null,
-      "share_link": null,
-      "status": "pending",
+      "recorded_at": "2026-04-28T17:12:19+08:00",
+      "share_link": "https://www.bilibili.com/video/BV1HM96BmE3o",
+      "status": "published",
       "title": "未核验不等于失败：先看列表状态，再决定重发还是修旧条"
     }
   }

@@ -1,0 +1,41 @@
+campaign_id: "2026-04-28-platform-execution-early-zero-not-failure"
+theme: "很多团队一看到早窗0就急着判失败，真正正确动作是先去管理列表看状态词，再决定下一步动作。"
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-28-platform-execution-early-zero-not-failure.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-28-platform-execution-early-zero-not-failure_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-28-platform-execution-early-zero-not-failure_cover_package/cover-horizontal-4x3.png"
+publish_constraints:
+  reuse_logged_in_publish_page: true
+  skip_duplicate_if_already_published: true
+  prefer_repair_existing_post_over_republish: true
+  require_cover_thumbnail_check_25pct: true
+  require_management_page_verification: true
+  require_title_description_cover_alignment: true
+platforms:
+  weibo:
+    title: "早窗0不是失败：先看管理页状态词，别急着重发"
+    description: "很多团队一看到数据还是 0，就急着判失败、急着重发。但真正该先做的是去管理列表确认真实状态：已发布、审核中、修改审核中、失败。如果只是封面或描述有误，先修旧条，不要先重发。AI员工查列表写状态，人只做发布判断。#AI员工 #内容发布 #平台执行"
+  douyin:
+    title: "早窗0别重发"
+    description: "很多团队一看到数据还是 0，就急着判失败、急着再发一条。正确动作不是先重发，而是先去管理列表确认：到底是已发布、审核中、修改审核中，还是失败。如果只是封面或描述有误，先修旧条，不要先重发。AI员工查列表写状态，人只做发布判断。#AI员工 #内容发布 #早窗0别重发 #平台执行"
+  wechat_channels:
+    title: "早窗0别重发"
+    description: "看到早窗 0，不要先判内容失败，先看管理页状态词。正确动作是先去内容管理列表确认真实状态：已发布、审核中、修改审核中还是失败。然后再核对标题、描述和封面。只有确认失败才重发；如果只是封面或描述有误，就优先修旧条。AI员工负责查列表写状态，人只做发布判断和复盘。"
+  kuaishou:
+    title: "先看状态词"
+    description: "别把早窗 0 直接写成失败。先去管理页看状态词：已发布、审核中、修改审核中、失败。封面错了先修旧条，确认失败再重发。AI员工负责查列表，人负责判断。"
+  baijiahao:
+    title: "很多团队一看到早窗0就急着判失败，真正正确动作是先去管理列表看状态词"
+    description: "很多团队把早窗 0、审核中、修改审核中和发布失败混写在一起，结果一看到数据没出来，就马上判内容失败，甚至重复发布。正确动作应该先进入管理列表确认真实状态，再核对标题、描述和封面，最后才决定是等待、修旧条还是重发。"
+  toutiao:
+    title: "为什么很多团队一看到早窗0就急着判失败？真正漏掉的，是先去管理列表看状态词"
+    description: "很多团队不是内容失败，而是把早窗 0、审核中、修改审核中和失败混写在一起，最后一看到数据没出来，就急着再发一条。真正该先做的，不是重发，而是先去管理列表看清楚状态，再决定下一步动作。"
+  zhihu:
+    title: "为什么很多团队会把早窗0写成失败？问题往往不在内容，而在管理列表状态词没有先核验"
+    description: "很多团队不是内容失败，而是把状态词写错了。内容发完以后，如果没有先去管理列表确认真实状态，一看到数据还是 0，就把早窗 0、审核中、修改审核中和失败写成同一种结果，最后不是误判内容，就是直接重复发布。"
+  xiaohongshu:
+    title: "早窗0别重发：很多团队漏的是先看状态词"
+    description: "很多团队一看到数据还是 0，就急着判失败、急着再发一条。但真正该先做的，不是重发，而是先去管理列表看状态词：已发布、审核中、修改审核中、失败。如果只是封面或描述有误，先修旧条，不要先重发。"
+  bilibili:
+    title: "早窗0不是失败：先看管理页状态词，再决定重发还是修旧条"
+    description: "很多团队不是内容失败，而是把“早窗 0”“审核中”“修改审核中”和“发布失败”混写在一起，最后一看到数据没出来就急着重发。正确动作不是先重发，而是先去管理列表确认真实状态，再核对标题、描述和封面。只有确认失败才重发；如果只是封面或描述有误，就优先修旧条。AI员工负责查列表写状态，人保留最终发布判断。"

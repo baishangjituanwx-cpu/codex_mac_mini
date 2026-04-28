@@ -12,6 +12,26 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-04-28 23:05:44 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/README.md`；核心是把 `2026-04-28` 当天新增的 anti-duplicate 规则补到 Windows 操作说明里，明确新 campaign 必须锁定当前 `campaign_id`、缺 receipt 先初始化、旧 receipt 只能算历史留痕，不能当作今天新包的成功证据。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的 Windows 发布口径继续落后于当天已经写入 live skill / `skill-center` 的反重发规则。
+
+## 2026-04-28 20:07:13 CST
+- 检测到新的技能变更批次: 新增 1，修改 6，删除 0。
+- 这批变更分成两组：live / `skill-center` 的 `social-publish-automation` 与 `wechat-channels-ops` 新增了“锁定当前 `campaign_id`、缺 receipt 先初始化、旧 campaign 只能算历史证据”的反重发规则；`automation/python-platform-takeover` 则新增 `2026-04-28-platform-execution-early-zero-not-failure` 的 receipt 台账、补齐同名内容包里的 B 站配置，并继续把 `2026-04-27-platform-execution-verify-before-republish.json` 推进到抖音 / 视频号 / B 站都已发布。
+- 建议后续执行 GitHub 同步，避免 live skill、`skill-center` 镜像和 `python-platform-takeover` 的 campaign 锁包规则与最新回执状态继续只停留在本地工作区。
+
+## 2026-04-28 15:58:47 CST
+- 检测到新的技能变更批次: 新增 1，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/configs/content-package.2026-04-28-platform-execution-early-zero-not-failure.yaml` 和 `automation/python-platform-takeover/state/publish-receipts/2026-04-27-platform-execution-verify-before-republish.json`；核心是新增一份“早窗 0 不等于失败”的多平台内容包配置，并把既有 `verify-before-republish` 回执继续推进到抖音已发布、视频号复核通过发布，同时补记 B 站仍卡在封面设置入口的待处理说明。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的新 campaign 配置与最新多平台执行留痕继续只停留在本地工作区。
+
+## 2026-04-28 14:56:05 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-27-platform-execution-verify-before-republish.json`；核心是把同一 campaign 的抖音回执从 `pending` 推进为 `published`，补上对象 ID、管理页定位与 API 核验成功说明，并记录 B 站当前只剩封面上传入口不稳定这一阻塞点。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的最新 `verify-before-republish` receipt 进展继续只停留在本地工作区。
+
 ## 2026-04-27 19:51:25 CST
 - 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
 - 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-27-platform-execution-verify-before-republish.json`；核心是把该 campaign 的视频号执行留痕推进到“修旧条已提交，管理列表显示修改审核中”，补上 `2026-04-27 18:04` 既有记录的描述 / 封面修复备注与审核中阻断说明。
@@ -1119,6 +1139,11 @@
 - 若跳过，说明跳过原因:
   - 未跳过同步前置检查。
   - 跳过了 `codex/windows-version-20260411` 的新提交与推送，因为当前仓库没有新的 Windows 专属 bridge / deployment payload 需要上传。
+
+## 2026-04-28 20:04:29 CST
+- 检测到新的技能变更批次: 新增 1，修改 6，删除 0。
+- 这批变更集中在 live `~/.codex/skills/social-publish-automation`、`~/.codex/skills/wechat-channels-ops`、对应 `skill-center` 镜像，以及 `automation/python-platform-takeover` 的 `04-28 early-zero-not-failure` YAML / receipt 和 `04-27 verify-before-republish` receipt；核心是把“先锁定当前 campaign_id、缺 receipt 先初始化、旧 campaign 记录不能替代新任务”收紧成正式规则，并把 `04-27` 的视频号、B 站回执推进到已发布复核完成。
+- 建议后续执行 GitHub 同步，避免 live skill、`skill-center` 镜像和 `python-platform-takeover` 的新 campaign 防重发规则与最新 receipt 留痕继续只停留在本地工作区。
 
 ## 2026-04-28 00:10:42 CST
 - 处理时间:

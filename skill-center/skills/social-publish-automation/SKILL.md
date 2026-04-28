@@ -28,6 +28,11 @@ Prefer it when the task involves:
 - Avoid reusing a workspace across unrelated platforms or retries.
 
 3. Prepare the publish package before touching the UI.
+- Resolve and lock the active `campaign_id` before opening any platform editor:
+- Prefer the newest local `content-package.*.yaml` whose matching content-library package is `status: ready_for_publish`, unless the user explicitly names an older campaign.
+- Compare the locked `campaign_id`, video path, cover paths, and platform title/description against the intended task. If they do not match, stop before upload.
+- If the newest ready package has no matching receipt file under `state/publish-receipts/`, create or initialize that receipt for the new campaign. Never fall back to the previous campaign's receipt just because it is the latest existing receipt.
+- If an older receipt is `published` but a newer ready package exists, treat the older receipt as historical only; it must not satisfy or block the newer campaign's publishing task.
 - Confirm local asset paths, title, body, declarations, and platform-specific extras.
 - Avoid mid-flow content rewriting unless the platform rejects the original package.
 - For video platforms with a custom cover, run a cover-readability preflight before opening the platform editor: view or render the cover at roughly 25 percent scale and confirm the main title is readable in the small preview.
@@ -120,10 +125,13 @@ If the click succeeds but the status is ambiguous, treat the result as unconfirm
 ## Anti-Duplicate Guard
 
 - For each platform in the current batch, always run this decision order before any retry:
+- `先锁定本轮 campaign_id / 内容包版本`
 - `先查本地发布台账`
 - `先查管理页`
 - `再查公开页 / 主页 / 作品流`
 - `最后才决定是否允许重发`
+- The local receipt check is valid only when the receipt `campaign_id` exactly matches the locked content package. A previous-day or previous-campaign receipt is evidence for that old campaign only.
+- If the platform management page shows a recent row whose title/body belongs to a different campaign than the locked package, do not count it as success for the current task and do not use it as a reason to publish another copy of the old campaign.
 - Treat local receipt statuses `submitted / published / under_review / success / verified` as blocking states by default.
 - If the management list or public profile already shows a same-day item with the same core title, same video, or same正文片段, treat it as an existing publish candidate, not as a failed attempt.
 - For 微信视频号, the anti-duplicate guard is stricter than exact-match blocking:

@@ -324,6 +324,23 @@ Copy-Item C:/content-pipeline/cover.png "$env:TEMP\\vhcover-standard.png" -Force
 .\scripts\social-publisher.ps1 receipt-status configs/content-package.local.yaml --platform xiaohongshu
 ```
 
+- 针对 `2026-04-28` 新增的“新 campaign 先锁包、缺 receipt 先初始化、旧 receipt 只算历史证据”规则，Windows 侧也不要另造第二套流程:
+  - 先确认你当前要发的就是最新 `ready_for_publish` 内容包，并且它自己的 `campaign_id` 已经写进 `configs/content-package.local.yaml` 或当天的 `configs/content-package.<campaign>.yaml`
+  - `receipt-status` 只会读取当前内容包 `campaign_id` 对应的 `state/publish-receipts/<campaign_id>.json`；昨天或上一轮 campaign 的 receipt 就算是 `published`，也不能当今天新包的成功证据
+  - 如果当前内容包还没有 receipt，先初始化成 `not_started`，再进平台管理页或发布页，避免把“缺台账”误判成“可以沿用上一轮”
+
+```powershell
+.\scripts\social-publisher.ps1 receipt-status configs/content-package.local.yaml --platform wechat_channels
+.\scripts\social-publisher.ps1 record-receipt configs/content-package.local.yaml --platform wechat_channels --status not_started
+.\scripts\social-publisher.ps1 receipt-status configs/content-package.local.yaml --platform wechat_channels
+```
+
+- 如果你今天切到了新的 `campaign_id`，不要复制旧的 receipt 文件名继续用；让 `record-receipt --status not_started` 为新 campaign 生成新的 `state/publish-receipts/<campaign_id>.json`，旧 receipt 只留作历史留痕。
+- 对 `social-publish-automation` / `wechat_channels` 今天新增的 anti-duplicate 规则，Windows 判断标准与 macOS 一致:
+  - 先锁定当前内容包的 `campaign_id`、视频路径、封面路径、`短标题`、`视频描述`
+  - 如果管理页里看到的是上一轮 campaign 的旧条，只能当历史证据，不能拿来挡住或放行今天的新包
+  - 如果本轮内容包的 receipt 已经是 `submitted`、`published`、`under_review`、`success` 或 `verified`，默认先停下，不要因为 UI 抖动就重复补发
+
 - 如果手工确认旧内容已经删除、转私密或明确废弃，再清掉对应平台台账:
 
 ```powershell

@@ -18,6 +18,9 @@ If the task requires real browser execution, also use `$social-publish-automatio
 - Build the package first: video file, short title, description, cover, category, and any private-domain distribution plan.
 - For browser-side execution, route through `$social-publish-automation`.
 - Use `视频号助手` as the main desktop operation surface.
+- Before entering `platform/post/create`, lock the current content package by exact `campaign_id`. For a same-day/new-round task, use the newest `ready_for_publish` package unless the user explicitly names an older campaign.
+- The locked package must match all four fields before any upload: video path, vertical cover path, `短标题`, and `视频描述`. If the visible draft or local receipt belongs to another campaign, stop and reset the draft instead of publishing.
+- A previous campaign's successful 视频号 row, receipt, or repaired row must never be treated as success for a newer campaign. It is historical evidence only.
 - For video publishing in this workspace, treat `https://channels.weixin.qq.com/platform/post/create` as the standard direct-entry URL.
 - If a correct `platform/post/create` tab is already open, take over that tab directly.
 - If only a 视频号助手 shell or list tab is open, reuse that existing tab and navigate it to `https://channels.weixin.qq.com/platform/post/create` before starting the publish flow.
@@ -48,6 +51,8 @@ If the task requires real browser execution, also use `$social-publish-automatio
 - Before any retry or republish, check `视频管理` first. If the same video is already present in the list, stop instead of publishing a duplicate.
 - Before any fresh publish, check the newest management rows for recent near-duplicates.
 - If a recent row already uses the same `短标题` and the platform-side `description` is still highly similar to the current package, stop before publish. That is a content-repeat incident, not a new post.
+- If a recent row uses a different campaign's title/body, do not count it as the current campaign. Also do not open `post/create` with that older package unless the user explicitly approved replacing or repairing the older row.
+- If the newest ready package has no receipt file, initialize that receipt as `not_started` before any 视频号 operation. Missing receipt means “untracked”, not “fall back to yesterday”.
 - Verify that the current WeChat account has the correct operator role before spending time inside the editor.
 - Confirm final state from the content list or visible `已发表` signal, not only from the submit button.
 - For retries, the strongest final proof is the management list's newest row carrying the expected title and description in the platform-side row data, not only create-page text or a partial visible snippet.

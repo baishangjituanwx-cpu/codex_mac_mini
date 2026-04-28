@@ -26,6 +26,7 @@ Use one clear still from the generated final video:
 - mouth shape natural
 - no motion blur
 - no subtitle bar baked into the chosen crop
+- if the strongest face frame still carries burned-in subtitle residue, crop out the lower subtitle region first and build the cover from the cleaned crop rather than using the dirty frame directly
 
 ## Subject Rule
 

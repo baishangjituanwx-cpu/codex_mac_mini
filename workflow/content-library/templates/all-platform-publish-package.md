@@ -4,6 +4,13 @@ status: ready_for_publish
 theme: "{{THEME}}"
 owner_thread: "自动发布内容- skill"
 video_asset_path: "{{ASSET_ROOT}}/master.mp4"
+upload_video_path: "{{ASSET_ROOT}}/publish.mp4"
+brief_path: "{{ASSET_ROOT}}/brief.json"
+prompt_package_path: "{{ASSET_ROOT}}/video-prompt.txt"
+seedance_payload_path: "{{ASSET_ROOT}}/seedance_payload.json"
+publish_plan_path: "{{ASSET_ROOT}}/publish-plan.md"
+browser_use_checklist_path: "{{ASSET_ROOT}}/browser-use-checklist.md"
+final_verify_path: "{{ASSET_ROOT}}/final-verify.json"
 cover_frame_primary: "{{ASSET_ROOT}}/covers/cover_frame_primary.jpg"
 cover_frame_secondary: "{{ASSET_ROOT}}/covers/cover_frame_secondary.jpg"
 ---
@@ -57,14 +64,33 @@ cover_frame_secondary: "{{ASSET_ROOT}}/covers/cover_frame_secondary.jpg"
 - 视频评论 CTA:
 - 图文结尾 CTA:
 
-## 七、统一执行规则
+## 七、结构化交付物
+
+- brief: `{{ASSET_ROOT}}/brief.json`
+- 视频提示词: `{{ASSET_ROOT}}/video-prompt.txt`
+- 标准化 payload: `{{ASSET_ROOT}}/seedance_payload.json`
+- 上传前计划: `{{ASSET_ROOT}}/publish-plan.md`
+- 浏览器执行清单: `{{ASSET_ROOT}}/browser-use-checklist.md`
+- 最终验收记录: `{{ASSET_ROOT}}/final-verify.json`
+
+## 八、统一执行规则
 
 - 发布前先查管理页，避免重复发
 - 同平台同素材当天只发一条
 - 单个平台验证成功后立即推飞书
+- 先核对目标账号名和账号 ID
+- 抖音标题尽量不超过 `20` 个可见中文字符，文案首句尽量不超过 `18`
+- 抖音标题与文案首句不要出现重复的 `3` 个及以上连续字串
+- 需要时可用 `node /Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/scripts/douyin-packaging-guard.mjs --brief {{ASSET_ROOT}}/brief.json` 做抖音包装硬校验
+- 如果平台显示 `审核中`、`修改审核中`、`pending` 或 `暂未可见`，不要直接重发
+- 如果视频里字幕有错字、多行、黑底或乱码，不进入发布，先回生成阶段重出
+- 封面必须做约 `25%` 缩略图可读性检查
+- 抖音最终成功以 `作品管理` 列表顶行真实条目为准
+- 视频号最终成功以 `视频管理` 列表顶行真实条目为准
 
-## 八、当前资产
+## 九、当前资产
 
-- 主视频: `{{ASSET_ROOT}}/master.mp4`
+- 原始主视频: `{{ASSET_ROOT}}/master.mp4`
+- 上传视频: `{{ASSET_ROOT}}/publish.mp4`
 - 竖版封面: `{{ASSET_ROOT}}/covers/cover_vertical_3x4.jpg`
 - 横版封面: `{{ASSET_ROOT}}/covers/cover_horizontal_4x3.jpg`
