@@ -7,7 +7,8 @@
       "external_id": null,
       "management_url": "https://baijiahao.baidu.com/builder/rc/content",
       "notes": [
-        "initialized_2026-04-28: active campaign ledger created after detecting the newer 04-28 ready_for_publish package had no receipt file; do not fall back to the 04-27 receipt for this campaign."
+        "initialized_2026-04-28: active campaign ledger created after detecting the newer 04-28 ready_for_publish package had no receipt file; do not fall back to the 04-27 receipt for this campaign.",
+        "management_scan_2026-04-28T20:48:07.279Z: current logged-in Chrome management tabs were scanned before further publishing; no exact 04-28 package title was found on baijiahao/toutiao/kuaishou/xiaohongshu/zhihu/douyin/weibo. Keep status as not_started unless a later exact row is verified."
       ],
       "platform_id": "baijiahao",
       "recorded_at": "2026-04-28T19:33:36+08:00",
@@ -21,7 +22,8 @@
       "external_id": null,
       "management_url": "https://member.bilibili.com/platform/upload-manager/video",
       "notes": [
-        "initialized_2026-04-28: active campaign ledger created from the 04-28 video publish package; the YAML config was missing bilibili and was patched to match the content library."
+        "initialized_2026-04-28: active campaign ledger created from the 04-28 video publish package; the YAML config was missing bilibili and was patched to match the content library.",
+        "near_duplicate_scan_2026-04-28T20:48:07.279Z: Bilibili management tab shows a 2026-04-28 row titled 未核验不等于失败：先看列表状态，再决定重发还是修旧条. This is similar but does not exactly match current 04-28 package title 早窗0不是失败：先看管理页状态词，再决定重发还是修旧条, so it must be treated as an existing candidate/repair target, not as current-package success and not as permission to blindly republish."
       ],
       "platform_id": "bilibili",
       "recorded_at": "2026-04-28T19:33:36+08:00",
@@ -35,7 +37,8 @@
       "external_id": null,
       "management_url": "https://creator.douyin.com/creator-micro/content/manage",
       "notes": [
-        "initialized_2026-04-28: active campaign ledger created after detecting the newer 04-28 ready_for_publish package had no receipt file; do not fall back to the 04-27 receipt for this campaign."
+        "initialized_2026-04-28: active campaign ledger created after detecting the newer 04-28 ready_for_publish package had no receipt file; do not fall back to the 04-27 receipt for this campaign.",
+        "management_scan_2026-04-28T20:48:07.279Z: current logged-in Chrome management tabs were scanned before further publishing; no exact 04-28 package title was found on baijiahao/toutiao/kuaishou/xiaohongshu/zhihu/douyin/weibo. Keep status as not_started unless a later exact row is verified."
       ],
       "platform_id": "douyin",
       "recorded_at": "2026-04-28T19:33:36+08:00",
@@ -45,16 +48,18 @@
     },
     "kuaishou": {
       "campaign_id": "2026-04-28-platform-execution-early-zero-not-failure",
-      "current_url": null,
-      "external_id": null,
+      "current_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+      "external_id": "kuaishou_20260429_under_review",
       "management_url": "https://cp.kuaishou.com/article/manage/video",
       "notes": [
-        "initialized_2026-04-28: active campaign ledger created after detecting the newer 04-28 ready_for_publish package had no receipt file; do not fall back to the 04-27 receipt for this campaign."
+        "initialized_2026-04-28: active campaign ledger created after detecting the newer 04-28 ready_for_publish package had no receipt file; do not fall back to the 04-27 receipt for this campaign.",
+        "management_scan_2026-04-28T20:48:07.279Z: current logged-in Chrome management tabs were scanned before further publishing; no exact 04-28 package title was found on baijiahao/toutiao/kuaishou/xiaohongshu/zhihu/douyin/weibo. Keep status as not_started unless a later exact row is verified.",
+        "published_verified_under_review_2026-04-29T02:55:22.957Z: 管理页显示本轮快手文案，状态=审核中"
       ],
       "platform_id": "kuaishou",
-      "recorded_at": "2026-04-28T19:33:36+08:00",
+      "recorded_at": "2026-04-29T02:55:22.957Z",
       "share_link": null,
-      "status": "not_started",
+      "status": "under_review",
       "title": "先看状态词"
     },
     "toutiao": {
@@ -63,7 +68,8 @@
       "external_id": null,
       "management_url": "https://mp.toutiao.com/profile_v4/graphic/articles",
       "notes": [
-        "initialized_2026-04-28: active campaign ledger created after detecting the newer 04-28 ready_for_publish package had no receipt file; do not fall back to the 04-27 receipt for this campaign."
+        "initialized_2026-04-28: active campaign ledger created after detecting the newer 04-28 ready_for_publish package had no receipt file; do not fall back to the 04-27 receipt for this campaign.",
+        "management_scan_2026-04-28T20:48:07.279Z: current logged-in Chrome management tabs were scanned before further publishing; no exact 04-28 package title was found on baijiahao/toutiao/kuaishou/xiaohongshu/zhihu/douyin/weibo. Keep status as not_started unless a later exact row is verified."
       ],
       "platform_id": "toutiao",
       "recorded_at": "2026-04-28T19:33:36+08:00",
@@ -74,30 +80,33 @@
     "wechat_channels": {
       "campaign_id": "2026-04-28-platform-execution-early-zero-not-failure",
       "current_url": "https://channels.weixin.qq.com/platform/post/list",
-      "external_id": null,
+      "external_id": "wechat_channels_202604290434",
       "management_url": "https://channels.weixin.qq.com/platform/post/list",
       "notes": [
         "initialized_2026-04-28: active campaign ledger created after detecting the newer 04-28 ready_for_publish package had no receipt file; do not fall back to the 04-27 receipt for this campaign.",
-        "incident_2026-04-28: an operator error used the older 04-27 package and created duplicate WeChat Channels rows around 19:26 and 19:27; the user manually deleted the duplicate/new wrong-package rows. Treat 04-28 WeChat Channels as not_started until a row containing 短标题=早窗0别重发 and the matching 04-28 description is verified."
+        "incident_2026-04-28: an operator error used the older 04-27 package and created duplicate WeChat Channels rows around 19:26 and 19:27; the user manually deleted the duplicate/new wrong-package rows. Treat 04-28 WeChat Channels as not_started until a row containing 短标题=早窗0别重发 and the matching 04-28 description is verified.",
+        "published_verified_2026-04-28T20:38:55.293Z: newest 视频管理 row at 2026-04-29 04:34 matched the 04-28 package description exactly; pre-publish readback matched 短标题=早窗0别重发 and the exact 视频描述; standalone /tmp/vh0428-cover.png was uploaded through the native chooser and list thumbnail showed the intended 早窗0别重发 cover with founder visible."
       ],
       "platform_id": "wechat_channels",
-      "recorded_at": "2026-04-28T19:33:36+08:00",
+      "recorded_at": "2026-04-28T20:38:55.293Z",
       "share_link": null,
-      "status": "not_started",
+      "status": "published",
       "title": "早窗0别重发"
     },
     "weibo": {
       "campaign_id": "2026-04-28-platform-execution-early-zero-not-failure",
-      "current_url": null,
-      "external_id": null,
+      "current_url": "https://me.weibo.com/content/video",
+      "external_id": "weibo_20260429_AXJPD8GP",
       "management_url": "https://me.weibo.com/content/video",
       "notes": [
-        "initialized_2026-04-28: active campaign ledger created after detecting the newer 04-28 ready_for_publish package had no receipt file; do not fall back to the 04-27 receipt for this campaign."
+        "initialized_2026-04-28: active campaign ledger created after detecting the newer 04-28 ready_for_publish package had no receipt file; do not fall back to the 04-27 receipt for this campaign.",
+        "management_scan_2026-04-28T20:48:07.279Z: current logged-in Chrome management tabs were scanned before further publishing; no exact 04-28 package title was found on baijiahao/toutiao/kuaishou/xiaohongshu/zhihu/douyin/weibo. Keep status as not_started unless a later exact row is verified.",
+        "published_verified_2026-04-29T02:30:02.090Z: Weibo video manager newest row dated 2026-04-29 contains the exact 04-28 Weibo description and generated short link http://t.cn/AXJPD8GP; old draft was cleared before posting."
       ],
       "platform_id": "weibo",
-      "recorded_at": "2026-04-28T19:33:36+08:00",
-      "share_link": null,
-      "status": "not_started",
+      "recorded_at": "2026-04-29T02:30:02.090Z",
+      "share_link": "http://t.cn/AXJPD8GP",
+      "status": "published",
       "title": "早窗0不是失败：先看管理页状态词，别急着重发"
     },
     "xiaohongshu": {
@@ -106,7 +115,8 @@
       "external_id": null,
       "management_url": "https://creator.xiaohongshu.com/new/note-manager?source=official",
       "notes": [
-        "initialized_2026-04-28: active campaign ledger created after detecting the newer 04-28 ready_for_publish package had no receipt file; do not fall back to the 04-27 receipt for this campaign."
+        "initialized_2026-04-28: active campaign ledger created after detecting the newer 04-28 ready_for_publish package had no receipt file; do not fall back to the 04-27 receipt for this campaign.",
+        "management_scan_2026-04-28T20:48:07.279Z: current logged-in Chrome management tabs were scanned before further publishing; no exact 04-28 package title was found on baijiahao/toutiao/kuaishou/xiaohongshu/zhihu/douyin/weibo. Keep status as not_started unless a later exact row is verified."
       ],
       "platform_id": "xiaohongshu",
       "recorded_at": "2026-04-28T19:33:36+08:00",
@@ -120,7 +130,8 @@
       "external_id": null,
       "management_url": "https://www.zhihu.com/creator/content",
       "notes": [
-        "initialized_2026-04-28: active campaign ledger created after detecting the newer 04-28 ready_for_publish package had no receipt file; do not fall back to the 04-27 receipt for this campaign."
+        "initialized_2026-04-28: active campaign ledger created after detecting the newer 04-28 ready_for_publish package had no receipt file; do not fall back to the 04-27 receipt for this campaign.",
+        "management_scan_2026-04-28T20:48:07.279Z: current logged-in Chrome management tabs were scanned before further publishing; no exact 04-28 package title was found on baijiahao/toutiao/kuaishou/xiaohongshu/zhihu/douyin/weibo. Keep status as not_started unless a later exact row is verified."
       ],
       "platform_id": "zhihu",
       "recorded_at": "2026-04-28T19:33:36+08:00",

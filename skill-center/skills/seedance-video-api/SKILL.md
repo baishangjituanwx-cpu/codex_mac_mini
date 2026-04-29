@@ -182,6 +182,7 @@ Minimum required deliverables for a publish-ready video campaign:
 - one final `mp4`
 - one `3:4` + `4:3` cover package
 - one video publish package with platform-specific titles and concrete copy
+- one platform upload matrix such as `platform-upload-map.md`
 - one publish plan artifact such as `publish-plan.md` or `publish-plan.json` when browser-side publishing is the next step
 - one final verification artifact such as `final-verify.json` when browser-side publishing has completed
 
@@ -201,16 +202,26 @@ Minimum required video-platform fields:
 If the same campaign is intended for B站 or downstream article / note platforms, also add:
 
 - B站：`标题` + `简介`
-- 百家号 / 头条号 / 知乎 / 小红书：`标题` + `正文/描述`
+- 百家号 / 知乎：`标题` + `正文/描述`
+- 头条号：Seedance 视频内容包默认按视频发布生成 `标题` + `描述` + `上传视频`；只有用户明确要求图文时，才单独生成头条图文稿
+- 小红书：默认按视频笔记生成 `标题` + `描述` + `上传视频`；只有用户明确要求图文笔记时，才标记 `不上传视频`
 
 Package rules:
 
 - use one unified topic, but do not force one identical title across all platforms
+- generate platform titles and concrete copy from the latest completed data-review result first, not from generic topic intuition
+- treat the latest completed multi-platform review as the primary evidence source for topic angle, hook priority, wording priority, platform differences, and what to keep / cut / retest
+- if no fresh completed review exists for the current line, say so explicitly in the package and fall back to the latest validated review rather than inventing “latest signals”
 - keep the platform title aligned with the same problem the cover is selling
 - prefer `问题句 > 动作句 > 角色句` unless current review evidence says otherwise
 - 视频号 `短标题` must be generated together with `视频描述`
 - if a file is marked `ready_for_publish`, empty title or copy sections are invalid
 - if the upload asset differs from the raw generated video, keep both paths and label them explicitly, for example `raw_video` vs `publish_video`
+- one generated master video may be reused across all video-platform publish tasks unless a platform-specific upload asset is explicitly required
+- every platform entry must explicitly state the upload video file path or `不上传视频`, the upload cover file path, the final title field, and the final copy or body source
+- `platform-upload-map.md` or an equivalent per-platform upload matrix is mandatory; a publish thread must be able to open it and know exactly what to upload without inferring anything
+- for article or note platforms that do not upload video, write `不上传视频` explicitly instead of leaving the video field blank
+- do not classify 头条号 as article-only in a Seedance video campaign; default to video upload unless the package explicitly contains a separate 头条号图文派生稿
 - verify target account name and account ID before browser-side upload
 - final success must be judged from platform management lists, not only from compose-page button states
 
@@ -229,7 +240,9 @@ Windows-ready handoff rules for this repo:
   - `platforms.weibo.title` / `description` = 微博视频 `标题` / `配文`
   - `platforms.baijiahao` / `toutiao` / `zhihu` / `xiaohongshu` = 各平台 `标题` / `正文或描述`
 - On Windows, keep `assets.main_video`, `assets.cover_3_4`, and `assets.cover_4_3` as quoted absolute paths, preferably `C:/...`.
+- In the Windows upload matrix, every platform row must still name the exact upload video path or `不上传视频`, the exact cover path, and the final title/copy source. For Seedance video campaigns, 头条号 should point at the real video path by default instead of silently falling back to article-only assumptions.
 - Do not mark the campaign `ready_for_publish` until the markdown publish package exists and `.\scripts\social-publisher.ps1 validate-package automation/python-platform-takeover/configs/content-package.local.yaml` passes with those final titles and descriptions.
+- If the final YAML lives in a dated `content-package.<campaign>.yaml` instead of `content-package.local.yaml`, run the same PowerShell validation against that dated file before handing the package to publishing.
 
 ## Windows PowerShell Quick Use
 

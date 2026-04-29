@@ -16,10 +16,12 @@ Recommended flow:
 5. If subtitles are wrong, regenerate; do not local-patch subtitles and still call the asset publish-ready.
 6. Build the mandatory post-generation cover package from the finished video.
 7. Build the video publish package with platform-specific titles and concrete copy.
-8. If browser-side publish is the next step, also save a `publish-plan.md` or `publish-plan.json` plus a `browser-use-checklist.md`.
-9. If the platform upload asset differs from the raw generated video, keep both `raw_video` and `publish_video` in the package and mark which one should be uploaded.
-10. For Douyin, validate that the title is within `20` visible Chinese characters, the description lead stays within `18`, and the two do not share a repeated `3+` character chunk.
-11. Do not call the campaign `ready_for_publish` until the cover package, publish-copy package, and publish-plan artifacts all exist.
+8. Save a per-platform upload matrix such as `platform-upload-map.md` that explicitly lists, for every platform, the upload video path or `不上传视频`, the upload cover path, the final title, and the copy or body source file.
+9. If one generated master video will be reused across all video platforms, write that explicitly in the upload matrix instead of making the publish thread infer it.
+10. If browser-side publish is the next step, also save a `publish-plan.md` or `publish-plan.json` plus a `browser-use-checklist.md`.
+11. If the platform upload asset differs from the raw generated video, keep both `raw_video` and `publish_video` in the package and mark which one should be uploaded.
+12. For Douyin, validate that the title is within `20` visible Chinese characters, the description lead stays within `18`, and the two do not share a repeated `3+` character chunk.
+13. Do not call the campaign `ready_for_publish` until the cover package, publish-copy package, upload matrix, and publish-plan artifacts all exist.
 
 ## 2. First-Frame Image To Video
 
@@ -129,13 +131,21 @@ Also generate one video publish package with concrete copy:
 Rules:
 
 - these fields must be paste-ready final copy, not placeholders
+- generate the package only after reading the latest completed multi-platform data review for this content line
+- use that review as the primary evidence source for title angle, opening hook, keep / cut / retest guidance, and platform-specific wording
+- if the latest review says `未完成内容级核验`, do not fabricate performance claims; carry that limitation into the package wording and next-step notes
 - keep one unified topic but adapt title tone by platform
 - for 视频号, treat `短标题` and `描述` as mandatory paired fields
 - for 抖音, avoid `标题` and `文案首句` collapsing into the same phrase
+- add a per-platform upload matrix so any downstream publish thread can see the exact video file, exact cover file, exact title, and exact copy to use
+- if a platform does not upload video, state `不上传视频` explicitly instead of leaving the field implicit
+- if all video platforms reuse the same generated master video, state that explicitly in the package rather than assuming the publisher will infer it
+- in a Seedance video campaign, treat 头条号 as a video publish target by default; only mark it `不上传视频` when the user explicitly asks for a 头条图文派生稿
 - if browser-side publishing has completed, save a final verification artifact such as `final-verify.json`
 - if article / note platforms are in scope, continue with their正文包 as a separate downstream step
 - on Windows handoff, copy the same final fields into `automation/python-platform-takeover/configs/content-package.local.yaml` or a dated `content-package.<campaign>.yaml`
 - treat `platforms.wechat_channels.title` as 视频号 `短标题` and `platforms.wechat_channels.description` as 视频号 `描述`
+- on Windows handoff, keep every upload-matrix row explicit: quoted `C:/...` video path or `不上传视频`, quoted `C:/...` cover path, final title field, and final copy source; for Seedance video campaigns, 头条号 should keep the real video path unless the package explicitly includes a separate 图文派生稿
 - do not call the campaign `ready_for_publish` until the markdown publish package exists and `.\scripts\social-publisher.ps1 validate-package ...` passes against the finished YAML
 
 Default naming:

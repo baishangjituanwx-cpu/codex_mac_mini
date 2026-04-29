@@ -23,6 +23,8 @@ cover_horizontal_path: "{{ASSET_ROOT}}/covers/cover_horizontal_4x3.jpg"
 
 > 这个文件里的字段必须是可直接发布的真实版本。
 > `ready_for_publish` 状态下，不允许保留空白标题、空白描述或“后续再写”的占位内容。
+> 发布文案必须先读取当前内容线最近一次已完成的数据复盘；没有新复盘时，要明确写明沿用的是哪一份已验证复盘。
+> 每个平台都必须显式写出上传视频文件、上传封面文件和要粘贴的标题/文案，不能只给方向。
 
 ## 一、主视频
 
@@ -30,13 +32,21 @@ cover_horizontal_path: "{{ASSET_ROOT}}/covers/cover_horizontal_4x3.jpg"
 - 兼容旧流程备用视频: `{{ASSET_ROOT}}/master_alt.mp4`
 - 上传视频: `{{ASSET_ROOT}}/publish.mp4`
 - brief: `{{ASSET_ROOT}}/brief.json`
+- 复盘依据: `{{ASSET_ROOT}}/latest-review.md`
 - 视频提示词: `{{ASSET_ROOT}}/video-prompt.txt`
 - 标准化 payload: `{{ASSET_ROOT}}/seedance_payload.json`
 - 发布计划: `{{ASSET_ROOT}}/publish-plan.md`
 - 浏览器执行清单: `{{ASSET_ROOT}}/browser-use-checklist.md`
 - 最终验收记录: `{{ASSET_ROOT}}/final-verify.json`
+- 平台上传清单: `{{ASSET_ROOT}}/platform-upload-map.md`
 
 ## 二、抖音
+
+### 上传素材
+
+- 上传视频：
+- 上传封面 `3:4`：
+- 上传封面 `4:3`：
 
 ### 标题
 
@@ -55,6 +65,12 @@ cover_horizontal_path: "{{ASSET_ROOT}}/covers/cover_horizontal_4x3.jpg"
 
 ## 三、快手
 
+### 上传素材
+
+- 上传视频：
+- 主用封面 `3:4`：
+- 备用封面 `4:3`：
+
 ### 标题
 
 
@@ -62,6 +78,12 @@ cover_horizontal_path: "{{ASSET_ROOT}}/covers/cover_horizontal_4x3.jpg"
 
 
 ## 四、视频号
+
+### 上传素材
+
+- 上传视频：
+- 主用封面 `3:4`：
+- 备用封面 `4:3`：
 
 ### 短标题
 
@@ -71,13 +93,47 @@ cover_horizontal_path: "{{ASSET_ROOT}}/covers/cover_horizontal_4x3.jpg"
 
 ## 五、微博视频版
 
+### 上传素材
+
+- 上传视频：
+- 主用封面 `3:4`：
+- 备用封面 `4:3`：
+
 ### 标题
 
 
 ### 配文
 
 
-## 六、执行规则
+## 六、B站
+
+### 上传素材
+
+- 上传视频：
+- 主用封面 `4:3`：
+- 备用封面 `3:4`：
+
+### 标题
+
+
+### 简介
+
+
+## 六点五、头条号视频版
+
+### 上传素材
+
+- 上传视频：
+- 主用封面 `3:4`：
+- 备用封面 `4:3`：
+
+### 标题
+
+
+### 描述
+
+
+## 七、执行规则
 
 - 标题 / 短标题 / 文案 / 描述不得留空
 - 所有字段都必须是可直接粘贴到后台的真实版本

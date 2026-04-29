@@ -17,11 +17,15 @@ Prefer it when the task involves:
 
 ## Core Workflow
 
-1. Confirm bridge health.
-- Run `opencli doctor`.
-- Stop if `Extension: not connected`.
-- If Browser Bridge is down but the dedicated logged-in Chrome is healthy on a known CDP port, CDP-attached Playwright is an acceptable fallback.
-- Prefer that fallback for logged-in creator backends when restarting the browser would risk losing session state.
+1. Confirm Chrome DevTools / CDP access first.
+- For actual publishing tasks, first try to attach to the already logged-in Chrome through Chrome DevTools Protocol / CDP.
+- Check known local CDP endpoints such as `http://127.0.0.1:9222/json/version` or the active `BROWSER_CDP_URL` before choosing an automation route.
+- On a Windows repo mirror, verify that endpoint with `Invoke-WebRequest http://127.0.0.1:9222/json/version` first. Only use `automation/python-platform-takeover/scripts/start-chrome-cdp.ps1` when a new CDP-capable browser session is truly needed; do not relaunch an already logged-in browser just to normalize the tooling path.
+- If CDP is available, prefer CDP-attached Playwright, Chrome DevTools Protocol calls, or the existing Python/CDP takeover scripts for DOM inspection, file inputs, submit clicks, network/API verification, and management-list proof.
+- Do not restart the user's logged-in Chrome just to enable CDP unless the user explicitly approves it; preserving creator-platform login state is more important than a cleaner automation surface.
+- If CDP is unavailable, run `opencli doctor` and use OpenCLI / Browser Bridge against the current logged-in Chrome tab.
+- On the Windows repo mirror, `automation/python-platform-takeover/scripts/social-publisher.ps1 doctor --check-browser --package <yaml> --platform <platform>` is the first fallback check before deciding whether Browser Bridge is safe enough.
+- Stop if neither CDP nor Browser Bridge can safely reach the real editor or management page.
 
 2. Isolate the browser session.
 - Use a unique OpenCLI `workspace` per platform flow.
@@ -33,6 +37,7 @@ Prefer it when the task involves:
 - Compare the locked `campaign_id`, video path, cover paths, and platform title/description against the intended task. If they do not match, stop before upload.
 - If the newest ready package has no matching receipt file under `state/publish-receipts/`, create or initialize that receipt for the new campaign. Never fall back to the previous campaign's receipt just because it is the latest existing receipt.
 - If an older receipt is `published` but a newer ready package exists, treat the older receipt as historical only; it must not satisfy or block the newer campaign's publishing task.
+- On Windows in this repo, keep that lock check on the shared CLI path: `.\scripts\social-publisher.ps1 validate-package <yaml>` plus `receipt-status` / `record-receipt --status not_started` against the same `campaign_id`, not a separate handwritten checklist.
 - Confirm local asset paths, title, body, declarations, and platform-specific extras.
 - Avoid mid-flow content rewriting unless the platform rejects the original package.
 - For video platforms with a custom cover, run a cover-readability preflight before opening the platform editor: view or render the cover at roughly 25 percent scale and confirm the main title is readable in the small preview.

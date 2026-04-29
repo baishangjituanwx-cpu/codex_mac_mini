@@ -54,7 +54,9 @@ def load_receipts(package_path: str | Path, campaign_id: str) -> dict[str, Publi
     for platform_id, item in receipts_payload.items():
         if not isinstance(item, dict):
             continue
-        receipts[platform_id] = PublishReceipt(**item)
+        normalized = dict(item)
+        normalized.setdefault("title", "")
+        receipts[platform_id] = PublishReceipt(**normalized)
     return receipts
 
 

@@ -189,6 +189,8 @@ macOS / Linux 也有对应包装器:
 
 如果脚本提示 CDP 端口没有起来，先关闭冲突的浏览器实例，或者换一个新的 `-ProfileDir` 后再试。
 
+如果当前已经有带登录态、且 CDP 可达的 Chrome / Edge，不要为了这套脚手架额外重启浏览器。优先把 `.env` 里的 `BROWSER_CDP_URL` 指到现有实例，直接复用当前登录会话；只有在用户明确同意时，才关闭或重开现有浏览器。
+
 然后在这个浏览器里手动登录各平台后台，并把待接管页面保持打开。
 
 ## 环境变量
@@ -255,16 +257,20 @@ Copy-Item configs/content-package.example.yaml configs/content-package.local.yam
 
 如果你是从仓库里拿日期化的现成样例开工，例如 `configs/content-package.2026-04-27-platform-execution-verify-before-republish.yaml` 这类文件里已经写死了 macOS 的 `/Users/...` 素材路径，不要直接在 Windows 上原样复用。先复制到你自己的 `configs/content-package.local.yaml` 或新的 `configs/content-package.<campaign>.yaml`，再把 `assets.*` 改成真实存在的 `C:/...` 或其他 Windows 绝对路径，平台文案和发布约束保持不变即可。
 
-如果上游内容包来自今天更新过的 `seedance-video-api` 流程，Windows 下还要额外遵守这 4 条交接规则:
+如果上游内容包来自今天更新过的 `seedance-video-api` 流程，Windows 下还要额外遵守这 6 条交接规则:
 
 - 不要把“视频已生成 + 封面已出图”误当成完成；只有平台文案包也落地后，才能继续往 `ready_for_publish` 走。
 - 先把最终版平台文案落到 markdown 内容包，例如 `content-library/posts/shared/<campaign>-all-platform-publish-package.md` 或 `content-library/posts/video/<campaign>-video-publish-package.md`；如果仓库里暂时没有这两个目录，就在当前 campaign 工作目录按同样命名新建。
+- 同一批交付里必须补一份逐平台上传矩阵，例如 `platform-upload-map.md`；每个平台都要写清楚 `上传视频` 或 `不上传视频`、上传封面路径、最终标题字段、以及最终文案或正文来源，不能让 Windows 发布线程靠猜。
 - 再把同一份最终文案镜像进 `configs/content-package.local.yaml` 或日期化的 `configs/content-package.<campaign>.yaml`，字段映射保持一致:
   - `platforms.wechat_channels.title` = 视频号 `短标题`
   - `platforms.wechat_channels.description` = 视频号 `描述`
   - `platforms.weibo.title` / `description` = 微博视频 `标题` / `配文`
   - `platforms.douyin` / `kuaishou` / `baijiahao` / `toutiao` / `zhihu` / `xiaohongshu` 继续写各自最终 `标题` / `文案或正文`
-- Windows 侧只有在 markdown 文案包已存在且 `.\scripts\social-publisher.ps1 validate-package configs/content-package.local.yaml` 通过后，才算完成今天新增的 `ready_for_publish` 交付标准。
+- 如果同一条 Seedance 主视频会复用到多个视频平台，要在矩阵里明确写出来；其中 头条号 / 小红书 默认按视频发布处理，只有用户明确要求图文派生稿时，才把对应平台写成 `不上传视频`。
+- 真正进入发布页前，先锁定当前 `campaign_id`，并对将要提交的 4 项内容做读回确认: 视频路径、封面路径、最终标题或短标题、最终描述或正文。不要因为上一轮 receipt、旧草稿或旧管理页行还在，就跳过本轮包的读回。
+- 如果当前内容包还没有自己的 receipt，先用 `.\scripts\social-publisher.ps1 record-receipt <你的 YAML> --platform <platform> --status not_started` 初始化；`receipt-status`、`record-receipt`、`validate-package` 都直接指向当前这份日期化 YAML 或 `content-package.local.yaml`，不要借用旧 campaign 的文件名。
+- Windows 侧只有在 markdown 文案包、上传矩阵都已存在，且 `.\scripts\social-publisher.ps1 validate-package configs/content-package.local.yaml` 或对应日期化 YAML 校验通过后，才算完成今天新增的 `ready_for_publish` 交付标准。
 
 ## 示例命令
 

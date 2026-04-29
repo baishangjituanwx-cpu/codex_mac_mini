@@ -192,7 +192,7 @@ class DouyinPublisher(PlatformPublisher):
                 return page
         return controller.open_or_activate_page(
             self.metadata.compose_urls[0],
-            reuse_contains="creator.douyin.com",
+            reuse_contains="creator-micro/content/upload",
         )
 
     def _looks_like_editor(self, page: Page, mapping: dict) -> bool:

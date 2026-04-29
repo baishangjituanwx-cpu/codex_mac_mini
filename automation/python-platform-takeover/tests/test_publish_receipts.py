@@ -3,6 +3,7 @@ from pathlib import Path
 from social_publisher.publish_receipts import (
     clear_receipt,
     get_receipt,
+    load_receipts,
     PublishReceipt,
     receipt_path_for,
     should_block_republish,
@@ -68,6 +69,36 @@ def test_should_block_republish_for_cover_repair_review_status() -> None:
     )
 
     assert should_block_republish(repair_pending) is True
+
+
+def test_load_receipts_accepts_legacy_receipts_without_title(tmp_path: Path) -> None:
+    package = tmp_path / "automation" / "configs" / "content-package.test.yaml"
+    package.parent.mkdir(parents=True, exist_ok=True)
+    package.write_text("campaign_id: test\n", encoding="utf-8")
+    path = receipt_path_for(package, "2026-04-29-demo")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        """
+{
+  "campaign_id": "2026-04-29-demo",
+  "receipts": {
+    "kuaishou": {
+      "campaign_id": "2026-04-29-demo",
+      "platform_id": "kuaishou",
+      "status": "under_review",
+      "recorded_at": "2026-04-29T07:31:10.607Z"
+    }
+  }
+}
+""".strip()
+        + "\n",
+        encoding="utf-8",
+    )
+
+    receipts = load_receipts(package, "2026-04-29-demo")
+
+    assert receipts["kuaishou"].title == ""
+    assert should_block_republish(receipts["kuaishou"]) is True
 
 
 def test_clear_receipt_removes_file_when_campaign_becomes_empty(tmp_path: Path) -> None:

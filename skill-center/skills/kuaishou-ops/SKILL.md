@@ -17,6 +17,9 @@ If the task requires real browser execution, also use `$social-publish-automatio
 
 - Prepare the package first: video, title, description, cover, tags, and expected CTA.
 - For browser-side publishing or troubleshooting, route through `$social-publish-automation`.
+- Prefer Chrome DevTools / CDP-attached control for Kuaishou page inspection, file input handling, and publish-status verification when it can attach to the existing logged-in Chrome session.
+- If the logged-in Kuaishou tab is only available in a normal Chrome profile without a CDP port, keep OpenCLI / Browser Bridge as the safe fallback instead of restarting Chrome and risking session loss.
+- On a Windows repo mirror, first check the existing session with `Invoke-WebRequest http://127.0.0.1:9222/json/version` or `.\scripts\social-publisher.ps1 doctor --package <yaml> --platform kuaishou --check-browser`; only start a new browser through `.\scripts\start-chrome-cdp.ps1` when there is no safe logged-in CDP session to reuse.
 - Use `快手创作者服务平台` as the main desktop surface when operating from the web.
 - Verify from `作品管理`, not only from the submit action.
 - Treat `审核中` as the normal success-adjacent terminal state after submit.
@@ -67,6 +70,8 @@ If the task requires real browser execution, also use `$social-publish-automatio
 - for larger local videos, page-side CDP `DOM.setFileInputFiles` was more stable than ordinary remote `setInputFiles`
 - the verified description editor node was `#work-description-edit`
 - the effective submit control was the bottom action area containing `发布 / 取消`
+- 2026-04-29 operator preference: for upcoming Kuaishou publishing, try Chrome DevTools / CDP first when it is already available; do not restart the logged-in browser just to enable CDP without explicit confirmation.
+- If Windows has to fall back to the native chooser, first copy the real asset to a short non-symlink `%TEMP%\\<simple-name>` path, use that exact file path in the chooser's file-name box, then verify the accepted upload from `作品管理` rather than trusting the chooser close event.
 - In this workspace's founder-IP workflow, once 小云雀 has generated the video, the default next step is to build prepared vertical and horizontal covers carrying one 8 to 10 Chinese-character theme, and upload the prepared cover instead of relying on default frame or `智能推荐封面`.
 - Keep credentials, verification codes, and private account details out of notes and artifacts.
 

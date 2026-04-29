@@ -1,0 +1,183 @@
+{
+  "campaign_id": "2026-04-29-platform-execution-lock-campaign-four-checks",
+  "receipts": {
+    "baijiahao": {
+      "campaign_id": "2026-04-29-platform-execution-lock-campaign-four-checks",
+      "current_url": "https://baijiahao.baidu.com/builder/rc/clue?aside=0&footer=true&from=news&firstPublish=undefined&word_bag_id=null",
+      "external_id": null,
+      "management_url": "https://baijiahao.baidu.com/builder/rc/content?currentPage=1&pageSize=10&search=%E5%BE%88%E5%A4%9A%E5%9B%A2%E9%98%9F%E6%8A%8A%E6%98%A8%E5%A4%A9%E5%86%85%E5%AE%B9%E5%8F%91%E5%88%B0%E4%BB%8A%E5%A4%A9%EF%BC%8C%E4%B8%8D%E6%98%AF%E4%B8%8D%E4%BC%9A%E5%8F%91%EF%BC%8C%E8%80%8C%E6%98%AF%E5%8F%91%E5%89%8D%E6%B2%A1%E9%94%81%E5%BD%93%E5%89%8D%E6%89%B9%E6%AC%A1&type=&collection=&startDate=&endDate=",
+      "notes": [],
+      "platform_id": "baijiahao",
+      "recorded_at": "2026-04-29T09:31:48.057493+00:00",
+      "share_link": null,
+      "status": "under_review",
+      "title": "很多团队把昨天内容发到今天，不是不会发，而是发前没锁当前批次"
+    },
+    "bilibili": {
+      "campaign_id": "2026-04-29-platform-execution-lock-campaign-four-checks",
+      "current_url": "https://member.bilibili.com/platform/upload-manager/article",
+      "external_id": "BV1yA9QBDEKQ",
+      "management_url": "https://member.bilibili.com/platform/upload-manager/article",
+      "notes": [
+        "initialized_2026-04-29T07:24:10.206Z: active campaign receipt created before publishing; older receipts are historical only.",
+        "published_verified_under_review_2026-04-29T18:13:36+08:00: CDP endpoint 9222 was unavailable without restarting logged-in Chrome, so OpenCLI Browser Bridge was used against the current session. Pre-submit readback matched video upload, custom cover URL https://archive.biliimg.com/bfs/archive/65f9a61d84cf97504a9f9666098eb2b29cbb6075.jpg, exact title, exact description, tags 手机/批次/内容/AI员工/内容发布/自动化/运营复盘, category 小剧场, and AI declaration 作者声明：该视频使用人工智能合成技术. Submit page showed 稿件投递成功; B站 add/v3 API returned aid=116487432050921 bvid=BV1yA9QBDEKQ; 稿件管理 verified same-title row at 2026年04月29日 18:09:45 with 转码完成 / 审核中."
+      ],
+      "platform_id": "bilibili",
+      "recorded_at": "2026-04-29T18:13:36+08:00",
+      "share_link": "https://www.bilibili.com/video/BV1yA9QBDEKQ",
+      "status": "under_review",
+      "aid": 116487432050921,
+      "title": "为什么总会把昨天内容发到今天？发前先锁当前批次，再做四项比对",
+      "verified_fields": {
+        "title": "为什么总会把昨天内容发到今天？发前先锁当前批次，再做四项比对",
+        "aid": 116487432050921,
+        "bvid": "BV1yA9QBDEKQ",
+        "video_cid": "37942723035",
+        "video_filename": "n260429s39lbbraxfzjmk29ncsjnhrg0",
+        "cover_url": "https://archive.biliimg.com/bfs/archive/65f9a61d84cf97504a9f9666098eb2b29cbb6075.jpg",
+        "cover_mode": "custom_cover_uploaded_and_accepted",
+        "description": "这轮暴露的问题不是内容不会发，而是执行层没有先锁当前 campaign_id，也没有在发表前完成视频、封面、短标题、描述四项比对，结果旧回执继续推进旧内容。\n\n正确动作是：\n\n- 先锁当前批次\n- 再逐项读回视频、封面、短标题、描述\n- 任一项不匹配都别发表\n\nAI员工先核验，\n人只做最后发布判断。",
+        "tags": "手机,批次,内容,AI员工,内容发布,自动化,运营复盘",
+        "category": "小剧场",
+        "ai_declaration": "作者声明：该视频使用人工智能合成技术",
+        "submit_success_text": "稿件投递成功",
+        "manager_row_time": "2026年04月29日 18:09:45",
+        "manager_row_status": "转码完成 / 审核中",
+        "manager_row_text": "00:00:00 为什么总会把昨天内容发到今天？发前先锁当前批次，再做四项比对 2026年04月29日 18:09:45 转码完成 审核中 查询进度 编辑 0 0 0 0 0 0 0",
+        "automation_route": "OpenCLI Browser Bridge fallback; CDP port unavailable; Chrome was not restarted"
+      }
+    },
+    "douyin": {
+      "campaign_id": "2026-04-29-platform-execution-lock-campaign-four-checks",
+      "current_url": "https://creator.douyin.com/creator-micro/content/manage?enter_from=publish",
+      "external_id": null,
+      "management_url": "https://creator.douyin.com/creator-micro/content/manage",
+      "notes": [
+        "initialized_2026-04-29T07:24:10.206Z: active campaign receipt created before publishing; older receipts are historical only.",
+        "published_verified_2026-04-29T18:36:26+08:00: Chrome DevTools/CDP flow on port 9223. Pre-submit readback matched video upload, vertical 3:4 cover, horizontal 4:3 cover, short title, and description. Cover checks showed 封面效果检测通过/封面检测通过 and 作品未见异常. After final confirmation, publish redirected to 作品管理; title search verified row 发前先锁批次 at 2026年04月29日 18:34 with status 已发布."
+      ],
+      "platform_id": "douyin",
+      "recorded_at": "2026-04-29T18:36:26+08:00",
+      "share_link": null,
+      "status": "published",
+      "title": "发前先锁批次",
+      "verified_fields": {
+        "short_title": "发前先锁批次",
+        "description": "别把昨天内容发到今天。发前先锁当前批次，再把视频文件、封面文件、短标题、视频描述四项读回比对。任一项不匹配，都不要直接点发表。AI员工先锁批次并读回四项，人只做最后发布判断。#AI员工 #内容发布 #先锁批次 #四项比对",
+        "row_time": "2026年04月29日 18:34",
+        "row_status": "已发布",
+        "video_status": "作品未见异常",
+        "cover_status": "封面效果检测通过 / 封面检测通过",
+        "cover_files": {
+          "vertical_3x4": "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-vertical-3x4.png",
+          "horizontal_4x3": "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-horizontal-4x3.png"
+        },
+        "automation_route": "Chrome DevTools/CDP 127.0.0.1:9223"
+      }
+    },
+    "kuaishou": {
+      "campaign_id": "2026-04-29-platform-execution-lock-campaign-four-checks",
+      "current_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+      "external_id": "kuaishou_20260429_published_cdp",
+      "management_url": "https://cp.kuaishou.com/article/manage/video",
+      "notes": [
+        "published_verified_2026-04-29T09:18:00Z: Chrome DevTools/CDP read Kuaishou management page; exact package description was present and row status showed 已发布 2026-04-29 15:30."
+      ],
+      "platform_id": "kuaishou",
+      "recorded_at": "2026-04-29T09:18:33.045830+00:00",
+      "share_link": null,
+      "status": "published",
+      "title": "四项比对再发"
+    },
+    "toutiao": {
+      "campaign_id": "2026-04-29-platform-execution-lock-campaign-four-checks",
+      "current_url": null,
+      "external_id": null,
+      "management_url": null,
+      "notes": [
+        "initialized_2026-04-29T07:24:10.206Z: active campaign receipt created before publishing; older receipts are historical only."
+      ],
+      "platform_id": "toutiao",
+      "recorded_at": "2026-04-29T07:24:10.206Z",
+      "share_link": null,
+      "status": "not_started"
+    },
+    "wechat_channels": {
+      "campaign_id": "2026-04-29-platform-execution-lock-campaign-four-checks",
+      "current_url": "https://channels.weixin.qq.com/platform/post/list",
+      "external_id": "export/UzFfBgAAxLajCBIoNUiTjczT4DCa_9h1mULqb1pRxqfDxsQXlg",
+      "management_url": "https://channels.weixin.qq.com/platform/post/list",
+      "notes": [
+        "initialized_2026-04-29T07:24:10.206Z: active campaign receipt created before publishing; older receipts are historical only.",
+        "published_verified_under_review_2026-04-29T09:35:32.256Z: Chrome DevTools/CDP flow; create page showed 已发表; management list newest row objectId=export/UzFfBgAAxLajCBIoNUiTjczT4DCa_9h1mULqb1pRxqfDxsQXlg; API row shortTitle and description exactly match package; thumbnail is vertical custom cover; row state is 审核中/视频审核中."
+      ],
+      "platform_id": "wechat_channels",
+      "recorded_at": "2026-04-29T09:35:32.256Z",
+      "share_link": null,
+      "status": "under_review",
+      "verified_fields": {
+        "short_title": "发前先锁批次",
+        "description": "发布前先锁当前批次，再比对视频、封面、短标题、描述四项。任一项不匹配，都不要点发表。很多误发和重复发布，不是内容差，而是旧回执还在继续推进旧内容。AI员工先锁批次并读回四项，人只做最后发布判断。",
+        "row_time": "2026年04月29日 17:32",
+        "row_status": "视频审核中",
+        "cover_thumbnail": "custom_vertical_cover_verified_from_management_row",
+        "cover_thumbnail_size": "540x720"
+      }
+    },
+    "weibo": {
+      "campaign_id": "2026-04-29-platform-execution-lock-campaign-four-checks",
+      "current_url": null,
+      "external_id": null,
+      "management_url": null,
+      "notes": [
+        "initialized_2026-04-29T07:24:10.206Z: active campaign receipt created before publishing; older receipts are historical only."
+      ],
+      "platform_id": "weibo",
+      "recorded_at": "2026-04-29T07:24:10.206Z",
+      "share_link": null,
+      "status": "not_started"
+    },
+    "xiaohongshu": {
+      "campaign_id": "2026-04-29-platform-execution-lock-campaign-four-checks",
+      "current_url": "https://www.xiaohongshu.com/discovery/item/69f1d2460000000022024f60",
+      "external_id": "69f1d2460000000022024f60",
+      "management_url": "https://creator.xiaohongshu.com/new/note-manager?source=official",
+      "notes": [
+        "initialized_2026-04-29T07:24:10.206Z: active campaign receipt created before publishing; older receipts are historical only.",
+        "published_api_success_2026-04-29T09:42:56.833Z: Xiaohongshu publish API /web_api/sns/v2/note returned success:true, result:0, share_link https://www.xiaohongshu.com/discovery/item/69f1d2460000000022024f60, score 10. CDP flow used logged-in Chrome at 127.0.0.1:9223.",
+        "cover_note_2026-04-29T09:42:56.833Z: Web editor exposed intelligent video-frame cover selection rather than local image cover input; selected readable frame with title 发前先锁批次 and platform reported 封面效果评估通过 before publish."
+      ],
+      "platform_id": "xiaohongshu",
+      "recorded_at": "2026-04-29T09:42:56.833Z",
+      "share_link": "https://www.xiaohongshu.com/discovery/item/69f1d2460000000022024f60",
+      "status": "published",
+      "title": "发前先锁批次：别把昨天内容发到今天"
+    },
+    "zhihu": {
+      "campaign_id": "2026-04-29-platform-execution-lock-campaign-four-checks",
+      "current_url": "https://zhuanlan.zhihu.com/p/2032876568461193839",
+      "external_id": "2032876568461193839",
+      "management_url": "https://www.zhihu.com/people/vkvtss-81/posts",
+      "notes": [
+        "initialized_2026-04-29T07:24:10.206Z: active campaign receipt created before publishing; older receipts are historical only.",
+        "published_verified_2026-04-29T09:41:39Z: CDP port 9222 unavailable and logged-in Chrome was not restarted; used OpenCLI Browser Bridge Page API with fixed Zhihu tabId. Source package declared answer but had no target question URL, so it was published as a Zhihu article. Article page showed 发布成功, exact title, cover uploaded, word count 668, and profile posts list verified the new article link."
+      ],
+      "platform_id": "zhihu",
+      "recorded_at": "2026-04-29T09:41:39Z",
+      "share_link": "https://zhuanlan.zhihu.com/p/2032876568461193839",
+      "status": "published",
+      "title": "为什么总会把昨天的内容发到今天？问题往往不在内容，而在发前没有锁当前批次并做四项比对",
+      "verified_fields": {
+        "post_type": "article",
+        "source_post_type": "answer",
+        "fallback_reason": "source package had no target question URL",
+        "account": "智能大陈",
+        "profile_posts_url": "https://www.zhihu.com/people/vkvtss-81/posts",
+        "word_count": "668",
+        "cover_thumbnail": "uploaded",
+        "cover_thumbnail_size": "1080x1440",
+        "list_page_title_match": true
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+campaign_id: "2026-04-29-platform-execution-lock-campaign-four-checks"
+theme: "视频号误发事故说明：发布前不锁当前批次、不做四项比对，最容易把昨天的内容发到今天。"
+review_basis_paths:
+  - "/Users/baishangjituan/Documents/New project/content-library/logs/review/2026-04-28-2026-04-28-platform-execution-early-zero-not-failure-review.md"
+  - "/Users/baishangjituan/Documents/New project/content-library/logs/incidents/2026-04-28-wechat-channels-wrong-campaign-duplicate.md"
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-horizontal-4x3.png"
+support_files:
+  brief_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_content_package/brief.json"
+  prompt_package_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_content_package/video-prompt.txt"
+  publish_plan_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_content_package/publish-plan.md"
+publish_constraints:
+  reuse_logged_in_publish_page: true
+  skip_duplicate_if_already_published: true
+  prefer_repair_existing_post_over_republish: true
+  require_cover_thumbnail_check_25pct: true
+  require_management_page_verification: true
+  require_title_description_cover_alignment: true
+  require_active_campaign_lock: true
+  require_four_item_readback: true
+platform_upload_plan:
+  douyin:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks.mp4"
+    upload_cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-vertical-3x4.png"
+    upload_cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-horizontal-4x3.png"
+  kuaishou:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-horizontal-4x3.png"
+  wechat_channels:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-horizontal-4x3.png"
+  weibo:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-horizontal-4x3.png"
+  bilibili:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-horizontal-4x3.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-vertical-3x4.png"
+  xiaohongshu:
+    publish_type: "video_note"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-horizontal-4x3.png"
+  zhihu:
+    publish_type: "answer"
+    upload_video: null
+    optional_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-vertical-3x4.png"
+  baijiahao:
+    publish_type: "article"
+    upload_video: null
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-horizontal-4x3.png"
+  toutiao:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-29-platform-execution-lock-campaign-four-checks_cover_package/cover-horizontal-4x3.png"
+platforms:
+  douyin:
+    title: "发前先锁批次"
+    description: "别把昨天内容发到今天。发前先锁当前批次，再把视频文件、封面文件、短标题、视频描述四项读回比对。任一项不匹配，都不要直接点发表。AI员工先锁批次并读回四项，人只做最后发布判断。#AI员工 #内容发布 #先锁批次 #四项比对"
+  kuaishou:
+    title: "四项比对再发"
+    description: "别直接点发表。先锁当前批次，再把视频、封面、短标题、描述四项逐项比对。旧回执不能当新证据，任一项不对就先停下。AI员工先核验，人再做发布判断。"
+  wechat_channels:
+    title: "发前先锁批次"
+    description: "发布前先锁当前批次，再比对视频、封面、短标题、描述四项。任一项不匹配，都不要点发表。很多误发和重复发布，不是内容差，而是旧回执还在继续推进旧内容。AI员工先锁批次并读回四项，人只做最后发布判断。"
+  weibo:
+    title: "别把昨天内容发到今天：发前先锁批次，再做四项比对"
+    description: "别把昨天内容发到今天。发布前先锁当前批次，再把视频、封面、短标题、描述四项逐项读回。没有先锁批次、也没有做四项比对，最容易把旧回执当成新证据，最后误发甚至重复发布。#AI员工 #内容发布 #发前先锁批次"
+  bilibili:
+    title: "为什么总会把昨天内容发到今天？发前先锁当前批次，再做四项比对"
+    description: "这轮暴露的问题不是内容不会发，而是执行层没有先锁当前 campaign_id，也没有在发表前完成视频、封面、短标题、描述四项比对，结果旧回执继续推进旧内容。正确动作是先锁当前批次，再逐项读回，任一项不匹配都别发表。"
+  zhihu:
+    title: "为什么总会把昨天的内容发到今天？问题往往不在内容，而在发前没有锁当前批次并做四项比对"
+    description: "这轮暴露的问题不是内容失败，而是执行层没有先锁当前 campaign，也没有在发表前完成视频、封面、短标题、描述四项读回。旧回执一旦继续推进旧内容，误发和重复发布就会一起出现。"
+  baijiahao:
+    title: "很多团队把昨天内容发到今天，不是不会发，而是发前没锁当前批次"
+    description: "很多误发和重复发布，不是因为内容差，而是发前没有先锁当前批次，也没有把视频、封面、短标题、描述四项读回比对，最后旧回执继续推动旧内容。"
+  toutiao:
+    title: "为什么会把昨天内容发到今天？先锁当前批次，再做四项比对"
+    description: "发前不锁当前批次，又不做四项比对，最容易把昨天的内容当成今天的继续发出去。正确动作是先锁 active campaign，再逐项核对视频、封面、短标题和描述。"
+  xiaohongshu:
+    title: "发前先锁批次：别把昨天内容发到今天"
+    description: "别把昨天内容发到今天。发前先锁当前批次，再把视频、封面、短标题、描述四项逐项比对。任一项不匹配，都别直接点发表。"
