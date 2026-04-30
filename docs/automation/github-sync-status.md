@@ -12,6 +12,32 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-01 00:10:09 CST
+- 处理时间:
+  - `2026-05-01 00:10:09 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-04-30 22:05:10 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本轮同步分支:
+  - `codex/default-python-sync`: 是。推送本地已存在但尚未上传的 follow-up 提交，补齐 receipt 阻断态测试与状态留痕。
+  - `codex/windows-version-20260411`: 是。将 Windows 专属发布阻断说明和转译状态记录单独回补到 Windows 支线。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。沿用本地已存在的 2 个 follow-up 提交:
+    - `Add publish receipt compatibility tests`
+    - `Record 2026-05-01 sync follow-up status`
+  - `codex/windows-version-20260411`: 是。本轮新增提交:
+    - `Sync Windows publish blocking guidance`
+- 是否已推送:
+  - `codex/default-python-sync`: 是。已推送到 `origin/codex/default-python-sync`，远端到达 `71b41f1`。
+  - `codex/windows-version-20260411`: 是。已推送到 `origin/codex/windows-version-20260411`，远端到达 `02d6e33`。
+- 提交信息:
+  - `codex/default-python-sync`: `Add publish receipt compatibility tests`
+  - `codex/default-python-sync`: `Record 2026-05-01 sync follow-up status`
+  - `codex/windows-version-20260411`: `Sync Windows publish blocking guidance`
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - `2026-04-30` 的 generic payload 与 `2026-05-01 00:05:21 CST` 的首条同步记录在本轮开始前已经存在于 `codex/default-python-sync`；本轮只补推 default 分支的 follow-up 提交，并把 Windows 专属说明文件补推到 `codex/windows-version-20260411`。
+
 ## 2026-05-01 00:07:11 CST
 - 处理时间:
   - `2026-05-01 00:07:11 CST`
