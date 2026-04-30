@@ -12,6 +12,26 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-01 00:07:11 CST
+- 处理时间:
+  - `2026-05-01 00:07:11 CST`
+- 本次检查的分支:
+  - `codex/default-python-sync`
+- 是否检测到新增或修改:
+  - 是。
+  - 首次推送完成后复核工作区时，发现 `automation/python-platform-takeover/tests/test_publish_receipts.py` 仍有一组未同步的测试更新；内容是把 `blocked_account_review_pending` 阻断态和 receipt 扩展字段兼容补成显式测试覆盖。
+- 是否已提交:
+  - 是。本轮 follow-up 追加 2 个提交:
+    - `Add publish receipt compatibility tests`
+    - `Record 2026-05-01 sync follow-up status`
+- 是否已推送:
+  - `codex/default-python-sync`: 是。上述 follow-up 提交会继续推送到 `origin/codex/default-python-sync`。
+- 提交信息:
+  - `codex/default-python-sync`: `Add publish receipt compatibility tests`
+  - `codex/default-python-sync`: `Record 2026-05-01 sync follow-up status`
+- 若跳过，说明跳过原因:
+  - 未跳过。该 follow-up 只用于补齐同一批 receipt 兼容改动的测试覆盖，避免仓库远端状态与本地工作区再次分叉。
+
 ## 2026-05-01 00:05:21 CST
 - 处理时间:
   - `2026-05-01 00:05:21 CST`
