@@ -12,6 +12,45 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-01 00:05:21 CST
+- 处理时间:
+  - `2026-05-01 00:05:21 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-04-30 22:05:10 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本轮同步分支:
+  - `codex/default-python-sync`: 是。
+  - `codex/windows-version-20260411`: 否。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。本轮拆成 2 个清晰提交:
+    - `Sync April 30 repair receipt and skill updates`
+    - `Record 2026-05-01 GitHub sync execution`
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows-only bridge / deployment payload 需要生成提交。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。上述提交会一起推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 无需推送。本轮没有新的 Windows-only 变更。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync April 30 repair receipt and skill updates`
+  - `codex/default-python-sync`: `Record 2026-05-01 GitHub sync execution`
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - 跳过了 `codex/windows-version-20260411` 的提交与推送，因为当前批次虽然包含 Windows 覆盖说明与 `windows-translation-status` 记录更新，但没有新的 Windows-only bridge、PowerShell / `.cmd` 启动器、独立安装器、模板部署资源或支线部署文档需要单独上传。
+
+## 2026-04-30 23:09:15 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `6`，删除 `0`。
+- 这批变更集中在 live `~/.codex/skills` 与 `skill-center` 的 `platform-cover-ops`、`seedance-video-api`，以及 `automation/python-platform-takeover/state/publish-receipts` 的两份头条号相关 receipt；核心是把 Seedance 视频在头条号的默认封面收紧为竖版 `3:4` 优先，并把头条号账号审核阻断到恢复发表后的状态演进写回 receipt。
+- 建议后续执行 GitHub 同步，避免 live skill、`skill-center` 镜像与 `python-platform-takeover` 最新回执状态继续只停留在本地工作区。
+
+## 2026-04-30 22:07:28 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `3`，删除 `0`。
+- 这批变更集中在 `skill-center/skills/social-publish-automation`、`skill-center/skills/toutiao-ops` 和 `automation/python-platform-takeover/README.md`；核心是把 `blocked_account_review_pending` 固化为账号审核阻断态，明确被平台账号审核卡住时不能清 receipt 后重发，并补充 receipt 额外核验字段应由共享 loader 兼容、而不是手工删键绕过。
+- 建议后续执行 GitHub 同步，避免 `skill-center` 防重发规则和 `python-platform-takeover` 的 Windows 交接说明继续只停留在本地工作区。
+
+## 2026-04-30 14:56:19 CST
+- 检测到新的技能变更批次: 新增 `2`，修改 `0`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover`：新增了 `2026-04-30-repair-existing-not-republish` 的内容包配置和同名 publish receipt，把“封面或描述不对时先修旧条、确认失败再重发”的 campaign 约束，以及 Bilibili / 知乎已发布留痕与视频号初始化台账写回本地。
+- 建议后续执行 GitHub 同步，避免这批新 campaign 配置与 receipt 台账继续只停留在本地工作区。
+
 ## 2026-04-29 17:29:09 CST
 - 检测到新的技能变更批次: 新增 0，修改 7，删除 0。
 - 这批变更集中在两条线：live / `skill-center` 的 `social-publish-automation` 与 `kuaishou-ops` 继续把浏览器执行口径前移到“保登录态前提下的 CDP-first”；`automation/python-platform-takeover` 则收紧了抖音上传页复用、补上旧 receipt 缺失 `title` 的兼容逻辑，并把 `2026-04-29-platform-execution-lock-campaign-four-checks` 的快手回执推进到 `published`。
@@ -1294,3 +1333,23 @@
   - `codex/default-python-sync`: `Deduplicate 2026-04-30 sync log entry`
 - 若跳过，说明跳过原因:
   - `codex/windows-version-20260411` 仍跳过提交与推送，因为当前仓库没有新的 Windows 专属 bridge / deployment 脚本、模板资源、安装器或部署说明增量。
+
+## 2026-04-30 14:21:47 CST
+- 检测到新的技能变更批次: 新增 `2`，修改 `0`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover` 的 `repair-existing-not-republish` campaign 配置与 receipt；核心是新增“优先修旧条而不是重发”的发布约束、百家号/快手 upload plan，以及 Bilibili / Zhihu / 微信视频号的执行留痕。
+- 建议后续执行 GitHub 同步，避免这批支持自动化 campaign 资产继续只停留在本地工作区。
+
+## 2026-04-30 17:59:16 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `3`，删除 `0`。
+- 这批变更继续集中在 `automation/python-platform-takeover`：`content-package.2026-04-30-repair-existing-not-republish.yaml` 被扩展为完整逐平台发布包，`publish-receipts/2026-04-30-repair-existing-not-republish.json` 写回了多平台状态与核验字段，同时 `social_publisher/publish_receipts.py` 增加了 receipt 扩展字段兼容过滤。
+- 建议后续执行 GitHub 同步，避免这批 campaign 配置、publish receipt 台账与兼容性修复继续只停留在本地工作区。
+
+## 2026-04-30 19:00:27 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-29-platform-execution-lock-campaign-four-checks.json`；核心是把头条号回执从 `not_started` 改写为 `blocked_account_review_pending`，并补记管理页未命中旧标题、上传页显示“账号信息审核中/审核通过后才能发布视频”的阻断证据。
+- 建议后续执行 GitHub 同步，避免这条头条号阻断留痕继续只停留在本地工作区。
+
+## 2026-04-30 22:08:00 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `3`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/README.md`、`skill-center/skills/social-publish-automation/SKILL.md` 与 `skill-center/skills/toutiao-ops/SKILL.md`；核心是把 `blocked_account_review_pending` 统一收敛成账号审核阻断态，明确保留 receipt、停止重试，并补齐 receipt 扩展字段兼容口径。
+- 建议后续执行 GitHub 同步，避免这批阻断态规则与技能镜像更新继续只停留在本地工作区。
