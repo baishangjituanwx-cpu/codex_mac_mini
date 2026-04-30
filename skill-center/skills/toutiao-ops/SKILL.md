@@ -1,6 +1,6 @@
 ---
 name: toutiao-ops
-description: Operate a 今日头条 / 头条号 account across publishing, data review, comment interaction, rule research, and material optimization. Use when Codex needs to post or repair 图文 workflows, review creator and收益 signals, handle comment interaction, research 首发 or credit rules, or improve materials for reach, originality, and compliance on 头条.
+description: Operate a 今日头条 / 头条号 account across publishing, data review, comment interaction, rule research, and material optimization. Use when Codex needs to post or repair 视频 or 图文 workflows, review creator and收益 signals, handle comment interaction, research 首发 or credit rules, or improve materials for reach, originality, and compliance on 头条.
 ---
 
 # Toutiao Ops
@@ -15,9 +15,12 @@ If the task is a direct browser publish flow, use `$social-publish-automation`.
 
 ### 1. Publish
 
-- Confirm whether the task is manual 图文发布 or `内容源同步`.
+- Confirm whether the task is 视频发布, manual 图文发布, or `内容源同步`.
+- In a Seedance video campaign, default 头条号 to 视频发布 with the generated `mp4`; only use 图文发布 when the user explicitly asks for a 头条图文派生稿.
 - Prepare the package first: title, body, images, source attribution, ad setting, and whether `头条首发` is legitimate.
 - For concrete browser-side posting steps, defer to `$social-publish-automation`.
+- On a Windows repo mirror, keep the same path through `automation/python-platform-takeover`: `.\scripts\social-publisher.ps1 doctor --package <yaml> --platform toutiao --check-browser`, then `inspect-tabs`, then `publish`. Do not invent a second Windows-only article flow for a Seedance video campaign.
+- If `receipt-status` or the management page shows `blocked_account_review_pending`, treat that as a real platform blocker rather than a fresh retry signal. On Windows and macOS, keep the receipt, stop the publish loop, and wait for account review to pass or for the user to choose a different account / release plan.
 - Verify from `作品管理`, visible success state, or a public article URL rather than trusting the click result alone.
 
 ### 2. Data Analysis
@@ -63,7 +66,8 @@ If the task is a direct browser publish flow, use `$social-publish-automation`.
 
 - In this workspace, the main 今日头条 blocker was missing creator login state on desktop, leaving the flow on verification-code login without exposing the password form reliably.
 - Treat that state as a session checkpoint first, not as an editor bug.
-- In this workspace's founder-IP workflow, once 小云雀 has generated the upstream content package, 头条号 should default to the prepared local cover instead of a generic automatic cover.
+- In this workspace's founder-IP workflow, once Seedance or 小云雀 has generated the upstream content package, 头条号 should default to the prepared local video and local cover instead of a generic automatic cover.
+- On Windows, mirror that same default into the content package and upload matrix with real quoted `C:/...` asset paths. If the package is still missing a video path, cover path, or final video title/description pair, it is not yet ready for 头条号发布.
 - Keep credentials, SMS codes, and recovery details out of notes and generated artifacts.
 
 ## Reference File

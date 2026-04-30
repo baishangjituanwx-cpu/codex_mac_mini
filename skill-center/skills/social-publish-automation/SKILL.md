@@ -17,23 +17,35 @@ Prefer it when the task involves:
 
 ## Core Workflow
 
-1. Confirm bridge health.
-- Run `opencli doctor`.
-- Stop if `Extension: not connected`.
-- If Browser Bridge is down but the dedicated logged-in Chrome is healthy on a known CDP port, CDP-attached Playwright is an acceptable fallback.
-- Prefer that fallback for logged-in creator backends when restarting the browser would risk losing session state.
+1. Confirm Chrome DevTools / CDP access first.
+- For actual publishing tasks, first try to attach to the already logged-in Chrome through Chrome DevTools Protocol / CDP.
+- Check known local CDP endpoints such as `http://127.0.0.1:9222/json/version` or the active `BROWSER_CDP_URL` before choosing an automation route.
+- On a Windows repo mirror, verify that endpoint with `Invoke-WebRequest http://127.0.0.1:9222/json/version` first. Only use `automation/python-platform-takeover/scripts/start-chrome-cdp.ps1` when a new CDP-capable browser session is truly needed; do not relaunch an already logged-in browser just to normalize the tooling path.
+- If CDP is available, prefer CDP-attached Playwright, Chrome DevTools Protocol calls, or the existing Python/CDP takeover scripts for DOM inspection, file inputs, submit clicks, network/API verification, and management-list proof.
+- Do not restart the user's logged-in Chrome just to enable CDP unless the user explicitly approves it; preserving creator-platform login state is more important than a cleaner automation surface.
+- If CDP is unavailable, run `opencli doctor` and use OpenCLI / Browser Bridge against the current logged-in Chrome tab.
+- On the Windows repo mirror, `automation/python-platform-takeover/scripts/social-publisher.ps1 doctor --check-browser --package <yaml> --platform <platform>` is the first fallback check before deciding whether Browser Bridge is safe enough.
+- Stop if neither CDP nor Browser Bridge can safely reach the real editor or management page.
 
 2. Isolate the browser session.
 - Use a unique OpenCLI `workspace` per platform flow.
 - Avoid reusing a workspace across unrelated platforms or retries.
 
 3. Prepare the publish package before touching the UI.
+- Resolve and lock the active `campaign_id` before opening any platform editor:
+- Prefer the newest local `content-package.*.yaml` whose matching content-library package is `status: ready_for_publish`, unless the user explicitly names an older campaign.
+- Compare the locked `campaign_id`, video path, cover paths, and platform title/description against the intended task. If they do not match, stop before upload.
+- If the newest ready package has no matching receipt file under `state/publish-receipts/`, create or initialize that receipt for the new campaign. Never fall back to the previous campaign's receipt just because it is the latest existing receipt.
+- If an older receipt is `published` but a newer ready package exists, treat the older receipt as historical only; it must not satisfy or block the newer campaign's publishing task.
+- On Windows in this repo, keep that lock check on the shared CLI path: `.\scripts\social-publisher.ps1 validate-package <yaml>` plus `receipt-status` / `record-receipt --status not_started` against the same `campaign_id`, not a separate handwritten checklist.
 - Confirm local asset paths, title, body, declarations, and platform-specific extras.
 - Avoid mid-flow content rewriting unless the platform rejects the original package.
 - For video platforms with a custom cover, run a cover-readability preflight before opening the platform editor: view or render the cover at roughly 25 percent scale and confirm the main title is readable in the small preview.
 - If the cover depends on text, a thumbnail URL or uploaded-file state is not sufficient. The package is incomplete until the cover title is visually readable in a list-card-sized preview.
 - For browser-side cover uploads, never use page-side JavaScript to assign `input.files`; that can bypass the platform upload service. Use Playwright `set_input_files`, OpenCLI `setFileInput`, or CDP `DOM.setFileInputFiles` on an image-only file input.
-- Do not type local file paths into a macOS native file chooser through AppleScript as an automation fallback. If direct file injection fails, stop and surface the blocker; mistyped or mangled paths can create false confidence and broken uploads.
+- Do not type long local paths, Finder search strings, or symlink paths into a macOS native file chooser through AppleScript as a normal automation fallback. On Windows, do not rely on Explorer search results, `.lnk` shortcuts, or symlink targets as the upload path either. If direct file injection fails, stop unless the platform has a verified short-path fallback.
+- Verified macOS short-path fallback rule: copy the real asset to a short non-symlink `/tmp/<simple-name>` path, select it with the native chooser `Cmd+Shift+G`, and immediately verify the platform UI accepted the upload. If the UI does not visibly accept the upload, stop instead of continuing.
+- Verified Windows short-path fallback rule: copy the real asset to a short non-symlink `%TEMP%\\<simple-name>` path such as `$env:TEMP\\vhvideo-real.mp4`, paste that exact path into the chooser's file-name box, confirm `Open`, and immediately verify the platform UI accepted the upload. Do not use a shortcut or symlink for this fallback.
 - Before any retry or补发, check the local publish receipt ledger first. The hard-stop ledger for this workspace lives under `automation/python-platform-takeover/state/publish-receipts/<campaign_id>.json`.
 - Before any retry or补发, check the target platform's management list for the exact same title or asset first. If an item already exists in a terminal or near-terminal state such as `已发布`, `审核中`, or `审核未通过`, stop and resolve that item instead of auto-reposting.
 - Default rule: do not re-publish the same platform item just because this round's UI flow looked unstable.
@@ -64,6 +76,7 @@ Prefer it when the task involves:
 - Distinguish `已发布`, `已提交`, `审核中`, and `请求已发出但未入库`.
 - When the platform exposes framework-managed row data or API payloads, prefer those exact fields over partial visible snippets.
 - For 微信视频号 publishing in this workspace, use `https://channels.weixin.qq.com/platform/post/create` as the standard direct-entry URL. Treat the list page as a verification surface, not the default initial publish surface.
+- For 微信视频号, if Browser Bridge / OpenCLI cannot reach the real editor but the logged-in Chrome page is visible and healthy, use the verified front-Chrome fallback: target the existing create tab, upload video and cover from short real temp paths through the native chooser (`/tmp` plus `Cmd+Shift+G` on macOS, `%TEMP%` plus exact-path file-name entry on Windows), write Shadow DOM fields, verify exact values, then submit and verify the newest management row.
 
 ## Operating Rules
 
@@ -117,11 +130,16 @@ If the click succeeds but the status is ambiguous, treat the result as unconfirm
 ## Anti-Duplicate Guard
 
 - For each platform in the current batch, always run this decision order before any retry:
+- `先锁定本轮 campaign_id / 内容包版本`
 - `先查本地发布台账`
 - `先查管理页`
 - `再查公开页 / 主页 / 作品流`
 - `最后才决定是否允许重发`
+- The local receipt check is valid only when the receipt `campaign_id` exactly matches the locked content package. A previous-day or previous-campaign receipt is evidence for that old campaign only.
+- If the platform management page shows a recent row whose title/body belongs to a different campaign than the locked package, do not count it as success for the current task and do not use it as a reason to publish another copy of the old campaign.
 - Treat local receipt statuses `submitted / published / under_review / success / verified` as blocking states by default.
+- Treat `blocked_account_review_pending` as a blocking state too. It means the platform is stopping publish because the account or creator profile is still under review; do not clear the receipt or retry publish until that review resolves or the user explicitly changes the plan.
+- Do not hand-edit `state/publish-receipts/<campaign_id>.json` just because it now carries extra verification keys such as `verified_fields`, `aid`, or `object_nonce`. In this workspace the shared CLI and receipt loader are expected to tolerate unknown metadata; use `receipt-status`, `record-receipt`, or `clear-receipt` instead of deleting fields by hand.
 - If the management list or public profile already shows a same-day item with the same core title, same video, or same正文片段, treat it as an existing publish candidate, not as a failed attempt.
 - For 微信视频号, the anti-duplicate guard is stricter than exact-match blocking:
 - if any recent management-row item reuses the same `短标题` and the platform-side `description` is still highly similar to the current package, stop before publish
@@ -144,5 +162,6 @@ For 微信视频号 in this workspace, the minimum verified-success standard is:
 - newest-row thumbnail consistent with the intended uploaded cover
 - newest-row thumbnail title readable at list-card size and founder人物/主体 visible, or row state explicitly shows `修改审核中` after a submitted cover repair
 - submit-click validation that the real `button` was clicked; if only a wrapper `DIV` was clicked and no list state changes, treat the submit as not executed
+- if list and create tabs coexist, reselect the create tab before every upload, field write, and submit; list-tab focus jumps are a known source of false input and stale verification
 
 Once the result is confirmed and notify-worthy, send the Feishu push immediately, then continue to the next platform.
