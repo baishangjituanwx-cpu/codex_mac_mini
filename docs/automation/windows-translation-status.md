@@ -1459,3 +1459,123 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-29 22:06:48 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧补齐或复核；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-04-30 21:33:00 CST
+
+- 处理时间:
+  - `2026-04-30 21:33:00 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-04-29 22:06:48 CST` 之后追加的非零批次:
+    - `2026-04-30 14:21:47 CST`
+    - `2026-04-30 14:56:19 CST`
+    - `2026-04-30 17:59:16 CST`
+    - `2026-04-30 19:00:27 CST`
+  - `2026-04-30 11:53:04 CST`、`20:02:07 CST`、`21:04:19 CST` 均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+  - 上述非零批次里，真正需要补 Windows 桥接或复核的仓库文件是:
+    - `automation/python-platform-takeover/README.md`
+    - `skill-center/skills/social-publish-automation/SKILL.md`
+    - `skill-center/skills/toutiao-ops/SKILL.md`
+    - `automation/python-platform-takeover/configs/content-package.2026-04-30-repair-existing-not-republish.yaml`
+    - `automation/python-platform-takeover/social_publisher/publish_receipts.py`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-04-30-repair-existing-not-republish.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-04-29-platform-execution-lock-campaign-four-checks.json`
+- 已完成的 Windows 补全:
+  - `automation/python-platform-takeover/README.md`:
+    - 补入 `2026-04-30-repair-existing-not-republish` 日期化样例的 Windows 路径桥接，明确 Windows 复制日期化 YAML 时不仅要改 `assets.*`，还要同步改 `supporting_files.*` 与 `platforms.<platform>.upload_plan.*` 为真实 `C:/...` 绝对路径。
+    - 补入 Windows 侧的 receipt 阻断说明: `blocked_account_review_pending` 代表平台账号审核阻断，不要清台账后硬重发。
+    - 补入 receipt 元数据兼容说明: 即使 receipt JSON 新增了 `verified_fields`、`aid`、`object_nonce` 等扩展键，Windows 侧也继续走 `.\scripts\social-publisher.ps1 receipt-status` / `record-receipt` / `clear-receipt`，不需要手工删键。
+    - 在状态码说明里补齐 `blocked_account_review_pending` 的 Windows / macOS 统一语义。
+  - `skill-center/skills/social-publish-automation/SKILL.md`:
+    - 补入共享 anti-duplicate / anti-republish 规则，明确 `blocked_account_review_pending` 是阻断态，不是“可以重试”的未开始状态。
+    - 补入 receipt 扩展字段兼容说明，要求 Windows 线程继续用共享 CLI，而不是手工编辑 `state/publish-receipts/<campaign_id>.json`。
+  - `skill-center/skills/toutiao-ops/SKILL.md`:
+    - 补入头条号账号审核阻断的 Windows 桥接说明，明确当 `receipt-status` 或管理页显示 `blocked_account_review_pending` 时，要保留 receipt、停止发布循环，等待审核通过或改计划。
+  - `automation/python-platform-takeover/{configs/content-package.2026-04-30-repair-existing-not-republish.yaml,state/publish-receipts/2026-04-30-repair-existing-not-republish.json,state/publish-receipts/2026-04-29-platform-execution-lock-campaign-four-checks.json}`:
+    - 复核后确认它们分别是新的跨平台日期化 campaign、跨平台 receipt 留痕，以及头条号账号审核阻断状态推进；不需要新增 Windows 专属 YAML / JSON 分叉文件。
+  - `automation/python-platform-takeover/social_publisher/publish_receipts.py`:
+    - 复核后确认 `load_receipts()` 的 dataclass 字段白名单兼容是共享 Python 逻辑，Windows PowerShell 包装器已经可直接复用，无需单独补 `.ps1` 或 `.cmd` 分支。
+- 未完成的补全:
+  - 无。
+  - `2026-04-30` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理说明、Windows 文档、快捷键差异说明、命令包装器或 repo 资产同步的自定义 skill 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮只补 Windows 文档桥接，没有新增 `.ps1` / `.cmd` / Python 平台分叉文件。
+  - 本机未做 Windows PowerShell 实机回归；当前判断基于 monitor 批次复核、现有 PowerShell 入口检查，以及 README / skill 文档是否已覆盖 `repair-existing-not-republish` 与 `blocked_account_review_pending` 的新语义。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-04-30 21:33:00 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧补齐或复核；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-04-30 22:03:01 CST
+
+- 处理时间:
+  - `2026-04-30 22:03:01 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-04-29 22:06:48 CST` 之后追加的非零批次:
+    - `2026-04-30 14:56:19 CST`
+    - `2026-04-30 17:59:16 CST`
+    - `2026-04-30 19:00:27 CST`
+  - `2026-04-30 00:37:42 CST`、`02:39:55 CST`、`03:41:43 CST`、`05:45:33 CST`、`06:46:13 CST`、`07:46:42 CST`、`08:48:48 CST`、`10:50:53 CST`、`11:53:04 CST`、`13:56:03 CST`、`20:02:07 CST`、`21:04:19 CST` 均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+  - 上述非零批次里，真正需要复核 Windows 覆盖的仓库文件是:
+    - `automation/python-platform-takeover/configs/content-package.2026-04-30-repair-existing-not-republish.yaml`
+    - `automation/python-platform-takeover/social_publisher/publish_receipts.py`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-04-30-repair-existing-not-republish.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-04-29-platform-execution-lock-campaign-four-checks.json`
+- 已完成的 Windows 补全:
+  - 无新增 Windows 补丁文件、PowerShell 启动器、`.cmd` 包装器或文档分叉需要落地。
+  - 已复核 `automation/python-platform-takeover/configs/content-package.2026-04-30-repair-existing-not-republish.yaml` 的新增行为可直接沿用现有 Windows 覆盖，无需再改仓库实现:
+    - 新增的 `prefer_repair_existing_post_over_republish`、`skip_duplicate_if_already_published`、`require_title_description_cover_alignment`、`require_active_campaign_lock` 等约束只是跨平台 campaign 语义；Windows 继续走现有 `.\scripts\social-publisher.ps1 validate-package`、`receipt-status`、`record-receipt`、`publish --execute` 即可。
+    - 文件里写死的 `/Users/...` 素材路径不需要单独再做 Windows 版本样例；`automation/python-platform-takeover/README.md` 已明确要求 Windows 先复制日期化 YAML，再把路径改成真实存在的 `C:/...` 或其他 Windows 绝对路径，文案和发布约束保持不变。
+  - 已复核 `automation/python-platform-takeover/social_publisher/publish_receipts.py` 今天新增的 `dataclasses.fields(PublishReceipt)` 白名单过滤属于纯跨平台兼容逻辑:
+    - 它只是在读取 receipt JSON 时忽略 dataclass 之外的扩展字段，避免 `verified_fields`、`aid`、`object_nonce` 等键导致反序列化失败，不引入任何 macOS / Windows 分叉，也不需要额外 PowerShell 桥接。
+  - 已复核 `automation/python-platform-takeover/state/publish-receipts/*.json` 今天新增的回执扩展字段和状态推进都已具备现成的 Windows 等价消费路径:
+    - `2026-04-30-repair-existing-not-republish.json` 中新增的多平台 `verified_fields`、`notes`、管理页状态、去重阻断说明，都是共享台账数据；Windows 继续通过同一套 `receipt-status` / `record-receipt` / `clear-receipt` 命令读取或维护。
+    - `2026-04-29-platform-execution-lock-campaign-four-checks.json` 从 `not_started` 推进到 `blocked_account_review_pending` 只是头条号阻断状态留痕，现有 Windows 文档和 PowerShell 流程已覆盖“账号被平台阻断时不要另开第二套人工流程”的处理口径。
+  - 已复核现有 Windows 文档仍覆盖今天新增的“先修旧条、别直接重发”规则，无需追加新说明:
+    - `automation/python-platform-takeover/README.md` 已包含 Windows 下 `receipt-status` 信号解读、`clear-receipt` 后替换发布、以及修封面 / 修旧条时继续记录 `C:/...` 资产路径的说明。
+    - 现有 `social-publisher.ps1`、`start-chrome-cdp.ps1`、`quickstart-windows.ps1` 已足够承接今天的 campaign 与 receipt 变更。
+- 未完成的补全:
+  - 无。
+  - `2026-04-30` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产同步的自定义 skill 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮没有新增 `.ps1` / `.cmd` / Python 平台分叉；今天的补全结论是“无需新增 Windows 实现，只需确认现有覆盖仍然成立”。
+  - 本机未做 Windows PowerShell 实机回归；判断基于 monitor 批次复核、现有 README / skill 镜像的 Windows 说明，以及共享 CLI / receipt 读取逻辑核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-04-30 22:03:01 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为都已具备现成的 Windows 等价覆盖；今天明确没有新的 Windows 缺口需要补写。
+
+## 2026-04-30 22:05:10 CST
+
+- 处理时间:
+  - `2026-04-30 22:05:10 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-04-29 22:06:48 CST` 之后追加的非零批次:
+    - `2026-04-30 14:56:19 CST`
+    - `2026-04-30 17:59:16 CST`
+    - `2026-04-30 19:00:27 CST`
+  - `2026-04-30 00:37:42 CST`、`02:39:55 CST`、`03:41:43 CST`、`05:45:33 CST`、`06:46:13 CST`、`07:46:42 CST`、`08:48:48 CST`、`10:50:53 CST`、`11:53:04 CST`、`13:56:03 CST`、`20:02:07 CST`、`21:04:19 CST` 均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+  - 本轮实际补写的 Windows 桥接文件是:
+    - `automation/python-platform-takeover/README.md`
+    - `skill-center/skills/social-publish-automation/SKILL.md`
+    - `skill-center/skills/toutiao-ops/SKILL.md`
+- 已完成的 Windows 补全:
+  - `automation/python-platform-takeover/README.md`:
+    - 把 `2026-04-30-repair-existing-not-republish` 这类日期化样例的 Windows 路径改写范围说清楚，明确不仅 `assets.*`，还要同步改 `supporting_files.*` 与 `platforms.<platform>.upload_plan.*`。
+    - 把 `blocked_account_review_pending` 明确写成 Windows / macOS 共用的阻断态，要求保留 receipt，不要清台账后硬重发。
+    - 把 receipt 扩展字段兼容写进 Windows 说明，明确遇到 `verified_fields`、`aid`、`object_nonce` 这类键时继续走共享 `receipt-status` / `record-receipt` / `clear-receipt`，不手工删键。
+  - `skill-center/skills/social-publish-automation/SKILL.md`:
+    - 把 `blocked_account_review_pending` 纳入共享 anti-republish 阻断规则。
+    - 补入“receipt JSON 出现扩展字段时不要手工编辑”的共享 CLI 口径，避免 Windows 线程分叉成手工修 JSON。
+  - `skill-center/skills/toutiao-ops/SKILL.md`:
+    - 把头条号 `blocked_account_review_pending` 的处理补成显式 Windows 桥接说明，要求账号审核未过时停止发布循环，等待审核或改方案。
+  - `automation/python-platform-takeover/{configs/content-package.2026-04-30-repair-existing-not-republish.yaml,social_publisher/publish_receipts.py,state/publish-receipts/2026-04-30-repair-existing-not-republish.json,state/publish-receipts/2026-04-29-platform-execution-lock-campaign-four-checks.json}`:
+    - 复核后确认这些新增或修改都是跨平台 campaign / receipt / 兼容逻辑，不需要新的 Windows 专属代码或 PowerShell 包装器。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，今天 monitor 的非零批次已没有尚未显式桥接到 Windows 的自定义 skill 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未做 Windows PowerShell 实机回归；结论基于 monitor 批次、现有 PowerShell 入口、以及仓库内文档 / receipt 读取逻辑核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-04-30 22:05:10 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都已补齐。

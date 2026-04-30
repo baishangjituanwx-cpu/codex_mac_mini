@@ -222,6 +222,7 @@ Package rules:
 - `platform-upload-map.md` or an equivalent per-platform upload matrix is mandatory; a publish thread must be able to open it and know exactly what to upload without inferring anything
 - for article or note platforms that do not upload video, write `不上传视频` explicitly instead of leaving the video field blank
 - do not classify 头条号 as article-only in a Seedance video campaign; default to video upload unless the package explicitly contains a separate 头条号图文派生稿
+- for 头条号 in a Seedance video campaign, the platform-specific cover field must prefer the generated vertical `3:4` cover as the primary upload cover; the horizontal `4:3` cover is only a fallback unless the user explicitly overrides it
 - verify target account name and account ID before browser-side upload
 - final success must be judged from platform management lists, not only from compose-page button states
 

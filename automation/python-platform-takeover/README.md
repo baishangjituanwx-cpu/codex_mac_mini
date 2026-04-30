@@ -255,7 +255,11 @@ Copy-Item configs/content-package.example.yaml configs/content-package.local.yam
 
 素材路径建议都写绝对路径。
 
-如果你是从仓库里拿日期化的现成样例开工，例如 `configs/content-package.2026-04-27-platform-execution-verify-before-republish.yaml` 这类文件里已经写死了 macOS 的 `/Users/...` 素材路径，不要直接在 Windows 上原样复用。先复制到你自己的 `configs/content-package.local.yaml` 或新的 `configs/content-package.<campaign>.yaml`，再把 `assets.*` 改成真实存在的 `C:/...` 或其他 Windows 绝对路径，平台文案和发布约束保持不变即可。
+如果你是从仓库里拿日期化的现成样例开工，例如 `configs/content-package.2026-04-27-platform-execution-verify-before-republish.yaml` 或 `configs/content-package.2026-04-30-repair-existing-not-republish.yaml` 这类文件里已经写死了 macOS 的 `/Users/...` 路径，不要直接在 Windows 上原样复用。先复制到你自己的 `configs/content-package.local.yaml` 或新的 `configs/content-package.<campaign>.yaml`，再把下面这些路径一起改成真实存在的 `C:/...` 或其他 Windows 绝对路径，平台文案和发布约束保持不变即可:
+
+- `assets.*`
+- `supporting_files.*`
+- `platforms.<platform>.upload_plan.*`
 
 如果上游内容包来自今天更新过的 `seedance-video-api` 流程，Windows 下还要额外遵守这 6 条交接规则:
 
@@ -346,6 +350,8 @@ Copy-Item C:/content-pipeline/cover.png "$env:TEMP\\vhcover-standard.png" -Force
   - 先锁定当前内容包的 `campaign_id`、视频路径、封面路径、`短标题`、`视频描述`
   - 如果管理页里看到的是上一轮 campaign 的旧条，只能当历史证据，不能拿来挡住或放行今天的新包
   - 如果本轮内容包的 receipt 已经是 `submitted`、`published`、`under_review`、`success` 或 `verified`，默认先停下，不要因为 UI 抖动就重复补发
+  - 如果本轮内容包的 receipt 是 `blocked_account_review_pending`，把它当成平台账号审核阻断，不要清台账后硬重发；先等账号审核通过，或由用户明确改走别的发布方案
+- `receipt-status` / `record-receipt` 现在会继续复用共享 Python loader；即使 `state/publish-receipts/<campaign_id>.json` 里新增了 `verified_fields`、`aid`、`object_nonce` 这类管理页核验字段，Windows 侧也不需要手工删键再跑命令。
 
 - 如果手工确认旧内容已经删除、转私密或明确废弃，再清掉对应平台台账:
 
@@ -402,6 +408,7 @@ Copy-Item C:/content-pipeline/cover.png "$env:TEMP\\vhcover-standard.png" -Force
   - `stopped_duplicate`: 管理页已经存在同标题或同描述片段的条目，先处理旧条再继续
   - `verified_cover_repair_under_review`: 原视频已提交封面修复，但管理列表缩略图还没完成最终复核；此时继续修原条，不要重发新条
   - `verified_cover_repair_failed_locked`: 原视频封面修复失败且平台已锁定编辑；不要继续修原条，等平台重开或先处置旧条再替换发布
+  - `blocked_account_review_pending`: 平台明确提示账号资料或权限仍在审核，当前账号被阻断发布；保留这条 receipt，等审核通过或用户明确改计划，不要把它当成“没开始”然后重发
   - `under_review`: 替换发布的新视频已经提交成功，平台仍在审核；此时等待管理列表复核，不要把它当成失败重发
 
 注意:

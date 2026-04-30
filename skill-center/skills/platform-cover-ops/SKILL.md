@@ -124,6 +124,7 @@ If the task also requires real browser actions, use this skill together with `$s
 - Avoid abstract brand posters; use a clear business problem or process-change scene.
 - Never let the image and title drift apart, because image-text mismatch is a real credit risk.
 - For 小云雀 founder-topic article packages in this workspace, default to uploading the prepared local cover rather than accepting a generic auto result.
+- For Seedance video content packages in this workspace, 头条号 must prefer the generated vertical `3:4` cover as the platform-specific primary cover; keep the horizontal `4:3` cover only as a fallback unless the user explicitly requests otherwise.
 
 ### 抖音
 

@@ -91,16 +91,34 @@
     },
     "toutiao": {
       "campaign_id": "2026-04-29-platform-execution-lock-campaign-four-checks",
-      "current_url": null,
+      "current_url": "https://mp.toutiao.com/profile_v4/xigua/upload-video",
       "external_id": null,
-      "management_url": null,
+      "management_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
       "notes": [
-        "initialized_2026-04-29T07:24:10.206Z: active campaign receipt created before publishing; older receipts are historical only."
+        "initialized_2026-04-29T07:24:10.206Z: active campaign receipt created before publishing; older receipts are historical only.",
+        "blocked_2026-04-30T18:32:02+08:00: retry via Chrome DevTools/CDP 127.0.0.1:9223. Management page did not show the exact old title, but the upload page showed account information is under review and explicitly stated publishing video is unavailable until review passes. No upload or publish click was attempted.",
+        "blocked_2026-04-30T22:30:11+08:00: retry after user reported account materials were submitted. Chrome DevTools/CDP 127.0.0.1:9223 uploaded the mp4, set the exact title, accepted the custom cover after crop confirmation, kept 视频生成图文 unchecked, and checked AI生成. The final 发布 click was attempted, but Toutiao returned the modal text: 账号信息审核中，请等待审核通过后，再尝试操作. No submitted/under-review/published state was reached."
       ],
       "platform_id": "toutiao",
-      "recorded_at": "2026-04-29T07:24:10.206Z",
+      "recorded_at": "2026-04-30T22:30:11+08:00",
       "share_link": null,
-      "status": "not_started"
+      "status": "blocked_account_review_pending",
+      "title": "为什么会把昨天内容发到今天？先锁当前批次，再做四项比对",
+      "verified_fields": {
+        "management_exact_title_found": false,
+        "account_status_text": "账号信息审核中；审核通过后即可解锁发布文章、视频等权益功能",
+        "upload_blocker_text": "该账号信息审核中，审核通过后才能发布视频",
+        "latest_attempt": "2026-04-30T22:30:11+08:00",
+        "pre_submit_title": "为什么会把昨天内容发到今天？先锁当前批次，再做四项比对",
+        "pre_submit_video_filename": "2026-04-29-platform-execution-lock-campaign-four-checks.mp4",
+        "pre_submit_upload_status": "上传成功；大小: 4.2MB；视频时长: 15s",
+        "cover_mode": "custom_cover_uploaded_and_crop_confirmed",
+        "generate_article_checked": false,
+        "ai_declaration_checked": true,
+        "publish_click_attempted": true,
+        "final_blocker_text": "账号信息审核中，请等待审核通过后，再尝试操作",
+        "automation_route": "Chrome DevTools/CDP 127.0.0.1:9223 upload_and_submit_attempt_blocked_by_account_review"
+      }
     },
     "wechat_channels": {
       "campaign_id": "2026-04-29-platform-execution-lock-campaign-four-checks",

@@ -20,6 +20,7 @@ If the task is a direct browser publish flow, use `$social-publish-automation`.
 - Prepare the package first: title, body, images, source attribution, ad setting, and whether `头条首发` is legitimate.
 - For concrete browser-side posting steps, defer to `$social-publish-automation`.
 - On a Windows repo mirror, keep the same path through `automation/python-platform-takeover`: `.\scripts\social-publisher.ps1 doctor --package <yaml> --platform toutiao --check-browser`, then `inspect-tabs`, then `publish`. Do not invent a second Windows-only article flow for a Seedance video campaign.
+- If `receipt-status` or the management page shows `blocked_account_review_pending`, treat that as a real platform blocker rather than a fresh retry signal. On Windows and macOS, keep the receipt, stop the publish loop, and wait for account review to pass or for the user to choose a different account / release plan.
 - Verify from `作品管理`, visible success state, or a public article URL rather than trusting the click result alone.
 
 ### 2. Data Analysis

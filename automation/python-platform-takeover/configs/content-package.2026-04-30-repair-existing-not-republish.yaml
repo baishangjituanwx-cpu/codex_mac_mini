@@ -1,0 +1,60 @@
+campaign_id: "2026-04-30-repair-existing-not-republish"
+theme: "封面或描述不对，先修旧条，别直接重发。"
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish-publish.mp4"
+  backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish_cover_package/cover-horizontal-4x3.png"
+support_files:
+  final_verify_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish_content_package/final-verify.json"
+  platform_upload_map: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish_content_package/platform-upload-map.md"
+  baijiahao_post_path: "/Users/baishangjituan/Documents/New project/content-library/posts/baijiahao/2026-04-30-repair-existing-not-republish-video-001.md"
+  baijiahao_platform_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish_content_package/platforms/baijiahao.md"
+  kuaishou_platform_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish_content_package/platforms/kuaishou.md"
+publish_constraints:
+  reuse_logged_in_publish_page: true
+  skip_duplicate_if_already_published: true
+  prefer_repair_existing_post_over_republish: true
+  require_cover_thumbnail_check_25pct: true
+  require_management_page_verification: true
+  require_title_description_cover_alignment: true
+  require_active_campaign_lock: true
+platform_upload_plan:
+  baijiahao:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish-publish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish_cover_package/cover-horizontal-4x3.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish_cover_package/cover-vertical-3x4.png"
+  kuaishou:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish-publish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish_cover_package/cover-horizontal-4x3.png"
+platforms:
+  douyin:
+    title: "错了先修旧条"
+    description: "封面或描述不对，别急着重发。\n*先看管理列表状态词：\n*- 审核中就等\n*- 可编辑就修旧条\n*- 确认失败才重发\n*AI员工先查状态并写回字段，人只做最后判断。\n*#AI员工 #内容发布 #修旧条 #别急重发"
+  kuaishou:
+    title: "先修旧条别重发"
+    description: "看到封面错、描述不对，别马上再发一条。\n\n先查管理列表状态：\n\n- 能修改就修旧条\n- 审核中就等待\n- 真正失败才重发\n\n这样不会把归因越弄越乱。AI员工先核验，人再做发布判断。"
+  wechat_channels:
+    title: "错了先修旧条"
+    description: "发布后发现封面或描述不对，不要直接重发。先看管理列表状态词：审核中先等，能编辑就修旧条，确认失败再重发。AI员工先查状态、写回链接和修改记录，人只做最后发布判断。"
+  weibo:
+    title: "封面或描述不对，先修旧条，别直接重发"
+    description: "封面错了、描述不对，先别急着重发。\n\n很多归因混乱，不是内容问题，而是旧条还没修，就又发了一条。\n\n正确动作是先看管理列表状态词：\n\n- 审核中就等\n- 能编辑就修旧条\n- 确认失败才重发\n\n#AI员工 #内容发布 #修旧条"
+  bilibili:
+    title: "发布后发现封面或描述不对，为什么要先修旧条，而不是直接重发？"
+    description: "发布后发现封面、描述或状态异常时，先不要直接重发。\n\n先查管理列表状态词，再决定等待、修旧条还是重发。能编辑的先修旧条，真正失败再重发，否则重复发布会污染归因。\n\n这条视频拆的是一个发布后核验规则：AI员工先查状态词、链接、封面、描述和修改记录，人只做最后判断。"
+  xiaohongshu:
+    title: "封面错了别重发，先修旧条"
+    description: "封面错了、描述不对，先别急着重发。\n\n先看管理列表状态：\n\n- 审核中就等\n- 能编辑就修旧条\n- 失败再重发\n\n很多内容复盘变乱，不是内容本身的问题，而是同一条内容被重复发了好几次。AI员工先查状态，人再做判断。\n\n#AI员工 #内容运营 #新媒体运营 #内容发布"
+  toutiao:
+    title: "封面或描述不对，为什么要先修旧条，而不是直接重发？"
+    description: "发布后先看管理列表状态词。审核中先等，封面或描述可编辑就先修旧条，确认失败才重发。这样不会把同一内容拆成多个错误归因。"
+  baijiahao:
+    title: "发布后发现封面或描述不对，别急着重发，先修旧条"
+    description: "很多团队一看到封面错或描述不对，就马上重发，结果同一内容出现多个条目，归因越来越乱。\n\n正确动作是先看状态词，能编辑就修旧条，确认失败再重发。AI员工先查状态、写回链接和修改记录，人只做最后判断。"
+  zhihu:
+    title: "发布后发现封面或描述不对，为什么不要直接重发，而要先修旧条？"
+    description: "发布后发现封面或描述不对时，不要直接重发。先查管理列表状态词：审核中先等，能编辑就修旧条，确认失败再重发。这样不会把同一内容拆成多个错误归因。"

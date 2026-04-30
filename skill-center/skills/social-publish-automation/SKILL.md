@@ -138,6 +138,8 @@ If the click succeeds but the status is ambiguous, treat the result as unconfirm
 - The local receipt check is valid only when the receipt `campaign_id` exactly matches the locked content package. A previous-day or previous-campaign receipt is evidence for that old campaign only.
 - If the platform management page shows a recent row whose title/body belongs to a different campaign than the locked package, do not count it as success for the current task and do not use it as a reason to publish another copy of the old campaign.
 - Treat local receipt statuses `submitted / published / under_review / success / verified` as blocking states by default.
+- Treat `blocked_account_review_pending` as a blocking state too. It means the platform is stopping publish because the account or creator profile is still under review; do not clear the receipt or retry publish until that review resolves or the user explicitly changes the plan.
+- Do not hand-edit `state/publish-receipts/<campaign_id>.json` just because it now carries extra verification keys such as `verified_fields`, `aid`, or `object_nonce`. In this workspace the shared CLI and receipt loader are expected to tolerate unknown metadata; use `receipt-status`, `record-receipt`, or `clear-receipt` instead of deleting fields by hand.
 - If the management list or public profile already shows a same-day item with the same core title, same video, or same正文片段, treat it as an existing publish candidate, not as a failed attempt.
 - For 微信视频号, the anti-duplicate guard is stricter than exact-match blocking:
 - if any recent management-row item reuses the same `短标题` and the platform-side `description` is still highly similar to the current package, stop before publish

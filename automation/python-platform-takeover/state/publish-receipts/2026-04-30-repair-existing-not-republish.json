@@ -1,0 +1,263 @@
+{
+  "campaign_id": "2026-04-30-repair-existing-not-republish",
+  "receipts": {
+    "wechat_channels": {
+      "campaign_id": "2026-04-30-repair-existing-not-republish",
+      "platform_id": "wechat_channels",
+      "status": "published",
+      "title": "错了先修旧条",
+      "current_url": "https://channels.weixin.qq.com/platform/post/list",
+      "management_url": "https://channels.weixin.qq.com/platform/post/list",
+      "external_id": "export/UzFfBgAAxJujHGopHXySjczT4DCa6ReN_Y1dmLFYIenROKCjuA",
+      "share_link": null,
+      "object_nonce": "1671485935517137540",
+      "recorded_at": "2026-04-30T15:10:08+08:00",
+      "notes": [
+        "initialized_current_thread_before_publish: active campaign receipt created before wechat_channels publishing; older receipts are historical only.",
+        "published_verified_2026-04-30T15:10:08+08:00: Chrome DevTools/CDP flow on 127.0.0.1:9223. Duplicate guard read 19 existing video rows before publishing and found no same short title or same description prefix. User confirmed final publish action. After clicking the real visible 发表 button, page returned to 视频管理列表; newest row appeared at 2026年04月30日 15:07. Vue list data verified objectId/exportId, status=1, exact shortTitle, exact description, uploaded 720x1280 video metadata, and custom 3:4 cover thumbnail."
+      ],
+      "verified_fields": {
+        "short_title": "错了先修旧条",
+        "description": "发布后发现封面或描述不对，不要直接重发。先看管理列表状态词：审核中先等，能编辑就修旧条，确认失败再重发。AI员工先查状态、写回链接和修改记录，人只做最后发布判断。",
+        "row_time": "2026年04月30日 15:07",
+        "status_code": 1,
+        "object_id": "export/UzFfBgAAxJujHGopHXySjczT4DCa6ReN_Y1dmLFYIenROKCjuA",
+        "object_nonce": "1671485935517137540",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish-publish.mp4",
+        "video_duration_seconds": 15,
+        "video_width": 720,
+        "video_height": 1280,
+        "video_file_size": "3959947",
+        "video_md5": "086e221a54d6ce3bbebd31913ef0ea80",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish_cover_package/cover-vertical-3x4.png",
+        "cover_thumbnail_verified": true,
+        "management_row_description_match": true,
+        "vue_short_title_match": true,
+        "vue_description_match": true,
+        "verification_screenshot": "/tmp/wechat-publish-poll.png",
+        "automation_route": "Chrome DevTools/CDP 127.0.0.1:9223"
+      }
+    },
+    "bilibili": {
+      "campaign_id": "2026-04-30-repair-existing-not-republish",
+      "platform_id": "bilibili",
+      "status": "published",
+      "title": "发布后发现封面或描述不对，为什么要先修旧条，而不是直接重发？",
+      "current_url": "https://member.bilibili.com/platform/upload/video/frame?page_from=creative_home_top_upload",
+      "management_url": "https://member.bilibili.com/platform/upload-manager/article",
+      "external_id": "BV1fv98BEEmz",
+      "share_link": "https://www.bilibili.com/video/BV1fv98BEEmz",
+      "aid": 116492280534525,
+      "recorded_at": "2026-04-30T14:43:09+08:00",
+      "notes": [
+        "published_verified_under_review_2026-04-30T14:43:09+08:00: CDP-first check found 127.0.0.1:9223 available but not logged into B站, and 9222 unavailable; Chrome was not restarted. Used OpenCLI Browser Bridge fallback against the logged-in B站 session. Pre-submit readback matched uploaded video, custom cover, exact title, exact description, tags, category 知识, and AI declaration 作者声明：该视频使用人工智能合成技术. Submit page showed 稿件投递成功; B站 add/v3 API returned aid=116492280534525 bvid=BV1fv98BEEmz; 稿件管理 verified same-title row at 2026年04月30日 14:43:09 with 转码完成 / 审核中.",
+        "published_verified_approved_2026-04-30T14:43:21+08:00: 稿件管理复查显示全部稿件 5、进行中 0、已通过 5；同标题最新行显示 2026年04月30日 14:43:21，状态已通过并可进入编辑/数据页。"
+      ],
+      "verified_fields": {
+        "title": "发布后发现封面或描述不对，为什么要先修旧条，而不是直接重发？",
+        "aid": 116492280534525,
+        "bvid": "BV1fv98BEEmz",
+        "video_cid": 37968808637,
+        "video_filename": "n260430s33uw45bzqf5yle2gjh5urf6s",
+        "cover_url": "https://archive.biliimg.com/bfs/archive/b4ec993d9922629da19cf27bb0cb560f6dfd0f63.jpg",
+        "cover43_url": "https://archive.biliimg.com/bfs/archive/0fad17026fc316cc0a46045af1ba86ab198095b8.jpg",
+        "cover_mode": "custom_cover_uploaded_and_accepted",
+        "description": "发布后发现封面、描述或状态异常时，先不要直接重发。\n\n先查管理列表状态词，再决定等待、修旧条还是重发。能编辑的先修旧条，真正失败再重发，否则重复发布会污染归因。\n\n这条视频拆的是一个发布后核验规则：AI员工先查状态词、链接、封面、描述和修改记录，人只做最后判断。",
+        "tags": "AI员工,内容发布,新媒体运营,发布后核验,修旧条,别急重发,运营复盘",
+        "category": "知识",
+        "tid": 207,
+        "human_type2": 1010,
+        "ai_declaration": "作者声明：该视频使用人工智能合成技术",
+        "submit_success_text": "稿件投递成功",
+        "manager_row_time": "2026年04月30日 14:43:21",
+        "manager_row_status": "已通过",
+        "manager_row_text": "00:00:16 发布后发现封面或描述不对，为什么要先修旧条，而不是直接重发？ 2026年04月30日 14:43:21 编辑 数据 0 6 0 0 0 0 0",
+        "automation_route": "OpenCLI Browser Bridge fallback after CDP B站 login check failed; Chrome was not restarted"
+      }
+    },
+    "zhihu": {
+      "campaign_id": "2026-04-30-repair-existing-not-republish",
+      "platform_id": "zhihu",
+      "status": "published",
+      "title": "发布后发现封面或描述不对，为什么不要直接重发，而要先修旧条？",
+      "current_url": "https://zhuanlan.zhihu.com/p/2033190942413419447",
+      "management_url": "https://www.zhihu.com/people/vkvtss-81/posts",
+      "external_id": "2033190942413419447",
+      "share_link": "https://zhuanlan.zhihu.com/p/2033190942413419447",
+      "recorded_at": "2026-04-30T06:43:51Z",
+      "notes": [
+        "published_verified_2026-04-30T06:43:51Z: CDP port 9222 was unavailable and logged-in Chrome was not restarted; used OpenCLI Browser Bridge Page API. Source package declared video/answer-with-video but had no target question URL, so it was published through Zhihu article editor with uploaded video and local cover. User confirmed final publish action. Snapshot ref click triggered the real publish button and the button entered 发布中...; public article URL then verified exact title and body text. Profile posts list had not synced the title at verification time, so the public article page is the verification source."
+      ],
+      "verified_fields": {
+        "post_type": "article",
+        "source_post_type": "video_answer",
+        "fallback_reason": "source package had no target question URL",
+        "account": "智能大陈",
+        "profile_posts_url": "https://www.zhihu.com/people/vkvtss-81/posts",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish_content_package/platforms/zhihu.md",
+        "body_file": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-04-30-repair-existing-not-republish-answer-001.md",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish-publish.mp4",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish_cover_package/cover-vertical-3x4.png",
+        "word_count": "213",
+        "public_page_title_match": true,
+        "public_page_body_match": true,
+        "profile_list_title_match": false,
+        "public_page_timestamp": "编辑于 2026-04-30 14:41・广东",
+        "automation_route": "OpenCLI Browser Bridge fallback; CDP port unavailable; Chrome was not restarted"
+      }
+    },
+    "douyin": {
+      "campaign_id": "2026-04-30-repair-existing-not-republish",
+      "platform_id": "douyin",
+      "status": "under_review",
+      "title": "错了先修旧条",
+      "current_url": "https://creator.douyin.com/creator-micro/content/manage?enter_from=publish",
+      "management_url": "https://creator.douyin.com/creator-micro/content/manage",
+      "external_id": null,
+      "share_link": null,
+      "recorded_at": "2026-04-30T15:04:12+08:00",
+      "notes": [
+        "published_verified_under_review_2026-04-30T15:04:12+08:00: Chrome DevTools/CDP flow on 127.0.0.1:9223. Pre-submit readback matched uploaded video, dual custom covers, short title, and Douyin-rendered description; cover checks passed. 发文助手快速检测 returned platform-busy message 当前检测人数过多, user confirmed final publish. 作品管理 title search verified row at 2026年04月30日 14:59 with status 审核中."
+      ],
+      "verified_fields": {
+        "short_title": "错了先修旧条",
+        "description": "封面或描述不对，别急着重发。\n*先看管理列表状态词：\n*- 审核中就等\n*- 可编辑就修旧条\n*- 确认失败才重发\n*AI员工先查状态并写回字段，人只做最后判断。\n*#AI员工 #内容发布 #修旧条 #别急重发",
+        "row_time": "2026年04月30日 14:59",
+        "row_status": "审核中",
+        "duration": "00:16",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish-publish.mp4",
+        "cover_status": "封面效果检测通过 / 封面检测通过",
+        "cover_files": {
+          "vertical_3x4": "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish_cover_package/cover-vertical-3x4.png",
+          "horizontal_4x3": "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish_cover_package/cover-horizontal-4x3.png"
+        },
+        "pre_publish_detection": "作品检测失败：当前检测人数过多，请稍后再试",
+        "management_search_title_match": true,
+        "verification_screenshot": "/tmp/douyin-0430-manage-verify.png",
+        "automation_route": "Chrome DevTools/CDP 127.0.0.1:9223"
+      }
+    },
+    "kuaishou": {
+      "campaign_id": "2026-04-30-repair-existing-not-republish",
+      "platform_id": "kuaishou",
+      "status": "published",
+      "title": "先修旧条别重发",
+      "current_url": "https://cp.kuaishou.com/article/manage/video?status=0&from=publish",
+      "management_url": "https://cp.kuaishou.com/article/manage/video?status=0&from=publish",
+      "external_id": null,
+      "share_link": null,
+      "recorded_at": "2026-04-30T15:41:37+08:00",
+      "notes": [
+        "published_verified_existing_2026-04-30T15:41:37+08:00: Chrome DevTools/CDP flow on 127.0.0.1:9223. Duplicate guard stopped a new publish because the Kuaishou management list already contained this campaign's description snippet. Management row was verified as 已发布 at 2026-04-30 14:28."
+      ],
+      "verified_fields": {
+        "description_snippet": "看到封面错、描述不对，别马上再发一条。",
+        "row_time": "2026-04-30 14:28",
+        "row_status": "已发布",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish-publish.mp4",
+        "management_description_match": true,
+        "automation_route": "Chrome DevTools/CDP 127.0.0.1:9223 management verification"
+      }
+    },
+    "baijiahao": {
+      "campaign_id": "2026-04-30-repair-existing-not-republish",
+      "platform_id": "baijiahao",
+      "status": "under_review",
+      "title": "发布后发现封面或描述不对，别急着重发，先修旧条",
+      "current_url": "https://baijiahao.baidu.com/builder/rc/content",
+      "management_url": "https://baijiahao.baidu.com/builder/rc/content",
+      "external_id": null,
+      "share_link": null,
+      "recorded_at": "2026-04-30T15:41:37+08:00",
+      "notes": [
+        "published_verified_under_review_2026-04-30T15:41:37+08:00: Chrome DevTools/CDP flow on 127.0.0.1:9223. Baijiahao content list already contained the current campaign title, so no repeat publish was attempted. Management row verified at 2026-04-30 14:34:16 with status 审核中."
+      ],
+      "verified_fields": {
+        "title": "发布后发现封面或描述不对，别急着重发，先修旧条",
+        "row_time": "2026-04-30 14:34:16",
+        "row_status": "审核中",
+        "management_title_match": true,
+        "automation_route": "Chrome DevTools/CDP 127.0.0.1:9223 management verification"
+      }
+    },
+    "xiaohongshu": {
+      "campaign_id": "2026-04-30-repair-existing-not-republish",
+      "platform_id": "xiaohongshu",
+      "status": "under_review",
+      "title": "封面错了别重发，先修旧条",
+      "current_url": "https://creator.xiaohongshu.com/new/note-manager?source=official",
+      "management_url": "https://creator.xiaohongshu.com/new/note-manager?source=official",
+      "external_id": null,
+      "share_link": null,
+      "recorded_at": "2026-04-30T15:41:37+08:00",
+      "notes": [
+        "published_verified_under_review_2026-04-30T15:41:37+08:00: Chrome DevTools/CDP flow on 127.0.0.1:9223. Xiaohongshu note manager already contained the current campaign title, so no repeat publish was attempted. Management row verified at 2026年04月30日 14:31 with status 审核中."
+      ],
+      "verified_fields": {
+        "title": "封面错了别重发，先修旧条",
+        "row_time": "2026年04月30日 14:31",
+        "row_status": "审核中",
+        "duration": "00:15",
+        "management_title_match": true,
+        "automation_route": "Chrome DevTools/CDP 127.0.0.1:9223 management verification"
+      }
+    },
+    "weibo": {
+      "campaign_id": "2026-04-30-repair-existing-not-republish",
+      "platform_id": "weibo",
+      "status": "published",
+      "title": "封面或描述不对，先修旧条，别直接重发",
+      "current_url": "https://weibo.com/2326772703/QDct14Z6g",
+      "management_url": "https://weibo.com/u/2326772703",
+      "external_id": "QDct14Z6g",
+      "share_link": "https://weibo.com/2326772703/QDct14Z6g",
+      "recorded_at": "2026-04-30T15:41:37+08:00",
+      "notes": [
+        "published_verified_2026-04-30T15:41:37+08:00: CDP port 127.0.0.1:9223 was available but the Weibo tab there was not logged in, so Chrome was not restarted. Used OpenCLI Browser Bridge against the logged-in Weibo session. Duplicate guard found no current campaign snippet in the feed. Pre-submit readback matched exact description and local 0:15 video upload. After clicking the enabled 发送 button, the page showed 发布成功 and the textarea cleared. Profile page then verified the newest row at 2026-04-30 15:40 with exact description, 微博视频号 source, and 00:15 video."
+      ],
+      "verified_fields": {
+        "description": "封面错了、描述不对，先别急着重发。\n\n很多归因混乱，不是内容问题，而是旧条还没修，就又发了一条。\n\n正确动作是先看管理列表状态词：\n\n- 审核中就等\n- 能编辑就修旧条\n- 确认失败才重发\n\n#AI员工 #内容发布 #修旧条",
+        "row_time": "2026-04-30 15:40",
+        "row_status": "published",
+        "row_source": "来自 微博视频号",
+        "duration": "00:15",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish-publish.mp4",
+        "profile_description_match": true,
+        "post_success_signal": true,
+        "automation_route": "OpenCLI Browser Bridge fallback after CDP Weibo login check failed; Chrome was not restarted"
+      }
+    },
+    "toutiao": {
+      "campaign_id": "2026-04-30-repair-existing-not-republish",
+      "platform_id": "toutiao",
+      "status": "under_review",
+      "title": "封面或描述不对，为什么要先修旧条，而不是直接重发？",
+      "current_url": "https://mp.toutiao.com/profile_v4/xigua/small-video",
+      "management_url": "https://mp.toutiao.com/profile_v4/xigua/small-video",
+      "external_id": null,
+      "share_link": null,
+      "recorded_at": "2026-04-30T22:46:12+08:00",
+      "notes": [
+        "blocked_2026-04-30T15:41:37+08:00: Chrome DevTools/CDP flow on 127.0.0.1:9223 found the Toutiao upload page blocked by account profile completion requirements. The page also contained an older 2026-04-29 draft, so no click or takeover publish was attempted.",
+        "published_verified_under_review_2026-04-30T22:46:12+08:00: Chrome DevTools/CDP flow on 127.0.0.1:9223. Management duplicate guard found no existing exact current-campaign title before publishing. Pre-submit readback matched upload video, exact title, custom local cover accepted after 0.618 crop confirmation, 视频生成图文 unchecked, and AI生成 checked. After clicking 发布, the page redirected to /profile_v4/xigua/small-video and showed 全部发表成功, then the management row appeared with duration 00:15, exact title, time 04-30 22:44, status 审核中."
+      ],
+      "verified_fields": {
+        "title": "封面或描述不对，为什么要先修旧条，而不是直接重发？",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish-publish.mp4",
+        "video_filename": "2026-04-30-repair-existing-not-republish-publish.mp4",
+        "video_upload_status": "上传成功；大小: 3.8MB；视频时长: 15s",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-04-30-repair-existing-not-republish_cover_package/cover-horizontal-4x3.png",
+        "cover_mode": "custom_cover_uploaded_and_0.618_crop_confirmed",
+        "generate_article_checked": false,
+        "ai_declaration_checked": true,
+        "submit_success_text": "全部发表成功",
+        "row_time": "04-30 22:44",
+        "row_status": "审核中",
+        "row_duration": "00:15",
+        "management_exact_title_found": true,
+        "current_campaign_published": true,
+        "automation_route": "Chrome DevTools/CDP 127.0.0.1:9223"
+      }
+    }
+  }
+}

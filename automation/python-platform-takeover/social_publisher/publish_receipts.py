@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass, field
+from dataclasses import fields
 import json
 from pathlib import Path
 from typing import Any
@@ -13,6 +14,7 @@ BLOCKING_RECEIPT_STATUSES = frozenset(
         "under_review",
         "success",
         "verified",
+        "blocked_account_review_pending",
         "cover_repair_under_review",
         "verified_cover_repair_under_review",
     }
@@ -54,7 +56,12 @@ def load_receipts(package_path: str | Path, campaign_id: str) -> dict[str, Publi
     for platform_id, item in receipts_payload.items():
         if not isinstance(item, dict):
             continue
-        normalized = dict(item)
+        allowed_fields = {field.name for field in fields(PublishReceipt)}
+        normalized = {
+            key: value
+            for key, value in item.items()
+            if key in allowed_fields
+        }
         normalized.setdefault("title", "")
         receipts[platform_id] = PublishReceipt(**normalized)
     return receipts
