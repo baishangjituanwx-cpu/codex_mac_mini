@@ -12,6 +12,26 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-01 23:40:45 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`；核心是把快手 receipt 从 `under_review` 推进为 `published`，补上 `已发布` tab 的管理页核验、`待发布` / `未通过` 都为 `0` 的去重证据，以及“不要重复重发”的阻断结论。
+- 建议后续执行 GitHub 同步，避免这条最新 `python-platform-takeover` 快手发布回执继续只停留在本地工作区。
+
+## 2026-05-01 22:38:55 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `3`，删除 `0`。
+- 这批变更集中在 `skill-center/skills/platform-cover-ops/SKILL.md` 与 `automation/python-platform-takeover` 的 `2026-05-01-dachen-xiaoma-argue-fix-old-post` campaign 配置 / receipt；核心是收紧 Seedance 固定封面规范，并继续补全 B站、抖音、知乎等平台的发布包与回执留痕。
+- 建议后续执行 GitHub 同步，避免最新封面规则和 `python-platform-takeover` campaign 台账继续只停留在本地工作区。
+
+## 2026-05-01 17:31:23 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`；核心是把同一 campaign 的 B 站 publish receipt 补写为 `BV1FHRTB9EgW` 已提交、管理页 `转码完成 / 审核中` 已核验，并记录 CDP 不可用时切到 OpenCLI Browser Bridge 与飞书通知回执。
+- 建议后续执行 GitHub 同步，避免这条最新 `python-platform-takeover` 发布台账继续只停留在本地工作区。
+
+## 2026-05-01 00:11:58 CST
+- 检测到新的技能变更批次: 新增 `2`，修改 `8`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover` 的 receipt 兼容与 `2026-04-30-repair-existing-not-republish` campaign 台账，以及 `skill-center` 对头条号封面优先级和账号审核阻断的规则补充。
+- 该批次已包含在 `origin/codex/default-python-sync` 的 `f01c4f1` 与 `b3539d9` 中，本条仅补监控留痕；当前不需要额外 GitHub 同步动作。
+
 ## 2026-05-01 00:10:09 CST
 - 处理时间:
   - `2026-05-01 00:10:09 CST`
@@ -1399,3 +1419,36 @@
 - 检测到新的技能变更批次: 新增 `0`，修改 `3`，删除 `0`。
 - 这批变更集中在 `automation/python-platform-takeover/README.md`、`skill-center/skills/social-publish-automation/SKILL.md` 与 `skill-center/skills/toutiao-ops/SKILL.md`；核心是把 `blocked_account_review_pending` 统一收敛成账号审核阻断态，明确保留 receipt、停止重试，并补齐 receipt 扩展字段兼容口径。
 - 建议后续执行 GitHub 同步，避免这批阻断态规则与技能镜像更新继续只停留在本地工作区。
+
+## 2026-05-01 00:12:29 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `323`，删除 `0`。
+- 这批变更以批量 mirror refresh 为主：`skills/` 与 `skill-center/skills/` 同步刷新了大量自定义 skill 文档 / reference / asset，同时 `automation/python-platform-takeover` 刷新了 README、campaign 配置、publish receipt 台账，以及 `publish_receipts.py` 的 receipt 兼容与阻断逻辑测试。
+- 建议后续执行 GitHub 同步，并优先评估是否把 `skill-center` 批量镜像刷新与 `python-platform-takeover` 行为性变更拆成独立提交，降低后续 review 成本。
+
+
+## 2026-05-01 23:41:36 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`；核心是把同一 campaign 的快手 receipt 从 `under_review` 推进到 `published`，补上 `已发布` 管理页核验、`待发布/未通过=0` 与 `duplicate_republish_blocked=true` 的防重发留痕。
+- 建议后续执行 GitHub 同步，避免这条最新 `python-platform-takeover` 发布台账继续只停留在本地工作区。
+
+## 2026-05-02 00:02:16 CST
+- 处理时间:
+  - `2026-05-02 00:02:16 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-05-01 22:05:55 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本轮同步分支:
+  - `codex/default-python-sync`: 是。同步 `automation/python-platform-takeover` 的 `2026-05-01-dachen-xiaoma-argue-fix-old-post` content package / publish receipt，`skill-center` 的 `platform-cover-ops` 与 `seedance-video-api` 镜像规则，以及 `docs/automation/skill-change-monitor.md`、`docs/automation/windows-translation-status.md`。
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows-specific bridge / deployment 脚本、安装器、模板资源或独立部署说明。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。内容提交信息为 `Sync May 1 Seedance cover and receipt updates`；并补充本条同步记录提交 `Record 2026-05-02 GitHub sync execution`。
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows-only 提交需要生成。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。上述两笔提交会一起推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 无需推送。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync May 1 Seedance cover and receipt updates` (`d12b8ed`)
+  - `codex/default-python-sync`: `Record 2026-05-02 GitHub sync execution`
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - 跳过了 `codex/windows-version-20260411` 的提交与推送，因为当前仓库没有新的 Windows 专属 bridge / deployment payload；本轮新增的 Windows 相关内容只体现在共享 skill 文档约束与 Windows 完整性状态留痕中，不需要单独的 Windows 分支同步。
