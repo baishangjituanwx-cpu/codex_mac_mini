@@ -51,6 +51,12 @@ If the task also requires real browser actions, use this skill together with `$s
 - put one 8 to 10 Chinese-character theme on both covers
 - use those prepared covers on 抖音、快手、B站、视频号、微博
 - and use the same local cover package as the default article-cover source for 百家号、今日头条 / 头条号、知乎
+- For 大陈 / AI员工 Seedance content packages, this cover package must permanently follow the migration-pack style in `smb://BSJT168._smb._tcp.local/BSJT 共享给我/AI专用/[Codex]Mac部署/视频制作/大陈AI短视频生产迁移包-20260428`:
+- use `project/scripts/generate_simple_video_covers.py` when mounted, or an exact visual equivalent if unavailable
+- output `cover-vertical-3x4.png` and `cover-horizontal-4x3.png`
+- use a lower-middle rounded dark translucent information card, gold/white dimensional main title, and one subtitle line
+- do not substitute a plain full-width bottom band, platform auto cover, AI recommended cover, or unstyled frame
+- every downstream platform publish package must explicitly point to these prepared cover files
 - Keep text short:
 - one conflict or one promise
 - usually 6 to 14 Chinese characters
@@ -95,6 +101,7 @@ If the task also requires real browser actions, use this skill together with `$s
 - The receipt note must distinguish `cover_thumbnail_present` from `cover_readability_passed`; only the latter can close a cover-sensitive platform task.
 - Browser-side cover upload must use a real file upload mechanism, not page-side JavaScript assignment to `input.files`. Prefer Playwright `set_input_files`, OpenCLI `setFileInput`, or CDP `DOM.setFileInputFiles` against an image-only file input such as `input[type="file"][accept*="image"]`.
 - Do not use AppleScript to type long local paths into the macOS file chooser for cover upload. If a system file picker is unavoidable, treat it as a manual checkpoint or choose the file through a visible folder, not through automated path typing.
+- On Windows, if a system file picker is unavoidable, use an exact short real path such as `%TEMP%\\cover-upload.png` or a quoted `C:/.../cover-upload.png` in the chooser's file-name box. Do not rely on Explorer search results, `.lnk` shortcuts, OneDrive placeholders, or symlink targets for cover upload.
 
 ## Platform Map
 
@@ -125,6 +132,7 @@ If the task also requires real browser actions, use this skill together with `$s
 - Never let the image and title drift apart, because image-text mismatch is a real credit risk.
 - For 小云雀 founder-topic article packages in this workspace, default to uploading the prepared local cover rather than accepting a generic auto result.
 - For Seedance video content packages in this workspace, 头条号 must prefer the generated vertical `3:4` cover as the platform-specific primary cover; keep the horizontal `4:3` cover only as a fallback unless the user explicitly requests otherwise.
+- On a Windows repo mirror, keep that same priority in the handoff files: the upload matrix and content-package fields should point at the real quoted vertical `3:4` cover path first, with the horizontal `4:3` cover listed only as fallback.
 
 ### 抖音
 

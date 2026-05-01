@@ -1579,3 +1579,87 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-30 22:05:10 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都已补齐。
+
+## 2026-05-01 22:02:50 CST
+
+- 处理时间:
+  - `2026-05-01 22:02:50 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-04-30 22:05:10 CST` 之后追加的批次:
+    - `2026-05-01 06:16:49 CST`
+    - `2026-05-01 07:18:20 CST`
+    - `2026-05-01 08:19:05 CST`
+    - `2026-05-01 10:21:32 CST`
+    - `2026-05-01 11:22:52 CST`
+    - `2026-05-01 11:23:34 CST`
+    - `2026-05-01 12:23:51 CST`
+    - `2026-05-01 16:28:46 CST`
+    - `2026-05-01 17:31:35 CST`
+  - 其中 `2026-05-01 06:16:49 CST`、`07:18:20 CST`、`08:19:05 CST`、`10:21:32 CST`、`11:22:52 CST`、`11:23:34 CST`、`12:23:51 CST`、`16:28:46 CST` 均为 `新增 0，修改 0，删除 0`。
+  - 唯一非零批次是 `2026-05-01 17:31:35 CST`，对应:
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`
+- 已完成的 Windows 补全:
+  - 无新增转译项；本轮明确记录“无需补写 Windows 专属实现”。
+  - 已复核 `automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json` 新增的 `bilibili` receipt 写回只是同一 campaign 的共享台账补写，不引入新的 Mac-only skill 行为，因此不需要新增 `.ps1`、`.cmd`、Windows 路径分叉、快捷键桥接或 repo 资产副本。
+  - 已复核现有 Windows 覆盖仍然成立，无需改仓库实现:
+    - `skill-center/skills/social-publish-automation/SKILL.md` 已覆盖 `CDP` 不可用时先走 `opencli doctor`，并在 Windows repo mirror 走 `automation/python-platform-takeover/scripts/social-publisher.ps1 doctor --check-browser --package <yaml> --platform <platform>` 评估 Browser Bridge fallback。
+    - `automation/python-platform-takeover/README.md` 已覆盖 Windows 侧共享 `receipt-status` / `record-receipt` / `clear-receipt` 用法，以及 receipt JSON 出现新增核验字段时不要手工删键的口径。
+  - 结论:
+    - `2026-05-01 17:31:35 CST` 这批新增内容是 Bilibili 发布结果与 OpenCLI Browser Bridge fallback 留痕写回，不是新的 Windows 待补功能；今天无需新增 Windows 补丁文件。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-01` 当前已记录批次里没有尚未桥接到 Windows 的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未做 Windows PowerShell 实机回归；结论基于 monitor 批次复核、现有 Windows 文档 / skill 说明，以及共享 receipt / Browser Bridge 流程核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-01 22:02:50 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天明确没有需要补写的 Windows 专属转译。
+
+## 2026-05-01 22:05:55 CST
+
+- 处理时间:
+  - `2026-05-01 22:05:55 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-04-30 22:05:10 CST` 之后追加且此前未写入本状态文件的非零批次，按行为去重后为:
+    - `2026-04-30 22:07:28 CST` / `2026-04-30 22:08:00 CST`
+    - `2026-04-30 23:09:15 CST`
+    - `2026-05-01 00:11:58 CST` / `2026-05-01 00:12:29 CST`
+    - `2026-05-01 17:31:23 CST` / `2026-05-01 17:31:35 CST`
+  - 其中 `2026-04-30 22:07:28 CST`、`22:08:00 CST` 是同一批 `blocked_account_review_pending` / receipt 扩展字段兼容补记，Windows 桥接已在 `2026-04-30 22:05:10 CST` 那轮补齐，本轮不重复新增实现。
+  - `2026-04-30 23:09:15 CST` 与 `2026-05-01 00:11:58 CST` / `00:12:29 CST` 的有效行为更新集中在:
+    - `skill-center/skills/platform-cover-ops/SKILL.md`
+    - `skill-center/skills/seedance-video-api/SKILL.md`
+    - `skill-center/skills/seedance-video-api/references/{cover-execution,cover-package}.md`
+    - `automation/python-platform-takeover/README.md`
+    - `automation/python-platform-takeover/social_publisher/publish_receipts.py`
+    - `automation/python-platform-takeover/tests/test_publish_receipts.py`
+    - `automation/python-platform-takeover/state/publish-receipts/*.json`
+    - `automation/python-platform-takeover/configs/content-package.2026-04-30-repair-existing-not-republish.yaml`
+  - `2026-05-01 17:31:23 CST` / `17:31:35 CST` 是同一批 Bilibili receipt 回写补记，目标文件为:
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`
+- 已完成的 Windows 补全:
+  - `skill-center/skills/platform-cover-ops/SKILL.md`:
+    - 补入 Windows 文件选择器桥接，明确封面上传若必须经过系统选择器，应使用真实短路径 `%TEMP%\\cover-upload.png` 或带引号的 `C:/...` 路径，不得依赖 Explorer 搜索结果、`.lnk` 快捷方式、OneDrive 占位文件或 symlink。
+    - 把头条号 `3:4` 封面优先规则补成 Windows handoff 说明，要求 Windows repo mirror 下的 upload matrix / content-package 字段优先指向真实竖版 `3:4` 封面路径，横版 `4:3` 只保留为 fallback。
+  - `skill-center/skills/seedance-video-api/{SKILL.md,references/cover-execution.md,references/cover-package.md}`:
+    - 复核后确认这批 `Seedance` 变更已经具备 Windows 等价覆盖，无需再补 PowerShell 或路径分叉:
+      - 已有 `seedance_cli.ps1`、`build_cover_package.ps1` 等 PowerShell 入口
+      - 已写明 Windows 侧 `C:/...` 路径约定
+      - 已写明逐平台 `upload matrix` 必填，以及头条号默认视频发布、竖版 `3:4` 封面优先的 Windows-ready handoff 规则
+  - `automation/python-platform-takeover/{README.md,social_publisher/publish_receipts.py,tests/test_publish_receipts.py}`:
+    - 复核后确认 receipt loader 对 `verified_fields`、`aid`、`object_nonce` 等扩展字段的兼容，以及 `blocked_account_review_pending` / `under_review` 等阻断状态，都是共享跨平台逻辑；现有 Windows 侧 `.\scripts\social-publisher.ps1 receipt-status|record-receipt|clear-receipt` 已可直接复用，无需新增 Windows 专属代码。
+  - `automation/python-platform-takeover/state/publish-receipts/*.json` 与 `configs/content-package.2026-04-30-repair-existing-not-republish.yaml`:
+    - 复核后确认它们属于共享 campaign / receipt 数据与样例内容包更新，不需要新增 `.ps1`、`.cmd`、Windows JSON/YAML 分叉文件或额外 repo 资产副本。
+  - `automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`:
+    - 复核后确认新增的 Bilibili `under_review` receipt、`BV1FHRTB9EgW` / share link、OpenCLI Browser Bridge fallback 说明与飞书通知留痕都只是共享台账补写，不引入新的 Windows-only skill 行为。
+    - 现有 `skill-center/skills/social-publish-automation/SKILL.md` 已覆盖 Windows 侧在 `CDP` 不可用时先运行 `automation/python-platform-takeover/scripts/social-publisher.ps1 doctor --check-browser --package <yaml> --platform <platform>`，再决定是否使用 Browser Bridge fallback，因此本轮无需再补脚本。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-01` 当前已记录的非零批次里，没有仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未做 Windows PowerShell 实机回归；结论基于 monitor 批次去重复核、仓库现有 PowerShell 入口、Windows 路径文档、receipt 读取逻辑与 Browser Bridge fallback 说明核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-01 22:05:55 CST`，`skill-change-monitor.md` 里 `2026-04-30 22:05:10 CST` 之后新增且此前未入账的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都已补齐；今天剩余的新增内容只有共享 receipt 留痕，没有新的 Windows 缺口。

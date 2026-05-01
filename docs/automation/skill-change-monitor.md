@@ -12,6 +12,611 @@
 - 变更摘要
 - 如果有新建 `.py` 文件，单独列出路径、用途、以及与哪个 skill 相关
 
+## 2026-05-01 23:40:45 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-01T14:37:03.659Z`（本地时区为 `2026-05-01 22:37:03 CST`）
+- 持久化状态里的上一轮实际完成时间是 `2026-05-01T14:38:55Z`（本地时区为 `2026-05-01 22:38:55 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 22:38:55 CST` 作为有效基线，避免重复登记上一轮已覆盖的窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2387` 条受监控路径与当前文件树，结果保持 `2387 -> 2387`
+- 以路径、整数秒 `mtime` 与 `size` 逐项比对后，发现原始差异为新增 `0`、修改 `1`、删除 `0`；唯一变化文件的当前 `mtime` 晚于有效基线，因此计入本轮新批次
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `1`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`:
+  modified。把同一 `campaign_id` 的快手 receipt 从 `under_review` 推进为 `published`：新增 `2026-05-01T23:28:18+08:00` 的管理页复核留痕，记录通过 CDP `127.0.0.1:9333` 在快手 `已发布` tab 命中当前 campaign 描述行，状态为 `已发布`、时间为 `2026-05-01 12:35`，并明确 `待发布` / `未通过` 都是 `0`，因此重复重发被阻断。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 22:38:55 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 1 个新的支持自动化变更批次，集中在 `automation/python-platform-takeover` 的 `2026-05-01-dachen-xiaoma-argue-fix-old-post` publish receipt 台账补写。
+- 这次补写把快手从“审核中”推进到“已发布并阻止重复重发”的可核验状态；该批次仍停留在本地工作区，建议后续执行 GitHub 同步，避免最新 campaign 回执继续漂移。
+
+## 2026-05-01 22:38:55 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-01T13:36:03.472Z`（本地时区为 `2026-05-01 21:36:03 CST`）
+- 持久化状态里的上一轮实际完成时间是 `2026-05-01T09:31:35Z`（本地时区为 `2026-05-01 17:31:35 CST`）；由于任务消息里的 `Last run` 更晚，本轮以 `2026-05-01 21:36:03 CST` 作为有效基线，避免把更早的已处理变更重复登记
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2387` 条受监控路径与当前文件树，结果保持 `2387 -> 2387`
+- 以路径、整数秒 `mtime` 与 `size` 逐项比对后，发现原始差异为新增 `0`、修改 `3`、删除 `0`；这 3 个修改文件的当前 `mtime` 都晚于有效基线，因此全部计入本轮新批次
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `3`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/platform-cover-ops/SKILL.md`:
+  modified。补强 `platform-cover-ops` 的固定封面规范，要求大陈 / AI员工 Seedance 内容包永久沿用迁移包同款双封面样式与文件名，禁止回退到平台自动封面或纯底条样式，并补上 Windows 文件选择器短路径与 Windows 镜像 handoff 中 `3:4` 竖版优先的约束。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-01-dachen-xiaoma-argue-fix-old-post.yaml`:
+  modified。把 `2026-05-01-dachen-xiaoma-argue-fix-old-post` campaign 配置扩写成更完整的逐平台发布包：新增百家号 / 快手平台文档路径，明确 `prefer_repair_existing_post_over_republish`、管理页核验与 active campaign lock 约束，并补齐微信视频号、百家号、快手的上传视频与主备封面路径。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`:
+  modified。继续补写同一 campaign 的多平台 receipt 台账，新增或扩展了 B站、抖音、知乎等执行留痕；其中 B站记录了 `BV1FHRTB9EgW`、`转码完成 / 审核中` 管理页核验、CDP 不可用后切到 OpenCLI Browser Bridge 的回退路径与飞书通知回执，抖音与知乎也补齐了发布核验结果。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 21:36:03 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 1 个新的技能 / 支持自动化变更批次，集中在 `platform-cover-ops` 规则收紧，以及 `python-platform-takeover` 对 `2026-05-01-dachen-xiaoma-argue-fix-old-post` campaign 的配置与 receipt 持续补写。
+- 这批改动仍停留在本地工作区，建议后续执行 GitHub 同步，避免封面规范、逐平台发布包和最新 publish receipt 台账继续漂移。
+
+## 2026-05-01 17:31:23 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-01T08:27:02.459Z`（本地时区为 `2026-05-01 16:27:02 CST`）
+- 持久化快照里的上一轮实际完成时间是 `2026-05-01T08:28:47Z`（本地时区为 `2026-05-01 16:28:47 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 16:28:47 CST` 作为有效基线，避免重复登记上一轮已覆盖的零变更窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2387` 条受监控路径与当前文件树，结果为 `2387 -> 2387`
+- 以路径、整数秒 `mtime` 与 `size` 逐项比对后，发现新增 `0`、修改 `1`、删除 `0`
+- 对唯一变化文件继续按 receipt 内时间字段复核，确认基线之后只新增了 B 站发布核验与飞书通知留痕
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `1`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`:
+  modified。为同一 `campaign_id` 新增 B 站 publish receipt 留痕：记录 `BV1FHRTB9EgW` / share link、`转码完成 / 审核中` 的管理页核验、CDP 不可用时切到 OpenCLI Browser Bridge 的执行路径，以及 `2026-05-01T17:25:19+08:00` 的飞书通知回执。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 16:28:47 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 1 个新的支持自动化变更批次，集中在 `automation/python-platform-takeover` 的 publish receipt 台账补写。
+- 变更内容是把 `2026-05-01-dachen-xiaoma-argue-fix-old-post` campaign 的 B 站执行结果补齐到本地 receipt，并附带飞书通知留痕；建议后续执行 GitHub 同步，避免这条最新跨平台发布台账继续只停留在本地工作区。
+
+## 2026-05-01 16:28:46 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-01T07:25:26.515Z`（本地时区为 `2026-05-01 15:25:26 CST`）
+- 本地持久化快照仍停在 `2026-05-01T04:23:51Z`（本地时区为 `2026-05-01 12:23:51 CST`）；由于任务消息时间更晚，本轮以 `2026-05-01 15:25:26 CST` 作为有效基线，避免把上一轮之后已处理的旧变更重复登记
+- 判定依据:
+- 先对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 的旧快照与当前文件树，发现旧快照落后时点下存在 `新增 2 / 修改 8 / 删除 0`
+- 再按有效基线 `2026-05-01 15:25:26 CST` 逐项复核四个监控目录中所有技能相关文件的 `mtime`，结果没有任何文件晚于该时间
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 15:25:26 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-01 15:25:26 CST` 的新技能或支持自动化文件变更批次。
+- 旧快照相对当前文件树确实落后一个批次，涉及 `platform-cover-ops`、`seedance-video-api` 与 `python-platform-takeover` 的 `2` 个新增和 `8` 个修改，但这些文件的当前 `mtime` 全都早于本轮有效基线，因此不重复登记，也不追加新的 GitHub 同步待办说明。
+
+## 2026-05-01 12:23:51 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-01T03:21:20.938Z`（本地时区为 `2026-05-01 11:21:20 CST`）
+- 自动化持久化快照里的上一轮实际完成检查点是 `2026-05-01T03:22:52Z`（本地时区为 `2026-05-01 11:22:52 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 11:22:52 CST` 作为有效基线，避免重复登记上一轮已落盘窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2385` 条受监控路径与当前文件树，结果保持 `2385 -> 2385`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 11:22:52 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现新的技能或支持自动化文件变更批次；四个监控目录相对上一轮持久化快照保持一致。
+- 因为没有新的变更批次，本轮不追加 GitHub 同步待办说明。
+
+## 2026-05-01 08:19:05 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-04-30T23:16:46.799Z`（本地时区为 `2026-05-01 07:16:46 CST`）
+- 自动化持久化状态里的上一轮实际完成时间是 `2026-04-30T23:18:20Z`（本地时区为 `2026-05-01 07:18:20 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 07:18:20 CST` 作为有效基线，避免重复登记上一轮已落盘窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2385` 条受监控路径与当前文件树，结果保持 `2385 -> 2385`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 07:18:20 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现新的技能或支持自动化文件变更批次；四个监控目录相对上一轮持久化快照保持一致。
+- 因为没有新的变更批次，本轮不追加 GitHub 同步待办说明。
+
+## 2026-05-01 07:18:20 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-04-30T22:15:16.665Z`（本地时区为 `2026-05-01 06:15:16 CST`）
+- 自动化持久化状态里的上一轮实际完成时间是 `2026-04-30T22:16:49Z`（本地时区为 `2026-05-01 06:16:49 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 06:16:49 CST` 作为有效基线，避免重复登记上一轮已落盘窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2385` 条受监控路径与当前文件树，结果保持 `2385 -> 2385`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 06:16:49 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现新的技能或支持自动化文件变更批次；四个监控目录相对上一轮持久化快照保持一致。
+- 因为没有新的变更批次，本轮不追加 GitHub 同步待办说明。
+
+## 2026-05-01 08:19:14 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-04-30T23:16:46.799Z`（本地时区为 `2026-05-01 07:16:46 CST`）
+- 自动化持久化状态里的上一轮实际完成时间是 `2026-04-30T23:18:20Z`（本地时区为 `2026-05-01 07:18:20 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 07:18:20 CST` 作为有效基线，避免重复登记上一轮已落盘窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2385` 条受监控路径与当前文件树，结果保持 `2385 -> 2385`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 07:18:20 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现新的技能或支持自动化文件变更批次；四个监控目录相对上一轮持久化快照保持一致。
+- 因为没有新的变更批次，本轮不追加 GitHub 同步待办说明。
+
+## 2026-05-01 06:16:49 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-04-30T21:14:46.534Z`（本地时区为 `2026-05-01 05:14:46 CST`）
+- 自动化持久化状态里的上一轮实际完成时间是 `2026-04-30T21:15:56Z`（本地时区为 `2026-05-01 05:15:56 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 05:15:56 CST` 作为有效基线，避免重复登记上一轮已落盘窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2385` 条受监控路径与当前文件树，结果保持 `2385 -> 2385`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 05:15:56 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现新的技能或支持自动化文件变更批次；四个监控目录相对上一轮持久化快照保持一致。
+- 因为没有新的变更批次，本轮不追加 GitHub 同步待办说明。
+
+## 2026-05-01 06:17:00 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-04-30T22:15:16.665Z`（本地时区为 `2026-05-01 06:15:16 CST`）
+- 自动化持久化状态里的上一轮实际完成时间是 `2026-04-30T22:16:49Z`（本地时区为 `2026-05-01 06:16:49 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 06:16:49 CST` 作为有效基线，避免重复登记上一轮已落盘窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2385` 条受监控路径与当前文件树，结果保持 `2385 -> 2385`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 06:16:49 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现新的技能或支持自动化文件变更批次；四个监控目录相对上一轮持久化快照保持一致。
+- 因为没有新的变更批次，本轮不追加 GitHub 同步待办说明。
+
+## 2026-05-01 05:15:56 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-04-30T20:12:46.431Z`（本地时区为 `2026-05-01 04:12:46 CST`）
+- 自动化持久化状态里的上一轮实际完成时间是 `2026-04-30T20:13:56Z`（本地时区为 `2026-05-01 04:13:56 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 04:13:56 CST` 作为有效基线，避免重复登记上一轮已落盘窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2385` 条受监控路径与当前文件树，结果保持 `2385 -> 2385`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 04:13:56 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现新的技能或支持自动化文件变更批次；四个监控目录相对上一轮持久化快照保持一致。
+- 因为没有新的变更批次，本轮不追加 GitHub 同步待办说明。
+
+## 2026-05-01 04:13:56 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-04-30T19:10:46.295Z`（本地时区为 `2026-05-01 03:10:46 CST`）
+- 自动化持久化状态里的上一轮实际完成时间是 `2026-04-30T19:12:16Z`（本地时区为 `2026-05-01 03:12:16 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 03:12:16 CST` 作为有效基线，避免重复登记上一轮已落盘窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2385` 条受监控路径与当前文件树，结果保持 `2385 -> 2385`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 03:12:16 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现新的技能或支持自动化文件变更批次；四个监控目录相对上一轮持久化快照保持一致。
+- 因为没有新的变更批次，本轮不追加 GitHub 同步待办说明。
+
+## 2026-05-01 03:12:16 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-04-30T18:08:46.124Z`（本地时区为 `2026-05-01 02:08:46 CST`）
+- 自动化持久化状态里的上一轮实际完成时间是 `2026-04-30T18:10:34Z`（本地时区为 `2026-05-01 02:10:34 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 02:10:34 CST` 作为有效基线，避免重复登记上一轮已落盘窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2385` 条受监控路径与当前文件树，结果保持 `2385 -> 2385`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 02:10:34 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现新的技能或支持自动化文件变更批次；四个监控目录相对上一轮持久化快照保持一致。
+- 因为没有新的变更批次，本轮不追加 GitHub 同步待办说明。
+
+## 2026-05-01 04:13:56 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-04-30T19:10:46.295Z`（本地时区为 `2026-05-01 03:10:46 CST`）
+- 自动化持久化状态里的上一轮实际完成时间是 `2026-04-30T19:12:16Z`（本地时区为 `2026-05-01 03:12:16 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 03:12:16 CST` 作为有效基线，避免重复登记上一轮已落盘窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2385` 条受监控路径与当前文件树，结果保持 `2385 -> 2385`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和误写伪路径都属于监控自身维护或历史本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 03:12:16 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现新的技能或支持自动化文件变更批次；四个监控目录相对上一轮持久化快照保持一致。
+- 因为没有新的变更批次，本轮不追加 GitHub 同步待办说明。
+
+## 2026-05-01 02:10:34 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-04-30T17:07:45.888Z`（本地时区为 `2026-05-01 01:07:45 CST`）
+- 自动化持久化状态里的上一轮实际完成时间是 `2026-04-30T17:10:03Z`（本地时区为 `2026-05-01 01:10:03 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 01:10:03 CST` 作为有效基线，避免重复登记上一轮已落盘窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2385` 条受监控路径与当前文件树，结果保持 `2385 -> 2385`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和误写伪路径都属于监控自身维护或历史本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 01:10:03 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现新的技能或支持自动化文件变更批次；四个监控目录相对上一轮持久化快照保持一致。
+- 因为没有新的变更批次，本轮不追加 GitHub 同步待办说明。
+
+## 2026-05-01 00:11:58 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-04-30T15:06:15.638Z`（本地时区为 `2026-04-30 23:06:15 CST`）
+- 自动化持久化状态里的上一轮实际完成时间是 `2026-04-30T15:09:15Z`（本地时区为 `2026-04-30 23:09:15 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-04-30 23:09:15 CST` 作为有效基线，避免重复登记上一轮已经写入监控文档的那 6 个文件
+- 判定依据:
+- 复核 `~/.codex/automations/skill-monitor/last-snapshot.json`、`state.json` 与仓库提交历史；`~/.codex/skills` 在有效基线后没有新的 skill 文件内容变化
+- 仓库侧以 `ad2af6a` 之后、`HEAD` 之前的 skill / automation 提交为准，命中新增 `2`、修改 `8`、删除 `0`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述两份文档属于监控记录自身维护；误写到 `~/.codex/skills` 的 `$CODEX_HOME` 伪路径仍按本地运行产物忽略，不纳入本轮变更统计。
+- 结果汇总: 新增 `2`，修改 `8`，删除 `0`。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-30-repair-existing-not-republish.yaml`
+  - 新增 `2026-04-30-repair-existing-not-republish` campaign 内容包，补齐主备视频、`3:4`/`4:3` 封面、support files、百家号/快手上传计划，以及“先修旧条、确认失败再重发”的逐平台标题和描述。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-30-repair-existing-not-republish.json`
+  - 新增同 campaign 的 publish receipt 台账，写入视频号、B 站、知乎、快手、微博已发布结果，以及抖音、百家号、小红书、头条号的 `under_review` 或阻断后续状态和核验字段。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md`
+  - Windows 交接说明补充日期化内容包必须同时重写 `assets.*`、`support_files.*` 和 `platforms.<platform>.upload_plan.*` 的绝对路径，并把 `blocked_account_review_pending` 与额外 receipt 核验字段兼容规则写进操作约束。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/publish_receipts.py`
+  - 共享 receipt loader 把 `blocked_account_review_pending` 纳入阻断状态，同时在反序列化时只保留 `PublishReceipt` 已知字段，避免 `verified_fields`、`aid`、`object_nonce` 一类附加字段触发加载失败。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-29-platform-execution-lock-campaign-four-checks.json`
+  - 头条号 receipt 从 `not_started` 推进为 `blocked_account_review_pending`，补写两次重试留痕、上传页与管理页 URL、发布弹窗阻断文案，以及发布前视频/封面/勾选项核验字段。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_publish_receipts.py`
+  - 新增测试覆盖 `blocked_account_review_pending` 的阻断判定，以及 receipt 含未知元数据字段时 loader 仍能正常读取并继续阻止重发。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/platform-cover-ops/SKILL.md`
+  - `platform-cover-ops` 镜像补充 Seedance 视频发头条号时默认优先使用竖版 `3:4` 封面，横版 `4:3` 只作为 fallback。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/SKILL.md`
+  - `seedance-video-api` 镜像把头条号平台专用封面字段收紧为竖版 `3:4` 优先、横版 `4:3` 仅兜底，避免 Seedance 视频包把头条号封面规格写反。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/SKILL.md`
+  - 防重发规则新增 `blocked_account_review_pending` 阻断态，并明确 receipt 即使带有 `verified_fields`、`aid`、`object_nonce` 等额外核验字段，也应通过 CLI / loader 处理而不是手工删键。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/toutiao-ops/SKILL.md`
+  - 头条号操作规范新增账号审核阻断说明：如果 receipt 或管理页显示 `blocked_account_review_pending`，macOS 与 Windows 都要保留 receipt、停止发布循环，并等待审核通过或切换账号/方案。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-04-30 23:09:15 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 1 个新的技能/支持自动化变更批次，集中在 `automation/python-platform-takeover` 的 receipt 兼容与 `repair-existing-not-republish` campaign，以及 `skill-center` 对应的头条号封面优先级和账号审核阻断规则。
+- 规则层面的共同方向是把头条号的两个风险面固化下来：Seedance 视频默认优先竖版 `3:4` 封面，账号资料审核中的 `blocked_account_review_pending` 视为真实阻断态而不是可清台账重试的失败。
+- 执行层面的共同方向是让共享 loader 和测试都接受扩展 receipt 元数据，并把 `2026-04-30-repair-existing-not-republish` 的多平台实绩与头条号阻断演进正式落盘。
+
 ## 2026-04-30 23:09:15 CST
 - 扫描范围:
 - `/Users/baishangjituan/.codex/skills`
@@ -21315,3 +21920,1057 @@
 ### 变更摘要
 - 本轮发现 1 个新的技能/支持自动化变更批次，共 `0` 个新增、`3` 个修改、`0` 个删除；主题一致，都是把 `blocked_account_review_pending` 从“可重试”改成“必须停下等待账号审核”的阻断规则，并把 receipt 扩展字段兼容要求同步到 Windows README 与 `skill-center` 技能镜像。
 - 这批变更尚未同步到 GitHub，需要后续同步，避免 Windows 执行说明、通用社媒发布技能与头条号技能镜像继续漂移。
+
+## 2026-05-01 00:12:29 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-04-30T15:06:15.638Z`（本地时区为 `2026-04-30 23:06:15 CST`）
+- 自动化持久化快照里的上一轮完成时间是 `2026-04-30T15:09:15Z`（本地时区为 `2026-04-30 23:09:15 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-04-30 23:09:15 CST` 作为有效基线，避免重复登记上一轮已落盘窗口
+- 判定依据:
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 先按有效基线 `2026-04-30 23:09:15 CST` 复核四个监控根目录的 post-baseline 文件 `mtime`；结果命中新增 `0`、修改 `323`、删除 `0`
+- 本轮命中的修改文件主要集中在三组：仓库 `skills/` 下的 6 份 live 自定义 skill 参考文件、`skill-center/skills/` 下的 290 份镜像 skill / reference / asset 文件，以及 `automation/python-platform-takeover/` 下的 27 份 README、campaign config、receipt ledger、publisher 模块与测试文件
+- 当前受监控文件总量保持 `2385 -> 2385`；没有发现新的受监控路径，也没有发现上一轮快照里的路径在当前文件树中缺失，因此本轮没有新增或删除项
+- 忽略项:
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- 上述两份 docs 文件属于监控记录自身维护；误写到 `~/.codex/skills/$CODEX_HOME/...` 的伪路径仍按本地运行产物忽略，不纳入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `323`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md`
+  - Python takeover README refreshed to match the current campaign, receipt, and operator workflow.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-20-ai-content-platform-execution.yaml`
+  - Campaign content-package YAML refreshed for the content package.2026 04 20 ai content platform execution Python takeover batch.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-21-platform-execution-next-round.yaml`
+  - Campaign content-package YAML refreshed for the content package.2026 04 21 platform execution next round Python takeover batch.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-22-platform-execution-three-steps.yaml`
+  - Campaign content-package YAML refreshed for the content package.2026 04 22 platform execution three steps Python takeover batch.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml`
+  - Campaign content-package YAML refreshed for the content package.2026 04 23 platform execution feedback fields Python takeover batch.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-24-platform-execution-writeback-fields.yaml`
+  - Campaign content-package YAML refreshed for the content package.2026 04 24 platform execution writeback fields Python takeover batch.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-25-platform-execution-six-writeback-fields.yaml`
+  - Campaign content-package YAML refreshed for the content package.2026 04 25 platform execution six writeback fields Python takeover batch.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-27-platform-execution-verify-before-republish.yaml`
+  - Campaign content-package YAML refreshed for the content package.2026 04 27 platform execution verify before republish Python takeover batch.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-28-platform-execution-early-zero-not-failure.yaml`
+  - Campaign content-package YAML refreshed for the content package.2026 04 28 platform execution early zero not failure Python takeover batch.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-29-platform-execution-lock-campaign-four-checks.yaml`
+  - Campaign content-package YAML refreshed for the content package.2026 04 29 platform execution lock campaign four checks Python takeover batch.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-30-repair-existing-not-republish.yaml`
+  - Campaign content-package YAML refreshed for the content package.2026 04 30 repair existing not republish Python takeover batch.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/xiaohongshu.yaml`
+  - Xiaohongshu platform mapping config refreshed for Python takeover publishing.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platforms.example.yaml`
+  - Example platform selection config refreshed for the Python takeover workflow.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/browser.py`
+  - Python takeover publisher module refreshed: browser.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/cli.py`
+  - Python takeover publisher module refreshed: cli.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/douyin.py`
+  - Python takeover publisher module refreshed: platforms/douyin.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py`
+  - Python takeover publisher module refreshed: platforms/wechat channels.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/xiaohongshu.py`
+  - Python takeover publisher module refreshed: platforms/xiaohongshu.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/publish_receipts.py`
+  - Receipt loader logic refreshed to preserve blocking account-review states and tolerate legacy metadata payloads.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json`
+  - Publish receipt ledger refreshed with the latest saved platform states for 2026 04 24 platform execution writeback fields.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-25-platform-execution-six-writeback-fields.json`
+  - Publish receipt ledger refreshed with the latest saved platform states for 2026 04 25 platform execution six writeback fields.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-27-platform-execution-verify-before-republish.json`
+  - Publish receipt ledger refreshed with the latest saved platform states for 2026 04 27 platform execution verify before republish.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-28-platform-execution-early-zero-not-failure.json`
+  - Publish receipt ledger refreshed with the latest saved platform states for 2026 04 28 platform execution early zero not failure.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-29-platform-execution-lock-campaign-four-checks.json`
+  - Publish receipt ledger refreshed with the latest saved platform states for 2026 04 29 platform execution lock campaign four checks.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-30-repair-existing-not-republish.json`
+  - Publish receipt ledger refreshed with the latest saved platform states for 2026 04 30 repair existing not republish.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_publish_receipts.py`
+  - Receipt tests expanded for legacy missing-title payloads, ignored unknown metadata fields, and blocking review statuses.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_wechat_channels.py`
+  - Python takeover test coverage refreshed: test wechat channels.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`
+  - Mirror asset/reference refreshed for clash-verge-standard-env: references/rules enhancement.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/SKILL.md`
+  - Mirror skill instructions refreshed for dachen-founder-flywheel.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/dashboard-export-template.json`
+  - Mirror asset/reference refreshed for data-review: references/dashboard export template.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/docker-dashboard-contract.md`
+  - Mirror asset/reference refreshed for data-review: references/docker dashboard contract.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/kuaishou-ops/SKILL.md`
+  - Mirror skill instructions refreshed for kuaishou-ops.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-approval/SKILL.md`
+  - Mirror skill instructions refreshed for lark-approval.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-attendance/SKILL.md`
+  - Mirror skill instructions refreshed for lark-attendance.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/SKILL.md`
+  - Mirror skill instructions refreshed for lark-base.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/dashboard-block-data-config.md`
+  - Mirror asset/reference refreshed for lark-base: references/dashboard block data config.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/examples.md`
+  - Mirror asset/reference refreshed for lark-base: references/examples.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/formula-field-guide.md`
+  - Mirror asset/reference refreshed for lark-base: references/formula field guide.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-advperm-disable.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base advperm disable.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-advperm-enable.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base advperm enable.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-base-copy.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base base copy.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-base-create.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base base create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-base-get.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base base get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-arrange.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base dashboard arrange.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-create.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base dashboard block create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-delete.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base dashboard block delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-get.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base dashboard block get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-list.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base dashboard block list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-update.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base dashboard block update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-create.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base dashboard create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-delete.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base dashboard delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-get.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base dashboard get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-list.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base dashboard list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-update.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base dashboard update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base dashboard.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-data-query.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base data query.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-create.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base field create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-delete.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base field delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-get.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base field get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-list.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base field list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-search-options.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base field search options.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-update.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base field update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base field.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-create.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base form create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-delete.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base form delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-get.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base form get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-list.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base form list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-create.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base form questions create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-delete.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base form questions delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-list.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base form questions list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-update.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base form questions update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base form questions.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-update.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base form update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base form.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-history.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base history.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-batch-create.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base record batch create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-batch-update.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base record batch update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-delete.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base record delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-get.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base record get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-history-list.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base record history list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-list.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base record list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-search.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base record search.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-upload-attachment.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base record upload attachment.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-upsert.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base record upsert.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base record.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-create.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base role create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-delete.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base role delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-get.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base role get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-list.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base role list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-update.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base role update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-shortcut-field-properties.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base shortcut field properties.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-shortcut-record-value.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base shortcut record value.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-create.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base table create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-delete.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base table delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-get.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base table get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-list.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base table list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-update.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base table update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base table.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-create.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base view create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-delete.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base view delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-card.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base view get card.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-filter.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base view get filter.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-group.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base view get group.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-sort.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base view get sort.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-timebar.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base view get timebar.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-visible-fields.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base view get visible fields.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base view get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-list.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base view list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-rename.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base view rename.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-card.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base view set card.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-filter.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base view set filter.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-group.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base view set group.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-sort.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base view set sort.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-timebar.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base view set timebar.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-visible-fields.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base view set visible fields.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base view.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-create.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base workflow create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-disable.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base workflow disable.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-enable.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base workflow enable.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-get.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base workflow get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-guide.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base workflow guide.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-list.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base workflow list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-schema.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base workflow schema.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-update.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base workflow update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base workflow.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workspace.md`
+  - Mirror asset/reference refreshed for lark-base: references/lark base workspace.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lookup-field-guide.md`
+  - Mirror asset/reference refreshed for lark-base: references/lookup field guide.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/role-config.md`
+  - Mirror asset/reference refreshed for lark-base: references/role config.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/SKILL.md`
+  - Mirror skill instructions refreshed for lark-calendar.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-agenda.md`
+  - Mirror asset/reference refreshed for lark-calendar: references/lark calendar agenda.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-create.md`
+  - Mirror asset/reference refreshed for lark-calendar: references/lark calendar create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-freebusy.md`
+  - Mirror asset/reference refreshed for lark-calendar: references/lark calendar freebusy.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-room-find.md`
+  - Mirror asset/reference refreshed for lark-calendar: references/lark calendar room find.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-rsvp.md`
+  - Mirror asset/reference refreshed for lark-calendar: references/lark calendar rsvp.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-schedule-meeting.md`
+  - Mirror asset/reference refreshed for lark-calendar: references/lark calendar schedule meeting.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-suggestion.md`
+  - Mirror asset/reference refreshed for lark-calendar: references/lark calendar suggestion.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-contact/SKILL.md`
+  - Mirror skill instructions refreshed for lark-contact.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-contact/references/lark-contact-get-user.md`
+  - Mirror asset/reference refreshed for lark-contact: references/lark contact get user.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-contact/references/lark-contact-search-user.md`
+  - Mirror asset/reference refreshed for lark-contact: references/lark contact search user.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/SKILL.md`
+  - Mirror skill instructions refreshed for lark-doc.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-create.md`
+  - Mirror asset/reference refreshed for lark-doc: references/lark doc create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-fetch.md`
+  - Mirror asset/reference refreshed for lark-doc: references/lark doc fetch.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-media-download.md`
+  - Mirror asset/reference refreshed for lark-doc: references/lark doc media download.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-media-insert.md`
+  - Mirror asset/reference refreshed for lark-doc: references/lark doc media insert.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-media-preview.md`
+  - Mirror asset/reference refreshed for lark-doc: references/lark doc media preview.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-search.md`
+  - Mirror asset/reference refreshed for lark-doc: references/lark doc search.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-update.md`
+  - Mirror asset/reference refreshed for lark-doc: references/lark doc update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-whiteboard.md`
+  - Mirror asset/reference refreshed for lark-doc: references/lark doc whiteboard.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/SKILL.md`
+  - Mirror skill instructions refreshed for lark-drive.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-add-comment.md`
+  - Mirror asset/reference refreshed for lark-drive: references/lark drive add comment.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-create-folder.md`
+  - Mirror asset/reference refreshed for lark-drive: references/lark drive create folder.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-create-shortcut.md`
+  - Mirror asset/reference refreshed for lark-drive: references/lark drive create shortcut.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-delete.md`
+  - Mirror asset/reference refreshed for lark-drive: references/lark drive delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-download.md`
+  - Mirror asset/reference refreshed for lark-drive: references/lark drive download.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-export-download.md`
+  - Mirror asset/reference refreshed for lark-drive: references/lark drive export download.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-export.md`
+  - Mirror asset/reference refreshed for lark-drive: references/lark drive export.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-import.md`
+  - Mirror asset/reference refreshed for lark-drive: references/lark drive import.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-move.md`
+  - Mirror asset/reference refreshed for lark-drive: references/lark drive move.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-reactions.md`
+  - Mirror asset/reference refreshed for lark-drive: references/lark drive reactions.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-task-result.md`
+  - Mirror asset/reference refreshed for lark-drive: references/lark drive task result.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-upload.md`
+  - Mirror asset/reference refreshed for lark-drive: references/lark drive upload.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-event/SKILL.md`
+  - Mirror skill instructions refreshed for lark-event.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-event/references/lark-event-subscribe.md`
+  - Mirror asset/reference refreshed for lark-event: references/lark event subscribe.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/SKILL.md`
+  - Mirror skill instructions refreshed for lark-im.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-create.md`
+  - Mirror asset/reference refreshed for lark-im: references/lark im chat create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-identity.md`
+  - Mirror asset/reference refreshed for lark-im: references/lark im chat identity.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-messages-list.md`
+  - Mirror asset/reference refreshed for lark-im: references/lark im chat messages list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-search.md`
+  - Mirror asset/reference refreshed for lark-im: references/lark im chat search.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-update.md`
+  - Mirror asset/reference refreshed for lark-im: references/lark im chat update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-mget.md`
+  - Mirror asset/reference refreshed for lark-im: references/lark im messages mget.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-reply.md`
+  - Mirror asset/reference refreshed for lark-im: references/lark im messages reply.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-resources-download.md`
+  - Mirror asset/reference refreshed for lark-im: references/lark im messages resources download.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-search.md`
+  - Mirror asset/reference refreshed for lark-im: references/lark im messages search.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-send.md`
+  - Mirror asset/reference refreshed for lark-im: references/lark im messages send.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-reactions.md`
+  - Mirror asset/reference refreshed for lark-im: references/lark im reactions.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-threads-messages-list.md`
+  - Mirror asset/reference refreshed for lark-im: references/lark im threads messages list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/SKILL.md`
+  - Mirror skill instructions refreshed for lark-mail.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-draft-create.md`
+  - Mirror asset/reference refreshed for lark-mail: references/lark mail draft create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-draft-edit.md`
+  - Mirror asset/reference refreshed for lark-mail: references/lark mail draft edit.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-forward.md`
+  - Mirror asset/reference refreshed for lark-mail: references/lark mail forward.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-message.md`
+  - Mirror asset/reference refreshed for lark-mail: references/lark mail message.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-messages.md`
+  - Mirror asset/reference refreshed for lark-mail: references/lark mail messages.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-reply-all.md`
+  - Mirror asset/reference refreshed for lark-mail: references/lark mail reply all.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-reply.md`
+  - Mirror asset/reference refreshed for lark-mail: references/lark mail reply.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-send.md`
+  - Mirror asset/reference refreshed for lark-mail: references/lark mail send.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-signature.md`
+  - Mirror asset/reference refreshed for lark-mail: references/lark mail signature.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-thread.md`
+  - Mirror asset/reference refreshed for lark-mail: references/lark mail thread.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-triage.md`
+  - Mirror asset/reference refreshed for lark-mail: references/lark mail triage.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-watch.md`
+  - Mirror asset/reference refreshed for lark-mail: references/lark mail watch.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-minutes/SKILL.md`
+  - Mirror skill instructions refreshed for lark-minutes.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-minutes/references/lark-minutes-download.md`
+  - Mirror asset/reference refreshed for lark-minutes: references/lark minutes download.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-minutes/references/lark-minutes-search.md`
+  - Mirror asset/reference refreshed for lark-minutes: references/lark minutes search.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/SKILL.md`
+  - Mirror skill instructions refreshed for lark-okr.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-contentblock.md`
+  - Mirror asset/reference refreshed for lark-okr: references/lark okr contentblock.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-cycle-detail.md`
+  - Mirror asset/reference refreshed for lark-okr: references/lark okr cycle detail.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-cycle-list.md`
+  - Mirror asset/reference refreshed for lark-okr: references/lark okr cycle list.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-entities.md`
+  - Mirror asset/reference refreshed for lark-okr: references/lark okr entities.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-openapi-explorer/SKILL.md`
+  - Mirror skill instructions refreshed for lark-openapi-explorer.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-shared/SKILL.md`
+  - Mirror skill instructions refreshed for lark-shared.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/SKILL.md`
+  - Mirror skill instructions refreshed for lark-sheets.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-add-dimension.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets add dimension.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-append.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets append.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-batch-set-style.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets batch set style.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-create-filter-view-condition.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets create filter view condition.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-create-filter-view.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets create filter view.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-create.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-dimension.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets delete dimension.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-dropdown.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets delete dropdown.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-filter-view-condition.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets delete filter view condition.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-filter-view.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets delete filter view.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-export.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets export.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-find.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets find.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-formula.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets formula.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-get-dropdown.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets get dropdown.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-get-filter-view-condition.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets get filter view condition.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-get-filter-view.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets get filter view.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-info.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets info.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-insert-dimension.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets insert dimension.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-list-filter-view-conditions.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets list filter view conditions.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-list-filter-views.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets list filter views.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-merge-cells.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets merge cells.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-move-dimension.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets move dimension.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-read.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets read.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-replace.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets replace.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-set-dropdown.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets set dropdown.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-set-style.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets set style.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-unmerge-cells.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets unmerge cells.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-dimension.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets update dimension.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-dropdown.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets update dropdown.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-filter-view-condition.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets update filter view condition.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-filter-view.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets update filter view.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-write-image.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets write image.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-write.md`
+  - Mirror asset/reference refreshed for lark-sheets: references/lark sheets write.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-skill-maker/SKILL.md`
+  - Mirror skill instructions refreshed for lark-skill-maker.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/SKILL.md`
+  - Mirror skill instructions refreshed for lark-slides.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/examples.md`
+  - Mirror asset/reference refreshed for lark-slides: references/examples.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-create.md`
+  - Mirror asset/reference refreshed for lark-slides: references/lark slides create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-media-upload.md`
+  - Mirror asset/reference refreshed for lark-slides: references/lark slides media upload.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-xml-presentation-slide-create.md`
+  - Mirror asset/reference refreshed for lark-slides: references/lark slides xml presentation slide create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-xml-presentation-slide-delete.md`
+  - Mirror asset/reference refreshed for lark-slides: references/lark slides xml presentation slide delete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-xml-presentations-get.md`
+  - Mirror asset/reference refreshed for lark-slides: references/lark slides xml presentations get.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/slide-templates.md`
+  - Mirror asset/reference refreshed for lark-slides: references/slide templates.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/slides_demo.xml`
+  - Mirror asset/reference refreshed for lark-slides: references/slides demo.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/slides_xml_schema_definition.xml`
+  - Mirror asset/reference refreshed for lark-slides: references/slides xml schema definition.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/xml-format-guide.md`
+  - Mirror asset/reference refreshed for lark-slides: references/xml format guide.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/xml-schema-quick-ref.md`
+  - Mirror asset/reference refreshed for lark-slides: references/xml schema quick ref.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/SKILL.md`
+  - Mirror skill instructions refreshed for lark-task.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-assign.md`
+  - Mirror asset/reference refreshed for lark-task: references/lark task assign.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-comment.md`
+  - Mirror asset/reference refreshed for lark-task: references/lark task comment.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-complete.md`
+  - Mirror asset/reference refreshed for lark-task: references/lark task complete.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-create.md`
+  - Mirror asset/reference refreshed for lark-task: references/lark task create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-followers.md`
+  - Mirror asset/reference refreshed for lark-task: references/lark task followers.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-get-my-tasks.md`
+  - Mirror asset/reference refreshed for lark-task: references/lark task get my tasks.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-get-related-tasks.md`
+  - Mirror asset/reference refreshed for lark-task: references/lark task get related tasks.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-reminder.md`
+  - Mirror asset/reference refreshed for lark-task: references/lark task reminder.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-reopen.md`
+  - Mirror asset/reference refreshed for lark-task: references/lark task reopen.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-search.md`
+  - Mirror asset/reference refreshed for lark-task: references/lark task search.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-set-ancestor.md`
+  - Mirror asset/reference refreshed for lark-task: references/lark task set ancestor.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-subscribe-event.md`
+  - Mirror asset/reference refreshed for lark-task: references/lark task subscribe event.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-create.md`
+  - Mirror asset/reference refreshed for lark-task: references/lark task tasklist create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-members.md`
+  - Mirror asset/reference refreshed for lark-task: references/lark task tasklist members.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-search.md`
+  - Mirror asset/reference refreshed for lark-task: references/lark task tasklist search.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-task-add.md`
+  - Mirror asset/reference refreshed for lark-task: references/lark task tasklist task add.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-update.md`
+  - Mirror asset/reference refreshed for lark-task: references/lark task update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/SKILL.md`
+  - Mirror skill instructions refreshed for lark-vc.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/references/lark-vc-notes.md`
+  - Mirror asset/reference refreshed for lark-vc: references/lark vc notes.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/references/lark-vc-recording.md`
+  - Mirror asset/reference refreshed for lark-vc: references/lark vc recording.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/references/lark-vc-search.md`
+  - Mirror asset/reference refreshed for lark-vc: references/lark vc search.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/SKILL.md`
+  - Mirror skill instructions refreshed for lark-whiteboard.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/connectors.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: references/connectors.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/content.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: references/content.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/lark-whiteboard-query.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: references/lark whiteboard query.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/lark-whiteboard-update.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: references/lark whiteboard update.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/layout.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: references/layout.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/schema.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: references/schema.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/style.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: references/style.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/typography.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: references/typography.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/routes/dsl.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: routes/dsl.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/routes/mermaid.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: routes/mermaid.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/routes/svg.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: routes/svg.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/architecture.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: scenes/architecture.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/bar-chart.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: scenes/bar chart.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/comparison.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: scenes/comparison.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/fishbone.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: scenes/fishbone.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/flowchart.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: scenes/flowchart.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/flywheel.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: scenes/flywheel.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/funnel.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: scenes/funnel.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/line-chart.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: scenes/line chart.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/mermaid.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: scenes/mermaid.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/milestone.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: scenes/milestone.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/organization.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: scenes/organization.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/pyramid.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: scenes/pyramid.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/swimlane.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: scenes/swimlane.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/treemap.md`
+  - Mirror asset/reference refreshed for lark-whiteboard: scenes/treemap.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-wiki/SKILL.md`
+  - Mirror skill instructions refreshed for lark-wiki.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-wiki/references/lark-wiki-move.md`
+  - Mirror asset/reference refreshed for lark-wiki: references/lark wiki move.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-wiki/references/lark-wiki-node-create.md`
+  - Mirror asset/reference refreshed for lark-wiki: references/lark wiki node create.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-workflow-meeting-summary/SKILL.md`
+  - Mirror skill instructions refreshed for lark-workflow-meeting-summary.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-workflow-standup-report/SKILL.md`
+  - Mirror skill instructions refreshed for lark-workflow-standup-report.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/platform-cover-ops/SKILL.md`
+  - Mirror skill instructions refreshed for platform-cover-ops.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh`
+  - Mirror asset/reference refreshed for playwright: scripts/playwright cli.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/SKILL.md`
+  - Mirror skill instructions refreshed for seedance-video-api.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0.json`
+  - Mirror asset/reference refreshed for seedance-video-api: assets/examples/asset reference identity lock seedance 2 0.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0_fast.json`
+  - Mirror asset/reference refreshed for seedance-video-api: assets/examples/asset reference identity lock seedance 2 0 fast.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/cover-package.md`
+  - Mirror asset/reference refreshed for seedance-video-api: references/cover package.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/prompt-template.md`
+  - Mirror asset/reference refreshed for seedance-video-api: references/prompt template.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/real-person-consistency.md`
+  - Mirror asset/reference refreshed for seedance-video-api: references/real person consistency.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/workflows.md`
+  - Mirror asset/reference refreshed for seedance-video-api: references/workflows.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/render_cover_package.py`
+  - Mirror asset/reference refreshed for seedance-video-api: scripts/render cover package.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.py`
+  - Mirror asset/reference refreshed for seedance-video-api: scripts/seedance cli.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/SKILL.md`
+  - Mirror skill instructions refreshed for social-publish-automation.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/references/platform-notes.md`
+  - Mirror asset/reference refreshed for social-publish-automation: references/platform notes.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/toutiao-ops/SKILL.md`
+  - Mirror skill instructions refreshed for toutiao-ops.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/SKILL.md`
+  - Mirror skill instructions refreshed for wechat-channels-ops.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/references/platform-notes.md`
+  - Mirror asset/reference refreshed for wechat-channels-ops: references/platform notes.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/SKILL.md`
+  - Mirror skill instructions refreshed for xiaohongshu-ops.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/references/platform-notes.md`
+  - Mirror asset/reference refreshed for xiaohongshu-ops: references/platform notes.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/src/bridge.js`
+  - Live custom skill asset/reference refreshed for codex-feishu-bridge-skill: assets/template/src/bridge.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/account-slice-analysis.md`
+  - Live custom skill asset/reference refreshed for multi-platform-content-review-skill: references/account slice analysis.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/dashboard-export-template.json`
+  - Live custom skill asset/reference refreshed for multi-platform-content-review-skill: references/dashboard export template.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/diagnosis-and-decisions.md`
+  - Live custom skill asset/reference refreshed for multi-platform-content-review-skill: references/diagnosis and decisions.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/docker-dashboard-contract.md`
+  - Live custom skill asset/reference refreshed for multi-platform-content-review-skill: references/docker dashboard contract.
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/platform-metrics.md`
+  - Live custom skill asset/reference refreshed for multi-platform-content-review-skill: references/platform metrics.
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-04-30 23:09:15 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 1 个新的技能/支持自动化变更批次，共 `323` 个修改项，没有新增或删除；变更形态是一次大规模的 skill mirror / reference refresh，加上 `python-platform-takeover` 的 README、campaign config、receipt ledger 与 receipt 兼容测试同步刷新。
+- 其中最明确的行为性更新落在 `automation/python-platform-takeover/social_publisher/publish_receipts.py` 与对应测试：receipt loader 现在显式兼容 legacy 缺失标题和额外 metadata 字段，同时继续把 `blocked_account_review_pending` 视为阻断重发的状态。
+- 这批变更尚未作为新的监控记录同步到 GitHub；后续同步时应重点关注 `skill-center` 镜像批量刷新与 `python-platform-takeover` receipt/配置更新是否需要拆分提交，避免 review 噪音过大。
+
+## 2026-05-01 02:10:16 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-04-30T17:07:45.888Z`（本地时区为 `2026-05-01 01:07:45 CST`）
+- 自动化持久化状态里的上一轮实际完成时间是 `2026-04-30T17:10:03Z`（本地时区为 `2026-05-01 01:10:03 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 01:10:03 CST` 作为有效基线，避免重复登记上一轮已落盘窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2385` 条受监控路径与当前文件树，结果保持 `2385 -> 2385`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和误写伪路径都属于监控自身维护或历史本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 01:10:03 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现新的技能或支持自动化文件变更批次；四个监控目录相对上一轮持久化快照保持一致。
+- 因为没有新的变更批次，本轮不追加 GitHub 同步待办说明。
+
+## 2026-05-01 01:10:03 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-04-30T16:07:15.774Z`（本地时区为 `2026-05-01 00:07:15 CST`）
+- 自动化持久化状态里的上一轮实际完成时间是 `2026-04-30T16:12:29Z`（本地时区为 `2026-05-01 00:12:29 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 00:12:29 CST` 作为有效基线，避免重复登记上一轮已落盘窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2385` 条受监控路径与当前文件树，结果保持 `2385 -> 2385`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和误写伪路径都属于监控自身维护或历史本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 00:12:29 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现新的技能或支持自动化文件变更批次；四个监控目录相对上一轮持久化快照保持一致。
+- 因为没有新的变更批次，本轮不追加 GitHub 同步待办说明。
+
+## 2026-05-01 09:20:08 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-01T00:17:47.058Z`（本地时区为 `2026-05-01 08:17:47 CST`）
+- 自动化 memory 中上一轮实际完成时间是 `2026-05-01 08:19:05 CST`（UTC `2026-05-01T00:19:05Z`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 08:19:05 CST` 作为有效基线，避免重复登记上一轮已覆盖的零变更窗口
+- 判定依据:
+- 复核 `~/.codex/automations/skill-monitor/last-snapshot.json` 的 `2385` 条受监控路径，并按同一组排除规则重建当前四个监控根目录文件树；结果仍为 `2385 -> 2385`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 08:19:05 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现新的技能或支持自动化文件变更批次；当前文件树与上一轮已完成扫描后的受监控集合一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-01 16:29:00 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-01T07:25:26.515Z`（本地时区为 `2026-05-01 15:25:26 CST`）
+- 持久化快照仍停留在 `2026-05-01T04:23:51Z`（本地时区为 `2026-05-01 12:23:51 CST`）；由于任务消息里的 `Last run` 更晚，本轮以 `2026-05-01 15:25:26 CST` 作为有效基线，避免把更早的旧变更重复登记为新批次
+- 判定依据:
+- 先对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 的 `2385` 条受监控路径与当前文件树，得到表面差异 `新增 2 / 修改 8 / 删除 0`
+- 继续逐项核验这 `10` 个差异路径的当前 `mtime`，结果全部落在 `2026-05-01 12:31:57 CST` 到 `2026-05-01 12:54:33 CST` 之间，全部早于有效基线 `2026-05-01 15:25:26 CST`
+- 因此这些差异仅说明持久化快照落后于本次任务 payload，不属于“自上一轮运行以来”的新变更
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。表面新增的 `automation/python-platform-takeover/configs/content-package.2026-05-01-dachen-xiaoma-argue-fix-old-post.yaml` 与 `state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json` 都创建于 `2026-05-01 12:31:57-12:44:41 CST`，早于本轮有效基线，不重复记为新批次。
+
+### 修改文件
+- 无。表面修改的 `platform-cover-ops` 与 `seedance-video-api` live / mirror 文档变更都发生在 `2026-05-01 12:52:05-12:54:33 CST`，同样早于本轮有效基线。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 15:25:26 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现 `2026-05-01 15:25:26 CST` 之后的新技能或支持自动化文件变更；检测到的表面差异全部属于更早已存在但尚未写入持久化快照的旧变更。
+- 本轮已刷新持久化快照到当前文件树，避免下次运行再次重复看到这批旧差异。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+
+## 2026-05-01 10:21:32 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-01T01:18:20.526Z`（本地时区为 `2026-05-01 09:18:20 CST`）
+- 持久化状态里的上一轮实际完成时间是 `2026-05-01T01:20:08Z`（本地时区为 `2026-05-01 09:20:08 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 09:20:08 CST` 作为有效基线，避免重复登记上一轮已覆盖的零变更窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2385` 条受监控路径与当前文件树，结果保持 `2385 -> 2385`
+- 同时复核四个监控根目录中 `2026-05-01 09:18:20 CST` 之后的文件修改时间，未发现任何新增的受监控文件活动
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 09:20:08 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现新的技能或支持自动化文件变更批次；受监控文件集合与上一轮完成后的快照完全一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-01 17:31:35 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-01T08:27:02.459Z`（本地时区为 `2026-05-01 16:27:02 CST`）
+- 持久化状态里的上一轮实际完成时间是 `2026-05-01T08:29:00Z`（本地时区为 `2026-05-01 16:29:00 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 16:29:00 CST` 作为有效基线，避免重复登记上一轮已落盘窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2387` 条受监控路径与当前文件树，结果保持 `2387 -> 2387`
+- 本轮重扫四个监控根目录后，发现 `1` 个受监控文件在有效基线之后发生 `size / mtime` 变化，且没有新增或删除路径
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `1`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`
+  - 将这条 `python-platform-takeover` campaign receipt 从先前仅覆盖百家号 / 抖音 / 快手 / 头条号 / 微博的状态，继续写回了 Bilibili 发布结果：新增 `bilibili` 平台节点、`BV1FHRTB9EgW` / share link、`under_review` 状态、管理页核验字段，以及因本机 CDP 端口不可用而切换到 OpenCLI Browser Bridge fallback 的执行说明和飞书通知留痕。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 16:29:00 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 `1` 个支持自动化回执文件的新增写回批次，集中在 `automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`。
+- 该批次本质上是把同一 campaign 的 Bilibili 发布核验补齐到 receipt 台账里，后续应执行 GitHub 同步，避免这条最新发布留痕继续只停留在本地工作区。
+
+## 2026-05-01 12:23:51 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-01T03:21:20.938Z`（本地时区为 `2026-05-01 11:21:20 CST`）
+- 持久化快照里的上一轮实际完成时间是 `2026-05-01T03:22:52Z`（本地时区为 `2026-05-01 11:22:52 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 11:22:52 CST` 作为有效基线，避免重复登记上一轮已覆盖的零变更窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2385` 条受监控路径与当前文件树，结果保持 `2385 -> 2385`
+- 本轮重扫四个监控根目录后，未发现任何新增、删除或 size / mtime 变化的受监控文件
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 11:22:52 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现新的技能或支持自动化文件变更批次；当前文件树与上一轮已完成扫描后的受监控集合一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+
+## 2026-05-01 11:23:34 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-01T02:20:20.685Z`（本地时区为 `2026-05-01 10:20:20 CST`）
+- 持久化状态里的上一轮实际完成时间是 `2026-05-01T02:21:32Z`（本地时区为 `2026-05-01 10:21:32 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 10:21:32 CST` 作为有效基线，避免重复登记上一轮已覆盖的零变更窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2385` 条受监控路径与当前文件树，结果保持 `2385 -> 2385`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 10:21:32 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现新的技能或支持自动化文件变更批次；当前文件树与上一轮已完成扫描后的受监控集合一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-01 11:22:52 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-01T02:20:20.685Z`（本地时区为 `2026-05-01 10:20:20 CST`）
+- 持久化状态里的上一轮实际完成时间是 `2026-05-01T02:21:32Z`（本地时区为 `2026-05-01 10:21:32 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 10:21:32 CST` 作为有效基线，避免重复登记上一轮已覆盖的零变更窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2385` 条受监控路径与当前文件树，结果保持 `2385 -> 2385`
+- 本轮重扫四个监控根目录后，未发现任何新增、删除或 size / mtime 变化的受监控文件
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 10:21:32 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现新的技能或支持自动化文件变更批次；受监控文件集合与上一轮完成后的快照完全一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+
+## 2026-05-01 23:41:36 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-01T14:37:03.659Z`（本地时区为 `2026-05-01 22:37:03 CST`）
+- 持久化快照里的上一轮实际完成时间是 `2026-05-01T14:38:55Z`（本地时区为 `2026-05-01 22:38:55 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 22:38:55 CST` 作为有效基线，避免把上一轮已经登记的同批变更重复记录
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2387` 条受监控路径与当前文件树，结果保持 `2387 -> 2387`
+- 以路径、整数秒 `mtime` 与 `size` 逐项比对后，发现原始差异为新增 `0`、修改 `1`、删除 `0`；其中只有 `1` 个修改文件的当前 `mtime` 晚于有效基线，因此计入本轮新批次
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `1`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`:
+  modified。为同一 `campaign_id` 补写快手复核结果：`receipts.kuaishou.status` 从 `under_review` 推进到 `published`，新增 `2026-05-01T23:28:18+08:00` 的管理页核验 note，并把 `verified_fields` 扩展为 `已发布` 页签命中、`待发布/未通过` 均为 `0`、`duplicate_republish_blocked=true`、核验截图路径与原始 `under_review` 时间，明确当前包已发布且不能再重复重发。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 22:38:55 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 1 个新的支持自动化变更批次，集中在 `automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`。
+- 这次补写把快手从“审核中”推进到“已发布”，并用管理页 `已发布` / `待发布=0` / `未通过=0` 的复核结果显式阻断重复重发；建议后续执行 GitHub 同步，避免最新 receipt 台账继续只停留在本地工作区。

@@ -45,22 +45,25 @@ Use one clear still from the generated final video:
 
 ## Layout Rule
 
-Use a stable, repeatable layout:
+For 大陈 / AI员工 Seedance content packages, the layout must follow the migration pack permanently:
 
-- dark semi-transparent bottom information band
-- main title centered in large white type
-- subtitle under the main title in a smaller yellow-gold tone
-- optional small orange rounded label at lower left if a version tag is needed
+- canonical source: `smb://BSJT168._smb._tcp.local/BSJT 共享给我/AI专用/[Codex]Mac部署/视频制作/大陈AI短视频生产迁移包-20260428`
+- canonical script when mounted: `project/scripts/generate_simple_video_covers.py`
+- lower-middle rounded dark translucent information card, not a plain full-width strip
+- main title centered in gold/white dimensional art type with dark stroke
+- subtitle under the main title, one line only
+- no platform auto cover, AI recommended cover, generic poster template, or unstyled raw frame
 
 Stable visual priority:
 
-- `真人脸 + 大字标题`
+- `大陈真实脸 + AI员工大字标题 + 老板收益/动作承诺`
 
 Not:
 
 - decorative sticker pile
 - explosion text
 - cluttered icon overlays
+- video subtitle strips reused as cover title
 
 ## Copy Rule
 
@@ -118,4 +121,5 @@ Boss-pain angle:
 5. Export both `3:4` and `4:3` crops.
 6. Add the fixed lower-third title treatment.
 7. Save both files as PNG.
-8. Only then hand off to publishing.
+8. Verify that every platform publish package explicitly points to these cover files.
+9. Only then hand off to publishing.

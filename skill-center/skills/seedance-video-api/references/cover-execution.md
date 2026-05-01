@@ -13,6 +13,13 @@ Use the bundled helper script when the video is already finished and the next ta
 - `scripts/render_cover_package.ps1`
 - `scripts/build_cover_package.ps1`
 
+For 大陈 / AI员工 Seedance content packages, the canonical renderer is the migration-pack script when the SMB package is mounted:
+
+- `smb://BSJT168._smb._tcp.local/BSJT 共享给我/AI专用/[Codex]Mac部署/视频制作/大陈AI短视频生产迁移包-20260428/project/scripts/generate_simple_video_covers.py`
+- mounted local path usually: `/Volumes/BSJT 共享给我/AI专用/[Codex]Mac部署/视频制作/大陈AI短视频生产迁移包-20260428/project/scripts/generate_simple_video_covers.py`
+- if that path is unavailable, reproduce the same visual style exactly: lower-middle rounded dark translucent card, gold/white dimensional main title, one subtitle line
+- do not use a plain full-width bottom strip or platform auto cover as a substitute
+
 ## What It Creates
 
 The script creates:
@@ -46,6 +53,12 @@ Runtime note:
 macOS / Linux:
 
 ```bash
+python3 "/Volumes/BSJT 共享给我/AI专用/[Codex]Mac部署/视频制作/大陈AI短视频生产迁移包-20260428/project/scripts/generate_simple_video_covers.py" \
+  --frame /absolute/path/to/clean-cover-frame.png \
+  --out-dir /absolute/path/to/cover-package \
+  --title 'AI员工上岗了' \
+  --subtitle '自动跑平台'
+
 python3 /Users/name/.codex/skills/seedance-video-api/scripts/build_cover_package.py \
   --video /absolute/path/to/final_video.mp4 \
   --output-dir /absolute/path/to/cover-package \

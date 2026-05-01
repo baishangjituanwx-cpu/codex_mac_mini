@@ -1,0 +1,48 @@
+campaign_id: "2026-05-01-dachen-xiaoma-argue-fix-old-post"
+theme: "机器人小马想直接重发，大陈阻止并要求先查状态词。"
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post-publish.mp4"
+  backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_cover_package/cover-horizontal-4x3.png"
+support_files:
+  final_verify_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_content_package/final-verify.json"
+  platform_upload_map: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_content_package/platform-upload-map.md"
+  wechat_channels_platform_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_content_package/platforms/wechat-channels.md"
+  baijiahao_post_path: "/Users/baishangjituan/Documents/New project/content-library/posts/baijiahao/2026-05-01-dachen-xiaoma-argue-fix-old-post-video-001.md"
+  baijiahao_platform_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_content_package/platforms/baijiahao.md"
+  kuaishou_platform_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_content_package/platforms/kuaishou.md"
+publish_constraints:
+  reuse_logged_in_publish_page: true
+  skip_duplicate_if_already_published: true
+  prefer_repair_existing_post_over_republish: true
+  require_cover_thumbnail_check_25pct: true
+  require_management_page_verification: true
+  require_title_description_cover_alignment: true
+  require_active_campaign_lock: true
+platform_upload_plan:
+  wechat_channels:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post-publish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_cover_package/cover-horizontal-4x3.png"
+  baijiahao:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post-publish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_cover_package/cover-horizontal-4x3.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_cover_package/cover-vertical-3x4.png"
+  kuaishou:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post-publish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_cover_package/cover-horizontal-4x3.png"
+platforms:
+  wechat_channels:
+    title: "小马别急重发"
+    description: "机器人小马看到封面或描述异常就要重发，大陈直接拦住：先看状态词。\n\n审核中先等，能编辑先修旧条，确认失败再重发。AI员工先查状态并写回记录，人只做最后判断。"
+  baijiahao:
+    title: "机器人小马想直接重发，大陈为什么要求先看状态词？"
+    description: "发布后看到异常，不要立刻重发。先看管理列表状态词：审核中先等，能编辑先修旧条，确认失败再重发。这样才能避免重复发布污染归因。"
+  kuaishou:
+    title: "小马先别重发"
+    description: "机器人小马一着急就要重发，大陈说先停。\n\n发布后看到异常，先查管理列表状态词：审核中先等，能编辑先修旧条，失败再重发。\n\n#AI员工 #发布流程 #先看状态词"

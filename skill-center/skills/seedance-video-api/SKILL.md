@@ -152,10 +152,13 @@ Required source-frame rules:
 
 Required packaging rules:
 
-- Use a dark semi-transparent bottom band.
-- Main title centered in large white text.
-- One short subtitle line below it.
-- Visual priority is `real face + bold title`, not decorative stickers.
+- For 大陈 / AI员工 Seedance content packages, the canonical cover style is permanently the migration-pack style from `smb://BSJT168._smb._tcp.local/BSJT 共享给我/AI专用/[Codex]Mac部署/视频制作/大陈AI短视频生产迁移包-20260428`.
+- Use the migration-pack script `project/scripts/generate_simple_video_covers.py` when that SMB package is mounted, or an exact visual equivalent if the package is unavailable.
+- Do not replace it with a custom full-width bottom strip, plain white-title band, generic poster template, or platform auto/AI cover.
+- The layout must use a lower-middle rounded dark translucent information card, gold/white dimensional main title, one short subtitle line, clean office frame, and no extra sticker clutter.
+- Cover title text must be added after generation by the cover script; do not rely on Chinese text generated inside the video frame as the cover title.
+- Visual priority is `大陈真实脸 + AI员工大字标题 + 老板收益/动作承诺`.
+- The same cover package must be referenced by every downstream platform publish package; do not create a separate platform structure that forgets or bypasses these covers.
 
 Copy rules:
 

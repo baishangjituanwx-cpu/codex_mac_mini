@@ -1,0 +1,367 @@
+{
+  "campaign_id": "2026-05-01-dachen-xiaoma-argue-fix-old-post",
+  "receipts": {
+    "baijiahao": {
+      "campaign_id": "2026-05-01-dachen-xiaoma-argue-fix-old-post",
+      "current_url": "https://baijiahao.baidu.com/builder/rc/clue?aside=0&footer=true&from=videoV2&firstPublish=undefined&word_bag_id=null",
+      "external_id": null,
+      "management_url": "https://baijiahao.baidu.com/builder/rc/content?currentPage=1&pageSize=10&search=&type=&collection=&startDate=&endDate=",
+      "notes": [
+        "published_verified_under_review_2026-05-01T12:38:31+08:00: Chrome DevTools/CDP flow on 127.0.0.1:9223. Uploaded publish video, set 百家号作品描述/封面标题 to the package title, uploaded horizontal 4:3 local cover, and toggled 采用AI生成内容 through the visible page control. Pre-submit readback matched title and 24/50 counter; platform showed cover warning 封面不佳 / 图片存在边框 but did not block submit. Success page showed 提交成功，正在审核中 / 视频发布成功. 作品管理 no-search latest list verified exact title at 2026-05-01 12:36:28 with status 审核中."
+      ],
+      "platform_id": "baijiahao",
+      "recorded_at": "2026-05-01T04:38:19.745678+00:00",
+      "share_link": null,
+      "status": "under_review",
+      "title": "机器人小马想直接重发，大陈为什么要求先看状态词？",
+      "verified_fields": {
+        "ai_generated_disclosure_checked": true,
+        "cover_files": {
+          "horizontal_4x3": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_cover_package/cover-horizontal-4x3.png",
+          "vertical_3x4": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_cover_package/cover-vertical-3x4.png"
+        },
+        "management_row_status": "审核中",
+        "management_row_time": "2026-05-01 12:36:28",
+        "pre_submit_char_count": "24/50",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post-publish.mp4"
+      }
+    },
+    "bilibili": {
+      "campaign_id": "2026-05-01-dachen-xiaoma-argue-fix-old-post",
+      "current_url": "https://member.bilibili.com/platform/upload/video/frame?page_from=creative_home_top_upload",
+      "external_id": "BV1FHRTB9EgW",
+      "management_url": "https://member.bilibili.com/platform/upload-manager/article",
+      "notes": [
+        "published_verified_under_review_2026-05-01T17:24:55+08:00: OpenCLI Browser Bridge was used only after CDP endpoints 9222/9223/9333 were unavailable. Pre-submit readback matched exact title, description, uploaded horizontal cover, tags, and AI declaration. Submit API /x/vu/web/add/v3 returned code 0 with bvid BV1FHRTB9EgW. B站稿件管理 verified exact current-campaign title at 2026年05月01日 17:24:00 with status 转码完成 / 审核中.",
+        "feishu_notified_2026-05-01T17:25:19+08:00: sent per-platform B站 publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b507359e6eca0b487a85a1688b11."
+      ],
+      "platform_id": "bilibili",
+      "recorded_at": "2026-05-01T17:24:55+08:00",
+      "share_link": "https://www.bilibili.com/video/BV1FHRTB9EgW",
+      "status": "under_review",
+      "title": "机器人小马一看到异常就要重发，大陈为什么说先看状态词？",
+      "verified_fields": {
+        "ai_declaration": "作者声明：该视频使用人工智能合成技术",
+        "api_response": {
+          "aid": 116498588832048,
+          "bvid": "BV1FHRTB9EgW",
+          "code": 0
+        },
+        "automation_route": "OpenCLI Browser Bridge fallback after CDP endpoints were unavailable; B站 login verified by opencli bilibili me",
+        "category": "人工智能",
+        "category_note": "B站二级分区回读为人工智能，属于知识相关主题；原包建议为知识/职业职场",
+        "cdp_probe": "BROWSER_CDP_URL empty; 127.0.0.1:9222/9223/9333 unavailable before publish",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_cover_package/cover-horizontal-4x3.png",
+        "cover_url": "https://archive.biliimg.com/bfs/archive/26ff629bb96c84963956a7864694e5ceb855dc4b.jpg",
+        "description": "这条用办公室争吵拆一个发布后核验规则：看到封面、描述或状态异常，先别急着重发。\n\n管理列表状态词才是动作开关：审核中先等，可编辑先修旧条，确认失败再重发。",
+        "feishu_message_id": "om_x100b507359e6eca0b487a85a1688b11",
+        "feishu_sent_at": "2026-05-01T17:25:19+08:00",
+        "management_exact_title_found": true,
+        "management_row_status": "转码完成 / 审核中",
+        "management_row_time": "2026年05月01日 17:24:00",
+        "management_total_count": 6,
+        "tags": [
+          "AI员工",
+          "内容发布",
+          "职场效率",
+          "自动化流程",
+          "短视频运营"
+        ],
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post-publish.mp4"
+      }
+    },
+    "douyin": {
+      "campaign_id": "2026-05-01-dachen-xiaoma-argue-fix-old-post",
+      "current_url": "https://creator.douyin.com/creator-micro/content/manage?enter_from=publish",
+      "external_id": null,
+      "management_url": "https://creator.douyin.com/creator-micro/content/manage",
+      "notes": [
+        "initialized_current_thread_before_publish_2026-05-01T12:30:58+08:00: active Douyin campaign receipt created before publishing; this thread only handles Douyin and must not reuse older campaign receipts.",
+        "published_verified_under_review_2026-05-01T22:31:37+08:00: Chrome DevTools/CDP flow on 127.0.0.1:9223 prepared the latest Douyin package first; after user confirmed publish, the CDP endpoint was no longer reachable and macOS accessibility blocked system UI automation, so Browser Bridge/OpenCLI was used only as a fallback against the already logged-in Douyin tab. The stale draft text was replaced and read back exactly, publish video was uploaded from the current package, local vertical 3:4 and horizontal 4:3 covers were uploaded, cover detection passed, video check showed 作品未见异常, and final publish clicked the enabled 发布 button. Douyin 作品管理 verified the newest row with exact title 小马别急重发, time 2026年05月01日 22:30, duration 00:16, and status 审核中."
+      ],
+      "platform_id": "douyin",
+      "recorded_at": "2026-05-01T22:31:37+08:00",
+      "share_link": null,
+      "status": "under_review",
+      "title": "小马别急重发",
+      "verified_fields": {
+        "automation_route": "CDP-first on 127.0.0.1:9223; Browser Bridge/OpenCLI fallback only after CDP dropped and macOS accessibility blocked system UI automation",
+        "cover_files": {
+          "horizontal_4x3": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_cover_package/cover-horizontal-4x3.png",
+          "vertical_3x4": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_cover_package/cover-vertical-3x4.png"
+        },
+        "description": "小马看到异常就想重发，大陈直接拦住：先看状态词。\n\n审核中就等，能编辑先修旧条，确认失败再重发。AI员工先查状态，人再做最后判断。\n\n#AI员工 #内容发布 #先修旧条 #别急重发",
+        "management_exact_title_found": true,
+        "management_row_duration": "00:16",
+        "management_row_status": "审核中",
+        "management_row_time": "2026年05月01日 22:30",
+        "short_title": "小马别急重发",
+        "video_check": "作品未见异常",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post-publish.mp4"
+      }
+    },
+    "kuaishou": {
+      "campaign_id": "2026-05-01-dachen-xiaoma-argue-fix-old-post",
+      "current_url": "https://cp.kuaishou.com/article/manage/video?status=1&from=publish",
+      "external_id": null,
+      "management_url": "https://cp.kuaishou.com/article/manage/video?status=1&from=publish",
+      "notes": [
+        "published_verified_under_review_2026-05-01T12:38:03+08:00: Chrome DevTools/CDP flow on 127.0.0.1:9223. Local receipt was missing before publish. Existing automation uploaded the video and filled the description, but failed to click the non-semantic DIV publish control; CDP then clicked the exact bottom 发布 DIV. Kuaishou management 待发布 list verified one current-campaign row with status 审核中.",
+        "feishu_notified_2026-05-01T12:42:37+08:00: sent per-platform Kuaishou publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b5076bd1fd0a8b2bd5e6921d63fe.",
+        "published_verified_2026-05-01T23:28:18+08:00: Chrome DevTools/CDP 127.0.0.1:9333 verified Kuaishou management 已发布 tab; matching current-campaign description row is 已发布, row time 2026-05-01 12:35. 待发布 and 未通过 tabs both showed 0 items, so duplicate republish is blocked."
+      ],
+      "platform_id": "kuaishou",
+      "recorded_at": "2026-05-01T23:28:18+08:00",
+      "share_link": null,
+      "status": "published",
+      "title": "小马先别重发",
+      "verified_fields": {
+        "automation_route": "Chrome DevTools/CDP 127.0.0.1:9333 management verification; original submit used CDP 127.0.0.1:9223",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_cover_package/cover-vertical-3x4.png",
+        "description": "机器人小马一着急就要重发，大陈说先停。\n\n发布后看到异常，先查管理列表状态词：审核中先等，能编辑先修旧条，失败再重发。\n\n#AI员工 #发布流程 #先看状态词",
+        "description_snippet": "机器人小马一着急就要重发，大陈说先停。",
+        "duplicate_republish_blocked": true,
+        "failed_tab_count": 0,
+        "feishu_message_id": "om_x100b5076bd1fd0a8b2bd5e6921d63fe",
+        "feishu_sent_at": "2026-05-01 12:42:37",
+        "initial_under_review_recorded_at": "2026-05-01T12:38:03+08:00",
+        "management_url": "https://cp.kuaishou.com/article/manage/video?status=1&from=publish",
+        "pending_tab_count": 0,
+        "previous_receipt_status": "under_review",
+        "published_verified_at": "2026-05-01T23:28:18+08:00",
+        "row_publish_time": "2026-05-01 12:35",
+        "row_status": "已发布",
+        "row_tab": "已发布",
+        "row_text_match": true,
+        "title_visible_in_management_list": false,
+        "under_review_verification_screenshot": "/tmp/kuaishou-after-submit.png",
+        "verification_screenshot": "/tmp/kuaishou-published-20260501.png",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post-publish.mp4"
+      }
+    },
+    "toutiao": {
+      "campaign_id": "2026-05-01-dachen-xiaoma-argue-fix-old-post",
+      "current_url": "https://mp.toutiao.com/profile_v4/xigua/small-video",
+      "external_id": null,
+      "management_url": "https://mp.toutiao.com/profile_v4/xigua/small-video",
+      "notes": [
+        "published_verified_under_review_2026-05-01T12:39:53+08:00: Chrome DevTools/CDP flow on 127.0.0.1:9223. Management duplicate guard on /profile_v4/manage/content/all found no existing exact current-campaign title before publishing. Uploaded publish video via DOM.setFileInputFiles, pre-submit readback matched exact title, upload status 上传成功 / 大小: 6.6MB / 视频时长: 15s, custom local vertical 3:4 cover accepted after local upload, 0.618 crop, completion confirmation, 视频生成图文 unchecked, and AI生成 checked. After clicking 发布, the page redirected to /profile_v4/xigua/small-video and showed 全部发表成功; refreshed management list verified latest row with duration 00:15, exact title, time 05-01 12:38, status 审核中.",
+        "feishu_notified_2026-05-01T12:40:04+08:00: sent per-platform Toutiao publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b5076a48c2134b3da90942d4fe0b."
+      ],
+      "platform_id": "toutiao",
+      "recorded_at": "2026-05-01T12:39:53+08:00",
+      "share_link": null,
+      "status": "under_review",
+      "title": "机器人小马要重发，大陈为什么先让它看状态词？",
+      "verified_fields": {
+        "ai_declaration_checked": true,
+        "automation_route": "Chrome DevTools/CDP 127.0.0.1:9223",
+        "cover_backup_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_cover_package/cover-horizontal-4x3.png",
+        "cover_mode": "custom_vertical_3x4_cover_uploaded_and_0.618_crop_confirmed",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_cover_package/cover-vertical-3x4.png",
+        "current_campaign_published": true,
+        "description_summary": "发布后看到异常，先别急着重发。审核中先等，能编辑先修旧条，确认失败再重发。状态词不是后台小字，而是发布动作开关。",
+        "feishu_message_id": "om_x100b5076a48c2134b3da90942d4fe0b",
+        "feishu_sent_at": "2026-05-01 12:40:04",
+        "generate_article_checked": false,
+        "management_exact_title_found": true,
+        "row_duration": "00:15",
+        "row_status": "审核中",
+        "row_time": "05-01 12:38",
+        "submit_success_text": "全部发表成功",
+        "title": "机器人小马要重发，大陈为什么先让它看状态词？",
+        "video_filename": "2026-05-01-dachen-xiaoma-argue-fix-old-post-publish.mp4",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post-publish.mp4",
+        "video_upload_status": "上传成功；大小: 6.6MB；视频时长: 15s"
+      }
+    },
+    "wechat_channels": {
+      "campaign_id": "2026-05-01-dachen-xiaoma-argue-fix-old-post",
+      "current_url": "https://channels.weixin.qq.com/platform/post/list",
+      "external_id": "export/UzFfBgAAxJSjQGlgLV2cjczT4DCatbcEnxQ01MtRyzWTfTF6mQ",
+      "management_url": "https://channels.weixin.qq.com/platform/post/list",
+      "notes": [
+        "published_verified_2026-05-02T00:00:50+08:00: Chrome DevTools/CDP 127.0.0.1:9333. Pre-publish duplicate guard passed, video and custom vertical cover were uploaded through real file inputs, editor readback and framework payload matched exact shortTitle/description, user confirmed, real 发表 button clicked, post_create returned HTTP 201 and page showed 已发表. Post-publish 视频管理 newest row at 2026年05月01日 23:50 has platform-side objectId export/UzFfBgAAxJSjQGlgLV2cjczT4DCatbcEnxQ01MtRyzWTfTF6mQ, exact shortTitle 小马别急重发, exact description, and readable intended cover thumbnail; Feishu notified message_id=om_x100b5078aa8074a4b3e6d493599d7a5."
+      ],
+      "platform_id": "wechat_channels",
+      "recorded_at": "2026-05-02T00:00:50+08:00",
+      "share_link": null,
+      "status": "published",
+      "title": "小马别急重发",
+      "verified_fields": {
+        "automation_route": "Chrome DevTools/CDP 127.0.0.1:9333; real file inputs were used for video and cover, and the actual visible button with normalized text 发表 was clicked after user confirmation.",
+        "content_package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_content_package/platforms/wechat-channels.md",
+        "platform_upload_map_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_content_package/platform-upload-map.md",
+        "config_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-01-dachen-xiaoma-argue-fix-old-post.yaml",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post-publish.mp4",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_cover_package/cover-vertical-3x4.png",
+        "short_title": "小马别急重发",
+        "description": "机器人小马看到封面或描述异常就要重发，大陈直接拦住：先看状态词。\n\n审核中先等，能编辑先修旧条，确认失败再重发。AI员工先查状态并写回记录，人只做最后判断。",
+        "duplicate_guard": "Pre-publish management-list check found no existing row with the same shortTitle and exact/same campaign description; older 2026-04-30 similar-topic row had different title/body and did not satisfy the hard-stop condition.",
+        "pre_submit_editor_readback": {
+          "short_title_exact_match": true,
+          "description_exact_match": true
+        },
+        "pre_submit_framework_payload": {
+          "short_title_exact_match": true,
+          "description_exact_match": true,
+          "uploaded_video_present": true,
+          "uploaded_cover_present": true
+        },
+        "publish_click": {
+          "user_confirmed": true,
+          "clicked_real_visible_button_text": "发表",
+          "publish_success_text": "已发表",
+          "post_create_http_status": 201,
+          "clicked_at": "2026-05-01T23:50:32+08:00"
+        },
+        "management_url": "https://channels.weixin.qq.com/platform/post/list",
+        "management_row": {
+          "newest_row_verified": true,
+          "object_id": "export/UzFfBgAAxJSjQGlgLV2cjczT4DCatbcEnxQ01MtRyzWTfTF6mQ",
+          "export_id": "export/UzFfBgAAxJSjQGlgLV2cjczT4DCatbcEnxQ01MtRyzWTfTF6mQ",
+          "object_nonce": "3454725831394990010",
+          "create_time_epoch": 1777650638,
+          "row_time": "2026年05月01日 23:50",
+          "status_code": 1,
+          "media_type": 4,
+          "short_title_exact_match": true,
+          "description_exact_match": true,
+          "visible_description_present": true,
+          "read_count": 0,
+          "like_count": 0,
+          "comment_count": 0,
+          "forward_count": 0,
+          "fav_count": 0,
+          "video_play_len_seconds": 15,
+          "video_width": 720,
+          "video_height": 1280
+        },
+        "cover_verification": {
+          "cover_url_present_in_row_payload": true,
+          "full_cover_url_present_in_row_payload": true,
+          "thumbnail_consistent_with_uploaded_cover": true,
+          "thumbnail_title_readable": true,
+          "subject_visible": true,
+          "cover_title_seen": "AI员工别重发",
+          "management_full_screenshot": "/tmp/wechat-list-final-20260501.png",
+          "row_screenshot": "/tmp/wechat-list-row.png",
+          "thumb_screenshot": "/tmp/wechat-list-thumb.png"
+        },
+        "feishu_message_id": "om_x100b5078aa8074a4b3e6d493599d7a5",
+        "feishu_sent_at": "2026-05-02T00:01:09+08:00"
+      }
+    },
+    "xiaohongshu": {
+      "campaign_id": "2026-05-01-dachen-xiaoma-argue-fix-old-post",
+      "current_url": "https://creator.xiaohongshu.com/new/note-manager?source=official",
+      "external_id": null,
+      "management_url": "https://creator.xiaohongshu.com/new/note-manager?source=official",
+      "notes": [
+        "published_verified_under_review_2026-05-01T23:43:22+08:00: Chrome DevTools/CDP was prioritized first. The reachable external CDP endpoint could not safely operate the logged-in XHS page because the target stayed blank/unmounted, so the logged-in OpenCLI Browser Bridge session was used as fallback. Uploaded the current publish video through the real file input, filled the exact XHS title and body, clicked the enabled 发布 button, observed the 小红书 发布成功 page, then verified the exact title in 笔记管理 with status 审核中 and row time 2026年05月01日 23:41."
+      ],
+      "platform_id": "xiaohongshu",
+      "recorded_at": "2026-05-01T23:43:22+08:00",
+      "share_link": null,
+      "status": "under_review",
+      "title": "小马别重发，先看状态词",
+      "verified_fields": {
+        "account": "智能大陈",
+        "automation_route": "CDP-first; external CDP endpoint was probed but not usable for the logged-in XHS page, so OpenCLI Browser Bridge operate:default was used as fallback with real file input upload and DOM readback",
+        "body": "机器人小马看到异常就急着重发，大陈直接拦住：先看状态词。\n\n发布后最怕的不是慢一步，而是同一条内容重发出多个版本，后面复盘全乱。\n\n审核中先等，能编辑先修旧条，失败再重发。\n\n#AI员工 #短视频运营 #发布流程 #复盘",
+        "content_package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_content_package/platforms/xiaohongshu.md",
+        "cover_mode": "default_first_frame_from_publish_video; package final verify marks first-frame cover at 0.8s and cover readability passed",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_cover_package/cover-vertical-3x4.png",
+        "custom_cover_upload": false,
+        "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_content_package/final-verify.json",
+        "management_exact_title_found": true,
+        "management_row_status": "审核中",
+        "management_row_time": "2026年05月01日 23:41",
+        "management_total_count": 12,
+        "platform_upload_map_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_content_package/platform-upload-map.md",
+        "pre_submit_body_match": true,
+        "pre_submit_title_match": true,
+        "publish_success_text": "发布成功",
+        "publish_success_url": "https://creator.xiaohongshu.com/publish/success?source=official&bind_status=not_bind&__debugger__=&proxy=",
+        "screenshots": {
+          "after_publish": "/Users/baishangjituan/Documents/push/xhs-20260501-after-publish.png",
+          "after_upload": "/Users/baishangjituan/Documents/push/xhs-20260501-after-upload.png",
+          "before_publish": "/Users/baishangjituan/Documents/push/xhs-20260501-before-publish.png",
+          "manager_check": "/Users/baishangjituan/Documents/push/xhs-20260501-manager-check.png"
+        },
+        "source_note_path": "/Users/baishangjituan/Documents/New project/content-library/posts/xiaohongshu/2026-05-01-dachen-xiaoma-argue-fix-old-post-note-001.md",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post-publish.mp4"
+      }
+    },
+    "weibo": {
+      "campaign_id": "2026-05-01-dachen-xiaoma-argue-fix-old-post",
+      "current_url": "https://weibo.com/2326772703/QDkIWp2tf",
+      "external_id": "QDkIWp2tf",
+      "management_url": "https://weibo.com/u/2326772703",
+      "notes": [
+        "published_verified_2026-05-01T12:43:35+08:00: Chrome DevTools/CDP flow on 127.0.0.1:9223. Duplicate guard checked the profile before publishing and found no current-campaign snippet. Uploaded local publish video through the real file input, typed the exact Weibo body into the real composer textarea, corrected the CDP viewport from 478px to 1256x840 after the first click missed the visible button, then clicked the hittable enabled 发送 button. The browser posted https://weibo.com/ajax/statuses/update with HTTP 200 and the composer cleared. Refreshed profile verified 全部微博 increased to 28, newest row showed 刚刚 / 来自 微博视频号 / exact description / 00:15 video, and API returned mblogid QDkIWp2tf with mid 5293744585967701.",
+        "feishu_notified_2026-05-01T12:44:27+08:00: sent per-platform Weibo publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b5076b46280a0b2cab31f350d2a8.",
+        "latest_package_rechecked_2026-05-01T22:12:25+08:00: user requested the latest 019d9ac2 package publish task. Locked campaign is unchanged and receipts.weibo is already published at https://weibo.com/2326772703/QDkIWp2tf. Local cover and publish.mp4 were regenerated at 12:48-12:50 after the Weibo publish at 12:43; per duplicate guard, no new Weibo publish was attempted without explicit replacement approval after resolving the old Weibo item."
+      ],
+      "platform_id": "weibo",
+      "recorded_at": "2026-05-01T12:43:35+08:00",
+      "share_link": "https://weibo.com/2326772703/QDkIWp2tf",
+      "status": "published",
+      "title": "机器人小马要重发，大陈为什么先拦住？",
+      "verified_fields": {
+        "automation_route": "Chrome DevTools/CDP 127.0.0.1:9223",
+        "description": "机器人小马看到异常就要重发，大陈直接拦住：先看管理列表状态词。\n\n审核中先等，能编辑先修旧条，确认失败再重发。少一次重复发布，复盘就少一层污染。\n\n#AI员工 #内容发布 #先修旧条",
+        "duration": "00:15",
+        "feishu_message_id": "om_x100b5076b46280a0b2cab31f350d2a8",
+        "feishu_sent_at": "2026-05-01 12:44:27",
+        "latest_local_asset_revision_after_publish": true,
+        "latest_local_asset_revision_note": "Local cover and publish.mp4 were regenerated at 2026-05-01T12:48:33+08:00 and 2026-05-01T12:50:13+08:00 after the Weibo publish at 2026-05-01T12:43:35+08:00. Duplicate republish is blocked unless the user explicitly approves replacement after resolving the old Weibo item.",
+        "mblogid": "QDkIWp2tf",
+        "mid": "5293744585967701",
+        "profile_description_match": true,
+        "profile_statuses_count": 28,
+        "row_source": "来自 微博视频号",
+        "row_status": "published",
+        "row_time": "刚刚",
+        "short_video_url": "http://t.cn/AXJqzfjR",
+        "video_object_id": "1034:5293743587131421",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post-publish.mp4",
+        "video_url": "https://video.weibo.com/show?fid=1034:5293743587131421"
+      }
+    },
+    "zhihu": {
+      "campaign_id": "2026-05-01-dachen-xiaoma-argue-fix-old-post",
+      "current_url": "https://zhuanlan.zhihu.com/p/2033669982769394652",
+      "external_id": "2033669982769394652",
+      "management_url": "https://www.zhihu.com/people/vkvtss-81/posts",
+      "notes": [
+        "published_verified_2026-05-01T22:16:00+08:00: CDP was checked first per Zhihu publishing rule. 127.0.0.1:9222 was unavailable; 127.0.0.1:9223 was reachable but not logged into Zhihu, so the logged-in Browser Bridge/OpenCLI session was used without restarting Chrome. Source package declared video/answer-with-video but provided no target question URL, so it was published through Zhihu article editor with uploaded video and local article cover. Pre-submit readback matched exact title, body, video card, and cover. Public article URL verified exact title/body and Zhihu showed 发布成功."
+      ],
+      "platform_id": "zhihu",
+      "recorded_at": "2026-05-01T22:18:11+08:00",
+      "share_link": "https://zhuanlan.zhihu.com/p/2033669982769394652",
+      "status": "published",
+      "title": "发布后发现异常时，为什么不能像机器人小马一样直接重发？",
+      "verified_fields": {
+        "account": "智能大陈",
+        "automation_route": "Browser Bridge/OpenCLI fallback after CDP endpoint 9223 was not logged into Zhihu and 9222 was unavailable",
+        "body_file": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-01-dachen-xiaoma-argue-fix-old-post-answer-001.md",
+        "body_snippet": "因为直接重发会把同一条内容拆成多个版本，后面复盘很难判断到底是哪一次封面、标题、发布时间或审核状态影响了结果。",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_cover_package/cover-vertical-3x4.png",
+        "draft_edit_url": "https://zhuanlan.zhihu.com/p/2033669982769394652/edit",
+        "fallback_reason": "source package had no target question URL",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post_content_package/platforms/zhihu.md",
+        "post_type": "article",
+        "profile_list_title_match": false,
+        "profile_list_title_match_note": "Profile posts page loaded account/article count but did not render the expected title in the visible list during the follow-up check; public article URL verification succeeded.",
+        "profile_posts_url": "https://www.zhihu.com/people/vkvtss-81/posts",
+        "public_page_body_match": true,
+        "public_page_publish_success_text": true,
+        "public_page_title_match": true,
+        "published_at_display": "2026-05-01 22:16",
+        "source_post_type": "video_answer",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-01-dachen-xiaoma-argue-fix-old-post-publish.mp4"
+      }
+    }
+  }
+}
