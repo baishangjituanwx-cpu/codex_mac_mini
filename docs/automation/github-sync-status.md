@@ -1501,3 +1501,13 @@
 - 若跳过，说明跳过原因:
   - 仅跳过 `codex/windows-version-20260411`。
   - 跳过原因如上；默认分支同步不跳过。
+
+## 2026-05-03 00:03:36 CST
+- 分支触达结果:
+  - `codex/default-python-sync`: 已提交并推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 未触达。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync May 2 Seedance and publish receipt updates`（`e429eee`）
+  - `codex/default-python-sync`: `Record 2026-05-03 GitHub sync execution`
+- 若跳过，说明跳过原因:
+  - `codex/windows-version-20260411` 跳过，因为当前仓库没有新的 Windows 专属 bridge / deployment 脚本、安装器或分支独占 payload；本轮变化仅包含共享 Seedance 规则、共享 Python takeover campaign / receipt / screenshot 留痕，以及 Windows 完整性状态文档。
