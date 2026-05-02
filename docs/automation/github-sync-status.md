@@ -12,6 +12,31 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-03 00:04:04 CST
+- 处理时间:
+  - `2026-05-03 00:04:04 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-05-02 22:02:44 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本轮同步分支:
+  - `codex/default-python-sync`: 是。当前 generic / Mac 兼容 `python-platform-takeover` 内容，以及 `seedance-video-api` 文档镜像、receipt / screenshot 留痕和自动化状态记录，已经落在提交 `e429eee`。
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows 专属 bridge / deployment payload 需要单独切到 Windows 支线。
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。检测到 `seedance-video-api` 女性配角 `reference_image` 规则、`2026-05-02-ai-employee-writeback-after-publish` campaign 配置 / receipt / screenshot，以及 `skill-change-monitor`、`windows-translation-status`、`github-sync-status` 的新增记录。
+  - `codex/windows-version-20260411`: 否。今天与 Windows 相关的新增内容只体现为共享 skill 文档里的 handoff 约束和完整性状态留痕，没有新的 Windows 专属桥接脚本、安装器、部署模板或支线资源副本。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。同步内容已由现有提交承载:
+    - `Sync May 2 Seedance and publish receipt updates`
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows-only 提交需要创建。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。`origin/codex/default-python-sync` 已到达 `e429eee`。
+  - `codex/windows-version-20260411`: 否。无需推送。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync May 2 Seedance and publish receipt updates`
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - 跳过了 `codex/windows-version-20260411` 的提交与推送，因为当前仓库没有新的 Windows 专属 bridge / deployment payload；本轮新增的 Windows 相关内容只体现在共享 skill 文档约束与 Windows 完整性状态留痕中，不需要单独的 Windows 分支同步。
+
 ## 2026-05-02 22:27:17 CST
 - 检测到新的技能变更批次: 新增 `0`，修改 `2`，删除 `0`。
 - 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/SKILL.md` 和 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/workflows.md`；核心是把 `大陈 / AI员工 / 机器人小马` 这条 Seedance API 视频线的默认女性配角规则进一步写入仓库镜像，要求默认附带 `asset://asset-20260401123823-6d4x2` 作为额外 `reference_image`，并明确 Windows handoff 时不得把该 asset URI 改写成本地 `C:/...` 路径。
