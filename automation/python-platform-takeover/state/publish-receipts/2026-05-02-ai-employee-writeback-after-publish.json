@@ -1,0 +1,355 @@
+{
+  "campaign_id": "2026-05-02-ai-employee-writeback-after-publish",
+  "receipts": {
+    "baijiahao": {
+      "campaign_id": "2026-05-02-ai-employee-writeback-after-publish",
+      "platform_id": "baijiahao",
+      "status": "published",
+      "title": "视频发出去了为什么还不算完成？关键是把结果写回表里",
+      "description": "发布不是最后一步。公开链接、平台、发布时间、状态词必须写回，后续复盘才有依据。AI员工不是只会执行，还要把执行结果带回来。",
+      "current_url": "https://baijiahao.baidu.com/builder/rc/clue?aside=0&footer=true&from=videoV2&firstPublish=undefined&word_bag_id=null",
+      "management_url": "https://baijiahao.baidu.com/builder/rc/content?currentPage=1&pageSize=10&search=&type=&collection=&startDate=&endDate=",
+      "share_link": null,
+      "external_id": null,
+      "published_at": "2026-05-02T15:14:18+08:00",
+      "recorded_at": "2026-05-02T15:22:05+08:00",
+      "verified_fields": {
+        "platform_content_type": "video",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_content_package/platforms/baijiahao.md",
+        "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/baijiahao/2026-05-02-ai-employee-writeback-after-publish-video-001.md",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish-publish.mp4",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-horizontal-4x3.png",
+        "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-vertical-3x4.png",
+        "pre_submit_title_counter": "25/50",
+        "pre_submit_title_readback": "视频发出去了为什么还不算完成？关键是把结果写回表里",
+        "ai_generated_disclosure_checked": true,
+        "cover_mode": "custom_horizontal_4x3_uploaded_with_platform_cover_preview",
+        "cover_warning": "图片存在边框，建议修改或删除",
+        "duplicate_guard": "passed: exact title search returned 共0篇 before publish; no same-title row existed in 作品管理 before submit",
+        "manager_row_status_text": "已发布音频",
+        "manager_row_time": "2026-05-02 15:14:18",
+        "manager_list_context": "作品管理无搜索列表显示：视频发出去了为什么还不算完成？关键是把结果写回表里 / 2026-05-02 15:14:18 / 已发布音频",
+        "automation_route": "Chrome DevTools/CDP attached Playwright on http://127.0.0.1:9223",
+        "screenshots": {
+          "before_publish": "/Users/baishangjituan/Documents/push/baijiahao-20260502-before-publish.png",
+          "after_submit": "/Users/baishangjituan/Documents/push/baijiahao-20260502-after-submit.png",
+          "manager_check": "/Users/baishangjituan/Documents/push/baijiahao-20260502-manager-verified.png"
+        }
+      },
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b506e2b2754a8b21706460d5eb5b",
+        "sent_at": "2026-05-02T15:23:10+08:00"
+      },
+      "notes": [
+        "published_verified_2026-05-02T15:22:05+08:00: Chrome DevTools/CDP endpoint 127.0.0.1:9223 was used as the preferred route. Duplicate guard checked the local receipt and Baijiahao 作品管理 before publishing; no baijiahao receipt or exact title row existed before submit. The flow reused the loaded video editor, fixed the title through real keyboard input to 25/50, selected 采用AI生成内容 through the page checkbox state, uploaded the local horizontal 4:3 cover, and clicked 发布. The submit landed on the Baijiahao video clue page without 百度安全验证. 作品管理 no-search latest list then verified the exact title at 2026-05-02 15:14:18 with platform status text 已发布音频.",
+        "baijiahao_thread_scope: this entry records only the Baijiahao publish task in this thread; other receipt entries in this campaign file came from other platform threads."
+      ]
+    },
+    "douyin": {
+      "campaign_id": "2026-05-02-ai-employee-writeback-after-publish",
+      "current_url": "https://creator.douyin.com/creator-micro/content/manage?enter_from=publish",
+      "external_id": "7635193391675985179",
+      "management_url": "https://creator.douyin.com/creator-micro/content/manage",
+      "notes": [
+        "initialized_current_thread_before_publish_2026-05-02T14:45:38+08:00: active Douyin campaign receipt created before publishing; this thread only handles Douyin and must not reuse older campaign receipts.",
+        "ready_for_final_confirmation_2026-05-02T15:02:16+08:00: Chrome DevTools/CDP 127.0.0.1:9223 using isolated existing CDP profile. Duplicate guard on Douyin management page found no current title/lead. Publish page had stale draft, so current package video was reuploaded from /tmp/douyin-0502.mp4; title and description were cleared with CDP native keyboard events and read back exactly; local vertical 3:4 and horizontal 4:3 covers were uploaded; video check showed 作品未见异常; cover effect and cover quality checks passed; no 横/竖双封面缺失 warning remained; publish button was enabled. Waiting for user final confirmation before clicking 发布.",
+        "published_verified_2026-05-02T15:37:44+08:00: after user final confirmation, Chrome DevTools/CDP clicked the real enabled Douyin 发布 button; the publish page showed 发布成功 and landed on creator management. Douyin work_list API status=0 and status=1 both verified exact title 发出去不算完 and caption lead 小马刚说任务完成, aweme_id 7635193391675985179, aweme_count 28, duration 15883ms, status_value 102, cover_uri tos-cn-i-dy/ac03fe9fb73e4a9ebf0005bca6d1cf54, horizontal_cover_uri tos-cn-i-dy/a8cc5c745c744066a31fbcd17484cdd6. status=2 审核中 list had no match, so the receipt is recorded as published."
+      ],
+      "platform_id": "douyin",
+      "published_at": "2026-05-02T15:29:57+08:00",
+      "recorded_at": "2026-05-02T15:37:44+08:00",
+      "share_link": "https://www.iesdouyin.com/share/video/7635193391675985179/",
+      "status": "published",
+      "title": "发出去不算完",
+      "verified_fields": {
+        "cover_files": {
+          "horizontal_4x3": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-horizontal-4x3.png",
+          "vertical_3x4": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-vertical-3x4.png"
+        },
+        "description": "小马刚说任务完成，大陈直接拦住：没写回，复盘就断了。公开链接、平台、发布时间、状态词，都要带回表里。AI员工不是只会发，还要把结果带回来。#AI员工 #内容发布 #复盘 #写回字段",
+        "management_duplicate_guard": "no exact current title or lead on Douyin management page before publish",
+        "management_api_aweme_count": 28,
+        "management_api_aweme_id": "7635193391675985179",
+        "management_api_caption": "小马刚说任务完成，大陈直接拦住：没写回，复盘就断了。公开链接、平台、发布时间、状态词，都要带回表里。AI员工不是只会发，还要把结果带回来。#AI员工 #内容发布 #复盘 #写回字段",
+        "management_api_cover_uri": "tos-cn-i-dy/ac03fe9fb73e4a9ebf0005bca6d1cf54",
+        "management_api_create_time": "2026-05-02T15:29:57+08:00",
+        "management_api_duration_ms": 15883,
+        "management_api_exact_lead_found": true,
+        "management_api_exact_title_found": true,
+        "management_api_horizontal_cover_uri": "tos-cn-i-dy/a8cc5c745c744066a31fbcd17484cdd6",
+        "management_api_item_id": "7635193391675985000",
+        "management_api_status_param_0_match": true,
+        "management_api_status_param_1_match": true,
+        "management_api_status_param_2_match": false,
+        "management_api_status_value": 102,
+        "pre_publish_cover_check": "cover effect and cover quality checks passed; no dual-cover missing warning",
+        "pre_publish_video_check": "作品未见异常",
+        "short_title": "发出去不算完",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish-publish.mp4"
+      }
+    },
+    "weibo": {
+      "campaign_id": "2026-05-02-ai-employee-writeback-after-publish",
+      "current_url": "https://weibo.com/u/2326772703",
+      "external_id": "5294140323005697",
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b506e5a2924acb29517c033ac95d",
+        "sent_at": "2026-05-02T15:01:34+08:00"
+      },
+      "management_url": "https://weibo.com/u/2326772703",
+      "mblogid": "QDv1ecBUZ",
+      "notes": [
+        "published_from_current_weibo_thread_2026-05-02T14:59:27+08:00: CDP endpoint http://127.0.0.1:9223 was used because it had Weibo SUB/SUBP cookies; 9222 was unavailable and 9333 had no Weibo login cookie.",
+        "duplicate_guard_passed_before_publish: local receipt had no weibo entry, profile/search checks did not find the current campaign text before publishing.",
+        "weibo_home_composer_accepted_publish_video: composer showed 0:15 video preview, send button was enabled, and toast returned 发布成功; Weibo home composer did not expose a separate cover upload control, so the uploaded video/first frame path is recorded."
+      ],
+      "platform_id": "weibo",
+      "published_at": "2026-05-02T14:54:36+08:00",
+      "recorded_at": "2026-05-02T14:59:27+08:00",
+      "share_link": "https://weibo.com/2326772703/QDv1ecBUZ",
+      "status": "published",
+      "title": "机器人小马发完就想走，大陈为什么说还没完成？",
+      "verified_fields": {
+        "api_created_at": "Sat May 02 14:54:36 +0800 2026",
+        "api_text_raw": "机器人小马发完就想走，大陈直接拦住：没写回，复盘就断了。公开链接、平台、发布时间、状态词都要回到表里，发布才算闭环。#AI员工 #内容发布 #复盘 http://t.cn/AXJIARUg ​​​",
+        "composer_readback": {
+          "description": "机器人小马发完就想走，大陈直接拦住：没写回，复盘就断了。公开链接、平台、发布时间、状态词都要回到表里，发布才算闭环。#AI员工 #内容发布 #复盘",
+          "send_button_enabled": true,
+          "video_preview": "0:15"
+        },
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-vertical-3x4.png",
+        "duration_seconds": 15,
+        "page_info_type": "11",
+        "profile_context": "个人主页显示最新微博：2分钟前，来自 微博视频号，19 阅读；正文匹配当前 campaign；视频时长 00:15。",
+        "public_link_context": "微博正文页 https://weibo.com/2326772703/QDv1ecBUZ 显示 2026-05-02 14:54 发布，来自 微博视频号，正文匹配当前 campaign，视频时长 00:15。",
+        "source": "来自 微博视频号",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish-publish.mp4"
+      }
+    },
+    "xiaohongshu": {
+      "campaign_id": "2026-05-02-ai-employee-writeback-after-publish",
+      "current_url": "https://creator.xiaohongshu.com/new/note-manager?source=official",
+      "external_id": null,
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b506e514b2ca0b4b466312b16082",
+        "sent_at": "2026-05-02T15:04:24+08:00"
+      },
+      "management_url": "https://creator.xiaohongshu.com/new/note-manager?source=official",
+      "notes": [
+        "published_from_current_xiaohongshu_thread_2026-05-02T15:03:25+08:00: duplicate guard passed before publishing; local receipt had no xiaohongshu entry and XHS note manager search for exact title returned no result.",
+        "chrome_cdp_unavailable_fallback_used: BROWSER_CDP_URL was empty and local CDP probes on 127.0.0.1:9222/9223/9333 failed, so the task used the OpenCLI browser bridge in isolated workspace xiaohongshu-publish-20260502b.",
+        "xhs_publish_success_verified: publish page returned 发布成功, then note manager showed the exact title with status 审核中 and publish time 2026年05月02日 15:02."
+      ],
+      "platform_id": "xiaohongshu",
+      "published_at": "2026-05-02T15:02:00+08:00",
+      "recorded_at": "2026-05-02T15:03:25+08:00",
+      "share_link": null,
+      "status": "under_review",
+      "title": "发出去不算完，先写回",
+      "verified_fields": {
+        "account": "智能大陈",
+        "body": "机器人小马发完就想走，大陈直接拦住：公开链接、平台、发布时间、状态词没写回，复盘就断了。AI员工要把结果带回来。",
+        "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/xiaohongshu/2026-05-02-ai-employee-writeback-after-publish-note-001.md",
+        "cover_mode": "default_first_frame_from_publish_video",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-vertical-3x4.png",
+        "custom_cover_upload": false,
+        "duplicate_guard": "passed: exact title not found in XHS note manager before publishing",
+        "manager_list_context": "笔记管理显示：审核中 / 发出去不算完，先写回 / 发布于 2026年05月02日 15:02",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_content_package/platforms/xiaohongshu.md",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_content_package/platform-upload-map.md",
+        "publish_success_page": "https://creator.xiaohongshu.com/publish/success?source=official&bind_status=not_bind&__debugger__=&proxy=",
+        "screenshots": {
+          "after_publish": "/Users/baishangjituan/Documents/push/xhs-20260502-after-publish.png",
+          "after_upload": "/Users/baishangjituan/Documents/push/xhs-20260502-after-upload.png",
+          "before_publish": "/Users/baishangjituan/Documents/push/xhs-20260502-before-publish.png",
+          "manager_check": "/Users/baishangjituan/Documents/push/xhs-20260502-manager-check.png"
+        },
+        "status_text": "审核中",
+        "upload_workspace": "xiaohongshu-publish-20260502b",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish-publish.mp4",
+        "video_uploaded_from": "/tmp/xhs-20260502-publish.mp4"
+      }
+    },
+    "wechat_channels": {
+      "campaign_id": "2026-05-02-ai-employee-writeback-after-publish",
+      "current_url": null,
+      "external_id": null,
+      "management_url": "https://channels.weixin.qq.com/platform/post/list",
+      "notes": [
+        "initialized_current_thread_before_publish_2026-05-02T14:45:00+08:00: latest local content package locked for WeChat Channels only; package_status=ready_for_platform_publishing, seedance task succeeded, video/cover/platform package/platform-upload-map exist. Receipt initialized as not_started before duplicate guard and browser publish."
+      ],
+      "platform_id": "wechat_channels",
+      "recorded_at": "2026-05-02T14:45:00+08:00",
+      "share_link": null,
+      "status": "not_started",
+      "title": "发出去不算完"
+    },
+    "kuaishou": {
+      "campaign_id": "2026-05-02-ai-employee-writeback-after-publish",
+      "platform_id": "kuaishou",
+      "status": "published",
+      "title": "发完先写回",
+      "description": "机器人小马发完就想走，大陈说还没完。公开链接、平台、发布时间、状态词没写回，后面复盘就断链。",
+      "current_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+      "management_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+      "share_link": null,
+      "external_id": "kuaishou_20260502_published_cdp",
+      "published_at": "2026-05-02T15:08:00+08:00",
+      "recorded_at": "2026-05-02T15:09:52+08:00",
+      "verified_fields": {
+        "row_status": "已发布",
+        "row_time": "2026-05-02 15:08",
+        "management_row_text": "机器人小马发完就想走，大陈说还没完。公开链接、平台、发布时间、状态词没写回，后面复盘就断链。 | 已发布 | 2026-05-02 15:08",
+        "management_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+        "screenshot_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-management-published-20260502-1508.png",
+        "cdp_endpoint": "http://127.0.0.1:9223",
+        "automation_route": "Chrome DevTools Protocol attached Playwright; exact bottom non-semantic 发布 DIV clicked after automation upload/fill stage",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish-publish.mp4",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-vertical-3x4.png",
+        "pre_publish_description_readback": "机器人小马发完就想走，大陈说还没完。公开链接、平台、发布时间、状态词没写回，后面复盘就断链。",
+        "pre_publish_cover_preview": "快手发布页预览封面显示竖版封面，主体和标题可见",
+        "duplicate_guard": "local kuaishou receipt was missing; pre-publish management scan on logged-in account did not find current campaign title or description snippet"
+      },
+      "notes": [
+        "published_verified_2026-05-02T15:09:52+08:00: Chrome DevTools/CDP flow used 127.0.0.1:9223 after 127.0.0.1:9335 Kuaishou publish page showed an internal blank/error state. Duplicate guard had no current-campaign Kuaishou receipt and no current-campaign management row before publish. The automation uploaded the video, filled the description, and uploaded/selected the vertical cover, then failed only on the non-semantic publish control; CDP clicked the exact bottom 发布 DIV. Kuaishou management page status=2&from=publish verified the current description row as 已发布 at 2026-05-02 15:08.",
+        "feishu_notified_2026-05-02T15:10:52+08:00: sent per-platform Kuaishou publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b506e790ea8a0b1052c3086073c7. Initial notification attempt with a longer idempotency key failed validation, no message was created."
+      ],
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b506e790ea8a0b1052c3086073c7",
+        "sent_at": "2026-05-02T15:10:52+08:00"
+      }
+    },
+    "zhihu": {
+      "campaign_id": "2026-05-02-ai-employee-writeback-after-publish",
+      "platform_id": "zhihu",
+      "status": "published",
+      "title": "为什么内容发布后还必须写回公开链接、发布时间和状态词？",
+      "current_url": "https://www.zhihu.com/pin/2033926486751752974?page=video_pin&scene=share",
+      "management_url": "https://www.zhihu.com/people/vkvtss-81/zvideos",
+      "share_link": "https://www.zhihu.com/pin/2033926486751752974?page=video_pin&scene=share",
+      "external_id": "2033926486751752974",
+      "published_at": "2026-05-02T15:11:00+08:00",
+      "recorded_at": "2026-05-02T15:16:24+08:00",
+      "verified_fields": {
+        "account": "智能大陈",
+        "post_type": "video_pin",
+        "source_package_form": "视频回答/回答附视频",
+        "fallback_reason": "source package had no target question URL; Zhihu homepage video composer was used instead of a pure article path",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_content_package/platforms/zhihu.md",
+        "body_file": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-02-ai-employee-writeback-after-publish-answer-001.md",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish-publish.mp4",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-vertical-3x4.png",
+        "profile_videos_url": "https://www.zhihu.com/people/vkvtss-81/zvideos",
+        "profile_video_title_match": true,
+        "profile_video_body_match": true,
+        "public_page_title_match": true,
+        "public_page_body_match": true,
+        "profile_context": "个人视频页显示视频3，最新条标题和正文匹配，发布于 2026-05-02 15:11。",
+        "public_context": "公开页标题与正文匹配，显示发布于 2026-05-02 15:11，IP 属地新加坡。",
+        "screenshots": {
+          "before_publish": "/Users/baishangjituan/Documents/push/zhihu-20260502-video-before-publish.png",
+          "profile_check": "/Users/baishangjituan/Documents/push/zhihu-20260502-after-click-verify.png",
+          "public_check": "/Users/baishangjituan/Documents/push/zhihu-20260502-video-public-check.png"
+        }
+      },
+      "notes": [
+        "published_verified_2026-05-02T15:16:24+08:00: CDP endpoint 127.0.0.1:9222 was unavailable, so logged-in OpenCLI Browser Bridge was used. Duplicate guard checked Zhihu profile videos and posts before publishing and found no exact current title. The flow opened the Zhihu homepage video composer, selected the mp4 via real file input, waited until the video card had a thumbnail and no upload-progress text, entered title/body through real input, clicked 发布, then verified the new item on profile videos and the public pin page.",
+        "zhihu_thread_scope: this receipt entry records only the Zhihu publish task in this thread; other receipt entries in this campaign file came from other platform threads."
+      ]
+    },
+    "toutiao": {
+      "campaign_id": "2026-05-02-ai-employee-writeback-after-publish",
+      "platform_id": "toutiao",
+      "status": "under_review",
+      "title": "机器人小马发完就走，大陈为什么说这还不算完成？",
+      "description": "视频发出去只是第一步。公开链接、平台、发布时间、状态词没有写回，后续复盘就断链。AI员工必须把执行结果带回表里。",
+      "current_url": "https://mp.toutiao.com/profile_v4/xigua/small-video",
+      "management_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
+      "share_link": null,
+      "external_id": null,
+      "published_at": "2026-05-02T15:17:00+08:00",
+      "recorded_at": "2026-05-02T15:18:06+08:00",
+      "verified_fields": {
+        "status_text": "审核中",
+        "publish_success_text": "全部发表成功",
+        "manager_list_context": "作品管理显示：00:15 / 机器人小马发完就走，大陈为什么说这还不算完成？ / 05-02 15:17 / 审核中",
+        "upload_workspace": "toutiao-publish-2026-05-02-ai-employee-writeback-after-publish-1777706153367",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_content_package/platforms/toutiao.md",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_content_package/platform-upload-map.md",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish-publish.mp4",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-vertical-3x4.png",
+        "cover_mode": "custom_vertical_3x4_uploaded_and_platform_accepted_edit_replace_state",
+        "title_word_limit": "23/30",
+        "ai_declaration_checked": true,
+        "video_generate_article_checked": false,
+        "screenshots": {
+          "pre_submit": "/Users/baishangjituan/Documents/push/toutiao-pre-submit-continuous-20260502.png",
+          "after_publish": "/Users/baishangjituan/Documents/push/toutiao-after-publish-click-20260502.png",
+          "manager_check": "/Users/baishangjituan/Documents/push/toutiao-manager-verified-20260502.png"
+        }
+      },
+      "notes": [
+        "published_verified_2026-05-02T15:17:27+08:00: Chrome DevTools/CDP endpoint 127.0.0.1:9222/9223 was unavailable, so OpenCLI Browser Bridge was used with CDP file-input injection in isolated workspace. The flow uploaded the mp4, uploaded the vertical 3:4 local cover through the image file input, completed platform crop/confirm, set the exact 23/30 title, kept 视频生成图文 unchecked, selected AI生成 declaration, clicked 发布, saw 全部发表成功, then verified the exact title in 作品管理 as 审核中 at 05-02 15:17.",
+        "toutiao_thread_scope: this entry records only the Toutiao publish task in this thread; other receipt entries in this campaign file came from other platform threads."
+      ],
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b506e1c2490a8b3e50820800e9a7",
+        "sent_at": "2026-05-02T15:18:06+08:00"
+      }
+    },
+    "bilibili": {
+      "campaign_id": "2026-05-02-ai-employee-writeback-after-publish",
+      "platform_id": "bilibili",
+      "status": "published",
+      "title": "视频发出去了，为什么还不算完成？大陈让机器人小马先写回",
+      "description": "这条讲发布后的最后一公里：不是点了发布就结束，而是要把公开链接、平台、发布时间、状态词写回。否则后面复盘时就不知道看哪条、看哪个状态、看哪个时间点。",
+      "current_url": "https://www.bilibili.com/video/BV1HGRjBDEJH/",
+      "management_url": "https://member.bilibili.com/platform/upload-manager/article",
+      "share_link": "https://www.bilibili.com/video/BV1HGRjBDEJH/",
+      "external_id": "BV1HGRjBDEJH",
+      "bvid": "BV1HGRjBDEJH",
+      "published_at": "2026-05-02T15:45:51+08:00",
+      "recorded_at": "2026-05-02T15:47:15+08:00",
+      "verified_fields": {
+        "platform_content_type": "video",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_content_package/platforms/bilibili.md",
+        "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_content_package",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish-publish.mp4",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-horizontal-4x3.png",
+        "pre_submit_title_readback": "视频发出去了，为什么还不算完成？大陈让机器人小马先写回",
+        "pre_submit_description_readback": "这条讲发布后的最后一公里：不是点了发布就结束，而是要把公开链接、平台、发布时间、状态词写回。否则后面复盘时就不知道看哪条、看哪个状态、看哪个时间点。",
+        "pre_submit_category_readback": "人工智能",
+        "pre_submit_tags_readback": [
+          "记录",
+          "AI员工",
+          "短视频运营"
+        ],
+        "ai_declaration_readback": "作者声明：该视频使用人工智能合成技术",
+        "upload_task_readback": "bili-20260502 上传完成",
+        "submit_api": "/x/vu/web/add/v3 returned HTTP 200",
+        "success_page_signal": "稿件投递成功",
+        "manager_row_status_class": "pubdate is-success",
+        "manager_row_time": "2026年05月02日 15:45:51",
+        "manager_row_text": "00:00:16 视频发出去了，为什么还不算完成？大陈让机器人小马先写回 2026年05月02日 15:45:51 当前字幕: 1（含平台自动生成） 编辑 数据 0 1 0 0 0 0 0",
+        "manager_cover_url": "https://i1.hdslb.com/bfs/archive/ae9718423ae8317fac79d08cae439091795a52b3.jpg@308w_174h",
+        "duplicate_guard": "passed: local receipt had no bilibili entry before publish; B站稿件管理 exact-title scan found no current-campaign row before submit; post-submit manager row matched exact title and BVID.",
+        "automation_route": "Chrome DevTools Protocol direct CDP via http://127.0.0.1:9333; used DOM.setFileInputFiles for video and cover, DOM/readback for fields, .submit-add for submit, and management page verification.",
+        "screenshot_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/bilibili-management-published-20260502-1545.png"
+      },
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b506e8efcf4a0b4a1ba66b65fcf7",
+        "sent_at": "2026-05-02T15:47:15+08:00"
+      },
+      "notes": [
+        "published_verified_2026-05-02T15:46:57+08:00: Chrome DevTools/CDP endpoint 127.0.0.1:9333 was used as the required preferred route without restarting the logged-in Chrome. The flow uploaded /tmp/bili-20260502.mp4 through the hidden real video input, uploaded the local horizontal 4:3 cover through the real image input, filled title/description/category, selected the AI synthesis author declaration, clicked .submit-add, and received 稿件投递成功 with /x/vu/web/add/v3 HTTP 200.",
+        "manager_verified_2026-05-02T15:46:57+08:00: B站稿件管理 showed the exact title as the latest row with BVID BV1HGRjBDEJH, cover ae9718423ae8317fac79d08cae439091795a52b3, published time 2026年05月02日 15:45:51, and pubdate is-success."
+      ]
+    }
+  }
+}

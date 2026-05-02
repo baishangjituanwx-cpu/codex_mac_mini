@@ -1663,3 +1663,35 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-01 22:05:55 CST`，`skill-change-monitor.md` 里 `2026-04-30 22:05:10 CST` 之后新增且此前未入账的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都已补齐；今天剩余的新增内容只有共享 receipt 留痕，没有新的 Windows 缺口。
+
+## 2026-05-02 22:02:44 CST
+
+- 处理时间:
+  - `2026-05-02 22:02:44 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-01 22:05:55 CST` 之后追加的非零批次，按行为去重后为:
+    - `2026-05-01 22:38:55 CST`
+    - `2026-05-01 23:40:45 CST` / `2026-05-02 00:41:46 CST`
+    - `2026-05-02 15:16:03 CST` / `2026-05-02 16:18:24 CST`
+    - `2026-05-02 18:22:08 CST`
+  - `2026-05-02 19:23:34 CST`、`20:25:24 CST`、`21:26:12 CST` 均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/seedance-video-api/{SKILL.md,references/workflows.md}`:
+    - 补入 Windows handoff 说明，明确当前 `大陈 / AI员工 / 机器人小马` 视频线默认女性配角使用的 `asset://asset-20260401123823-6d4x2` 必须继续作为 Seedance payload 里的字面 `reference_image` asset URI 保留，不能因为 Windows 路径改写而误替换成 `C:/...` 本地文件路径。
+    - 在 Windows 路径规则里补明边界: 只有本地视频、封面、内容包等文件路径需要改成带引号的 `C:/...`；内置 Seedance `asset://...` 引用不做平台分叉。
+  - `skill-center/skills/platform-cover-ops/SKILL.md`:
+    - 复核后确认 `2026-05-01 22:38:55 CST` 这批变更本身已经包含 Windows 文件选择器短真实路径说明，以及 Seedance 视频在 Windows mirror 中继续优先 `3:4` 竖版封面的 handoff 规则，无需再补新文档或脚本。
+  - `automation/python-platform-takeover/{README.md,configs/content-package.2026-05-01-dachen-xiaoma-argue-fix-old-post.yaml,state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json}`:
+    - 复核后确认 `2026-05-01 22:38:55 CST`、`23:40:45 CST`、`2026-05-02 00:41:46 CST` 的 campaign 配置扩写与 receipt 持续补写，都是共享发布包或共享台账行为；现有 Windows README 已覆盖日期化 YAML 复制后改 `C:/...` 路径、`record-receipt` / `receipt-status` / `validate-package` 的 PowerShell 用法，以及 Browser Bridge / 管理页写回口径，因此不需要新增 `.ps1`、`.cmd` 或代码分叉。
+  - `automation/python-platform-takeover/{configs/content-package.2026-05-02-ai-employee-writeback-after-publish.yaml,state/publish-receipts/2026-05-02-ai-employee-writeback-after-publish.json,state/screenshots/*}`:
+    - 复核后确认 `2026-05-02 15:16:03 CST` 与 `16:18:24 CST` 这批新增 campaign、B 站 / 快手留痕截图与多平台 receipt 写回，仍是共享内容包、共享 screenshot 证据和共享 receipt 状态推进；Windows 侧继续走既有 `.\scripts\social-publisher.ps1`、日期化 YAML 路径改写、管理页核验与写回流程即可，无需新增 Windows 专属资源副本。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-02` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮新增补丁仅为 Windows 文档桥接，没有新增 `.ps1` / `.cmd` / Python 平台分叉文件。
+  - 本机未做 Windows PowerShell 实机回归；结论基于 monitor 批次复核、仓库现有 PowerShell 入口、Windows 路径文档、以及新增 `Seedance asset://...` handoff 说明核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-02 22:02:44 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都已补齐；今天唯一需要显式补写的 Windows 缺口是 `Seedance` 默认女性配角 `asset://...` 引用在 Windows handoff 中不得被误改成本地路径，现已记录到仓库文档。

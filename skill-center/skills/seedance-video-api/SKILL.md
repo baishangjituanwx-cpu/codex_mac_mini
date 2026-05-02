@@ -63,6 +63,7 @@ Prompt-only defaults for this workspace:
 - if the user provides a real-person source image, treat that as the default `图生视频` path
 - when real-person material is used, add strict identity-preservation language to the prompt
 - for the `智者大陈 / 百亿联盟陈永俊` founder-office line, default structure is `3秒钩子 -> 剧情反转 -> 情绪共鸣 -> AI员工分工落地`
+- for the `大陈 / AI员工 / 机器人小马` Seedance API line, include the female supporting role by default unless the user explicitly excludes it; use `asset://asset-20260401123823-6d4x2` as an additional `reference_image`
 - subtitles, when present, must be model-generated: single Chinese line at a time, white text, transparent background, no black subtitle strip
 - reserve the last `0.5-1s` for one clean, stable cover-ready frame in the video prompt
 - output one video prompt plus one aligned cover-copy pair
@@ -95,6 +96,14 @@ When real-person material is used, the prompt must explicitly require:
 - do not drift into another outfit, another body shape, another face shape, or another hair design
 - do not replace the original person with a stylized or generic actor
 - do not casually rewrite the original person's clothing details, accessories, or visual persona
+
+When the female supporting role is used, the prompt and payload must also explicitly require:
+
+- include `asset://asset-20260401123823-6d4x2` as a separate `reference_image` in the Seedance payload
+- treat the female role as a stable supporting character, not a replaceable background extra
+- preserve the female role's original hairstyle, face shape, facial features, skin tone, body shape, clothing, accessories, age impression, and overall recognizability
+- do not swap her face, change her outfit, change her body shape, turn her into a generic actor, or let her merge with 大陈 or 机器人小马
+- keep the female supporting role's screen time meaningful but secondary; she should support the conflict, proof, or execution scene without stealing the main cover priority from 大陈 / AI员工
 
 When prompting for a new generation, also require the ending shot to leave one usable cover frame:
 
@@ -244,6 +253,7 @@ Windows-ready handoff rules for this repo:
   - `platforms.weibo.title` / `description` = 微博视频 `标题` / `配文`
   - `platforms.baijiahao` / `toutiao` / `zhihu` / `xiaohongshu` = 各平台 `标题` / `正文或描述`
 - On Windows, keep `assets.main_video`, `assets.cover_3_4`, and `assets.cover_4_3` as quoted absolute paths, preferably `C:/...`.
+- If the `大陈 / AI员工 / 机器人小马` package uses the default female supporting role, keep `asset://asset-20260401123823-6d4x2` as a literal Seedance `reference_image` asset URI in the payload. Do not rewrite that item into a `C:/...` filesystem path.
 - In the Windows upload matrix, every platform row must still name the exact upload video path or `不上传视频`, the exact cover path, and the final title/copy source. For Seedance video campaigns, 头条号 should point at the real video path by default instead of silently falling back to article-only assumptions.
 - Do not mark the campaign `ready_for_publish` until the markdown publish package exists and `.\scripts\social-publisher.ps1 validate-package automation/python-platform-takeover/configs/content-package.local.yaml` passes with those final titles and descriptions.
 - If the final YAML lives in a dated `content-package.<campaign>.yaml` instead of `content-package.local.yaml`, run the same PowerShell validation against that dated file before handing the package to publishing.
@@ -262,6 +272,7 @@ Windows path handling rules:
 
 - Prefer quoted absolute paths.
 - Prefer `C:/...` forward-slash paths in JSON payloads so they also stay valid on macOS hosts.
+- Keep bundled Seedance asset references such as `asset://asset-20260401123823-6d4x2` unchanged; only local filesystem inputs should be converted to `C:/...` paths on Windows.
 - The PowerShell launcher will try `.venv\\Scripts\\python.exe`, an active virtualenv, `py -3`, `python`, then an installed `uv` managed Python.
 
 ## macOS Quick Use

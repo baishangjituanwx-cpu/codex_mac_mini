@@ -47,6 +47,20 @@ Notes:
 - This is for reference-image / reference-video / reference-audio style control.
 - Do not mix first-frame / last-frame mode with multimodal reference mode.
 - The publishing-ready deliverable is `video + cover package + publish-copy package`, not `video only`.
+- For the `大陈 / AI员工 / 机器人小马` line, include the female supporting role by default with `asset://asset-20260401123823-6d4x2` as an additional `reference_image`, unless the user explicitly excludes that role.
+- When multiple real-person references are present, lock each person's identity separately; do not let the female supporting role merge with 大陈, disappear into the background, or become a generic actor.
+
+Required extra payload item for the female supporting role in the current founder-office video line:
+
+```json
+{
+  "type": "image_url",
+  "role": "reference_image",
+  "image_url": {
+    "url": "asset://asset-20260401123823-6d4x2"
+  }
+}
+```
 
 ## 4. Single-Clip Extension
 
@@ -145,6 +159,7 @@ Rules:
 - if article / note platforms are in scope, continue with their正文包 as a separate downstream step
 - on Windows handoff, copy the same final fields into `automation/python-platform-takeover/configs/content-package.local.yaml` or a dated `content-package.<campaign>.yaml`
 - treat `platforms.wechat_channels.title` as 视频号 `短标题` and `platforms.wechat_channels.description` as 视频号 `描述`
+- on Windows handoff, if the current `大陈 / AI员工 / 机器人小马` package keeps the default female supporting role, preserve the extra `reference_image` item as `asset://asset-20260401123823-6d4x2`; do not rewrite that payload field into a local `C:/...` path
 - on Windows handoff, keep every upload-matrix row explicit: quoted `C:/...` video path or `不上传视频`, quoted `C:/...` cover path, final title field, and final copy source; for Seedance video campaigns, 头条号 should keep the real video path unless the package explicitly includes a separate 图文派生稿
 - do not call the campaign `ready_for_publish` until the markdown publish package exists and `.\scripts\social-publisher.ps1 validate-package ...` passes against the finished YAML
 

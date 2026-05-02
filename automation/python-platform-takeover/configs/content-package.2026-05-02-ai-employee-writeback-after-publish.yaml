@@ -1,0 +1,57 @@
+campaign_id: "2026-05-02-ai-employee-writeback-after-publish"
+theme: "视频发出去不等于完成，AI员工必须把公开链接、平台、发布时间和状态词写回。"
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish-publish.mp4"
+  backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-horizontal-4x3.png"
+support_files:
+  final_verify_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_content_package/final-verify.json"
+  platform_upload_map: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_content_package/platform-upload-map.md"
+  douyin_platform_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_content_package/platforms/douyin.md"
+  kuaishou_platform_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_content_package/platforms/kuaishou.md"
+  wechat_channels_platform_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_content_package/platforms/wechat-channels.md"
+  baijiahao_platform_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_content_package/platforms/baijiahao.md"
+  baijiahao_content_library_path: "/Users/baishangjituan/Documents/New project/content-library/posts/baijiahao/2026-05-02-ai-employee-writeback-after-publish-video-001.md"
+publish_constraints:
+  reuse_logged_in_publish_page: true
+  skip_duplicate_if_already_published: true
+  prefer_repair_existing_post_over_republish: true
+  require_cover_thumbnail_check_25pct: true
+  require_management_page_verification: true
+  require_title_description_cover_alignment: true
+  require_active_campaign_lock: true
+platform_upload_plan:
+  douyin:
+    publish_type: "short_video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish-publish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-horizontal-4x3.png"
+  kuaishou:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish-publish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-horizontal-4x3.png"
+  wechat_channels:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish-publish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-horizontal-4x3.png"
+  baijiahao:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish-publish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-horizontal-4x3.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-02-ai-employee-writeback-after-publish_cover_package/cover-vertical-3x4.png"
+platforms:
+  douyin:
+    title: "发出去不算完"
+    description: "小马刚说任务完成，大陈直接拦住：没写回，复盘就断了。公开链接、平台、发布时间、状态词，都要带回表里。AI员工不是只会发，还要把结果带回来。#AI员工 #内容发布 #复盘 #写回字段"
+  kuaishou:
+    title: "发完先写回"
+    description: "机器人小马发完就想走，大陈说还没完。公开链接、平台、发布时间、状态词没写回，后面复盘就断链。"
+  wechat_channels:
+    title: "发出去不算完"
+    description: "机器人小马刚说完成，大陈直接拦住：先写回。公开链接、平台、发布时间、状态词都要回到表里，AI员工不是只会发，还要把结果带回来。"
+  baijiahao:
+    title: "视频发出去了为什么还不算完成？关键是把结果写回表里"
+    description: "发布不是最后一步。公开链接、平台、发布时间、状态词必须写回，后续复盘才有依据。AI员工不是只会执行，还要把执行结果带回来。"

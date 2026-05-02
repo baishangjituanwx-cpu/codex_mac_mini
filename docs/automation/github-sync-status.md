@@ -12,6 +12,31 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-02 22:27:17 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `2`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/SKILL.md` 和 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/workflows.md`；核心是把 `大陈 / AI员工 / 机器人小马` 这条 Seedance API 视频线的默认女性配角规则进一步写入仓库镜像，要求默认附带 `asset://asset-20260401123823-6d4x2` 作为额外 `reference_image`，并明确 Windows handoff 时不得把该 asset URI 改写成本地 `C:/...` 路径。
+- 建议后续执行 GitHub 同步，避免这批最新 `skill-center/seedance-video-api` 女性配角与 Windows handoff 口径继续只停留在本地工作区。
+
+## 2026-05-02 18:22:08 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `8`，删除 `0`。
+- 这批变更集中在 live `~/.codex/skills/seedance-video-api` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api` 的主说明、prompt 模板、真人一致性说明和工作流文档；核心是把 `大陈 / AI员工 / 机器人小马` 这条 Seedance API 视频线改成默认带女性配角素材 `asset://asset-20260401123823-6d4x2`，并新增独立 `reference_image` 与反混脸/保身份规则。
+- 建议后续执行 GitHub 同步，避免这批最新 `seedance-video-api` 人物一致性规则继续只停留在本地工作区。
+
+## 2026-05-02 16:18:24 CST
+- 检测到新的技能变更批次: 新增 `1`，修改 `1`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-02-ai-employee-writeback-after-publish.json` 和 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/bilibili-management-published-20260502-1545.png`；核心是把同一 campaign 的 B 站回执补写为 `BV1HGRjBDEJH` 已发布，并新增稿件管理页截图作为 exact-title / BVID 核验证据。
+- 建议后续执行 GitHub 同步，避免这批最新 `python-platform-takeover` B 站 publish receipt 与截图留痕继续只停留在本地工作区。
+
+## 2026-05-02 15:16:03 CST
+- 检测到新的技能变更批次: 新增 `6`，修改 `0`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-02-ai-employee-writeback-after-publish.yaml`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-02-ai-employee-writeback-after-publish.json` 和 4 张快手流程 / 管理页截图；核心是新增“发布后必须写回结果”的 campaign 配置，并把微博、小红书、快手、抖音、视频号的当前执行状态补进 receipt，同时保留快手从发布页到管理页核验的截图证据。
+- 建议后续执行 GitHub 同步，避免这批新的 `python-platform-takeover` campaign 配置、跨平台回执台账和快手截图留痕继续只停留在本地工作区。
+
+## 2026-05-02 00:41:46 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`；核心是把同一 campaign 的小红书回执补到“已提交并在笔记管理显示审核中”，并新增微信视频号 `已发表` 回执、`export/UzFfBgAAxJSjQGlgLV2cjczT4DCatbcEnxQ01MtRyzWTfTF6mQ` 对象 ID、封面缩略图核验与飞书通知元数据。
+- 该批次已包含在 `origin/codex/default-python-sync` 的 `d12b8ed`（`Sync May 1 Seedance cover and receipt updates`）以及 `2026-05-02 00:02:16 CST` 的同步记录中，本条仅补监控留痕；当前不需要额外 GitHub 同步动作。
+
 ## 2026-05-01 23:40:45 CST
 - 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
 - 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`；核心是把快手 receipt 从 `under_review` 推进为 `published`，补上 `已发布` tab 的管理页核验、`待发布` / `未通过` 都为 `0` 的去重证据，以及“不要重复重发”的阻断结论。
@@ -1452,3 +1477,27 @@
 - 若跳过，说明跳过原因:
   - 未跳过同步前置检查。
   - 跳过了 `codex/windows-version-20260411` 的提交与推送，因为当前仓库没有新的 Windows 专属 bridge / deployment payload；本轮新增的 Windows 相关内容只体现在共享 skill 文档约束与 Windows 完整性状态留痕中，不需要单独的 Windows 分支同步。
+
+## 2026-05-02 18:22:17 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `8`，删除 `0`。
+- 这批变更集中在 live 与 `skill-center` 两套 `/seedance-video-api/` 文档镜像；核心是把当前 `大陈 / AI员工 / 机器人小马` 视频线统一收紧为“默认带女性配角素材 `asset://asset-20260401123823-6d4x2`、payload 必须单独传 `reference_image`、大陈与女性配角都要分别锁定身份稳定”的默认生成规则。
+- 建议后续执行 GitHub 同步，避免最新 `seedance-video-api` 女性配角引用和多真人保真人规则继续只停留在本地工作区。
+
+## 2026-05-03 00:02:09 CST
+- 同步前置检查:
+  - 已通过。
+  - `docs/automation/windows-translation-status.md` 最新带日期条目为 `2026-05-02 22:02:44 CST`，其中“是否达到‘Mac / Windows 版本都齐全’”明确为 `是`，允许继续执行 GitHub 同步。
+- 本轮同步范围:
+  - `docs/automation/skill-change-monitor.md`
+  - `docs/automation/windows-translation-status.md`
+  - `docs/automation/github-sync-status.md`
+  - `skill-center/skills/seedance-video-api/{SKILL.md,references/prompt-template.md,references/real-person-consistency.md,references/workflows.md}`
+  - `automation/python-platform-takeover/configs/content-package.2026-05-02-ai-employee-writeback-after-publish.yaml`
+  - `automation/python-platform-takeover/state/publish-receipts/2026-05-02-ai-employee-writeback-after-publish.json`
+  - `automation/python-platform-takeover/state/screenshots/*`
+- 分支处理结果:
+  - `codex/default-python-sync`: 计划提交并推送 `Sync May 2 Seedance and publish receipt updates`
+  - `codex/windows-version-20260411`: 跳过；当前仓库没有新的 Windows 专属 bridge / deployment 脚本、安装器或分支独占 payload，本轮新增内容是共享 Seedance 规则、共享 Python takeover receipt / screenshot 留痕，以及 Windows 完整性状态文档，不单独拆分到 Windows 分支。
+- 若跳过，说明跳过原因:
+  - 仅跳过 `codex/windows-version-20260411`。
+  - 跳过原因如上；默认分支同步不跳过。

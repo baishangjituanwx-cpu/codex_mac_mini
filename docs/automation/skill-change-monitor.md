@@ -12,6 +12,445 @@
 - 变更摘要
 - 如果有新建 `.py` 文件，单独列出路径、用途、以及与哪个 skill 相关
 
+## 2026-05-02 23:29:42 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-02T14:26:08.097Z`（本地时区为 `2026-05-02 22:26:08 CST`）
+- 持久化快照里的上一轮实际完成时间是 `2026-05-02T14:30:00Z`（本地时区为 `2026-05-02 22:30:00 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-02 22:30:00 CST` 作为有效基线，避免把上一轮刚登记的 `seedance-video-api` 批次重复记录
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2394` 条受监控路径，并按同一组排除规则重建当前文件树；结果保持 `2394 -> 2394`
+- 以路径、整数秒 `mtime` 与 `size` 逐项比对后，发现新增 `0`、修改 `0`、删除 `0`；同时复核有效基线之后的受监控文件状态，没有任何路径晚于 `2026-05-02 22:30:00 CST`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-02 22:30:00 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-02 22:30:00 CST` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-02 22:27:17 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-02T13:24:08.703Z`（本地时区为 `2026-05-02 21:24:08 CST`）
+- 持久化快照里的上一轮实际完成时间是 `2026-05-02T13:28:26Z`（本地时区为 `2026-05-02 21:28:26 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-02 21:28:26 CST` 作为有效基线，避免把上一轮零变更 checkpoint 重复记录
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2394` 条受监控路径，并按同一组排除规则重建当前文件树；结果保持 `2394 -> 2394`
+- 以路径、整数秒 `mtime` 与 `size` 逐项比对后，发现新增 `0`、修改 `2`、删除 `0`；两项变化都位于仓库内 `skill-center/skills/seedance-video-api`，没有新的 live `~/.codex/skills` 或 support automation 文件变化
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `2`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/SKILL.md`:
+  modified。`skill-center` 镜像版主 skill 新增当前 `大陈 / AI员工 / 机器人小马` 这条 Seedance API 视频线的默认女性配角规则，要求默认附带 `asset://asset-20260401123823-6d4x2` 作为额外 `reference_image`，并把该配角的身份稳定、戏份定位以及 Windows handoff 时禁止改写为本地路径的约束写入主说明。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/workflows.md`:
+  modified。`skill-center` 镜像版 workflow 文档补入女性配角默认启用规则、多人真人人设分别锁定要求、必须追加的 `reference_image` payload JSON 片段，以及 Windows 交接时保持 `asset://asset-20260401123823-6d4x2` 原样传递的执行说明。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-02 21:28:26 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 1 个新的技能变更批次，集中在仓库内 `skill-center/skills/seedance-video-api` 的 2 份镜像文档。
+- 核心变化是把“默认带女性配角素材、多人分别锁身份、Windows handoff 保留 `asset://...` 形式的额外 `reference_image`”进一步写入 `skill-center` 版主 skill 与 workflow 说明；当前仓库已有未同步变化，建议后续执行 GitHub 同步。
+
+## 2026-05-02 21:26:12 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-02T12:23:38.251Z`（本地时区为 `2026-05-02 20:23:38 CST`）
+- 持久化快照里的上一轮实际完成时间是 `2026-05-02T12:27:38Z`（本地时区为 `2026-05-02 20:27:38 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-02 20:27:38 CST` 作为有效基线，避免把上一轮零变更 checkpoint 重复记录
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2394` 条受监控路径，并按同一组排除规则重建当前文件树；结果保持 `2394 -> 2394`
+- 以路径、整数秒 `mtime` 与 `size` 逐项比对后，发现新增 `0`、修改 `0`、删除 `0`；同时复核有效基线之后的受监控文件状态，没有任何路径晚于 `2026-05-02 20:27:38 CST`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-02 20:27:38 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-02 20:27:38 CST` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-02 20:25:24 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-02T11:22:08.258Z`（本地时区为 `2026-05-02 19:22:08 CST`）
+- 持久化快照里的上一轮实际完成时间是 `2026-05-02T11:23:34Z`（本地时区为 `2026-05-02 19:23:34 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-02 19:23:34 CST` 作为有效基线，避免把上一轮零变更 checkpoint 重复记录
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2394` 条受监控路径，并按同一组排除规则重建当前文件树；结果保持 `2394 -> 2394`
+- 以路径、整数秒 `mtime` 与 `size` 逐项比对后，发现新增 `0`、修改 `0`、删除 `0`；同时复核有效基线之后的受监控文件 `mtime`，没有任何路径晚于 `2026-05-02 19:23:34 CST`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-02 19:23:34 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-02 19:23:34 CST` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-02 19:23:34 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-02T10:20:08.051Z`（本地时区为 `2026-05-02 18:20:08 CST`）
+- 持久化快照里的上一轮实际完成时间是 `2026-05-02T10:22:17Z`（本地时区为 `2026-05-02 18:22:17 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-02 18:22:17 CST` 作为有效基线，避免把上一轮 `seedance-video-api` 文档批次重复记录
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2394` 条受监控路径，并按同一组排除规则重建当前文件树；结果保持 `2394 -> 2394`
+- 以路径、整数秒 `mtime` 与 `size` 逐项比对后，没有发现新增、修改或删除的受监控技能相关文件；上一轮记录的 `seedance-video-api` 女性配角规则批次之后，本地工作区没有新的技能或支持自动化源码变化
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-02 18:22:17 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-02 18:22:17 CST` 的新技能或支持自动化文件变更批次。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-02 18:22:08 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-02T09:18:07.844Z`（本地时区为 `2026-05-02 17:18:07 CST`）
+- 持久化快照里的上一轮实际完成时间是 `2026-05-02T09:19:43Z`（本地时区为 `2026-05-02 17:19:43 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-02 17:19:43 CST` 作为有效基线，避免把上一轮零变更 checkpoint 重复记录
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2394` 条受监控路径，并按同一组排除规则重建当前文件树；结果保持 `2394 -> 2394`
+- 以路径、整数秒 `mtime` 与 `size` 逐项比对后，发现新增 `0`、修改 `8`、删除 `0`；变化全部集中在 `seedance-video-api` 的 live skill 与 `skill-center` 镜像文档，同一批规则都晚于 `2026-05-02 17:19:43 CST`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `8`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/SKILL.md`:
+  modified。live `seedance-video-api` skill 主说明新增 `大陈 / AI员工 / 机器人小马` 这条视频线的默认女性配角规则，要求默认带上 `asset://asset-20260401123823-6d4x2` 作为额外 `reference_image`，并把女性配角的身份稳定、屏幕权重和禁止换脸/换装/混脸的约束写进 prompt 与 payload 规范。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/prompt-template.md`:
+  modified。live prompt 模板补充女性配角硬规则，明确该视频线默认加入固定素材 `asset://asset-20260401123823-6d4x2`，并给出必须写入 payload 的独立 `reference_image` JSON 片段。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/real-person-consistency.md`:
+  modified。live 真人一致性说明新增“多真人与女性配角硬规则”，要求同时锁定大陈和女性配角两套真人身份，不允许配角退化成背景路人、泛化演员或与主角/机器人小马混淆。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/workflows.md`:
+  modified。live 工作流说明补入多参考图场景下的女性配角默认启用规则，并把该配角的额外 `reference_image` payload 片段加入标准流程备注。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/SKILL.md`:
+  modified。`skill-center` 镜像版 `seedance-video-api` 主说明同步加入同一条默认女性配角规则，保持 repo 镜像与 live skill 在参考图配置和身份约束上对齐。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/prompt-template.md`:
+  modified。`skill-center` 镜像版 prompt 模板同步补入固定女性配角素材和独立 `reference_image` payload 示例，约束该视频线默认带女性配角。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/real-person-consistency.md`:
+  modified。`skill-center` 镜像版真人一致性文档同步加入多真人/女性配角保护规则，要求分别锁定大陈与女性配角的身份、服装和体态特征。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/workflows.md`:
+  modified。`skill-center` 镜像版工作流说明同步加入女性配角默认启用和额外 `reference_image` payload 片段，确保文档化执行流程与 live 规则一致。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-02 17:19:43 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 1 个新的技能文档规则变更批次，集中在 live `seedance-video-api` skill 与 `skill-center` 镜像版的 8 个说明文件。
+- 核心变化是把 `大陈 / AI员工 / 机器人小马` 这条 Seedance API 视频线改成默认带固定女性配角素材，并把该配角的独立 `reference_image`、身份稳定和反混脸约束补进主 skill、prompt 模板、真人一致性说明和工作流文档。
+
+## 2026-05-02 17:19:43 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-02T08:16:07.584Z`（本地时区为 `2026-05-02 16:16:07 CST`）
+- 持久化快照里的上一轮实际完成时间是 `2026-05-02T08:17:52Z`（本地时区为 `2026-05-02 16:17:52 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-02 16:17:52 CST` 作为有效基线，避免把上一轮刚登记的 B 站 receipt / screenshot 批次重复记录
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2394` 条受监控路径，并按同一组排除规则重建当前文件树；结果保持 `2394 -> 2394`
+- 以路径、整数秒 `mtime` 与 `size` 逐项比对后，没有发现新增、修改或删除的受监控技能相关文件；上一轮记录的 `automation/python-platform-takeover` B 站补录批次之后，本地工作区没有新的技能或支持自动化源码变化
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-02 16:17:52 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-02 16:17:52 CST` 的新技能或支持自动化文件变更批次。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-02 16:18:24 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-02T07:14:28.733Z`（本地时区为 `2026-05-02 15:14:28 CST`）
+- 持久化快照里的上一轮实际完成时间是 `2026-05-02T07:16:05Z`（本地时区为 `2026-05-02 15:16:05 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-02 15:16:05 CST` 作为有效基线，避免把上一轮刚登记的 6 个新增文件重复记录
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2393` 条受监控路径，并按同一组排除规则重建当前文件树；结果从 `2393 -> 2394`
+- 以路径、整数秒 `mtime` 与 `size` 逐项比对后，发现新增 `1`、修改 `1`、删除 `0`；两项变化都位于 `automation/python-platform-takeover` 的同一 `2026-05-02-ai-employee-writeback-after-publish` campaign
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `1`，修改 `1`，删除 `0`。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/bilibili-management-published-20260502-1545.png`:
+  added。新增 B 站稿件管理页截图，保留 `2026年05月02日 15:45:51` 最新行的已投稿证据，用于核验 `2026-05-02-ai-employee-writeback-after-publish` 在 B 站的 exact-title 命中和 BVID 对应关系。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-02-ai-employee-writeback-after-publish.json`:
+  modified。继续补写同一 campaign 的 publish receipt，新增 `bilibili` 平台回执并将其记录为 `published`：补上 `BV1HGRjBDEJH`、公开链接、`2026-05-02T15:45:51+08:00` 发布时间、稿件管理页 exact-title / BVID 核验、CDP 走 `127.0.0.1:9333` 的执行路线、横版 `4:3` 封面上传结果，以及关联的管理页截图路径与飞书通知元数据。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-02 15:16:05 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 1 个新的支持自动化变更批次，集中在 `automation/python-platform-takeover` 对 `2026-05-02-ai-employee-writeback-after-publish` campaign 的 B 站发布留痕补录。
+- 这批改动把同一 receipt 从“多平台已写回但尚缺 B 站”推进到“B 站已发布并有管理页截图证据”，目前仍停留在本地工作区，建议后续执行 GitHub 同步，避免最新 B 站回执与截图留痕继续只存在于本地。
+
+## 2026-05-02 15:16:03 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-02T06:13:58.579Z`（本地时区为 `2026-05-02 14:13:58 CST`）
+- 持久化快照里的上一轮实际完成时间是 `2026-05-02T06:17:00Z`（本地时区为 `2026-05-02 14:17:00 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-02 14:17:00 CST` 作为有效基线，避免把 14:14 那批已登记的监控结果重复记录
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2387` 条受监控路径，并按同一组排除规则重建当前文件树；结果从 `2387 -> 2393`
+- 以路径、整数秒 `mtime` 与 `size` 逐项比对后，发现新增 `6`、修改 `0`、删除 `0`；新增项全部位于 `automation/python-platform-takeover`，且当前工作区仍为本地未跟踪文件
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `6`，修改 `0`，删除 `0`。
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-02-ai-employee-writeback-after-publish.yaml`:
+  added。新增 `2026-05-02-ai-employee-writeback-after-publish` campaign 内容包配置，围绕“发布后必须把公开链接、平台、发布时间和状态词写回”的主题，锁定抖音、快手、视频号、百家号四个平台的主视频、双封面、平台文案、管理页核验和 active campaign 约束。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-02-ai-employee-writeback-after-publish.json`:
+  added。新增同名 campaign 的 publish receipt 台账，记录了微博已发布、小红书已提交并在笔记管理显示 `审核中`、快手已发布并在管理页命中 `2026-05-02 15:08` 行、抖音已推进到 `ready_for_final_confirmation`、视频号已初始化待发的多平台执行留痕，以及各平台的 duplicate guard、封面核验、CDP / OpenCLI 路由和飞书通知元数据。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-before-manual-publish-cdp-20260502.png`:
+  added。新增快手发布流程截图，留痕 CDP 接管前的发布页状态，用于说明自动化填充完成后只剩人工 / CDP 点击底部 `发布` 控件的阶段。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-management-published-20260502-1508.png`:
+  added。新增快手管理页已发布截图，作为 `发完先写回` 在 `2026-05-02 15:08` 命中 `已发布` 行的核验证据。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-management-under-review-20260502.png`:
+  added。新增快手管理页审核中截图，保留同一 campaign 在发布推进过程中的中间审核态留痕。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-publish-page-20260502-1.png`:
+  added。新增快手发布页截图，保留当前 campaign 在上传视频、描述和封面后的页面状态，支撑后续复核发布页与管理页的一致性。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-02 14:17:00 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 1 个新的支持自动化变更批次，全部集中在 `automation/python-platform-takeover` 新开的 `2026-05-02-ai-employee-writeback-after-publish` campaign 内容包、receipt 台账与快手截图留痕。
+- 这批改动目前仍停留在本地未跟踪文件，建议后续执行 GitHub 同步，避免新的 campaign 配置、跨平台回执写回规则和快手核验截图继续只存在于本地工作区。
+
+## 2026-05-02 14:14:42 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-02T05:11:36.800Z`（本地时区为 `2026-05-02 13:11:36 CST`）
+- 持久化快照里的上一轮实际完成时间是 `2026-05-01T16:43:56Z`（本地时区为 `2026-05-02 00:43:56 CST`）；由于任务消息里的 `Last run` 更晚，本轮以 `2026-05-02 13:11:36 CST` 作为有效基线，避免把凌晨已经登记过的批次重复记录
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2387` 条受监控路径与当前文件树，结果保持 `2387 -> 2387`
+- 按同一组排除规则重建当前快照后，没有任何受监控文件的 `mtime` 晚于有效基线；仓库里 `skills`、`skill-center`、`automation` 也没有新的未提交或已删除技能相关路径
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-02 13:11:36 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-02 13:11:36 CST` 的新技能或支持自动化文件变更批次。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-02 00:41:46 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-01T15:38:33.874Z`（本地时区为 `2026-05-01 23:38:33 CST`）
+- 持久化状态里的上一轮实际完成时间是 `2026-05-01T15:42:07Z`（本地时区为 `2026-05-01 23:42:07 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-01 23:42:07 CST` 作为有效基线，避免重复登记上一轮已覆盖窗口
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2387` 条受监控路径，并按同一组排除规则重建当前文件树；结果保持 `2387 -> 2387`
+- 以路径、整数秒 `mtime` 与 `size` 逐项比对后，发现新增 `0`、修改 `1`、删除 `0`；唯一变化文件的当前 `mtime` 晚于有效基线，因此计入本轮新批次
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档与 `$CODEX_HOME` 字面量伪路径都属于监控自身维护或历史误写产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `1`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`:
+  modified。继续补写同一 campaign 的多平台 receipt 台账，新增两段有效基线之后的留痕：一是 `2026-05-01T23:43:22+08:00` 的小红书发布回执，记录 CDP 首选但页面空白后切到已登录的 OpenCLI Browser Bridge，成功上传当前视频、填写精确标题与正文、提交后在 `笔记管理` 核验到同标题 `审核中` 行；二是 `2026-05-02T00:00:50+08:00` 的微信视频号回执，记录通过 CDP `127.0.0.1:9333` 用真实文件输入上传视频与竖版封面、点击真实 `发表` 按钮后拿到 `post_create` `HTTP 201` / 页面 `已发表`，并把 `export/UzFfBgAAxJSjQGlgLV2cjczT4DCatbcEnxQ01MtRyzWTfTF6mQ`、`2026年05月01日 23:50` 的管理列表核验、封面缩略图复核与飞书通知元数据写回 receipt。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-01 23:42:07 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 1 个新的支持自动化变更批次，集中在 `automation/python-platform-takeover` 对 `2026-05-01-dachen-xiaoma-argue-fix-old-post` campaign 的 publish receipt 持续补写。
+- 这批改动把同一 campaign 新推进到“小红书已提交并审核中”以及“微信视频号已发表、对象 ID 与封面核验已落账”的状态；该批次已经包含在 `origin/codex/default-python-sync` 的 `d12b8ed`（`Sync May 1 Seedance cover and receipt updates`）和 `2026-05-02 00:02:16 CST` 的同步记录中，因此本轮不再追加新的 `github-sync-status.md` 待同步说明。
+
 ## 2026-05-01 23:40:45 CST
 - 扫描范围:
 - `/Users/baishangjituan/.codex/skills`
@@ -22974,3 +23413,129 @@
 ### 变更摘要
 - 本轮发现 1 个新的支持自动化变更批次，集中在 `automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`。
 - 这次补写把快手从“审核中”推进到“已发布”，并用管理页 `已发布` / `待发布=0` / `未通过=0` 的复核结果显式阻断重复重发；建议后续执行 GitHub 同步，避免最新 receipt 台账继续只停留在本地工作区。
+
+## 2026-05-02 14:17:00 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-02T05:11:36.800Z`（本地时区为 `2026-05-02 13:11:36 CST`）
+- 持久化状态里的上一轮实际完成时间是 `2026-05-01T16:43:56Z`（本地时区为 `2026-05-02 00:43:56 CST`）；由于任务消息里的 `Last run` 更晚，本轮以 `2026-05-02 13:11:36 CST` 作为有效基线，避免把上午已覆盖窗口重复登记
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2387` 条受监控路径与当前文件树，结果保持 `2387 -> 2387`
+- 以路径、整数秒 `mtime` 与 `size` 逐项比对后，发现新增 `0`、修改 `0`、删除 `0`；同时复核基线之后的受监控文件 `mtime`，没有任何路径晚于 `2026-05-02 13:11:36 CST`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-02 13:11:36 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现新的技能或支持自动化文件变更批次；当前受监控文件树与上一轮快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-02 17:19:23 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-02T08:16:07.584Z`（本地时区为 `2026-05-02 16:16:07 CST`）
+- 持久化快照里的上一轮实际完成时间是 `2026-05-02T08:17:52Z`（本地时区为 `2026-05-02 16:17:52 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-02 16:17:52 CST` 作为有效基线，避免把 `2026-05-02 16:18:24 CST` 已登记的 B 站回执 / 截图批次重复记录
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2394` 条受监控路径，并按同一组排除规则重建当前文件树；结果保持 `2394 -> 2394`
+- 以路径、整数秒 `mtime` 与 `size` 逐项比对后，发现新增 `0`、修改 `0`、删除 `0`；同时复核有效基线之后的受监控文件 `mtime`，没有任何路径晚于 `2026-05-02 16:17:52 CST`
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-02 16:17:52 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-02 16:17:52 CST` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-02 18:22:17 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-02T09:18:07.844Z`（本地时区为 `2026-05-02 17:18:07 CST`）
+- 持久化快照里的上一轮实际完成时间是 `2026-05-02T09:19:43Z`（本地时区为 `2026-05-02 17:19:43 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-02 17:19:43 CST` 作为有效基线，避免把上一轮零变更 checkpoint 重复记录
+- 判定依据:
+- 逐项对比 `~/.codex/automations/skill-monitor/last-snapshot.json` 中的 `2394` 条受监控路径，并按同一组排除规则重建当前文件树；结果保持 `2394 -> 2394`
+- 以路径、整数秒 `mtime` 与 `size` 逐项比对后，发现新增 `0`、修改 `8`、删除 `0`；全部命中 `seedance-video-api` 的 live skill 与 `skill-center` 镜像，没有新的 support automation 文件变化
+- 继续沿用既有排除规则：`~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.venv/**`、`node_modules/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc` 与 `.git/**`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- 上述文档和历史误写伪路径都属于监控自身维护或本地产物，不计入新的技能或支持自动化源码变更批次。
+- 结果汇总: 新增 `0`，修改 `8`，删除 `0`。
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/SKILL.md`:
+  modified。live `seedance-video-api` skill 新增当前 `大陈 / AI员工 / 机器人小马` 视频线的默认女性配角规则：除非用户明确排除，否则默认把 `asset://asset-20260401123823-6d4x2` 作为额外 `reference_image`，并要求在主提示词和 payload 里同时锁定女性配角身份稳定、保持其为“有戏份但不抢主角”的稳定配角。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/prompt-template.md`:
+  modified。补入“女性配角素材硬规则”段落，明确当前视频线默认加入固定女性素材，并给出必须写进 Seedance payload 的单独 `reference_image` JSON 结构。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/real-person-consistency.md`:
+  modified。把多真人场景的身份锁定规则扩展到女性配角，要求大陈与女性配角分别独立保真人，禁止混脸、变装、年龄漂移、体态漂移或退化成无关背景角色，并要求 payload 单独携带该女性素材引用。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/workflows.md`:
+  modified。在多模态 workflow 里补入当前视频线默认女性配角素材规则，明确多真人同时存在时要分别锁定身份，并把女性素材的额外 `reference_image` payload 片段写进流程说明。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/SKILL.md`:
+  modified。仓库内 `skill-center` 镜像同步加入相同的女性配角默认规则，要求当前 `大陈 / AI员工 / 机器人小马` 视频线默认带上 `asset://asset-20260401123823-6d4x2`，并在提示词和 payload 中显式保护该配角身份稳定。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/prompt-template.md`:
+  modified。镜像版提示词模板新增女性配角硬规则，规定默认启用固定女性素材，并提供必须加入 payload 的独立 `reference_image` JSON 示例。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/real-person-consistency.md`:
+  modified。镜像版真人一致性规范新增多真人/女性配角约束，要求分别锁定大陈与女性配角身份，禁止把女性配角泛化成可替换演员或背景人物，并要求 payload 独立引用该素材。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/workflows.md`:
+  modified。镜像版 workflow 说明补入当前视频线默认女性配角素材、双真人分别锁身份，以及必须加女性素材 `reference_image` payload 片段的执行要求。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-02 17:19:43 CST` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 1 个新的技能变更批次，集中在 live 与 `skill-center` 两套 `seedance-video-api` 文档 / reference 同步收紧当前 `大陈 / AI员工 / 机器人小马` 视频线的女性配角默认素材与保真人规则。
+- 这批改动把“默认带女性配角素材 + payload 必须单独传 `reference_image` + 多真人分别锁身份”从零散约束提升为 skill 主文档、提示词模板、真人一致性规范和 workflow 的共同默认规则；目前仓库镜像已有未同步变化，建议后续执行 GitHub 同步，避免最新 Seedance 生成口径继续只停留在本地工作区。
