@@ -1579,3 +1579,71 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-30 22:05:10 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都已补齐。
+
+## 2026-05-03 22:02:46 CST
+
+- 处理时间:
+  - `2026-05-03 22:02:46 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-02 22:02:44 CST` 之后追加的非零批次，按行为去重后为:
+    - `2026-05-02 22:27:17 CST`
+    - `2026-05-03 20:59:02 CST`
+  - 其余自 `2026-05-02 23:29:42 CST` 至 `2026-05-03 19:57:54 CST` 的追加批次均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - 无新增 Windows 补丁文件；本轮明确记录“已复核，无需额外转译”。
+  - `skill-center/skills/seedance-video-api/{SKILL.md,references/workflows.md}`:
+    - 复核 `2026-05-02 22:27:17 CST` 这批仅落在仓库镜像的 2 处文档修改后，确认新增的女性配角默认素材规则已经直接写入 Windows handoff 约束:
+      - 默认女性配角 `reference_image` 必须继续保留为字面 `asset://asset-20260401123823-6d4x2`
+      - Windows 侧只改本地视频 / 封面 / 内容包路径为带引号的 `C:/...`
+      - 不允许把该 Seedance 内置 asset URI 改写成 Windows 本地路径
+    - 由于这批变更本身已经包含 Windows 可执行说明，所以不需要再补新的 `.ps1`、`.cmd`、镜像副本或额外路径分叉。
+  - `automation/python-platform-takeover/{README.md,configs/content-package.2026-05-03-ai-employee-data-center-review*.yaml,state/publish-receipts/2026-05-03-ai-employee-data-center-review.json,state/screenshots/kuaishou-debug-after-script-stop-20260503.png}`:
+    - 复核 `2026-05-03 20:59:02 CST` 新增的 campaign 内容包、receipt 与截图后，确认它们属于共享发布资产，不引入新的 Mac-only 自动化行为。
+    - 现有 Windows 覆盖已经足够承接这批资产，无需新增仓库实现:
+      - `automation/python-platform-takeover/README.md` 已要求把日期化 YAML 复制到 `content-package.local.yaml` 或新的 `content-package.<campaign>.yaml`，并把写死的 macOS `/Users/...` 路径改成真实 `C:/...` Windows 绝对路径
+      - `skill-center/skills/social-publish-automation/SKILL.md` 已覆盖 Windows 侧先用 `Invoke-WebRequest` 检查 CDP，再走 `.\scripts\social-publisher.ps1 validate-package|doctor|receipt-status|record-receipt`
+      - 这批新增 receipt 与 screenshot 只是共享台账和留痕证据，不需要再做 Windows 专属 JSON / 图片副本
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-03` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮没有新增仓库级 Windows 脚本或文档补丁；追加的是“无需转译”的核对结论和状态记录。
+  - 本机未做 Windows PowerShell 实机回归；结论基于 monitor 批次复核、现有 PowerShell 入口、Windows 路径文档、以及新增 Seedance / content-package 资产核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-03 22:02:46 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天明确没有需要新增补写的 Windows 专属转译。
+
+## 2026-05-03 22:01:56 CST
+
+- 处理时间:
+  - `2026-05-03 22:01:56 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-02 22:02:44 CST` 之后追加的批次:
+    - `2026-05-03 06:37:35 CST` 至 `2026-05-03 19:57:54 CST` 的多轮 checkpoint 均为 `新增 0，修改 0，删除 0`
+    - 唯一非零批次是 `2026-05-03 20:59:02 CST`，对应:
+      - `automation/python-platform-takeover/configs/content-package.2026-05-03-ai-employee-data-center-review.yaml`
+      - `automation/python-platform-takeover/configs/content-package.2026-05-03-ai-employee-data-center-review.weibo.yaml`
+      - `automation/python-platform-takeover/state/publish-receipts/2026-05-03-ai-employee-data-center-review.json`
+      - `automation/python-platform-takeover/state/screenshots/kuaishou-debug-after-script-stop-20260503.png`
+- 已完成的 Windows 补全:
+  - 无新增 Windows 补丁文件、PowerShell 启动器、`.cmd` 包装器或文档分叉；本轮明确记录“无需新增转译实现”。
+  - 已复核 `automation/python-platform-takeover/configs/content-package.2026-05-03-ai-employee-data-center-review.yaml` 与 `automation/python-platform-takeover/configs/content-package.2026-05-03-ai-employee-data-center-review.weibo.yaml` 的新增行为仍可直接沿用现有 Windows 覆盖，无需改仓库实现:
+    - 这两份日期化 YAML 只是新的视频号定向包和微博定向包，继续复用现有 `.\scripts\social-publisher.ps1 validate-package|receipt-status|record-receipt|publish` 即可。
+    - 文件里写死的 `/Users/...` 素材路径不需要另做 Windows 分叉样例；`automation/python-platform-takeover/README.md` 已明确要求 Windows 先复制日期化 YAML，再把 `assets.*`、`support_files.*` 与 `platform_upload_plan.*` 改成真实存在的 `C:/...` 或其他 Windows 绝对路径。
+    - 本轮新增的 `wechat_channels_only` scope、微博专用 `weibo_content_library_path`、管理页复核约束和逐平台上传计划都属于共享 campaign 语义，不引入新的 macOS-only 操作。
+  - 已复核 `automation/python-platform-takeover/state/publish-receipts/2026-05-03-ai-employee-data-center-review.json` 的新增 receipt 只是共享台账扩写，无需新增 Windows 专属代码或脚本:
+    - 其中的 `under_review`、`published`、`published_verified_in_manager`、`verified_fields`、`aid`、`automation_route`、截图路径和飞书通知留痕都继续由共享 Python loader 与现有 Windows PowerShell 包装器消费。
+    - Windows 侧仍按既有口径使用 `.\scripts\social-publisher.ps1 receipt-status|record-receipt|clear-receipt`，不需要手工删键，也不需要复制第二套 receipt 工作流。
+  - 已复核 `automation/python-platform-takeover/state/screenshots/kuaishou-debug-after-script-stop-20260503.png` 只是快手发布后的调试证据截图，不是新的自定义 skill 行为，也不需要额外 Windows repo 资产副本。
+  - 结论:
+    - `2026-05-03 20:59:02 CST` 这批新增内容全部属于共享 content package / receipt / screenshot 留痕；今天没有发现新的 Windows 缺口需要补写。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-03` 当前已记录的非零批次里，没有仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未做 Windows PowerShell 实机回归；结论基于 monitor 批次复核、现有 Windows README / PowerShell 入口，以及新增 YAML / receipt / screenshot 内容核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-03 22:01:56 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天明确没有需要补写的 Windows 专属转译。
