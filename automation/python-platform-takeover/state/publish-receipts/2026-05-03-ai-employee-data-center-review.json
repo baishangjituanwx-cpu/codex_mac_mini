@@ -4,14 +4,15 @@
     "douyin": {
       "campaign_id": "2026-05-03-ai-employee-data-center-review",
       "platform_id": "douyin",
-      "status": "ready_for_final_confirmation",
+      "status": "under_review",
       "title": "只发布不算复盘",
       "description": "小马说全平台已发布，女性运营同事一句话把它问住：播放、完播、评论在哪？大陈说，成功只是状态，数据才是复盘。AI员工要进数据中心，把指标和对照带回来。#AI员工 #短视频运营 #数据复盘",
-      "current_url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page&fresh=1777817848197",
+      "current_url": "https://creator.douyin.com/creator-micro/content/manage?enter_from=publish",
       "management_url": "https://creator.douyin.com/creator-micro/content/manage",
-      "share_link": null,
-      "external_id": null,
-      "recorded_at": "2026-05-03T22:24:37+08:00",
+      "share_link": "https://www.iesdouyin.com/share/video/7635697839951121673/",
+      "external_id": "7635697839951121673",
+      "published_at": "2026-05-04T00:07:35+08:00",
+      "recorded_at": "2026-05-04T00:08:42+08:00",
       "verified_fields": {
         "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platforms/douyin.md",
         "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platform-upload-map.md",
@@ -23,14 +24,38 @@
         "automation_route": "Chrome DevTools/CDP on http://127.0.0.1:9223",
         "description_readback": "小马说全平台已发布，女性运营同事一句话把它问住：播放、完播、评论在哪？大陈说，成功只是状态，数据才是复盘。AI员工要进数据中心，把指标和对照带回来。#AI员工 #短视频运营 #数据复盘",
         "management_duplicate_guard": "passed: before submit, local receipt had no completed douyin entry and Douyin work_list API status=0/1/2 did not contain the current title or lead phrase.",
+        "management_api_aweme_count": 29,
+        "management_api_aweme_id": "7635697839951121673",
+        "management_api_caption": "小马说全平台已发布，女性运营同事一句话把它问住：播放、完播、评论在哪？大陈说，成功只是状态，数据才是复盘。AI员工要进数据中心，把指标和对照带回来。#AI员工 #短视频运营 #数据复盘",
+        "management_api_cover_uri": "tos-cn-i-dy/ce236dccfd204debac7e6b4da59853da",
+        "management_api_create_time": "2026-05-04T00:07:35+08:00",
+        "management_api_duration_ms": 15883,
+        "management_api_exact_lead_found": true,
+        "management_api_exact_title_found": true,
+        "management_api_horizontal_cover_uri": "tos-cn-i-dy/9b3c81c6a6f64d1d97556f23ffa01367",
+        "management_api_item_id": "7635697839951121000",
+        "management_api_self_see": true,
+        "management_api_status_param_0_match": true,
+        "management_api_status_param_1_match": false,
+        "management_api_status_param_2_match": true,
+        "management_api_status_text": "审核中",
+        "management_api_status_value": 141,
+        "management_page_after_submit": "published success page landed on Douyin content manage; visible page showed 发布成功 and total count 共 29 个作品.",
         "pre_publish_cover_check": "vertical 3:4 and horizontal 4:3 local covers displayed; cover effect and cover quality checks passed; no dual-cover missing warning remained.",
         "pre_publish_publish_button": "enabled real button",
         "pre_publish_title_readback": "只发布不算复盘",
         "pre_publish_video_check": "作品未见异常"
       },
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b50437bcd48a8b34d6c514967281",
+        "sent_at": "2026-05-04T00:09:52+08:00"
+      },
       "notes": [
         "initialized_current_thread_before_publish_2026-05-03T22:15:08+08:00: latest local content package locked for Douyin only in this thread; package_status=ready_for_platform_publishing, Seedance task succeeded, video/cover/platform package/platform-upload-map exist. Receipt initialized as not_started before duplicate guard and browser publish.",
-        "ready_for_final_confirmation_2026-05-03T22:24:37+08:00: Chrome DevTools/CDP 127.0.0.1:9223 was used as the preferred route. Duplicate guard checked local receipt and Douyin work_list API status=0/1/2 before publishing; no current campaign title or lead phrase existed before submit. The flow uploaded the mp4 through DOM.setFileInputFiles, filled the exact title and description, uploaded the local vertical 3:4 cover and local horizontal 4:3 cover through file chooser interception, verified 作品未见异常, verified cover effect/quality checks passed, and verified the real publish button is enabled. Waiting for user final confirmation before clicking 发布."
+        "ready_for_final_confirmation_2026-05-03T22:24:37+08:00: Chrome DevTools/CDP 127.0.0.1:9223 was used as the preferred route. Duplicate guard checked local receipt and Douyin work_list API status=0/1/2 before publishing; no current campaign title or lead phrase existed before submit. The flow uploaded the mp4 through DOM.setFileInputFiles, filled the exact title and description, uploaded the local vertical 3:4 cover and local horizontal 4:3 cover through file chooser interception, verified 作品未见异常, verified cover effect/quality checks passed, and verified the real publish button is enabled. Waiting for user final confirmation before clicking 发布.",
+        "published_verified_2026-05-04T00:08:42+08:00: after user final confirmation, Chrome DevTools/CDP clicked the real enabled Douyin 发布 button. The page showed 正在发布, then landed on https://creator.douyin.com/creator-micro/content/manage?enter_from=publish with 发布成功 and 共 29 个作品. Douyin work_list API status=2 审核中 matched exact title 只发布不算复盘 and caption lead 小马说全平台已发布 with aweme_id 7635697839951121673, duration 15883ms, status_value 141, vertical cover uri tos-cn-i-dy/ce236dccfd204debac7e6b4da59853da, horizontal cover uri tos-cn-i-dy/9b3c81c6a6f64d1d97556f23ffa01367. status=0 also matched; status=1 did not, so this receipt is recorded as under_review.",
+        "feishu_notified_2026-05-04T00:09:52+08:00: sent per-platform Douyin publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b50437bcd48a8b34d6c514967281."
       ]
     },
     "wechat_channels": {
