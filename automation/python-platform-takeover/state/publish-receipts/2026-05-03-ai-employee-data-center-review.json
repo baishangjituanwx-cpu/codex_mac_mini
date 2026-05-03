@@ -1,0 +1,352 @@
+{
+  "campaign_id": "2026-05-03-ai-employee-data-center-review",
+  "receipts": {
+    "douyin": {
+      "campaign_id": "2026-05-03-ai-employee-data-center-review",
+      "platform_id": "douyin",
+      "status": "ready_for_final_confirmation",
+      "title": "只发布不算复盘",
+      "description": "小马说全平台已发布，女性运营同事一句话把它问住：播放、完播、评论在哪？大陈说，成功只是状态，数据才是复盘。AI员工要进数据中心，把指标和对照带回来。#AI员工 #短视频运营 #数据复盘",
+      "current_url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page&fresh=1777817848197",
+      "management_url": "https://creator.douyin.com/creator-micro/content/manage",
+      "share_link": null,
+      "external_id": null,
+      "recorded_at": "2026-05-03T22:24:37+08:00",
+      "verified_fields": {
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platforms/douyin.md",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platform-upload-map.md",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review-publish.mp4",
+        "cover_files": {
+          "vertical_3x4": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-vertical-3x4.png",
+          "horizontal_4x3": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-horizontal-4x3.png"
+        },
+        "automation_route": "Chrome DevTools/CDP on http://127.0.0.1:9223",
+        "description_readback": "小马说全平台已发布，女性运营同事一句话把它问住：播放、完播、评论在哪？大陈说，成功只是状态，数据才是复盘。AI员工要进数据中心，把指标和对照带回来。#AI员工 #短视频运营 #数据复盘",
+        "management_duplicate_guard": "passed: before submit, local receipt had no completed douyin entry and Douyin work_list API status=0/1/2 did not contain the current title or lead phrase.",
+        "pre_publish_cover_check": "vertical 3:4 and horizontal 4:3 local covers displayed; cover effect and cover quality checks passed; no dual-cover missing warning remained.",
+        "pre_publish_publish_button": "enabled real button",
+        "pre_publish_title_readback": "只发布不算复盘",
+        "pre_publish_video_check": "作品未见异常"
+      },
+      "notes": [
+        "initialized_current_thread_before_publish_2026-05-03T22:15:08+08:00: latest local content package locked for Douyin only in this thread; package_status=ready_for_platform_publishing, Seedance task succeeded, video/cover/platform package/platform-upload-map exist. Receipt initialized as not_started before duplicate guard and browser publish.",
+        "ready_for_final_confirmation_2026-05-03T22:24:37+08:00: Chrome DevTools/CDP 127.0.0.1:9223 was used as the preferred route. Duplicate guard checked local receipt and Douyin work_list API status=0/1/2 before publishing; no current campaign title or lead phrase existed before submit. The flow uploaded the mp4 through DOM.setFileInputFiles, filled the exact title and description, uploaded the local vertical 3:4 cover and local horizontal 4:3 cover through file chooser interception, verified 作品未见异常, verified cover effect/quality checks passed, and verified the real publish button is enabled. Waiting for user final confirmation before clicking 发布."
+      ]
+    },
+    "wechat_channels": {
+      "campaign_id": "2026-05-03-ai-employee-data-center-review",
+      "platform_id": "wechat_channels",
+      "status": "not_started",
+      "title": "只发布不算复盘",
+      "description": "机器人小马汇报全平台已发布，女性运营同事追问播放、完播、评论在哪。大陈提醒：成功只是状态，数据才是复盘。AI员工要把指标和同形态对照带回来。",
+      "current_url": null,
+      "management_url": "https://channels.weixin.qq.com/platform/post/list",
+      "share_link": null,
+      "external_id": null,
+      "recorded_at": "2026-05-03T22:13:48+08:00",
+      "notes": [
+        "initialized_current_thread_before_publish_2026-05-03T22:13:48+08:00: latest local content package locked for WeChat Channels only; package_status=ready_for_platform_publishing, video/cover/platform package/platform-upload-map exist. Receipt initialized as not_started before duplicate guard and browser publish."
+      ]
+    },
+    "toutiao": {
+      "campaign_id": "2026-05-03-ai-employee-data-center-review",
+      "platform_id": "toutiao",
+      "status": "under_review",
+      "title": "机器人小马说全平台已发布，大陈为什么说还没复盘？",
+      "description": "发布成功不等于复盘完成。没有播放、完播、互动和同形态对照，团队只能凭感觉改内容。AI员工必须进数据中心，把指标抓回来。",
+      "current_url": "https://mp.toutiao.com/profile_v4/xigua/upload-video?index=0",
+      "management_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
+      "share_link": null,
+      "external_id": null,
+      "published_at": "2026-05-03T21:06:00+08:00",
+      "recorded_at": "2026-05-03T21:07:44+08:00",
+      "verified_fields": {
+        "status_text": "审核中",
+        "publish_success_text": "全部发表成功",
+        "manager_list_context": "作品管理显示：00:15 / 机器人小马说全平台已发布，大陈为什么说还没复盘？ / 05-03 21:06 / 审核中",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platforms/toutiao.md",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platform-upload-map.md",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review-publish.mp4",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-vertical-3x4.png",
+        "cover_mode": "custom_vertical_3x4_uploaded_and_platform_accepted_edit_replace_state",
+        "title_word_limit": "24/30",
+        "pre_submit_title_readback": "机器人小马说全平台已发布，大陈为什么说还没复盘？",
+        "ai_declaration_checked": true,
+        "video_generate_article_checked": false,
+        "automation_route": "Chrome DevTools/CDP raw protocol on http://127.0.0.1:9223 with DOM.setFileInputFiles for local video/cover inputs",
+        "manager_row_time": "05-03 21:06",
+        "manager_row_status_text": "审核中",
+        "screenshots": {
+          "duplicate_guard_before": "/Users/baishangjituan/Documents/push/toutiao-manager-before-20260503.png",
+          "after_video_upload": "/Users/baishangjituan/Documents/push/toutiao-after-video-upload-20260503.png",
+          "cover_editor": "/Users/baishangjituan/Documents/push/toutiao-cover-editor-20260503.png",
+          "cover_applied": "/Users/baishangjituan/Documents/push/toutiao-cover-applied-resume-20260503.png",
+          "pre_submit": "/Users/baishangjituan/Documents/push/toutiao-pre-submit-continuous-20260503.png",
+          "after_publish": "/Users/baishangjituan/Documents/push/toutiao-after-publish-click-20260503.png",
+          "manager_check": "/Users/baishangjituan/Documents/push/toutiao-manager-verified-20260503.png"
+        }
+      },
+      "notes": [
+        "published_verified_2026-05-03T21:07:44+08:00: Chrome DevTools/CDP endpoint 127.0.0.1:9223 was used as the preferred route. Duplicate guard checked local receipt and Toutiao 作品管理 before publishing; no current campaign title existed before submit. The flow uploaded the mp4 through DOM.setFileInputFiles, uploaded and confirmed the vertical 3:4 local cover, set the exact 24/30 title, kept 生成图文 unchecked, selected AI生成 declaration, clicked 发布, saw 全部发表成功, then verified the exact title in 作品管理 as 审核中 at 05-03 21:06.",
+        "toutiao_thread_scope: this entry records only the Toutiao publish task in this thread.",
+        "feishu_notified_2026-05-03T21:07:59+08:00: sent per-platform Toutiao publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b5040c43a34a0b32bb8caf6950d0."
+      ],
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b5040c43a34a0b32bb8caf6950d0",
+        "sent_at": "2026-05-03T21:07:59+08:00"
+      }
+    },
+    "kuaishou": {
+      "campaign_id": "2026-05-03-ai-employee-data-center-review",
+      "platform_id": "kuaishou",
+      "status": "published",
+      "title": "发完还要抓数据",
+      "description": "机器人小马说全平台已发布，刚想收工就被问住：播放、完播、互动在哪？大陈说，只发布不算复盘，AI员工还要把数据带回来。",
+      "current_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+      "management_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+      "share_link": null,
+      "external_id": null,
+      "published_at": "2026-05-03T21:07:00+08:00",
+      "recorded_at": "2026-05-03T21:11:52+08:00",
+      "verified_fields": {
+        "status_text": "已发布",
+        "manager_list_context": "作品管理显示：机器人小马说全平台已发布，刚想收工就被问住：播放、完播、互动在哪？大陈说，只发布不算复盘，AI员工还要把数据带回来。 / 已发布 / 2026-05-03 21:07",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platforms/kuaishou.md",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platform-upload-map.md",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review-publish.mp4",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-vertical-3x4.png",
+        "cover_mode": "custom_vertical_3x4_uploaded_via_DOM_setFileInputFiles",
+        "title_source": "platforms/kuaishou.md 标题：发完还要抓数据",
+        "description_readback": "机器人小马说全平台已发布，刚想收工就被问住：播放、完播、互动在哪？大陈说，只发布不算复盘，AI员工还要把数据带回来。",
+        "automation_route": "Chrome DevTools/CDP on http://127.0.0.1:9223 with Playwright CDP attachment and DOM.setFileInputFiles for local video/cover inputs",
+        "duplicate_guard": "Before submit, Kuaishou 作品管理 did not contain the current campaign title or lead phrase.",
+        "manager_row_time": "2026-05-03 21:07",
+        "manager_row_status_text": "已发布",
+        "screenshots": {
+          "after_video_upload_debug": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-debug-after-script-stop-20260503.png",
+          "pre_submit": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-before-publish-cdp-20260503.png",
+          "after_publish_click": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-after-dom-publish-click-20260503.png",
+          "manager_check": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-management-published-20260503-2107.png"
+        }
+      },
+      "notes": [
+        "published_verified_2026-05-03T21:11:52+08:00: Chrome DevTools/CDP endpoint 127.0.0.1:9223 was used as the preferred route. Duplicate guard checked local receipt and Kuaishou 作品管理 before publishing; no current campaign title or lead phrase existed before submit. The flow uploaded the mp4 through DOM.setFileInputFiles, uploaded the vertical 3:4 local cover, inserted the exact Kuaishou copy into #work-description-edit, clicked 发布 through the bottom publish control, then verified the exact copy in 作品管理 as 已发布 at 2026-05-03 21:07.",
+        "kuaishou_thread_scope: this entry records only the Kuaishou publish task in this thread.",
+        "feishu_notified_2026-05-03T21:11:52+08:00: sent per-platform Kuaishou publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b5040d74928a0b4b256b73242eba."
+      ],
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b5040d74928a0b4b256b73242eba",
+        "sent_at": "2026-05-03T21:11:52+08:00"
+      }
+    },
+    "baijiahao": {
+      "campaign_id": "2026-05-03-ai-employee-data-center-review",
+      "platform_id": "baijiahao",
+      "status": "under_review",
+      "title": "视频发布成功后为什么还要进数据中心？大陈给机器人小马上了一课",
+      "description": "发布成功只是状态，不代表复盘完成。播放、完播、互动、同形态对照这些数据没有抓回来，团队就不知道下一条该怎么改。AI员工必须把数据带回表里。",
+      "current_url": "https://baijiahao.baidu.com/builder/rc/clue?aside=0&footer=true&from=videoV2&firstPublish=undefined&word_bag_id=null",
+      "management_url": "https://baijiahao.baidu.com/builder/rc/content?currentPage=1&pageSize=10&search=%E8%A7%86%E9%A2%91%E5%8F%91%E5%B8%83%E6%88%90%E5%8A%9F%E5%90%8E%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%98%E8%A6%81%E8%BF%9B%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%EF%BC%9F%E5%A4%A7%E9%99%88%E7%BB%99%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%B0%8F%E9%A9%AC%E4%B8%8A%E4%BA%86%E4%B8%80%E8%AF%BE&type=&collection=&app_id=1861892519044473&startDate=&endDate=",
+      "share_link": null,
+      "external_id": null,
+      "published_at": "2026-05-03T21:17:29+08:00",
+      "recorded_at": "2026-05-03T21:17:29+08:00",
+      "verified_fields": {
+        "platform_content_type": "video",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platforms/baijiahao.md",
+        "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/baijiahao/2026-05-03-ai-employee-data-center-review-video-001.md",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platform-upload-map.md",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review-publish.mp4",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-horizontal-4x3.png",
+        "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-vertical-3x4.png",
+        "pre_submit_title_counter": "30/50",
+        "pre_submit_title_readback": "视频发布成功后为什么还要进数据中心？大陈给机器人小马上了一课",
+        "ai_generated_disclosure_checked": true,
+        "cover_mode": "custom_horizontal_4x3_uploaded_with_vertical_3x4_backup_and_platform_cover_preview_confirmed",
+        "cover_warning": "图片存在边框，建议修改或删除；封面预览弹窗已确认后继续提交",
+        "duplicate_guard": "passed: before submit, local receipt had no baijiahao entry and Baijiahao 作品管理 exact-title search returned 共0篇",
+        "publish_success_text": "提交成功，正在审核中...",
+        "publish_success_source": "same Baijiahao edit target navigated from /builder/rc/edit?type=videoV2 to /builder/rc/clue after one CDP publish click",
+        "manager_row_status_text": null,
+        "manager_row_time": null,
+        "manager_list_context": "After submit, success page showed 提交成功，正在审核中...; 作品管理 exact-title search and 查看发布状态入口 still returned 共0篇 during immediate post-submit polling, so manager indexing was pending. No retry was attempted.",
+        "automation_route": "Chrome DevTools/CDP raw protocol on http://127.0.0.1:9223; local video/cover uploads were completed through CDP-attached browser flow before submit",
+        "screenshots": {
+          "before_upload": "/Users/baishangjituan/Documents/push/baijiahao-20260503-before-upload.png",
+          "after_cover_confirm": "/Users/baishangjituan/Documents/push/baijiahao-20260503-after-cover-confirm.png",
+          "before_publish": "/Users/baishangjituan/Documents/push/baijiahao-20260503-final-readback-before-submit.png",
+          "after_submit_early": "/Users/baishangjituan/Documents/push/baijiahao-20260503-after-submit.png",
+          "submit_success_clue": "/Users/baishangjituan/Documents/push/baijiahao-20260503-submit-success-clue.png",
+          "manager_exact_after_click": "/Users/baishangjituan/Documents/push/baijiahao-20260503-manager-after-click.png",
+          "manager_polling": "/Users/baishangjituan/Documents/push/baijiahao-20260503-manager-verified.png",
+          "status_from_clue": "/Users/baishangjituan/Documents/push/baijiahao-20260503-status-from-clue.png"
+        }
+      },
+      "notes": [
+        "published_verified_2026-05-03T21:17:29+08:00: Chrome DevTools/CDP endpoint 127.0.0.1:9223 was used as the preferred route. Duplicate guard checked local receipt and Baijiahao 作品管理 exact-title search before publishing; no baijiahao receipt or same-title manager row existed before submit. The flow uploaded the mp4, set the exact 30/50 title, checked 采用AI生成内容, uploaded the horizontal 4:3 local cover with vertical 3:4 backup, confirmed cover preview, clicked 发布 once, and the same editor target navigated to a platform success page showing 提交成功，正在审核中.... Immediate 作品管理 exact-title polling still returned 共0篇, so no retry was attempted and this receipt is recorded as under_review with manager indexing pending.",
+        "baijiahao_thread_scope: this entry records only the Baijiahao publish task in this thread; other platforms are intentionally out of scope for this thread.",
+        "feishu_notified_2026-05-03T21:18:04+08:00: sent Baijiahao publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b5040e10a64a4b4bc578f96c149c."
+      ],
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b5040e10a64a4b4bc578f96c149c",
+        "sent_at": "2026-05-03T21:18:04+08:00"
+      }
+    },
+    "bilibili": {
+      "campaign_id": "2026-05-03-ai-employee-data-center-review",
+      "platform_id": "bilibili",
+      "status": "published_verified_in_manager",
+      "title": "只发布不算复盘：大陈让机器人小马进数据中心抓指标",
+      "description": "这条讲发布后的第二步：不是看到发布成功就结束，而是要进数据中心抓播放、完播、互动，再和同账号近 3-7 条同形态内容做对照。没有指标，就没有复盘依据。",
+      "current_url": "https://member.bilibili.com/platform/upload-manager/article",
+      "management_url": "https://member.bilibili.com/platform/upload-manager/article",
+      "share_link": "https://www.bilibili.com/video/BV1s6RcBjEjd/",
+      "external_id": "BV1s6RcBjEjd",
+      "aid": "116510920022621",
+      "recorded_at": "2026-05-03T21:41:27+08:00",
+      "platform_published_at": "2026-05-03 21:40:58",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platforms/bilibili.md",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review-publish.mp4",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-horizontal-4x3.png",
+      "category": "人工智能",
+      "tags": [
+        "复盘",
+        "学习",
+        "AI员工"
+      ],
+      "ai_declaration": "作者声明：该视频使用人工智能合成技术",
+      "automation_route": {
+        "primary": "Chrome DevTools/CDP checked on http://127.0.0.1:9223; used CDP for login/manager checks and DOM readback; B站 file input required OpenCLI hidden-input fallback for upload; final submit/readback verified through BrowserBridge and manager page.",
+        "cdp_endpoint": "http://127.0.0.1:9223"
+      },
+      "verification": {
+        "submit_status": "稿件投递成功",
+        "api_endpoint": "https://member.bilibili.com/x/vu/web/add/v3",
+        "api_code": 0,
+        "api_bvid": "BV1s6RcBjEjd",
+        "manager_status": "已通过",
+        "manager_row_text": "全部稿件 8 草稿 进行中 0 已通过 8 未通过 0 00:00:16 只发布不算复盘：大陈让机器人小马进数据中心抓指标 2026年05月03日 21:40:58 编辑 数据 0 0 0 0 0 0 0",
+        "pre_submit": {
+          "title": "只发布不算复盘：大陈让机器人小马进数据中心抓指标",
+          "description": "这条讲发布后的第二步：不是看到发布成功就结束，而是要进数据中心抓播放、完播、互动，再和同账号近 3-7 条同形态内容做对照。没有指标，就没有复盘依据。",
+          "category": "人工智能",
+          "tags": [
+            "复盘",
+            "学习",
+            "AI员工"
+          ],
+          "cover": "https://archive.biliimg.com/bfs/archive/879bc762f0db7350940132ca09573aa84e57b5ba.jpg",
+          "ai_declaration": "作者声明：该视频使用人工智能合成技术",
+          "upload_complete": true
+        }
+      },
+      "notifications": {
+        "feishu": {
+          "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+          "message_id": "om_x100b504146a2b4a8b10a38d28a86204",
+          "create_time": "2026-05-03 21:41:27"
+        }
+      }
+    },
+    "xiaohongshu": {
+      "campaign_id": "2026-05-03-ai-employee-data-center-review",
+      "platform_id": "xiaohongshu",
+      "status": "published",
+      "title": "发完别走，先抓数据",
+      "description": "小马说全平台已发布，运营同事直接追问：播放、完播、评论在哪？大陈说，成功只是状态，数据才是复盘。AI员工要把指标带回来。",
+      "current_url": "https://creator.xiaohongshu.com/new/note-manager?source=official",
+      "management_url": "https://creator.xiaohongshu.com/new/note-manager?source=official",
+      "share_link": null,
+      "external_id": null,
+      "published_at": "2026-05-03T22:14:00+08:00",
+      "recorded_at": "2026-05-03T22:18:07+08:00",
+      "verified_fields": {
+        "account": "智能大陈",
+        "status_text": "已发布",
+        "manager_row_time": "2026年05月03日 22:14",
+        "manager_row_status_text": "已发布",
+        "manager_list_context": "笔记管理/已发布显示：00:15 / 发完别走，先抓数据 / 发布于 2026年05月03日 22:14 / 0 0 0 0 0",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platforms/xiaohongshu.md",
+        "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/xiaohongshu/2026-05-03-ai-employee-data-center-review-note-001.md",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platform-upload-map.md",
+        "final_verify": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/final-verify.json",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review-publish.mp4",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-vertical-3x4.png",
+        "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-horizontal-4x3.png",
+        "cover_mode": "default_first_frame_from_publish_video; final-verify confirms the publish video first frame contains the prepared vertical cover",
+        "custom_cover_upload": false,
+        "pre_submit_title_readback": "发完别走，先抓数据",
+        "pre_submit_body_readback": "小马说全平台已发布，运营同事直接追问：播放、完播、评论在哪？大陈说，成功只是状态，数据才是复盘。AI员工要把指标带回来。",
+        "duplicate_guard": "passed: local receipt had no xiaohongshu entry before submit and XHS note manager did not contain the exact title before publishing",
+        "publish_api_endpoint": "https://edith.xiaohongshu.com/web_api/sns/v2/note",
+        "publish_api_status": 200,
+        "publish_page_signal": "compose page changed to https://creator.xiaohongshu.com/publish/publish?source=official&published=true and reset to upload state after submit",
+        "automation_route": "Chrome DevTools/CDP raw protocol on http://127.0.0.1:9223; video uploaded via DOM.setFileInputFiles and the real enabled 发布 button was clicked after user confirmation",
+        "screenshots": {
+          "duplicate_guard_before": "/Users/baishangjituan/Documents/push/xhs-20260503-manager-before.png",
+          "before_publish": "/Users/baishangjituan/Documents/push/xhs-20260503-before-publish.png",
+          "after_publish_click": "/Users/baishangjituan/Documents/push/xhs-20260503-after-publish-click.png",
+          "manager_all_check": "/Users/baishangjituan/Documents/push/xhs-20260503-manager-check-reload.png",
+          "manager_under_review_check": "/Users/baishangjituan/Documents/push/xhs-20260503-manager-under-review.png",
+          "manager_published_check": "/Users/baishangjituan/Documents/push/xhs-20260503-manager-published.png"
+        }
+      },
+      "notes": [
+        "published_verified_2026-05-03T22:14:00+08:00: Chrome DevTools/CDP endpoint 127.0.0.1:9223 was used as the preferred route. Duplicate guard checked local receipt and XHS 笔记管理 before publishing; no xiaohongshu receipt or same-title manager row existed before submit. The flow uploaded the mp4 through DOM.setFileInputFiles, kept the default first-frame cover because final-verify confirms the prepared cover is embedded in the publish video first frame, filled the exact XHS title and body, clicked the real enabled 发布 button after explicit user confirmation, captured a 200 response from edith.xiaohongshu.com/web_api/sns/v2/note, observed the compose URL change to published=true, then verified the exact title in 笔记管理/已发布 with row time 2026年05月03日 22:14.",
+        "xiaohongshu_thread_scope: this entry records only the Xiaohongshu publish task in this thread; other platform receipt entries are historical context from their own flows and were not acted on here.",
+        "feishu_notification_not_sent_by_current_thread: no separate action-time confirmation was requested for third-party notification; local receipt was recorded after XHS verification."
+      ]
+    },
+    "zhihu": {
+      "campaign_id": "2026-05-03-ai-employee-data-center-review",
+      "platform_id": "zhihu",
+      "status": "published",
+      "title": "为什么内容发布成功后，还必须抓数据中心指标做对照？",
+      "description": "因为发布状态只能说明内容发出去了，不能说明内容表现。要做复盘，至少要有播放、完播、互动、发布时间、公开链接和同账号近 3-7 条同形态对照。没有这些字段，下一条内容只能靠猜。",
+      "current_url": "https://www.zhihu.com/pin/2034398485919832059?page=video_pin&scene=share",
+      "management_url": "https://www.zhihu.com/people/vkvtss-81/zvideos",
+      "share_link": "https://www.zhihu.com/pin/2034398485919832059?page=video_pin&scene=share",
+      "external_id": "2034398485919832059",
+      "published_at": "2026-05-03T22:26:00+08:00",
+      "recorded_at": "2026-05-03T22:27:29+08:00",
+      "verified_fields": {
+        "account": "智能大陈",
+        "platform_content_type": "video_pin",
+        "source_package_form": "视频回答/回答附视频",
+        "actual_publish_form": "知乎首页视频/想法入口；内容包未提供目标问题 URL，因此未进入具体问题回答页",
+        "status_text": "发布于 2026-05-03 22:26",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platforms/zhihu.md",
+        "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-03-ai-employee-data-center-review-answer-001.md",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platform-upload-map.md",
+        "final_verify": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/final-verify.json",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review-publish.mp4",
+        "uploaded_video_path": "/tmp/zhihu-20260503-publish.mp4",
+        "uploaded_video_sha256": "9291f3c41227aa8f304076f8f0efc8d96e01388e5b72bc91bb339557eba4fb74",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-vertical-3x4.png",
+        "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-horizontal-4x3.png",
+        "cover_mode": "知乎首页视频入口未出现独立题图/封面文件输入；按当前入口使用视频缩略图，原始主封面和备用封面作为素材证据保留",
+        "duplicate_guard": "passed: before submit, local receipt had no zhihu entry and Zhihu profile videos/posts did not contain the exact title or campaign id",
+        "pre_submit_title_readback": "为什么内容发布成功后，还必须抓数据中心指标做对照？",
+        "pre_submit_body_readback": "因为发布状态只能说明内容发出去了，不能说明内容表现。要做复盘，至少要有播放、完播、互动、发布时间、公开链接和同账号近 3-7 条同形态对照。没有这些字段，下一条内容只能靠猜。",
+        "pre_submit_video_check": "video card present, uploadActive=false, uploadFailure=false, publish button enabled",
+        "profile_row_context": "个人视频页显示：为什么内容发布成功后，还必须抓数据中心指标做对照？ / 发布于 2026-05-03 22:26；视频数从 3 增至 4",
+        "public_page_context": "公开 pin 页标题和正文均命中，页面显示 00:15 和 发布于 2026-05-03 22:26",
+        "automation_route": "Chrome DevTools/CDP endpoint 127.0.0.1:9223 was checked first; attached CDP Chrome was not logged into Zhihu, so without restarting logged-in Chrome the flow fell back to OpenCLI BrowserBridge. Real editor input was used for title/body and the real enabled 发布 button was clicked.",
+        "screenshots": {
+          "upload_ready": "/Users/baishangjituan/Documents/push/zhihu-20260503-video-upload-ready.png",
+          "before_publish": "/Users/baishangjituan/Documents/push/zhihu-20260503-video-before-publish.png",
+          "profile_check": "/Users/baishangjituan/Documents/push/zhihu-20260503-video-profile-check.png",
+          "public_check": "/Users/baishangjituan/Documents/push/zhihu-20260503-video-public-check.png"
+        }
+      },
+      "notes": [
+        "published_verified_2026-05-03T22:27:29+08:00: Duplicate guard checked local receipt and Zhihu profile videos/posts before publishing; no zhihu receipt or same-title profile item existed before submit. The first canonical-path upload attempt stalled at 0M/8M and no publish click was made. A byte-identical short-path copy at /tmp/zhihu-20260503-publish.mp4 uploaded successfully, then the flow inserted the exact title and body through real editor input, clicked the real enabled 发布 button, observed publish success, and verified the exact title/body on both the profile videos page and public pin page.",
+        "zhihu_thread_scope: this entry records only the Zhihu publish task in this thread; other platform receipt entries are historical context from their own flows and were not acted on here.",
+        "feishu_notification_not_sent_by_current_thread: this Zhihu-only thread did not receive a separate third-party notification instruction; local receipt was recorded after public verification."
+      ]
+    }
+  }
+}

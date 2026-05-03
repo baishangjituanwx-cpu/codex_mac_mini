@@ -1,0 +1,54 @@
+campaign_id: "2026-05-03-ai-employee-data-center-review"
+theme: "只发布不算复盘，AI员工必须进数据中心抓播放、完播、互动和同形态对照。"
+status: "ready_for_publish"
+package_status: "ready_for_platform_publishing"
+scope: "multi_platform_platform_threads"
+
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review-publish.mp4"
+  backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-horizontal-4x3.png"
+
+support_files:
+  content_package_root: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package"
+  final_verify_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/final-verify.json"
+  platform_upload_map: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platform-upload-map.md"
+  douyin_platform_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platforms/douyin.md"
+  wechat_channels_platform_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platforms/wechat-channels.md"
+  browser_checklist: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/browser-use-checklist.md"
+
+platform_upload_plan:
+  douyin:
+    publish_type: "short_video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review-publish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-horizontal-4x3.png"
+    title_source: "platforms.douyin.title"
+    description_source: "platforms.douyin.description"
+  wechat_channels:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review-publish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-horizontal-4x3.png"
+    title_source: "platforms.wechat_channels.title"
+    description_source: "platforms.wechat_channels.description"
+
+platforms:
+  douyin:
+    title: "只发布不算复盘"
+    description: "小马说全平台已发布，女性运营同事一句话把它问住：播放、完播、评论在哪？大陈说，成功只是状态，数据才是复盘。AI员工要进数据中心，把指标和对照带回来。#AI员工 #短视频运营 #数据复盘"
+  wechat_channels:
+    title: "只发布不算复盘"
+    description: "机器人小马汇报全平台已发布，女性运营同事追问播放、完播、评论在哪。大陈提醒：成功只是状态，数据才是复盘。AI员工要把指标和同形态对照带回来。"
+
+publishing:
+  preferred_automation: "Chrome DevTools/CDP"
+  publish_url: "https://channels.weixin.qq.com/platform/post/create"
+  management_url: "https://channels.weixin.qq.com/platform/post/list"
+  final_submit_requires_user_confirmation: true
+  douyin:
+    preferred_automation: "Chrome DevTools/CDP"
+    publish_url: "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page"
+    management_url: "https://creator.douyin.com/creator-micro/content/manage"
+    final_submit_requires_user_confirmation: true

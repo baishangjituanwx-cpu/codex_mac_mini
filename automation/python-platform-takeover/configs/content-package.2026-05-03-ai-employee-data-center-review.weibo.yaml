@@ -1,0 +1,28 @@
+campaign_id: "2026-05-03-ai-employee-data-center-review"
+theme: "只发布不算复盘，AI员工必须进数据中心抓播放、完播、互动和同形态对照。"
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review-publish.mp4"
+  backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-horizontal-4x3.png"
+support_files:
+  final_verify_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/final-verify.json"
+  platform_upload_map: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platform-upload-map.md"
+  weibo_platform_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platforms/weibo.md"
+  weibo_content_library_path: "/Users/baishangjituan/Documents/New project/content-library/posts/weibo/2026-05-03-ai-employee-data-center-review-video-post-001.md"
+publish_constraints:
+  reuse_logged_in_publish_page: true
+  skip_duplicate_if_already_published: true
+  prefer_repair_existing_post_over_republish: true
+  require_management_page_verification: true
+  require_active_campaign_lock: true
+platform_upload_plan:
+  weibo:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review-publish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-horizontal-4x3.png"
+platforms:
+  weibo:
+    title: "机器人小马说全平台已发布，大陈为什么还不让收工？"
+    description: "机器人小马说全平台已发布，女性运营同事立刻追问：播放、完播、评论在哪？大陈说，成功只是状态，数据才是复盘。AI员工不是发完就走，还要进数据中心把指标带回来。#AI员工 #内容运营 #数据复盘"
