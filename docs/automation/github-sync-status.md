@@ -12,6 +12,392 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-03 22:01:09 CST
+- 检测到新的技能变更批次: 新增 `5`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover`：新增了 `2026-05-03-ai-employee-data-center-review` 的 5 张快手发布/管理页截图，并把同名 `publish-receipts` 台账从初始化状态扩展成包含头条、快手、百家号和 B 站结果的多平台发布留痕。
+- 建议后续执行 GitHub 同步，避免这批最新 `python-platform-takeover` 截图证据与跨平台 receipt 状态继续只停留在本地工作区。
+
+## 2026-05-03 00:04:04 CST
+- 处理时间:
+  - `2026-05-03 00:04:04 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-05-02 22:02:44 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本轮同步分支:
+  - `codex/default-python-sync`: 是。当前 generic / Mac 兼容 `python-platform-takeover` 内容，以及 `seedance-video-api` 文档镜像、receipt / screenshot 留痕和自动化状态记录，已经落在提交 `e429eee`。
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows 专属 bridge / deployment payload 需要单独切到 Windows 支线。
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。检测到 `seedance-video-api` 女性配角 `reference_image` 规则、`2026-05-02-ai-employee-writeback-after-publish` campaign 配置 / receipt / screenshot，以及 `skill-change-monitor`、`windows-translation-status`、`github-sync-status` 的新增记录。
+  - `codex/windows-version-20260411`: 否。今天与 Windows 相关的新增内容只体现为共享 skill 文档里的 handoff 约束和完整性状态留痕，没有新的 Windows 专属桥接脚本、安装器、部署模板或支线资源副本。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。同步内容已由现有提交承载:
+    - `Sync May 2 Seedance and publish receipt updates`
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows-only 提交需要创建。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。`origin/codex/default-python-sync` 已到达 `e429eee`。
+  - `codex/windows-version-20260411`: 否。无需推送。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync May 2 Seedance and publish receipt updates`
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - 跳过了 `codex/windows-version-20260411` 的提交与推送，因为当前仓库没有新的 Windows 专属 bridge / deployment payload；本轮新增的 Windows 相关内容只体现在共享 skill 文档约束与 Windows 完整性状态留痕中，不需要单独的 Windows 分支同步。
+
+## 2026-05-02 22:27:17 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `2`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/SKILL.md` 和 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/workflows.md`；核心是把 `大陈 / AI员工 / 机器人小马` 这条 Seedance API 视频线的默认女性配角规则进一步写入仓库镜像，要求默认附带 `asset://asset-20260401123823-6d4x2` 作为额外 `reference_image`，并明确 Windows handoff 时不得把该 asset URI 改写成本地 `C:/...` 路径。
+- 建议后续执行 GitHub 同步，避免这批最新 `skill-center/seedance-video-api` 女性配角与 Windows handoff 口径继续只停留在本地工作区。
+
+## 2026-05-02 18:22:08 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `8`，删除 `0`。
+- 这批变更集中在 live `~/.codex/skills/seedance-video-api` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api` 的主说明、prompt 模板、真人一致性说明和工作流文档；核心是把 `大陈 / AI员工 / 机器人小马` 这条 Seedance API 视频线改成默认带女性配角素材 `asset://asset-20260401123823-6d4x2`，并新增独立 `reference_image` 与反混脸/保身份规则。
+- 建议后续执行 GitHub 同步，避免这批最新 `seedance-video-api` 人物一致性规则继续只停留在本地工作区。
+
+## 2026-05-02 16:18:24 CST
+- 检测到新的技能变更批次: 新增 `1`，修改 `1`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-02-ai-employee-writeback-after-publish.json` 和 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/bilibili-management-published-20260502-1545.png`；核心是把同一 campaign 的 B 站回执补写为 `BV1HGRjBDEJH` 已发布，并新增稿件管理页截图作为 exact-title / BVID 核验证据。
+- 建议后续执行 GitHub 同步，避免这批最新 `python-platform-takeover` B 站 publish receipt 与截图留痕继续只停留在本地工作区。
+
+## 2026-05-02 15:16:03 CST
+- 检测到新的技能变更批次: 新增 `6`，修改 `0`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-02-ai-employee-writeback-after-publish.yaml`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-02-ai-employee-writeback-after-publish.json` 和 4 张快手流程 / 管理页截图；核心是新增“发布后必须写回结果”的 campaign 配置，并把微博、小红书、快手、抖音、视频号的当前执行状态补进 receipt，同时保留快手从发布页到管理页核验的截图证据。
+- 建议后续执行 GitHub 同步，避免这批新的 `python-platform-takeover` campaign 配置、跨平台回执台账和快手截图留痕继续只停留在本地工作区。
+
+## 2026-05-02 00:41:46 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`；核心是把同一 campaign 的小红书回执补到“已提交并在笔记管理显示审核中”，并新增微信视频号 `已发表` 回执、`export/UzFfBgAAxJSjQGlgLV2cjczT4DCatbcEnxQ01MtRyzWTfTF6mQ` 对象 ID、封面缩略图核验与飞书通知元数据。
+- 该批次已包含在 `origin/codex/default-python-sync` 的 `d12b8ed`（`Sync May 1 Seedance cover and receipt updates`）以及 `2026-05-02 00:02:16 CST` 的同步记录中，本条仅补监控留痕；当前不需要额外 GitHub 同步动作。
+
+## 2026-05-01 23:40:45 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`；核心是把快手 receipt 从 `under_review` 推进为 `published`，补上 `已发布` tab 的管理页核验、`待发布` / `未通过` 都为 `0` 的去重证据，以及“不要重复重发”的阻断结论。
+- 建议后续执行 GitHub 同步，避免这条最新 `python-platform-takeover` 快手发布回执继续只停留在本地工作区。
+
+## 2026-05-01 22:38:55 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `3`，删除 `0`。
+- 这批变更集中在 `skill-center/skills/platform-cover-ops/SKILL.md` 与 `automation/python-platform-takeover` 的 `2026-05-01-dachen-xiaoma-argue-fix-old-post` campaign 配置 / receipt；核心是收紧 Seedance 固定封面规范，并继续补全 B站、抖音、知乎等平台的发布包与回执留痕。
+- 建议后续执行 GitHub 同步，避免最新封面规则和 `python-platform-takeover` campaign 台账继续只停留在本地工作区。
+
+## 2026-05-01 17:31:23 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`；核心是把同一 campaign 的 B 站 publish receipt 补写为 `BV1FHRTB9EgW` 已提交、管理页 `转码完成 / 审核中` 已核验，并记录 CDP 不可用时切到 OpenCLI Browser Bridge 与飞书通知回执。
+- 建议后续执行 GitHub 同步，避免这条最新 `python-platform-takeover` 发布台账继续只停留在本地工作区。
+
+## 2026-05-01 00:11:58 CST
+- 检测到新的技能变更批次: 新增 `2`，修改 `8`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover` 的 receipt 兼容与 `2026-04-30-repair-existing-not-republish` campaign 台账，以及 `skill-center` 对头条号封面优先级和账号审核阻断的规则补充。
+- 该批次已包含在 `origin/codex/default-python-sync` 的 `f01c4f1` 与 `b3539d9` 中，本条仅补监控留痕；当前不需要额外 GitHub 同步动作。
+
+## 2026-05-01 00:10:09 CST
+- 处理时间:
+  - `2026-05-01 00:10:09 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-04-30 22:05:10 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本轮同步分支:
+  - `codex/default-python-sync`: 是。推送本地已存在但尚未上传的 follow-up 提交，补齐 receipt 阻断态测试与状态留痕。
+  - `codex/windows-version-20260411`: 是。将 Windows 专属发布阻断说明和转译状态记录单独回补到 Windows 支线。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。沿用本地已存在的 2 个 follow-up 提交:
+    - `Add publish receipt compatibility tests`
+    - `Record 2026-05-01 sync follow-up status`
+  - `codex/windows-version-20260411`: 是。本轮新增提交:
+    - `Sync Windows publish blocking guidance`
+- 是否已推送:
+  - `codex/default-python-sync`: 是。已推送到 `origin/codex/default-python-sync`，远端到达 `71b41f1`。
+  - `codex/windows-version-20260411`: 是。已推送到 `origin/codex/windows-version-20260411`，远端到达 `02d6e33`。
+- 提交信息:
+  - `codex/default-python-sync`: `Add publish receipt compatibility tests`
+  - `codex/default-python-sync`: `Record 2026-05-01 sync follow-up status`
+  - `codex/windows-version-20260411`: `Sync Windows publish blocking guidance`
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - `2026-04-30` 的 generic payload 与 `2026-05-01 00:05:21 CST` 的首条同步记录在本轮开始前已经存在于 `codex/default-python-sync`；本轮只补推 default 分支的 follow-up 提交，并把 Windows 专属说明文件补推到 `codex/windows-version-20260411`。
+
+## 2026-05-01 00:07:11 CST
+- 处理时间:
+  - `2026-05-01 00:07:11 CST`
+- 本次检查的分支:
+  - `codex/default-python-sync`
+- 是否检测到新增或修改:
+  - 是。
+  - 首次推送完成后复核工作区时，发现 `automation/python-platform-takeover/tests/test_publish_receipts.py` 仍有一组未同步的测试更新；内容是把 `blocked_account_review_pending` 阻断态和 receipt 扩展字段兼容补成显式测试覆盖。
+- 是否已提交:
+  - 是。本轮 follow-up 追加 2 个提交:
+    - `Add publish receipt compatibility tests`
+    - `Record 2026-05-01 sync follow-up status`
+- 是否已推送:
+  - `codex/default-python-sync`: 是。上述 follow-up 提交会继续推送到 `origin/codex/default-python-sync`。
+- 提交信息:
+  - `codex/default-python-sync`: `Add publish receipt compatibility tests`
+  - `codex/default-python-sync`: `Record 2026-05-01 sync follow-up status`
+- 若跳过，说明跳过原因:
+  - 未跳过。该 follow-up 只用于补齐同一批 receipt 兼容改动的测试覆盖，避免仓库远端状态与本地工作区再次分叉。
+
+## 2026-05-01 00:05:21 CST
+- 处理时间:
+  - `2026-05-01 00:05:21 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-04-30 22:05:10 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本轮同步分支:
+  - `codex/default-python-sync`: 是。
+  - `codex/windows-version-20260411`: 否。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。本轮拆成 2 个清晰提交:
+    - `Sync April 30 repair receipt and skill updates`
+    - `Record 2026-05-01 GitHub sync execution`
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows-only bridge / deployment payload 需要生成提交。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。上述提交会一起推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 无需推送。本轮没有新的 Windows-only 变更。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync April 30 repair receipt and skill updates`
+  - `codex/default-python-sync`: `Record 2026-05-01 GitHub sync execution`
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - 跳过了 `codex/windows-version-20260411` 的提交与推送，因为当前批次虽然包含 Windows 覆盖说明与 `windows-translation-status` 记录更新，但没有新的 Windows-only bridge、PowerShell / `.cmd` 启动器、独立安装器、模板部署资源或支线部署文档需要单独上传。
+
+## 2026-04-30 23:09:15 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `6`，删除 `0`。
+- 这批变更集中在 live `~/.codex/skills` 与 `skill-center` 的 `platform-cover-ops`、`seedance-video-api`，以及 `automation/python-platform-takeover/state/publish-receipts` 的两份头条号相关 receipt；核心是把 Seedance 视频在头条号的默认封面收紧为竖版 `3:4` 优先，并把头条号账号审核阻断到恢复发表后的状态演进写回 receipt。
+- 建议后续执行 GitHub 同步，避免 live skill、`skill-center` 镜像与 `python-platform-takeover` 最新回执状态继续只停留在本地工作区。
+
+## 2026-04-30 22:07:28 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `3`，删除 `0`。
+- 这批变更集中在 `skill-center/skills/social-publish-automation`、`skill-center/skills/toutiao-ops` 和 `automation/python-platform-takeover/README.md`；核心是把 `blocked_account_review_pending` 固化为账号审核阻断态，明确被平台账号审核卡住时不能清 receipt 后重发，并补充 receipt 额外核验字段应由共享 loader 兼容、而不是手工删键绕过。
+- 建议后续执行 GitHub 同步，避免 `skill-center` 防重发规则和 `python-platform-takeover` 的 Windows 交接说明继续只停留在本地工作区。
+
+## 2026-04-30 14:56:19 CST
+- 检测到新的技能变更批次: 新增 `2`，修改 `0`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover`：新增了 `2026-04-30-repair-existing-not-republish` 的内容包配置和同名 publish receipt，把“封面或描述不对时先修旧条、确认失败再重发”的 campaign 约束，以及 Bilibili / 知乎已发布留痕与视频号初始化台账写回本地。
+- 建议后续执行 GitHub 同步，避免这批新 campaign 配置与 receipt 台账继续只停留在本地工作区。
+
+## 2026-04-29 17:29:09 CST
+- 检测到新的技能变更批次: 新增 0，修改 7，删除 0。
+- 这批变更集中在两条线：live / `skill-center` 的 `social-publish-automation` 与 `kuaishou-ops` 继续把浏览器执行口径前移到“保登录态前提下的 CDP-first”；`automation/python-platform-takeover` 则收紧了抖音上传页复用、补上旧 receipt 缺失 `title` 的兼容逻辑，并把 `2026-04-29-platform-execution-lock-campaign-four-checks` 的快手回执推进到 `published`。
+- 建议后续执行 GitHub 同步，避免这批 CDP-first 规则、receipt 兼容修复与快手最新回执继续只停留在本地工作区。
+
+## 2026-04-29 17:29:40 CST
+- 检测到新的技能变更批次: 新增 0，修改 7，删除 0。
+- 这批变更集中在三处：live `seedance-video-api` 与 `skill-center` 镜像把可发布内容包收紧为必须附带逐平台 upload matrix，并继续要求标题与文案优先来源于最新已完成 review；live / mirror `toutiao-ops` 把头条号默认口径拉回 Seedance 视频发布；`automation/python-platform-takeover` 的 `2026-04-29-platform-execution-lock-campaign-four-checks` YAML 则从初始文案配置扩展成完整的 9 平台上传执行包，补齐 active-campaign lock、四项读回和逐平台上传策略。
+- 建议后续执行 GitHub 同步，避免这批 live skill 规则、`skill-center` 镜像和 `python-platform-takeover` campaign 配置继续只停留在本地工作区。
+
+## 2026-04-29 15:29:39 CST
+- 检测到新的技能变更批次: 新增 2，修改 5，删除 0。
+- 这批变更分成两组：`automation/python-platform-takeover` 新增了 `2026-04-29-platform-execution-lock-campaign-four-checks` 的内容包配置和初始化 receipt，把“先锁当前批次、再做视频/封面/短标题/描述四项读回”的事故防线固化下来；与此同时，live `social-publish-automation`、`kuaishou-ops` 与 `seedance-video-api` / `skill-center` 把浏览器执行口径进一步收紧到保会话的 CDP-first 路径，并要求平台文案优先基于最新已完成 review 生成。
+- 建议后续执行 GitHub 同步，避免这批新 campaign 台账、review-first 文案规则和 live skill 漂移继续只停留在本地工作区。
+
+## 2026-04-29 11:23:25 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-28-platform-execution-early-zero-not-failure.json`；核心是把同一 `2026-04-28` campaign 的微博回执推进到 `published`，补上 `weibo_20260429_AXJPD8GP` 与短链 `http://t.cn/AXJPD8GP`，同时把快手推进到“管理页已出现当前文案、状态为审核中”的 `under_review` 留痕。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的最新跨平台 publish receipt 进展继续只停留在本地工作区。
+
+## 2026-04-29 05:13:50 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-28-platform-execution-early-zero-not-failure.json`；核心是把 `2026-04-28-platform-execution-early-zero-not-failure` campaign 的视频号回执从 `not_started` 推进到 `published`，补上 `wechat_channels_202604290434`、`2026-04-29 04:34` 列表命中与封面校验说明，同时把其他平台“管理页已扫但未命中精确当前包标题”的反重发备注正式写回 receipt。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的最新 `publish-receipts` 状态与实际发布核验结果继续只停留在本地工作区。
+
+## 2026-04-29 00:03:27 CST
+- 处理时间:
+  - `2026-04-29 00:03:27 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-04-28 22:05:38 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本轮同步分支:
+  - `codex/default-python-sync`: 是。
+  - `codex/windows-version-20260411`: 否。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。当前待推送内容已由现有本地提交承载:
+    - `Sync April 28 publish guard and Seedance packaging updates`
+    - `Record 2026-04-29 GitHub sync execution`
+    - `Record 2026-04-29 sync follow-up status`
+    - `Record 2026-04-29 skill monitor follow-up`
+    - `Record 2026-04-28 zero-delta skill monitor checkpoint`
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows-only bridge / deployment payload 需要生成提交。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。上述提交已推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 无需推送。本轮没有新的 Windows-only 变更。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync April 28 publish guard and Seedance packaging updates`
+  - `codex/default-python-sync`: `Record 2026-04-29 GitHub sync execution`
+  - `codex/default-python-sync`: `Record 2026-04-29 sync follow-up status`
+  - `codex/default-python-sync`: `Record 2026-04-29 skill monitor follow-up`
+  - `codex/default-python-sync`: `Record 2026-04-28 zero-delta skill monitor checkpoint`
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - 跳过了 `codex/windows-version-20260411` 的提交与推送，因为当前批次只有通用 / Mac 兼容的 `python-platform-takeover`、`skill-center`、内容模板、回执与自动化状态记录更新，没有新的 Windows 专属 bridge 或 deployment 脚本、模板资源、安装器或支线部署说明需要单独上传。
+
+## 2026-04-28 23:05:44 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/README.md`；核心是把 `2026-04-28` 当天新增的 anti-duplicate 规则补到 Windows 操作说明里，明确新 campaign 必须锁定当前 `campaign_id`、缺 receipt 先初始化、旧 receipt 只能算历史留痕，不能当作今天新包的成功证据。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的 Windows 发布口径继续落后于当天已经写入 live skill / `skill-center` 的反重发规则。
+
+## 2026-04-28 20:07:13 CST
+- 检测到新的技能变更批次: 新增 1，修改 6，删除 0。
+- 这批变更分成两组：live / `skill-center` 的 `social-publish-automation` 与 `wechat-channels-ops` 新增了“锁定当前 `campaign_id`、缺 receipt 先初始化、旧 campaign 只能算历史证据”的反重发规则；`automation/python-platform-takeover` 则新增 `2026-04-28-platform-execution-early-zero-not-failure` 的 receipt 台账、补齐同名内容包里的 B 站配置，并继续把 `2026-04-27-platform-execution-verify-before-republish.json` 推进到抖音 / 视频号 / B 站都已发布。
+- 建议后续执行 GitHub 同步，避免 live skill、`skill-center` 镜像和 `python-platform-takeover` 的 campaign 锁包规则与最新回执状态继续只停留在本地工作区。
+
+## 2026-04-28 15:58:47 CST
+- 检测到新的技能变更批次: 新增 1，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/configs/content-package.2026-04-28-platform-execution-early-zero-not-failure.yaml` 和 `automation/python-platform-takeover/state/publish-receipts/2026-04-27-platform-execution-verify-before-republish.json`；核心是新增一份“早窗 0 不等于失败”的多平台内容包配置，并把既有 `verify-before-republish` 回执继续推进到抖音已发布、视频号复核通过发布，同时补记 B 站仍卡在封面设置入口的待处理说明。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的新 campaign 配置与最新多平台执行留痕继续只停留在本地工作区。
+
+## 2026-04-28 14:56:05 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-27-platform-execution-verify-before-republish.json`；核心是把同一 campaign 的抖音回执从 `pending` 推进为 `published`，补上对象 ID、管理页定位与 API 核验成功说明，并记录 B 站当前只剩封面上传入口不稳定这一阻塞点。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的最新 `verify-before-republish` receipt 进展继续只停留在本地工作区。
+
+## 2026-04-27 19:51:25 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-27-platform-execution-verify-before-republish.json`；核心是把该 campaign 的视频号执行留痕推进到“修旧条已提交，管理列表显示修改审核中”，补上 `2026-04-27 18:04` 既有记录的描述 / 封面修复备注与审核中阻断说明。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的最新视频号修复回执继续只停留在本地工作区。
+
+## 2026-04-27 12:43:21 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/configs/content-package.2026-04-27-platform-execution-verify-before-republish.yaml`；核心是继续扩写既有 `python-platform-takeover` campaign 内容包配置，把“先核验管理列表状态、优先修旧条、确认失败后再重发”的多平台样例补成 9 平台文案版本，并新增 B 站文案与更明确的人工 / AI 分工表述。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的 `verify-before-republish` campaign 配置继续只停留在本地工作区。
+
+## 2026-04-27 10:39:56 CST
+- 检测到新的技能变更批次: 新增 1，修改 0，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/configs/content-package.2026-04-27-platform-execution-verify-before-republish.yaml`；核心是新增一份 `python-platform-takeover` campaign 内容包配置，把 Seedance 主视频、3:4 / 4:3 封面包、以及“先核验管理列表状态，再决定修旧条还是重发”的多平台标题 / 描述 / 发布约束固化成可复用样例。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的新 campaign 配置样例只停留在本地工作区。
+
+## 2026-04-27 00:26:12 CST
+- 检测到新的技能变更批次: 新增 0，修改 3，删除 0。
+- 这批变更集中在 live `~/.codex/skills/seedance-video-api/scripts/render_cover_package.py`、`skill-center/skills/seedance-video-api/scripts/render_cover_package.py` 和 `automation/python-platform-takeover/state/publish-receipts/2026-04-25-platform-execution-six-writeback-fields.json`；核心是把 Seedance 封面渲染脚本升级为跨平台 runtime / 字体自动探测版本，并把抖音 receipt 收紧到 `cover_fix_under_review`，补齐封面替换复核留痕。
+- 建议后续执行 GitHub 同步，避免 live skill、`skill-center` 镜像和 `python-platform-takeover` 的封面渲染运行前提与抖音封面修复状态继续漂移。
+
+## 2026-04-27 00:03:38 CST
+- 处理时间:
+  - `2026-04-27 00:03:38 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-04-26 22:04:26 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - 是。
+  - 本地检查时确实存在一批待同步内容，集中在 `python-platform-takeover` 的 Seedance 内容包 / receipt、`skill-center` 镜像规则、模板文档，以及三份自动化状态文档。
+  - 但在实际推送前刷新远端后，发现 `origin/codex/default-python-sync` 已被并发同步推进，相关 payload 已由以下提交覆盖:
+    - `233e1aa` `Sync publish package handoff and receipt updates`
+    - `b95beca` `Record 2026-04-27 GitHub sync execution`
+  - `codex/windows-version-20260411`:
+    - 本轮没有新的 Windows-only bridge / deployment 脚本或独立资源增量。
+    - 当前修改主要是 cross-platform skill 文档、Seedance 交付标准、Python takeover 内容包与自动化状态记录，不单独拆到 Windows 支线。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。本轮不再重复创建 payload 提交，只追加一条 follow-up 状态记录，说明默认分支 payload 已被并发同步覆盖。
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows 专属提交需要生成。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。本条 follow-up 状态记录会推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows 专属内容需要推送。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync publish package handoff and receipt updates`（并发同步已完成）
+  - `codex/default-python-sync`: `Record 2026-04-27 GitHub sync execution`（并发同步已完成）
+  - `codex/default-python-sync`: `Record 2026-04-27 sync follow-up status`（本轮仅补状态说明）
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - 跳过了 `codex/default-python-sync` 的重复 payload 提交，因为刷新远端后确认同一批文件已经由并发同步提交覆盖。
+  - 跳过了 `codex/windows-version-20260411` 的提交与推送，因为当前仓库没有新的 Windows-only bridge / deployment payload；本轮 Windows 相关内容主要体现为 cross-platform 规则补记与状态文档更新。
+
+## 2026-04-26 23:25:30 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-25-platform-execution-six-writeback-fields.json`；核心是继续补写 Bilibili、抖音、快手、头条号、视频号五端回执，把该 campaign 从 4 平台记录扩展到 9 平台，并标明新增平台当前分别处于 `published` / `under_review` / `under_review` / `under_review` / `published` 状态。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的多平台发布回执与实际投放状态继续漂移。
+
+## 2026-04-26 22:23:32 CST
+- 检测到新的技能变更批次: 新增 0，修改 8，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/README.md`、`automation/python-platform-takeover/state/publish-receipts/2026-04-25-platform-execution-six-writeback-fields.json`、`skill-center/skills/seedance-video-api/**`、`skill-center/skills/social-publish-automation/**` 和 `skill-center/skills/wechat-channels-ops/**`；核心是把 Seedance 可发布交付标准正式升级为“视频 + 封面包 + 平台文案包”，把视频号 front-Chrome 上传回退写成 macOS `/tmp` 与 Windows `%TEMP%` 双平台的受控 exact-path 流程，并在既有 receipt 上补齐百家号发布留痕。
+- 建议后续执行 GitHub 同步，避免 `skill-center` 镜像与 `python-platform-takeover` 的交付规则、Windows 上传回退说明和最新跨平台发布回执继续漂移。
+
+## 2026-04-26 20:23:39 CST
+- 检测到新的技能变更批次: 新增 1，修改 0，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-25-platform-execution-six-writeback-fields.json`；核心是为 `2026-04-25-platform-execution-six-writeback-fields` 补录微博、小红书、知乎的发布回执与复核入口，明确当前分别处于 `published` / `under_review` / `published` 状态。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的跨平台发布回执与实际投放状态继续漂移。
+
+## 2026-04-26 18:19:44 CST
+- 检测到新的技能变更批次: 新增 1，修改 4，删除 0。
+- 这批变更集中在 live `~/.codex/skills/seedance-video-api`、`skill-center/skills/seedance-video-api/**` 和 `automation/python-platform-takeover/configs/content-package.2026-04-25-platform-execution-six-writeback-fields.yaml`；核心是把 Seedance 交付标准正式扩展为“视频 + 封面包 + 平台发布文案包”，并新增对应 campaign 的多平台成稿内容包配置。
+- 建议后续执行 GitHub 同步，避免 `skill-center` 镜像与 `python-platform-takeover` 的 Seedance 可发布内容包标准继续漂移。
+
+## 2026-04-26 17:18:30 CST
+- 检测到新的技能变更批次: 新增 0，修改 5，删除 0。
+- 这批变更集中在 `skill-center/skills/social-publish-automation/**`、`skill-center/skills/wechat-channels-ops/**` 和 `automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json`；核心是把视频号 front-Chrome fallback 固化为短 `/tmp` 实体文件上传 + create 页重聚焦 + Shadow DOM 字段精确回读 + 列表终验，并把对应 publish receipt 正式收敛到 `published_verified`。
+- 建议后续执行 GitHub 同步，避免 `skill-center` 镜像与 `python-platform-takeover` 的视频号发布规则和回执状态继续漂移。
+
+## 2026-04-26 17:05:22 CST
+- 处理时间:
+  - `2026-04-26 17:05:22 CST`
+- 本次检查的分支:
+  - `codex/default-python-sync`
+- 是否检测到新增或修改:
+  - 是。
+  - 本轮同步的是视频号发布流程的状态与交接记录，不再重复提交 skill 规则本体。
+  - 待同步内容:
+    - `automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json`
+    - `docs/automation/skill-change-monitor.md`
+    - `docs/automation/github-sync-status.md`
+- 是否已提交:
+  - 是。本轮将以独立状态提交同步。
+- 是否已推送:
+  - 待本条记录随状态提交推送后生效。
+- 提交信息:
+  - `Record WeChat Channels publish verification state`
+- 若跳过，说明跳过原因:
+  - 未跳过。该批次用于让其他 Codex 设备复用同一视频号执行状态，避免后续误判为未完成或重复发布。
+
+## 2026-04-26 11:09:02 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json`；核心是把视频号回执从 `under_review` 更新为 `published_verified`，补记 2026-04-26 09:25 的替换重发成功、管理列表校验通过，以及新的封面/视频素材与验证截图留痕。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的 publish receipt 状态与实际发布结果继续漂移。
+
+## 2026-04-26 13:12:03 CST
+- 检测到新的技能变更批次: 新增 0，修改 6，删除 0。
+- 这批变更集中在 live `~/.codex/skills` 与仓库 `skill-center` 镜像的 `social-publish-automation`、`wechat-channels-ops`；核心是把视频号发布 fallback 收紧成已验证流程：短 `/tmp` 实体文件上传、避免 list/create 页抢焦点、Shadow DOM 字段精确回读，以及最终以 `视频管理` 最新行做成功校验。
+- 建议后续执行 GitHub 同步，避免 live skill 与 `skill-center` 镜像的视频号规则继续漂移。
+
+## 2026-04-26 00:57:46 CST
+- 技能变更监控在上一轮基线后确认到 1 个新批次：`automation/python-platform-takeover/README.md` 与 `automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json`。
+- 该批次已经在 `2026-04-26 00:02:21 CST` 随提交 `6737cde` 同步到 `codex/default-python-sync`，当前没有额外待补的 GitHub 同步动作。
+
+## 2026-04-26 00:01:35 CST
+- 处理时间:
+  - `2026-04-26 00:01:35 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-04-25 22:05:00 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - 是。
+  - `codex/default-python-sync` 待同步内容:
+    - `automation/python-platform-takeover/README.md`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json`
+    - `docs/automation/skill-change-monitor.md`
+    - `docs/automation/windows-translation-status.md`
+    - `docs/automation/github-sync-status.md`
+  - `codex/windows-version-20260411`:
+    - 本轮没有新的 Windows-specific bridge / deployment 工作区增量。
+    - 当前修改均为 cross-platform 的 `python-platform-takeover` 内容或自动化状态记录，不属于该分支的目标 payload。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。已创建 payload 提交 `6737cde`，提交信息为 `Sync python takeover README and receipt updates`。
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows 专属提交需要生成。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。本轮会将 payload 提交和本条同步记录一并推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows 专属内容需要推送。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync python takeover README and receipt updates`
+  - `codex/default-python-sync`: `Record 2026-04-26 GitHub sync execution`
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - 跳过了 `codex/windows-version-20260411` 的提交与推送，因为当前仓库没有新的 Windows 专属 bridge / deployment 更新；相关 Windows 完整性补齐已体现在状态文档中，但没有独立的 Windows-only payload 需要单独发支线分支。
+
+## 2026-04-25 22:54:54 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md`；核心是把视频号封面上传的真实图片输入链路、必须点击真实 `发表` 按钮、封面人物主体可见性，以及 `verified_cover_repair_failed_locked` / `under_review` 的替换发布判定补成正式跨平台操作规则。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的 README 操作准则与实际执行口径继续漂移。
+
 ## 2026-04-25 15:45:56 CST
 - 检测到新的技能变更批次: 新增 0，修改 7，删除 0。
 - 这批变更集中在视频号封面上传与替换发布规则的再次收紧：live skill 和 `skill-center` 镜像新增人物主体可见性、真实图片输入上传、禁用 AppleScript 路径输入、要求点击真实 `发表` 按钮，并把替换发布后的新对象 ID、`under_review` 状态和验证截图写回 `publish-receipts`。
@@ -874,6 +1260,85 @@
 - 这批变更分成三组：`multi-platform-content-review-skill` 与 `data-review` 新增 dashboard 设备绑定流和脚本上传流的分离规则；`platform-cover-ops`、`social-publish-automation`、`wechat-channels-ops` 把“必须对图片文件输入框做真实上传、禁止伪造 `input.files`”写成硬约束；`python-platform-takeover` 的视频号内容包、映射、实现和回执则跟进封面修复失败后的锁定态。
 - 建议后续执行 GitHub 同步，避免 live skill、`skill-center` 镜像与 `python-platform-takeover` 的视频号封面规则继续漂移。
 
+## 2026-04-25 22:54:51 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/README.md`；核心是把视频号封面上传必须走真实图片输入框、提交必须点击真实 `发表` 按钮，以及封面修复失败锁定态 / 替换发布后 `under_review` 回执解释写成正式规则。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的 README 操作规范与实际技能执行口径继续漂移。
+
+## 2026-04-26 10:07:44 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json`；核心是把视频号 `wechat_channels` 样例回执从 `under_review` 更新为 `published_verified`，补记替换重发成功后的最终素材路径、列表校验时间和验证截图。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的样例发布回执与实际执行结果继续漂移。
+
+## 2026-04-26 12:10:33 CST
+- 检测到新的技能变更批次: 新增 0，修改 5，删除 0。
+- 这批变更分成两组：live `~/.codex/skills` 与 `skill-center` 镜像里的 `social-publish-automation`、`wechat-channels-ops` 同步补上视频号前台 Chrome 接管、短 `/tmp` 非 symlink 原生上传回退、Shadow DOM 字段精确回读，以及 create/list 双标签防串页规则；`automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json` 则把同一案例的回执状态收敛到 `published_verified`。
+- 建议后续执行 GitHub 同步，避免 live skill、`skill-center` 镜像和 `python-platform-takeover` 的视频号发布规则与实操回执继续漂移。
+
+## 2026-04-26 13:12:56 CST
+- 检测到新的技能变更批次: 新增 0，修改 6，删除 0。
+- 这批变更集中在 live `~/.codex/skills` 与 `skill-center` 镜像里的 `social-publish-automation/references/platform-notes.md`、`wechat-channels-ops/references/platform-notes.md` 和 `wechat-channels-ops/SKILL.md`；核心是把视频号前台 Chrome 回退、短 `/tmp` 非 symlink 真文件上传、`create` / `list` 双标签防串页、Shadow DOM 字段精确写回，以及 `2026-04-26` 已验证的替换发布步骤补成正式规则。
+- 建议后续执行 GitHub 同步，避免 live skill 与 `skill-center` 镜像的最新视频号接管规则继续漂移。
+
+## 2026-04-26 20:21:49 CST
+- 检测到新的技能变更批次: 新增 1，修改 0，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-25-platform-execution-six-writeback-fields.json`；核心是为 `2026-04-25-platform-execution-six-writeback-fields` 新增一份多平台发布回执样例，固化微博 / 知乎的已发布状态、小红书的审核中状态，以及对应标题和管理链接。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的发布回执样例与实际执行留痕继续漂移。
+
+## 2026-04-26 23:25:43 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-25-platform-execution-six-writeback-fields.json`；核心是把上一轮仅覆盖百家号 / 微博 / 小红书 / 知乎的回执继续扩展成九平台总账，新增 B 站 / 抖音 / 快手 / 头条 / 视频号五端条目，并固化各端标题、管理 URL、记录时间和最新状态。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的多平台发布回执样例继续落后于真实执行状态。
+
+## 2026-04-27 00:02:08 CST
+- 处理时间:
+  - `2026-04-27 00:02:08 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-04-26 22:04:26 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本轮同步分支:
+  - `codex/default-python-sync`: 是。同步 `python-platform-takeover` 的 Seedance publish-copy handoff 规则、`2026-04-25-platform-execution-six-writeback-fields` 配置与九平台回执、`skill-center` 技能镜像、内容包模板，以及监控 / Windows 完整性文档。
+  - `codex/windows-version-20260411`: 否。本轮没有新增的 Windows-specific bridge / deployment payload；当前更新虽然补充了 Windows 说明，但都落在共享 skill / README / receipt / template 文件里，不属于需要单独推到 Windows 分支的桥接或部署资产。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。内容提交信息为 `Sync publish package handoff and receipt updates`；并补充本条同步记录提交 `Record 2026-04-27 GitHub sync execution`。
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows-only 提交需要生成。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。应将上述两笔提交推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 无需推送。本轮没有新的 Windows-only 变更，且该分支当前不领先远端。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync publish package handoff and receipt updates`
+  - `codex/default-python-sync`: `Record 2026-04-27 GitHub sync execution`
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - 跳过了 `codex/windows-version-20260411` 的新提交与推送，因为当前仓库没有新的 Windows 专属 bridge / deployment payload 需要上传。
+
+
+## 2026-04-29 11:23:53 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-28-platform-execution-early-zero-not-failure.json`；核心是为同一 `04-28 early-zero-not-failure` campaign 追加多平台管理页扫描结论，明确近似旧条不能算当前包成功，并把视频号推进到 `published`、微博推进到 `published`、快手推进到 `under_review`。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的最新 publish receipt 状态与这次监控批次继续只停留在本地工作区。
+
+## 2026-04-27 14:44:03 CST
+- 检测到新的技能变更批次: 新增 1，修改 0，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-27-platform-execution-verify-before-republish.json`；核心是为“先核验发布状态，再决定修旧条还是重发”campaign 新增一份多平台执行回执，记录微博 / 头条已发布、快手 / 小红书审核中、视频号权限阻断，以及其余平台待处理状态。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的最新 campaign 执行留痕继续只停留在本地工作区。
+
+
+## 2026-04-27 15:47:05 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-27-platform-execution-verify-before-republish.json`；核心是把该 campaign 的既有多平台回执继续补全到百家号和知乎两端的已发布结果，同时补上百家号重开编辑页备注、知乎公开链接和创作中心 404 核验说明。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的最新 campaign 执行留痕与本地监控记录继续漂移。
+
+## 2026-04-27 19:51:47 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-27-platform-execution-verify-before-republish.json`；核心是把 `wechat_channels` 回执推进到“修改审核中”状态，补记既有 `2026-04-27 18:04` 行已通过“修改描述和封面”修正，以及“预计 30 分钟内完成审核、期间不得重发”的阻断说明。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的视频号修正状态与本地监控记录继续漂移。
+
+## 2026-04-27 22:53:26 CST
+- 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
+- 这批变更集中在 `automation/python-platform-takeover/README.md`；核心是补上一条正式 Windows 交接约束，明确仓库里日期化内容包样例若写死 macOS `/Users/...` 素材路径，必须先复制成本地配置并替换成真实存在的 Windows 绝对路径，不能直接原样执行。
+- 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的 README 运行前提与实际 Windows 执行口径继续漂移。
+
 ## 2026-04-28 00:08:17 CST
 - 处理时间:
   - `2026-04-28 00:08:17 CST`
@@ -887,7 +1352,7 @@
   - `codex/default-python-sync`: 是。内容提交信息为 `Sync April 27 Python takeover payload`；并补充本条同步记录提交 `Record 2026-04-28 GitHub sync execution`。
   - `codex/windows-version-20260411`: 否。本轮没有新的 Windows-only 提交需要生成。
 - 是否已推送:
-  - `codex/default-python-sync`: 是。`Sync April 27 Python takeover payload` 已在 `origin/codex/default-python-sync`；本条同步记录提交完成后也应推送到同一远端分支。
+  - `codex/default-python-sync`: 是。应将上述两笔提交推送到 `origin/codex/default-python-sync`。
   - `codex/windows-version-20260411`: 无需推送。本轮没有新的 Windows-only 变更，且该分支不需要新增同步提交。
 - 提交信息:
   - `codex/default-python-sync`: `Sync April 27 Python takeover payload`
@@ -895,3 +1360,214 @@
 - 若跳过，说明跳过原因:
   - 未跳过同步前置检查。
   - 跳过了 `codex/windows-version-20260411` 的新提交与推送，因为当前仓库没有新的 Windows 专属 bridge / deployment payload 需要上传。
+
+## 2026-04-28 20:04:29 CST
+- 检测到新的技能变更批次: 新增 1，修改 6，删除 0。
+- 这批变更集中在 live `~/.codex/skills/social-publish-automation`、`~/.codex/skills/wechat-channels-ops`、对应 `skill-center` 镜像，以及 `automation/python-platform-takeover` 的 `04-28 early-zero-not-failure` YAML / receipt 和 `04-27 verify-before-republish` receipt；核心是把“先锁定当前 campaign_id、缺 receipt 先初始化、旧 campaign 记录不能替代新任务”收紧成正式规则，并把 `04-27` 的视频号、B 站回执推进到已发布复核完成。
+- 建议后续执行 GitHub 同步，避免 live skill、`skill-center` 镜像和 `python-platform-takeover` 的新 campaign 防重发规则与最新 receipt 留痕继续只停留在本地工作区。
+
+## 2026-04-28 00:10:42 CST
+- 处理时间:
+  - `2026-04-28 00:10:42 CST`
+- 前置检查:
+  - 延续 `2026-04-28 00:08:17 CST` 的同一轮 gate 结果；`docs/automation/windows-translation-status.md` 的最新 dated entry 仍为 `2026-04-27 22:01:59 CST`，且明确写明“Mac / Windows 版本都齐全”为“是”。
+- 本轮同步分支:
+  - `codex/default-python-sync`: 是。最终远端为 `4dad8a6`。
+  - `codex/windows-version-20260411`: 是。最终远端为 `f6f300d`。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。最终实际新增提交为:
+    - `676b7e7` `Sync verify-before-republish campaign updates`
+    - `4dad8a6` `Sync April 27 Python takeover payload`
+  - `codex/windows-version-20260411`: 是。最终实际新增提交为:
+    - `f6ed51e` `Sync April 27 Python takeover payload`
+    - `f6f300d` `Record 2026-04-28 GitHub sync execution`
+- 是否已推送:
+  - `codex/default-python-sync`: 是。`origin/codex/default-python-sync` 已更新到 `4dad8a6`。
+  - `codex/windows-version-20260411`: 是。`origin/codex/windows-version-20260411` 已更新到 `f6f300d`。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync verify-before-republish campaign updates`
+  - `codex/default-python-sync`: `Sync April 27 Python takeover payload`
+  - `codex/windows-version-20260411`: `Sync April 27 Python takeover payload`
+  - `codex/windows-version-20260411`: `Record 2026-04-28 GitHub sync execution`
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - 没有额外跳过的待同步工作区文件；Windows 分支虽然没有新增 bridge / deployment 代码文件，但监控与 Windows 完整性留痕文档已按分支目的完成同步。
+
+## 2026-04-29 00:03:23 CST
+- 处理时间:
+  - `2026-04-29 00:03:23 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-04-28 22:05:38 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本轮同步分支:
+  - `codex/default-python-sync`: 是。同步 `automation/python-platform-takeover` 的 `04-28 early-zero-not-failure` campaign YAML / receipt、`04-27 verify-before-republish` receipt 推进、Windows anti-duplicate README 桥接说明、`skill-center` 的 Seedance / publish guard 规则、发布模板，以及自动化监控 / Windows 完整性 / GitHub 同步状态文档和 `scripts/douyin-packaging-guard.mjs`。
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows-specific bridge / deployment payload；可见更新都属于共享 publish workflow、跨平台 receipt / README、模板、技能镜像或自动化记录。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。内容提交信息为 `Sync April 28 publish guard and Seedance packaging updates`；并补充本条同步记录提交 `Record 2026-04-29 GitHub sync execution`。
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows-only 提交需要生成。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。应将上述两笔提交推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 无需推送。本轮没有新的 Windows-only 变更，且该分支不需要新增同步提交。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync April 28 publish guard and Seedance packaging updates`
+  - `codex/default-python-sync`: `Record 2026-04-29 GitHub sync execution`
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - 跳过了 `codex/windows-version-20260411` 的新提交与推送，因为当前仓库没有新的 Windows 专属 bridge / deployment payload 需要上传。
+
+## 2026-04-29 22:35:07 CST
+- 检测到新的技能变更批次: 新增 0，修改 6，删除 0。
+- 这批变更集中在 `skill-center` 的 `social-publish-automation`、`kuaishou-ops`、`seedance-video-api`、`toutiao-ops` 镜像，以及 `automation/python-platform-takeover/README.md`；核心是把 CDP-first、保登录态、逐平台 upload matrix、Seedance 视频默认视频发布、campaign lock、四项读回和 receipt 初始化要求正式收紧到仓库侧文档。
+- 建议后续执行 GitHub 同步，避免这批 `skill-center` 镜像规则和 `python-platform-takeover` Windows 交接说明继续只停留在本地工作区。
+
+## 2026-04-30 00:02:37 CST
+- 处理时间:
+  - `2026-04-30 00:02:37 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-04-29 22:06:48 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本轮同步分支:
+  - `codex/default-python-sync`: 是。同步 `automation/python-platform-takeover` 的 README / receipt / receipt 兼容修复 / 04-29 campaign YAML、`skill-center` 技能镜像、内容模板，以及三份自动化状态文档。
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows-specific bridge / deployment 脚本、安装器、模板资源或独立部署说明。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。内容提交信息为 `Sync April 29 publish handoff and template updates`；状态提交信息为 `Record 2026-04-30 GitHub sync execution`。
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows-only 提交需要生成。
+- 是否已推送:
+  - `codex/default-python-sync`: 待本轮提交完成后推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 无需推送。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync April 29 publish handoff and template updates`
+  - `codex/default-python-sync`: `Record 2026-04-30 GitHub sync execution`
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - 跳过了 `codex/windows-version-20260411` 的提交与推送，因为当前批次没有新的 Windows 专属 bridge / deployment payload；可见更新都属于共享 publish workflow、跨平台 receipt / README、技能镜像、模板或自动化记录。
+
+## 2026-04-30 00:05:09 CST
+- 处理时间:
+  - `2026-04-30 00:05:09 CST`
+- 本轮推送结果:
+  - `codex/default-python-sync`: 已推送。`origin/codex/default-python-sync` 当前到达 `8b2fb06`。
+  - `codex/windows-version-20260411`: 未触碰。本轮没有新的 Windows-only bridge / deployment payload，需要继续保持上一轮远端状态。
+- 最终纳入本轮的提交信息:
+  - `codex/default-python-sync`: `Sync April 29 publish handoff and template updates`
+  - `codex/default-python-sync`: `Record 2026-04-30 GitHub sync execution`
+  - `codex/default-python-sync`: `Deduplicate 2026-04-30 sync log entry`
+- 若跳过，说明跳过原因:
+  - `codex/windows-version-20260411` 仍跳过提交与推送，因为当前仓库没有新的 Windows 专属 bridge / deployment 脚本、模板资源、安装器或部署说明增量。
+
+## 2026-04-30 14:21:47 CST
+- 检测到新的技能变更批次: 新增 `2`，修改 `0`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover` 的 `repair-existing-not-republish` campaign 配置与 receipt；核心是新增“优先修旧条而不是重发”的发布约束、百家号/快手 upload plan，以及 Bilibili / Zhihu / 微信视频号的执行留痕。
+- 建议后续执行 GitHub 同步，避免这批支持自动化 campaign 资产继续只停留在本地工作区。
+
+## 2026-04-30 17:59:16 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `3`，删除 `0`。
+- 这批变更继续集中在 `automation/python-platform-takeover`：`content-package.2026-04-30-repair-existing-not-republish.yaml` 被扩展为完整逐平台发布包，`publish-receipts/2026-04-30-repair-existing-not-republish.json` 写回了多平台状态与核验字段，同时 `social_publisher/publish_receipts.py` 增加了 receipt 扩展字段兼容过滤。
+- 建议后续执行 GitHub 同步，避免这批 campaign 配置、publish receipt 台账与兼容性修复继续只停留在本地工作区。
+
+## 2026-04-30 19:00:27 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-29-platform-execution-lock-campaign-four-checks.json`；核心是把头条号回执从 `not_started` 改写为 `blocked_account_review_pending`，并补记管理页未命中旧标题、上传页显示“账号信息审核中/审核通过后才能发布视频”的阻断证据。
+- 建议后续执行 GitHub 同步，避免这条头条号阻断留痕继续只停留在本地工作区。
+
+## 2026-04-30 22:08:00 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `3`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/README.md`、`skill-center/skills/social-publish-automation/SKILL.md` 与 `skill-center/skills/toutiao-ops/SKILL.md`；核心是把 `blocked_account_review_pending` 统一收敛成账号审核阻断态，明确保留 receipt、停止重试，并补齐 receipt 扩展字段兼容口径。
+- 建议后续执行 GitHub 同步，避免这批阻断态规则与技能镜像更新继续只停留在本地工作区。
+
+## 2026-05-01 00:12:29 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `323`，删除 `0`。
+- 这批变更以批量 mirror refresh 为主：`skills/` 与 `skill-center/skills/` 同步刷新了大量自定义 skill 文档 / reference / asset，同时 `automation/python-platform-takeover` 刷新了 README、campaign 配置、publish receipt 台账，以及 `publish_receipts.py` 的 receipt 兼容与阻断逻辑测试。
+- 建议后续执行 GitHub 同步，并优先评估是否把 `skill-center` 批量镜像刷新与 `python-platform-takeover` 行为性变更拆成独立提交，降低后续 review 成本。
+
+
+## 2026-05-01 23:41:36 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`；核心是把同一 campaign 的快手 receipt 从 `under_review` 推进到 `published`，补上 `已发布` 管理页核验、`待发布/未通过=0` 与 `duplicate_republish_blocked=true` 的防重发留痕。
+- 建议后续执行 GitHub 同步，避免这条最新 `python-platform-takeover` 发布台账继续只停留在本地工作区。
+
+## 2026-05-02 00:02:16 CST
+- 处理时间:
+  - `2026-05-02 00:02:16 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-05-01 22:05:55 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本轮同步分支:
+  - `codex/default-python-sync`: 是。同步 `automation/python-platform-takeover` 的 `2026-05-01-dachen-xiaoma-argue-fix-old-post` content package / publish receipt，`skill-center` 的 `platform-cover-ops` 与 `seedance-video-api` 镜像规则，以及 `docs/automation/skill-change-monitor.md`、`docs/automation/windows-translation-status.md`。
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows-specific bridge / deployment 脚本、安装器、模板资源或独立部署说明。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。内容提交信息为 `Sync May 1 Seedance cover and receipt updates`；并补充本条同步记录提交 `Record 2026-05-02 GitHub sync execution`。
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows-only 提交需要生成。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。上述两笔提交会一起推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 无需推送。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync May 1 Seedance cover and receipt updates` (`d12b8ed`)
+  - `codex/default-python-sync`: `Record 2026-05-02 GitHub sync execution`
+- 若跳过，说明跳过原因:
+  - 未跳过同步前置检查。
+  - 跳过了 `codex/windows-version-20260411` 的提交与推送，因为当前仓库没有新的 Windows 专属 bridge / deployment payload；本轮新增的 Windows 相关内容只体现在共享 skill 文档约束与 Windows 完整性状态留痕中，不需要单独的 Windows 分支同步。
+
+## 2026-05-02 18:22:17 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `8`，删除 `0`。
+- 这批变更集中在 live 与 `skill-center` 两套 `/seedance-video-api/` 文档镜像；核心是把当前 `大陈 / AI员工 / 机器人小马` 视频线统一收紧为“默认带女性配角素材 `asset://asset-20260401123823-6d4x2`、payload 必须单独传 `reference_image`、大陈与女性配角都要分别锁定身份稳定”的默认生成规则。
+- 建议后续执行 GitHub 同步，避免最新 `seedance-video-api` 女性配角引用和多真人保真人规则继续只停留在本地工作区。
+
+## 2026-05-03 00:02:09 CST
+- 同步前置检查:
+  - 已通过。
+  - `docs/automation/windows-translation-status.md` 最新带日期条目为 `2026-05-02 22:02:44 CST`，其中“是否达到‘Mac / Windows 版本都齐全’”明确为 `是`，允许继续执行 GitHub 同步。
+- 本轮同步范围:
+  - `docs/automation/skill-change-monitor.md`
+  - `docs/automation/windows-translation-status.md`
+  - `docs/automation/github-sync-status.md`
+  - `skill-center/skills/seedance-video-api/{SKILL.md,references/prompt-template.md,references/real-person-consistency.md,references/workflows.md}`
+  - `automation/python-platform-takeover/configs/content-package.2026-05-02-ai-employee-writeback-after-publish.yaml`
+  - `automation/python-platform-takeover/state/publish-receipts/2026-05-02-ai-employee-writeback-after-publish.json`
+  - `automation/python-platform-takeover/state/screenshots/*`
+- 分支处理结果:
+  - `codex/default-python-sync`: 计划提交并推送 `Sync May 2 Seedance and publish receipt updates`
+  - `codex/windows-version-20260411`: 跳过；当前仓库没有新的 Windows 专属 bridge / deployment 脚本、安装器或分支独占 payload，本轮新增内容是共享 Seedance 规则、共享 Python takeover receipt / screenshot 留痕，以及 Windows 完整性状态文档，不单独拆分到 Windows 分支。
+- 若跳过，说明跳过原因:
+  - 仅跳过 `codex/windows-version-20260411`。
+  - 跳过原因如上；默认分支同步不跳过。
+
+## 2026-05-03 00:03:36 CST
+- 分支触达结果:
+  - `codex/default-python-sync`: 已提交并推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 未触达。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync May 2 Seedance and publish receipt updates`（`e429eee`）
+  - `codex/default-python-sync`: `Record 2026-05-03 GitHub sync execution`
+- 若跳过，说明跳过原因:
+  - `codex/windows-version-20260411` 跳过，因为当前仓库没有新的 Windows 专属 bridge / deployment 脚本、安装器或分支独占 payload；本轮变化仅包含共享 Seedance 规则、共享 Python takeover campaign / receipt / screenshot 留痕，以及 Windows 完整性状态文档。
+
+## 2026-05-03 20:59:02 CST
+- 检测到新的技能变更批次: 新增 `4`，修改 `0`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover` 的 `2026-05-03-ai-employee-data-center-review` 视频号定向 content package、微博专用 content package、初始视频号 receipt 和一张快手调试截图；核心是把“发布后还要回数据中心抓播放、完播、互动和同形态对照”的新 campaign 连同防重发约束、首条台账和排障留痕一起写入仓库。
+- 建议后续执行 GitHub 同步，避免这批新的 `python-platform-takeover` campaign 配置与发布台账继续只停留在本地工作区。
+
+## 2026-05-03 22:01:31 CST
+- 检测到新的技能变更批次: 新增 `5`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover` 的 `2026-05-03-ai-employee-data-center-review` receipt 与快手截图留痕；核心是把同一 campaign 的头条、快手、百家号、B站发布/审核结果写回台账，并补上快手发前、发后和管理页核验截图。
+- 建议后续执行 GitHub 同步，避免这批最新 `python-platform-takeover` 发布结果与截图证据继续只停留在本地工作区。
+
+## 2026-05-03 23:03:25 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `2`，删除 `0`。
+- 这批变更继续集中在 `automation/python-platform-takeover` 的 `2026-05-03-ai-employee-data-center-review` campaign：主 content package 扩成抖音加视频号双平台发布包，receipt 继续补进视频号初始化、抖音待最终确认、小红书已发布和知乎已发布状态。
+- 建议后续执行 GitHub 同步，避免这批最新 `python-platform-takeover` campaign 配置和跨平台 receipt 进展继续只停留在本地工作区。
+
+## 2026-05-04 00:03:27 CST
+- 处理时间:
+  - `2026-05-04 00:03:27 CST`
+- 同步前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新带日期条目按时间取 `2026-05-03 22:02:46 CST`，其中“是否达到‘Mac / Windows 版本都齐全’”明确为 `是`，允许继续执行 GitHub 同步。
+- 分支触达结果:
+  - `codex/default-python-sync`: 计划提交并推送 `python-platform-takeover` campaign 资产、`skill-change-monitor.md` 与本次执行记录。
+  - `codex/windows-version-20260411`: 计划提交并推送 `windows-translation-status.md` 与本次执行记录。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync May 3 campaign receipts and screenshots`
+  - `codex/default-python-sync`: `Record 2026-05-04 GitHub sync execution`
+  - `codex/windows-version-20260411`: `Record May 3 Windows translation completion`
+- 若跳过，说明跳过原因:
+  - 无。
