@@ -61,16 +61,45 @@
     "wechat_channels": {
       "campaign_id": "2026-05-03-ai-employee-data-center-review",
       "platform_id": "wechat_channels",
-      "status": "not_started",
+      "status": "published_verified_in_manager",
       "title": "只发布不算复盘",
       "description": "机器人小马汇报全平台已发布，女性运营同事追问播放、完播、评论在哪。大陈提醒：成功只是状态，数据才是复盘。AI员工要把指标和同形态对照带回来。",
-      "current_url": null,
+      "current_url": "https://channels.weixin.qq.com/platform/post/list",
       "management_url": "https://channels.weixin.qq.com/platform/post/list",
       "share_link": null,
-      "external_id": null,
-      "recorded_at": "2026-05-03T22:13:48+08:00",
+      "external_id": "export/UzFfBgAAxJ6jUAwYWAmejczT4DCa4aB51omznP-TVVh5qXzrww",
+      "published_at": "2026-05-04T00:10:45+08:00",
+      "recorded_at": "2026-05-04T00:14:22+08:00",
+      "verified_fields": {
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platforms/wechat-channels.md",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_content_package/platform-upload-map.md",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review-publish.mp4",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-03-ai-employee-data-center-review_cover_package/cover-vertical-3x4.png",
+        "automation_route": "Chrome DevTools/CDP on http://127.0.0.1:9223",
+        "management_duplicate_guard": "passed before final submit: refreshed WeChat Channels management list showed no current short title or current description lead before publishing.",
+        "pre_publish_title_readback": "只发布不算复盘",
+        "pre_publish_description_readback": "机器人小马汇报全平台已发布，女性运营同事追问播放、完播、评论在哪。大陈提醒：成功只是状态，数据才是复盘。AI员工要把指标和同形态对照带回来。",
+        "pre_publish_payload_check": "framework postState contained exact shortTitle and exact description; postMedia contained uploaded video url, coverUrl and fullCoverUrl; publish button was enabled.",
+        "management_visible_count": "视频 (23)",
+        "management_visible_time": "2026年05月04日 00:10",
+        "management_row_object_id": "export/UzFfBgAAxJ6jUAwYWAmejczT4DCa4aB51omznP-TVVh5qXzrww",
+        "management_row_status": "1",
+        "management_row_short_title": "只发布不算复盘",
+        "management_row_description": "机器人小马汇报全平台已发布，女性运营同事追问播放、完播、评论在哪。大陈提醒：成功只是状态，数据才是复盘。AI员工要把指标和同形态对照带回来。",
+        "management_row_cover_verified": true,
+        "management_row_thumbnail_natural_size": "540x720",
+        "management_row_cover_note": "latest management row contains thumbUrl, coverUrl and fullCoverUrl from finder.video.qq.com; local 3:4 cover readability was checked before upload."
+      },
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b504307cf6ca0b2a9822b70c8adf",
+        "sent_at": "2026-05-04T00:15:12+08:00"
+      },
       "notes": [
-        "initialized_current_thread_before_publish_2026-05-03T22:13:48+08:00: latest local content package locked for WeChat Channels only; package_status=ready_for_platform_publishing, video/cover/platform package/platform-upload-map exist. Receipt initialized as not_started before duplicate guard and browser publish."
+        "initialized_current_thread_before_publish_2026-05-03T22:13:48+08:00: latest local content package locked for WeChat Channels only; package_status=ready_for_platform_publishing, video/cover/platform package/platform-upload-map exist. Receipt initialized as not_started before duplicate guard and browser publish.",
+        "ready_for_final_confirmation_2026-05-03T23:30:00+08:00: Chrome DevTools/CDP 127.0.0.1:9223 was used as the preferred route. Duplicate guard checked the management list before upload; no current campaign title or description lead existed. The flow uploaded the mp4 with DOM.setFileInputFiles, entered exact description and short title, uploaded the prepared 3:4 cover through the real image file input, accepted the cover in the edit-cover dialog, cleared the stale first-frame generation flag through the page component after coverUrl/fullCoverUrl existed, and verified the framework payload before final confirmation.",
+        "published_verified_2026-05-04T00:14:22+08:00: after user final confirmation, CDP clicked the real enabled WeChat Channels 发表 button. The create page showed 已发表. The refreshed management list count became 视频 (23); latest row create time was 2026年05月04日 00:10 / 2026-05-04T00:10:45+08:00. Framework management data root0.list[0] had exact shortTitle 只发布不算复盘, exact description, objectId export/UzFfBgAAxJ6jUAwYWAmejczT4DCa4aB51omznP-TVVh5qXzrww, status=1, thumbUrl, coverUrl and fullCoverUrl. Visible latest row showed the exact description and a 540x720 thumbnail.",
+        "feishu_notified_2026-05-04T00:15:12+08:00: sent per-platform WeChat Channels publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b504307cf6ca0b2a9822b70c8adf."
       ]
     },
     "toutiao": {

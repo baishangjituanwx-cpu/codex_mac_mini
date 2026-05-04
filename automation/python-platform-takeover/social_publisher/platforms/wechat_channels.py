@@ -314,8 +314,8 @@ class WeChatChannelsPublisher(PlatformPublisher):
                 candidates.append(candidate)
                 continue
 
-            frame_text = normalize_text(frame.locator("body").inner_text())
-            if any(marker in frame_text for marker in mapping["signals"]["existing_video"]):
+            frame_text = self._surface_text(frame)
+            if any(marker in frame_text for marker in mapping["signals"].get("existing_video", [])):
                 candidate.score += 1
                 candidate.notes.append("has_existing_video")
 
@@ -367,6 +367,10 @@ class WeChatChannelsPublisher(PlatformPublisher):
         *,
         timeout: int = 8000,
     ) -> Frame:
+        surface = self._maybe_wujie_body(page, timeout=timeout)
+        if surface is not None:
+            return surface  # type: ignore[return-value]
+
         page.locator(mapping["selectors"]["publish_frame"]).first.wait_for(timeout=timeout)
         attempts = max(1, timeout // 300)
         for _ in range(attempts):
@@ -387,6 +391,10 @@ class WeChatChannelsPublisher(PlatformPublisher):
             "management_frame",
             mapping["selectors"]["publish_frame"],
         )
+        surface = self._maybe_wujie_body(page, timeout=timeout)
+        if surface is not None:
+            return surface  # type: ignore[return-value]
+
         page.locator(selector).first.wait_for(timeout=timeout)
         attempts = max(1, timeout // 300)
         for _ in range(attempts):
@@ -410,7 +418,7 @@ class WeChatChannelsPublisher(PlatformPublisher):
     ) -> None:
         if not video_path.exists():
             raise FileNotFoundError(f"Video file not found: {video_path}")
-        text = normalize_text(frame.locator("body").inner_text())
+        text = self._surface_text(frame)
         pending_markers = mapping["signals"]["pending_upload"]
         if not any(marker in text for marker in pending_markers):
             return
@@ -734,13 +742,13 @@ class WeChatChannelsPublisher(PlatformPublisher):
         return management_entry_component_from_mapping(payload)
 
     def _has_success_signal(self, frame: Frame, mapping: dict) -> bool:
-        text = normalize_text(frame.locator("body").inner_text())
+        text = self._surface_text(frame)
         return any(marker in text for marker in mapping["signals"]["success"])
 
     def _wait_for_upload_settle(self, page: Page, frame: Frame, mapping: dict) -> None:
         pending_markers = mapping["signals"]["pending_upload"]
         for _ in range(30):
-            text = normalize_text(frame.locator("body").inner_text())
+            text = self._surface_text(frame)
             if not any(marker in text for marker in pending_markers):
                 return
             page.wait_for_timeout(1000)
@@ -749,8 +757,51 @@ class WeChatChannelsPublisher(PlatformPublisher):
     def _is_login_gate(self, page: Page, mapping: dict) -> bool:
         if "login.html" in page.url:
             return True
-        text = normalize_text(page.locator("body").inner_text())
+        text = self._page_text(page)
         return any(marker in text for marker in mapping["signals"]["login_required"])
+
+    def _maybe_wujie_body(self, page: Page, *, timeout: int) -> Locator | None:
+        attempts = max(1, timeout // 300)
+        for _ in range(attempts):
+            try:
+                bodies = page.locator("body")
+                if bodies.count() > 1:
+                    body = bodies.nth(1)
+                    text = normalize_text(body.inner_text(timeout=500))
+                    interactive_count = body.locator(
+                        "input, textarea, button, [contenteditable='true']"
+                    ).count()
+                    if text or interactive_count:
+                        return body
+            except Exception:  # noqa: BLE001
+                pass
+            page.wait_for_timeout(300)
+        return None
+
+    def _surface_text(self, surface: Frame | Locator) -> str:
+        try:
+            body_locator = surface.locator("body")
+            if body_locator.count():
+                return normalize_text(body_locator.first.inner_text(timeout=1000))
+        except Exception:  # noqa: BLE001
+            pass
+        try:
+            return normalize_text(surface.inner_text(timeout=1000))  # type: ignore[attr-defined]
+        except Exception:  # noqa: BLE001
+            return ""
+
+    def _page_text(self, page: Page) -> str:
+        chunks: list[str] = []
+        try:
+            bodies = page.locator("body")
+            for index in range(bodies.count()):
+                try:
+                    chunks.append(bodies.nth(index).inner_text(timeout=600))
+                except Exception:  # noqa: BLE001
+                    continue
+        except Exception:  # noqa: BLE001
+            return ""
+        return normalize_text(" ".join(chunks))
 
     def _click_button(self, frame: Frame, names: list[str]) -> None:
         for name in names:
@@ -825,11 +876,11 @@ class WeChatChannelsPublisher(PlatformPublisher):
         applied_markers = mapping["signals"].get("cover_applied", [])
         pending_markers = mapping["signals"].get("cover_pending", [])
         for _ in range(20):
-            text = normalize_text(frame.locator("body").inner_text())
+            text = self._surface_text(frame)
             if any(marker in text for marker in applied_markers):
                 return
             page.wait_for_timeout(500)
-        visible_text = normalize_text(frame.locator("body").inner_text())
+        visible_text = self._surface_text(frame)
         pending = [marker for marker in pending_markers if marker in visible_text]
         pending_note = f" Pending markers: {' | '.join(pending)}." if pending else ""
         raise RuntimeError(

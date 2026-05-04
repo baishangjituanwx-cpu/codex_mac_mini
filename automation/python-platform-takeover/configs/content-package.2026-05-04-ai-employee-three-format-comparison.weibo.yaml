@@ -1,0 +1,28 @@
+campaign_id: "2026-05-04-ai-employee-three-format-comparison"
+theme: "发布成功只是开始，AI员工要先做三条同格式对照，再决定下一条怎么改。"
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison-publish.mp4"
+  backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_cover_package/cover-horizontal-4x3.png"
+support_files:
+  final_verify_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/final-verify.json"
+  platform_upload_map: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/platform-upload-map.md"
+  weibo_platform_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/platforms/weibo.md"
+  weibo_content_library_path: "/Users/baishangjituan/Documents/New project/content-library/posts/weibo/2026-05-04-ai-employee-three-format-comparison-video-post-001.md"
+publish_constraints:
+  reuse_logged_in_publish_page: true
+  skip_duplicate_if_already_published: true
+  prefer_repair_existing_post_over_republish: true
+  require_management_page_verification: true
+  require_active_campaign_lock: true
+platform_upload_plan:
+  weibo:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison-publish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_cover_package/cover-horizontal-4x3.png"
+platforms:
+  weibo:
+    title: "视频发完就做下一条？大陈让机器人小马先比三条"
+    description: "发布成功只是开始。机器人小马急着赶下一条，大陈让它先做三条同格式对照：同发布时间、同封面结构、同话题口径。没有对照，复盘就是凭感觉。#AI员工 #内容运营 #短视频复盘"

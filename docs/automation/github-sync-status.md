@@ -12,6 +12,21 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-04 15:29:37 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `2`，删除 `0`。
+- 这批变更继续集中在 `automation/python-platform-takeover`：`social_publisher/platforms/wechat_channels.py` 新增了 Wujie / 多 `body` 页面文本读取辅助逻辑，`state/publish-receipts/2026-05-04-ai-employee-three-format-comparison.json` 则把百家号、知乎、抖音、B 站和小红书的后续执行结果继续写回同一 campaign 台账。
+- 建议后续执行 GitHub 同步，避免这批新的视频号兼容修补和 `python-platform-takeover` receipt 后续写回继续只停留在本地工作区。
+
+## 2026-05-04 14:35:08 CST
+- 检测到新的技能变更批次: 新增 `6`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover`：`2026-05-04-ai-employee-three-format-comparison` campaign 新增了通用、微博、快手三份 content package、同名 receipt 台账和两张快手截图证据，同时 `social_publisher/platforms/wechat_channels.py` 把多处 `body` 文本读取改为 `locator("body").first.inner_text()` 以规避页面多匹配歧义。
+- 建议后续执行 GitHub 同步，避免这批新的 `python-platform-takeover` campaign 配置、回执台账、截图证据和视频号发布器修复继续只停留在本地工作区。
+
+## 2026-05-04 01:06:14 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-05-03-ai-employee-data-center-review.json`；核心是把同一 campaign 的视频号 receipt 从 `not_started` 推进到 `published_verified_in_manager`，补上管理页 `objectId`、`2026-05-04 00:10` 发布核验、`540x720` 封面验证与飞书通知留痕。
+- 建议后续执行 GitHub 同步，避免这条最新 `python-platform-takeover` 视频号发布回执与管理页核验结果继续只停留在本地工作区。
+
 ## 2026-05-03 22:01:09 CST
 - 检测到新的技能变更批次: 新增 `5`，修改 `1`，删除 `0`。
 - 这批变更集中在 `automation/python-platform-takeover`：新增了 `2026-05-03-ai-employee-data-center-review` 的 5 张快手发布/管理页截图，并把同名 `publish-receipts` 台账从初始化状态扩展成包含头条、快手、百家号和 B 站结果的多平台发布留痕。
@@ -1600,6 +1615,11 @@
   - `codex/default-python-sync`: `Update May 3 Douyin receipt verification`
 - 若跳过，说明跳过原因:
   - `codex/windows-version-20260411` 跳过，因为这次追加变化仅是共享 receipt 状态从 `ready_for_final_confirmation` 推进到 `under_review`，没有新的 Windows 专属 bridge / deployment payload。
+
+## 2026-05-04 01:05:49 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-05-03-ai-employee-data-center-review.json`；核心是把同一 campaign 的视频号 receipt 从初始化态推进到 `published_verified_in_manager`，补齐发表时间、管理页 object ID、精确标题/描述回读、`540x720` 缩略图核验和飞书通知留痕。
+- 建议后续执行 GitHub 同步，避免这条最新 `python-platform-takeover` 视频号发布核验回执继续只停留在本地工作区。
 
 ## 2026-05-04 00:08:06 CST
 - 处理时间:

@@ -1,0 +1,46 @@
+campaign_id: "2026-05-04-ai-employee-three-format-comparison"
+theme: "发布成功只是开始，AI员工要先做三条同格式对照，再决定下一条怎么改。"
+status: "ready_for_publish"
+package_status: "ready_for_platform_publishing"
+scope: "wechat_channels_only"
+
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison-publish.mp4"
+  backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_cover_package/cover-horizontal-4x3.png"
+
+support_files:
+  content_package_root: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package"
+  final_verify_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/final-verify.json"
+  platform_upload_map: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/platform-upload-map.md"
+  wechat_channels_platform_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/platforms/wechat-channels.md"
+  browser_checklist: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/browser-use-checklist.md"
+
+publish_constraints:
+  reuse_logged_in_publish_page: true
+  skip_duplicate_if_already_published: true
+  prefer_repair_existing_post_over_republish: true
+  require_management_page_verification: true
+  require_active_campaign_lock: true
+  final_submit_requires_user_confirmation: true
+
+platform_upload_plan:
+  wechat_channels:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison-publish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_cover_package/cover-horizontal-4x3.png"
+    title_source: "platforms.wechat_channels.title"
+    description_source: "platforms.wechat_channels.description"
+
+platforms:
+  wechat_channels:
+    title: "先比三条再改"
+    description: "机器人小马刚想做下一条，大陈让它停下：先把本条和近3条同格式内容对照。没有对照，就不知道问题出在封面、发布时间还是话题口径。"
+
+publishing:
+  preferred_automation: "Chrome DevTools/CDP"
+  publish_url: "https://channels.weixin.qq.com/platform/post/create"
+  management_url: "https://channels.weixin.qq.com/platform/post/list"
+  final_submit_requires_user_confirmation: true

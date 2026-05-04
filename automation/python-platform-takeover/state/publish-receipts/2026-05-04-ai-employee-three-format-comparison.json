@@ -1,0 +1,363 @@
+{
+  "campaign_id": "2026-05-04-ai-employee-three-format-comparison",
+  "receipts": {
+    "baijiahao": {
+      "campaign_id": "2026-05-04-ai-employee-three-format-comparison",
+      "current_url": "https://baijiahao.baidu.com/builder/rc/clue?aside=0&footer=true&from=videoV2&firstPublish=undefined&word_bag_id=null",
+      "description": "发布成功不是复盘，抓到数据也不能马上下结论。要把本条内容和近3条同格式内容放在一起，看播放、完播、互动、发布时间、封面结构和话题口径，才能知道下一条该改哪里。",
+      "external_id": null,
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b50b7bc5a8cb4b2c3ca12be4aa0f",
+        "sent_at": "2026-05-04T14:39:37+08:00"
+      },
+      "management_url": "https://baijiahao.baidu.com/builder/rc/content?currentPage=1&pageSize=10&search=&type=&collection=&app_id=1861892519044473&startDate=&endDate=",
+      "notes": [
+        "published_verified_2026-05-04T14:39:58+08:00: Chrome DevTools/CDP endpoint 127.0.0.1:9223 was used as the preferred route. Duplicate guard checked local receipt and Baijiahao 作品管理 exact-title search before publishing; no baijiahao receipt or same-title manager row existed before submit. The flow uploaded the mp4, set the exact 20/50 title, checked 采用AI生成内容, uploaded the horizontal 4:3 and vertical 3:4 local covers, confirmed cover previews, clicked 发布 once, and the same editor target navigated to a success page showing 提交成功，正在审核中... / 视频发布成功. The 查看发布状态 entry then opened 作品管理 where the exact title appeared as the newest row at 2026-05-04 14:36:52 with status 已发布音频.",
+        "baijiahao_thread_scope: this entry records only the Baijiahao publish task in this thread; other platforms are intentionally out of scope for this thread.",
+        "feishu_notified_2026-05-04T14:39:37+08:00: sent Baijiahao publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b50b7bc5a8cb4b2c3ca12be4aa0f."
+      ],
+      "platform_id": "baijiahao",
+      "published_at": "2026-05-04T14:36:52+08:00",
+      "recorded_at": "2026-05-04T14:39:58+08:00",
+      "share_link": null,
+      "status": "published",
+      "title": "视频发完后，为什么要先做三条同格式对照？",
+      "verified_fields": {
+        "ai_generated_disclosure_checked": true,
+        "automation_route": "Chrome DevTools/CDP raw protocol on http://127.0.0.1:9223; local video and horizontal/vertical cover uploads completed through CDP-attached browser flow before submit",
+        "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_cover_package/cover-vertical-3x4.png",
+        "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/baijiahao/2026-05-04-ai-employee-three-format-comparison-video-001.md",
+        "cover_mode": "custom_horizontal_4x3_and_vertical_3x4_uploaded_with_platform_cover_preview_confirmed",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_cover_package/cover-horizontal-4x3.png",
+        "duplicate_guard": "passed: before submit, local receipt had no baijiahao entry and Baijiahao 作品管理 exact-title search returned 共0篇",
+        "manager_list_context": "After submit, success page showed 提交成功，正在审核中... / 视频发布成功. Clicking 查看发布状态 opened 作品管理 with the exact title as the newest row at 2026-05-04 14:36:52 and status 已发布音频.",
+        "manager_row_status_text": "已发布音频",
+        "manager_row_time": "2026-05-04 14:36:52",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/platforms/baijiahao.md",
+        "platform_content_type": "video",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/platform-upload-map.md",
+        "pre_submit_title_counter": "20/50",
+        "pre_submit_title_readback": "视频发完后，为什么要先做三条同格式对照？",
+        "publish_success_source": "same Baijiahao edit target navigated from /builder/rc/edit?type=videoV2 to /builder/rc/clue after one CDP publish click",
+        "publish_success_text": "提交成功，正在审核中...",
+        "screenshots": {
+          "after_horizontal_cover": "/Users/baishangjituan/Documents/push/baijiahao-20260504-after-horizontal-cover-set.png",
+          "after_submit": "/Users/baishangjituan/Documents/push/baijiahao-20260504-after-submit.png",
+          "after_vertical_cover": "/Users/baishangjituan/Documents/push/baijiahao-20260504-after-vertical-cover-set.png",
+          "after_video_upload": "/Users/baishangjituan/Documents/push/baijiahao-20260504-after-video-upload.png",
+          "before_publish": "/Users/baishangjituan/Documents/push/baijiahao-20260504-final-readback-before-submit.png",
+          "duplicate_guard_before": "/Users/baishangjituan/Documents/push/baijiahao-20260504-duplicate-guard.png",
+          "manager_exact_after_submit": "/Users/baishangjituan/Documents/push/baijiahao-20260504-manager-after-submit.png",
+          "status_from_clue": "/Users/baishangjituan/Documents/push/baijiahao-20260504-status-from-clue.png"
+        },
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison-publish.mp4"
+      }
+    },
+    "douyin": {
+      "campaign_id": "2026-05-04-ai-employee-three-format-comparison",
+      "current_url": "https://creator.douyin.com/creator-micro/content/manage?enter_from=publish",
+      "description": "机器人小马说新视频已发布，大陈却问：和哪三条同格式内容比过？不先对照，就不知道下一条该改哪里。#AI员工 #短视频运营 #数据复盘",
+      "external_id": "7635924835520105774",
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b50b0534df4a8b485861d2eebd43",
+        "sent_at": "2026-05-04T14:51:04+08:00"
+      },
+      "management_url": "https://creator.douyin.com/creator-micro/content/manage",
+      "notes": [
+        "ready_for_final_confirmation_2026-05-04T14:40:59+08:00: Chrome DevTools/CDP endpoint 127.0.0.1:9223 was used as the preferred route. The flow uploaded the mp4, filled exact Douyin title and description, uploaded the local vertical 3:4 and horizontal 4:3 covers from the content package, ran cover detection successfully, confirmed the missing-cover warning disappeared, and reached an enabled 发布 button. Waiting for user confirmation before final submit.",
+        "published_verified_2026-05-04T14:49:45+08:00: After user confirmation, clicked the real 发布 button once through CDP. The editor target redirected to 作品管理 and showed 发布成功. Douyin work_list status=0 and status=1 both returned the exact newest row with aweme_id=7635924835520105774, title=发完别走，先做对照, matching caption/description lead, duration=15883, vertical cover uri and horizontal cover uri. status=2 had no matching failed row.",
+        "feishu_notified_2026-05-04T14:51:04+08:00: sent Douyin publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b50b0534df4a8b485861d2eebd43."
+      ],
+      "platform_id": "douyin",
+      "published_at": "2026-05-04T14:48:23+08:00",
+      "recorded_at": "2026-05-04T14:49:45+08:00",
+      "share_link": "https://www.iesdouyin.com/share/video/7635924835520105774/",
+      "status": "published",
+      "title": "发完别走，先做对照",
+      "verified_fields": {
+        "aweme_id": "7635924835520105774",
+        "automation_route": "Chrome DevTools/CDP raw protocol on http://127.0.0.1:9223",
+        "cover_check_text": "封面检测通过 / 暂未发现封面低质问题",
+        "cover_uri": "tos-cn-i-dy/b2a96edd9e9646e0979d0bd44306ea5c",
+        "cover_horizontal_4x3_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_cover_package/cover-horizontal-4x3.png",
+        "cover_mode": "custom_vertical_3x4_and_horizontal_4x3_uploaded_from_content_package",
+        "cover_vertical_3x4_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_cover_package/cover-vertical-3x4.png",
+        "duplicate_guard": "passed before submit: local Douyin receipt had no blocking douyin status and Douyin content management status 0/1/2 did not contain the exact current title or description lead.",
+        "horizontal_cover_uri": "tos-cn-i-dy/2b8f96cae7c546e7a8bc68561ef4b57b",
+        "manager_list_context": "Douyin work_list status=0/status=1 newest row: aweme_id=7635924835520105774 / item_title=发完别走，先做对照 / caption=机器人小马说新视频已发布，大陈却问：和哪三条同格式内容比过？不先对照，就不知道下一条该改哪里。#AI员工 #短视频运营 #数据复盘 / create_time=1777877303 / duration=15883 / status_value=102. status=2 had no matching row.",
+        "manager_row_status_text": "已发布",
+        "manager_row_time": "2026-05-04T14:48:23+08:00",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/platforms/douyin.md",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/platform-upload-map.md",
+        "post_publish_screenshot": "/tmp/douyin-0504-manager-after-publish.png",
+        "pre_publish_screenshot": "/tmp/douyin-0504-ready-before-publish.png",
+        "pre_submit_description_readback": "机器人小马说新视频已发布，大陈却问：和哪三条同格式内容比过？不先对照，就不知道下一条该改哪里。#AI员工 #短视频运营 #数据复盘",
+        "pre_submit_title_readback": "发完别走，先做对照",
+        "publish_button_enabled": true,
+        "publish_success_text": "发布成功",
+        "share_link": "https://www.iesdouyin.com/share/video/7635924835520105774/",
+        "status_text": "已发布",
+        "target_id": "150D590FF5F46A2645A97EF1480C6034",
+        "video_check_text": "作品未见异常",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison-publish.mp4"
+      }
+    },
+    "kuaishou": {
+      "campaign_id": "2026-05-04-ai-employee-three-format-comparison",
+      "current_url": "https://cp.kuaishou.com/article/manage/video?status=0&from=",
+      "description": "发完一条视频，不是马上赶下一条。大陈让机器人小马先把播放、完播、互动和近3条同格式内容放到一张表里，再决定怎么改。",
+      "external_id": null,
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b50b7a94540a8b3f498dc2de36c6",
+        "sent_at": "2026-05-04T14:36:40+08:00"
+      },
+      "management_url": "https://cp.kuaishou.com/article/manage/video?status=0&from=",
+      "notes": [
+        "published_verified_2026-05-04T14:34:00+08:00: Chrome DevTools/CDP endpoint 127.0.0.1:9223 was used as the preferred route. Duplicate guard checked the local receipt and Kuaishou 作品管理 before publishing; no current campaign receipt or same description row existed before submit. The flow uploaded the mp4 through the page video file input, filled #work-description-edit with the exact Kuaishou copy, uploaded the local vertical 3:4 cover through the image file input, clicked the real bottom 发布 control, then verified the exact description in 作品管理 status=0/status=1 as 已发布 at 2026-05-04 14:34.",
+        "kuaishou_thread_scope: this entry records only the Kuaishou publish task in this thread.",
+        "feishu_notified_2026-05-04T14:36:40+08:00: sent per-platform Kuaishou publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b50b7a94540a8b3f498dc2de36c6."
+      ],
+      "platform_id": "kuaishou",
+      "published_at": "2026-05-04T14:34:00+08:00",
+      "recorded_at": "2026-05-04T14:36:37+08:00",
+      "share_link": null,
+      "status": "published",
+      "title": "别凭感觉复盘",
+      "verified_fields": {
+        "automation_route": "Chrome DevTools/CDP on http://127.0.0.1:9223",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_cover_package/cover-vertical-3x4.png",
+        "duplicate_guard": "passed before submit: local Kuaishou receipt was missing, and Kuaishou 作品管理 did not contain the current description lead before upload.",
+        "manager_list_context": "作品管理 status=0/status=1 showed: 00:15 / 发完一条视频，不是马上赶下一条。大陈让机器人小马先把播放、完播、互动和近3条同格式内容放到一张表里，再决定怎么改。 / 已发布 / 2026-05-04 14:34",
+        "manager_row_status_text": "已发布",
+        "manager_row_time": "2026-05-04 14:34",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/platforms/kuaishou.md",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/platform-upload-map.md",
+        "pre_submit_description_readback": "发完一条视频，不是马上赶下一条。大陈让机器人小马先把播放、完播、互动和近3条同格式内容放到一张表里，再决定怎么改。",
+        "status_text": "已发布",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison-publish.mp4"
+      }
+    },
+    "toutiao": {
+      "campaign_id": "2026-05-04-ai-employee-three-format-comparison",
+      "current_url": "https://mp.toutiao.com/profile_v4/xigua/small-video",
+      "description": "发完视频以后，不能只看发布成功，也不能凭感觉判断好坏。AI员工要把本条和近3条同格式内容放在同一张表里，对齐播放、完播、互动、发布时间、封面结构和话题口径，再决定怎么改。",
+      "external_id": null,
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b50b799fe44a0b3d24860f0a6bd3",
+        "sent_at": "2026-05-04T14:32:19+08:00"
+      },
+      "management_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
+      "notes": [
+        "published_verified_2026-05-04T14:31:30+08:00: Chrome DevTools/CDP endpoint 127.0.0.1:9223 was used as the preferred route. Duplicate guard checked local receipt and Toutiao 作品管理 before publishing; no current campaign title existed before submit. The flow uploaded the mp4 through DOM.setFileInputFiles, uploaded and confirmed the vertical 3:4 local cover, set the exact 22/30 title, kept 生成图文 unchecked, selected AI生成 declaration, clicked 发布, saw 全部发表成功, then verified the exact title in 作品管理 as 审核中 at 05-04 14:31.",
+        "toutiao_thread_scope: this entry records only the Toutiao publish task in this thread.",
+        "feishu_notified_2026-05-04T14:32:19+08:00: sent per-platform Toutiao publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b50b799fe44a0b3d24860f0a6bd3."
+      ],
+      "platform_id": "toutiao",
+      "published_at": "2026-05-04T14:31:00+08:00",
+      "recorded_at": "2026-05-04T14:32:20+08:00",
+      "share_link": null,
+      "status": "under_review",
+      "title": "视频发完就做下一条？大陈让AI员工先做三条对照",
+      "verified_fields": {
+        "ai_declaration_checked": true,
+        "automation_route": "Chrome DevTools/CDP raw protocol on http://127.0.0.1:9223 with DOM.setFileInputFiles for local video/cover inputs",
+        "cover_mode": "custom_vertical_3x4_uploaded_and_platform_accepted_edit_replace_state",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_cover_package/cover-vertical-3x4.png",
+        "manager_list_context": "作品管理显示：00:15 / 视频发完就做下一条？大陈让AI员工先做三条对照 / 05-04 14:31 / 审核中",
+        "manager_row_status_text": "审核中",
+        "manager_row_time": "05-04 14:31",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/platforms/toutiao.md",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/platform-upload-map.md",
+        "pre_submit_title_readback": "视频发完就做下一条？大陈让AI员工先做三条对照",
+        "publish_success_text": "全部发表成功",
+        "result_path": "/Users/baishangjituan/Documents/push/toutiao_publish_result_20260504.json",
+        "screenshots": {
+          "after_publish": "/Users/baishangjituan/Documents/push/toutiao-after-publish-click-20260504.png",
+          "after_video_upload": "/Users/baishangjituan/Documents/push/toutiao-after-video-upload-20260504.png",
+          "cover_applied": "/Users/baishangjituan/Documents/push/toutiao-cover-applied-resume-20260504.png",
+          "duplicate_guard_before": "/Users/baishangjituan/Documents/push/toutiao-manager-before-20260504.png",
+          "manager_check": "/Users/baishangjituan/Documents/push/toutiao-manager-verified-20260504.png",
+          "pre_submit": "/Users/baishangjituan/Documents/push/toutiao-pre-submit-continuous-20260504.png"
+        },
+        "status_text": "审核中",
+        "title_word_limit": "22/30",
+        "video_generate_article_checked": false,
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison-publish.mp4"
+      }
+    },
+    "wechat_channels": {
+      "campaign_id": "2026-05-04-ai-employee-three-format-comparison",
+      "current_url": "https://channels.weixin.qq.com/platform/post/create",
+      "external_id": null,
+      "management_url": "https://channels.weixin.qq.com/platform/post/list",
+      "notes": [],
+      "platform_id": "wechat_channels",
+      "recorded_at": "2026-05-04T06:47:08.365115+00:00",
+      "share_link": null,
+      "status": "ready_for_final_confirmation",
+      "title": "先比三条再改"
+    },
+    "xiaohongshu": {
+      "campaign_id": "2026-05-04-ai-employee-three-format-comparison",
+      "platform_id": "xiaohongshu",
+      "status": "rejected_by_platform_policy",
+      "title": "发完别走，先比三条",
+      "description": "小马刚想做下一条，大陈直接拦住：这条和哪三条同格式内容比过？不先对照，就不知道下一条该改封面、发布时间还是话题口径。",
+      "current_url": "https://creator.xiaohongshu.com/publish/publish?source=official",
+      "management_url": "https://creator.xiaohongshu.com/new/note-manager?source=official",
+      "share_link": null,
+      "external_id": null,
+      "published_at": null,
+      "recorded_at": "2026-05-04T14:48:02+08:00",
+      "verified_fields": {
+        "account": "智能大陈",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/platforms/xiaohongshu.md",
+        "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/xiaohongshu/2026-05-04-ai-employee-three-format-comparison-note-001.md",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/platform-upload-map.md",
+        "final_verify": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/final-verify.json",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison-publish.mp4",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_cover_package/cover-vertical-3x4.png",
+        "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_cover_package/cover-horizontal-4x3.png",
+        "cover_mode": "default_first_frame_from_publish_video; local cover package exists but Xiaohongshu editor used the default first-frame cover state during this attempt",
+        "automation_route": "Chrome DevTools/CDP raw protocol on http://127.0.0.1:9223",
+        "duplicate_guard": "passed before submit: local receipt had no xiaohongshu entry, and Xiaohongshu note-manager did not contain the exact current title before publishing.",
+        "pre_submit_title_readback": "发完别走，先比三条",
+        "pre_submit_body_readback": "小马刚想做下一条，大陈直接拦住：这条和哪三条同格式内容比过？不先对照，就不知道下一条该改封面、发布时间还是话题口径。",
+        "pre_submit_video_check": "uploaded video visible; upload state was complete; publish button was enabled; page warning only said the 720p video resolution is lower than recommended 1080p.",
+        "publish_api_endpoint": "https://edith.xiaohongshu.com/web_api/sns/v2/note",
+        "publish_api_http_status": 200,
+        "publish_api_success": false,
+        "publish_api_result": -9136,
+        "publish_api_message": "因违反社区规范禁止发笔记",
+        "publish_api_need_retry": false,
+        "manager_check_context": "After submit, Xiaohongshu note-manager still showed 全部笔记(14); newest visible row was 发完别走，先抓数据 / 发布于 2026年05月03日 22:14. The current title 发完别走，先比三条 was not present.",
+        "screenshots": {
+          "pre_confirmation": "/Users/baishangjituan/Documents/push/xhs-20260504-staged-before-confirm.png",
+          "before_publish": "/Users/baishangjituan/Documents/push/xhs-20260504-before-publish.png",
+          "after_first_click": "/Users/baishangjituan/Documents/push/xhs-20260504-after-publish-click.png",
+          "post_confirm_publish_page": "/Users/baishangjituan/Documents/push/xhs-20260504-post-confirm-publish-page.png",
+          "captured_response": "/Users/baishangjituan/Documents/push/xhs-20260504-submit-captured-response.png",
+          "manager_check": "/Users/baishangjituan/Documents/push/xhs-20260504-manager-B4CC4E.png"
+        }
+      },
+      "feishu_notification": null,
+      "notes": [
+        "rejected_by_platform_policy_2026-05-04T14:48:02+08:00: after user final confirmation, Chrome DevTools/CDP clicked the real enabled Xiaohongshu 发布 button. The publish API https://edith.xiaohongshu.com/web_api/sns/v2/note returned HTTP 200 with success=false, result=-9136, need_retry=false, msg=因违反社区规范禁止发笔记. The editor stayed on the publish page and note-manager did not show the current title, so this is recorded as not published.",
+        "xiaohongshu_thread_scope: this entry records only the Xiaohongshu publish task in this thread.",
+        "no_retry_without_package_revision: Xiaohongshu returned a rule-style rejection; do not resubmit the same package. Revise the package/copy first, then run a fresh duplicate guard before any new submit attempt.",
+        "feishu_notification_not_sent: platform did not reach a verified publish-success state."
+      ]
+    },
+    "zhihu": {
+      "campaign_id": "2026-05-04-ai-employee-three-format-comparison",
+      "current_url": "https://www.zhihu.com/pin/2034643656980870000?page=video_pin&scene=share",
+      "description": "因为单条数据只能说明一个结果，不能直接说明原因。要判断下一条该改哪里，至少要把本条和近3条同格式内容放在一起，对齐发布时间、封面结构、话题口径、播放、完播和互动。",
+      "external_id": "2034643656980870000",
+      "management_url": "https://www.zhihu.com/people/vkvtss-81/zvideos",
+      "notes": [
+        "initialized_current_thread_before_publish_2026-05-04T14:32:24+08:00: latest local content package locked for Zhihu only in this thread; package_status=ready_for_platform_publishing, browser_publish_status=not_started, video/cover/platform package/platform-upload-map exist. Receipt initialized as not_started before duplicate guard and browser publish.",
+        "published_verified_2026-05-04T14:42:01+08:00: CDP endpoint 127.0.0.1:9223 was checked first but the attached CDP Chrome was not logged into Zhihu, so without restarting logged-in Chrome the flow used OpenCLI BrowserBridge after reconnecting the extension. Duplicate guard checked local receipt and Zhihu profile videos/posts before publishing; no current campaign title existed before submit. The first submit attempt uploaded the video and prepared the draft but the native click did not submit, so no receipt was marked successful. The second flow re-ran duplicate guard, uploaded the same byte-identical short-path video, inserted title/body through real editor input, clicked the real publish button through DOM/native events, saw 发布中 then success, and verified the exact title/body on both profile videos and public pin pages.",
+        "zhihu_thread_scope: this entry records only the Zhihu publish task in this thread; other platform receipt entries are historical context from their own flows and were not acted on here.",
+        "feishu_notification_not_sent_by_current_thread: this Zhihu-only thread did not receive a separate third-party notification instruction; local receipt was recorded after public verification."
+      ],
+      "platform_id": "zhihu",
+      "published_at": "2026-05-04T14:40:00+08:00",
+      "recorded_at": "2026-05-04T14:42:01+08:00",
+      "share_link": "https://www.zhihu.com/pin/2034643656980870000?page=video_pin&scene=share",
+      "status": "published",
+      "title": "为什么短视频复盘不能只看本条数据，还要做同格式对照？",
+      "verified_fields": {
+        "account": "智能大陈",
+        "actual_publish_form": "知乎首页视频/想法入口；内容包未提供目标问题 URL，因此未进入具体问题回答页",
+        "automation_route": "Chrome DevTools/CDP endpoint 127.0.0.1:9223 checked first; CDP Chrome was not logged into Zhihu. OpenCLI BrowserBridge was used after extension reconnect, without restarting logged-in Chrome.",
+        "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_cover_package/cover-horizontal-4x3.png",
+        "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-04-ai-employee-three-format-comparison-answer-001.md",
+        "cover_mode": "知乎首页视频入口未出现独立题图/封面文件输入；按当前入口使用视频缩略图，原始主封面和备用封面作为素材证据保留",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_cover_package/cover-vertical-3x4.png",
+        "duplicate_guard": "passed: before submit, local receipt had no blocking zhihu status and Zhihu profile videos/posts did not contain the exact title or campaign id",
+        "final_verify": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/final-verify.json",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/platforms/zhihu.md",
+        "platform_content_type": "video_pin",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/platform-upload-map.md",
+        "pre_submit_body_readback": "因为单条数据只能说明一个结果，不能直接说明原因。要判断下一条该改哪里，至少要把本条和近3条同格式内容放在一起，对齐发布时间、封面结构、话题口径、播放、完播和互动。",
+        "pre_submit_title_readback": "为什么短视频复盘不能只看本条数据，还要做同格式对照？",
+        "pre_submit_video_check": "video card present, uploadActive=false, uploadFailure=false, publish button enabled",
+        "profile_row_context": "个人视频页显示：为什么短视频复盘不能只看本条数据，还要做同格式对照？ / 发布于 2026-05-04 14:40；视频数从 4 增至 5",
+        "public_page_context": "公开 pin 页标题和正文均命中，页面显示 00:15 和 发布于 2026-05-04 14:40",
+        "screenshots": {
+          "before_publish": "/Users/baishangjituan/Documents/push/zhihu-20260504-video-before-publish.png",
+          "profile_check": "/Users/baishangjituan/Documents/push/zhihu-20260504-video-profile-check.png",
+          "public_check": "/Users/baishangjituan/Documents/push/zhihu-20260504-video-public-check.png",
+          "upload_ready": "/Users/baishangjituan/Documents/push/zhihu-20260504-video-upload-ready.png"
+        },
+        "source_package_form": "视频回答/回答附视频",
+        "status_text": "发布于 2026-05-04 14:40",
+        "uploaded_video_path": "/tmp/zhihu-20260504-publish.mp4",
+        "uploaded_video_sha256": "8a66e6f8e891cb21a4e8742729b68910c95e1034c2fbb81e50b512fcf84b3d17",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison-publish.mp4"
+      }
+    },
+    "bilibili": {
+      "campaign_id": "2026-05-04-ai-employee-three-format-comparison",
+      "platform_id": "bilibili",
+      "status": "published_verified_in_manager",
+      "title": "别凭感觉复盘：大陈让机器人小马先做三条同格式对照",
+      "description": "这条讲发布后的第三步：抓到数据以后，不要马上下结论，而是把新视频和近3条同格式内容做对照。对齐发布时间、封面结构、话题口径，再判断下一条到底改哪里。",
+      "current_url": "https://member.bilibili.com/platform/upload-manager/article",
+      "management_url": "https://member.bilibili.com/platform/upload-manager/article",
+      "share_link": "https://www.bilibili.com/video/BV1H2RvBgEUW/",
+      "external_id": "BV1H2RvBgEUW",
+      "published_at": "2026-05-04T14:50:59+08:00",
+      "recorded_at": "2026-05-04T14:56:32+08:00",
+      "cdp_base": "http://127.0.0.1:9223",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_content_package/platforms/bilibili.md",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison-publish.mp4",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-04-ai-employee-three-format-comparison_cover_package/cover-horizontal-4x3.png",
+      "ai_declaration": "作者声明：该视频使用人工智能合成技术",
+      "category": "人工智能",
+      "tags": [
+        "AI员工",
+        "短视频复盘",
+        "内容运营"
+      ],
+      "verification": {
+        "submit_status": "submitted_or_success_page_then_manager_verified",
+        "manager_row_text": "全部稿件 9 草稿 进行中 0 已通过 9 未通过 0 00:00:16 别凭感觉复盘：大陈让机器人小马先做三条同格式对照 2026年05月04日 14:50:59 当前字幕: 1（含平台自动生成） 编辑 数据 0 4 0 0 0 0 0",
+        "screenshot_path": "/Users/baishangjituan/Documents/push/bilibili-manager-verified-20260504.png",
+        "pre_submit": {
+          "title": "别凭感觉复盘：大陈让机器人小马先做三条同格式对照",
+          "description": "这条讲发布后的第三步：抓到数据以后，不要马上下结论，而是把新视频和近3条同格式内容做对照。对齐发布时间、封面结构、话题口径，再判断下一条到底改哪里。",
+          "category": "人工智能",
+          "tags": [
+            "AI员工",
+            "短视频复盘",
+            "内容运营"
+          ],
+          "declaration": "作者声明：该视频使用人工智能合成技术",
+          "cover": "https://archive.biliimg.com/bfs/archive/54601dacfda366f3e2e220e4a20637baf3245a53.jpg"
+        },
+        "automation_route": "Chrome DevTools/CDP raw protocol on http://127.0.0.1:9223; video upload, field fill, cover upload, AI declaration, submit, and manager verification completed through CDP-attached Chrome. Main script timed out after submit while on manager page, so receipt was written from direct CDP manager verification.",
+        "duplicate_guard": "passed before submit: no matching local bilibili receipt and Bilibili manager page did not contain the current exact title before upload."
+      },
+      "notes": [
+        "published_verified_2026-05-04T14:56:32+08:00: Chrome DevTools/CDP endpoint 127.0.0.1:9223 was used as the preferred route. Duplicate guard checked local receipt and Bilibili manager page before publishing. The flow uploaded the mp4, set title/description, corrected category to 人工智能, set tags AI员工/短视频复盘/内容运营, uploaded the local horizontal 4:3 cover, selected 作者声明：该视频使用人工智能合成技术, clicked 立即投稿 once, and verified the exact title as newest manager row at 2026年05月04日 14:50:59 with BVID BV1H2RvBgEUW.",
+        "script_timeout_recovered: the reusable CDP script timed out during post-submit manager evaluation, but the browser had already navigated to upload-manager. A fresh CDP manager target verified the row and captured the manager screenshot before this receipt was written.",
+        "bilibili_thread_scope: this entry records only the Bilibili publish task in this thread.",
+        "feishu_notified_2026-05-04T14:58:53+08:00: sent one Bilibili-only verified publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id om_x100b50b07411b8a4b34ca45523f9225."
+      ],
+      "feishu_notification": {
+        "status": "sent",
+        "platform_id": "bilibili",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b50b07411b8a4b34ca45523f9225",
+        "sent_at": "2026-05-04T14:58:53+08:00",
+        "tool": "lark-cli",
+        "text_summary": "B站发布完成通知，含标题、管理页验证状态、BVID 和公开链接。"
+      }
+    }
+  }
+}
