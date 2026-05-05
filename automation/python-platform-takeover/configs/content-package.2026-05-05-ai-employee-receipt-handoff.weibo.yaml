@@ -1,0 +1,28 @@
+campaign_id: "2026-05-05-ai-employee-receipt-handoff"
+theme: "发布完成不等于交接完成，AI员工必须补齐公开链接、发布时间、状态词和封面确认。"
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff-publish.mp4"
+  backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_cover_package/cover-horizontal-4x3.png"
+support_files:
+  final_verify_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package/final-verify.json"
+  platform_upload_map: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package/platform-upload-map.md"
+  weibo_platform_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package/platforms/weibo.md"
+  weibo_content_library_path: "/Users/baishangjituan/Documents/New project/content-library/posts/weibo/2026-05-05-ai-employee-receipt-handoff-video-post-001.md"
+publish_constraints:
+  reuse_logged_in_publish_page: true
+  skip_duplicate_if_already_published: true
+  prefer_repair_existing_post_over_republish: true
+  require_management_page_verification: true
+  require_active_campaign_lock: true
+platform_upload_plan:
+  weibo:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff-publish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_cover_package/cover-horizontal-4x3.png"
+platforms:
+  weibo:
+    title: "视频发完就走？大陈让机器人小马先补回执"
+    description: "机器人小马说发完了，准备做下一条。大陈只问一句：链接在哪？没有公开链接、发布时间、状态词和封面确认，团队就接不上。#AI员工 #内容运营 #发布复盘"

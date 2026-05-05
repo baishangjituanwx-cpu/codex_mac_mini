@@ -1,0 +1,150 @@
+source_thread_id: "019d9ac2-d680-7f12-bf32-14678c576aa1"
+campaign_id: "2026-05-05-ai-employee-audit-wait-no-republish"
+theme: "等待不是失败；AI员工先看状态、保留原稿、设复查时间，不急着重发。"
+status: "ready_for_publish"
+package_status: "ready_for_platform_publishing"
+scope: "all_platforms"
+
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish-publish.mp4"
+  backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-horizontal-4x3.png"
+
+support_files:
+  content_package_root: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_content_package"
+  final_verify_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_content_package/final-verify.json"
+  platform_upload_map: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_content_package/platform-upload-map.md"
+  hermes_package_json: "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-05-ai-employee-audit-wait-no-republish.json"
+  publish_plan: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_content_package/publish-plan.md"
+  browser_checklist: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_content_package/browser-use-checklist.md"
+
+publish_constraints:
+  allow_live: false
+  require_management_page_verification: true
+  skip_duplicate_if_already_published: true
+  final_submit_requires_user_confirmation: true
+  prefer_repair_existing_post_over_republish: true
+  no_publish_in_handoff_generation: true
+  no_upload_in_handoff_generation: true
+  no_submit_click_in_handoff_generation: true
+  xiaohongshu_testing_allowed: false
+  do_not_touch_push_directory: true
+
+platform_upload_plan:
+  douyin:
+    publish_type: "short_video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_content_package/platforms/douyin.md"
+    title_source: "platforms.douyin.title"
+    description_source: "platforms.douyin.description"
+  kuaishou:
+    publish_type: "short_video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_content_package/platforms/kuaishou.md"
+    title_source: "platforms.kuaishou.title"
+    description_source: "platforms.kuaishou.description"
+  wechat_channels:
+    publish_type: "short_video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_content_package/platforms/wechat-channels.md"
+    title_source: "platforms.wechat_channels.title"
+    description_source: "platforms.wechat_channels.description"
+  weibo:
+    publish_type: "video_post"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_content_package/platforms/weibo.md"
+    title_source: "platforms.weibo.title"
+    description_source: "platforms.weibo.description"
+  bilibili:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-horizontal-4x3.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-vertical-3x4.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_content_package/platforms/bilibili.md"
+    title_source: "platforms.bilibili.title"
+    description_source: "platforms.bilibili.description"
+  xiaohongshu:
+    publish_type: "video_note"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_content_package/platforms/xiaohongshu.md"
+    title_source: "platforms.xiaohongshu.title"
+    description_source: "platforms.xiaohongshu.description"
+    testing_allowed: false
+  toutiao:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_content_package/platforms/toutiao.md"
+    title_source: "platforms.toutiao.title"
+    description_source: "platforms.toutiao.description"
+  baijiahao:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-horizontal-4x3.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-vertical-3x4.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_content_package/platforms/baijiahao.md"
+    title_source: "platforms.baijiahao.title"
+    description_source: "platforms.baijiahao.description"
+  zhihu:
+    publish_type: "video_answer"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_content_package/platforms/zhihu.md"
+    title_source: "platforms.zhihu.title"
+    description_source: "platforms.zhihu.description"
+
+platforms:
+  douyin:
+    title: "看到等待，别急着重发"
+    description: "机器人小马一看后台还没公开就想重发，大陈直接拦住：状态看清了吗？等待不是失败，先守住原稿、留好证据、设复查时间。#AI员工 #短视频运营 #发布复盘"
+  kuaishou:
+    title: "先看状态再重发"
+    description: "后台还在等待，小马急着重发。大陈说，别先判失败，先看状态词、留原稿、设复查时间。"
+  wechat_channels:
+    title: "等待不是失败"
+    description: "机器人小马看到内容还没公开就想重发，大陈让它先停下：看清状态、保留原稿、设复查时间，再决定下一步。"
+  weibo:
+    title: "后台还在等待，为什么大陈不让机器人小马重发？"
+    description: "一看到没公开就重发，最容易把归因搞乱。大陈让机器人小马先看状态词、保留原稿、截图留证、设复查时间。等待不是失败。#AI员工 #内容运营 #发布复盘"
+  bilibili:
+    title: "等待不是失败：大陈让机器人小马先看状态再决定要不要重发"
+    description: "这条讲发布后的异常处理：内容还在等待或审核时，不要急着删掉重发。先看状态词、保留原稿、记录链接和复查时间，等结果明确后再决定修旧条还是下一步处理。"
+  xiaohongshu:
+    title: "别急重发，先看状态"
+    description: "小马看到后台还没公开就想重发，大陈直接拦住：先看状态词。等待不是失败，守住原稿，设好复查时间。"
+  toutiao:
+    title: "后台还在等待，AI员工为什么不能急着重发？"
+    description: "内容还没公开，不代表已经失败。AI员工要先看状态词、保留原稿、记录复查时间，再决定是继续等、修旧条，还是重新处理。"
+  baijiahao:
+    title: "内容还在等待时，为什么不能马上删掉重发？"
+    description: "因为等待状态不等于内容失败。贸然重发会让数据归因变乱，也可能产生重复内容。更稳的做法是先看状态词，保留原稿，截图留证，设定复查时间。"
+  zhihu:
+    title: "为什么内容发布后处于等待状态时，不应该马上重发？"
+    description: "因为等待、审核、暂未公开都只是中间状态，不等于内容失败。直接重发会污染数据归因，还可能造成重复发布。更稳妥的做法是先记录状态词、保留原稿、设定复查时间。"
+
+publishing:
+  preferred_automation: "Hermes/python-platform-takeover"
+  final_submit_requires_user_confirmation: true
+  allow_live: false

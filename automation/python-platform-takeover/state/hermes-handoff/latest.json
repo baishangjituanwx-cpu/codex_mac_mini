@@ -1,0 +1,21 @@
+{
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "campaign_id": "2026-05-05-ai-employee-audit-wait-no-republish",
+  "status": "ready_for_publish",
+  "content_package_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-audit-wait-no-republish.yaml",
+  "hermes_package_json": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-05-ai-employee-audit-wait-no-republish.json",
+  "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_content_package",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-05-ai-employee-audit-wait-no-republish.json",
+  "scope": "video_focused",
+  "platform_upload_plan": {
+    "douyin": "unsupported_by_current_hermes_skill",
+    "kuaishou": "enabled",
+    "wechat_channels": "enabled",
+    "weibo": "enabled",
+    "bilibili": "enabled",
+    "toutiao": "enabled",
+    "baijiahao": "enabled",
+    "zhihu": "enabled"
+  },
+  "allow_live": false
+}

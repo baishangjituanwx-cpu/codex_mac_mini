@@ -276,6 +276,13 @@ Copy-Item configs/content-package.example.yaml configs/content-package.local.yam
 - 如果当前内容包还没有自己的 receipt，先用 `.\scripts\social-publisher.ps1 record-receipt <你的 YAML> --platform <platform> --status not_started` 初始化；`receipt-status`、`record-receipt`、`validate-package` 都直接指向当前这份日期化 YAML 或 `content-package.local.yaml`，不要借用旧 campaign 的文件名。
 - Windows 侧只有在 markdown 文案包、上传矩阵都已存在，且 `.\scripts\social-publisher.ps1 validate-package configs/content-package.local.yaml` 或对应日期化 YAML 校验通过后，才算完成今天新增的 `ready_for_publish` 交付标准。
 
+如果今天接到的是 handoff-only 包，例如 YAML 里已经写了 `publish_constraints.allow_live: false`、`no_publish_in_handoff_generation: true`、`no_upload_in_handoff_generation: true` 或 `no_submit_click_in_handoff_generation: true`，Windows 侧不要把它当成可直接发布的 live 包:
+
+- 先用 `.\scripts\social-publisher.ps1 validate-package <你的 YAML>` 确认路径、标题和文案字段齐全。
+- 用 `.\scripts\social-publisher.ps1 receipt-status <你的 YAML> --platform <platform>` 查看当前 campaign 是否已经有 receipt；没有的话用 `record-receipt --status not_published` 初始化占位。
+- 这类包的目标是交接，不是实发；不要跑 `publish --execute`，不要打开原生文件选择器，不要点平台提交按钮。
+- 如果仓库里同步有 `state/hermes-handoff/latest.json` 指向同一个 `campaign_id`，把它和当前 receipt 一起当成 Windows 侧后续接力的唯一入口，不要绕回旧 campaign 或旧 receipt。
+
 ## 示例命令
 
 macOS / Linux:

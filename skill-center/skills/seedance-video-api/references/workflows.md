@@ -159,6 +159,7 @@ Rules:
 - if article / note platforms are in scope, continue with their正文包 as a separate downstream step
 - on Windows handoff, copy the same final fields into `automation/python-platform-takeover/configs/content-package.local.yaml` or a dated `content-package.<campaign>.yaml`
 - treat `platforms.wechat_channels.title` as 视频号 `短标题` and `platforms.wechat_channels.description` as 视频号 `描述`
+- on Windows handoff, keep `latest-review.md` or `brief.json` as the internal review-evidence note and keep `video-prompt.txt`, platform titles, and platform copy audience-facing; do not paste raw data-review wording into the dated YAML or downstream publish text fields
 - on Windows handoff, if the current `大陈 / AI员工 / 机器人小马` package keeps the default female supporting role, preserve the extra `reference_image` item as `asset://asset-20260401123823-6d4x2`; do not rewrite that payload field into a local `C:/...` path
 - on Windows handoff, keep every upload-matrix row explicit: quoted `C:/...` video path or `不上传视频`, quoted `C:/...` cover path, final title field, and final copy source; for Seedance video campaigns, 头条号 should keep the real video path unless the package explicitly includes a separate 图文派生稿
 - do not call the campaign `ready_for_publish` until the markdown publish package exists and `.\scripts\social-publisher.ps1 validate-package ...` passes against the finished YAML

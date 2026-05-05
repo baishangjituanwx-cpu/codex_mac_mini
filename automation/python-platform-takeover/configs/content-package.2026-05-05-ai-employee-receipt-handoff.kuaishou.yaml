@@ -1,0 +1,38 @@
+campaign_id: "2026-05-05-ai-employee-receipt-handoff"
+theme: "发完不写回，下一班接不住；AI员工必须把公开链接、发布时间、状态词和封面确认交清楚。"
+status: "ready_for_publish"
+package_status: "ready_for_platform_publishing"
+scope: "kuaishou_thread_only"
+
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff-publish.mp4"
+  backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_cover_package/cover-horizontal-4x3.png"
+
+support_files:
+  content_package_root: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package"
+  final_verify_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package/final-verify.json"
+  platform_upload_map: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package/platform-upload-map.md"
+  kuaishou_platform_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package/platforms/kuaishou.md"
+  browser_checklist: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package/browser-use-checklist.md"
+
+platform_upload_plan:
+  kuaishou:
+    publish_type: "short_video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff-publish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_cover_package/cover-horizontal-4x3.png"
+    title_source: "platforms.kuaishou.title"
+    description_source: "platforms.kuaishou.description"
+
+platforms:
+  kuaishou:
+    title: "发完要补回执"
+    description: "发完视频不等于交接完成。小马刚想做下一条，大陈让它先把链接、时间、状态和封面确认写回表里。"
+
+publishing:
+  preferred_automation: "Chrome DevTools/CDP"
+  publish_url: "https://cp.kuaishou.com/article/publish/video?tabType=1"
+  management_url: "https://cp.kuaishou.com/article/manage/video"
+  final_submit_requires_user_confirmation: false

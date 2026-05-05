@@ -371,13 +371,17 @@ class WeChatChannelsPublisher(PlatformPublisher):
         if surface is not None:
             return surface  # type: ignore[return-value]
 
-        page.locator(mapping["selectors"]["publish_frame"]).first.wait_for(timeout=timeout)
-        attempts = max(1, timeout // 300)
-        for _ in range(attempts):
-            frame = page.frame(name="content")
-            if frame is not None:
-                return frame
-            page.wait_for_timeout(300)
+        frame = self._resolve_content_frame(page, timeout=timeout)
+        if frame is not None:
+            return frame
+
+        page.locator(mapping["selectors"]["publish_frame"]).first.wait_for(
+            state="attached",
+            timeout=timeout,
+        )
+        frame = self._resolve_content_frame(page, timeout=timeout)
+        if frame is not None:
+            return frame
         raise RuntimeError("Unable to resolve the WeChat Channels publish frame.")
 
     def _require_management_frame(
@@ -395,19 +399,33 @@ class WeChatChannelsPublisher(PlatformPublisher):
         if surface is not None:
             return surface  # type: ignore[return-value]
 
-        page.locator(selector).first.wait_for(timeout=timeout)
+        frame = self._resolve_content_frame(page, timeout=timeout)
+        if frame is not None:
+            return frame
+
+        page.locator(selector).first.wait_for(state="attached", timeout=timeout)
+        frame = self._resolve_content_frame(page, timeout=timeout)
+        if frame is not None:
+            return frame
+        raise RuntimeError("Unable to resolve the WeChat Channels management frame.")
+
+    def _resolve_content_frame(
+        self,
+        page: Page,
+        *,
+        timeout: int,
+    ) -> Frame | None:
         attempts = max(1, timeout // 300)
         for _ in range(attempts):
             frame = page.frame(name="content")
-            if frame is not None:
+            if frame is not None and "empty.html" not in frame.url:
                 try:
                     frame.locator("body").wait_for(timeout=500)
+                    return frame
                 except PlaywrightTimeoutError:
-                    page.wait_for_timeout(300)
-                    continue
-                return frame
+                    pass
             page.wait_for_timeout(300)
-        raise RuntimeError("Unable to resolve the WeChat Channels management frame.")
+        return None
 
     def _ensure_video_present(
         self,

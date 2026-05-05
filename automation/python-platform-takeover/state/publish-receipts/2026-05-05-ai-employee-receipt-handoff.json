@@ -1,0 +1,240 @@
+{
+  "campaign_id": "2026-05-05-ai-employee-receipt-handoff",
+  "receipts": {
+    "bilibili": {
+      "ai_declaration": "作者声明：该视频使用人工智能合成技术",
+      "campaign_id": "2026-05-05-ai-employee-receipt-handoff",
+      "category": "人工智能",
+      "cdp_base": "http://127.0.0.1:9222",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package/platforms/bilibili.md",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_cover_package/cover-horizontal-4x3.png",
+      "current_url": "https://member.bilibili.com/platform/upload-manager/article",
+      "description": "这条讲发布后的交接动作：视频发出去以后，不能只说一句“发完了”。公开链接、发布时间、状态词、封面确认都要写回表里，后续复盘和接班的人才知道从哪里继续。",
+      "external_id": null,
+      "management_url": "https://member.bilibili.com/platform/upload-manager/article",
+      "platform_id": "bilibili",
+      "recorded_at": "2026-05-05T13:30:30.507+08:00",
+      "share_link": null,
+      "status": "submitted_verified_in_manager",
+      "tags": [
+        "AI员工",
+        "发布复盘",
+        "内容运营"
+      ],
+      "title": "发完不算交接：大陈让机器人小马把发布回执补清楚",
+      "verification": {
+        "manager_row_text": "全部稿件 9\n草稿\n进行中 0\n已通过 9\n未通过 0\n00:00:00\n发完不算交接：大陈让机器人小马把发布回执补清楚\n2026年05月05日 13:30:24\n转码中\n审核中\n查询进度\n编辑\n0\n0\n0\n0\n0\n0\n0\n00:00:16\n别凭感觉复盘：大陈让机器人小马先做三条同格式对照\n2026年05月04日 14:50:59\n当前字幕: 1（含平台自动生成）\n编辑\n数据\n69\n4\n0\n0\n0\n0\n0\n00:00:16\n只发布不算复盘：大陈让机器人小马进数据中心抓指标\n2026年05月03日 21:40:58\n当前字幕: 1（含平台自动生成）\n编辑\n数据\n75\n3\n0\n0\n0\n0\n0\n00:00:16\n视频发出去了，为什么还不算完成？大陈让机器人小马先写回\n2026年05月02日 15:45:51\n当前字幕: 1（含平台自动生成）\n编辑\n数据\n75\n2\n0\n0\n0\n0\n0\n00:00:16\n机器人小马一看到异常就要重发，大陈为什么说先看状态词？\n2026年05月01日 17:24:42\n当前字幕: 1（含平台自动生成）\n编辑\n数据\n43\n0\n0\n0\n0\n0\n0\n00:00:16\n发布后发现封面或描述不对，为什么要先修旧条，而不是直接重发？\n2026年04月30日 14:43:21\n当前字幕: 1（含平台自动生成）\n编辑\n数据\n46\n7\n0\n0\n0\n0\n0\n00:00:16\n为什么总会把昨天内容发到今天？发前先锁当前批次，再做四项比对\n2026年04月29日 18:38:39\n当前字幕: 1（含平台自动生成）\n编辑\n数据\n70\n0\n0\n0\n0\n0\n0\n00:00:16\n未核验不等于失败：先看列表状态，再决定重发还是修旧条\n2026年04月28日 17:05:48\n当前字幕: 1（含平台自动生成）\n编辑\n数据\n2\n0\n0\n0\n0\n0\n0\n00:00:16\n p-20260425- ix-writeback为什么复盘总错位：发完内容后，第一件事不是分析，而是写回6个真实字段\n2026年04月26日 23:19:56\n当前字幕: 1（含平台自动生成）\n编辑\n数据\n1\n0\n0\n0\n0\n0\n0\n00:00:16\n别让复盘错位：发完内容后，最该先自动写回的是真实后台字段\n2026年04月24日 16:07:10\n当前字幕: 1（含平台自动生成）\n编辑\n数据\n7\n0\n0\n0\n0\n0\n0\n1共1页 / 10个，跳转至  页",
+        "pre_submit": {
+          "category": "人工智能 / 人工智能 / 作者声明：该视频使用人工智能合成技术",
+          "cover": "url(\"https://archive.biliimg.com/bfs/archive/ccd1fc401f9bdb21f3eb38904b6b317eff2748bd.jpg\")",
+          "declaration": "作者声明：该视频使用人工智能合成技术",
+          "description": "这条讲发布后的交接动作：视频发出去以后，不能只说一句“发完了”。公开链接、发布时间、状态词、封面确认都要写回表里，后续复盘和接班的人才知道从哪里继续。",
+          "tags": [
+            "AI员工",
+            "发布复盘",
+            "内容运营"
+          ],
+          "title": "发完不算交接：大陈让机器人小马把发布回执补清楚"
+        },
+        "screenshot_path": "/Users/baishangjituan/Documents/push/bilibili-manager-verified-20260505.png",
+        "submit_status": "submitted_or_success_page"
+      },
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff-publish.mp4"
+    },
+    "kuaishou": {
+      "campaign_id": "2026-05-05-ai-employee-receipt-handoff",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package/platforms/kuaishou.md",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_cover_package/cover-vertical-3x4.png",
+      "current_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+      "description": "发完视频不等于交接完成。小马刚想做下一条，大陈让它先把链接、时间、状态和封面确认写回表里。",
+      "management_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+      "notes": [
+        "Verified from Kuaishou 作品管理 list via CDP after publish redirect.",
+        "management_status: 审核中",
+        "matched_snippet: 发完视频不等于交接完成。"
+      ],
+      "platform_id": "kuaishou",
+      "recorded_at": "2026-05-05T13:19:11+08:00",
+      "status": "under_review",
+      "submitted_at": "2026-05-05T13:19:11+08:00",
+      "title": "发完要补回执",
+      "upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package/platform-upload-map.md",
+      "verification_method": "Chrome DevTools/CDP management-list verification",
+      "verified_state": "审核中",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff-publish.mp4"
+    },
+    "toutiao": {
+      "campaign_id": "2026-05-05-ai-employee-receipt-handoff",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package/platforms/toutiao.md",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_cover_package/cover-vertical-3x4.png",
+      "current_url": "https://mp.toutiao.com/profile_v4/xigua/small-video",
+      "declarations": {
+        "ai_generated_checked": true,
+        "generate_article_checked": false
+      },
+      "description": "发完视频后，不能只说“后台显示成功”。团队需要能查到的公开链接、发布时间、状态词和封面确认。AI员工把这些回执写回表里，后续复盘才不断线。",
+      "evidence": {
+        "after_click_screenshot": "/Users/baishangjituan/Documents/push/toutiao-after-publish-click-direct-20260505.png",
+        "duplicate_guard_screenshot": "/Users/baishangjituan/Documents/push/toutiao-manager-before-20260505.png",
+        "manager_contains_title": true,
+        "manager_screenshot": "/Users/baishangjituan/Documents/push/toutiao-manager-verified-20260505.png",
+        "manager_status_text": "审核中",
+        "pre_submit_screenshot": "/Users/baishangjituan/Documents/push/toutiao-pre-submit-direct-20260505.png",
+        "publish_success_text": "全部发表成功"
+      },
+      "management_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
+      "notes": [
+        "Published through Chrome DevTools/CDP endpoint http://127.0.0.1:9222.",
+        "Exact title was absent from manager list before upload.",
+        "Video upload succeeded, custom vertical 3:4 cover was applied, AI-generated declaration checked, then submitted.",
+        "Manager list verification found the new row at 05-05 13:12 with status 审核中."
+      ],
+      "platform_id": "toutiao",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package/platform-upload-map.md",
+      "publish_type": "video",
+      "published_at": "2026-05-05T13:12:00+08:00",
+      "recorded_at": "2026-05-05T05:13:17.624Z",
+      "result_path": "/Users/baishangjituan/Documents/push/toutiao_publish_result_20260505.json",
+      "status": "under_review",
+      "status_text": "审核中",
+      "title": "视频发完就走？AI员工必须先把回执交清楚",
+      "verified_at": "2026-05-05T05:13:17.624Z",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff-publish.mp4"
+    },
+    "wechat_channels": {
+      "campaign_id": "2026-05-05-ai-employee-receipt-handoff",
+      "current_url": "https://channels.weixin.qq.com/platform/post/create",
+      "external_id": null,
+      "management_url": "https://channels.weixin.qq.com/platform/post/list",
+      "notes": [],
+      "platform_id": "wechat_channels",
+      "recorded_at": "2026-05-05T05:33:03.782521+00:00",
+      "share_link": null,
+      "status": "published",
+      "title": "回执要交清楚"
+    },
+    "weibo": {
+      "campaign_id": "2026-05-05-ai-employee-receipt-handoff",
+      "current_url": "https://weibo.com/u/2326772703",
+      "description": "机器人小马说发完了，准备做下一条。大陈只问一句：链接在哪？没有公开链接、发布时间、状态词和封面确认，团队就接不上。#AI员工 #内容运营 #发布复盘",
+      "external_id": null,
+      "management_url": "https://weibo.com/u/2326772703",
+      "notes": [
+        "submitted_pending_public_verification_2026-05-05T13:08:00+08:00: CDP was checked first as required. The only available CDP endpoint was http://127.0.0.1:9222, but that Chrome profile was not logged into Weibo and showed the Weibo login page, so the flow fell back to the already connected OpenCLI Browser Bridge while it was available.",
+        "duplicate_guard_passed_before_submit: local receipt had no weibo entry, and the Weibo profile visible through OpenCLI did not contain the current marker text before submit.",
+        "weibo_send_clicked_once: OpenCLI weibo publish adapter filled the real Weibo composer text, attached the local publish video through the page file input, and clicked the real send control once. The adapter returned published_or_pending_verification with detail Send clicked; profile marker not visible yet.",
+        "public_verification_blocked_after_submit: subsequent OpenCLI checks returned Browser Bridge extension not connected. The remaining CDP endpoint is an unlogged-in /tmp/chrome-debug-hermes browser, and unauthenticated Weibo profile/API checks are blocked by login/visitor restrictions. Do not republish automatically; wait for Browser Bridge/CDP login verification or manual profile confirmation."
+      ],
+      "platform_id": "weibo",
+      "published_at": null,
+      "recorded_at": "2026-05-05T13:08:00+08:00",
+      "share_link": null,
+      "status": "submitted_pending_public_verification",
+      "title": "视频发完就走？大陈让机器人小马先补回执",
+      "verified_fields": {
+        "automation_route": "Preferred CDP check on http://127.0.0.1:9222 failed due missing Weibo login; fallback used OpenCLI Browser Bridge before it disconnected.",
+        "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/weibo/2026-05-05-ai-employee-receipt-handoff-video-post-001.md",
+        "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package/platforms/weibo.md",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_cover_package/cover-vertical-3x4.png",
+        "duplicate_guard": "passed before submit",
+        "opencli_adapter": "/Users/baishangjituan/.opencli/clis/weibo/publish.js",
+        "post_submit_public_check": "not verified: Browser Bridge disconnected; unauthenticated CDP/browser checks show Weibo login/visitor restrictions",
+        "pre_submit_description_readback": "机器人小马说发完了，准备做下一条。大陈只问一句：链接在哪？没有公开链接、发布时间、状态词和封面确认，团队就接不上。#AI员工 #内容运营 #发布复盘",
+        "submitted_at": "2026-05-05T12:58:30+08:00",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff-publish.mp4"
+      }
+    },
+    "baijiahao": {
+      "campaign_id": "2026-05-05-ai-employee-receipt-handoff",
+      "platform_id": "baijiahao",
+      "content_type": "video",
+      "status": "published_verified_in_manager",
+      "status_text": "已发布音频",
+      "title": "视频发布后为什么要写回链接、时间和状态词？",
+      "description": "因为发布不是终点，交接才决定后续能不能复盘。公开链接、发布时间、状态词、封面确认如果没有写回，下一班就不知道内容是否真实发布，也无法继续跟踪数据。",
+      "published_at": "2026-05-05T13:44:25+08:00",
+      "verified_at": "2026-05-05T13:51:17+08:00",
+      "recorded_at": "2026-05-05T13:51:17+08:00",
+      "current_url": "https://baijiahao.baidu.com/builder/rc/content?currentPage=1&pageSize=10&search=%E8%A7%86%E9%A2%91%E5%8F%91%E5%B8%83%E5%90%8E%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%86%99%E5%9B%9E%E9%93%BE%E6%8E%A5%E3%80%81%E6%97%B6%E9%97%B4%E5%92%8C%E7%8A%B6%E6%80%81%E8%AF%8D%EF%BC%9F&type=&collection=&app_id=1861892519044473&startDate=&endDate=",
+      "management_url": "https://baijiahao.baidu.com/builder/rc/content?currentPage=1&pageSize=10&search=%E8%A7%86%E9%A2%91%E5%8F%91%E5%B8%83%E5%90%8E%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%86%99%E5%9B%9E%E9%93%BE%E6%8E%A5%E3%80%81%E6%97%B6%E9%97%B4%E5%92%8C%E7%8A%B6%E6%80%81%E8%AF%8D%EF%BC%9F&type=&collection=&app_id=1861892519044473&startDate=&endDate=",
+      "submit_success_url": "https://baijiahao.baidu.com/builder/rc/clue?aside=0&footer=true&from=videoV2&firstPublish=undefined&word_bag_id=null",
+      "public_url": null,
+      "share_link": null,
+      "external_id": null,
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package/platforms/baijiahao.md",
+      "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/baijiahao/2026-05-05-ai-employee-receipt-handoff-video-001.md",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package/platform-upload-map.md",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff-publish.mp4",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_cover_package/cover-horizontal-4x3.png",
+      "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_cover_package/cover-vertical-3x4.png",
+      "automation_route": "Chrome DevTools/CDP endpoint http://127.0.0.1:9222",
+      "declarations": {
+        "ai_generated_checked": true,
+        "local_cover_used": true,
+        "horizontal_cover_uploaded": true,
+        "vertical_cover_uploaded": true
+      },
+      "verification": {
+        "duplicate_guard": {
+          "local_receipt_before_submit": "passed: no existing receipts.baijiahao entry before publish in this package receipt file",
+          "manager_exact_title_before_submit": "passed: Baijiahao 作品管理 exact-title search did not contain this title before upload/submit",
+          "screenshot_path": "/Users/baishangjituan/Documents/push/baijiahao-20260505-duplicate-guard.png"
+        },
+        "pre_submit": {
+          "title_readback": "视频发布后为什么要写回链接、时间和状态词？",
+          "title_counter": "21/50",
+          "ai_declaration_checked": true,
+          "covers_readback": [
+            {
+              "slot": "horizontal",
+              "natural_width": 720,
+              "natural_height": 405,
+              "complete": true
+            },
+            {
+              "slot": "vertical",
+              "natural_width": 1080,
+              "natural_height": 1440,
+              "complete": true
+            }
+          ],
+          "publish_button_enabled": true,
+          "screenshot_path": "/Users/baishangjituan/Documents/push/baijiahao-20260505-final-readback-before-submit.png"
+        },
+        "submit_result": {
+          "clicked_once_after_user_confirmation": true,
+          "success_text": "提交成功，正在审核中... / 视频发布成功",
+          "screenshot_path": "/Users/baishangjituan/Documents/push/baijiahao-20260505-after-submit.png"
+        },
+        "manager_after_submit": {
+          "exact_title_present": true,
+          "manager_row_text": "视频发布后为什么要写回链接、时间和状态词？\n2026-05-05 13:44:25\n已发布音频\n0\n0\n0\n0\n0\n0\n内容加热\n加入合集\n查看评论\n更多",
+          "total_count_text": "共18篇",
+          "screenshot_path": "/Users/baishangjituan/Documents/push/baijiahao-20260505-manager-after-submit.png"
+        },
+        "screenshots": {
+          "after_video_upload": "/Users/baishangjituan/Documents/push/baijiahao-20260505-after-video-upload.png",
+          "after_horizontal_cover": "/Users/baishangjituan/Documents/push/baijiahao-20260505-after-horizontal-cover-set.png",
+          "after_vertical_cover": "/Users/baishangjituan/Documents/push/baijiahao-20260505-after-vertical-cover-set.png",
+          "manager_visible_after_submit": "/Users/baishangjituan/Documents/push/baijiahao-20260505-manager-after-submit-visible.png"
+        }
+      },
+      "notification": {
+        "feishu_chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "feishu_identity": "bot",
+        "feishu_message_id": "om_x100b50ac1e173900b2a8c40fd3211e7",
+        "feishu_create_time": "2026-05-05 13:50:05",
+        "first_user_identity_attempt": "failed: Bot/User can NOT be out of the chat",
+        "idempotency_key": "baijiahao-20260505-ai-employee-receipt-handoff-bot"
+      },
+      "notes": [
+        "Chrome DevTools/CDP endpoint 127.0.0.1:9222 was used as the preferred route for browser publishing.",
+        "Before publishing, duplicate guard checked the local receipt ledger and Baijiahao 作品管理 exact-title search; no Baijiahao receipt or same-title manager row existed before submit.",
+        "Uploaded the local mp4, set the exact 21/50 title, checked 采用AI生成内容, uploaded local horizontal and vertical covers, confirmed cover previews, and clicked 发布 once after explicit user confirmation.",
+        "Success page showed 提交成功，正在审核中... / 视频发布成功; subsequent 作品管理 exact-title search found the row with status 已发布音频 at 2026-05-05 13:44:25.",
+        "baijiahao_thread_scope: this entry records only the Baijiahao publish task in this thread; other platforms are out of scope."
+      ]
+    }
+  },
+  "updated_at": "2026-05-05T13:51:17+08:00"
+}

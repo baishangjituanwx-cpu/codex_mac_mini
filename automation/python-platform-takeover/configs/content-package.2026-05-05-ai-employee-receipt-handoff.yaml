@@ -1,0 +1,46 @@
+campaign_id: "2026-05-05-ai-employee-receipt-handoff"
+theme: "发完不写回，下一班接不住；AI员工必须把公开链接、发布时间、状态词和封面确认交清楚。"
+status: "ready_for_publish"
+package_status: "ready_for_platform_publishing"
+scope: "wechat_channels_only"
+
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff-publish.mp4"
+  backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_cover_package/cover-horizontal-4x3.png"
+
+support_files:
+  content_package_root: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package"
+  final_verify_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package/final-verify.json"
+  platform_upload_map: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package/platform-upload-map.md"
+  wechat_channels_platform_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package/platforms/wechat-channels.md"
+  browser_checklist: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_content_package/browser-use-checklist.md"
+
+publish_constraints:
+  reuse_logged_in_publish_page: true
+  skip_duplicate_if_already_published: true
+  prefer_repair_existing_post_over_republish: true
+  require_management_page_verification: true
+  require_active_campaign_lock: true
+  final_submit_requires_user_confirmation: true
+
+platform_upload_plan:
+  wechat_channels:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff-publish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-receipt-handoff_cover_package/cover-horizontal-4x3.png"
+    title_source: "platforms.wechat_channels.title"
+    description_source: "platforms.wechat_channels.description"
+
+platforms:
+  wechat_channels:
+    title: "回执要交清楚"
+    description: "机器人小马说已经发完，大陈追问链接在哪。发布后的回执不写清楚，下一班就接不上。AI员工要把链接、时间、状态词和封面确认补齐。"
+
+publishing:
+  preferred_automation: "Chrome DevTools/CDP"
+  publish_url: "https://channels.weixin.qq.com/platform/post/create"
+  management_url: "https://channels.weixin.qq.com/platform/post/list"
+  final_submit_requires_user_confirmation: true

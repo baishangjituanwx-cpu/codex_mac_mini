@@ -68,6 +68,17 @@ Prompt-only defaults for this workspace:
 - reserve the last `0.5-1s` for one clean, stable cover-ready frame in the video prompt
 - output one video prompt plus one aligned cover-copy pair
 
+Review-to-creative translation is mandatory:
+
+- use the latest data-review result as strategy evidence, not as raw script text
+- before writing the Seedance prompt, translate the review into a clear viewer-facing creative angle, conflict, scene action, and role motivation
+- do not paste review phrases, platform status wording, dashboard task wording, file names, or internal复盘结论 directly into video dialogue or subtitles unless the phrase is intentionally simplified for audience comprehension
+- turn operational findings into human scenes, for example `内容级指标缺失` should become a concrete office conflict such as `运营同事追问：播放、完播、互动在哪里`
+- turn review recommendations into simple actions, for example `同账号3-7条同形态对照` should become `先比三条同格式内容再决定怎么改`
+- dialogue must sound like clear spoken Chinese from the characters, not like a report, checklist, dashboard note, or automation log
+- the prompt must still preserve one focused content point; do not cram every review item into one 15-second video
+- keep internal evidence in `latest-review.md` or `brief.json`; keep `video-prompt.txt` audience-facing, scene-based, and easy for the video model to execute
+
 When the user asks for anything longer than `15s`, do not fake it as one task. Produce either:
 
 - one `15s` single-task package
@@ -197,6 +208,10 @@ Minimum required deliverables for a publish-ready video campaign:
 - one platform upload matrix such as `platform-upload-map.md`
 - one publish plan artifact such as `publish-plan.md` or `publish-plan.json` when browser-side publishing is the next step
 - one final verification artifact such as `final-verify.json` when browser-side publishing has completed
+- one Hermes content-package YAML in `automation/python-platform-takeover/configs/content-package.<campaign_id>.yaml` when the package status is `ready_for_publish`
+- one initial Hermes receipt in `automation/python-platform-takeover/state/publish-receipts/<campaign_id>.json` with `status: not_published` and empty `receipts: {}`
+- one Hermes direct JSON package in `automation/python-platform-takeover/configs/hermes-package.<campaign_id>.json`
+- one Hermes latest pointer in `automation/python-platform-takeover/state/hermes-handoff/latest.json`
 
 If browser-side publishing will follow immediately, also add:
 
@@ -223,6 +238,8 @@ Package rules:
 - use one unified topic, but do not force one identical title across all platforms
 - generate platform titles and concrete copy from the latest completed data-review result first, not from generic topic intuition
 - treat the latest completed multi-platform review as the primary evidence source for topic angle, hook priority, wording priority, platform differences, and what to keep / cut / retest
+- data-review output must be secondarily interpreted before it becomes prompt, dialogue, title, or copy; never treat review text as publish-ready creative text
+- write a short `latest-review.md` or `brief.json` note that separates `review evidence` from `creative translation`, so a later publish thread can see why the topic was chosen without exposing internal review wording as the video script
 - if no fresh completed review exists for the current line, say so explicitly in the package and fall back to the latest validated review rather than inventing “latest signals”
 - keep the platform title aligned with the same problem the cover is selling
 - prefer `问题句 > 动作句 > 角色句` unless current review evidence says otherwise
@@ -237,6 +254,16 @@ Package rules:
 - for 头条号 in a Seedance video campaign, the platform-specific cover field must prefer the generated vertical `3:4` cover as the primary upload cover; the horizontal `4:3` cover is only a fallback unless the user explicitly overrides it
 - verify target account name and account ID before browser-side upload
 - final success must be judged from platform management lists, not only from compose-page button states
+- when generating Hermes handoff files, use only Hermes-supported `scope` values: `all_platforms`, `social_only`, `video_focused`, or `wechat_channels_only`; do not write `all_supported_platforms_video_publish` unless the Hermes skill has been updated to support it
+- the Hermes direct JSON package must include `campaignId`, `sourceThreadId`, `sourceCampaignId`, `sourceConfig`, `sourceContentRoot`, `receiptPath`, `scope`, and `platforms`
+- the Hermes direct JSON `platforms` object must include only currently supported Hermes platforms: `bilibili`, `toutiao`, `zhihu`, `baijiahao`, `kuaishou`, `weibo`, and `wechat_channels`
+- do not include `xiaohongshu` in the Hermes direct JSON package
+- mark `douyin` as `unsupported_by_current_hermes_skill` outside the Hermes direct JSON `platforms` object; do not send it into Hermes publish testing
+- each Hermes direct JSON platform entry must contain `title`, `description`, `videoPath`, and `coverPath`
+- `videoPath` in Hermes direct JSON must use the publish-ready video, not the raw generated backup video
+- `coverPath` in Hermes direct JSON must use the platform-appropriate vertical or horizontal prepared cover
+- before creating or updating Hermes handoff files, hard stop if the receipt for the same campaign already has any platform record, or if the campaign/platform has already been published, submitted, or is under review
+- do not reuse an old campaign receipt for a new Hermes handoff
 
 Preferred output files in this workspace:
 
@@ -253,6 +280,7 @@ Windows-ready handoff rules for this repo:
   - `platforms.weibo.title` / `description` = 微博视频 `标题` / `配文`
   - `platforms.baijiahao` / `toutiao` / `zhihu` / `xiaohongshu` = 各平台 `标题` / `正文或描述`
 - On Windows, keep `assets.main_video`, `assets.cover_3_4`, and `assets.cover_4_3` as quoted absolute paths, preferably `C:/...`.
+- Keep the review evidence split on Windows exactly the same way: save internal findings in `latest-review.md` or `brief.json`, keep `video-prompt.txt` and publish copy audience-facing, and do not paste raw review wording into the dated YAML or platform text fields.
 - If the `大陈 / AI员工 / 机器人小马` package uses the default female supporting role, keep `asset://asset-20260401123823-6d4x2` as a literal Seedance `reference_image` asset URI in the payload. Do not rewrite that item into a `C:/...` filesystem path.
 - In the Windows upload matrix, every platform row must still name the exact upload video path or `不上传视频`, the exact cover path, and the final title/copy source. For Seedance video campaigns, 头条号 should point at the real video path by default instead of silently falling back to article-only assumptions.
 - Do not mark the campaign `ready_for_publish` until the markdown publish package exists and `.\scripts\social-publisher.ps1 validate-package automation/python-platform-takeover/configs/content-package.local.yaml` passes with those final titles and descriptions.

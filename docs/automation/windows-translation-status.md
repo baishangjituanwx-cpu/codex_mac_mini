@@ -1808,3 +1808,85 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-04 22:05:18 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天明确没有需要新增补写的 Windows 专属转译。
+
+## 2026-05-05 22:05:02 CST
+
+- 处理时间:
+  - `2026-05-05 22:05:02 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-04 22:05:18 CST` 之后追加且此前未写入本状态文件的非零批次，按行为去重后为:
+    - `2026-05-05 12:15:07 CST`
+    - `2026-05-05 13:11:45 CST`
+    - `2026-05-05 14:11:05 CST` / `2026-05-05 14:11:26 CST`
+    - `2026-05-05 19:15:40 CST` / `2026-05-05 19:16:34 CST`
+  - `2026-05-05 15:12:48 CST`、`17:14:25 CST`、`17:14:33 CST`、`18:16:36 CST`、`20:18:38 CST`、`21:18:27 CST` 的追加批次均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/seedance-video-api/SKILL.md`:
+    - 为 `2026-05-05 12:15:07 CST` 新增的 “review-to-creative translation” 规则补上 Windows handoff 等价说明，明确 Windows 侧也要把内部复盘证据保存在 `latest-review.md` 或 `brief.json`，并保持 `video-prompt.txt`、平台标题和发布文案面向观众，不能把 review 原话直接贴进 dated YAML 或平台文案字段。
+    - 复核后确认这批新规则不需要新增 PowerShell 启动器或 Windows 路径分叉；现有 `seedance_cli.ps1`、`build_cover_package.ps1`、`C:/...` 路径约定，以及 `asset://asset-20260401123823-6d4x2` 不改写成本地路径的说明，已经能承接今天的 skill 行为更新。
+  - `automation/python-platform-takeover/{configs/content-package.2026-05-05-ai-employee-receipt-handoff*.yaml,state/publish-receipts/2026-05-05-ai-employee-receipt-handoff.json,state/screenshots/kuaishou-*.png,social_publisher/platforms/wechat_channels.py}`:
+    - 复核 `2026-05-05 13:11:45 CST` 的 receipt-handoff content package、快手调试截图和视频号 frame 解析修复后，确认它们分别属于共享 campaign 资产与共享 Python 发布器逻辑，不引入新的 Windows-only 行为。
+    - 现有 Windows 覆盖已经足够，无需新增 `.ps1`、`.cmd`、快捷键补丁或 repo 资产副本:
+      - `automation/python-platform-takeover/README.md` 已要求 Windows 先复制日期化 YAML，再把 `/Users/...` 素材路径改成真实 `C:/...` 绝对路径
+      - `.\scripts\social-publisher.ps1 validate-package|publish|receipt-status|record-receipt|clear-receipt` 已覆盖 content package 校验与 receipt 台账推进
+      - `social_publisher/platforms/base.py` 既有的主快捷键桥接仍然生效，Windows 使用 `Control+A`，macOS 使用 `Meta+A`
+    - `wechat_channels.py` 本轮新增的 `_resolve_content_frame()` / `empty.html` 规避逻辑是共享浏览器接管修复，Windows 侧直接复用，不需要代码分叉。
+  - `automation/python-platform-takeover/state/publish-receipts/2026-05-05-ai-employee-receipt-handoff.json`:
+    - 复核 `2026-05-05 14:11:05 CST` / `14:11:26 CST` 的多平台 receipt 补写后，确认它只是共享发布台账推进；百家号、视频号、B 站、快手的核验字段、截图路径与飞书通知元数据继续由共享 Python loader 和现有 PowerShell 包装器消费，Windows 不需要单独第二套 receipt 流程。
+  - `automation/python-platform-takeover/{configs/content-package.2026-05-05-ai-employee-audit-wait-no-republish.yaml,state/hermes-handoff/latest.json,state/publish-receipts/2026-05-05-ai-employee-audit-wait-no-republish.json}`:
+    - 复核 `2026-05-05 19:15:40 CST` / `19:16:34 CST` 的新 campaign handoff 资产后，确认它们都是共享 content package、共享 Hermes 指针与共享初始 receipt 台账，不引入新的 Mac-only 操作。
+    - Windows 侧继续沿用现有 dated YAML 复制、`C:/...` 路径改写、`.\scripts\social-publisher.ps1 validate-package|receipt-status` 与 handoff 流程即可；不需要再补新的脚本、文档分叉或资源副本。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-05` 当前已记录的非零批次里，没有仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮只新增了 1 处 Windows 文档桥接说明，没有新增 Windows 专属脚本或代码分叉。
+  - 本机未做 Windows PowerShell 实机回归；结论基于 monitor 批次去重复核、仓库现有 PowerShell 入口、Windows 路径文档、以及新增 skill / content package / receipt / screenshot 资产和 `wechat_channels.py` 共享逻辑核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-05 22:05:02 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天唯一需要显式补写的 Windows 缺口是 `seedance-video-api` 新增证据分层规则的 Windows handoff 说明，现已补齐。
+
+## 2026-05-05 22:07:56 CST
+
+- 处理时间:
+  - `2026-05-05 22:07:56 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-04 22:05:18 CST` 之后追加的非零批次，按行为去重后为:
+    - `2026-05-05 12:15:07 CST`
+    - `2026-05-05 13:11:45 CST`
+    - `2026-05-05 14:11:26 CST`
+    - `2026-05-05 19:15:40 CST`
+  - 其余 `2026-05-04 23:45:02 CST`、`2026-05-05 00:42:13 CST`、`00:42:39 CST`、`01:44:03 CST`、`01:45:29 CST`、`04:11:48 CST`、`06:36:46 CST`、`06:37:45 CST`、`08:52:12 CST`、`09:53:35 CST`、`09:54:27 CST`、`10:54:58 CST`、`10:56:09 CST`、`15:12:48 CST`、`17:14:25 CST`、`17:14:33 CST`、`18:16:36 CST`、`20:18:38 CST`、`21:18:27 CST` 均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/seedance-video-api/SKILL.md`:
+    - 复核 `2026-05-05 12:15:07 CST` 新增的 `review-to-creative translation` 约束后，确认主技能文件本身已经补入 Windows handoff 规则：`latest-review.md` / `brief.json` 继续承载内部 review evidence，`video-prompt.txt`、平台标题和平台文案保持面向受众，不把 data-review 原话直接抄进 dated YAML 或平台字段。
+  - `skill-center/skills/seedance-video-api/references/workflows.md`:
+    - 新增同一条 Windows handoff 参考规则，避免只在主 `SKILL.md` 写明、参考工作流却漏掉。Windows 交接线程现在也会明确区分 `review evidence` 与 `creative translation`，不再把 review 原文直接灌进 prompt / 标题 / 平台文案。
+  - `automation/python-platform-takeover/README.md`:
+    - 针对 `2026-05-05 19:15:40 CST` 新增的 handoff-only content package 与 Hermes 指针，补入 Windows 专属执行口径:
+      - 当 YAML 声明 `publish_constraints.allow_live: false`
+      - 或 `no_publish_in_handoff_generation: true`
+      - 或 `no_upload_in_handoff_generation: true`
+      - 或 `no_submit_click_in_handoff_generation: true`
+      - Windows 侧只允许跑 `validate-package`、`receipt-status`、`record-receipt --status not_published`
+      - 明确禁止 `publish --execute`、原生文件选择器上传、以及任何提交点击
+      - 明确 `state/hermes-handoff/latest.json` + 当前 campaign receipt 是后续接力唯一入口
+  - `skill-center/skills/social-publish-automation/SKILL.md`:
+    - 补入同一批 handoff-only 约束的 Windows 操作说明，让发布技能在进入 UI 前就识别 `allow_live: false` / `no_*_in_handoff_generation` 这类内容包，并停在验证 + receipt 初始化阶段，不误触发 `publish --execute`。
+  - `automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py`:
+    - 复核 `2026-05-05 13:11:45 CST` 的 frame 解析修复后，确认它仍是共享 Python 逻辑，不需要单独 Windows 代码分叉。Windows 继续复用现有 `.\scripts\social-publisher.ps1 publish wechat_channels <yaml> --execute` 与共享快捷键桥接，字段清空在 Windows 自动走 `Control+A`。
+  - `automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-receipt-handoff*.yaml` 与 `state/publish-receipts/2026-05-05-ai-employee-receipt-handoff.json`:
+    - 复核 `2026-05-05 13:11:45 CST` / `14:11:26 CST` 的新 campaign 包、receipt 留痕和多平台写回后，确认它们属于共享内容包 / 台账推进。现有 Windows README 已覆盖 dated YAML 复制为本地 `C:/...` 路径、`receipt-status` / `record-receipt` / `clear-receipt`、以及 Browser Bridge fallback，因此不需要新增 `.ps1`、`.cmd` 或第二套 Windows receipt 文件。
+  - `automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-audit-wait-no-republish.yaml`、`state/hermes-handoff/latest.json`、`state/publish-receipts/2026-05-05-ai-employee-audit-wait-no-republish.json`:
+    - 复核 `2026-05-05 19:15:40 CST` 的交接产物后，确认真正需要补的是 Windows 执行约束说明，而不是新的脚本分叉；现已补到 README 和 publish skill。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-05` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮没有新增 Windows 专属脚本或代码分叉；补齐的是 Windows handoff / handoff-only 执行说明和参考文档镜像。
+  - 本机未做 Windows PowerShell 实机回归；结论基于 monitor 批次复核、现有 PowerShell 包装器与共享 Python 逻辑核对，以及新增文档补丁自检。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-05 22:07:56 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天新增的 Windows 补齐点主要是 Seedance review-evidence 交接约束和 handoff-only package 的禁止实发口径。
