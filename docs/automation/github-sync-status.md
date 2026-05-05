@@ -12,6 +12,52 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-06 00:03:06 CST
+- 处理时间:
+  - `2026-05-06 00:03:06 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-05-05 22:07:56 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含共享 `python-platform-takeover` 发布器修复、receipt / handoff content package 与 Hermes 指针资产、`seedance-video-api` 与 `social-publish-automation` 技能规则补强，以及 `skill-change-monitor`、`windows-translation-status`、`github-sync-status` 的状态记录更新。
+  - `codex/windows-version-20260411`: 否。本轮没有新的 Windows 专属 bridge、部署模板、PowerShell / `.cmd` 启动器或其他只应进入 Windows 支线的 payload；新增的 Windows 内容仅是共享 README / skill 文档里的 handoff 约束说明。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。本轮拆成 2 个清晰提交:
+    - `Sync May 5 takeover and handoff updates`
+    - `Record 2026-05-06 GitHub sync execution`
+  - `codex/windows-version-20260411`: 否。没有新的 Windows-only bridge / deployment 提交需要创建。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。上述提交会一起推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 否。无需推送。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync May 5 takeover and handoff updates`
+  - `codex/default-python-sync`: `Record 2026-05-06 GitHub sync execution`
+- 若跳过，说明跳过原因:
+  - 跳过了 `codex/windows-version-20260411` 的提交与推送，因为这批变更都属于共享 `python-platform-takeover` 代码 / 资产、共享技能规则与自动化状态文档更新，没有新的 Windows 专属 bridge / deployment payload。
+
+## 2026-05-05 23:20:15 CST
+- 检测到新的技能变更批次: 新增 `1`，修改 `4`，删除 `0`。
+- 这批变更集中在 `skill-center/skills/seedance-video-api`、`~/.codex/skills/seedance-video-api/SKILL.md` 与 `automation/python-platform-takeover` 的同一 `2026-05-05-ai-employee-audit-wait-no-republish` handoff follow-up；核心是新增 Hermes direct JSON package，并把 dated YAML / latest pointer 与 Seedance 技能规则一起升级到更明确的 prompt-package、creative-translation、Hermes scope/field、receipt blocking 规范。
+- 建议后续执行 GitHub 同步，避免这批新的 Hermes handoff 入口和 Seedance 出包 / 接力发布规则继续只停留在本地工作区。
+
+## 2026-05-05 22:20:36 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `4`，删除 `0`。
+- 这批变更集中在 `skill-center/skills/seedance-video-api`、`skill-center/skills/social-publish-automation` 与 `automation/python-platform-takeover/README.md`；核心是把 handoff-only 内容包明确收紧为“只校验与留 receipt、不直接实发”，并要求 Seedance 先把 `data-review` 证据翻译成面向观众的创意表达，再生成视频 prompt、标题和平台文案。
+- 建议后续执行 GitHub 同步，避免这批新的 handoff 阻断规则和 Seedance 创意翻译规范继续只停留在本地工作区。
+
+## 2026-05-05 19:15:40 CST
+- 检测到新的技能变更批次: 新增 `3`，修改 `0`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover`：新增 `2026-05-05-ai-employee-audit-wait-no-republish` 的 content package YAML、`state/hermes-handoff/latest.json` 最新交接指针，以及同名初始 publish receipt；核心是生成一套“等待不等于失败、先看状态不要重发”的新 campaign handoff，并把后续发布接续所需入口文件一起落库。
+- 建议后续执行 GitHub 同步，避免这批新的 `python-platform-takeover` 交接配置与 receipt 台账继续只停留在本地工作区。
+
+## 2026-05-05 14:11:05 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-05-ai-employee-receipt-handoff.json`；核心是把同一 campaign 的百家号回执补写为 `published_verified_in_manager`，新增 `2026-05-05 13:44:25 CST` 发布时间、作品管理 `已发布音频` 核验、横版/竖版封面确认，以及飞书通知元数据。
+- 建议后续执行 GitHub 同步，避免这条最新 `python-platform-takeover` 发布回执继续只停留在本地工作区。
+
 ## 2026-05-05 00:06:46 CST
 - 处理时间:
   - `2026-05-05 00:06:46 CST`
@@ -220,6 +266,7 @@
   - `codex/windows-version-20260411`: 无需推送。本轮没有新的 Windows-only 变更。
 - 提交信息:
   - `codex/default-python-sync`: `Sync April 30 repair receipt and skill updates`
+
   - `codex/default-python-sync`: `Record 2026-05-01 GitHub sync execution`
 - 若跳过，说明跳过原因:
   - 未跳过同步前置检查。
@@ -1687,3 +1734,28 @@
   - `codex/default-python-sync`: `Sync May 4 skill monitor cleanup`
 - 若跳过，说明跳过原因:
   - `codex/windows-version-20260411` 继续跳过，因为本次跟进只有共享 monitor 文档清理，没有新的 Windows 专属 bridge / deployment payload。
+
+## 2026-05-05 12:15:07 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `2`，删除 `0`。
+- 这批变更集中在 `seedance-video-api` 的两份 `SKILL.md` 镜像，新增了 data-review 到创意表达的二次翻译约束，明确要求把复盘证据与观众可见的 prompt / 对白 / 标题分层保存。
+- 建议后续执行 GitHub 同步，避免这组最新的 Seedance 技能规范继续只停留在本地工作区。
+
+## 2026-05-05 13:11:45 CST
+- 检测到新的技能变更批次: 新增 `10`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover`：新增了 `2026-05-05-ai-employee-receipt-handoff` 的主 content package、微博包、快手包、receipt 台账和 6 张快手调试 / DOM 证据截图，同时 `social_publisher/platforms/wechat_channels.py` 改成通过共享 `_resolve_content_frame()` 跳过 `empty.html` 占位 iframe，减少视频号发布/管理页误绑空 frame。
+- 建议后续执行 GitHub 同步，避免这批新的 `python-platform-takeover` campaign 配置、回执台账、截图证据和视频号 frame 解析修复继续只停留在本地工作区。
+
+## 2026-05-05 14:11:26 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更继续集中在 `automation/python-platform-takeover/state/publish-receipts/2026-05-05-ai-employee-receipt-handoff.json`；核心是把同一 campaign 的回执台账从初始建档继续补到快手 `under_review`、B 站 manager 已命中、视频号 `published`，并新增百家号 `published_verified_in_manager` 的完整发前核对、管理页核验、截图证据和飞书通知元数据。
+- 建议后续执行 GitHub 同步，避免这条最新 `python-platform-takeover` 多平台回执补写继续只停留在本地工作区。
+
+## 2026-05-05 19:16:34 CST
+- 检测到新的技能变更批次: 新增 `3`，修改 `0`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover`：新增了 `2026-05-05-ai-employee-audit-wait-no-republish` 的跨平台 content package、对应的 `state/hermes-handoff/latest.json` 指针，以及初始 `publish-receipts` 台账；核心是为“等待不是失败、先看状态不要急着重发”的新 campaign 准备 handoff 与发布留痕骨架。
+- 建议后续执行 GitHub 同步，避免这批新的 `python-platform-takeover` campaign 配置、handoff 指针和 receipt 台账继续只停留在本地工作区。
+
+## 2026-05-05 22:20:27 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `4`，删除 `0`。
+- 这批变更集中在 `seedance-video-api`、`social-publish-automation` 与 `automation/python-platform-takeover/README.md`；核心是把 handoff-only 包明确收紧为“只校验和建 receipt、不进入实发”，并要求把 `data-review` 证据与最终观众可见的 prompt / 对白 / 标题 / 发布文案分层保存，避免内部复盘措辞直接进入下游发布内容。
+- 建议后续执行 GitHub 同步，避免这组最新的 handoff 约束和 Seedance 创意分层规范继续只停留在本地工作区。
