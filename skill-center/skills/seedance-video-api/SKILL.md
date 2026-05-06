@@ -262,8 +262,15 @@ Package rules:
 - each Hermes direct JSON platform entry must contain `title`, `description`, `videoPath`, and `coverPath`
 - `videoPath` in Hermes direct JSON must use the publish-ready video, not the raw generated backup video
 - `coverPath` in Hermes direct JSON must use the platform-appropriate vertical or horizontal prepared cover
+- every ready-for-publish Hermes handoff file set must include `fingerprints` with `title_hash`, `body_core_hash`, `video_sha256`, and `cover_sha256` so Codex and Hermes can both perform duplicate prevention without relying on chat context
+- `title_hash` should be a deterministic SHA-256 over normalized platform title strings; `body_core_hash` should be a deterministic SHA-256 over normalized platform description/body strings
+- `video_sha256` must be the SHA-256 of the publish-ready video file; `cover_sha256` must be the SHA-256 of the canonical prepared cover, and include extra cover hashes when multiple cover ratios are used
+- every ready-for-publish Hermes handoff file set must include `lock_dir` pointing to `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks`
+- the initial receipt must document the future per-platform receipt schema: `actor`, `actor_session_id`, `status`, `verified_by`, `lock_path`, and `submitted_at` / `published_at`
+- `state/hermes-handoff/latest.json` must always point to the latest real `ready_for_publish` campaign only; never point it at test packages, smoke packages, `/tmp` packages, or scratch packages
 - before creating or updating Hermes handoff files, hard stop if the receipt for the same campaign already has any platform record, or if the campaign/platform has already been published, submitted, or is under review
 - do not reuse an old campaign receipt for a new Hermes handoff
+- generating Hermes handoff files must not trigger real publishing, uploading, submit clicks, Xiaohongshu testing, or any modification under `/Users/baishangjituan/Documents/push`
 
 Preferred output files in this workspace:
 
@@ -280,9 +287,12 @@ Windows-ready handoff rules for this repo:
   - `platforms.weibo.title` / `description` = 微博视频 `标题` / `配文`
   - `platforms.baijiahao` / `toutiao` / `zhihu` / `xiaohongshu` = 各平台 `标题` / `正文或描述`
 - On Windows, keep `assets.main_video`, `assets.cover_3_4`, and `assets.cover_4_3` as quoted absolute paths, preferably `C:/...`.
+- On Windows, keep the same Hermes duplicate-prevention metadata intact: `fingerprints.title_hash`, `fingerprints.body_core_hash`, `fingerprints.video_sha256`, `fingerprints.cover_sha256`, plus `lock_dir` pointing at `automation/python-platform-takeover/state/publish-locks`. Do not strip or rewrite those keys during handoff.
 - Keep the review evidence split on Windows exactly the same way: save internal findings in `latest-review.md` or `brief.json`, keep `video-prompt.txt` and publish copy audience-facing, and do not paste raw review wording into the dated YAML or platform text fields.
 - If the `大陈 / AI员工 / 机器人小马` package uses the default female supporting role, keep `asset://asset-20260401123823-6d4x2` as a literal Seedance `reference_image` asset URI in the payload. Do not rewrite that item into a `C:/...` filesystem path.
 - In the Windows upload matrix, every platform row must still name the exact upload video path or `不上传视频`, the exact cover path, and the final title/copy source. For Seedance video campaigns, 头条号 should point at the real video path by default instead of silently falling back to article-only assumptions.
+- On Windows, `state/hermes-handoff/latest.json` must still point only at the newest real `ready_for_publish` campaign. Do not move that pointer to smoke-test packages, `/tmp` scratch packages, or validation-only packages just because they were the last files touched.
+- Before handing the package to a Windows publish thread, run `.\scripts\social-publisher.ps1 validate-package <yaml>` and `.\scripts\social-publisher.ps1 receipt-status <yaml>` against the same campaign. If the receipt already contains any platform record, published state, submitted state, or under-review state, stop instead of regenerating or reusing the handoff.
 - Do not mark the campaign `ready_for_publish` until the markdown publish package exists and `.\scripts\social-publisher.ps1 validate-package automation/python-platform-takeover/configs/content-package.local.yaml` passes with those final titles and descriptions.
 - If the final YAML lives in a dated `content-package.<campaign>.yaml` instead of `content-package.local.yaml`, run the same PowerShell validation against that dated file before handing the package to publishing.
 

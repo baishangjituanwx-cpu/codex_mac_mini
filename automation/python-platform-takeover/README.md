@@ -271,9 +271,16 @@ Copy-Item configs/content-package.example.yaml configs/content-package.local.yam
   - `platforms.wechat_channels.description` = 视频号 `描述`
   - `platforms.weibo.title` / `description` = 微博视频 `标题` / `配文`
   - `platforms.douyin` / `kuaishou` / `baijiahao` / `toutiao` / `zhihu` / `xiaohongshu` 继续写各自最终 `标题` / `文案或正文`
+- 如果这是准备交给 Hermes 的 `ready_for_publish` 包，Windows 侧还要保留同一套防重发字段，不要在本地改写或删掉:
+  - `fingerprints.title_hash`
+  - `fingerprints.body_core_hash`
+  - `fingerprints.video_sha256`
+  - `fingerprints.cover_sha256`
+  - `lock_dir`
 - 如果同一条 Seedance 主视频会复用到多个视频平台，要在矩阵里明确写出来；其中 头条号 / 小红书 默认按视频发布处理，只有用户明确要求图文派生稿时，才把对应平台写成 `不上传视频`。
 - 真正进入发布页前，先锁定当前 `campaign_id`，并对将要提交的 4 项内容做读回确认: 视频路径、封面路径、最终标题或短标题、最终描述或正文。不要因为上一轮 receipt、旧草稿或旧管理页行还在，就跳过本轮包的读回。
 - 如果当前内容包还没有自己的 receipt，先用 `.\scripts\social-publisher.ps1 record-receipt <你的 YAML> --platform <platform> --status not_started` 初始化；`receipt-status`、`record-receipt`、`validate-package` 都直接指向当前这份日期化 YAML 或 `content-package.local.yaml`，不要借用旧 campaign 的文件名。
+- 如果仓库里同步有 `state/hermes-handoff/latest.json`，Windows 侧要确认它仍然指向当前这条真实 `ready_for_publish` campaign；不要让 smoke-test 包、`/tmp` scratch 包或只做校验的占位包抢走 latest 指针。
 - Windows 侧只有在 markdown 文案包、上传矩阵都已存在，且 `.\scripts\social-publisher.ps1 validate-package configs/content-package.local.yaml` 或对应日期化 YAML 校验通过后，才算完成今天新增的 `ready_for_publish` 交付标准。
 
 如果今天接到的是 handoff-only 包，例如 YAML 里已经写了 `publish_constraints.allow_live: false`、`no_publish_in_handoff_generation: true`、`no_upload_in_handoff_generation: true` 或 `no_submit_click_in_handoff_generation: true`，Windows 侧不要把它当成可直接发布的 live 包:

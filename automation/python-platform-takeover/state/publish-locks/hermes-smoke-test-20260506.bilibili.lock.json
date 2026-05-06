@@ -1,0 +1,12 @@
+{
+  "campaign_id": "hermes-smoke-test-20260506",
+  "platform": "bilibili",
+  "actor": "codex",
+  "actor_session_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "started_at": "2026-05-06T09:10:14.388Z",
+  "expires_at": "2026-05-06T09:40:14.388Z",
+  "status": "released",
+  "package_json": "/tmp/test.json",
+  "receipt_path": "/tmp/receipt.json",
+  "released_at": "2026-05-06T09:10:53.074Z"
+}

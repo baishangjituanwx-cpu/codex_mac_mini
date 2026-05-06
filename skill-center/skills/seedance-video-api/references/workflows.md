@@ -162,6 +162,9 @@ Rules:
 - on Windows handoff, keep `latest-review.md` or `brief.json` as the internal review-evidence note and keep `video-prompt.txt`, platform titles, and platform copy audience-facing; do not paste raw data-review wording into the dated YAML or downstream publish text fields
 - on Windows handoff, if the current `大陈 / AI员工 / 机器人小马` package keeps the default female supporting role, preserve the extra `reference_image` item as `asset://asset-20260401123823-6d4x2`; do not rewrite that payload field into a local `C:/...` path
 - on Windows handoff, keep every upload-matrix row explicit: quoted `C:/...` video path or `不上传视频`, quoted `C:/...` cover path, final title field, and final copy source; for Seedance video campaigns, 头条号 should keep the real video path unless the package explicitly includes a separate 图文派生稿
+- on Windows handoff, preserve Hermes duplicate-prevention metadata exactly as generated: `fingerprints.title_hash`, `fingerprints.body_core_hash`, `fingerprints.video_sha256`, `fingerprints.cover_sha256`, and `lock_dir = automation/python-platform-takeover/state/publish-locks`
+- on Windows handoff, keep `state/hermes-handoff/latest.json` pointed only at the newest real `ready_for_publish` campaign; never repoint it to a smoke-test package, `/tmp` scratch package, or other validation-only handoff
+- on Windows handoff, run `.\scripts\social-publisher.ps1 validate-package <yaml>` and `receipt-status <yaml>` before publish follow-up; if the receipt already shows any live platform record or submitted / under-review state, stop instead of reusing the handoff
 - do not call the campaign `ready_for_publish` until the markdown publish package exists and `.\scripts\social-publisher.ps1 validate-package ...` passes against the finished YAML
 
 Default naming:

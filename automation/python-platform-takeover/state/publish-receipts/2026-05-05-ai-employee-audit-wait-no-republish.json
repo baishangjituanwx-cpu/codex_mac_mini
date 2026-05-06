@@ -3,5 +3,34 @@
   "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
   "status": "not_published",
   "package_status": "ready_for_platform_publishing",
+  "lock_dir": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks",
+  "fingerprints": {
+    "title_hash": "3fa27698100797cf773bbc07f08031061e3e2d3127b33293c4051cdf0ff24e60",
+    "body_core_hash": "4f32c82d69020f1ae3d6664663698168147be1bb2c02234c4c5715ad2348a5d1",
+    "video_sha256": "930954f84a784f50ebab0f0c9021cfbc856e6d112a8180f95f61532b7978f40f",
+    "cover_sha256": "d5a8e3f54c15e5064f3732bee56b76fb108b1bef002cbaee2e4a6c956c074042",
+    "cover_3_4_sha256": "d5a8e3f54c15e5064f3732bee56b76fb108b1bef002cbaee2e4a6c956c074042",
+    "cover_4_3_sha256": "ff0cbf39ac5ddc35ee24846f539182f65415753994821d6da118e925fee5f432",
+    "title_hash_basis": "sha256(sorted Hermes platform title strings, NFKC normalized)",
+    "body_core_hash_basis": "sha256(sorted Hermes platform description strings, NFKC normalized)",
+    "cover_sha256_basis": "canonical cover_3_4 vertical cover"
+  },
+  "receipt_schema": {
+    "platform_record_required_fields": [
+      "actor",
+      "actor_session_id",
+      "status",
+      "verified_by",
+      "lock_path"
+    ],
+    "platform_record_time_fields": [
+      "submitted_at",
+      "published_at"
+    ],
+    "initial_receipt_required_state": {
+      "status": "not_published",
+      "receipts": {}
+    }
+  },
   "receipts": {}
 }
