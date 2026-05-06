@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hermes Feishu Operator"
+  short_description: "Send safe prompts to Hermes"
+  default_prompt: "Monitor Hermes through local logs/session files, generate the next safe Feishu prompt, verify the foreground chat is hermes_agent_mac_mini, and send only when intervention is needed."

@@ -21,6 +21,7 @@ figma-use
 frontend-skill
 gh-address-comments
 gh-fix-ci
+hermes-feishu-operator
 jupyter-notebook
 kuaishou-ops
 linear
