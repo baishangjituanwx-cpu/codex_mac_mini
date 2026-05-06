@@ -1890,3 +1890,106 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-05 22:07:56 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天新增的 Windows 补齐点主要是 Seedance review-evidence 交接约束和 handoff-only package 的禁止实发口径。
+
+## 2026-05-06 22:02:23 CST
+
+- 处理时间:
+  - `2026-05-06 22:02:23 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-05 22:07:56 CST` 之后追加且此前未写入本状态文件的非零批次，按行为去重后为:
+    - `2026-05-06 11:30:00 CST`
+    - `2026-05-06 17:39:03 CST`
+    - `2026-05-06 18:39:25 CST`
+    - `2026-05-06 19:42:17 CST`
+    - `2026-05-06 20:42:33 CST`
+  - `2026-05-06 21:42:37 CST` 为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - `automation/python-platform-takeover/state/hermes-handoff/latest.json`:
+    - 复核 `2026-05-06 11:30:00 CST` 的 `scope: all_platforms` 扩展后，确认它仍是共享 Hermes latest pointer 状态推进，不引入新的 Windows-only 缺口；现有 Windows handoff / receipt 流程可直接复用。
+  - `skill-center/skills/seedance-video-api/SKILL.md` 与 `automation/python-platform-takeover/{configs/content-package.2026-05-05-ai-employee-audit-wait-no-republish.yaml,configs/hermes-package.2026-05-05-ai-employee-audit-wait-no-republish.json,state/hermes-handoff/latest.json,state/publish-receipts/2026-05-05-ai-employee-audit-wait-no-republish.json}`:
+    - 复核 `2026-05-06 17:39:03 CST` 的 `lock_dir`、`fingerprints`、`latest_pointer_policy` 与 direct handoff JSON 规则后，确认仓库里现有 Windows 说明已经覆盖这批能力:
+      - `seedance_cli.ps1`、`build_cover_package.ps1` 及相关 PowerShell 包装器已存在
+      - Windows handoff 规则已要求 dated YAML / upload matrix 使用真实 quoted `C:/...` 路径
+      - Windows 文档已说明 `asset://...` 保持原样、review evidence 与 audience-facing copy 分层、以及 dated YAML 校验流程
+    - 结论: 这批 Seedance / Hermes handoff 强化不需要新的 Windows 脚本分叉，只需要状态留痕。
+  - `skill-center/skills/hermes-feishu-operator/**`:
+    - 将 `2026-05-06 18:39:25 CST` 新增、并在 `19:42:17 CST` / `20:42:33 CST` 持续微调的 live `hermes-feishu-operator` 正式镜像进仓库，避免该技能继续只停留在 `~/.codex/skills/`。
+    - 新增仓库镜像文件:
+      - `skill-center/skills/hermes-feishu-operator/SKILL.md`
+      - `skill-center/skills/hermes-feishu-operator/agents/openai.yaml`
+      - `skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.sh`
+      - `skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.ps1`
+      - `skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.cmd`
+    - 在 `skill-center/skills-manifest.txt` 补入 `hermes-feishu-operator`，确保 Windows / Mac 同步脚本会把该技能镜像到本地 `~/.codex/skills/`。
+    - Windows 等价实现已补齐:
+      - PowerShell 发送器支持 `--validate-only`、`--paste-only`、`--clear-only`、`--send`、`--visual-confirmed`、`--activate-lark`
+      - Windows 路径说明明确使用 quoted `C:/...` message file 路径与 `%USERPROFILE%/.codex/skills/...` 安装位置
+      - Windows 键盘差异已写明并固化到脚本: `Ctrl+A` 全选、`Backspace` 清空、`Ctrl+V` 粘贴、`Enter` 发送
+      - `.cmd` 包装器已补齐，便于 `cmd.exe` 或双击触发 PowerShell 版本
+    - `19:42:17 CST` / `20:42:33 CST` 的 live follow-up 重点是 `--activate-lark`、更明确的验证 / 发送路径与 GUI 可靠性微调；本轮 PowerShell 版本已一并纳入这些模式，不再遗留 Windows 功能缺口。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-06` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未做 Windows Feishu / Lark 实机回归；当前验证基于仓库文件核对、`bash -n` 对新增 `.sh` 脚本的静态检查，以及 live skill 行为与 repo 镜像逐项对照。由于当前机器未提供 `pwsh` / `powershell`，本轮没有执行 PowerShell 语法解析。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-06 22:02:23 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天新增的 Windows 补齐点是 `hermes-feishu-operator` 的仓库镜像、PowerShell / `.cmd` 发送入口，以及对应的 Windows 验证与快捷键说明。
+
+## 2026-05-06 22:08:37 CST
+
+- 处理时间:
+  - `2026-05-06 22:08:37 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-05 22:07:56 CST` 之后追加且此前仍需要本轮复核的非零批次:
+    - `2026-05-06 11:30:00 CST`
+    - `2026-05-06 17:39:03 CST`
+    - `2026-05-06 18:39:25 CST`
+    - `2026-05-06 19:42:17 CST`
+    - `2026-05-06 20:42:33 CST`
+  - `2026-05-06 00:24:37 CST` 至 `09:27:18 CST`、`12:31:32 CST` / `12:31:40 CST`、`13:33:22 CST`、`14:34:54 CST`、`15:36:08 CST`、`16:37:44 CST` / `16:38:09 CST`、`21:42:37 CST` 的其余追加批次均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+  - 本条以当前仓库实际文件为准，补充更正今天稍早草稿里未落地的 `.cmd` / manifest 假设。
+- 已完成的 Windows 补全:
+  - `automation/python-platform-takeover/state/hermes-handoff/latest.json`:
+    - 复核 `2026-05-06 11:30:00 CST` 的 `scope` 扩展为 `all_platforms` 后，确认它仍是共享 Hermes handoff 状态推进，不需要新的 Windows 脚本分叉。
+    - 为避免 Windows 线程误跟旧指针，本轮把 latest pointer 的校验要求补到了:
+      - `automation/python-platform-takeover/README.md`
+      - `skill-center/skills/seedance-video-api/SKILL.md`
+      - `skill-center/skills/seedance-video-api/references/workflows.md`
+      - `skill-center/skills/social-publish-automation/SKILL.md`
+  - `skill-center/skills/seedance-video-api/{SKILL.md,references/workflows.md}` 与 `automation/python-platform-takeover/README.md`:
+    - 针对 `2026-05-06 17:39:03 CST` 新增的 `fingerprints`、`lock_dir`、`latest_pointer_policy`、publish-lock smoke-test 留痕与 receipt schema 约束，补齐了 Windows handoff 规则:
+      - Windows 不得删改 `fingerprints.title_hash`、`fingerprints.body_core_hash`、`fingerprints.video_sha256`、`fingerprints.cover_sha256`、`lock_dir`
+      - Windows 必须把 `state/hermes-handoff/latest.json` 继续锁在真实 `ready_for_publish` campaign，不能指向 smoke-test 包、`/tmp` scratch 包或只做校验的占位包
+      - Windows 发布线程在接力前要对同一份 YAML 先跑 `.\scripts\social-publisher.ps1 validate-package <yaml>` 与 `receipt-status <yaml>`，一旦 receipt 已经进入已提交 / 审核中 / 已发布等状态就停止复用 handoff
+    - 结论: 这批 Seedance / Hermes handoff 强化以共享 YAML / JSON / receipt 结构为主，不需要新的 Windows 专属代码分叉，但需要把 Windows 文档口径补齐；现已补齐。
+  - `skill-center/skills/social-publish-automation/SKILL.md`:
+    - 补入 Windows 侧对 Hermes handoff 元数据的执行约束:
+      - `fingerprints` 与 `lock_dir` 是防重发契约，不是可选字段
+      - `state/hermes-handoff/latest.json` 只有在仍指向真实 `ready_for_publish` campaign 时才可继续发布
+    - 这样 `2026-05-06 17:39:03 CST` 那批 handoff 去重规则在 Windows 发布技能入口也有明确落点，不会只停留在 Seedance 侧说明。
+  - `skill-center/skills/hermes-feishu-operator/**`:
+    - 将 `2026-05-06 18:39:25 CST` 新增、并在 `19:42:17 CST` / `20:42:33 CST` 持续微调的 live `hermes-feishu-operator` 补进仓库镜像，避免该技能继续只存在于 `~/.codex/skills/`。
+    - 本轮实际新增的仓库镜像文件是:
+      - `skill-center/skills/hermes-feishu-operator/SKILL.md`
+      - `skill-center/skills/hermes-feishu-operator/agents/openai.yaml`
+      - `skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.sh`
+      - `skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.ps1`
+    - Windows 等价能力已落到 PowerShell 发送器和技能文档里:
+      - 支持 `-ValidateOnly`、`-PasteOnly`、`-ClearOnly`、`-Send`、`-VisualConfirmed`、`-ActivateLark`
+      - 用前台 `Lark` / `Feishu` 进程 +窗口标题校验 `hermes_agent_mac_mini`
+      - 用底部输入区点击 + `Ctrl+A` / `Backspace` / `Ctrl+V` 执行清空与粘贴
+      - 用窗口右下角点击执行发送，和最新 macOS shell 版本的 GUI 发送路径保持等价
+    - `2026-05-06 19:42:17 CST` / `20:42:33 CST` 里提到的 `--activate-lark` 与 GUI 可靠性增强，本轮已一并体现在 repo mirror 的 `.sh` / `.ps1` 双入口中。
+  - 结论:
+    - 今天真正需要新增实现的 Windows 缺口是 `hermes-feishu-operator` 的仓库镜像与 PowerShell launcher；其余 `2026-05-06` 非零批次主要是共享 handoff 规则收紧，补 Windows 文档和执行约束即可，不需要第二套代码分叉。
+- 未完成的补全:
+  - 无仓库级缺口。
+  - 截至本轮，`2026-05-06` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机可做的静态校验仅覆盖 `bash -n skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.sh`；当前环境未安装 `pwsh` / `powershell`，因此没有执行新的 `.ps1` 语法解析或 Windows 实机回归。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-06 22:08:37 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天新增的 Windows 补齐点是 `hermes-feishu-operator` 的仓库镜像、PowerShell 发送入口，以及 handoff fingerprint / lock / latest-pointer 规则的 Windows 文档落点。
