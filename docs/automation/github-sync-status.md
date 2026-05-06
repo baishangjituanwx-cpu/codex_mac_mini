@@ -12,6 +12,78 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-07 00:07:41 CST
+- 处理时间:
+  - `2026-05-07 00:07:41 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-05-06 22:08:37 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含共享 `python-platform-takeover` handoff 指纹 / lock / receipt 元数据、`seedance-video-api` 与 `social-publish-automation` 规则补强、`skill-change-monitor.md` 更新，以及已在本地生成的 `windows-translation-status.md` 记录提交。
+  - `codex/windows-version-20260411`: 是。包含 `hermes-feishu-operator` 仓库镜像、Windows PowerShell / `.cmd` 发送入口，以及 `skills-manifest` 注册项。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。本轮包含 3 个清晰提交:
+    - `Sync May 6 handoff guard updates`
+    - `Sync Hermes handoff metadata and monitor logs`
+    - `Record 2026-05-07 GitHub sync execution`
+  - `codex/windows-version-20260411`: 是。本轮创建 1 个提交:
+    - `Mirror Hermes Feishu operator skill`
+- 是否已推送:
+  - `codex/default-python-sync`: 是。上述 3 个提交会一起推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 是。上述提交已推送到 `origin/codex/windows-version-20260411`。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync May 6 handoff guard updates`
+  - `codex/default-python-sync`: `Sync Hermes handoff metadata and monitor logs`
+  - `codex/default-python-sync`: `Record 2026-05-07 GitHub sync execution`
+  - `codex/windows-version-20260411`: `Mirror Hermes Feishu operator skill`
+- 若跳过，说明跳过原因:
+  - 无完全跳过的新增内容。
+  - 共享自动化执行日志 `docs/automation/github-sync-status.md` 只保留在 `codex/default-python-sync`，没有重复提交到 Windows 支线；这属于按分支目的拆分，不算遗漏。
+
+## 2026-05-06 23:53:58 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-05-ai-employee-audit-wait-no-republish.json`；核心是把 Hermes handoff 包从全平台范围收紧回 `video_focused`，同时补上 `lockDir` 和 `fingerprints` 指纹字段，并删去 `weibo`、`wechat_channels`、`zhihu` 与 `unsupportedPlatforms.douyin` 这组非当前视频聚焦发布所需 payload。
+- 建议后续执行 GitHub 同步，避免这次 `python-platform-takeover` Hermes handoff 范围与防重发规则调整继续只停留在本地工作区。
+
+## 2026-05-06 22:43:15 CST
+- 检测到新的技能变更批次: 新增 `5`，修改 `5`，删除 `0`。
+- 这批变更集中在 `skill-center/skills/hermes-feishu-operator/`、`skill-center/skills/seedance-video-api`、`skill-center/skills/social-publish-automation` 与 `automation/python-platform-takeover/README.md`；核心是把 live `hermes-feishu-operator` 技能及其 macOS / Windows 发送脚本镜像进仓库，同时把 Hermes handoff 的 `fingerprints`、`lock_dir` 和 latest 指针约束补进相关技能和自动化文档。
+- 建议后续执行 GitHub 同步或仓库镜像留痕，避免这批新的 Hermes Feishu skill 镜像和 handoff 防重发规则继续只停留在本地工作区。
+
+## 2026-05-06 20:42:33 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更继续集中在 `~/.codex/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.sh`；本轮不是新增能力面，而是对刚上线的 Hermes Feishu GUI 发送链路继续做 follow-up 微调，当前可见重点仍在 AppleScript 分支的 Accessibility 提示和发送按钮点击定位。
+- 建议后续执行 GitHub 同步或仓库镜像留痕，避免这次 live `hermes-feishu-operator` 脚本 follow-up 调整继续只停留在本机 `~/.codex/skills`。
+
+## 2026-05-06 19:42:17 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `~/.codex/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.sh`；核心是把 Hermes 飞书发送脚本继续扩成更完整的前台激活 + GUI 点击发送实现，补入 `--activate-lark`、更细的 Accessibility 报错和更稳的会话发送路径。
+- 建议后续执行 GitHub 同步或仓库镜像留痕，避免这次 live `hermes-feishu-operator` 脚本补强继续只停留在本机 `~/.codex/skills`。
+
+## 2026-05-06 18:39:25 CST
+- 检测到新的技能变更批次: 新增 `3`，修改 `0`，删除 `0`。
+- 这批变更集中在 `~/.codex/skills/hermes-feishu-operator/`；核心是新增一个只存在于本机 live skills 的 Hermes Feishu 接管技能，包含技能说明、OpenAI agent 入口元数据，以及一个通过 `osascript` 先校验前台 Feishu/Lark 会话再执行粘贴 / 发送的 GUI 辅助脚本。
+- 建议后续执行 GitHub 同步或镜像落库决策，避免这组新的 Hermes Feishu 接管技能长期只存在于本机 `~/.codex/skills` 而没有仓库侧留痕。
+
+## 2026-05-06 11:30:00 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/hermes-handoff/latest.json`；核心是把 `2026-05-05-ai-employee-audit-wait-no-republish` 的 Hermes handoff 指针 `scope` 从 `video_focused` 扩大到 `all_platforms`，使这份接力配置明确覆盖全平台发布而不是仅视频链路。
+- 建议后续执行 GitHub 同步，避免这条最新 `python-platform-takeover` Hermes handoff scope 调整继续只停留在本地工作区。
+
+## 2026-05-06 17:39:03 CST
+- 检测到新的技能变更批次: 新增 `1`，修改 `6`，删除 `0`。
+- 这批变更集中在 `~/.codex/skills/seedance-video-api/SKILL.md`、`skill-center/skills/seedance-video-api/SKILL.md` 与 `automation/python-platform-takeover` 的同一组 `2026-05-05-ai-employee-audit-wait-no-republish` handoff 文件；核心是补齐 Seedance 的 Windows / macOS 双启动器和 handoff 说明，并给 Hermes content-package、direct package、latest pointer、initial receipt 全部补上 fingerprint、lock 目录与 pointer policy 约束。
+- 另有一个新增文件 `automation/python-platform-takeover/state/publish-locks/hermes-smoke-test-20260506.bilibili.lock.json`，用于验证 B 站 smoke-test 锁的生成与释放，不涉及真实发布。
+- 建议后续执行 GitHub 同步，避免这批新的 Seedance skill 口径和 Hermes 去重 / 锁定规则继续只停留在本地工作区。
+
+## 2026-05-06 00:24:37 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `2`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-audit-wait-no-republish.yaml` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-05-ai-employee-audit-wait-no-republish.json`；但本轮复核到两者只有 `mtime` 刷新，没有新的文本 diff 或字段增删。
+- 该批次对应的实际内容已经包含在 `2026-05-06 00:03:45 CST` 的提交 `Sync May 5 takeover and handoff updates`，并已由 `2026-05-06 00:03:06 CST` 这轮 GitHub 同步覆盖；本条仅补 metadata 刷新留痕，当前不需要额外同步动作。
+
 ## 2026-05-06 00:03:06 CST
 - 处理时间:
   - `2026-05-06 00:03:06 CST`
@@ -1750,6 +1822,11 @@
 - 这批变更继续集中在 `automation/python-platform-takeover/state/publish-receipts/2026-05-05-ai-employee-receipt-handoff.json`；核心是把同一 campaign 的回执台账从初始建档继续补到快手 `under_review`、B 站 manager 已命中、视频号 `published`，并新增百家号 `published_verified_in_manager` 的完整发前核对、管理页核验、截图证据和飞书通知元数据。
 - 建议后续执行 GitHub 同步，避免这条最新 `python-platform-takeover` 多平台回执补写继续只停留在本地工作区。
 
+## 2026-05-06 18:39:25 CST
+- 检测到新的技能变更批次: 新增 `3`，修改 `0`，删除 `0`。
+- 这批变更集中在 `~/.codex/skills/hermes-feishu-operator`：新增了技能定义、OpenAI agent 元数据，以及一个通过 `osascript` 校验当前飞书会话是否为 `hermes_agent_mac_mini` 的发送脚本，支持 validate / paste / clear / send 四类操作。
+- 建议后续执行 GitHub 同步，避免这组最新的 Hermes 飞书介入技能与前台会话校验脚本继续只停留在本地工作区。
+
 ## 2026-05-05 19:16:34 CST
 - 检测到新的技能变更批次: 新增 `3`，修改 `0`，删除 `0`。
 - 这批变更集中在 `automation/python-platform-takeover`：新增了 `2026-05-05-ai-employee-audit-wait-no-republish` 的跨平台 content package、对应的 `state/hermes-handoff/latest.json` 指针，以及初始 `publish-receipts` 台账；核心是为“等待不是失败、先看状态不要急着重发”的新 campaign 准备 handoff 与发布留痕骨架。
@@ -1759,3 +1836,19 @@
 - 检测到新的技能变更批次: 新增 `0`，修改 `4`，删除 `0`。
 - 这批变更集中在 `seedance-video-api`、`social-publish-automation` 与 `automation/python-platform-takeover/README.md`；核心是把 handoff-only 包明确收紧为“只校验和建 receipt、不进入实发”，并要求把 `data-review` 证据与最终观众可见的 prompt / 对白 / 标题 / 发布文案分层保存，避免内部复盘措辞直接进入下游发布内容。
 - 建议后续执行 GitHub 同步，避免这组最新的 handoff 约束和 Seedance 创意分层规范继续只停留在本地工作区。
+
+
+## 2026-05-06 11:30:38 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/state/hermes-handoff/latest.json`；核心是把 `2026-05-05-ai-employee-audit-wait-no-republish` 的 handoff `scope` 从 `video_focused` 扩成 `all_platforms`，让同一 campaign 的 latest 指针从视频优先切换到全平台发布范围。
+- 建议后续执行 GitHub 同步，避免这条最新 `python-platform-takeover` handoff 范围调整继续只停留在本地工作区。
+
+## 2026-05-06 17:38:51 CST
+- 检测到新的技能变更批次: 新增 `1`，修改 `6`，删除 `0`。
+- 这批变更集中在 `seedance-video-api` 与 `automation/python-platform-takeover`：核心是为 `2026-05-05-ai-employee-audit-wait-no-republish` 补入 Hermes 重复发布防护所需的 `fingerprints`、`publish-lock` 目录和 receipt schema，并新增一个已释放的 `hermes-smoke-test-20260506.bilibili.lock.json` 测试锁文件留痕。
+- 建议后续执行 GitHub 同步，避免这批最新的 Seedance / Hermes 防重发规则和 publish-lock 测试记录继续只停留在本地工作区。
+
+## 2026-05-06 19:42:02 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `~/.codex/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.sh`；核心是让 Hermes 飞书发送脚本可以先主动拉起 Lark / Feishu，再由 AppleScript 直接完成输入框聚焦、清空、粘贴和发送，同时补强前台应用识别与 Accessibility 报错提示。
+- 建议后续执行 GitHub 同步或镜像落库决策，避免这条最新的 Hermes 飞书介入脚本增强继续只停留在本机 `~/.codex/skills`。
