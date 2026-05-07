@@ -25,12 +25,12 @@
   - `codex/default-python-sync`: 是。包含共享 `python-platform-takeover` handoff payload 调整、dashboard export / validation 逻辑更新、`skill-change-monitor.md` 与 `windows-translation-status.md` 的最新自动化记录，以及 `data-review` / `seedance-video-api` / `xiaoyunque-source-video` / `multi-platform-content-review-skill` 等仓库镜像的通用视频生成 brief 规范补强。
   - `codex/windows-version-20260411`: 否。本轮工作区没有新增仅属于 Windows bridge / deployment 的脚本、安装器、桥接入口或 deployment 资源。
 - 是否已提交:
-  - `codex/default-python-sync`: 待本条记录落库后提交 2 个清晰提交:
+  - `codex/default-python-sync`: 是。本轮已提交 2 个清晰提交:
     - `Sync May 7 review brief and dashboard export updates`
     - `Record 2026-05-08 GitHub sync execution`
   - `codex/windows-version-20260411`: 跳过，不创建提交。
 - 是否已推送:
-  - `codex/default-python-sync`: 待上述提交完成后推送到 `origin/codex/default-python-sync`。
+  - `codex/default-python-sync`: 是。上述提交已推送到 `origin/codex/default-python-sync`。
   - `codex/windows-version-20260411`: 跳过，不推送。
 - 提交信息:
   - `codex/default-python-sync`: `Sync May 7 review brief and dashboard export updates`
