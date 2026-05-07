@@ -12,6 +12,47 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-08 00:01:30 CST
+- 处理时间:
+  - `2026-05-08 00:01:30 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-05-07 22:04:55 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含共享 `python-platform-takeover` handoff payload 调整、dashboard export / validation 逻辑更新、`skill-change-monitor.md` 与 `windows-translation-status.md` 的最新自动化记录，以及 `data-review` / `seedance-video-api` / `xiaoyunque-source-video` / `multi-platform-content-review-skill` 等仓库镜像的通用视频生成 brief 规范补强。
+  - `codex/windows-version-20260411`: 否。本轮工作区没有新增仅属于 Windows bridge / deployment 的脚本、安装器、桥接入口或 deployment 资源。
+- 是否已提交:
+  - `codex/default-python-sync`: 待本条记录落库后提交 2 个清晰提交:
+    - `Sync May 7 review brief and dashboard export updates`
+    - `Record 2026-05-08 GitHub sync execution`
+  - `codex/windows-version-20260411`: 跳过，不创建提交。
+- 是否已推送:
+  - `codex/default-python-sync`: 待上述提交完成后推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 跳过，不推送。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync May 7 review brief and dashboard export updates`
+  - `codex/default-python-sync`: `Record 2026-05-08 GitHub sync execution`
+- 若跳过，说明跳过原因:
+  - `codex/windows-version-20260411` 跳过，因为当前 diff 只包含共享 review brief、dashboard export、handoff payload 和自动化状态文档更新，没有新的 Windows 专属 bridge / deployment payload。
+
+## 2026-05-07 22:35:07 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `2`，删除 `0`。
+- 这批变更集中在 `skill-center/skills/xiaoyunque-source-video/`；核心是把仓库镜像里的小云雀交接规则继续收束为“先继承通用视频生成 brief，再做 XiaoYunque 适配”，同时补入 `建议口播内容`、Windows 路径 / handoff 约束和首次生成失败返工矩阵。
+- 建议后续执行 GitHub 同步，避免这组新的小云雀仓库镜像规则只停留在本地工作区。
+
+## 2026-05-07 15:15:59 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `16`，删除 `0`。
+- 这批变更集中在 `~/.codex/skills/{data-review,dachen-founder-flywheel,seedance-video-api,xiaoyunque-source-video}`、`skill-center/skills/` 的对应镜像，以及 `skills/multi-platform-content-review-skill/`；核心是把旧 `下一批小云雀视频高占比倾向` 区块全面升级为面向 Seedance、小云雀等多个下游的通用视频生成 brief，并补强 `无新执行` 场景下的看板导出约束。
+- 建议后续执行 GitHub 同步，并重点确认 live `~/.codex/skills/data-review` 与 repo mirror 是否要继续保留当前这组额外差异（补充平台排除规则和更轻的 dashboard setup 指引）。
+
+## 2026-05-07 00:55:55 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `5`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-05-ai-employee-audit-wait-no-republish.json` 与 `skill-center/skills/hermes-feishu-operator/`；核心是把同一 Hermes handoff 的末尾平台 payload 从百家号改成知乎，同时当前工作区已删除整组 `hermes-feishu-operator` 仓库镜像文件。
+- 建议后续执行 GitHub 同步，并先确认 `skill-center/skills/hermes-feishu-operator` 应恢复、迁移还是按删除状态正式留痕，避免仓库镜像与 live skill 状态继续分叉。
+
 ## 2026-05-07 00:07:41 CST
 - 处理时间:
   - `2026-05-07 00:07:41 CST`
