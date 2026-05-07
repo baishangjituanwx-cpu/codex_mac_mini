@@ -225,7 +225,12 @@ Whenever the task asks for a 小云雀 prompt, a refined prompt, or a reusable f
 8. Keep the cover-specific copy within `6 to 10` Chinese characters
 9. If the workspace already has a recent review under `content-library/logs/review/`, read the latest relevant review first
 10. When that review includes `下一批小云雀视频高占比倾向`, treat it as a priority input instead of optional inspiration
-11. Do not reuse a weak title-poster phrase from the previous batch if the review explicitly marks it abstract or low-conversion
+11. Treat that review block as the workspace's video-generation core brief, not a XiaoYunque-only note
+12. Inherit the generator-agnostic fields first, especially `主题文案优先`, `高占比核心母题`, `高占比核心判断`, `核心冲突句`, `核心场景 / 动作`, and `开头高占比规则`
+13. Only after the core brief is locked, adapt it into XiaoYunque-specific prompt and execution wording
+14. Do not reuse a weak title-poster phrase from the previous batch if the review explicitly marks it abstract or low-conversion
+15. Output one `建议口播内容` block that can be converted into short single-line subtitles
+16. If the first generation fails on identity, first frame, pacing, or readability, revise the next prompt using the repair matrix in [references/prompt-template.md](references/prompt-template.md) instead of ad hoc rewrites
 
 In prompt-only mode, output in this order unless the user asks for a different format:
 
@@ -233,9 +238,21 @@ In prompt-only mode, output in this order unless the user asks for a different f
 2. `封面制作专用文案`
 3. `核心母题`
 4. `核心判断`
-5. one full prompt block ready to paste into 小云雀
-6. a short self-check list when QA is relevant
-7. when available, one short `复盘倾向说明`
+5. `建议口播内容`
+6. one full prompt block ready to paste into 小云雀
+7. a short self-check list when QA is relevant
+8. when available, one short `复盘倾向说明`
+
+### 2.2 Windows-ready prompt handoff rules
+
+When this skill mirror is synced onto a Windows machine, keep the same creative contract and only translate the local-file handling:
+
+- Keep the same review inheritance order as macOS: first `主题文案优先`, then `高占比核心母题` / `高占比核心判断`, then `核心冲突句` / `核心场景 / 动作` / `开头高占比规则`, and only then any XiaoYunque-specific wording.
+- Keep the same new prompt package structure on Windows: `主题文案`、`封面制作专用文案`、`核心母题`、`核心判断`、`建议口播内容`、full prompt, plus QA notes when needed.
+- On Windows, keep local reference-image paths and upload-root notes as quoted absolute `C:/...` paths. Do not leave `/Users/...` placeholders inside a real Windows handoff package.
+- Prefer a short real Windows upload root such as `C:/Users/<name>/Downloads/素材/小云雀`. Search by filename there first before asking the user to re-provide assets.
+- The prompt text itself stays cross-platform. Only the local asset paths and browser file-picker instructions should change between macOS and Windows.
+- If the first generation fails on identity, first frame, pacing, subtitle readability, or cover-frame quality, apply the same repair matrix from `references/prompt-template.md` on Windows instead of inventing a second Windows-only rewrite flow.
 
 ### 3. Follow the stable generation order
 

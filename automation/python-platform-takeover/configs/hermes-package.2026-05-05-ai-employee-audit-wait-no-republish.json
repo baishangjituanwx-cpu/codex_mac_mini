@@ -40,11 +40,11 @@
       "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish-publish.mp4",
       "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-vertical-3x4.png"
     },
-    "baijiahao": {
-      "title": "内容还在等待时，为什么不能马上删掉重发？",
-      "description": "因为等待状态不等于内容失败。贸然重发会让数据归因变乱，也可能产生重复内容。更稳的做法是先看状态词，保留原稿，截图留证，设定复查时间。",
+    "zhihu": {
+      "title": "为什么内容发布后处于等待状态时，不应该马上重发？",
+      "description": "因为等待、审核、暂未公开都只是中间状态，不等于内容失败。直接重发会污染数据归因，还可能造成重复发布。更稳妥的做法是先记录状态词、保留原稿、设定复查时间。",
       "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish-publish.mp4",
-      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-horizontal-4x3.png"
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-05-ai-employee-audit-wait-no-republish_cover_package/cover-vertical-3x4.png"
     }
   }
 }

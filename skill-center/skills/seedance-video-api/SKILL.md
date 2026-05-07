@@ -71,6 +71,9 @@ Prompt-only defaults for this workspace:
 Review-to-creative translation is mandatory:
 
 - use the latest data-review result as strategy evidence, not as raw script text
+- when the review contains the legacy section `下一批小云雀视频高占比倾向`, treat it as the workspace's canonical video-generation core brief, not as a XiaoYunque-only appendix
+- inherit the generator-agnostic fields first: `主题文案优先`, `高占比核心母题`, `高占比核心判断`, `核心冲突句`, `核心场景 / 动作`, `开头高占比规则`
+- only after those core fields are clear, translate them into Seedance-specific scene language, pacing, camera motion, and payload wording
 - before writing the Seedance prompt, translate the review into a clear viewer-facing creative angle, conflict, scene action, and role motivation
 - do not paste review phrases, platform status wording, dashboard task wording, file names, or internal复盘结论 directly into video dialogue or subtitles unless the phrase is intentionally simplified for audience comprehension
 - turn operational findings into human scenes, for example `内容级指标缺失` should become a concrete office conflict such as `运营同事追问：播放、完播、互动在哪里`

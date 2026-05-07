@@ -133,7 +133,10 @@ When browser checks are required, route through:
 - which platforms should continue, pause, or only monitor based on account-state
 - whether tomorrow should prioritize fresh distribution tests or account repair / verification
 - one `下一批图文内容高占比倾向`
-- one `下一批小云雀视频高占比倾向`
+- one downstream video-generation core brief, kept under the legacy heading `下一批小云雀视频高占比倾向` for compatibility
+- treat that block as the primary handoff for Seedance API, 小云雀, and other video-generation tasks; do not reduce it to one tool's UI wording
+- inside that block, write generator-agnostic creative targets first: `主题文案优先`, `高占比核心母题`, `高占比核心判断`, `核心冲突句`, `核心场景 / 动作`, `开头高占比规则`
+- only after the core brief is clear, append route-specific execution notes such as `视频生成提示词骨架`, `小云雀执行补充`, or `Seedance 执行补充`
 - when the target is the Docker dashboard, also produce the board-level fields `title`, `dateLabel`, `subtitle`, `northStar`, exactly 4 `summary` tiles, exactly 3 `keep` items, exactly 3 `cut` items, and exactly 3 `next` items
 
 7. Write back reusable lessons:
@@ -181,6 +184,8 @@ When browser checks are required, route through:
 - if the device only uses the browser binding flow, do not configure `.env.dashboard` and do not distribute admin credentials; the admin must generate a one-time `设备接入码` in `8081`, and the operator must bind the device from `8080`
 - only when the device will run the repo upload scripts, configure `.env.dashboard` or `.env.dashboard.local` in the repo root; required keys are `DASHBOARD_API_BASE`, `DASHBOARD_ACCOUNT_NAME`, `DASHBOARD_ADMIN_USERNAME`, and `DASHBOARD_ADMIN_PASSWORD`
 - the repo scripts now auto-detect `workflow/content-library` and `content-library`; if the device uses another layout, set `CONTENT_LIBRARY_ROOT`
+- if the review batch is a `*-no-new-batch` or other `无新执行` placeholder run, the dashboard may still sync, but `board.summary`'s fourth tile and `board.next` must not copy cross-day补抓/补核验待办 from `## 7. 未完成核验项`
+- for a `*-no-new-batch` export, write a neutral dashboard main action such as `等待新批次`, and keep `board.next` limited to stable content-direction or anti-misread statements instead of date-bound ops tasks
 - the sync step is not complete unless it does all of the following:
 - write the companion JSON export
 - validate the contract
@@ -213,11 +218,14 @@ When browser checks are required, route through:
 - `下一批图文内容高占比倾向`
 - `下一批小云雀视频高占比倾向`
 - `未完成核验项`
+- The legacy heading `下一批小云雀视频高占比倾向` is the canonical downstream video-generation block for this workspace. Write it for all video-generation consumers, not only XiaoYunque.
+- In that block, keep the first layer viewer-facing and generator-agnostic. Tool-specific notes such as XiaoYunque or Seedance should be secondary appendices, not the core conclusion.
 - For this workspace's nightly review automation, dashboard export, contract validation, `dashboard-export/latest.json` refresh, and remote dashboard account-group upload are all required completion steps.
 - For this workspace's nightly review automation, the fixed sync audit files `content-library/logs/review/dashboard-sync/latest-status.json` and `latest-status.md` must reflect the final result of the run.
 - If the user asks to update the 8-platform Docker dashboard, append the Docker dashboard mapping block defined in [docker-dashboard-contract.md](./references/docker-dashboard-contract.md), or write the same object to a companion JSON export file when the workflow needs a file-based handoff.
 - When exporting to the Docker dashboard, never omit a platform card; keep the card and mark gaps as `未完成内容级核验`, `暂未可见`, or numeric `0` according to the contract.
 - When exporting to the Docker dashboard, `primaryValue` must stay numeric so the ranking and ring chart do not break.
+- When the review is `*-no-new-batch` or otherwise explicitly `无新执行`, keep the dashboard user-facing. Do not export strings such as `补24h 对照`, dated补抓 instructions, or cross-day核验待办 into `board.summary[3]` or `board.next`.
 
 ## Output format
 

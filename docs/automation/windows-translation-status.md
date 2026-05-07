@@ -1993,3 +1993,73 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-06 22:08:37 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天新增的 Windows 补齐点是 `hermes-feishu-operator` 的仓库镜像、PowerShell 发送入口，以及 handoff fingerprint / lock / latest-pointer 规则的 Windows 文档落点。
+
+## 2026-05-07 22:02:42 CST
+
+- 处理时间:
+  - `2026-05-07 22:02:42 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-06 22:08:37 CST` 之后追加且此前未写入本状态文件的非零批次:
+    - `2026-05-07 00:55:55 CST`
+    - `2026-05-07 15:15:59 CST`
+  - 同期追加的 `2026-05-07 06:03:07 CST`、`07:03:18 CST`、`09:05:41 CST`、`10:07:35 CST`、`10:09:20 CST`、`11:09:02 CST`、`12:14:29 CST`、`12:15:12 CST`、`13:12:29 CST`、`14:13:18 CST`、`16:15:45 CST`、`17:17:28 CST`、`18:23:12 CST`、`19:25:32 CST`、`20:27:16 CST`、`21:30:50 CST`、`21:31:28 CST` 批次均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - `automation/python-platform-takeover/configs/hermes-package.2026-05-05-ai-employee-audit-wait-no-republish.json`:
+    - 复核 `2026-05-07 00:55:55 CST` 的 payload 改写后，确认这次只是把同一份 Hermes handoff 的末尾平台从 `baijiahao` 切到 `zhihu`，仍属于共享内容包 / handoff 元数据调整。
+    - 现有 Windows handoff 规则已经覆盖这类变更: quoted `C:/...` 路径写法、`asset://...` 保持原样、`validate-package` / `receipt-status` 先行校验、以及 `fingerprints` / `lock_dir` 不得被 Windows 线程改写；因此不需要新增 `.ps1`、`.cmd` 或第二套 Windows 内容包。
+  - `skill-center/skills/hermes-feishu-operator/**`:
+    - 复核 `2026-05-07 00:55:55 CST` 的整组删除后，确认这是仓库镜像整体移除，而不是只删 Windows 入口或只删 macOS 入口。
+    - 因为 `SKILL.md`、`send-hermes-feishu-prompt.sh`、`send-hermes-feishu-prompt.ps1`、`send-hermes-feishu-prompt.cmd` 是一起从 repo mirror 消失，当前状态是 Mac / Windows 都不再由仓库 `skill-center` 暴露这项能力；这不是新的 Windows-only 缺口，所以本轮不恢复 Windows 专属脚本副本。
+  - `skill-center/skills/{dachen-founder-flywheel,data-review,seedance-video-api,xiaoyunque-source-video}` 与 `skills/multi-platform-content-review-skill/**`:
+    - 复核 `2026-05-07 15:15:59 CST` 的 `16` 个文档 / 模板改动后，确认本轮新增行为集中在“把旧 `下一批小云雀视频高占比倾向` 区块升级为所有视频生成链路共用 brief”，以及 `*-no-new-batch` / `无新执行` 时的 Docker 看板写法约束。
+    - 这批改动是生成器无关的创意交接和复盘模板升级，不引入新的 shell、路径、快捷键或平台执行入口差异；现有 Windows 覆盖已经足够:
+      - `skill-center/skills/data-review/SKILL.md` 与 `skills/multi-platform-content-review-skill/SKILL.md` 仍保留 `.\scripts\dashboard-sync.ps1 --review-date YYYY-MM-DD` 的 Windows wrapper 说明。
+      - `skill-center/skills/seedance-video-api/SKILL.md` 既有的 PowerShell `ARK_API_KEY` 设置方式、Windows 启动器清单和 handoff 规则继续适用于新的“先通用 brief、后 Seedance 适配”约束。
+      - `skill-center/skills/xiaoyunque-source-video/**` 早先已经补齐的 Windows 侧启动 / 路径 / 交接说明仍然有效；本次新增的 `核心冲突句`、`核心场景 / 动作` 和 `小云雀执行补充` 仅改变 prompt 结构，不需要新增 Windows 分叉资产。
+  - 结论:
+    - 本轮没有新增需要落库的 Windows 专属脚本、PowerShell launcher、路径桥接、快捷键补丁、命令包装器或 repo 资源副本。
+    - 本轮对仓库的实际修改仅为补写本状态记录，明确 `2026-05-07` 的两组非零批次已经完成 Windows 复核。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-07` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未执行 Windows PowerShell 实机回归；本轮判断基于 monitor 批次复核、仓库 diff 核对，以及既有 Windows 文档 / wrapper / handoff 规则与新行为的逐项比对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-07 22:02:42 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天没有需要新增实现的 Windows 专属补丁。
+
+## 2026-05-07 22:04:55 CST
+
+- 处理时间:
+  - `2026-05-07 22:04:55 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-06 22:08:37 CST` 之后追加且与仓库 Windows 镜像仍相关的非零批次:
+    - `2026-05-07 15:15:59 CST`
+  - 同日晚些时候的 `2026-05-07 16:15:45 CST`、`17:17:28 CST`、`18:23:12 CST` 以及其余追加批次均为 `新增 0，修改 0，删除 0`，没有新的待转译项。
+  - 本条用于更正同日晚些较早草稿里“`xiaoyunque-source-video` 无需补仓库镜像”的漏判。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/xiaoyunque-source-video/SKILL.md`:
+    - 把今天新增的 prompt-package 行为同步到仓库镜像，明确 Windows 侧也要输出 `建议口播内容`，并在首次生成失败时复用同一套返工矩阵，而不是临时改写另一版 Windows prompt 流程。
+    - 新增 Windows-ready prompt handoff 规则，明确这批“先通用视频生成 brief、后小云雀适配”的结构在 Windows 也保持一致；只有本地素材路径和文件选择器说明改成 quoted `C:/...` 绝对路径。
+  - `skill-center/skills/xiaoyunque-source-video/references/prompt-template.md`:
+    - 将仓库镜像模板补到 `2026-04-25` 版，补齐今天 live skill 已要求但 repo mirror 仍缺的内容:
+      - `建议口播内容` 输出项
+      - “先通用视频生成、后小云雀适配”的继承顺序
+      - 首次生成失败后的返工矩阵
+      - 带 `建议口播内容` 的示例和检查清单
+    - 补入 Windows repo mirror 等价说明，要求参考图、导出物和 handoff 文档统一使用 quoted `C:/...` 绝对路径，不把 `/Users/...` 或 `%USERPROFILE%` 占位串直接留给 Windows 执行人。
+  - `skill-center/skills/{dachen-founder-flywheel,data-review,seedance-video-api}` 与 `skills/multi-platform-content-review-skill/**`:
+    - 复核后确认今天这些改动属于生成器无关的 brief / 复盘模板升级，或已经有现成的 Windows wrapper / handoff 说明承接；本轮不需要再新增 PowerShell launcher、`.cmd` 包装器、快捷键桥接或额外 repo 资产副本。
+  - 结论:
+    - 今天真正需要补的 Windows 缺口是 `xiaoyunque-source-video` 仓库镜像对新 prompt 结构和路径约束的跟进，现已补齐。
+    - 本轮没有新增 Windows-only 可执行脚本；新增内容是 Windows 可用文档镜像和路径 / handoff 规则。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-07` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未执行 Windows PowerShell 实机回归；本轮验证基于 monitor 批次复核、仓库镜像与 live skill 对照、以及 Windows 路径 / handoff 规则静态检查。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-07 22:04:55 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天补齐的 Windows 落点是 `xiaoyunque-source-video` 的仓库镜像提示词结构、返工矩阵和 `C:/...` 路径说明。

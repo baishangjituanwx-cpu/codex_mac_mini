@@ -173,7 +173,8 @@ Use the review to decide:
 - save failed cover and title patterns to avoid repeating them
 - write any new operational lesson to memory when it is reusable
 - always output one `下一批图文内容高占比倾向`
-- always output one `下一批小云雀视频高占比倾向`
+- always output one downstream video-generation core brief under the legacy heading `下一批小云雀视频高占比倾向`
+- write that block for all video-generation consumers first, including Seedance and XiaoYunque, then append route-specific notes only if needed
 - when Feishu sync is requested, send `总览 + 各平台详细状态` in Chinese instead of a single compressed paragraph
 
 ## Platform Execution Rules

@@ -128,6 +128,7 @@ When browser checks are required, route through:
 - revised cover-theme directions
 - revised hook direction for the next 30-second video
 - whether tomorrow should lean more into video, article, or both
+- one downstream video-generation core brief for the next batch; this should serve Seedance, XiaoYunque, and other video-generation routes before any tool-specific adaptation
 - which platforms should continue, pause, or only monitor based on account-state
 - whether tomorrow should prioritize fresh distribution tests or account repair / verification
 - one `下一批图文内容高占比倾向`
