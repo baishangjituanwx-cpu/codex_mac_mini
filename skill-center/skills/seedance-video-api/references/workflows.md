@@ -188,6 +188,12 @@ Execution order:
 
 Do not call the asset acceptable just because the visuals are good. In this scenario, subtitle drift and dialogue mismatch are terminal failures.
 
+Windows handoff for the same scenario:
+
+- keep the artifact names unchanged: `brief.json`, `spoken-script.lock.md`, `dialogue-timeline.json`, `script-fingerprint.json`, `video-prompt.txt`, `seedance_payload.json`
+- if a Windows operator runs submit or follow-up checks, use quoted `C:/...` local paths and the existing `seedance_cli.ps1` wrapper
+- do not leave `/Users/...` placeholder paths inside the final handoff notes or runnable commands
+
 Default naming:
 
 - `cover-vertical-3x4.png`

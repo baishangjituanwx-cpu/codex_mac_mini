@@ -5,7 +5,7 @@
 
 ## 使用规则
 
-当任务是给小云雀输出提示词、改提示词、补变量或整理成可直接粘贴的 prompt package 时，默认使用本模板。
+当任务是给小云雀输出提示词、改提示词、补变量或整理成可作为 API `message` 发送的 prompt package 时，默认使用本模板。
 
 默认输出顺序：
 
@@ -14,7 +14,7 @@
 3. `核心母题`
 4. `核心判断`
 5. `建议口播内容`
-6. 可直接粘贴的完整提示词
+6. 可作为 API `message` 发送的完整提示词
 7. 必要时补一份简短检查清单
 
 ## 固定规则
@@ -42,13 +42,17 @@
 - 大陈：`/Users/baishangjituan/Downloads/素材/小云雀/人物素材/大陈.jpg`
 - 小丽：`/Users/baishangjituan/Downloads/素材/小云雀/人物素材/小丽.png`
 
-Windows repo mirror equivalent:
+Windows handoff 等价写法：
 
-- 优先把同名素材放在短真实路径，例如 `C:/Users/<name>/Downloads/素材/小云雀/大陈.jpg`
-- 或 `C:/Users/<name>/Downloads/素材/小云雀/人物素材/大陈.jpg`
-- `小丽.png` 同理放在同级目录
-- 在 Windows handoff 记录、上传矩阵或文件选择器说明里，一律写 quoted `C:/...` 绝对路径，不要保留 `/Users/...` 占位路径
-- 提示词正文保持跨平台一致，只有本地素材路径和文件选择器动作需要改成 Windows 真实路径
+- 大陈：`C:/Users/<name>/Downloads/素材/小云雀/人物素材/大陈.jpg`
+- 小丽：`C:/Users/<name>/Downloads/素材/小云雀/人物素材/小丽.png`
+- 大陈：`C:/Users/<name>/Downloads/素材/小云雀/大陈.jpg`
+- 小丽：`C:/Users/<name>/Downloads/素材/小云雀/小丽.png`
+
+Windows 路径规则：
+
+- 所有参考图、导出目录、handoff 文档中的本地路径都使用带引号的 `C:/...` 绝对路径
+- 不要把 `/Users/...`、`%USERPROFILE%` 或未加引号的含空格路径直接留给 Windows 执行人
 
 ## 首帧与封面规则
 
@@ -212,12 +216,9 @@ Windows repo mirror equivalent:
 - 哪个平台已经证明这条判断更容易被接住
 - 哪句 founder 判断应该在第 5 秒前出现
 
-Windows handoff note:
-
-- Windows 侧也要先继承这套“通用视频生成 brief”，再改写成小云雀 prompt；不要因为换到 PowerShell / 浏览器文件选择器，就把这块缩成只剩 UI 操作提示。
-- 如果需要把参考图或导出文件写进 Windows 交接文档，统一使用 quoted `C:/...` 绝对路径；不要把 `%USERPROFILE%` 字面量或 `/Users/...` 示例直接留给执行人。
-
 ## 标准完整提示词
+
+下面内容用于小云雀 API 的 `message` 字段，不是网页粘贴操作说明。
 
 ```text
 生成一条 30 秒、9:16 竖屏、中文 founder 口播短视频。

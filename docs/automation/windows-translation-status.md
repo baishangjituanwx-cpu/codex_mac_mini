@@ -2063,3 +2063,88 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-07 22:04:55 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天补齐的 Windows 落点是 `xiaoyunque-source-video` 的仓库镜像提示词结构、返工矩阵和 `C:/...` 路径说明。
+
+## 2026-05-08 22:05:19 CST
+
+- 处理时间:
+  - `2026-05-08 22:05:19 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-07 22:04:55 CST` 之后追加且此前未写入本状态文件的非零批次:
+    - `2026-05-08 19:06:47 CST`
+  - 同日晚些 `2026-05-08 20:08:06 CST`、`21:11:30 CST`、`21:14:02 CST` 批次均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/xyq-nest-skill/scripts/**`:
+    - 新增共享 PowerShell 运行器 `scripts/invoke_xyq_script.ps1`，统一为 Windows 侧自动探测仓库 `.venv\Scripts\python.exe`、激活中的虚拟环境，以及系统 `py` / `python` / `python3`，避免把新 API skill 写死为仅能在 macOS `python3` 下运行。
+    - 新增 4 个 Windows PowerShell 命令包装器:
+      - `scripts/submit_run.ps1`
+      - `scripts/get_thread.ps1`
+      - `scripts/upload_file.ps1`
+      - `scripts/download_results.ps1`
+    - 这些包装器直接复用同一套 cross-platform Python API 脚本，因此 `submit_run.py`、`get_thread.py`、`upload_file.py`、`download_results.py` 本身未做 Windows 分叉。
+  - `skill-center/skills/xyq-nest-skill/{README.md,SKILL.md}`:
+    - 补齐 `XYQ_ACCESS_KEY` 的 PowerShell 设置方式。
+    - 为提交、轮询、上传、下载四类操作增加 Windows PowerShell 等价示例。
+    - 明确 Windows 路径规则：本地素材和 `--output-dir` 统一使用带引号的 `C:/...` 绝对路径，不再把 `/Users/...` 示例直接留给 Windows 执行人。
+  - `skill-center/skills/xiaoyunque-source-video/{SKILL.md,references/source-video-playbook.md,references/prompt-template.md}`:
+    - 把 API-only 小云雀源视频工作流补齐到 Windows 文档镜像，明确 repo mirror 下应走 `skill-center/skills/xyq-nest-skill/scripts/*.ps1`，而不是旧网页路径。
+    - 为 API 手册补入 Windows PowerShell 等价命令。
+    - 为 founder 参考图和 handoff 文档补回 Windows 等价路径示例 `C:/Users/<name>/...`，修复 `2026-05-08 19:06:47 CST` 这轮 API 化改写里把旧 Windows 路径说明删掉后的仓库缺口。
+  - 结论:
+    - 今天真正需要补的 Windows 缺口是 `xyq-nest-skill` 的仓库 PowerShell 入口，以及 `xiaoyunque-source-video` API 化后缺失的 Windows 命令与路径文档。
+    - 现已补齐；没有新增需要单独分叉的 Windows Python 逻辑、快捷键桥接或额外资产格式。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-08` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机执行了 `git diff --check` 静态检查，未发现本轮新增 `.ps1` / 文档更新的空白或冲突问题。
+  - 本机未安装 `pwsh` / `powershell`，因此没有执行新的 PowerShell 语法解析或 Windows 实机回归；当前判断基于仓库 diff 复核、脚本落点检查和文档引用核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-08 22:05:19 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天补齐的 Windows 落点是 `xyq-nest-skill` 的 PowerShell 运行入口，以及 `xiaoyunque-source-video` API-only 文档里的 Windows 命令和 `C:/...` 路径说明。
+
+## 2026-05-08 22:06:55 CST
+
+- 处理时间:
+  - `2026-05-08 22:06:55 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-07 22:04:55 CST` 之后追加且与仓库 Windows 镜像仍相关的非零批次:
+    - `2026-05-08 17:05:03 CST`
+    - `2026-05-08 19:06:47 CST`
+  - 同日晚些 `2026-05-08 20:08:06 CST`、`21:11:30 CST`、`21:14:02 CST` 批次均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+  - 本条用于补记同日晚些较早记录里漏掉的 `2026-05-08 17:05:03 CST` Seedance 客户试用批次，以及 `xyq-nest-skill` 仓库同步资产。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/seedance-video-api/references/{customer-trial-intake-and-production-sop.md,workflows.md}`:
+    - 针对 `2026-05-08 17:05:03 CST` 新增的客户试用 SOP / 字幕硬规则批次，补入 Windows handoff 口径：
+      - 继续沿用同一套 `brief.json`、`spoken-script.lock.md`、`dialogue-timeline.json`、`script-fingerprint.json`、`video-prompt.txt`、`seedance_payload.json` 文件名
+      - Windows 侧本地视频、封面、检查记录路径统一使用带引号的 `C:/...` 绝对路径
+      - Windows 提交和后续检查明确继续走仓库既有 `seedance_cli.ps1`，不把 `/Users/...` 示例路径留在可执行命令里
+  - `skill-center/skills/xyq-nest-skill/scripts/**`:
+    - 针对 `2026-05-08 19:06:47 CST` 新增的小云雀 API skill，补齐 Windows 可执行入口：
+      - 共享 PowerShell 运行器 `scripts/invoke_xyq_script.ps1`
+      - 4 个 PowerShell launcher:
+        - `scripts/submit_run.ps1`
+        - `scripts/get_thread.ps1`
+        - `scripts/upload_file.ps1`
+        - `scripts/download_results.ps1`
+      - 4 个 `.cmd` 包装器，便于 `cmd.exe` 或双击触发同名 PowerShell launcher
+    - 将 PowerShell 运行器的 Python 版本探测收紧为 `3.9+`，与这套脚本实际使用的内置泛型语法保持一致，不再错误宣称 `3.6+` 足够。
+  - `skill-center/skills/xyq-nest-skill/{README.md,SKILL.md}`:
+    - 补齐 `XYQ_ACCESS_KEY` 的 PowerShell 设置方式。
+    - 为提交、轮询、上传、下载四类 API 操作补入 Windows PowerShell 等价示例。
+    - 明确 Windows 路径规则与 `.cmd` / `.ps1` 入口，避免新 API-only skill 仍默认写成 Unix `python3` / `/Users/...`。
+  - `skill-center/skills/xiaoyunque-source-video/{SKILL.md,references/source-video-playbook.md,references/prompt-template.md}`:
+    - 把 API-only 小云雀源视频工作流对应的 Windows repo mirror 说明补齐到文档里，明确 Windows 侧改走 `skill-center/skills/xyq-nest-skill/scripts/*.ps1`，不再沿用旧网页生成路径。
+    - 为 founder 参考图、导出目录和 handoff 备注补回 quoted `C:/...` 路径说明，修复本轮 API 化改写删除旧 Windows 文件路径提示后的仓库缺口。
+  - `skill-center/skills-manifest.txt`:
+    - 补入 `xyq-nest-skill`，确保后续仓库同步脚本会把这套新 skill 及其 Windows launcher 一并镜像出去，而不是只停留在当前工作树。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-08` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机执行了 `python3 -m py_compile skill-center/skills/xyq-nest-skill/scripts/{_common.py,submit_run.py,get_thread.py,upload_file.py,download_results.py}` 与 `git diff --check`，结果通过。
+  - 本机未安装 `pwsh` / `powershell`，因此没有执行新的 PowerShell 语法解析或 Windows 实机回归；当前判断基于仓库 diff 复核、脚本落点检查和文档引用核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-08 22:06:55 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天补齐的 Windows 落点包括 Seedance 客户试用 SOP 的 Windows handoff 规则、`xyq-nest-skill` 的 PowerShell / `.cmd` 入口，以及 API-only `xiaoyunque-source-video` 的 Windows 路径与命令说明。

@@ -12,6 +12,46 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-09 00:02:34 CST
+- 处理时间:
+  - `2026-05-09 00:02:34 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的 latest dated entry 为 `2026-05-08 22:06:55 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含 cross-platform `xyq-nest-skill` Python API 脚本、`xiaoyunque-source-video` API-only 文档改写、`seedance-video-api` 的 Windows handoff 约束，以及 `skill-change-monitor` / `windows-translation-status` / `github-sync-status` 的新增记录。
+  - `codex/windows-version-20260411`: 是。包含 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` 与 `*.cmd` 这组 Windows launcher。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。
+  - `codex/windows-version-20260411`: 是。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。
+  - `codex/windows-version-20260411`: 是。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync XiaoYunque API skill docs and monitor records`
+  - `codex/windows-version-20260411`: `Add Windows launchers for xyq nest skill`
+- 若跳过，说明跳过原因:
+  - `codex/default-python-sync` 未包含 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` 与 `*.cmd`，因为这些是 Windows-only 入口，按分支目的留给 `codex/windows-version-20260411`。
+  - `codex/windows-version-20260411` 未重复提交 `xiaoyunque-source-video`、`seedance-video-api`、`skill-change-monitor` 与 `windows-translation-status` 的 cross-platform 文档 / 记录变更，避免把共享内容在 Windows 支线上重复漂移。
+
+## 2026-05-08 22:11:21 CST
+- 检测到新的技能变更批次: 新增 `9`，修改 `8`，删除 `0`。
+- 这批变更集中在 `skill-center/skills/xyq-nest-skill/` 与 `skill-center/skills/xiaoyunque-source-video/`，并连带补充了 `seedance-video-api` 的 Windows 交接约束；核心是把仓库镜像侧的小云雀能力补齐为 PowerShell / `cmd.exe` 可直接调用的 API skill，同时把源视频技能文档彻底改写为依赖 `XYQ_ACCESS_KEY`、`submit_run.py`、`get_thread.py`、`upload_file.py`、`download_results.py` 的 API-only 工作流。
+- 建议后续执行 GitHub 同步，避免这组 `xyq-nest-skill` Windows 启动器、小云雀 API 化规则，以及 Seedance Windows handoff 约束继续只停留在本地工作区。
+
+## 2026-05-08 17:05:03 CST
+- 检测到新的技能变更批次: 新增 `3`，修改 `2`，删除 `0`。
+- 这批变更集中在 `skill-center/skills/seedance-video-api/`；核心是新增客户试用接单与生产 SOP、字幕白名单、对白/字幕硬约束三份 reference，并在 `SKILL.md` 与 `references/workflows.md` 中把试用场景固化为锁脚本、单任务提交、字幕验收的标准流程。
+- 建议后续执行 GitHub 同步，避免这组 Seedance 客户试用与字幕控制规则继续只停留在本地工作区。
+
+## 2026-05-08 19:06:47 CST
+- 检测到新的技能变更批次: 新增 `16`，修改 `8`，删除 `0`。
+- 这批变更集中在 `~/.codex/skills/xyq-nest-skill/`、`skill-center/skills/xyq-nest-skill/` 与 live/mirror 两侧的 `xiaoyunque-source-video/`；核心是新增小云雀 API skill 的 README、技能定义和 4 个 Python 执行脚本，并把 `xiaoyunque-source-video` 从网页操作说明改写为依赖 `XYQ_ACCESS_KEY` 与 API 轮询/上传/下载脚本的 API-only 工作流。
+- 建议后续执行 GitHub 同步，避免这组新的 `xyq-nest-skill` 能力和小云雀源视频 API 化规则继续只停留在本地工作区。
+
 ## 2026-05-08 00:01:30 CST
 - 处理时间:
   - `2026-05-08 00:01:30 CST`
@@ -201,13 +241,18 @@
 
 ## 2026-05-05 00:04:45 CST
 - 处理时间:
-  - `2026-05-05 00:04:45 CST`
+- `2026-05-05 00:04:45 CST`
 - 前置检查:
-  - `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-05-04 22:05:18 CST`。
-  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- `docs/automation/windows-translation-status.md` 的最新 dated entry 为 `2026-05-04 22:05:18 CST`。
+- 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
 - 本轮同步分支:
-  - `codex/default-python-sync`: 是。当前 generic / Mac 兼容 `python-platform-takeover` 代码修补、campaign 配置 / receipt / screenshot 留痕，以及 `skill-change-monitor`、`windows-translation-status`、`github-sync-status` 的新增记录都会落到默认同步分支。
-  - `codex/windows-version-20260411`: 否。本轮工作树里没有新的 Windows 专属 bridge、安装器、部署模板、PowerShell / `.cmd` 启动器或其他只应进入 Windows 支线的 payload。
+- `codex/default-python-sync`: 是。当前 generic / Mac 兼容 `python-platform-takeover` 代码修补、campaign 配置 / receipt / screenshot 留痕，以及 `skill-change-monitor`、`windows-translation-status`、`github-sync-status` 的新增记录都会落到默认同步分支。
+- `codex/windows-version-20260411`: 否。本轮工作树里没有新的 Windows 专属 bridge、安装器、部署模板、PowerShell / `.cmd` 启动器或其他只应进入 Windows 支线的 payload。
+
+## 2026-05-08 22:12:03 CST
+- 检测到新的技能变更批次: 新增 `9`，修改 `8`，删除 `0`。
+- 这批变更集中在 `skill-center/skills/xyq-nest-skill/`、`skill-center/skills/xiaoyunque-source-video/` 与 `skill-center/skills/seedance-video-api/`；核心是新增 `xyq-nest-skill` 的 Windows PowerShell / `.cmd` 启动器，把小云雀源视频规则固化为 API-only 工作流，并为 Seedance 客户试用流程补上 Windows handoff 路径与命令约束。
+- 建议后续执行 GitHub 同步，避免这组 Windows launcher、API-only XiaoYunque 文档和 Seedance Windows 交接规则继续只停留在本地工作区。
 - 是否检测到新增或修改:
   - `codex/default-python-sync`: 是。检测到 `automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py` 的 Wujie / 多 `body` 文本读取兼容修复、`2026-05-03-ai-employee-data-center-review` 视频号 receipt 最终核验写回、`2026-05-04-ai-employee-three-format-comparison` 的 3 份 content package 与 receipt / screenshot 资产，以及自动化状态文档更新。
   - `codex/windows-version-20260411`: 否。`windows-translation-status.md` 本轮结论是“已复核，无需额外转译实现”，没有新的 Windows-only repo 内容需要单独同步。

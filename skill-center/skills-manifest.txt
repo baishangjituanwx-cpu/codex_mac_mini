@@ -58,6 +58,7 @@ wechat-video-channel-share-desktop-ops
 weibo-ops
 winui-app
 xiaohongshu-ops
+xyq-nest-skill
 xiaoyunque-source-video
 yeet
 zhihu-ops
