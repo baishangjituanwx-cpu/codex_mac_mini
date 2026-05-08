@@ -167,6 +167,27 @@ Rules:
 - on Windows handoff, run `.\scripts\social-publisher.ps1 validate-package <yaml>` and `receipt-status <yaml>` before publish follow-up; if the receipt already shows any live platform record or submitted / under-review state, stop instead of reusing the handoff
 - do not call the campaign `ready_for_publish` until the markdown publish package exists and `.\scripts\social-publisher.ps1 validate-package ...` passes against the finished YAML
 
+## 9. Customer Trial Scenario
+
+For customer-trial promo jobs, use the fixed standard from:
+
+- `customer-trial-intake-and-production-sop.md`
+- `prompt-rule-09-subtitle-whitelist.md`
+- `prompt-rule-10-dialogue-subtitle-hard-requirements.md`
+
+Execution order:
+
+1. convert the customer intake into `brief.json`
+2. lock one spoken script in `spoken-script.lock.md`
+3. write the subtitle whitelist into `dialogue-timeline.json`
+4. save `script-fingerprint.json` before building the payload
+5. write one full `video-prompt.txt`
+6. save one `seedance_payload.json`
+7. submit only one generation task
+8. after download, verify audio, speech, subtitle exactness, subtitle style, and final accept/reject state
+
+Do not call the asset acceptable just because the visuals are good. In this scenario, subtitle drift and dialogue mismatch are terminal failures.
+
 Default naming:
 
 - `cover-vertical-3x4.png`

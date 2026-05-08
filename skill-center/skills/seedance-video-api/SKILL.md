@@ -101,6 +101,26 @@ In prompt-only mode, output in this order unless the user asks for another forma
 
 Use [references/prompt-template.md](references/prompt-template.md) for the fixed Seedance prompt-package structure and the current `15s` default.
 
+## Customer Trial Scenario Standard
+
+When the request is a `客户试用场景`, `试用门店视频`, `探店试用视频`, or another client-trial promo job, do not improvise the workflow.
+
+Use these reference files together:
+
+- [references/customer-trial-intake-and-production-sop.md](references/customer-trial-intake-and-production-sop.md)
+- [references/prompt-rule-09-subtitle-whitelist.md](references/prompt-rule-09-subtitle-whitelist.md)
+- [references/prompt-rule-10-dialogue-subtitle-hard-requirements.md](references/prompt-rule-10-dialogue-subtitle-hard-requirements.md)
+
+Hard requirements for this scenario:
+
+- receive the customer material as the fixed 9-field intake, plus `1-5` reference images
+- create `brief.json`, `spoken-script.lock.md`, `dialogue-timeline.json`, `script-fingerprint.json`, `video-prompt.txt`, and `seedance_payload.json` before submit
+- lock the spoken script before generation; do not rewrite the lines at submit time
+- use the subtitle whitelist block and the dialogue/subtitle hard-requirements block in every generation prompt
+- prefer a 4-line spoken script; each line should usually stay within `3-8` Chinese characters
+- submit one task at a time; do not auto-batch trial-scenario generations unless the user explicitly asks
+- reject the result if subtitles drift from speech, extra subtitle text appears, or the model falls back to a black subtitle bar
+
 When real-person material is used, the prompt must explicitly require:
 
 - preserve the original person's hairstyle, face shape, facial features, skin tone, glasses if present, body shape, clothing, and overall recognizability
