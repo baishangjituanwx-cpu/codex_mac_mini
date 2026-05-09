@@ -1,11 +1,9 @@
+[CmdletBinding()]
 param(
-  [Parameter(ValueFromRemainingArguments = $true)]
-  [string[]]$CliArgs
+    [Parameter(ValueFromRemainingArguments = $true)]
+    [string[]]$ScriptArgs = @()
 )
 
-Set-StrictMode -Version Latest
-$ErrorActionPreference = "Stop"
-
-$helper = Join-Path $PSScriptRoot "invoke_xyq_script.ps1"
-& $helper -ScriptName "submit_run.py" -ScriptArgs $CliArgs
+$launcher = Join-Path $PSScriptRoot "invoke_xyq_script.ps1"
+& $launcher "submit_run.py" @ScriptArgs
 exit $LASTEXITCODE
