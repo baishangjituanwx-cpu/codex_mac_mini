@@ -2148,3 +2148,43 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-08 22:06:55 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天补齐的 Windows 落点包括 Seedance 客户试用 SOP 的 Windows handoff 规则、`xyq-nest-skill` 的 PowerShell / `.cmd` 入口，以及 API-only `xiaoyunque-source-video` 的 Windows 路径与命令说明。
+
+## 2026-05-09 22:03:27 CST
+
+- 处理时间:
+  - `2026-05-09 22:03:27 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-08 22:06:55 CST` 之后追加且此前未写入本状态文件的非零批次:
+    - `2026-05-08 22:11:21 CST`
+    - `2026-05-09 00:15:39 CST`
+  - 后续 `2026-05-09 03:14:12 CST` 至 `2026-05-09 21:38:44 CST` 的追加批次均为 `新增 0，修改 0，删除 0`，没有新的待转译项。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/xyq-nest-skill/scripts/**`:
+    - 重新补回共享 PowerShell 运行器 `scripts/invoke_xyq_script.ps1`，恢复 Windows 侧对仓库 `.venv\\Scripts\\python.exe`、激活中的虚拟环境，以及系统 `py` / `python` / `python3` 的自动探测，并继续把最低 Python 版本约束保持在 `3.9+`。
+    - 重新补回 4 个 PowerShell launcher:
+      - `scripts/submit_run.ps1`
+      - `scripts/get_thread.ps1`
+      - `scripts/upload_file.ps1`
+      - `scripts/download_results.ps1`
+    - 重新补回 4 个 `.cmd` wrapper，确保 `cmd.exe`、双击触发和 PowerShell 文档入口再次落到真实仓库文件，而不是只停留在说明文字里。
+    - 这些恢复的 Windows 入口继续直接复用现有 cross-platform Python 脚本：
+      - `submit_run.py`
+      - `get_thread.py`
+      - `upload_file.py`
+      - `download_results.py`
+      - 本轮没有对 Mac 或通用 Python 实现做分叉或覆盖。
+  - `skill-center/skills/xyq-nest-skill/{README.md,SKILL.md}` 与 `skill-center/skills/xiaoyunque-source-video/{SKILL.md,references/source-video-playbook.md}`:
+    - 本轮不需要再改文档内容；现有 Windows PowerShell 命令、`C:/...` 路径规则和 API-only 小云雀流程说明在 launcher 恢复后重新与仓库文件树一致。
+  - 结论:
+    - `2026-05-08 22:11:21 CST` 这批新增 / 修改项原本已经把 Windows repo mirror 补齐，但 `2026-05-09 00:15:39 CST` 随后的删除批次把这些 Windows 入口全部移除，造成文档与资产失配。
+    - 本轮已把缺失的 Windows launcher 全部补回，恢复仓库镜像的可执行闭环。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-08 22:11:21 CST` 与 `2026-05-09 00:15:39 CST` 这两批 monitor 非零变更涉及的 Windows 缺口已补齐；之后的 `2026-05-09` 批次未发现新的 Mac-only skill 行为需要转译。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机执行了 `git diff --check` 静态检查，结果通过。
+  - 本机未安装 `pwsh` / `powershell`，因此没有执行 PowerShell 语法解析或 Windows 实机回归；当前判断基于仓库文件恢复、launcher 落点检查和文档引用核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-09 22:03:27 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天补齐的 Windows 落点是 `xyq-nest-skill` 仓库镜像被删除后缺失的 PowerShell / `.cmd` launcher 资产。

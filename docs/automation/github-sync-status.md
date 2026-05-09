@@ -12,6 +12,36 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-10 00:07:25 CST
+- 处理时间:
+  - `2026-05-10 00:07:25 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的 latest dated entry 为 `2026-05-09 22:03:27 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含 `docs/automation/skill-change-monitor.md`、`docs/automation/windows-translation-status.md` 与 `docs/automation/github-sync-status.md` 的最新自动化记录；本轮没有新的 generic / Mac-compatible `automation/python-platform-takeover` 代码或资产差异。
+  - `codex/windows-version-20260411`: 是。包含 `skill-center/skills/xyq-nest-skill/scripts/` 下 9 个 Windows launcher 的更新。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。已准备提交 `Record 2026-05-10 GitHub sync execution`。
+  - `codex/windows-version-20260411`: 是。已创建提交 `Refresh xyq nest Windows launchers`。
+- 是否已推送:
+  - `codex/default-python-sync`: 否。将在本条记录提交后尝试推送。
+  - `codex/windows-version-20260411`: 否。`git push origin codex/windows-version-20260411` 失败，报错 `ssh: connect to host github.com port 22: Operation not permitted`。
+- 提交信息:
+  - `codex/default-python-sync`: `Record 2026-05-10 GitHub sync execution`
+  - `codex/windows-version-20260411`: `Refresh xyq nest Windows launchers`
+- 若跳过，说明跳过原因:
+  - `codex/default-python-sync` 未包含 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` 与 `*.cmd`，因为这些 launcher 是 Windows-only 入口，按分支目的留给 `codex/windows-version-20260411`。
+  - `codex/windows-version-20260411` 未包含 `docs/automation/{skill-change-monitor,windows-translation-status,github-sync-status}.md`，因为这些是共享自动化记录，按分支目的保留在 `codex/default-python-sync`。
+
+## 2026-05-09 00:12:27 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `0`，删除 `9`。
+- 这批变更集中在 `skill-center/skills/xyq-nest-skill/scripts/`；核心是仓库镜像里的 Windows `.ps1` / `.cmd` 包装器全部消失，只留下同目录的跨平台 Python API 脚本。
+- 建议后续执行 GitHub 同步或仓库镜像修复决策，避免 `xyq-nest-skill` 文档继续引用已不存在的 Windows 启动器，或让这组删除长期只停留在本地工作区。
+
 ## 2026-05-09 00:08:11 CST
 - 处理时间:
   - `2026-05-09 00:08:11 CST`
@@ -1970,3 +2000,18 @@
 - 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
 - 这批变更集中在 `~/.codex/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.sh`；核心是让 Hermes 飞书发送脚本可以先主动拉起 Lark / Feishu，再由 AppleScript 直接完成输入框聚焦、清空、粘贴和发送，同时补强前台应用识别与 Accessibility 报错提示。
 - 建议后续执行 GitHub 同步或镜像落库决策，避免这条最新的 Hermes 飞书介入脚本增强继续只停留在本机 `~/.codex/skills`。
+
+## 2026-05-09 00:15:39 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `0`，删除 `9`。
+- 这批变更集中在 `skill-center/skills/xyq-nest-skill/scripts/`；核心是仓库镜像侧移除了 Windows PowerShell / `cmd.exe` 启动器（`submit_run`、`get_thread`、`upload_file`、`download_results` 和共享 `invoke_xyq_script.ps1`），但当前 `xyq-nest-skill` 与 `xiaoyunque-source-video` 文档仍引用这些入口。
+- 建议后续执行 GitHub 同步，并确认这是有意下线 Windows launcher 还是需要补回/同步文档，避免 repo mirror 的 Windows 用法继续失配。
+
+## 2026-05-09 22:36:37 CST
+- 检测到新的技能变更批次: 新增 `9`，修改 `0`，删除 `0`。
+- 这批变更重新集中在 `skill-center/skills/xyq-nest-skill/scripts/`；核心是把同日早些时候移除的 Windows PowerShell / `cmd.exe` 启动器全部补回，包括共享 `invoke_xyq_script.ps1` 和 `submit_run`、`get_thread`、`upload_file`、`download_results` 的 `.ps1` / `.cmd` 入口。
+- 建议后续执行 GitHub 同步，避免仓库镜像里的 `xyq-nest-skill` Windows 用法再次与本地最新脚本状态脱节。
+
+## 2026-05-09 23:37:45 CST
+- 检测到新的技能变更批次: 新增 `9`，修改 `0`，删除 `0`。
+- 这批变更仍集中在 `skill-center/skills/xyq-nest-skill/scripts/`；核心是仓库镜像新增共享 `invoke_xyq_script.ps1`、四个 `.ps1` Python 包装器和四个 `.cmd` 转调入口，重新补齐 `xyq-nest-skill` 的 Windows Shell 启动链路。
+- 建议后续执行 GitHub 同步，避免这组刚恢复的 `xyq-nest-skill` Windows launcher 继续只停留在本地工作区。
