@@ -28,7 +28,7 @@
   - `codex/default-python-sync`: 是。已准备提交 `Record 2026-05-10 GitHub sync execution`。
   - `codex/windows-version-20260411`: 是。已创建提交 `Refresh xyq nest Windows launchers`。
 - 是否已推送:
-  - `codex/default-python-sync`: 否。将在本条记录提交后尝试推送。
+  - `codex/default-python-sync`: 否。`git push origin codex/default-python-sync` 失败，报错 `ssh: connect to host github.com port 22: Operation not permitted`。
   - `codex/windows-version-20260411`: 否。`git push origin codex/windows-version-20260411` 失败，报错 `ssh: connect to host github.com port 22: Operation not permitted`。
 - 提交信息:
   - `codex/default-python-sync`: `Record 2026-05-10 GitHub sync execution`
