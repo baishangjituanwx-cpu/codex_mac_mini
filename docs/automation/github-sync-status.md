@@ -12,6 +12,16 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-12 18:04:52 CST
+- 检测到新的技能变更批次: 新增 `1`，修改 `1`，删除 `0`。
+- 这批变更继续集中在 `automation/python-platform-takeover`；核心是 `2026-05-12-ai-employee-status-split-before-judgment` 的 Toutiao 发布已经真正进入执行落库阶段，新增了 Toutiao publish lock，并把同名 receipt 从初始化骨架扩成含管理页“审核中”核验、截图证据、结果路径和飞书通知元数据的正式台账。
+- 建议后续执行 GitHub 同步，避免这次新的 Toutiao 发布状态与防重发锁文件继续只停留在本地工作区。
+
+## 2026-05-12 19:06:48 CST
+- 检测到新的技能变更批次: 新增 `3`，修改 `1`，删除 `0`。
+- 这批变更继续集中在 `automation/python-platform-takeover`；核心是 `2026-05-12-ai-employee-status-split-before-judgment` 在 Toutiao “审核中” 之后，又新增了百家号、Bilibili、知乎三个平台的 publish lock，并把同名 receipt 扩充为含三端正式发布记录、核验字段、分享或管理链接与飞书通知元数据的多平台台账。
+- 建议后续执行 GitHub 同步，避免这批新的多平台发布状态与防重发锁文件继续只停留在本地工作区。
+
 ## 2026-05-10 00:07:25 CST
 - 处理时间:
   - `2026-05-10 00:07:25 CST`
@@ -36,6 +46,11 @@
 - 若跳过，说明跳过原因:
   - `codex/default-python-sync` 未包含 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` 与 `*.cmd`，因为这些 launcher 是 Windows-only 入口，按分支目的留给 `codex/windows-version-20260411`。
   - `codex/windows-version-20260411` 未包含 `docs/automation/{skill-change-monitor,windows-translation-status,github-sync-status}.md`，因为这些是共享自动化记录，按分支目的保留在 `codex/default-python-sync`。
+
+## 2026-05-12 17:03:39 CST
+- 检测到新的技能变更批次: 新增 `3`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover`；核心是新增 `2026-05-12-ai-employee-status-split-before-judgment` 的 content package、Hermes handoff 包和初始 publish receipt 台账，并把 `state/hermes-handoff/latest.json` 从 `2026-05-05-ai-employee-audit-wait-no-republish` 切换到这个新的全平台 ready-for-publish campaign。
+- 建议后续执行 GitHub 同步，避免新的 `python-platform-takeover` campaign 配置、receipt 骨架和 latest handoff 指针继续只停留在本地工作区。
 
 ## 2026-05-09 00:12:27 CST
 - 检测到新的技能变更批次: 新增 `0`，修改 `0`，删除 `9`。

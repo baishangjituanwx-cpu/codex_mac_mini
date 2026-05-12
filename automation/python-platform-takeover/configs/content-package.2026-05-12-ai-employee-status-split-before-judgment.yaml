@@ -1,0 +1,170 @@
+source_thread_id: "019d9ac2-d680-7f12-bf32-14678c576aa1"
+campaign_id: "2026-05-12-ai-employee-status-split-before-judgment"
+theme: "大陈、机器人小马和女性运营同事在办公室冲突：不能把全平台一口气判失败，AI员工必须先分状态、再复查、再行动。"
+status: "ready_for_publish"
+package_status: "ready_for_platform_publishing"
+scope: "all_platforms"
+lock_dir: "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks"
+fingerprints:
+  title_hash: "0bb6c04f3fb72308ca3031f878ef2f5272a02494278659e0f9593eb359bef6fd"
+  body_core_hash: "6b9968358bfde45174652a03f55911283baa1aefbc3c760eb84f673baea37192"
+  video_sha256: "e661ed6de3df40b561f95ad1a39fc13e748465b6f24d06aadfe76d7d2c1f5a43"
+  cover_sha256: "a9fc293f6ea382b1563561850da649ada7169d76045d8c1e5161c1e67b56c9c3"
+  cover_3_4_sha256: "a9fc293f6ea382b1563561850da649ada7169d76045d8c1e5161c1e67b56c9c3"
+  cover_4_3_sha256: "88db6256a9212d060497a7f62b4d9f2cda01ed79cd77ef37157e29123da4c8f5"
+  title_hash_basis: "sha256(sorted Hermes platform title strings, NFKC normalized)"
+  body_core_hash_basis: "sha256(sorted Hermes platform description strings, NFKC normalized)"
+  cover_sha256_basis: "canonical cover_3_4 vertical cover"
+receipt_schema:
+  platform_record_required_fields:
+    - "actor"
+    - "actor_session_id"
+    - "status"
+    - "verified_by"
+    - "lock_path"
+  platform_record_time_fields:
+    - "submitted_at"
+    - "published_at"
+  initial_receipt_required_state:
+    status: "not_published"
+    receipts:
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment-publish.mp4"
+  backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-horizontal-4x3.png"
+support_files:
+  content_package_root: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package"
+  final_verify_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package/final-verify.json"
+  platform_upload_map: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package/platform-upload-map.md"
+  hermes_package_json: "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-12-ai-employee-status-split-before-judgment.json"
+  publish_plan: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package/publish-plan.md"
+  browser_checklist: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package/browser-use-checklist.md"
+publish_constraints:
+  allow_live: false
+  require_management_page_verification: true
+  skip_duplicate_if_already_published: true
+  final_submit_requires_user_confirmation: true
+  prefer_repair_existing_post_over_republish: true
+  no_publish_in_handoff_generation: true
+  no_upload_in_handoff_generation: true
+  no_submit_click_in_handoff_generation: true
+  xiaohongshu_testing_allowed: false
+  do_not_touch_push_directory: true
+platform_upload_plan:
+  douyin:
+    publish_type: "short_video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package/platforms/douyin.md"
+    title_source: "platforms.douyin.title"
+    description_source: "platforms.douyin.description"
+    hermes_status: "unsupported_by_current_hermes_skill"
+  kuaishou:
+    publish_type: "short_video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package/platforms/kuaishou.md"
+    title_source: "platforms.kuaishou.title"
+    description_source: "platforms.kuaishou.description"
+  wechat_channels:
+    publish_type: "short_video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package/platforms/wechat-channels.md"
+    title_source: "platforms.wechat_channels.title"
+    description_source: "platforms.wechat_channels.description"
+  weibo:
+    publish_type: "video_post"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package/platforms/weibo.md"
+    title_source: "platforms.weibo.title"
+    description_source: "platforms.weibo.description"
+  bilibili:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-horizontal-4x3.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-vertical-3x4.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package/platforms/bilibili.md"
+    title_source: "platforms.bilibili.title"
+    description_source: "platforms.bilibili.description"
+  xiaohongshu:
+    publish_type: "video_note"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package/platforms/xiaohongshu.md"
+    title_source: "platforms.xiaohongshu.title"
+    description_source: "platforms.xiaohongshu.description"
+    testing_allowed: false
+    hermes_excluded: true
+  toutiao:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package/platforms/toutiao.md"
+    title_source: "platforms.toutiao.title"
+    description_source: "platforms.toutiao.description"
+  baijiahao:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-horizontal-4x3.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-vertical-3x4.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package/platforms/baijiahao.md"
+    title_source: "platforms.baijiahao.title"
+    description_source: "platforms.baijiahao.description"
+  zhihu:
+    publish_type: "video_answer"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package/platforms/zhihu.md"
+    title_source: "platforms.zhihu.title"
+    description_source: "platforms.zhihu.description"
+platforms:
+  douyin:
+    title: "别把全平台都判失败"
+    description: "机器人小马一看到列表混乱就想全标失败，大陈当场叫停：先分状态，再复查。AI员工不是凭感觉判断，是先把已发布、审核中、待核验分清楚。#AI员工 #内容运营 #发布复盘"
+  kuaishou:
+    title: "先分状态再判断"
+    description: "平台列表一乱，小马差点全判失败。大陈说，先分已发布、审核中、待核验，再决定下一步。"
+  wechat_channels:
+    title: "先分状态"
+    description: "机器人小马把全平台都判失败，大陈当场叫停：AI员工先分状态，再复查，再行动。"
+  weibo:
+    title: "平台没完全公开，就能说全失败了吗？"
+    description: "不能。已发布、审核中、待核验，是三种完全不同的状态。大陈让机器人小马先分状态，再复查，不要凭感觉把全平台都判失败。#AI员工 #内容运营 #发布复盘"
+  bilibili:
+    title: "别把全平台都判失败：大陈让机器人小马先分状态再复查"
+    description: "这条讲发布复盘里的一个常见误判：不同平台可能分别处在已发布、审核中、待核验状态，不能一口气写成失败。AI员工先分状态，再复查，再决定下一步。"
+  xiaohongshu:
+    title: "别急着判失败"
+    description: "小马看到平台列表一乱，就想全标失败。大陈说：先分状态。已发布、审核中、待核验，不能混成一个结论。"
+  toutiao:
+    title: "平台状态不一致时，AI员工该怎么判断？"
+    description: "不要把全平台一口气判失败。先把已发布、审核中、待核验分清楚，再决定继续等、补证据，还是进入下一步处理。"
+  baijiahao:
+    title: "为什么不能把所有平台都直接判成发布失败？"
+    description: "因为已发布、审核中、待核验是不同状态。直接判失败会误导后续处理，也会破坏复盘判断。更稳妥的做法是先分状态、再复查、再决定动作。"
+  zhihu:
+    title: "为什么多平台发布后，不能直接说“全平台失败”？"
+    description: "因为平台状态可能完全不同：有的已发布，有的审核中，有的还需要公开核验。直接说失败会让后续动作变形。更稳妥的是先分状态，再复查，再决定处理方式。"
+publishing:
+  preferred_automation: "Hermes/python-platform-takeover"
+  final_submit_requires_user_confirmation: true
+  allow_live: false

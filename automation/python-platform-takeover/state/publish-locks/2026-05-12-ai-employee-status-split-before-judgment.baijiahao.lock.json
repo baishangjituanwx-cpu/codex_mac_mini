@@ -1,0 +1,16 @@
+{
+  "campaign_id": "2026-05-12-ai-employee-status-split-before-judgment",
+  "platform_id": "baijiahao",
+  "status": "published",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "actor": "Codex Chrome DevTools/CDP publisher",
+  "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
+  "title": "为什么不能把所有平台都直接判成发布失败？",
+  "external_id": "4885267250089051081",
+  "created_at": "2026-05-12T18:30:54+08:00",
+  "updated_at": "2026-05-12T18:32:11+08:00",
+  "current_url": "http://baijiahao.baidu.com/builder/preview/s?id=4885267250089051081",
+  "management_url": "https://baijiahao.baidu.com/builder/rc/content?currentPage=1&pageSize=10&search=%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E6%8A%8A%E6%89%80%E6%9C%89%E5%B9%B3%E5%8F%B0%E9%83%BD%E7%9B%B4%E6%8E%A5%E5%88%A4%E6%88%90%E5%8F%91%E5%B8%83%E5%A4%B1%E8%B4%A5%EF%BC%9F&type=&collection=&app_id=1861892519044473&startDate=&endDate=",
+  "result_path": "/Users/baishangjituan/Documents/push/baijiahao_publish_result_20260512.json",
+  "verified_by": "Baijiahao 作品管理 exact-title row and status text via Chrome DevTools/CDP"
+}
