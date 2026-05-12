@@ -12,6 +12,34 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-13 00:07:40 CST
+- 处理时间:
+  - `2026-05-13 00:07:40 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的 latest dated entry 为 `2026-05-12 22:03:49 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含 `automation/python-platform-takeover` 的 `2026-05-12-ai-employee-status-split-before-judgment` content package、Hermes handoff package、latest 指针、receipt 与 4 个 publish lock，以及 `docs/automation/{skill-change-monitor,windows-translation-status,github-sync-status}.md` 的新增记录。
+  - `codex/windows-version-20260411`: 是。分支上已有待推送提交 `Refresh xyq nest Windows launchers`；当前默认分支里出现的 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` 与 `*.cmd` 未跟进提交到 generic 分支，因为它们与 Windows worktree 中该提交的文件内容一致。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。已新增提交 `Sync May 12 takeover state and monitor logs`；分支同时仍带有此前未推送的本地提交 `Record 2026-05-10 GitHub sync execution` 与 `Finalize 2026-05-10 GitHub sync status`。
+  - `codex/windows-version-20260411`: 是。沿用现有本地提交 `Refresh xyq nest Windows launchers`，本轮未新建额外 Windows-only 提交。
+- 是否已推送:
+  - `codex/default-python-sync`: 否。`git push origin codex/default-python-sync` 失败，报错 `ssh: connect to host github.com port 22: Operation not permitted`。
+  - `codex/windows-version-20260411`: 否。`git push origin codex/windows-version-20260411` 失败，报错 `ssh: connect to host github.com port 22: Operation not permitted`。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync May 12 takeover state and monitor logs`
+  - `codex/default-python-sync`: `Finalize 2026-05-10 GitHub sync status`
+  - `codex/default-python-sync`: `Record 2026-05-10 GitHub sync execution`
+  - `codex/windows-version-20260411`: `Refresh xyq nest Windows launchers`
+- 若跳过，说明跳过原因:
+  - 未提交 `automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json` 及其两个 `.stale-*` 文件，因为它们是 `2026-05-11` 的旧运行态残留，不属于 `2026-05-12` 这批待同步变更。
+  - 未在 `codex/default-python-sync` 重复提交 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` 与 `*.cmd`，因为这些 Windows launcher 已由 `codex/windows-version-20260411` 的现有提交承载。
+  - 未将共享执行记录文档重复写入 Windows 支线，避免让 `docs/automation/github-sync-status.md` 在分支间无意义漂移。
+
 ## 2026-05-12 18:04:52 CST
 - 检测到新的技能变更批次: 新增 `1`，修改 `1`，删除 `0`。
 - 这批变更继续集中在 `automation/python-platform-takeover`；核心是 `2026-05-12-ai-employee-status-split-before-judgment` 的 Toutiao 发布已经真正进入执行落库阶段，新增了 Toutiao publish lock，并把同名 receipt 从初始化骨架扩成含管理页“审核中”核验、截图证据、结果路径和飞书通知元数据的正式台账。
