@@ -1,0 +1,168 @@
+source_thread_id: "019d9ac2-d680-7f12-bf32-14678c576aa1"
+campaign_id: "2026-05-13-ai-employee-receipt-lock-before-republish"
+theme: "缺证据不要重复发布；AI员工先查回执、看状态词、锁重复、补证据。"
+status: "ready_for_publish"
+package_status: "ready_for_platform_publishing"
+scope: "all_platforms"
+lock_dir: "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks"
+fingerprints:
+  title_hash: "1ebcb80d023a33ccbfa0bbcaff9b199f1c8201ae28b6b062c4c658574bf36433"
+  body_core_hash: "4e44762ac73ffb9398ec273c0cd33277e8d2d8bd367910f0c05efe0f925cf07b"
+  video_sha256: "69df58c77e53be58c1f67ab7f14c635dd437bcdc8b64b8c2f867b932b65bb31c"
+  cover_sha256: "1afdbb76bec19af480e287e87a4e133d980648c7e36a5e8dfa9480a0fb093f2a"
+  cover_3_4_sha256: "1afdbb76bec19af480e287e87a4e133d980648c7e36a5e8dfa9480a0fb093f2a"
+  cover_4_3_sha256: "7f69c02880d92fc89d462f4276f595d1045a256d72cb3a845fb1e6c86a53903e"
+  title_hash_basis: "sha256(sorted Hermes platform title strings, NFKC normalized)"
+  body_core_hash_basis: "sha256(sorted Hermes platform description strings, NFKC normalized)"
+  cover_sha256_basis: "canonical cover_3_4 vertical cover"
+receipt_schema:
+  platform_record_required_fields:
+    - "actor"
+    - "actor_session_id"
+    - "status"
+    - "verified_by"
+    - "lock_path"
+  platform_record_time_fields:
+    - "submitted_at"
+    - "published_at"
+  initial_receipt_required_state:
+    status: "not_published"
+    receipts:
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4"
+  backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png"
+support_files:
+  content_package_root: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package"
+  final_verify_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/final-verify.json"
+  platform_upload_map: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platform-upload-map.md"
+  hermes_package_json: "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-13-ai-employee-receipt-lock-before-republish.json"
+  publish_plan: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/publish-plan.md"
+  browser_checklist: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/browser-use-checklist.md"
+publish_constraints:
+  allow_live: false
+  require_management_page_verification: true
+  skip_duplicate_if_already_published: true
+  final_submit_requires_user_confirmation: true
+  prefer_repair_existing_post_over_republish: true
+  no_publish_in_handoff_generation: true
+  no_upload_in_handoff_generation: true
+  no_submit_click_in_handoff_generation: true
+  xiaohongshu_testing_allowed: false
+  do_not_touch_push_directory: true
+platform_upload_plan:
+  douyin:
+    publish_type: "short_video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platforms/douyin.md"
+    title_source: "platforms.douyin.title"
+    description_source: "platforms.douyin.description"
+  kuaishou:
+    publish_type: "short_video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platforms/kuaishou.md"
+    title_source: "platforms.kuaishou.title"
+    description_source: "platforms.kuaishou.description"
+  wechat_channels:
+    publish_type: "short_video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platforms/wechat-channels.md"
+    title_source: "platforms.wechat_channels.title"
+    description_source: "platforms.wechat_channels.description"
+  weibo:
+    publish_type: "video_post"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platforms/weibo.md"
+    title_source: "platforms.weibo.title"
+    description_source: "platforms.weibo.description"
+  bilibili:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platforms/bilibili.md"
+    title_source: "platforms.bilibili.title"
+    description_source: "platforms.bilibili.description"
+  xiaohongshu:
+    publish_type: "video_note"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platforms/xiaohongshu.md"
+    title_source: "platforms.xiaohongshu.title"
+    description_source: "platforms.xiaohongshu.description"
+    testing_allowed: false
+  toutiao:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platforms/toutiao.md"
+    title_source: "platforms.toutiao.title"
+    description_source: "platforms.toutiao.description"
+  baijiahao:
+    publish_type: "video"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platforms/baijiahao.md"
+    title_source: "platforms.baijiahao.title"
+    description_source: "platforms.baijiahao.description"
+  zhihu:
+    publish_type: "video_answer"
+    upload_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4"
+    backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish.mp4"
+    primary_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png"
+    platform_package: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platforms/zhihu.md"
+    title_source: "platforms.zhihu.title"
+    description_source: "platforms.zhihu.description"
+platforms:
+  douyin:
+    title: "缺证据，别重复发布"
+    description: "机器人小马看到缺链接就想再点一次发布，大陈当场拦住：先查回执。审核中不是失败，缺证据先补证据，别用重复发布补不确定。#AI员工 #内容运营 #发布复盘"
+  kuaishou:
+    title: "先查回执别重发"
+    description: "小马想再点一次发布，大陈说先查回执。审核中不是失败，缺证据先补证据。"
+  wechat_channels:
+    title: "先查回执"
+    description: "机器人小马想重复发布，大陈叫停：先查回执、看状态词、锁住重复，再补证据。"
+  weibo:
+    title: "缺公开链接，就能再发一次吗？"
+    description: "不能。缺证据不等于失败，审核中也不是失败。大陈让机器人小马先查回执、看状态词、锁重复，再决定要补什么。#AI员工 #内容运营 #发布复盘"
+  bilibili:
+    title: "别用重复发布补不确定：大陈让机器人小马先查回执和状态词"
+    description: "这条讲多平台发布后的重复风险：看不到链接或缺状态词时，不要直接再点一次发布。AI员工要先查回执、看状态词、锁住重复，再补证据。"
+  xiaohongshu:
+    title: "别用重发补不确定"
+    description: "小马看到缺链接就想再发一次。大陈说：先查回执。缺证据先补证据，别重复发布。"
+  toutiao:
+    title: "审核中或缺链接时，AI员工该不该再发布一次？"
+    description: "不应该直接重发。先查回执和状态词，确认是否已有记录，再决定是等待推进、补公开链接，还是补数据证据。"
+  baijiahao:
+    title: "为什么缺发布证据时，不能马上重复发布？"
+    description: "因为缺公开链接、缺状态词，不等于发布失败。重复发布会制造重复条目，也会让后续复盘更乱。更稳妥的做法是先查回执、看状态词、锁住重复，再补证据。"
+  zhihu:
+    title: "为什么缺证据时，不能用“再发一次”来补救？"
+    description: "因为重复发布会制造新问题。真正要补的是公开链接、状态词、发布时间和数据证据。先查回执和发布锁，再决定下一步，才不会把复盘变成猜测。"
+publishing:
+  preferred_automation: "Hermes/python-platform-takeover"
+  final_submit_requires_user_confirmation: true
+  allow_live: false

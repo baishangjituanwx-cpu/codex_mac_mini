@@ -2058,3 +2058,19 @@
 - 检测到新的技能变更批次: 新增 `9`，修改 `0`，删除 `0`。
 - 这批变更仍集中在 `skill-center/skills/xyq-nest-skill/scripts/`；核心是仓库镜像新增共享 `invoke_xyq_script.ps1`、四个 `.ps1` Python 包装器和四个 `.cmd` 转调入口，重新补齐 `xyq-nest-skill` 的 Windows Shell 启动链路。
 - 建议后续执行 GitHub 同步，避免这组刚恢复的 `xyq-nest-skill` Windows launcher 继续只停留在本地工作区。
+
+
+## 2026-05-13 09:23:20 CST
+- 检测到新的技能变更批次: 新增 `4`，修改 `2`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/`；核心是为 `2026-05-13-ai-employee-receipt-lock-before-republish` 新建全平台 content package、Hermes handoff JSON、初始 receipt 台账，并把 `state/hermes-handoff/latest.json` 切到这条“先查回执、锁重复、补证据”的新 campaign；同时继续给 `2026-05-12-ai-employee-status-split-before-judgment` 补写快手发布锁和完整 receipt 细节。
+- 建议后续执行 GitHub 同步，避免这批新的 `python-platform-takeover` handoff / receipt / lock 留痕继续只停留在本地工作区。
+
+## 2026-05-13 16:32:58 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更继续集中在 `automation/python-platform-takeover/state/publish-receipts/2026-05-12-ai-employee-status-split-before-judgment.json`；核心是把同一 campaign 的回执台账继续补写为含快手 `published` 与抖音 `under_review` 的正式记录，并补入作品管理核验字段、分享链接 / `aweme_id`、截图证据、结果路径和飞书通知元数据。
+- 建议后续执行 GitHub 同步，避免这条最新的多平台 receipt 补写继续只停留在本地工作区。
+
+## 2026-05-13 17:32:41 CST
+- 检测到新的技能变更批次: 新增 `4`，修改 `1`，删除 `0`。
+- 这批变更继续集中在 `automation/python-platform-takeover`；核心是为 `2026-05-13-ai-employee-receipt-lock-before-republish` 新增 Toutiao、Douyin、Bilibili、Zhihu 四个平台的 publish lock，并把同名 receipt 从初始化骨架扩成含多平台发布状态、公开链接 / 外部 ID、核验字段、证据路径和飞书通知元数据的正式台账。
+- 建议后续执行 GitHub 同步，避免这批新的 publish lock 与 receipt 落库继续只停留在本地工作区。

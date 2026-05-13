@@ -1,0 +1,500 @@
+{
+  "campaign_id": "2026-05-13-ai-employee-receipt-lock-before-republish",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "status": "zhihu_published_toutiao_under_review",
+  "receipts": {
+    "zhihu": {
+      "campaign_id": "2026-05-13-ai-employee-receipt-lock-before-republish",
+      "platform_id": "zhihu",
+      "actor": "Codex Chrome DevTools/CDP publisher",
+      "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
+      "status": "published",
+      "title": "为什么缺证据时，不能用“再发一次”来补救？",
+      "description": "因为重复发布会制造新问题。真正要补的是公开链接、状态词、发布时间和数据证据。先查回执和发布锁，再决定下一步，才不会把复盘变成猜测。",
+      "current_url": "https://www.zhihu.com/pin/2037940203382379703",
+      "management_url": "https://www.zhihu.com/creator/manage/creation/all",
+      "share_link": "https://www.zhihu.com/pin/2037940203382379703?page=video_pin&scene=share",
+      "external_id": "2037940203382379703",
+      "published_at": "2026-05-13T17:06:00+08:00",
+      "recorded_at": "2026-05-13T09:25:42.143Z",
+      "verified_by": "Zhihu public pin detail and creator/manage/creation/all single-row check",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.zhihu.lock.json",
+      "result_path": "/Users/baishangjituan/Documents/push/zhihu_20260513_publish_result.json",
+      "notes": [
+        "published_verified_2026-05-13T17:21:21+08:00: CDP endpoint 127.0.0.1:9223 was used against the already logged-in Chrome session without restarting Chrome. Duplicate guard checked the current campaign receipt, Zhihu profile videos, posts, and creator management before publishing; exact title/body were absent before submit. Video was uploaded from /tmp/zhihu-20260513-publish.mp4, the package-required vertical 3:4 cover was uploaded from /tmp/zhihu-20260513-cover-vertical-3x4.png and confirmed in the Zhihu cover crop dialog, title/body were inserted with real keyboard input, video tag was set to 含 AI 生成内容, original-video checkbox was selected, and public/profile pages verified exact title/body/status after publish.",
+        "cover_rule_satisfied: zhihu.md and platform-upload-map.md required cover-vertical-3x4.png for Zhihu; this exact file was used, with sha256 1afdbb76bec19af480e287e87a4e133d980648c7e36a5e8dfa9480a0fb093f2a. The public page displayed the accepted platform-hosted cover image https://picx.zhimg.com/v2-909f659d97da12b0102d025e159bd609.png.",
+        "zhihu_thread_scope: this entry records only the Zhihu publish task in this thread; non-Zhihu platform work was intentionally ignored.",
+        "feishu_notification_not_sent_by_current_thread: this Zhihu-only thread did not receive a separate third-party notification instruction; local receipt was recorded after public verification.",
+        "2026-05-13T09:25:42.143Z: published Zhihu video via Chrome DevTools/CDP using package-required vertical cover; duplicate cleanup retained 2037940203382379703 and deleted newer accidental duplicate 2037942277113393304; manager page verified one remaining matching row.",
+        "feishu_notified_2026-05-13T17:30:08+08:00: sent Zhihu publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f7004ca74e0b3b56e11a6f68db"
+      ],
+      "verified_fields": {
+        "initialization": "initialized_current_thread_before_publish: latest Zhihu package locked before duplicate guard and browser publish; no previous zhihu receipt existed for this campaign.",
+        "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+        "source_package_form": "video_answer",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platforms/zhihu.md",
+        "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-13-ai-employee-receipt-lock-before-republish-answer-001.md",
+        "final_verify": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/final-verify.json",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4",
+        "uploaded_video_path": "/tmp/zhihu-20260513-publish.mp4",
+        "uploaded_video_sha256": "69df58c77e53be58c1f67ab7f14c635dd437bcdc8b64b8c2f867b932b65bb31c",
+        "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png",
+        "uploaded_cover_path": "/tmp/zhihu-20260513-cover-vertical-3x4.png",
+        "uploaded_cover_sha256": "1afdbb76bec19af480e287e87a4e133d980648c7e36a5e8dfa9480a0fb093f2a",
+        "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png",
+        "account": "智能大陈",
+        "actual_publish_form": "知乎上传视频入口 / video_pin；内容包未提供目标问题 URL，因此未进入具体问题回答页",
+        "platform_content_type": "video_pin",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platform-upload-map.md",
+        "automation_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-13-ai-employee-receipt-lock-before-republish.yaml",
+        "cover_mode": "custom_vertical_3x4_uploaded_and_public_pin_image_verified",
+        "platform_cover_url": "https://picx.zhimg.com/v2-909f659d97da12b0102d025e159bd609.png",
+        "video_tag": "含 AI 生成内容",
+        "original_video_checked": true,
+        "duplicate_guard": "passed before publishing: current campaign receipt had no blocking zhihu status and Zhihu profile videos/posts/creator management did not contain the exact title or body before submit",
+        "automation_route": "Chrome DevTools/CDP attached Playwright on http://127.0.0.1:9223; no logged-in Chrome restart; OpenCLI/BrowserBridge was not used",
+        "pre_submit_title_readback": "为什么缺证据时，不能用“再发一次”来补救？",
+        "pre_submit_body_readback": "因为重复发布会制造新问题。真正要补的是公开链接、状态词、发布时间和数据证据。先查回执和发布锁，再决定下一步，才不会把复盘变成猜测。",
+        "pre_submit_video_check": "upload-video draft showed 上传成功, 00:15 duration, package-required cover input value C:\\fakepath\\zhihu-20260513-cover-vertical-3x4.png, publish button enabled, original-video checkbox checked",
+        "status_text": "发布于2026-05-13 17:06",
+        "profile_row_context": "个人视频页显示：为什么缺证据时，不能用“再发一次”来补救？ / 发布于2026-05-13 17:06 / 含 AI 生成内容；视频数显示 8",
+        "public_page_context": "公开 pin 页标题和正文均命中，页面显示 00:15、发布于2026-05-13 17:06、含 AI 生成内容，公开视频封面图源为 v2-909f659d97da12b0102d025e159bd609.png",
+        "screenshots": {
+          "after_video_upload": "/Users/baishangjituan/Documents/push/zhihu-after-video-upload-20260513.png",
+          "fields_filled": "/Users/baishangjituan/Documents/push/zhihu-fields-filled-20260513.png",
+          "cover_modal": "/Users/baishangjituan/Documents/push/zhihu-cover-modal-second-before-confirm-20260513.png",
+          "cover_applied": "/Users/baishangjituan/Documents/push/zhihu-cover-confirmed-second-20260513.png",
+          "pre_submit": "/Users/baishangjituan/Documents/push/zhihu-pre-submit-20260513.png",
+          "after_submit": "/Users/baishangjituan/Documents/push/zhihu-after-submit-click-20260513.png",
+          "retained_public_detail": "/Users/baishangjituan/Documents/push/zhihu-older-duplicate-detail-20260513.png",
+          "deleted_duplicate_confirm": "/Users/baishangjituan/Documents/push/zhihu-delete-duplicate-confirm-20260513.png",
+          "manager_after_dedupe": "/Users/baishangjituan/Documents/push/zhihu-manager-after-dedupe-20260513.png"
+        },
+        "public_pin_image_src": "https://picx.zhimg.com/v2-909f659d97da12b0102d025e159bd609.png",
+        "public_pin_image_dimensions": "1080x1440",
+        "ai_generation_tag": "含 AI 生成内容",
+        "original_video_switch": true,
+        "public_detail_context": "公开页显示标题、正文、00:15、发布于2026-05-13 17:06、含 AI 生成内容；封面图自然尺寸 1080x1440。",
+        "manager_list_context": "内容管理仅保留一条匹配当前文案的视频，链接为 https://www.zhihu.com/pin/2037940203382379703，显示发布于 16 分钟前。",
+        "duplicate_cleanup": {
+          "duplicate_detected": true,
+          "deleted_duplicate_url": "https://www.zhihu.com/pin/2037942277113393304",
+          "retained_url": "https://www.zhihu.com/pin/2037940203382379703",
+          "verification": "creator/manage/creation/all after deletion reports one unique matching pin link."
+        }
+      },
+      "public_url": "https://www.zhihu.com/pin/2037940203382379703",
+      "submitted_at": "2026-05-13T17:06:00+08:00",
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6f7004ca74e0b3b56e11a6f68db",
+        "sent_at": "2026-05-13T17:30:08+08:00",
+        "method": "lark-cli im +messages-send --as bot",
+        "summary": "Sent per-platform Zhihu publish completion notification with retained public URL and duplicate cleanup note."
+      }
+    },
+    "toutiao": {
+      "campaign_id": "2026-05-13-ai-employee-receipt-lock-before-republish",
+      "platform_id": "toutiao",
+      "actor": "Codex Chrome DevTools/CDP publisher",
+      "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
+      "status": "under_review",
+      "title": "审核中或缺链接时，AI员工该不该再发布一次？",
+      "description": "不应该直接重发。先查回执和状态词，确认是否已有记录，再决定是等待推进、补公开链接，还是补数据证据。",
+      "current_url": "https://mp.toutiao.com/profile_v4/xigua/small-video",
+      "management_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
+      "share_link": null,
+      "external_id": null,
+      "submitted_at": "2026-05-13T16:46:00+08:00",
+      "published_at": "2026-05-13T16:46:00+08:00",
+      "recorded_at": "2026-05-13T16:47:33+08:00",
+      "verified_by": "Toutiao 作品管理 exact-title row and status text",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.toutiao.lock.json",
+      "result_path": "/Users/baishangjituan/Documents/push/toutiao_publish_result_20260513.json",
+      "verified_fields": {
+        "status_text": "审核中",
+        "publish_success_text": "全部发表成功",
+        "manager_list_context": "作品管理显示：00:15 / 审核中或缺链接时，AI员工该不该再发布一次？ / 05-13 16:46 / 审核中",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platforms/toutiao.md",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platform-upload-map.md",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4",
+        "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png",
+        "fallback_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png",
+        "cover_path_used": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png",
+        "cover_mode": "custom_vertical_3x4_uploaded_and_platform_accepted_edit_replace_state",
+        "cover_sha256": "1afdbb76bec19af480e287e87a4e133d980648c7e36a5e8dfa9480a0fb093f2a",
+        "cover_readability_passed": true,
+        "title_word_limit": "21/30",
+        "pre_submit_title_readback": "审核中或缺链接时，AI员工该不该再发布一次？",
+        "ai_declaration_checked": true,
+        "video_generate_article_checked": false,
+        "automation_route": "Chrome DevTools/CDP raw protocol on http://127.0.0.1:9223 with DOM.setFileInputFiles for local video and image-only cover inputs",
+        "manager_row_time": "05-13 16:46",
+        "manager_row_status_text": "审核中",
+        "screenshots": {
+          "duplicate_guard_before": "/Users/baishangjituan/Documents/push/toutiao-manager-before-20260513.png",
+          "after_video_upload": "/Users/baishangjituan/Documents/push/toutiao-after-video-upload-20260513.png",
+          "cover_editor": "/Users/baishangjituan/Documents/push/toutiao-cover-editor-20260513.png",
+          "cover_applied": "/Users/baishangjituan/Documents/push/toutiao-cover-applied-20260513.png",
+          "pre_submit": "/Users/baishangjituan/Documents/push/toutiao-pre-submit-continuous-20260513.png",
+          "after_publish": "/Users/baishangjituan/Documents/push/toutiao-after-publish-click-20260513.png",
+          "manager_check": "/Users/baishangjituan/Documents/push/toutiao-manager-verified-20260513.png"
+        }
+      },
+      "notes": [
+        "2026-05-13T16:47:33+08:00: duplicate guard checked local receipt and Toutiao 作品管理 before publishing; no current title existed. Uploaded video through CDP file input, uploaded the package-required cover-vertical-3x4.png through image-only file input, confirmed cover editor and edit/replace state, set exact title, kept 生成图文 unchecked, selected AI生成, clicked 发布, saw 全部发表成功, and verified the exact title in 作品管理 as 审核中 at 05-13 16:46.",
+        "feishu_notified_2026-05-13T16:48:01+08:00: sent per-platform Toutiao publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f77e2d47480c3bce63d878d08b."
+      ],
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6f77e2d47480c3bce63d878d08b",
+        "sent_at": "2026-05-13T16:48:01+08:00"
+      }
+    },
+    "douyin": {
+      "campaign_id": "2026-05-13-ai-employee-receipt-lock-before-republish",
+      "platform_id": "douyin",
+      "actor": "Codex Chrome DevTools/CDP publisher",
+      "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
+      "status": "under_review",
+      "title": "缺证据，别重复发布",
+      "description": "机器人小马看到缺链接就想再点一次发布，大陈当场拦住：先查回执。审核中不是失败，缺证据先补证据，别用重复发布补不确定。#AI员工 #内容运营 #发布复盘",
+      "current_url": "https://creator.douyin.com/creator-micro/content/manage?enter_from=publish",
+      "management_url": "https://creator.douyin.com/creator-micro/content/manage?enter_from=publish",
+      "share_link": "https://www.iesdouyin.com/share/video/7639296166236294441/",
+      "external_id": "7639296166236294441",
+      "submitted_at": "2026-05-13T16:50:52+08:00",
+      "published_at": "2026-05-13T16:50:52+08:00",
+      "recorded_at": "2026-05-13T16:51:49+08:00",
+      "verified_by": "Douyin 作品管理 work-list API exact-title and description-lead match in 全部作品/status=0 and 审核中/status=2 via Chrome DevTools/CDP",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.douyin.lock.json",
+      "result_path": "/Users/baishangjituan/Documents/push/douyin_publish_result_20260513_receipt_lock_before_republish.json",
+      "verified_fields": {
+        "status_text": "审核中",
+        "status_value": 141,
+        "publish_success_text": "发布成功",
+        "aweme_id": "7639296166236294441",
+        "item_id": "7639296166236294000",
+        "share_link": "https://www.iesdouyin.com/share/video/7639296166236294441/",
+        "create_time": 1778662252,
+        "create_time_iso": "2026-05-13T16:50:52+08:00",
+        "duration_ms": 15893,
+        "title_readback": "缺证据，别重复发布",
+        "description_lead_match": "机器人小马看到缺链接",
+        "caption_readback": "机器人小马看到缺链接就想再点一次发布，大陈当场拦住：先查回执。审核中不是失败，缺证据先补证据，别用重复发布补不确定。#AI员工 #内容运营 #发布复盘",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platforms/douyin.md",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platform-upload-map.md",
+        "yaml_config": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-13-ai-employee-receipt-lock-before-republish.yaml",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4",
+        "uploaded_video_path": "/tmp/douyin-0513.mp4",
+        "uploaded_video_sha256": "69df58c77e53be58c1f67ab7f14c635dd437bcdc8b64b8c2f867b932b65bb31c",
+        "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png",
+        "uploaded_cover_path": "/tmp/douyin-0513-cover-3x4.png",
+        "required_cover_sha256": "1afdbb76bec19af480e287e87a4e133d980648c7e36a5e8dfa9480a0fb093f2a",
+        "horizontal_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png",
+        "uploaded_horizontal_cover_path": "/tmp/douyin-0513-cover-4x3.png",
+        "horizontal_cover_sha256": "7f69c02880d92fc89d462f4276f595d1045a256d72cb3a845fb1e6c86a53903e",
+        "cover_uri": "tos-cn-i-dy/ddc28704e9fd4b05a10faadac5477cca",
+        "horizontal_cover_uri": "tos-cn-i-dy/41d1afc96d5e4684af1d2c9f1f82fcde",
+        "cover_mode": "package_required_vertical_3x4_cover_uploaded; package_horizontal_4x3_cover_uploaded for Douyin dual-cover editor requirement",
+        "cover_detection": "封面检测通过 / 暂未发现封面低质问题",
+        "preflight": {
+          "has_video_ready": true,
+          "has_video_check_passed": true,
+          "has_cover_vertical": true,
+          "has_cover_horizontal": true,
+          "has_cover_effect_passed": true,
+          "has_cover_check_passed": true,
+          "has_cover_missing_warning": false,
+          "publish_button_enabled": true
+        },
+        "automation_route": "Chrome DevTools/CDP raw protocol on http://127.0.0.1:9223 with DOM.setFileInputFiles for video and cover inputs",
+        "screenshots": {
+          "vertical_cover_editor": "/tmp/douyin-0513-cover-editor-after-direct.png",
+          "horizontal_cover_editor": "/tmp/douyin-0513-horizontal-editor-after-direct.png",
+          "after_cover_complete": "/tmp/douyin-0513-after-cover-complete.png"
+        }
+      },
+      "notes": [
+        "2026-05-13T16:51:49+08:00: duplicate guard checked local receipt and Douyin 作品管理 work-list status=0/1/2 before publishing; no current title existed. Uploaded video through CDP file input, uploaded required cover-vertical-3x4.png and horizontal cover-horizontal-4x3.png through image file inputs, confirmed cover detection passed, clicked 发布, saw 发布成功, and verified the exact title/description lead in 作品管理 API as 审核中.",
+        "feishu_notified_2026-05-13T16:52:09+08:00: douyin under_review notification sent to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f77f55deca4b48b6f4a5ba83d0."
+      ],
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6f77f55deca4b48b6f4a5ba83d0",
+        "sent_at": "2026-05-13T16:52:09+08:00",
+        "message_type": "douyin_under_review"
+      }
+    },
+    "bilibili": {
+      "campaign_id": "2026-05-13-ai-employee-receipt-lock-before-republish",
+      "platform_id": "bilibili",
+      "actor": "Codex Chrome DevTools/CDP publisher",
+      "actor_session_id": "cdp-127.0.0.1:9222-current-thread",
+      "status": "published_verified_in_manager",
+      "title": "别用重复发布补不确定：大陈让机器人小马先查回执和状态词",
+      "description": "这条讲多平台发布后的重复风险：看不到链接或缺状态词时，不要直接再点一次发布。AI员工要先查回执、看状态词、锁住重复，再补证据。",
+      "current_url": "https://member.bilibili.com/platform/upload-manager/article",
+      "management_url": "https://member.bilibili.com/platform/upload-manager/article",
+      "share_link": "https://www.bilibili.com/video/BV1Tz5165Eag/",
+      "external_id": "BV1Tz5165Eag",
+      "submitted_at": "2026-05-13T17:13:56.143+08:00",
+      "published_at": "2026-05-13T17:13:56.143+08:00",
+      "recorded_at": "2026-05-13T17:13:56.143+08:00",
+      "verified_by": "Bilibili 稿件管理 exact-title row after CDP submit",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.bilibili.lock.json",
+      "result_path": "/Users/baishangjituan/Documents/push/bilibili_publish_result_20260513.json",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platforms/bilibili.md",
+      "final_verify": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/final-verify.json",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png",
+      "ai_declaration": "作者声明：该视频使用人工智能合成技术",
+      "category": "人工智能",
+      "tags": [
+        "AI员工",
+        "发布复盘",
+        "内容运营"
+      ],
+      "verification": {
+        "submit_status": "submitted_or_success_page",
+        "manager_row_text": "全部稿件 13 草稿 进行中 1 已通过 12 未通过 0 00:00:00 别用重复发布补不确定：大陈让机器人小马先查回执和状态词 2026年05月13日 17:13:43 转码完成 审核中 查询进度 编辑 0 0 0 0 0 0 0 00:00:16 别把全平台都判失败：大陈让机器人小马先分状态再复查 2026年05月12日 18:04:19 编辑 数据 0 0 0 0 0 0 0 00:00:16 等待不是失败：大陈让机器人小马先看状态再决定要不要重发 2026年05月11日 19:59:05 当前字幕: 1（含平台自动生成） 编辑 数据 74 0 0 0 0 0 0 00:00:16 发完不算交接：大陈让机器人小马把发布回执补清楚 2026年05月05日 13:30:35 当前字幕: 1（含平台自动生成） 编辑 数据 75 2 0 0 0 0 0 00:00:16 别凭感觉复盘：大陈让机器人小马先做三条同格式对照 2026年05月04日 14:50:59 当前字幕: 1（含平台自动生成） 编辑 数据 70 4 0 0 0 0 0 00:00:16 只发布不算复盘：大陈让机器人小马进数据中心抓指标 2026年05月03日 21:40:58 当前字幕: 1（含平台自动生成） 编辑 数据 75 3 0 0 0 0 0 00:00:16 视频发出去了，为什么还不算完成？大陈让机器人小马先写回 2026年05月02日 15:45:51 当前字幕: 1（含平台自动生成） 编辑 数据 75 2 0 0 0 0 0 00:00:16 机器人小马一看到异常就要重发，大陈为什么说先看状态词？ 2026年05月01日 17:24:42 当前字幕: 1（含平台自动生成） 编辑 数据 43 0 0 0 0 0 0 00:00:16 发布后发现封面或描述不对，为什么要先修旧条，而不是直接重发？ 2026年04月30日 14:43:21 当前字幕: 1（含平台自动生成） 编辑 数据 46 7 0 0 0 0 0 00:00:16 为什么总会把昨天内容发到今天？发前先锁当前批次，再做四项比对 2026年04月29日 18:38:39 当前字幕: 1（含平台自动生成） 编辑 数据 70 0 0 0 0 0 0 12下一页共2页 / 13个，跳转至 页",
+        "screenshot_path": "/Users/baishangjituan/Documents/push/bilibili-manager-verified-20260513.png",
+        "pre_submit": {
+          "title": "别用重复发布补不确定：大陈让机器人小马先查回执和状态词",
+          "description": "这条讲多平台发布后的重复风险：看不到链接或缺状态词时，不要直接再点一次发布。AI员工要先查回执、看状态词、锁住重复，再补证据。",
+          "category": "人工智能",
+          "tags": [
+            "AI员工",
+            "发布复盘",
+            "内容运营"
+          ],
+          "declaration": "含AI生成内容",
+          "cover": "url(\"https://archive.biliimg.com/bfs/archive/425a4da9e8e53d4c43140c77bb0f9da51d870479.jpg\")"
+        },
+        "network_events": [
+          {
+            "url": "https://api.bilibili.com/x/web-interface/nav",
+            "status": 200,
+            "requestId": "12342.3106",
+            "mimeType": "application/json"
+          },
+          {
+            "url": "https://member.bilibili.com/x/web/index/notify",
+            "status": 200,
+            "requestId": "12342.3138",
+            "mimeType": "application/json"
+          },
+          {
+            "url": "https://member.bilibili.com/x/web/archive/list/pre",
+            "status": 200,
+            "requestId": "12342.3222",
+            "mimeType": "application/json"
+          },
+          {
+            "url": "https://member.bilibili.com/x/material/up/check",
+            "status": 200,
+            "requestId": "12342.3223",
+            "mimeType": "application/json"
+          },
+          {
+            "url": "https://api.bilibili.com/x/msgfeed/unread?build=0&mobi_app=web",
+            "status": 200,
+            "requestId": "12342.3234",
+            "mimeType": "application/json"
+          },
+          {
+            "url": "https://api.bilibili.com/x/web-interface/nav",
+            "status": 200,
+            "requestId": "12342.3232",
+            "mimeType": "application/json"
+          },
+          {
+            "url": "https://member.bilibili.com/x/web/pagetip/list?page=2",
+            "status": 200,
+            "requestId": "12342.3242",
+            "mimeType": "application/json"
+          },
+          {
+            "url": "https://member.bilibili.com/x/web/feedback/newtags",
+            "status": 200,
+            "requestId": "12342.3244",
+            "mimeType": "application/json"
+          },
+          {
+            "url": "https://data.bilibili.com/log/web?0000141778663629973https%3A%2F%2Fmember.bilibili.com%2Fplatform%2Fupload-manager%2Farticle||333.885.0.0|1778663629973||1200x839|1|{%22b_nut_h%22:1778479200,%22lsid%22:%22BEEB4DEC_19E209D1F67%22,%22buvid_fp%22:%22ebec0b2043e56cd26c71822d1a476c5a%22,%22buvid4%22:%22CE7E5F41-8FED-5BB7-F360-007723329CBG74384-026051114-8kJoHGmovKATfTio7Sc2cQ%3D%3D%22,%22bsource_origin%22:%22empty%22,%22share_source_origin%22:%22empty%22}|{}|BB2F1EF3-18410-DAD8-10710B-6F7D9C55A4D667439infoc|zh-CN|null|undefined",
+            "status": 200,
+            "requestId": "12342.3032",
+            "mimeType": "text/plain"
+          },
+          {
+            "url": "https://data.bilibili.com/log/web?0000171778663630007https%3A%2F%2Fmember.bilibili.com%2Fplatform%2Fupload-manager%2Farticle|333.885.selfDef.white_request||1778663630000|0|0|1200x839|1|{%22event%22:%22white_request%22,%22bsource%22:%22%22,%22b_nut_h%22:1778479200,%22lsid%22:%22BEEB4DEC_19E209D1F67%22,%22buvid_fp%22:%22ebec0b2043e56cd26c71822d1a476c5a%22,%22buvid4%22:%22CE7E5F41-8FED-5BB7-F360-007723329CBG74384-026051114-8kJoHGmovKATfTio7Sc2cQ%3D%3D%22,%22bsource_origin%22:%22empty%22,%22share_source_origin%22:%22empty%22}|{}||BB2F1EF3-18410-DAD8-10710B-6F7D9C55A4D667439infoc|zh-CN|null|1",
+            "status": 200,
+            "requestId": "12342.3043",
+            "mimeType": "text/plain"
+          },
+          {
+            "url": "https://data.bilibili.com/log/web?0133241778663630056https%3A%2F%2Fmember.bilibili.com%2Fplatform%2Fupload-manager%2Farticle|333.885.fp.risk||1778663630056|||1200x839|1|{%22cookieEnabled%22:1,%22userAgent%22:%22Mozilla%2F5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2010_15_7)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F147.0.0.0%20Safari%2F537.36%22,%22webdriver%22:0,%22language%22:%22zh-CN%22,%22colorDepth%22:24,%22deviceMemory%22:16,%22hardwareConcurrency%22:10,%22screenResolution%22:%221920%2C%2C1080%22,%22availableScreenResolution%22:%22970%2C%2C1920%22,%22timezoneOffset%22:-480,%22timezone%22:%22Asia%2FShanghai%22,%22sessionStorage%22:1,%22localStorage%22:1,%22indexedDb%22:1,%22addBehavior%22:0,%22openDatabase%22:0,%22cpuClass%22:%22not%20available%22,%22platform%22:%22MacIntel%22,%22plugins%22:%22PDF%20Viewer%2CPortable%20Document%20Format%2Capplication%2Fpdf%2Cpdf%2Ctext%2Fpdf%2Cpdf%2C%2CChrome%20PDF%20Viewer%2CPortable%20Document%20Format%2Capplication%2Fpdf%2Cpdf%2Ctext%2Fpdf%2Cpdf%2C%2CChromium%20PDF%20Viewer%2CPortable%20Document%20Format%2Capplication%2Fpdf%2Cpdf%2Ctext%2Fpdf%2Cpdf%2C%2CMicrosoft%20Edge%20PDF%20Viewer%2CPortable%20Document%20Format%2Capplication%2Fpdf%2Cpdf%2Ctext%2Fpdf%2Cpdf%2C%2CWebKit%20built-in%20PDF%2CPortable%20Document%20Format%2Capplication%2Fpdf%2Cpdf%2Ctext%2Fpdf%2Cpdf%22,%22canvas%22:%22EIwAAAAASUVORK5CYII%3D%22,%22webgl_str%22:%22%2F%2FRZ56kQAAAAZJREFUAwCYrf3wA5kB%2BgAAAABJRU5ErkJggg%3D%3D%22,%22webgl_params%22:%22extensions%3AANGLE_instanced_arrays%3BEXT_blend_minmax%3BEXT_clip_control%3BEXT_color_buffer_half_float%3BEXT_depth_clamp%3BEXT_disjoint_timer_query%3BEXT_float_blend%3BEXT_frag_depth%3BEXT_polygon_offset_clamp%3BEXT_shader_texture_lod%3BEXT_texture_compression_bptc%3BEXT_texture_compression_rgtc%3BEXT_texture_filter_anisotropic%3BEXT_texture_mirror_clamp_to_edge%3BEXT_sRGB%3BKHR_parallel_shader_compile%3BOES_element_index_uint%3BOES_fbo_render_mipmap%3BOES_standard_derivatives%3BOES_texture_float%3BOES_texture_float_linear%3BOES_texture_half_float%3BOES_texture_half_float_linear%3BOES_vertex_array_object%3BWEBGL_blend_func_extended%3BWEBGL_color_buffer_float%3BWEBGL_compressed_texture_astc%3BWEBGL_compressed_texture_etc%3BWEBGL_compressed_texture_etc1%3BWEBGL_compressed_texture_pvrtc%3BWEBGL_compressed_texture_s3tc%3BWEBGL_compressed_texture_s3tc_srgb%3BWEBGL_debug_renderer_info%3BWEBGL_debug_shaders%3BWEBGL_depth_texture%3BWEBGL_draw_buffers%3BWEBGL_lose_context%3BWEBGL_multi_draw%3BWEBGL_polygon_mode%2C%2Cwebgl%20aliased%20line%20width%20range%3A%5B1%2C%201%5D%2C%2Cwebgl%20aliased%20point%20size%20range%3A%5B1%2C%20511%5D%2C%2Cwebgl%20alpha%20bits%3A8%2C%2Cwebgl%20antialiasing%3Ayes%2C%2Cwebgl%20blue%20bits%3A8%2C%2Cwebgl%20depth%20bits%3A24%2C%2Cwebgl%20green%20bits%3A8%2C%2Cwebgl%20max%20anisotropy%3A16%2C%2Cwebgl%20max%20combined%20texture%20image%20units%3A32%2C%2Cwebgl%20max%20cube%20map%20texture%20size%3A16384%2C%2Cwebgl%20max%20fragment%20uniform%20vectors%3A1024%2C%2Cwebgl%20max%20render%20buffer%20size%3A16384%2C%2Cwebgl%20max%20texture%20image%20units%3A16%2C%2Cwebgl%20max%20texture%20size%3A16384%2C%2Cwebgl%20max%20varying%20vectors%3A30%2C%2Cwebgl%20max%20vertex%20attribs%3A16%2C%2Cwebgl%20max%20vertex%20texture%20image%20units%3A16%2C%2Cwebgl%20max%20vertex%20uniform%20vectors%3A1024%2C%2Cwebgl%20max%20viewport%20dims%3A%5B16384%2C%2016384%5D%2C%2Cwebgl%20red%20bits%3A8%2C%2Cwebgl%20renderer%3AWebKit%20WebGL%2C%2Cwebgl%20shading%20language%20version%3AWebGL%20GLSL%20ES%201.0%20(OpenGL%20ES%20GLSL%20ES%201.0%20Chromium)%2C%2Cwebgl%20stencil%20bits%3A0%2C%2Cwebgl%20vendor%3AWebKit%2C%2Cwebgl%20version%3AWebGL%201.0%20(OpenGL%20ES%202.0%20Chromium)%2C%2Cwebgl%20unmasked%20vendor%3AGoogle%20Inc.%20(Apple)%2C%2Cwebgl%20unmasked%20renderer%3AANGLE%20(Apple%2C%20ANGLE%20Metal%20Renderer%3A%20Apple%20M4%2C%20Unspecified%20Version)%2C%2Cwebgl%20vertex%20shader%20high%20float%20precision%3A23%2C%2Cwebgl%20vertex%20shader%20high%20float%20precision%20rangeMin%3A127%2C%2Cwebgl%20vertex%20shader%20high%20float%20precision%20rangeMax%3A127%2C%2Cwebgl%20vertex%20shader%20medium%20float%20precision%3A23%2C%2Cwebgl%20vertex%20shader%20medium%20float%20precision%20rangeMin%3A127%2C%2Cwebgl%20vertex%20shader%20medium%20float%20precision%20rangeMax%3A127%2C%2Cwebgl%20vertex%20shader%20low%20float%20precision%3A23%2C%2Cwebgl%20vertex%20shader%20low%20float%20precision%20rangeMin%3A127%2C%2Cwebgl%20vertex%20shader%20low%20float%20precision%20rangeMax%3A127%2C%2Cwebgl%20fragment%20shader%20high%20float%20precision%3A23%2C%2Cwebgl%20fragment%20shader%20high%20float%20precision%20rangeMin%3A127%2C%2Cwebgl%20fragment%20shader%20high%20float%20precision%20rangeMax%3A127%2C%2Cwebgl%20fragment%20shader%20medium%20float%20precision%3A23%2C%2Cwebgl%20fragment%20shader%20medium%20float%20precision%20rangeMin%3A127%2C%2Cwebgl%20fragment%20shader%20medium%20float%20precision%20rangeMax%3A127%2C%2Cwebgl%20fragment%20shader%20low%20float%20precision%3A23%2C%2Cwebgl%20fragment%20shader%20low%20float%20precision%20rangeMin%3A127%2C%2Cwebgl%20fragment%20shader%20low%20float%20precision%20rangeMax%3A127%2C%2Cwebgl%20vertex%20shader%20high%20int%20precision%3A0%2C%2Cwebgl%20vertex%20shader%20high%20int%20precision%20rangeMin%3A31%2C%2Cwebgl%20vertex%20shader%20high%20int%20precision%20rangeMax%3A30%2C%2Cwebgl%20vertex%20shader%20medium%20int%20precision%3A0%2C%2Cwebgl%20vertex%20shader%20medium%20int%20precision%20rangeMin%3A31%2C%2Cwebgl%20vertex%20shader%20medium%20int%20precision%20rangeMax%3A30%2C%2Cwebgl%20vertex%20shader%20low%20int%20precision%3A0%2C%2Cwebgl%20vertex%20shader%20low%20int%20precision%20rangeMin%3A31%2C%2Cwebgl%20vertex%20shader%20low%20int%20precision%20rangeMax%3A30%2C%2Cwebgl%20fragment%20shader%20high%20int%20precision%3A0%2C%2Cwebgl%20fragment%20shader%20high%20int%20precision%20rangeMin%3A31%2C%2Cwebgl%20fragment%20shader%20high%20int%20precision%20rangeMax%3A30%2C%2Cwebgl%20fragment%20shader%20medium%20int%20precision%3A0%2C%2Cwebgl%20fragment%20shader%20medium%20int%20precision%20rangeMin%3A31%2C%2Cwebgl%20fragment%20shader%20medium%20int%20precision%20rangeMax%3A30%2C%2Cwebgl%20fragment%20shader%20low%20int%20precision%3A0%2C%2Cwebgl%20fragment%20shader%20low%20int%20precision%20rangeMin%3A31%2C%2Cwebgl%20fragment%20shader%20low%20int%20precision%20rangeMax%3A30%22,%22webglVendorAndRenderer%22:%22Google%20Inc.%20(Apple)~ANGLE%20(Apple%2C%20ANGLE%20Metal%20Renderer%3A%20Apple%20M4%2C%20Unspecified%20Version)%22,%22hasLiedLanguages%22:0,%22hasLiedResolution%22:0,%22hasLiedOs%22:0,%22hasLiedBrowser%22:0,%22touchSupport%22:%220%2C%2C0%2C%2C0%22,%22fonts%22:%22Andale%20Mono%2C%2CArial%2C%2CArial%20Black%2C%2CArial%20Hebrew%2C%2CArial%20Narrow%2C%2CArial%20Rounded%20MT%20Bold%2C%2CArial%20Unicode%20MS%2C%2CComic%20Sans%20MS%2C%2CCourier%2C%2CCourier%20New%2C%2CGeneva%2C%2CGeorgia%2C%2CHelvetica%2C%2CHelvetica%20Neue%2C%2CImpact%2C%2CLUCIDA%20GRANDE%2C%2CMicrosoft%20Sans%20Serif%2C%2CMonaco%2C%2CPalatino%2C%2CTahoma%2C%2CTimes%2C%2CTimes%20New%20Roman%2C%2CTrebuchet%20MS%2C%2CVerdana%2C%2CWingdings%2C%2CWingdings%202%2C%2CWingdings%203%22,%22audio%22:%22124.04348155876505%22,%22b_nut_h%22:1778479200,%22lsid%22:%22BEEB4DEC_19E209D1F67%22,%22buvid_fp%22:%22ebec0b2043e56cd26c71822d1a476c5a%22,%22buvid4%22:%22CE7E5F41-8FED-5BB7-F360-007723329CBG74384-026051114-8kJoHGmovKATfTio7Sc2cQ%3D%3D%22,%22bsource_origin%22:%22empty%22,%22share_source_origin%22:%22empty%22}|{}||BB2F1EF3-18410-DAD8-10710B-6F7D9C55A4D667439infoc|zh-CN|null|0",
+            "status": 200,
+            "requestId": "12342.3045",
+            "mimeType": "text/plain"
+          },
+          {
+            "url": "https://data.bilibili.com/log/web?0000171778663630318https%3A%2F%2Fmember.bilibili.com%2Fplatform%2Fupload-manager%2Farticle|333.885.selfDef.before_route_report||1778663630000|0|0|1200x839|1|{%22event%22:%22before_route_report%22,%22bsource%22:%22%22,%22b_nut_h%22:1778479200,%22lsid%22:%22BEEB4DEC_19E209D1F67%22,%22buvid_fp%22:%22ebec0b2043e56cd26c71822d1a476c5a%22,%22buvid4%22:%22CE7E5F41-8FED-5BB7-F360-007723329CBG74384-026051114-8kJoHGmovKATfTio7Sc2cQ%3D%3D%22,%22bsource_origin%22:%22empty%22,%22share_source_origin%22:%22empty%22}|{}||BB2F1EF3-18410-DAD8-10710B-6F7D9C55A4D667439infoc|zh-CN|null|1",
+            "status": 200,
+            "requestId": "12342.3049",
+            "mimeType": "text/plain"
+          },
+          {
+            "url": "https://data.bilibili.com/log/web?0000171778663630317https%3A%2F%2Fmember.bilibili.com%2Fplatform%2Fupload-manager%2Farticle|333.885.selfDef.white_request_success||1778663630000|0|0|1200x839|1|{%22event%22:%22white_request_success%22,%22value%22:309,%22bsource%22:%22%22,%22b_nut_h%22:1778479200,%22lsid%22:%22BEEB4DEC_19E209D1F67%22,%22buvid_fp%22:%22ebec0b2043e56cd26c71822d1a476c5a%22,%22buvid4%22:%22CE7E5F41-8FED-5BB7-F360-007723329CBG74384-026051114-8kJoHGmovKATfTio7Sc2cQ%3D%3D%22,%22bsource_origin%22:%22empty%22,%22share_source_origin%22:%22empty%22}|{}||BB2F1EF3-18410-DAD8-10710B-6F7D9C55A4D667439infoc|zh-CN|null|1",
+            "status": 200,
+            "requestId": "12342.3048",
+            "mimeType": "text/plain"
+          },
+          {
+            "url": "https://data.bilibili.com/log/web?0000171778663630322https%3A%2F%2Fmember.bilibili.com%2Fplatform%2Fupload-manager%2Farticle|333.885.selfDef.before_route_success||1778663630000|0|0|1200x839|1|{%22event%22:%22before_route_success%22,%22value%22:4,%22bsource%22:%22%22,%22b_nut_h%22:1778479200,%22lsid%22:%22BEEB4DEC_19E209D1F67%22,%22buvid_fp%22:%22ebec0b2043e56cd26c71822d1a476c5a%22,%22buvid4%22:%22CE7E5F41-8FED-5BB7-F360-007723329CBG74384-026051114-8kJoHGmovKATfTio7Sc2cQ%3D%3D%22,%22bsource_origin%22:%22empty%22,%22share_source_origin%22:%22empty%22}|{}||BB2F1EF3-18410-DAD8-10710B-6F7D9C55A4D667439infoc|zh-CN|null|1",
+            "status": 200,
+            "requestId": "12342.3050",
+            "mimeType": "text/plain"
+          },
+          {
+            "url": "https://data.bilibili.com/log/web?0000171778663630322https%3A%2F%2Fmember.bilibili.com%2Fplatform%2Fupload-manager%2Farticle|333.885.selfDef.main_init_data_request||1778663630000|0|0|1200x839|1|{%22event%22:%22main_init_data_request%22,%22bsource%22:%22%22,%22b_nut_h%22:1778479200,%22lsid%22:%22BEEB4DEC_19E209D1F67%22,%22buvid_fp%22:%22ebec0b2043e56cd26c71822d1a476c5a%22,%22buvid4%22:%22CE7E5F41-8FED-5BB7-F360-007723329CBG74384-026051114-8kJoHGmovKATfTio7Sc2cQ%3D%3D%22,%22bsource_origin%22:%22empty%22,%22share_source_origin%22:%22empty%22}|{}||BB2F1EF3-18410-DAD8-10710B-6F7D9C55A4D667439infoc|zh-CN|null|1",
+            "status": 200,
+            "requestId": "12342.3051",
+            "mimeType": "text/plain"
+          },
+          {
+            "url": "https://data.bilibili.com/log/web?0000171778663630638https%3A%2F%2Fmember.bilibili.com%2Fplatform%2Fupload-manager%2Farticle|333.885.selfDef.main_init_data_request_success||1778663630000|0|0|1200x839|1|{%22event%22:%22main_init_data_request_success%22,%22value%22:316,%22bsource%22:%22%22,%22b_nut_h%22:1778479200,%22lsid%22:%22BEEB4DEC_19E209D1F67%22,%22buvid_fp%22:%22ebec0b2043e56cd26c71822d1a476c5a%22,%22buvid4%22:%22CE7E5F41-8FED-5BB7-F360-007723329CBG74384-026051114-8kJoHGmovKATfTio7Sc2cQ%3D%3D%22,%22bsource_origin%22:%22empty%22,%22share_source_origin%22:%22empty%22}|{}||BB2F1EF3-18410-DAD8-10710B-6F7D9C55A4D667439infoc|zh-CN|null|1",
+            "status": 200,
+            "requestId": "12342.3061",
+            "mimeType": "text/plain"
+          },
+          {
+            "url": "https://data.bilibili.com/log/web?0000171778663632723https%3A%2F%2Fmember.bilibili.com%2Fplatform%2Fupload-manager%2Farticle|333.885.selfDef.page_refer||1778663632000|0|0|1200x839|1|{%22event%22:%22page_refer%22,%22value%22:{%22document_refer%22:%22%22},%22bsource%22:%22%22,%22b_nut_h%22:1778479200,%22lsid%22:%22BEEB4DEC_19E209D1F67%22,%22buvid_fp%22:%22ebec0b2043e56cd26c71822d1a476c5a%22,%22buvid4%22:%22CE7E5F41-8FED-5BB7-F360-007723329CBG74384-026051114-8kJoHGmovKATfTio7Sc2cQ%3D%3D%22,%22bsource_origin%22:%22empty%22,%22share_source_origin%22:%22empty%22}|{}||BB2F1EF3-18410-DAD8-10710B-6F7D9C55A4D667439infoc|zh-CN|null|1",
+            "status": 200,
+            "requestId": "12342.3103",
+            "mimeType": "text/plain"
+          },
+          {
+            "url": "https://data.bilibili.com/log/web?0000171778663632733https%3A%2F%2Fmember.bilibili.com%2Fplatform%2Fupload-manager%2Farticle|333.885.selfDef.peanut_left_show||1778663632000|0|0|1200x839|1|{%22event%22:%22peanut_left_show%22,%22value%22:{%22tab_style%22:1,%22has_red_dot%22:1},%22bsource%22:%22%22,%22b_nut_h%22:1778479200,%22lsid%22:%22BEEB4DEC_19E209D1F67%22,%22buvid_fp%22:%22ebec0b2043e56cd26c71822d1a476c5a%22,%22buvid4%22:%22CE7E5F41-8FED-5BB7-F360-007723329CBG74384-026051114-8kJoHGmovKATfTio7Sc2cQ%3D%3D%22,%22bsource_origin%22:%22empty%22,%22share_source_origin%22:%22empty%22}|{}||BB2F1EF3-18410-DAD8-10710B-6F7D9C55A4D667439infoc|zh-CN|null|1",
+            "status": 200,
+            "requestId": "12342.3110",
+            "mimeType": "text/plain"
+          },
+          {
+            "url": "https://data.bilibili.com/log/web?0000171778663632756https%3A%2F%2Fmember.bilibili.com%2Fplatform%2Fupload-manager%2Farticle|333.885.selfDef.peanut_top_show||1778663632000|0|0|1200x839|1|{%22event%22:%22peanut_top_show%22,%22value%22:%22capsule%22,%22bsource%22:%22%22,%22b_nut_h%22:1778479200,%22lsid%22:%22BEEB4DEC_19E209D1F67%22,%22buvid_fp%22:%22ebec0b2043e56cd26c71822d1a476c5a%22,%22buvid4%22:%22CE7E5F41-8FED-5BB7-F360-007723329CBG74384-026051114-8kJoHGmovKATfTio7Sc2cQ%3D%3D%22,%22bsource_origin%22:%22empty%22,%22share_source_origin%22:%22empty%22}|{}||BB2F1EF3-18410-DAD8-10710B-6F7D9C55A4D667439infoc|zh-CN|null|1",
+            "status": 200,
+            "requestId": "12342.3125",
+            "mimeType": "text/plain"
+          },
+          {
+            "url": "https://data.bilibili.com/log/web?0000171778663632756https%3A%2F%2Fmember.bilibili.com%2Fplatform%2Fupload-manager%2Farticle|333.885.selfDef.home_message_show||1778663632000|0|0|1200x839|1|{%22event%22:%22home_message_show%22,%22value%22:%22calendar%22,%22bsource%22:%22%22,%22b_nut_h%22:1778479200,%22lsid%22:%22BEEB4DEC_19E209D1F67%22,%22buvid_fp%22:%22ebec0b2043e56cd26c71822d1a476c5a%22,%22buvid4%22:%22CE7E5F41-8FED-5BB7-F360-007723329CBG74384-026051114-8kJoHGmovKATfTio7Sc2cQ%3D%3D%22,%22bsource_origin%22:%22empty%22,%22share_source_origin%22:%22empty%22}|{}||BB2F1EF3-18410-DAD8-10710B-6F7D9C55A4D667439infoc|zh-CN|null|1",
+            "status": 200,
+            "requestId": "12342.3126",
+            "mimeType": "text/plain"
+          },
+          {
+            "url": "https://data.bilibili.com/log/web?0000171778663633018https%3A%2F%2Fmember.bilibili.com%2Fplatform%2Fupload-manager%2Farticle|333.885.selfDef.router_loaded||1778663633000|0|0|1200x839|1|{%22event%22:%22router_loaded%22,%22value%22:{%22url%22:%22//member.bilibili.com/upload-manager/article%22},%22bsource%22:%22%22,%22b_nut_h%22:1778479200,%22lsid%22:%22BEEB4DEC_19E209D1F67%22,%22buvid_fp%22:%22ebec0b2043e56cd26c71822d1a476c5a%22,%22buvid4%22:%22CE7E5F41-8FED-5BB7-F360-007723329CBG74384-026051114-8kJoHGmovKATfTio7Sc2cQ%3D%3D%22,%22bsource_origin%22:%22empty%22,%22share_source_origin%22:%22empty%22}|{}||BB2F1EF3-18410-DAD8-10710B-6F7D9C55A4D667439infoc|zh-CN|null|1",
+            "status": 200,
+            "requestId": "12342.3139",
+            "mimeType": "text/plain"
+          },
+          {
+            "url": "https://data.bilibili.com/log/web?0000171778663633018https%3A%2F%2Fmember.bilibili.com%2Fplatform%2Fupload-manager%2Farticle|333.885.selfDef.videoTab_series_show||1778663633000|0|0|1200x839|1|{%22event%22:%22videoTab_series_show%22,%22value%22:{%22reddot%22:0},%22bsource%22:%22%22,%22b_nut_h%22:1778479200,%22lsid%22:%22BEEB4DEC_19E209D1F67%22,%22buvid_fp%22:%22ebec0b2043e56cd26c71822d1a476c5a%22,%22buvid4%22:%22CE7E5F41-8FED-5BB7-F360-007723329CBG74384-026051114-8kJoHGmovKATfTio7Sc2cQ%3D%3D%22,%22bsource_origin%22:%22empty%22,%22share_source_origin%22:%22empty%22}|{}||BB2F1EF3-18410-DAD8-10710B-6F7D9C55A4D667439infoc|zh-CN|null|1",
+            "status": 200,
+            "requestId": "12342.3140",
+            "mimeType": "text/plain"
+          },
+          {
+            "url": "https://data.bilibili.com/log/web?0000171778663633039https%3A%2F%2Fmember.bilibili.com%2Fplatform%2Fupload-manager%2Farticle|333.885.selfDef.topBar||1778663633000|0|0|1200x839|1|{%22event%22:%22topBar%22,%22value%22:%22--%E8%A7%86%E9%A2%91%E7%AE%A1%E7%90%86%22,%22bsource%22:%22%22,%22b_nut_h%22:1778479200,%22lsid%22:%22BEEB4DEC_19E209D1F67%22,%22buvid_fp%22:%22ebec0b2043e56cd26c71822d1a476c5a%22,%22buvid4%22:%22CE7E5F41-8FED-5BB7-F360-007723329CBG74384-026051114-8kJoHGmovKATfTio7Sc2cQ%3D%3D%22,%22bsource_origin%22:%22empty%22,%22share_source_origin%22:%22empty%22}|{}||BB2F1EF3-18410-DAD8-10710B-6F7D9C55A4D667439infoc|zh-CN|null|1",
+            "status": 200,
+            "requestId": "12342.3225",
+            "mimeType": "text/plain"
+          },
+          {
+            "url": "https://data.bilibili.com/log/web?0000171778663633518https%3A%2F%2Fmember.bilibili.com%2Fplatform%2Fupload-manager%2Farticle|333.885.selfDef.videoTab_series_show||1778663633000|0|0|1200x839|1|{%22event%22:%22videoTab_series_show%22,%22value%22:{%22reddot%22:0},%22bsource%22:%22%22,%22b_nut_h%22:1778479200,%22lsid%22:%22BEEB4DEC_19E209D1F67%22,%22buvid_fp%22:%22ebec0b2043e56cd26c71822d1a476c5a%22,%22buvid4%22:%22CE7E5F41-8FED-5BB7-F360-007723329CBG74384-026051114-8kJoHGmovKATfTio7Sc2cQ%3D%3D%22,%22bsource_origin%22:%22empty%22,%22share_source_origin%22:%22empty%22}|{}||BB2F1EF3-18410-DAD8-10710B-6F7D9C55A4D667439infoc|zh-CN|null|1",
+            "status": 200,
+            "requestId": "12342.3228",
+            "mimeType": "text/plain"
+          },
+          {
+            "url": "https://data.bilibili.com/log/web?0000171778663633040https%3A%2F%2Fmember.bilibili.com%2Fplatform%2Fupload-manager%2Farticle|333.885.selfDef.contribute_show||1778663633000|0|0|1200x839|1|{%22event%22:%22contribute_show%22,%22value%22:%22%E8%A7%86%E9%A2%91%E7%AE%A1%E7%90%86%22,%22bsource%22:%22%22,%22b_nut_h%22:1778479200,%22lsid%22:%22BEEB4DEC_19E209D1F67%22,%22buvid_fp%22:%22ebec0b2043e56cd26c71822d1a476c5a%22,%22buvid4%22:%22CE7E5F41-8FED-5BB7-F360-007723329CBG74384-026051114-8kJoHGmovKATfTio7Sc2cQ%3D%3D%22,%22bsource_origin%22:%22empty%22,%22share_source_origin%22:%22empty%22}|{}||BB2F1EF3-18410-DAD8-10710B-6F7D9C55A4D667439infoc|zh-CN|null|1",
+            "status": 200,
+            "requestId": "12342.3226",
+            "mimeType": "text/plain"
+          }
+        ]
+      },
+      "verified_fields": {
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platforms/bilibili.md",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4",
+        "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png",
+        "cover_path_used": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png",
+        "cover_sha256": "7f69c02880d92fc89d462f4276f595d1045a256d72cb3a845fb1e6c86a53903e",
+        "cover_mode": "custom_horizontal_4x3_uploaded_and_platform_cdn_confirmed",
+        "cover_platform_url": "url(\"https://archive.biliimg.com/bfs/archive/425a4da9e8e53d4c43140c77bb0f9da51d870479.jpg\")",
+        "cover_readability_passed": true,
+        "category": "人工智能",
+        "tags": [
+          "AI员工",
+          "发布复盘",
+          "内容运营"
+        ],
+        "ai_declaration": "含AI生成内容",
+        "automation_route": "Chrome DevTools/CDP on http://127.0.0.1:9222; continued existing upload page; no re-upload after cover CDN confirmation"
+      },
+      "notes": [
+        "2026-05-13T17:13:56.143+08:00: Bilibili publish submitted through CDP after verifying package title, description, tags, AI declaration, completed video upload, and package-required horizontal 4:3 cover CDN state.",
+        "feishu_notified_2026-05-13T17:13:56.142+08:00: sent to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f7043f294bcc27fb401423b534"
+      ],
+      "feishu_notification": {
+        "ok": true,
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6f7043f294bcc27fb401423b534",
+        "output": "{\n  \"ok\": true,\n  \"identity\": \"bot\",\n  \"data\": {\n    \"chat_id\": \"oc_45f4f2c2f0a783f636969cd821179f40\",\n    \"create_time\": \"2026-05-13 17:13:56\",\n    \"message_id\": \"om_x100b6f7043f294bcc27fb401423b534\"\n  },\n  \"_notice\": {\n    \"update\": {\n      \"current\": \"1.0.19\",\n      \"latest\": \"1.0.28\",\n      \"message\": \"lark-cli 1.0.28 available, current 1.0.19\"\n    }\n  }\n}",
+        "sent_at": "2026-05-13T17:13:56.142+08:00"
+      }
+    }
+  },
+  "receipt_schema": {
+    "platform_record_required_fields": [
+      "actor",
+      "actor_session_id",
+      "status",
+      "verified_by",
+      "lock_path"
+    ],
+    "platform_record_time_fields": [
+      "submitted_at",
+      "published_at"
+    ],
+    "initial_receipt_required_state": {
+      "status": "not_published",
+      "receipts": {}
+    }
+  },
+  "lock_dir": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks",
+  "fingerprints": {
+    "title_hash": "1ebcb80d023a33ccbfa0bbcaff9b199f1c8201ae28b6b062c4c658574bf36433",
+    "body_core_hash": "4e44762ac73ffb9398ec273c0cd33277e8d2d8bd367910f0c05efe0f925cf07b",
+    "video_sha256": "69df58c77e53be58c1f67ab7f14c635dd437bcdc8b64b8c2f867b932b65bb31c",
+    "cover_sha256": "1afdbb76bec19af480e287e87a4e133d980648c7e36a5e8dfa9480a0fb093f2a",
+    "cover_3_4_sha256": "1afdbb76bec19af480e287e87a4e133d980648c7e36a5e8dfa9480a0fb093f2a",
+    "cover_4_3_sha256": "7f69c02880d92fc89d462f4276f595d1045a256d72cb3a845fb1e6c86a53903e",
+    "title_hash_basis": "sha256(sorted Hermes platform title strings, NFKC normalized)",
+    "body_core_hash_basis": "sha256(sorted Hermes platform description strings, NFKC normalized)",
+    "cover_sha256_basis": "canonical cover_3_4 vertical cover"
+  },
+  "created_at": "2026-05-13T09:13:30+08:00",
+  "updated_at": "2026-05-13T17:30:08+08:00",
+  "notes": [
+    "toutiao_submitted_2026-05-13T16:47:33+08:00: 审核中或缺链接时，AI员工该不该再发布一次？ verified in Toutiao 作品管理 as 审核中 at 05-13 16:46; cover=/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png; result_path=/Users/baishangjituan/Documents/push/toutiao_publish_result_20260513.json",
+    "feishu_notified_2026-05-13T16:48:01+08:00: toutiao under_review receipt sent to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f77e2d47480c3bce63d878d08b.",
+    "douyin_submitted_2026-05-13T16:51:49+08:00: 缺证据，别重复发布 verified in Douyin 作品管理 work-list API as 审核中 with aweme_id=7639296166236294441; required cover=/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png; horizontal backup cover also uploaded for Douyin dual-cover requirement; share_link=https://www.iesdouyin.com/share/video/7639296166236294441/; result_path=/Users/baishangjituan/Documents/push/douyin_publish_result_20260513_receipt_lock_before_republish.json",
+    "feishu_notified_2026-05-13T16:52:09+08:00: douyin under_review receipt sent to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f77f55deca4b48b6f4a5ba83d0.",
+    "bilibili_submitted_2026-05-13T17:13:56.143+08:00: 别用重复发布补不确定：大陈让机器人小马先查回执和状态词 verified in Bilibili 稿件管理; cover=/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png; result_path=/Users/baishangjituan/Documents/push/bilibili_publish_result_20260513.json",
+    "feishu_notified_2026-05-13T17:13:56.142+08:00: bilibili published_verified_in_manager receipt sent to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f7043f294bcc27fb401423b534.",
+    "zhihu_published_verified_2026-05-13T17:21:21+08:00: exact title/body verified on Zhihu profile videos and public pin; public_url=https://www.zhihu.com/pin/2037940203382379703; required vertical 3:4 cover was uploaded and confirmed.",
+    "zhihu_published_2026-05-13T09:25:42.143Z: retained public_url=https://www.zhihu.com/pin/2037940203382379703; cover=/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png; duplicate cleanup removed https://www.zhihu.com/pin/2037942277113393304.",
+    "zhihu_feishu_notified_2026-05-13T17:30:08+08:00: message_id=om_x100b6f7004ca74e0b3b56e11a6f68db"
+  ]
+}

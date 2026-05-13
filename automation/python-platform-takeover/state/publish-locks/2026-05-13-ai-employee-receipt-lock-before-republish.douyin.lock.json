@@ -1,0 +1,24 @@
+{
+  "campaign_id": "2026-05-13-ai-employee-receipt-lock-before-republish",
+  "platform_id": "douyin",
+  "status": "under_review",
+  "locked_at": "2026-05-13T16:51:49+08:00",
+  "lock_reason": "Douyin publish submitted and verified as under_review via Chrome DevTools/CDP work-list API; prevent duplicate publish attempts.",
+  "title": "缺证据，别重复发布",
+  "description_lead": "机器人小马看到缺链接",
+  "external_id": "7639296166236294441",
+  "share_link": "https://www.iesdouyin.com/share/video/7639296166236294441/",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-13-ai-employee-receipt-lock-before-republish.json",
+  "result_path": "/Users/baishangjituan/Documents/push/douyin_publish_result_20260513_receipt_lock_before_republish.json",
+  "verified_by": "Douyin 作品管理 work-list API exact-title and description-lead match in 全部作品/status=0 and 审核中/status=2 via Chrome DevTools/CDP",
+  "assets": {
+    "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4",
+    "video_sha256": "69df58c77e53be58c1f67ab7f14c635dd437bcdc8b64b8c2f867b932b65bb31c",
+    "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png",
+    "required_cover_sha256": "1afdbb76bec19af480e287e87a4e133d980648c7e36a5e8dfa9480a0fb093f2a",
+    "horizontal_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png",
+    "horizontal_cover_sha256": "7f69c02880d92fc89d462f4276f595d1045a256d72cb3a845fb1e6c86a53903e",
+    "cover_uri": "tos-cn-i-dy/ddc28704e9fd4b05a10faadac5477cca",
+    "horizontal_cover_uri": "tos-cn-i-dy/41d1afc96d5e4684af1d2c9f1f82fcde"
+  }
+}

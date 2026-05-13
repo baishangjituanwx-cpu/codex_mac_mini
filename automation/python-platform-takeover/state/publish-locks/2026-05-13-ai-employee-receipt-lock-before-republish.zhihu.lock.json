@@ -1,0 +1,29 @@
+{
+  "campaign_id": "2026-05-13-ai-employee-receipt-lock-before-republish",
+  "platform_id": "zhihu",
+  "status": "published",
+  "created_at": "2026-05-13T17:21:21+08:00",
+  "actor": "Codex Chrome DevTools/CDP publisher",
+  "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
+  "title": "为什么缺证据时，不能用“再发一次”来补救？",
+  "external_id": "2037940203382379703",
+  "current_url": "https://www.zhihu.com/pin/2037940203382379703",
+  "share_link": "https://www.zhihu.com/pin/2037940203382379703?page=video_pin&scene=share",
+  "verified_by": "Zhihu public pin page and profile videos exact-title/body verification",
+  "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png",
+  "required_cover_sha256": "1afdbb76bec19af480e287e87a4e133d980648c7e36a5e8dfa9480a0fb093f2a",
+  "updated_at": "2026-05-13T17:30:08+08:00",
+  "public_url": "https://www.zhihu.com/pin/2037940203382379703",
+  "management_url": "https://www.zhihu.com/creator/manage/creation/all",
+  "duplicate_cleanup": {
+    "deleted_duplicate_url": "https://www.zhihu.com/pin/2037942277113393304",
+    "retained_url": "https://www.zhihu.com/pin/2037940203382379703"
+  },
+  "feishu_notification": {
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "message_id": "om_x100b6f7004ca74e0b3b56e11a6f68db",
+    "sent_at": "2026-05-13T17:30:08+08:00",
+    "method": "lark-cli im +messages-send --as bot",
+    "summary": "Sent per-platform Zhihu publish completion notification with retained public URL and duplicate cleanup note."
+  }
+}

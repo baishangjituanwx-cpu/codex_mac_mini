@@ -1,7 +1,7 @@
 {
   "campaign_id": "2026-05-12-ai-employee-status-split-before-judgment",
   "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
-  "status": "baijiahao_published",
+  "status": "douyin_under_review",
   "package_status": "ready_for_platform_publishing",
   "lock_dir": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks",
   "fingerprints": {
@@ -292,9 +292,132 @@
       "notes": [
         "2026-05-12T18:32:11+08:00: duplicate guard checked Baijiahao 作品管理 before upload and did not find this exact title; video upload succeeded, horizontal 4:3 local cover was uploaded and accepted as 16:9 horizontal preview, title was set, 创作声明 was set to 含AI生成内容, 发布 returned 视频发布成功 / 提交成功，正在审核中, and 作品管理 verified the exact title row as 已发布 at 2026-05-12 18:30:54."
       ]
+    },
+    "douyin": {
+      "campaign_id": "2026-05-12-ai-employee-status-split-before-judgment",
+      "platform_id": "douyin",
+      "actor": "Codex Chrome DevTools/CDP publisher",
+      "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
+      "status": "under_review",
+      "title": "别把全平台都判失败",
+      "description": "机器人小马一看到列表混乱就想全标失败，大陈当场叫停：先分状态，再复查。AI员工不是凭感觉判断，是先把已发布、审核中、待核验分清楚。#AI员工 #内容运营 #发布复盘",
+      "current_url": "https://creator.douyin.com/creator-micro/content/manage?enter_from=publish",
+      "management_url": "https://creator.douyin.com/creator-micro/content/manage?enter_from=publish",
+      "share_link": "https://www.iesdouyin.com/share/video/7639280682681912610/",
+      "external_id": "7639280682681912610",
+      "submitted_at": "2026-05-13T15:50:45+08:00",
+      "published_at": "2026-05-13T15:50:45+08:00",
+      "recorded_at": "2026-05-13T15:51:47+08:00",
+      "verified_by": "Douyin 作品管理 work-list API exact-title and description-lead match in 全部作品/status=0 and 审核中/status=2 via Chrome DevTools/CDP",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.douyin.lock.json",
+      "result_path": "/Users/baishangjituan/Documents/push/douyin_publish_result_20260513.json",
+      "verified_fields": {
+        "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package/platforms/douyin.md",
+        "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package/platform-upload-map.md",
+        "automation_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-12-ai-employee-status-split-before-judgment.yaml",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment-publish.mp4",
+        "uploaded_video_path": "/tmp/douyin-0512.mp4",
+        "vertical_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-vertical-3x4.png",
+        "horizontal_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-horizontal-4x3.png",
+        "uploaded_vertical_cover_path": "/tmp/douyin-0512-cover-3x4.png",
+        "uploaded_horizontal_cover_path": "/tmp/douyin-0512-cover-4x3.png",
+        "cover_mode": "custom_vertical_3x4_and_horizontal_4x3_uploaded_from_content_package",
+        "cover_uri": "tos-cn-i-dy/e1241d813f6f4f7e891b58a0c41ba10c",
+        "horizontal_cover_uri": "tos-cn-i-dy/a0a99d7754554611b4a65ba2d9282d7c",
+        "duration_ms": 15893,
+        "aweme_id": "7639280682681912610",
+        "item_id": 7639280682681912000,
+        "status_value": 141,
+        "manager_status_param_match": [
+          "0",
+          "2"
+        ],
+        "manager_row_status_text": "审核中",
+        "manager_create_time": 1778658645,
+        "manager_create_time_iso": "2026-05-13T15:50:45+08:00",
+        "pre_submit_title_readback": "别把全平台都判失败",
+        "pre_submit_description_readback": "机器人小马一看到列表混乱就想全标失败，大陈当场叫停：先分状态，再复查。AI员工不是凭感觉判断，是先把已发布、审核中、待核验分清楚。#AI员工 #内容运营 #发布复盘",
+        "video_quick_detection": "retried once and failed because platform reported current detector crowding; publish button remained enabled",
+        "cover_detection": "封面效果检测通过 / 封面检测通过 / 暂未发现封面低质问题",
+        "automation_route": "Chrome DevTools/CDP raw protocol on http://127.0.0.1:9223 against already logged-in Chrome; native short-path file chooser fallback was used only for cover upload after CDP file-input injection was not accepted by the cover editor",
+        "duplicate_guard": "passed before publishing: Douyin work-list status 0/1/2 did not contain the exact title or description lead for this campaign",
+        "screenshots": {
+          "horizontal_cover_selected": "/tmp/douyin-horizontal-selected-check.png",
+          "pre_submit_cover_check": "/tmp/douyin-main-cover-missing.png",
+          "manager_check": "/tmp/douyin-0512-publish-success-manage.png"
+        }
+      },
+      "notes": [
+        "2026-05-13T15:51:47+08:00: duplicate guard checked Douyin 作品管理 before publishing and found no same-campaign item; the existing draft had the correct video/title/description, custom vertical 3:4 cover and horizontal 4:3 cover were uploaded and selected, cover detection passed, video quick detection retried but failed due platform crowding rather than content risk, 发布 was clicked after explicit user confirmation, and work-list API verified the exact title/lead as 审核中 with aweme_id=7639280682681912610.",
+        "2026-05-13T15:52:33+08:00: sent per-platform Douyin publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f7692dc1cf8c3550fceab4b82f."
+      ],
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6f7692dc1cf8c3550fceab4b82f",
+        "sent_at": "2026-05-13T15:52:33+08:00",
+        "message_type": "douyin_under_review"
+      }
+    },
+    "kuaishou": {
+      "campaign_id": "2026-05-12-ai-employee-status-split-before-judgment",
+      "platform_id": "kuaishou",
+      "actor": "Codex Chrome DevTools/CDP publisher",
+      "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
+      "status": "published",
+      "title": "先分状态再判断",
+      "description": "平台列表一乱，小马差点全判失败。大陈说，先分已发布、审核中、待核验，再决定下一步。",
+      "current_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+      "management_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+      "share_link": null,
+      "external_id": null,
+      "submitted_at": "2026-05-13T08:32:00+08:00",
+      "published_at": "2026-05-13T08:32:00+08:00",
+      "recorded_at": "2026-05-13T08:33:22+08:00",
+      "verified_by": "Kuaishou 作品管理 exact-description row and status text via Chrome DevTools/CDP",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.kuaishou.lock.json",
+      "result_path": "/Users/baishangjituan/Documents/push/kuaishou_publish_result_20260513.json",
+      "verified_fields": {
+        "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package/platforms/kuaishou.md",
+        "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package/platform-upload-map.md",
+        "final_verify": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_content_package/final-verify.json",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment-publish.mp4",
+        "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-12-ai-employee-status-split-before-judgment_cover_package/cover-vertical-3x4.png",
+        "cover_mode": "custom_vertical_3x4_uploaded_and_visible_in_publish_preview_before_submit",
+        "pre_submit_description_readback": "平台列表一乱，小马差点全判失败。大陈说，先分已发布、审核中、待核验，再决定下一步。",
+        "pre_submit_description_exact": true,
+        "platform_title_from_package": "先分状态再判断",
+        "platform_description_from_package": "平台列表一乱，小马差点全判失败。大陈说，先分已发布、审核中、待核验，再决定下一步。",
+        "automation_route": "Chrome DevTools/CDP raw protocol on http://127.0.0.1:9223 against already logged-in Chrome; no Chrome restart; DOM.setFileInputFiles used for local video and cover inputs",
+        "duplicate_guard": "passed before publishing: receipt had no kuaishou record and Kuaishou 作品管理 did not contain the exact description lead or title before upload",
+        "manager_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+        "manager_list_count_text": "共1个作品",
+        "manager_row_context": "作品管理 / 视频管理 / 全部作品 / 共1个作品：平台列表一乱，小马差点全判失败。大陈说，先分已发布、审核中、待核验，再决定下一步。 / 已发布 / 2026-05-13 08:32",
+        "manager_row_status_text": "已发布",
+        "manager_row_time": "2026-05-13 08:32",
+        "screenshots": {
+          "after_cover": "/Users/baishangjituan/Documents/push/kuaishou-after-cover-20260512.png",
+          "pre_submit": "/Users/baishangjituan/Documents/push/kuaishou-pre-submit-20260512.png",
+          "after_submit": "/Users/baishangjituan/Documents/push/kuaishou-after-submit-20260513.png",
+          "manager_check": "/Users/baishangjituan/Documents/push/kuaishou-manager-verified-20260513.png"
+        }
+      },
+      "notes": [
+        "2026-05-13T08:33:22+08:00: duplicate guard checked Kuaishou 作品管理 and found no existing same-campaign item; video and vertical 3:4 cover were uploaded through CDP, description readback was exact, final 发布 was clicked after explicit user confirmation, and 作品管理 verified the exact description row as 已发布 at 2026-05-13 08:32.",
+        "2026-05-13T08:35:23+08:00: sent per-platform Kuaishou publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f083a63c8a0c44d3ed806d0e3f."
+      ],
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6f083a63c8a0c44d3ed806d0e3f",
+        "sent_at": "2026-05-13T08:35:23+08:00",
+        "message_type": "kuaishou_published"
+      }
     }
   },
-  "updated_at": "2026-05-12T18:32:11+08:00",
+  "updated_at": "2026-05-13T15:52:33+08:00",
   "notes": [
     "toutiao_submitted_2026-05-12T17:51:43+08:00: 平台状态不一致时，AI员工该怎么判断？ verified in Toutiao 作品管理 as 审核中 at 05-12 17:48; result_path=/Users/baishangjituan/Documents/push/toutiao_publish_result_20260512.json",
     "feishu_notified_2026-05-12T17:52:31+08:00: toutiao under_review receipt sent to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f1bcb3eece8b30985f2ef86a1c.",
@@ -303,6 +426,8 @@
     "feishu_notified_2026-05-12T18:17:28+08:00: bilibili published receipt sent to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f1baf702c80b29c9be2efa7496.",
     "zhihu_duplicate_detected_2026-05-12T18:18:24+08:00: late confirmation published a second Zhihu pin after the canonical 18:01 receipt already existed; duplicate public_url=https://www.zhihu.com/pin/2035022423821636165; canonical public_url=https://www.zhihu.com/pin/2037589321163723890.",
     "feishu_notified_2026-05-12T18:19:51+08:00: zhihu published-with-duplicate-warning receipt sent to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f1ba2bf2888b3d654a221ada0a.",
-    "baijiahao_published_2026-05-12T18:32:11+08:00: 为什么不能把所有平台都直接判成发布失败？ verified in Baijiahao 作品管理 as 已发布 at 2026-05-12 18:30:54; current_url=http://baijiahao.baidu.com/builder/preview/s?id=4885267250089051081; result_path=/Users/baishangjituan/Documents/push/baijiahao_publish_result_20260512.json"
+    "baijiahao_published_2026-05-12T18:32:11+08:00: 为什么不能把所有平台都直接判成发布失败？ verified in Baijiahao 作品管理 as 已发布 at 2026-05-12 18:30:54; current_url=http://baijiahao.baidu.com/builder/preview/s?id=4885267250089051081; result_path=/Users/baishangjituan/Documents/push/baijiahao_publish_result_20260512.json",
+    "douyin_submitted_2026-05-13T15:51:47+08:00: 别把全平台都判失败 verified in Douyin 作品管理 work-list API as 审核中 with aweme_id=7639280682681912610; share_link=https://www.iesdouyin.com/share/video/7639280682681912610/; result_path=/Users/baishangjituan/Documents/push/douyin_publish_result_20260513.json",
+    "feishu_notified_2026-05-13T15:52:33+08:00: douyin under_review receipt sent to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f7692dc1cf8c3550fceab4b82f."
   ]
 }
