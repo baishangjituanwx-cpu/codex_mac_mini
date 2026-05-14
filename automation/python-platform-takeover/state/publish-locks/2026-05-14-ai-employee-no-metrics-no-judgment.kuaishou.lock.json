@@ -1,0 +1,19 @@
+{
+  "campaign_id": "2026-05-14-ai-employee-no-metrics-no-judgment",
+  "platform_id": "kuaishou",
+  "status": "published_verified",
+  "locked_at": "2026-05-14T13:24:21+08:00",
+  "actor": "Codex Chrome DevTools/CDP publisher",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "title": "先补指标别判差",
+  "description": "没有作品行、数据和对照，别急着说内容差。小马要下结论，大陈让它先补核验。",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
+  "video_sha256": "34b088c58581c84dd532aa404410d4416998484c9e58d9a8c62393e4bc59a40a",
+  "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
+  "required_cover_sha256": "4bbd7c3d6ecc9bc3e0a0258c8ab1440af95a9911630a2e948e778a4443825580",
+  "management_url": "https://cp.kuaishou.com/article/manage/video",
+  "verified_by": "Kuaishou 作品管理 exact-description row and 已发布 status via Chrome DevTools/CDP",
+  "result_path": "/Users/baishangjituan/Documents/push/kuaishou_publish_result_20260514_no_metrics_no_judgment.json",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-14-ai-employee-no-metrics-no-judgment.json",
+  "duplicate_guard": "passed before publishing: local receipt had no Kuaishou record and Kuaishou 作品管理 did not contain the exact current package title or description before submit"
+}

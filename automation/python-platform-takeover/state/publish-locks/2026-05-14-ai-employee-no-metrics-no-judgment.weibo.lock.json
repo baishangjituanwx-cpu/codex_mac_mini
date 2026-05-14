@@ -1,0 +1,28 @@
+{
+  "campaign_id": "2026-05-14-ai-employee-no-metrics-no-judgment",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "platform": "weibo",
+  "status": "published",
+  "created_at": "2026-05-14T05:56:49.917Z",
+  "updated_at": "2026-05-14T14:06:57+08:00",
+  "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_content_package/platforms/weibo.md",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
+  "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
+  "title": "没有播放和完播，就能说内容差吗？",
+  "description": "不能。没拿到内容级指标前，不要把“未核验”当成内容差。大陈让机器人小马先补作品行、播放完播互动和同形态对照，再决定要不要改。#AI员工 #内容运营 #数据复盘",
+  "published_at": "Thu May 14 14:03:01 +0800 2026",
+  "public_url": "https://weibo.com/2326772703/QFjOfiG3a",
+  "mobile_detail_url": "https://m.weibo.cn/detail/5298475994451548",
+  "external_id": "5298475994451548",
+  "mblogid": "QFjOfiG3a",
+  "verified_by": "Weibo ajax/statuses/update success response plus ajax/statuses/mymblog exact text_raw match and m.weibo.cn profile feed exact marker readback",
+  "platform_cover_url": "https://wx3.sinaimg.cn/orj480/8aafbbdfly1id4yo1qegzj20k00zkwfu.jpg",
+  "feishu_notification": {
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "message_id": "om_x100b6f62288a20e8c2ee5cee8b18fd5",
+    "sent_at": "2026-05-14T14:06:28+08:00",
+    "message_type": "weibo_published_verified",
+    "idempotency_key": "weibo0514metrics",
+    "method": "lark-cli im +messages-send --as bot"
+  }
+}

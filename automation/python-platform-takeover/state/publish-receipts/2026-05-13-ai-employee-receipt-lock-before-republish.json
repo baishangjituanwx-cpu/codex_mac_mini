@@ -1,7 +1,7 @@
 {
   "campaign_id": "2026-05-13-ai-employee-receipt-lock-before-republish",
   "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
-  "status": "zhihu_published_toutiao_under_review",
+  "status": "kuaishou_published_verified",
   "receipts": {
     "zhihu": {
       "campaign_id": "2026-05-13-ai-employee-receipt-lock-before-republish",
@@ -98,39 +98,39 @@
       "platform_id": "toutiao",
       "actor": "Codex Chrome DevTools/CDP publisher",
       "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
-      "status": "under_review",
+      "status": "published",
       "title": "审核中或缺链接时，AI员工该不该再发布一次？",
       "description": "不应该直接重发。先查回执和状态词，确认是否已有记录，再决定是等待推进、补公开链接，还是补数据证据。",
-      "current_url": "https://mp.toutiao.com/profile_v4/xigua/small-video",
+      "current_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
       "management_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
       "share_link": null,
       "external_id": null,
       "submitted_at": "2026-05-13T16:46:00+08:00",
       "published_at": "2026-05-13T16:46:00+08:00",
-      "recorded_at": "2026-05-13T16:47:33+08:00",
-      "verified_by": "Toutiao 作品管理 exact-title row and status text",
+      "recorded_at": "2026-05-14T11:35:19+08:00",
+      "verified_by": "Toutiao 作品管理 exact-title row and current 已发布 status text via read-only CDP recheck",
       "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.toutiao.lock.json",
       "result_path": "/Users/baishangjituan/Documents/push/toutiao_publish_result_20260513.json",
       "verified_fields": {
-        "status_text": "审核中",
+        "status_text": "已发布",
         "publish_success_text": "全部发表成功",
-        "manager_list_context": "作品管理显示：00:15 / 审核中或缺链接时，AI员工该不该再发布一次？ / 05-13 16:46 / 审核中",
+        "manager_list_context": "作品管理显示：00:15 / 审核中或缺链接时，AI员工该不该再发布一次？ / 展现 55 / 播放 0 / 点赞 0 / 评论 0 / 05-13 16:46 / 已发布",
         "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platforms/toutiao.md",
         "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platform-upload-map.md",
         "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4",
         "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png",
         "fallback_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png",
         "cover_path_used": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png",
-        "cover_mode": "custom_vertical_3x4_uploaded_and_platform_accepted_edit_replace_state",
+        "cover_mode": "custom_vertical_3x4_uploaded_on_2026-05-13_and_platform_now_published",
         "cover_sha256": "1afdbb76bec19af480e287e87a4e133d980648c7e36a5e8dfa9480a0fb093f2a",
         "cover_readability_passed": true,
         "title_word_limit": "21/30",
         "pre_submit_title_readback": "审核中或缺链接时，AI员工该不该再发布一次？",
         "ai_declaration_checked": true,
         "video_generate_article_checked": false,
-        "automation_route": "Chrome DevTools/CDP raw protocol on http://127.0.0.1:9223 with DOM.setFileInputFiles for local video and image-only cover inputs",
+        "automation_route": "Chrome DevTools/CDP raw protocol on http://127.0.0.1:9223; 2026-05-14 recheck was read-only and performed no upload or publish click",
         "manager_row_time": "05-13 16:46",
-        "manager_row_status_text": "审核中",
+        "manager_row_status_text": "已发布",
         "screenshots": {
           "duplicate_guard_before": "/Users/baishangjituan/Documents/push/toutiao-manager-before-20260513.png",
           "after_video_upload": "/Users/baishangjituan/Documents/push/toutiao-after-video-upload-20260513.png",
@@ -138,17 +138,36 @@
           "cover_applied": "/Users/baishangjituan/Documents/push/toutiao-cover-applied-20260513.png",
           "pre_submit": "/Users/baishangjituan/Documents/push/toutiao-pre-submit-continuous-20260513.png",
           "after_publish": "/Users/baishangjituan/Documents/push/toutiao-after-publish-click-20260513.png",
-          "manager_check": "/Users/baishangjituan/Documents/push/toutiao-manager-verified-20260513.png"
+          "manager_check": "/Users/baishangjituan/Documents/push/toutiao-manager-verified-20260513.png",
+          "manager_recheck": "/Users/baishangjituan/Documents/push/toutiao-manager-recheck-20260514.png"
+        },
+        "cover_dimensions": "1080x1440",
+        "metrics_at_recheck": {
+          "impressions": 55,
+          "plays": 0,
+          "likes": 0,
+          "comments": 0,
+          "checked_at": "2026-05-14T11:35:19+08:00"
         }
       },
       "notes": [
         "2026-05-13T16:47:33+08:00: duplicate guard checked local receipt and Toutiao 作品管理 before publishing; no current title existed. Uploaded video through CDP file input, uploaded the package-required cover-vertical-3x4.png through image-only file input, confirmed cover editor and edit/replace state, set exact title, kept 生成图文 unchecked, selected AI生成, clicked 发布, saw 全部发表成功, and verified the exact title in 作品管理 as 审核中 at 05-13 16:46.",
-        "feishu_notified_2026-05-13T16:48:01+08:00: sent per-platform Toutiao publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f77e2d47480c3bce63d878d08b."
+        "feishu_notified_2026-05-13T16:48:01+08:00: sent per-platform Toutiao publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f77e2d47480c3bce63d878d08b.",
+        "2026-05-14T11:35:19+08:00: read-only CDP recheck found exact title in Toutiao 作品管理 as 已发布 at 05-13 16:46 with 展现55/播放0/点赞0/评论0; no upload or publish click performed because receipt already blocked duplicate publish. Required cover remains /Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png.",
+        "feishu_notified_2026-05-14T11:35:34+08:00: toutiao published recheck sent to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f607eaa983cc39660918bc1744."
       ],
       "feishu_notification": {
         "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
         "message_id": "om_x100b6f77e2d47480c3bce63d878d08b",
         "sent_at": "2026-05-13T16:48:01+08:00"
+      },
+      "status_recheck_result_path": "/Users/baishangjituan/Documents/push/toutiao_status_recheck_20260514.json",
+      "feishu_status_recheck_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6f607eaa983cc39660918bc1744",
+        "sent_at": "2026-05-14T11:35:34+08:00",
+        "method": "lark-cli im +messages-send --as bot",
+        "summary": "Sent Toutiao status recheck notification: existing latest package is now 已发布; no duplicate publish was performed."
       }
     },
     "douyin": {
@@ -156,7 +175,7 @@
       "platform_id": "douyin",
       "actor": "Codex Chrome DevTools/CDP publisher",
       "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
-      "status": "under_review",
+      "status": "published",
       "title": "缺证据，别重复发布",
       "description": "机器人小马看到缺链接就想再点一次发布，大陈当场拦住：先查回执。审核中不是失败，缺证据先补证据，别用重复发布补不确定。#AI员工 #内容运营 #发布复盘",
       "current_url": "https://creator.douyin.com/creator-micro/content/manage?enter_from=publish",
@@ -165,14 +184,14 @@
       "external_id": "7639296166236294441",
       "submitted_at": "2026-05-13T16:50:52+08:00",
       "published_at": "2026-05-13T16:50:52+08:00",
-      "recorded_at": "2026-05-13T16:51:49+08:00",
-      "verified_by": "Douyin 作品管理 work-list API exact-title and description-lead match in 全部作品/status=0 and 审核中/status=2 via Chrome DevTools/CDP",
+      "recorded_at": "2026-05-14T11:31:48+08:00",
+      "verified_by": "Douyin 作品管理 work-list API exact-title and description-lead match in 全部作品/status=0 and 已发布/status=1 via Chrome DevTools/CDP; status=2 no longer matched",
       "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.douyin.lock.json",
       "result_path": "/Users/baishangjituan/Documents/push/douyin_publish_result_20260513_receipt_lock_before_republish.json",
       "verified_fields": {
-        "status_text": "审核中",
-        "status_value": 141,
-        "publish_success_text": "发布成功",
+        "status_text": "已发布",
+        "status_value": 102,
+        "publish_success_text": "already published; duplicate publish skipped",
         "aweme_id": "7639296166236294441",
         "item_id": "7639296166236294000",
         "share_link": "https://www.iesdouyin.com/share/video/7639296166236294441/",
@@ -213,11 +232,19 @@
           "vertical_cover_editor": "/tmp/douyin-0513-cover-editor-after-direct.png",
           "horizontal_cover_editor": "/tmp/douyin-0513-horizontal-editor-after-direct.png",
           "after_cover_complete": "/tmp/douyin-0513-after-cover-complete.png"
-        }
+        },
+        "in_reviewing": false,
+        "status_0_match": true,
+        "status_1_published_match": true,
+        "status_2_under_review_match": false,
+        "recheck_at": "2026-05-14T11:31:48+08:00",
+        "recheck_route": "Chrome DevTools/CDP raw protocol on http://127.0.0.1:9223, work-list status=0/1/2",
+        "duplicate_guard_result": "blocked_republish_existing_aweme_id_7639296166236294441"
       },
       "notes": [
         "2026-05-13T16:51:49+08:00: duplicate guard checked local receipt and Douyin 作品管理 work-list status=0/1/2 before publishing; no current title existed. Uploaded video through CDP file input, uploaded required cover-vertical-3x4.png and horizontal cover-horizontal-4x3.png through image file inputs, confirmed cover detection passed, clicked 发布, saw 发布成功, and verified the exact title/description lead in 作品管理 API as 审核中.",
-        "feishu_notified_2026-05-13T16:52:09+08:00: douyin under_review notification sent to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f77f55deca4b48b6f4a5ba83d0."
+        "feishu_notified_2026-05-13T16:52:09+08:00: douyin under_review notification sent to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f77f55deca4b48b6f4a5ba83d0.",
+        "2026-05-14T11:31:48+08:00: no republish performed. Chrome DevTools/CDP work-list API found the exact Douyin item in 全部作品/status=0 and status=1 with in_reviewing=false, status_value=102, aweme_id=7639296166236294441; status=2 no longer matched. Treated as published and kept duplicate lock active."
       ],
       "feishu_notification": {
         "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
@@ -453,6 +480,158 @@
         "output": "{\n  \"ok\": true,\n  \"identity\": \"bot\",\n  \"data\": {\n    \"chat_id\": \"oc_45f4f2c2f0a783f636969cd821179f40\",\n    \"create_time\": \"2026-05-13 17:13:56\",\n    \"message_id\": \"om_x100b6f7043f294bcc27fb401423b534\"\n  },\n  \"_notice\": {\n    \"update\": {\n      \"current\": \"1.0.19\",\n      \"latest\": \"1.0.28\",\n      \"message\": \"lark-cli 1.0.28 available, current 1.0.19\"\n    }\n  }\n}",
         "sent_at": "2026-05-13T17:13:56.142+08:00"
       }
+    },
+    "baijiahao": {
+      "campaign_id": "2026-05-13-ai-employee-receipt-lock-before-republish",
+      "platform_id": "baijiahao",
+      "actor": "Codex Chrome DevTools/CDP publisher",
+      "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
+      "status": "under_review",
+      "title": "为什么缺发布证据时，不能马上重复发布？",
+      "description": "因为缺公开链接、缺状态词，不等于发布失败。重复发布会制造重复条目，也会让后续复盘更乱。更稳妥的做法是先查回执、看状态词、锁住重复，再补证据。",
+      "current_url": "https://baijiahao.baidu.com/builder/rc/clue?aside=0&footer=true&from=videoV2&firstPublish=undefined&word_bag_id=null",
+      "management_url": "https://baijiahao.baidu.com/builder/rc/content?currentPage=1&pageSize=10&search=%E4%B8%BA%E4%BB%80%E4%B9%88%E7%BC%BA%E5%8F%91%E5%B8%83%E8%AF%81%E6%8D%AE%E6%97%B6%EF%BC%8C%E4%B8%8D%E8%83%BD%E9%A9%AC%E4%B8%8A%E9%87%8D%E5%A4%8D%E5%8F%91%E5%B8%83%EF%BC%9F&type=&collection=&startDate=&endDate=",
+      "share_link": "http://baijiahao.baidu.com/builder/preview/s?id=4585738451149786280",
+      "external_id": "4585738451149786280",
+      "submitted_at": "2026-05-14T11:35:12+08:00",
+      "published_at": null,
+      "recorded_at": "2026-05-14T11:37:20+08:00",
+      "verified_by": "Baijiahao 作品管理 exact-title row after submit; status text 审核中 at 2026-05-14 11:35:12",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.baijiahao.lock.json",
+      "result_path": "/Users/baishangjituan/Documents/push/baijiahao_publish_click_20260514.json",
+      "status_recheck_result_path": "/Users/baishangjituan/Documents/push/baijiahao_manager_verify_20260514.json",
+      "verified_fields": {
+        "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+        "source_package_form": "video",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platforms/baijiahao.md",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platform-upload-map.md",
+        "automation_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-13-ai-employee-receipt-lock-before-republish.yaml",
+        "final_verify": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/final-verify.json",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4",
+        "uploaded_video_sha256": "69df58c77e53be58c1f67ab7f14c635dd437bcdc8b64b8c2f867b932b65bb31c",
+        "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png",
+        "cover_path_used": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png",
+        "cover_sha256": "7f69c02880d92fc89d462f4276f595d1045a256d72cb3a845fb1e6c86a53903e",
+        "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png",
+        "cover_mode": "package_required_horizontal_4x3_custom_cover_uploaded_before_submit",
+        "cover_evidence": [
+          {
+            "i": 5,
+            "src": "https://baijiahao.baidu.com/bjh/picproxy?param=yUb4cgsNYmAeZCEDyFconOrOMfokx%2BNdv%2BFpiKFJ2f%2F2y0QyEKZUroZnhy%2B4FFukFmVXHwch2mczlYSlV%2BxUtyCfkR7e8llahFdjBd71UIXPi6%2BwBz4SLOb9OnuUOgW%2Bfo3MX7WHE%2FyTQGCkPM63IcE47OW61GoF",
+            "w": 1440,
+            "h": 810,
+            "cls": "FeEditorApp-d820b38cbcd0c526-coverImg",
+            "alt": ""
+          },
+          {
+            "i": 15,
+            "src": "https://pic.rmb.bdstatic.com/gomis/upload_excel/20260428-102544.resized_image.jpg",
+            "w": 1920,
+            "h": 1080,
+            "cls": "FeEditorApp-_8de88c1fa57d53b5-image",
+            "alt": "AI文史百工中国"
+          },
+          {
+            "i": 19,
+            "src": "blob:https://baijiahao.baidu.com/f252b9ce-5051-4801-9715-440f4715b03a",
+            "w": 1440,
+            "h": 1080,
+            "cls": "FeEditorApp-_28b32fc37e18461a-image",
+            "alt": ""
+          },
+          {
+            "i": 36,
+            "src": "blob:https://baijiahao.baidu.com/866aef26-0323-4c05-9a26-2d2dde1834b2",
+            "w": 1440,
+            "h": 810,
+            "cls": "FeEditorApp-f44d769688b67496-horizontalCover",
+            "alt": ""
+          }
+        ],
+        "ai_declaration": "含AI生成内容",
+        "pre_submit_title_readback": "为什么缺发布证据时，不能马上重复发布？",
+        "pre_submit_status": "publish_button_enabled; no safety verification after click",
+        "publish_success_text": "提交成功，正在审核中...",
+        "manager_row_context": "为什么缺发布证据时，不能马上重复发布？ 2026-05-14 11:35:12 审核中音频 删除",
+        "manager_row_status_text": "审核中",
+        "manager_row_time": "2026-05-14 11:35:12",
+        "preview_url": "http://baijiahao.baidu.com/builder/preview/s?id=4585738451149786280",
+        "external_id": "4585738451149786280",
+        "duplicate_guard": "passed before publishing: current campaign receipt had no baijiahao receipt and Baijiahao 作品管理 exact-title search returned 共0篇",
+        "automation_route": "Chrome DevTools/CDP attached Playwright on http://127.0.0.1:9223; existing logged-in Chrome session; no page-side JS file input manipulation for this final submit",
+        "screenshots": {
+          "ready_before_submit": "/Users/baishangjituan/Documents/push/baijiahao-ready-before-submit-20260514.png",
+          "manager_verified": "/Users/baishangjituan/Documents/push/baijiahao-manager-verified-20260514.png"
+        }
+      },
+      "notes": [
+        "2026-05-14T11:37:20+08:00: duplicate guard checked current receipt and Baijiahao 作品管理 exact-title search before final submit; no matching title existed before publish.",
+        "Used the package-required cover file /Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png (sha256 7f69c02880d92fc89d462f4276f595d1045a256d72cb3a845fb1e6c86a53903e). Editor evidence showed horizontal 1440x1080 uploaded image plus 1440x810 platform preview before submit.",
+        "Clicked the visible enabled 发布 button once; no safety verification appeared; submit page showed 提交成功，正在审核中...; 作品管理 verified exact title at 2026-05-14 11:35:12 with status 审核中.",
+        "feishu_notified_2026-05-14T11:37:45+08:00: sent Baijiahao under_review notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f607643d8b4c31dc3f7d901293."
+      ],
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6f607643d8b4c31dc3f7d901293",
+        "sent_at": "2026-05-14T11:37:45+08:00",
+        "method": "lark-cli im +messages-send --as bot",
+        "summary": "Sent Baijiahao submit-under-review notification with title, submitted_at, external_id, required horizontal cover, and duplicate-lock status."
+      }
+    },
+    "kuaishou": {
+      "campaign_id": "2026-05-13-ai-employee-receipt-lock-before-republish",
+      "platform_id": "kuaishou",
+      "actor": "Codex Chrome DevTools/CDP publisher",
+      "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
+      "status": "published",
+      "title": "先查回执别重发",
+      "description": "小马想再点一次发布，大陈说先查回执。审核中不是失败，缺证据先补证据。",
+      "current_url": "https://cp.kuaishou.com/article/manage/video",
+      "management_url": "https://cp.kuaishou.com/article/manage/video",
+      "share_link": null,
+      "external_id": null,
+      "submitted_at": "2026-05-14T11:36:00+08:00",
+      "published_at": "2026-05-14T11:36:00+08:00",
+      "recorded_at": "2026-05-14T11:37:57+08:00",
+      "verified_by": "Kuaishou 作品管理 exact-description row and status text via Chrome DevTools/CDP",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.kuaishou.lock.json",
+      "result_path": "/Users/baishangjituan/Documents/push/kuaishou_publish_result_20260514_receipt_lock_before_republish.json",
+      "verified_fields": {
+        "status_text": "已发布",
+        "manager_row_time": "2026-05-14 11:36",
+        "manager_row_context": "作品管理显示：00:15 / 小马想再点一次发布，大陈说先查回执。审核中不是失败，缺证据先补证据。 / 已发布 / 2026-05-14 11:36 / 1 / 0 / 0；列表计数共31个作品。",
+        "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platforms/kuaishou.md",
+        "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_content_package/platform-upload-map.md",
+        "yaml_config": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-13-ai-employee-receipt-lock-before-republish.yaml",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4",
+        "video_sha256": "69df58c77e53be58c1f67ab7f14c635dd437bcdc8b64b8c2f867b932b65bb31c",
+        "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png",
+        "cover_path_used": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png",
+        "cover_sha256": "1afdbb76bec19af480e287e87a4e133d980648c7e36a5e8dfa9480a0fb093f2a",
+        "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-horizontal-4x3.png",
+        "cover_mode": "custom_vertical_3x4_uploaded_and_visible_in_pre_submit_preview",
+        "pre_submit_description_readback": "小马想再点一次发布，大陈说先查回执。审核中不是失败，缺证据先补证据。",
+        "pre_submit_cover_check": "预览封面显示内容包指定竖版封面，画面文字为 AI员工查回执 / 补证据，别重发。",
+        "duplicate_guard": "passed before publishing: current campaign receipt had no Kuaishou record and Kuaishou 作品管理 did not contain the exact package title or description before submit",
+        "automation_route": "Chrome DevTools/CDP on http://127.0.0.1:9223; DOM.setFileInputFiles was used for local video and package-required vertical cover; no logged-in Chrome restart",
+        "screenshots": {
+          "pre_submit_recheck": "/Users/baishangjituan/Documents/push/kuaishou-20260514-pre-submit-recheck.png",
+          "duplicate_guard_before": "/Users/baishangjituan/Documents/push/kuaishou-20260514-duplicate-guard-before-submit.png",
+          "after_submit_click": "/Users/baishangjituan/Documents/push/kuaishou-20260514-after-submit-click.png",
+          "manager_verify": "/Users/baishangjituan/Documents/push/kuaishou-20260514-manager-verify-attempt-1.png"
+        }
+      },
+      "notes": [
+        "2026-05-14T11:37:57+08:00: published Kuaishou short video via Chrome DevTools/CDP after duplicate guard; exact package description verified in 作品管理 as 已发布 at 2026-05-14 11:36; package-required vertical 3:4 cover was uploaded and visually verified before submit.",
+        "feishu_notified_2026-05-14T11:38:12+08:00: sent Kuaishou publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f607486a228c3642506ec98baa."
+      ],
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6f607486a228c3642506ec98baa",
+        "sent_at": "2026-05-14T11:38:12+08:00",
+        "method": "lark-cli im +messages-send --as bot",
+        "summary": "Sent per-platform Kuaishou publish completion notification with manager verified status."
+      }
     }
   },
   "receipt_schema": {
@@ -485,7 +664,7 @@
     "cover_sha256_basis": "canonical cover_3_4 vertical cover"
   },
   "created_at": "2026-05-13T09:13:30+08:00",
-  "updated_at": "2026-05-13T17:30:08+08:00",
+  "updated_at": "2026-05-14T11:38:12+08:00",
   "notes": [
     "toutiao_submitted_2026-05-13T16:47:33+08:00: 审核中或缺链接时，AI员工该不该再发布一次？ verified in Toutiao 作品管理 as 审核中 at 05-13 16:46; cover=/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png; result_path=/Users/baishangjituan/Documents/push/toutiao_publish_result_20260513.json",
     "feishu_notified_2026-05-13T16:48:01+08:00: toutiao under_review receipt sent to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f77e2d47480c3bce63d878d08b.",
@@ -495,6 +674,11 @@
     "feishu_notified_2026-05-13T17:13:56.142+08:00: bilibili published_verified_in_manager receipt sent to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6f7043f294bcc27fb401423b534.",
     "zhihu_published_verified_2026-05-13T17:21:21+08:00: exact title/body verified on Zhihu profile videos and public pin; public_url=https://www.zhihu.com/pin/2037940203382379703; required vertical 3:4 cover was uploaded and confirmed.",
     "zhihu_published_2026-05-13T09:25:42.143Z: retained public_url=https://www.zhihu.com/pin/2037940203382379703; cover=/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png; duplicate cleanup removed https://www.zhihu.com/pin/2037942277113393304.",
-    "zhihu_feishu_notified_2026-05-13T17:30:08+08:00: message_id=om_x100b6f7004ca74e0b3b56e11a6f68db"
+    "zhihu_feishu_notified_2026-05-13T17:30:08+08:00: message_id=om_x100b6f7004ca74e0b3b56e11a6f68db",
+    "douyin_published_recheck_2026-05-14T11:31:48+08:00: exact title 缺证据，别重复发布 found in Douyin work-list status=0 and status=1 with aweme_id=7639296166236294441, in_reviewing=false, status_value=102; no upload or publish click performed because this is the same latest package and duplicate guard is active.",
+    "toutiao_published_recheck_2026-05-14T11:35:19+08:00: exact title 审核中或缺链接时，AI员工该不该再发布一次？ found in Toutiao 作品管理 as 已发布; no duplicate publish performed; required cover=/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png; result_path=/Users/baishangjituan/Documents/push/toutiao_status_recheck_20260514.json",
+    "toutiao_published_recheck_feishu_notified_2026-05-14T11:35:34+08:00: message_id=om_x100b6f607eaa983cc39660918bc1744",
+    "kuaishou_published_verified_2026-05-14T11:37:57+08:00: exact description verified in Kuaishou 作品管理 as 已发布 at 2026-05-14 11:36; cover=/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png; result_path=/Users/baishangjituan/Documents/push/kuaishou_publish_result_20260514_receipt_lock_before_republish.json",
+    "kuaishou_feishu_notified_2026-05-14T11:38:12+08:00: message_id=om_x100b6f607486a228c3642506ec98baa"
   ]
 }

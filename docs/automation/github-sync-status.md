@@ -2104,3 +2104,22 @@
   - 未提交 `automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json` 及其两个 `.stale-*` 文件，因为它们是旧运行态残留，不属于 `2026-05-13` 这批待同步变更。
   - 未在 `codex/default-python-sync` 重复提交 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` 与 `*.cmd`，因为这些 Windows launcher 已由 `codex/windows-version-20260411` 的现有提交承载，且当前工作区文件与该分支内容一致。
   - 本条执行记录会在本轮 push 失败后作为新的本地提交保留，待下一次默认分支 push 成功时再同步到 GitHub。
+
+## 2026-05-14 11:55:18 CST
+- 检测到新的技能变更批次: 新增 `2`，修改 `3`，删除 `0`。
+- 这批变更继续集中在 `automation/python-platform-takeover/state/`；核心是把 `2026-05-13-ai-employee-receipt-lock-before-republish` 的 Toutiao 与 Douyin 锁从 `under_review` 推进为 `published`，同时新增 Baijiahao `under_review` 锁、Kuaishou `published_verified` 锁，并把同名 receipt 扩成覆盖这两端新回执、复核结果、截图证据和飞书通知元数据的正式台账。
+- 建议后续执行 GitHub 同步，避免这批新的 publish lock / receipt 落库继续只停留在本地工作区。
+
+## 2026-05-14 12:57:03 CST
+- 检测到新的技能变更批次: 新增 `3`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/`；核心是为 `2026-05-14-ai-employee-no-metrics-no-judgment` 新建全平台 content package、Hermes handoff JSON 和初始 receipt 台账，并把 `state/hermes-handoff/latest.json` 切到这条“先补作品行、数据、对照，再判断内容差”的新 campaign。
+- 建议后续执行 GitHub 同步，避免这批新的 `python-platform-takeover` handoff / receipt 初始化记录继续只停留在本地工作区。
+## 2026-05-14 13:59:46 CST
+- 检测到新的技能变更批次: 新增 `8`，修改 `1`，删除 `0`。
+- 这批变更继续集中在 `automation/python-platform-takeover`；核心是为 campaign `2026-05-14-ai-employee-no-metrics-no-judgment` 新增了知乎、抖音、快手、百家号、Bilibili、头条、视频号与微博 8 个平台锁文件，其中视频号与 Bilibili 已写成管理后台核验发布，微博则只落了 pre-publish 锁，同时把同名 receipt 从初始化骨架扩成含 7 个平台发布/审核结果、素材指纹、管理页核验与飞书通知元数据的完整台账。
+- 建议后续执行 GitHub 同步，避免这批新的多平台发布状态、防重发锁和 receipt 扩写继续只停留在本地工作区。
+
+## 2026-05-14 14:59:25 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `2`，删除 `0`。
+- 这批变更继续集中在 `automation/python-platform-takeover`；核心是 `2026-05-14-ai-employee-no-metrics-no-judgment` 的 Weibo 发布完成后，补齐了 Weibo publish lock 的最终状态与共享 receipt 中的完整 Weibo 台账、核验字段和飞书通知记录。
+- 建议后续执行 GitHub 同步，避免这批新的 Weibo 发布状态落库继续只停留在本地工作区。

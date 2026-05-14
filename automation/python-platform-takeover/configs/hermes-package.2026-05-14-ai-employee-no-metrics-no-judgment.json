@@ -1,0 +1,74 @@
+{
+  "campaignId": "2026-05-14-ai-employee-no-metrics-no-judgment",
+  "sourceThreadId": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "sourceCampaignId": "2026-05-14-ai-employee-no-metrics-no-judgment",
+  "sourceConfig": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-14-ai-employee-no-metrics-no-judgment.yaml",
+  "sourceContentRoot": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_content_package",
+  "receiptPath": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-14-ai-employee-no-metrics-no-judgment.json",
+  "scope": "all_platforms",
+  "lockDir": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks",
+  "fingerprints": {
+    "title_hash": "4a76d6bad4899cf593159b447346e674c7f3350088cf006d85da117d7e69348c",
+    "body_core_hash": "bc126820fcf820374a9482c795dfa87f7b21de89aab2a0de974a1be3fa40c01f",
+    "video_sha256": "34b088c58581c84dd532aa404410d4416998484c9e58d9a8c62393e4bc59a40a",
+    "cover_sha256": "4bbd7c3d6ecc9bc3e0a0258c8ab1440af95a9911630a2e948e778a4443825580",
+    "cover_3_4_sha256": "4bbd7c3d6ecc9bc3e0a0258c8ab1440af95a9911630a2e948e778a4443825580",
+    "cover_4_3_sha256": "93ba978868d9a0986a7e9ee11c8b315622db43e9d221611069764d3b1067b713",
+    "title_hash_basis": "sha256(sorted Hermes platform title strings, NFKC normalized)",
+    "body_core_hash_basis": "sha256(sorted Hermes platform description strings, NFKC normalized)",
+    "cover_sha256_basis": "canonical cover_3_4 vertical cover"
+  },
+  "status": "ready_for_publish",
+  "allowLive": false,
+  "hardStopIfReceiptNotEmpty": true,
+  "unsupportedPlatforms": {
+    "douyin": {
+      "status": "unsupported_by_current_hermes_skill",
+      "reason": "当前 Hermes skill 暂不进入抖音发布测试"
+    }
+  },
+  "platforms": {
+    "bilibili": {
+      "title": "没拿到指标前，别急着判内容差：大陈让机器人小马先补三件事",
+      "description": "这条讲内容复盘里最容易犯的一个错：没有播放、完播、互动和对照，就先判断内容差。AI员工要先补作品行、补内容级数据、补同形态对照，再决定是否调整内容。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-horizontal-4x3.png"
+    },
+    "toutiao": {
+      "title": "缺内容级指标时，AI员工该不该先判内容差？",
+      "description": "不应该。先补作品行、播放完播互动数据和同形态对照，再判断内容是否真的需要调整。没有指标就下结论，只会让复盘跑偏。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png"
+    },
+    "zhihu": {
+      "title": "为什么没拿到内容级指标前，不应该先判断内容差？",
+      "description": "因为这时候缺的是证据，不一定是内容本身的问题。没有作品行、播放、完播、互动和对照，就先说内容差，会让后续调整失去依据。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png"
+    },
+    "baijiahao": {
+      "title": "为什么没有内容级指标时，不能先说内容差？",
+      "description": "因为未核验不等于内容差。没有作品行、播放、完播、互动和同形态对照，复盘很容易变成猜测。更稳妥的做法是先补指标，再判断要不要改内容。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-horizontal-4x3.png"
+    },
+    "kuaishou": {
+      "title": "先补指标别判差",
+      "description": "没有作品行、数据和对照，别急着说内容差。小马要下结论，大陈让它先补核验。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png"
+    },
+    "weibo": {
+      "title": "没有播放和完播，就能说内容差吗？",
+      "description": "不能。没拿到内容级指标前，不要把“未核验”当成内容差。大陈让机器人小马先补作品行、播放完播互动和同形态对照，再决定要不要改。#AI员工 #内容运营 #数据复盘",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png"
+    },
+    "wechat_channels": {
+      "title": "别先判差",
+      "description": "机器人小马看到数据空白就要判内容差，大陈叫停：没指标，不判差。先补作品行、数据、对照。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png"
+    }
+  }
+}

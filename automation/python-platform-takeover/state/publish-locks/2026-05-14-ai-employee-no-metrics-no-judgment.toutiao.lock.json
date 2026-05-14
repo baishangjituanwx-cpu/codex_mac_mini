@@ -1,0 +1,32 @@
+{
+  "campaign_id": "2026-05-14-ai-employee-no-metrics-no-judgment",
+  "platform_id": "toutiao",
+  "status": "under_review",
+  "title": "缺内容级指标时，AI员工该不该先判内容差？",
+  "description": "不应该。先补作品行、播放完播互动数据和同形态对照，再判断内容是否真的需要调整。没有指标就下结论，只会让复盘跑偏。",
+  "submitted_at": "2026-05-14T13:23:00+08:00",
+  "recorded_at": "2026-05-14T13:28:21+08:00",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "content_package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_content_package/platforms/toutiao.md",
+  "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_content_package/platform-upload-map.md",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
+  "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
+  "cover_path_used": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
+  "cover_sha256": "4bbd7c3d6ecc9bc3e0a0258c8ab1440af95a9911630a2e948e778a4443825580",
+  "cover_dimensions": "1080x1440",
+  "fallback_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-horizontal-4x3.png",
+  "current_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
+  "management_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
+  "result_path": "/Users/baishangjituan/Documents/push/toutiao_publish_result_20260514.json",
+  "manager_screenshot": "/Users/baishangjituan/Documents/push/toutiao-manager-verified-20260514.png",
+  "verified_by": "Toutiao 作品管理 exact-title row and 审核中 status via Chrome DevTools/CDP",
+  "feishu_notification": {
+    "sent": true,
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "message_id": "om_x100b6f6194b434a8c3def8af7ca5286",
+    "sent_at": "2026-05-14T13:29:11+08:00",
+    "method": "lark-cli im +messages-send --as bot",
+    "idempotency_key": "tt-20260514-1323"
+  },
+  "updated_at": "2026-05-14T13:29:11+08:00"
+}

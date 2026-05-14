@@ -1,0 +1,21 @@
+{
+  "campaign_id": "2026-05-14-ai-employee-no-metrics-no-judgment",
+  "platform_id": "baijiahao",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "status": "under_review",
+  "title": "为什么没有内容级指标时，不能先说内容差？",
+  "submitted_at": "2026-05-14T13:21:25+08:00",
+  "locked_at": "2026-05-14T13:25:28+08:00",
+  "management_url": "https://baijiahao.baidu.com/builder/rc/content?currentPage=1&pageSize=10&search=&type=&collection=&startDate=&endDate=",
+  "share_link": "http://baijiahao.baidu.com/builder/preview/s?id=5016167278853756907",
+  "external_id": "5016167278853756907",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-14-ai-employee-no-metrics-no-judgment.json",
+  "result_path": "/Users/baishangjituan/Documents/push/baijiahao_publish_click_20260514_newpkg.json",
+  "manager_verify_path": "/Users/baishangjituan/Documents/push/baijiahao_manager_verify_20260514_newpkg.json",
+  "cover_path_used": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-horizontal-4x3.png",
+  "cover_sha256": "93ba978868d9a0986a7e9ee11c8b315622db43e9d221611069764d3b1067b713",
+  "cover_thumbnail_present": true,
+  "cover_readability_passed": true,
+  "duplicate_rule": "发前先查重，发后不自动重投；under_review blocks republish",
+  "manager_row_context": "为什么没有内容级指标时，不能先说内容差？ 2026-05-14 13:21:25 审核中音频 删除"
+}

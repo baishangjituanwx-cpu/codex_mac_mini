@@ -1,0 +1,16 @@
+{
+  "campaign_id": "2026-05-13-ai-employee-receipt-lock-before-republish",
+  "platform_id": "kuaishou",
+  "status": "published_verified",
+  "created_at": "2026-05-14T11:37:57+08:00",
+  "updated_at": "2026-05-14T11:37:57+08:00",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-13-ai-employee-receipt-lock-before-republish.json",
+  "result_path": "/Users/baishangjituan/Documents/push/kuaishou_publish_result_20260514_receipt_lock_before_republish.json",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish-publish.mp4",
+  "cover_path_used": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-13-ai-employee-receipt-lock-before-republish_cover_package/cover-vertical-3x4.png",
+  "title": "先查回执别重发",
+  "description": "小马想再点一次发布，大陈说先查回执。审核中不是失败，缺证据先补证据。",
+  "management_url": "https://cp.kuaishou.com/article/manage/video",
+  "verified_status": "已发布",
+  "verified_time": "2026-05-14 11:36"
+}

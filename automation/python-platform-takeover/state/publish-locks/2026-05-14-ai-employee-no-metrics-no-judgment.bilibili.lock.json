@@ -1,0 +1,14 @@
+{
+  "campaign_id": "2026-05-14-ai-employee-no-metrics-no-judgment",
+  "platform_id": "bilibili",
+  "title": "没拿到指标前，别急着判内容差：大陈让机器人小马先补三件事",
+  "status": "published_verified_in_manager",
+  "bvid": "BV1wc5X6WE24",
+  "share_link": "https://www.bilibili.com/video/BV1wc5X6WE24/",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
+  "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-horizontal-4x3.png",
+  "cover_sha256": "93ba978868d9a0986a7e9ee11c8b315622db43e9d221611069764d3b1067b713",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-14-ai-employee-no-metrics-no-judgment.json",
+  "result_path": "/Users/baishangjituan/Documents/push/bilibili_publish_result_20260514.json",
+  "recorded_at": "2026-05-14T13:24:32.219+08:00"
+}

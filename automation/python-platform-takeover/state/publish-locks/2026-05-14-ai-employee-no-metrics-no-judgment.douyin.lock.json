@@ -1,0 +1,24 @@
+{
+  "campaign_id": "2026-05-14-ai-employee-no-metrics-no-judgment",
+  "platform_id": "douyin",
+  "status": "under_review",
+  "locked_at": "2026-05-14T13:19:25+08:00",
+  "lock_reason": "Douyin publish submitted and verified as under_review via Chrome DevTools/CDP work-list API; prevent duplicate publish attempts.",
+  "title": "没指标，别判内容差",
+  "description_lead": "小马一看到数据空白",
+  "external_id": "7639612563646467337",
+  "share_link": "https://www.iesdouyin.com/share/video/7639612563646467337/",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-14-ai-employee-no-metrics-no-judgment.json",
+  "result_path": "/Users/baishangjituan/Documents/push/douyin_publish_result_20260514_no_metrics_no_judgment.json",
+  "verified_by": "Douyin 作品管理 work-list API exact-title and description-lead match in 全部作品/status=0 and 审核中/status=2 via Chrome DevTools/CDP",
+  "assets": {
+    "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
+    "video_sha256": "34b088c58581c84dd532aa404410d4416998484c9e58d9a8c62393e4bc59a40a",
+    "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
+    "required_cover_sha256": "4bbd7c3d6ecc9bc3e0a0258c8ab1440af95a9911630a2e948e778a4443825580",
+    "horizontal_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-horizontal-4x3.png",
+    "horizontal_cover_sha256": "93ba978868d9a0986a7e9ee11c8b315622db43e9d221611069764d3b1067b713",
+    "cover_uri": "tos-cn-i-dy/e4465f55d4ca41eabbc8b6b3ff6f8113",
+    "horizontal_cover_uri": "tos-cn-i-dy/f996e53576be4326bb8f1bb0511ff8c4"
+  }
+}

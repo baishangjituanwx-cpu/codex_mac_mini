@@ -1,0 +1,17 @@
+{
+  "campaign_id": "2026-05-14-ai-employee-no-metrics-no-judgment",
+  "platform_id": "wechat_channels",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "locked_at": "2026-05-14T13:55:02+08:00",
+  "status": "published_verified_in_manager",
+  "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_content_package/platforms/wechat-channels.md",
+  "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_content_package/platform-upload-map.md",
+  "automation_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-14-ai-employee-no-metrics-no-judgment.yaml",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
+  "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
+  "package_short_title": "别先判差",
+  "published_short_title": "别先判差先补指标",
+  "description": "机器人小马看到数据空白就要判内容差，大陈叫停：没指标，不判差。先补作品行、数据、对照。",
+  "management_url": "https://channels.weixin.qq.com/platform/post/list",
+  "external_id": "export/UzFfBgAAxOCjAGFpZ3vsjMzT4DCak1ryofwxrsu6Q9SliSN6Ig"
+}
