@@ -2155,3 +2155,18 @@
   - 未提交 `automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json` 及其两个 `.stale-*` 文件，因为它们是旧运行态残留，不属于 `2026-05-14` 这批待同步变更。
   - 未在 `codex/default-python-sync` 重复提交 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` 与 `*.cmd`，因为这些 Windows launcher 已由 `codex/windows-version-20260411` 的现有提交承载，且当前工作区文件与该分支内容一致。
   - 由于当前环境禁止连接 GitHub SSH 端口 `22` 与 `443`，本轮只能把 generic sync commit 与执行记录保留在本地分支，等待后续在允许联网的运行环境中补推。
+
+## 2026-05-15 11:23:25 CST
+- 检测到新的技能变更批次: 新增 `3`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover`；核心是新增 `2026-05-15-ai-employee-status-branch-before-rewrite` 的 content package、Hermes handoff 包和初始 publish receipt，并把 `state/hermes-handoff/latest.json` 切换到这个新的全平台 ready-for-publish campaign。
+- 建议后续执行 GitHub 同步，避免这批新的 `python-platform-takeover` campaign 配置、receipt 骨架与 latest handoff 指针继续只停留在本地工作区。
+
+## 2026-05-15 12:23:23 CST
+- 检测到新的技能变更批次: 新增 `6`，修改 `1`，删除 `0`。
+- 这批变更继续集中在 `automation/python-platform-takeover/state/`；核心是 `2026-05-15-ai-employee-status-branch-before-rewrite` 新增了百家号、快手、头条、视频号、微博、知乎 6 个 publish lock，并把同名 receipt 从初始化骨架扩写为含头条审核中、微博/百家号发布成功、知乎失败证据和飞书通知元数据的正式台账。
+- 建议后续执行 GitHub 同步，避免这批新的 publish lock / receipt 落库继续只停留在本地工作区。
+
+## 2026-05-15 13:25:09 CST
+- 检测到新的技能变更批次: 新增 `2`，修改 `4`，删除 `0`。
+- 这批变更继续集中在 `automation/python-platform-takeover/state/`；核心是 `2026-05-15-ai-employee-status-branch-before-rewrite` 又补入了抖音和 Bilibili 两个平台的 publish lock，并把快手、视频号、知乎以及总 receipt 从中间态推进到已发布或已验证状态。
+- 建议后续执行 GitHub 同步，避免这批新增 publish lock 与 receipt 状态推进继续只停留在本地工作区。

@@ -1,0 +1,17 @@
+{
+  "locked": true,
+  "campaign_id": "2026-05-15-ai-employee-status-branch-before-rewrite",
+  "platform_id": "bilibili",
+  "status": "published_verified",
+  "title": "审核中不是失败：大陈让机器人小马先写状态分支，再看指标",
+  "bvid": "BV1Pp5Y6qEFa",
+  "public_url": "https://www.bilibili.com/video/BV1Pp5Y6qEFa/",
+  "created_at": "2026-05-15T12:33:06+08:00",
+  "updated_at": "2026-05-15T12:33:06+08:00",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-15-ai-employee-status-branch-before-rewrite.json",
+  "result_path": "/Users/baishangjituan/Documents/push/bilibili_publish_result_20260515.json",
+  "correct_cover_path_used": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
+  "cover_sha256": "c5dd816c2c7a4c1b5fb4ddf431a6f73045b506e7900304eac097bf4ed02ab421",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "verified_by": "Bilibili 稿件管理 exact-title row plus public x/web-interface/view exact bvid/title/state=0 via Chrome DevTools/CDP and API check"
+}

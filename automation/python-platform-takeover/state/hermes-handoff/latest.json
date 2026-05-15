@@ -1,125 +1,86 @@
 {
   "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
-  "campaign_id": "2026-05-14-ai-employee-no-metrics-no-judgment",
+  "campaign_id": "2026-05-15-ai-employee-status-branch-before-rewrite",
   "status": "ready_for_publish",
-  "content_package_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-14-ai-employee-no-metrics-no-judgment.yaml",
-  "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_content_package",
-  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-14-ai-employee-no-metrics-no-judgment.json",
+  "content_package_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-15-ai-employee-status-branch-before-rewrite.yaml",
+  "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-15-ai-employee-status-branch-before-rewrite.json",
   "scope": "all_platforms",
   "platform_upload_plan": {
     "douyin": {
-      "publish_type": "short_video",
-      "upload_video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
-      "backup_video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment.mp4",
-      "primary_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-horizontal-4x3.png",
-      "required_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
-      "platform_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_content_package/platforms/douyin.md",
-      "title_source": "platforms.douyin.title",
-      "description_source": "platforms.douyin.description"
+      "platform_label": "抖音",
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/douyin.md"
     },
     "kuaishou": {
-      "publish_type": "short_video",
-      "upload_video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
-      "backup_video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment.mp4",
-      "primary_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-horizontal-4x3.png",
-      "required_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
-      "platform_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_content_package/platforms/kuaishou.md",
-      "title_source": "platforms.kuaishou.title",
-      "description_source": "platforms.kuaishou.description"
+      "platform_label": "快手",
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/kuaishou.md"
     },
     "wechat_channels": {
-      "publish_type": "short_video",
-      "upload_video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
-      "backup_video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment.mp4",
-      "primary_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-horizontal-4x3.png",
-      "required_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
-      "platform_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_content_package/platforms/wechat-channels.md",
-      "title_source": "platforms.wechat_channels.title",
-      "description_source": "platforms.wechat_channels.description"
+      "platform_label": "微信视频号",
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/wechat_channels.md"
     },
     "weibo": {
-      "publish_type": "video_post",
-      "upload_video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
-      "backup_video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment.mp4",
-      "primary_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-horizontal-4x3.png",
-      "required_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
-      "platform_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_content_package/platforms/weibo.md",
-      "title_source": "platforms.weibo.title",
-      "description_source": "platforms.weibo.description"
+      "platform_label": "微博",
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/weibo.md"
     },
     "bilibili": {
-      "publish_type": "video",
-      "upload_video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
-      "backup_video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment.mp4",
-      "primary_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-horizontal-4x3.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
-      "required_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-horizontal-4x3.png",
-      "platform_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_content_package/platforms/bilibili.md",
-      "title_source": "platforms.bilibili.title",
-      "description_source": "platforms.bilibili.description"
+      "platform_label": "B站",
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/bilibili.md"
     },
     "xiaohongshu": {
-      "publish_type": "video_note",
-      "upload_video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
-      "backup_video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment.mp4",
-      "primary_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-horizontal-4x3.png",
-      "required_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
-      "platform_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_content_package/platforms/xiaohongshu.md",
-      "title_source": "platforms.xiaohongshu.title",
-      "description_source": "platforms.xiaohongshu.description",
-      "testing_allowed": false
+      "platform_label": "小红书",
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/xiaohongshu.md"
     },
     "toutiao": {
-      "publish_type": "video",
-      "upload_video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
-      "backup_video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment.mp4",
-      "primary_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-horizontal-4x3.png",
-      "required_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
-      "platform_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_content_package/platforms/toutiao.md",
-      "title_source": "platforms.toutiao.title",
-      "description_source": "platforms.toutiao.description"
+      "platform_label": "头条号",
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/toutiao.md"
     },
     "baijiahao": {
-      "publish_type": "video",
-      "upload_video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
-      "backup_video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment.mp4",
-      "primary_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-horizontal-4x3.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
-      "required_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-horizontal-4x3.png",
-      "platform_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_content_package/platforms/baijiahao.md",
-      "title_source": "platforms.baijiahao.title",
-      "description_source": "platforms.baijiahao.description"
+      "platform_label": "百家号",
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/baijiahao.md"
     },
     "zhihu": {
-      "publish_type": "video_answer",
-      "upload_video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment-publish.mp4",
-      "backup_video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment.mp4",
-      "primary_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-horizontal-4x3.png",
-      "required_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_cover_package/cover-vertical-3x4.png",
-      "platform_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-14-ai-employee-no-metrics-no-judgment_content_package/platforms/zhihu.md",
-      "title_source": "platforms.zhihu.title",
-      "description_source": "platforms.zhihu.description"
+      "platform_label": "知乎",
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/zhihu.md"
     }
   },
-  "allow_live": false,
-  "lock_dir": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks",
   "fingerprints": {
-    "title_hash": "4a76d6bad4899cf593159b447346e674c7f3350088cf006d85da117d7e69348c",
-    "body_core_hash": "bc126820fcf820374a9482c795dfa87f7b21de89aab2a0de974a1be3fa40c01f",
-    "video_sha256": "34b088c58581c84dd532aa404410d4416998484c9e58d9a8c62393e4bc59a40a",
-    "cover_sha256": "4bbd7c3d6ecc9bc3e0a0258c8ab1440af95a9911630a2e948e778a4443825580",
-    "cover_3_4_sha256": "4bbd7c3d6ecc9bc3e0a0258c8ab1440af95a9911630a2e948e778a4443825580",
-    "cover_4_3_sha256": "93ba978868d9a0986a7e9ee11c8b315622db43e9d221611069764d3b1067b713",
-    "title_hash_basis": "sha256(sorted Hermes platform title strings, NFKC normalized)",
-    "body_core_hash_basis": "sha256(sorted Hermes platform description strings, NFKC normalized)",
-    "cover_sha256_basis": "canonical cover_3_4 vertical cover"
+    "title_hash": "7843669bb25d5d603d71fd6b3bb4c561766513ec363b16f234500ab8e7a745bb",
+    "body_core_hash": "f50737bd2efc6849fb9016c5c19582cf05f37b765d70313bf4e4a67140a1b910",
+    "video_sha256": "ac9129d9b72897173fe422f87c0270de53a77378b2b66a2c3dc52b9905aab37a",
+    "raw_video_sha256": "6030f6cf73c88f019c84d8e737f153676ac832ed90ebd41366c43a624db54785",
+    "cover_sha256": "0b372e44430021ad07033b233abb9a21d3d14f14bf002ae20f8ffe0ad9e75623",
+    "cover_3_4_sha256": "0b372e44430021ad07033b233abb9a21d3d14f14bf002ae20f8ffe0ad9e75623",
+    "cover_4_3_sha256": "c5dd816c2c7a4c1b5fb4ddf431a6f73045b506e7900304eac097bf4ed02ab421"
   },
-  "hermes_package_json": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-14-ai-employee-no-metrics-no-judgment.json"
+  "lock_dir": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks",
+  "allow_live": false,
+  "updated_at": "2026-05-15T10:46:18+08:00"
 }

@@ -1,0 +1,33 @@
+{
+  "campaign_id": "2026-05-15-ai-employee-status-branch-before-rewrite",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "platform": "zhihu",
+  "status": "published",
+  "updated_at": "2026-05-15T04:29:13.647Z",
+  "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/zhihu.md",
+  "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-15-ai-employee-status-branch-before-rewrite-zhihu.md",
+  "title": "为什么审核中不是内容失败，也不该立刻改题重发？",
+  "body": "因为审核中只是中间状态，不是内容强弱结论。此时应该记录状态词、等待审核分支、锁住重复，通过后再看数据指标，而不是马上改题重发。",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
+  "video_sha256": "ac9129d9b72897173fe422f87c0270de53a77378b2b66a2c3dc52b9905aab37a",
+  "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
+  "required_cover_sha256": "0b372e44430021ad07033b233abb9a21d3d14f14bf002ae20f8ffe0ad9e75623",
+  "duplicate_guard": {
+    "source": "pre-upload generated script guard passed before resume",
+    "localReceiptStatusBeforeResume": "failed_after_non_submit_interception"
+  },
+  "error": "Error: AI tag option not found\n    at ensureAiTag (file:///Users/baishangjituan/Documents/push/zhihu_resume_20260515_cdp.mjs:429:25)\n    at async main (file:///Users/baishangjituan/Documents/push/zhihu_resume_20260515_cdp.mjs:573:3)",
+  "published_at": "发布于2026-05-15 12:28",
+  "public_url": "https://www.zhihu.com/pin/2038594728363570658",
+  "share_link": "https://www.zhihu.com/pin/2038594728363570658?page=video_pin&scene=share",
+  "external_id": "2038594728363570658",
+  "result_path": "/Users/baishangjituan/Documents/push/zhihu_20260515_publish_result.json",
+  "screenshots": {
+    "resumeDraft": "/Users/baishangjituan/Documents/push/zhihu-20260515-resume-draft.png",
+    "fieldsFilled": "/Users/baishangjituan/Documents/push/zhihu-20260515-fields-filled-resume.png",
+    "preSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260515-pre-submit-resume.png",
+    "afterSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260515-after-submit-resume.png",
+    "profile": "/Users/baishangjituan/Documents/push/zhihu-20260515-profile-verified.png",
+    "public": "/Users/baishangjituan/Documents/push/zhihu-20260515-public-verified.png"
+  }
+}

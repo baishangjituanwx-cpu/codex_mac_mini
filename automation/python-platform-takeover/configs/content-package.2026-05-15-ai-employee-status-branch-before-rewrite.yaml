@@ -1,0 +1,142 @@
+source_thread_id: "019d9ac2-d680-7f12-bf32-14678c576aa1"
+campaign_id: "2026-05-15-ai-employee-status-branch-before-rewrite"
+status: "ready_for_publish"
+package_status: "ready_for_platform_publishing"
+scope: "all_platforms"
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4"
+  backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png"
+support_files:
+  content_package_root: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package"
+  final_verify_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/final-verify.json"
+  platform_upload_map: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platform-upload-map.md"
+  cover_package_root: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package"
+platform_upload_plan:
+  douyin:
+    platform_label: "抖音"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/douyin.md"
+  kuaishou:
+    platform_label: "快手"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/kuaishou.md"
+  wechat_channels:
+    platform_label: "微信视频号"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/wechat_channels.md"
+  weibo:
+    platform_label: "微博"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/weibo.md"
+  bilibili:
+    platform_label: "B站"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/bilibili.md"
+  xiaohongshu:
+    platform_label: "小红书"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/xiaohongshu.md"
+  toutiao:
+    platform_label: "头条号"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/toutiao.md"
+  baijiahao:
+    platform_label: "百家号"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/baijiahao.md"
+  zhihu:
+    platform_label: "知乎"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/zhihu.md"
+platforms:
+  douyin:
+    title: "审核中别改题重发"
+    description: "小马看不到指标就想改题重发，大陈直接叫停：先写状态词。审核中不是失败，等分支落盘，通过后再看指标。#AI员工 #内容运营 #发布复盘"
+  kuaishou:
+    title: "先写状态别重发"
+    description: "审核中不是失败。小马想改题重发，大陈让它先写状态词、等分支落盘。"
+  wechat_channels:
+    title: "先写状态"
+    description: "机器人小马看到审核中就想改题重发，大陈叫停：先写状态词，审核中不是失败，通过后再看指标。"
+  weibo:
+    title: "审核中没出结果，就能改题重发吗？"
+    description: "不能。审核中不是失败，短期没指标也不等于内容差。大陈让机器人小马先写状态词、等审核分支落盘、锁住重复，通过后再看指标。#AI员工 #内容运营 #发布复盘"
+  bilibili:
+    title: "审核中不是失败：大陈让机器人小马先写状态分支，再看指标"
+    description: "这条讲多平台发布后最容易误判的一步：看到审核中或暂时没指标，就急着改题重发。AI员工应该先写状态词、记录审核分支、锁住重复，等通过后再看播放、完播和互动指标。"
+  xiaohongshu:
+    title: "审核中别重发"
+    description: "看到审核中，先别急着改题重发。大陈让小马先写状态词，等分支落盘，通过后再看指标。"
+  toutiao:
+    title: "审核中时，AI员工该不该改标题重发？"
+    description: "不应该。先写状态词，记录审核分支，锁住重复，等审核结果明确后再看指标。审核中不是失败，不能用改题重发补不确定。"
+  baijiahao:
+    title: "为什么审核中时，不该马上改题重发？"
+    description: "因为审核中不是失败，短期没有指标也不代表内容差。贸然改题重发会制造重复，也会打乱后续复盘。更稳妥的做法是先写状态词，等待审核分支落盘，通过后再看指标。"
+  zhihu:
+    title: "为什么审核中不是内容失败，也不该立刻改题重发？"
+    description: "因为审核中只是中间状态，不是内容强弱结论。此时应该记录状态词、等待审核分支、锁住重复，通过后再看数据指标，而不是马上改题重发。"
+publish_constraints:
+  require_management_page_verification: true
+  skip_duplicate_if_already_published: true
+  final_submit_requires_user_confirmation: true
+  do_not_publish: true
+  do_not_upload: true
+  do_not_click_submit: true
+  do_not_test_xiaohongshu: true
+fingerprints:
+  title_hash: "7843669bb25d5d603d71fd6b3bb4c561766513ec363b16f234500ab8e7a745bb"
+  body_core_hash: "f50737bd2efc6849fb9016c5c19582cf05f37b765d70313bf4e4a67140a1b910"
+  video_sha256: "ac9129d9b72897173fe422f87c0270de53a77378b2b66a2c3dc52b9905aab37a"
+  raw_video_sha256: "6030f6cf73c88f019c84d8e737f153676ac832ed90ebd41366c43a624db54785"
+  cover_sha256: "0b372e44430021ad07033b233abb9a21d3d14f14bf002ae20f8ffe0ad9e75623"
+  cover_3_4_sha256: "0b372e44430021ad07033b233abb9a21d3d14f14bf002ae20f8ffe0ad9e75623"
+  cover_4_3_sha256: "c5dd816c2c7a4c1b5fb4ddf431a6f73045b506e7900304eac097bf4ed02ab421"
+lock_dir: "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks"
+receipt_schema:
+  future_platform_receipt_fields:
+    - "actor"
+    - "actor_session_id"
+    - "status"
+    - "verified_by"
+    - "lock_path"
+    - "submitted_at"
+    - "published_at"
+    - "video_path"
+    - "cover_path"
+    - "cover_thumbnail_present"
+    - "cover_readability_passed"
+hermes:
+  json_package: "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-15-ai-employee-status-branch-before-rewrite.json"
+  receipt_path: "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-15-ai-employee-status-branch-before-rewrite.json"
+  allow_live: false
+  platforms_supported_now:
+    - "bilibili"
+    - "toutiao"
+    - "zhihu"
+    - "baijiahao"
+    - "kuaishou"
+    - "weibo"
+    - "wechat_channels"
+  unsupported_platforms:
+    douyin: "unsupported_by_current_hermes_skill"

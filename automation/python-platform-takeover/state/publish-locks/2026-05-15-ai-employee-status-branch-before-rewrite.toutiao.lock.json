@@ -1,0 +1,33 @@
+{
+  "campaign_id": "2026-05-15-ai-employee-status-branch-before-rewrite",
+  "platform_id": "toutiao",
+  "status": "under_review",
+  "title": "审核中时，AI员工该不该改标题重发？",
+  "description": "不应该。先写状态词，记录审核分支，锁住重复，等审核结果明确后再看指标。审核中不是失败，不能用改题重发补不确定。",
+  "submitted_at": "2026-05-15T11:54:00+08:00",
+  "recorded_at": "2026-05-15T11:56:06+08:00",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/toutiao.md",
+  "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platform-upload-map.md",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
+  "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
+  "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
+  "cover_path_used": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
+  "cover_sha256": "0b372e44430021ad07033b233abb9a21d3d14f14bf002ae20f8ffe0ad9e75623",
+  "cover_dimensions": "1080x1440",
+  "fallback_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
+  "current_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
+  "management_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
+  "result_path": "/Users/baishangjituan/Documents/push/toutiao_publish_result_20260515.json",
+  "manager_screenshot": "/Users/baishangjituan/Documents/push/toutiao-manager-verified-20260515.png",
+  "verified_by": "Toutiao 作品管理 exact-title row and 审核中 status via Chrome DevTools/CDP",
+  "feishu_notification": {
+    "sent": true,
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "message_id": "om_x100b6f5dd8d7f4acc49f2ea39879989",
+    "sent_at": "2026-05-15T11:56:17+08:00",
+    "method": "lark-cli im +messages-send --as bot",
+    "idempotency_key": "tt-20260515-1154"
+  },
+  "updated_at": "2026-05-15T11:56:17+08:00"
+}
