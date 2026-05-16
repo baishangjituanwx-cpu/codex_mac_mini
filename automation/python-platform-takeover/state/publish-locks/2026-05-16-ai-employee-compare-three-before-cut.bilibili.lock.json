@@ -1,0 +1,16 @@
+{
+  "campaign_id": "2026-05-16-ai-employee-compare-three-before-cut",
+  "platform_id": "bilibili",
+  "platform": "B站",
+  "status": "locked_after_verified_publish",
+  "locked_at": "2026-05-16T12:05:20.117+08:00",
+  "reason": "B站已发布并核验成功，防止重复发布。",
+  "title": "别凭感觉砍内容：AI员工先做同账号三条对照，再决定怎么改",
+  "video_sha256": "69372d631ced9f8df5e690d3188f012e06a69e88eb18137980f87e5add865ba3",
+  "cover_sha256": "6d9e3073d86098940d5b1072c2512bbf3b3bf466f3f8f87fb3b299e6e0562973",
+  "bvid": "BV1F15r69EJr",
+  "public_url": "https://www.bilibili.com/video/BV1F15r69EJr/",
+  "result_path": "/Users/baishangjituan/Documents/push/bilibili_publish_result_20260516.json",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-16-ai-employee-compare-three-before-cut.json",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1"
+}

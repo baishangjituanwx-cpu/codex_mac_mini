@@ -1,86 +1,86 @@
 {
   "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
-  "campaign_id": "2026-05-15-ai-employee-status-branch-before-rewrite",
+  "campaign_id": "2026-05-16-ai-employee-compare-three-before-cut",
   "status": "ready_for_publish",
-  "content_package_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-15-ai-employee-status-branch-before-rewrite.yaml",
-  "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package",
-  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-15-ai-employee-status-branch-before-rewrite.json",
+  "content_package_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-16-ai-employee-compare-three-before-cut.yaml",
+  "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-16-ai-employee-compare-three-before-cut.json",
   "scope": "all_platforms",
   "platform_upload_plan": {
     "douyin": {
       "platform_label": "抖音",
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/douyin.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/douyin.md"
     },
     "kuaishou": {
       "platform_label": "快手",
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/kuaishou.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/kuaishou.md"
     },
     "wechat_channels": {
       "platform_label": "微信视频号",
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/wechat_channels.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/wechat_channels.md"
     },
     "weibo": {
       "platform_label": "微博",
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/weibo.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/weibo.md"
     },
     "bilibili": {
       "platform_label": "B站",
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/bilibili.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/bilibili.md"
     },
     "xiaohongshu": {
       "platform_label": "小红书",
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/xiaohongshu.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/xiaohongshu.md"
     },
     "toutiao": {
       "platform_label": "头条号",
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/toutiao.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/toutiao.md"
     },
     "baijiahao": {
       "platform_label": "百家号",
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/baijiahao.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/baijiahao.md"
     },
     "zhihu": {
       "platform_label": "知乎",
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_cover_package/cover-horizontal-4x3.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-15-ai-employee-status-branch-before-rewrite_content_package/platforms/zhihu.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/zhihu.md"
     }
   },
   "fingerprints": {
-    "title_hash": "7843669bb25d5d603d71fd6b3bb4c561766513ec363b16f234500ab8e7a745bb",
-    "body_core_hash": "f50737bd2efc6849fb9016c5c19582cf05f37b765d70313bf4e4a67140a1b910",
-    "video_sha256": "ac9129d9b72897173fe422f87c0270de53a77378b2b66a2c3dc52b9905aab37a",
-    "raw_video_sha256": "6030f6cf73c88f019c84d8e737f153676ac832ed90ebd41366c43a624db54785",
-    "cover_sha256": "0b372e44430021ad07033b233abb9a21d3d14f14bf002ae20f8ffe0ad9e75623",
-    "cover_3_4_sha256": "0b372e44430021ad07033b233abb9a21d3d14f14bf002ae20f8ffe0ad9e75623",
-    "cover_4_3_sha256": "c5dd816c2c7a4c1b5fb4ddf431a6f73045b506e7900304eac097bf4ed02ab421"
+    "title_hash": "f1adeb98ff12f7acb5add8b6fdf393fb88fd6d33be602615a8f981690ab98851",
+    "body_core_hash": "8cec325d1db4e2c317234dd5cc98d454a5671aca783160daf314091d450f60f2",
+    "video_sha256": "69372d631ced9f8df5e690d3188f012e06a69e88eb18137980f87e5add865ba3",
+    "raw_video_sha256": "32502b2a8b749067f283b1f1f35360758f49ad95ea530a41812ae40fcb2612d9",
+    "cover_sha256": "0e6223f4e7f4bdb514686c54580fb7c060fe9b0079df76e44cacb1fd0e32934d",
+    "cover_3_4_sha256": "0e6223f4e7f4bdb514686c54580fb7c060fe9b0079df76e44cacb1fd0e32934d",
+    "cover_4_3_sha256": "6d9e3073d86098940d5b1072c2512bbf3b3bf466f3f8f87fb3b299e6e0562973"
   },
   "lock_dir": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks",
   "allow_live": false,
-  "updated_at": "2026-05-15T10:46:18+08:00"
+  "updated_at": "2026-05-16T00:43:30+08:00"
 }

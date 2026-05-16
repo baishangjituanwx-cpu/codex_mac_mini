@@ -1,0 +1,20 @@
+{
+  "campaign_id": "2026-05-16-ai-employee-compare-three-before-cut",
+  "platform_id": "douyin",
+  "status": "published",
+  "title": "别凭感觉砍内容",
+  "aweme_id": "7640325577219509538",
+  "share_link": "https://www.iesdouyin.com/share/video/7640325577219509538/",
+  "submitted_at": "2026-05-16T11:25:30+08:00",
+  "recorded_at": "2026-05-16T11:28:05+08:00",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4",
+  "video_sha256": "69372d631ced9f8df5e690d3188f012e06a69e88eb18137980f87e5add865ba3",
+  "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png",
+  "cover_sha256": "0e6223f4e7f4bdb514686c54580fb7c060fe9b0079df76e44cacb1fd0e32934d",
+  "horizontal_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png",
+  "horizontal_cover_sha256": "6d9e3073d86098940d5b1072c2512bbf3b3bf466f3f8f87fb3b299e6e0562973",
+  "verified_by": "Douyin creator work-list API exact-title match via Chrome DevTools/CDP; status 0 and status 1 matched after publish click",
+  "result_path": "/Users/baishangjituan/Documents/push/douyin_publish_result_20260516_compare_three_before_cut.json",
+  "published_at": "2026-05-16T11:25:30+08:00"
+}

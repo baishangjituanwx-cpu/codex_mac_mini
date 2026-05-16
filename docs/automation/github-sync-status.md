@@ -2199,3 +2199,23 @@
   - 未提交 `automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json` 及其两个 `.stale-*` 文件，因为它们是旧运行态残留，不属于 `2026-05-15` 这批待同步变更。
   - 未在 `codex/default-python-sync` 重复提交 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` 与 `*.cmd`，因为这些 Windows launcher 已由 `codex/windows-version-20260411` 的现有提交承载，且当前工作区文件与该分支内容一致。
   - 由于当前环境禁止连接 GitHub SSH 端口 `22` 与 `443`，本轮只能把 generic sync commit 与执行记录保留在本地分支，等待后续在允许联网的运行环境中补推。
+
+## 2026-05-16 01:37:34 CST
+- 检测到新的技能变更批次: 新增 `3`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover`；核心是新增 `2026-05-16-ai-employee-compare-three-before-cut` 的 content package、Hermes handoff 包和初始 publish receipt，并把 `state/hermes-handoff/latest.json` 从 `2026-05-15-ai-employee-status-branch-before-rewrite` 切换到这条新的全平台 ready-for-publish campaign。
+- 建议后续执行 GitHub 同步，避免这批新的 campaign 配置、receipt 骨架与 latest handoff 指针继续只停留在本地工作区。
+
+## 2026-05-16 11:47:45 CST
+- 检测到新的技能变更批次: 新增 `7`，修改 `1`，删除 `0`。
+- 这批变更继续集中在 `automation/python-platform-takeover`；核心是 `2026-05-16-ai-employee-compare-three-before-cut` 新增了百家号、抖音、快手、头条、视频号、微博、知乎 7 个平台锁文件，并把同名 publish receipt 从初始骨架扩展成含多平台发布结果、头条审核中状态、视频号登录阻塞、截图证据与飞书通知元数据的完整台账。
+- 建议后续执行 GitHub 同步，避免这批新的多平台发布状态与阻塞记录继续只停留在本地工作区。
+
+## 2026-05-16 12:49:36 CST
+- 检测到新的技能变更批次: 新增 `1`，修改 `2`，删除 `0`。
+- 这批变更继续集中在 `automation/python-platform-takeover/state/`；核心是 `2026-05-16-ai-employee-compare-three-before-cut` 新增了 Bilibili 发布锁，并把同名 receipt 与视频号锁文件推进到“B站已核验发布、视频号草稿待最终确认”的更后状态。
+- 建议后续执行 GitHub 同步，避免这批新的 B站发布凭据与视频号待提交状态继续只停留在本地工作区。
+
+## 2026-05-16 13:49:40 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `2`，删除 `0`。
+- 这批变更继续集中在 `automation/python-platform-takeover/state/`；核心是 `2026-05-16-ai-employee-compare-three-before-cut` 的视频号 lock 与共享 receipt 从“草稿待确认”推进到“已发布并核验”，补齐管理页证据、最终标题调整、结果路径和飞书通知回执。
+- 建议后续执行 GitHub 同步，避免这批新的视频号正式发布台账继续只停留在本地工作区。

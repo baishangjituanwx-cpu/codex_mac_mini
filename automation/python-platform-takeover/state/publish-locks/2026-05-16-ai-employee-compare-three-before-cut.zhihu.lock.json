@@ -1,0 +1,47 @@
+{
+  "campaign_id": "2026-05-16-ai-employee-compare-three-before-cut",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "platform": "zhihu",
+  "status": "published",
+  "updated_at": "2026-05-16T03:37:04.762Z",
+  "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/zhihu.md",
+  "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-16-ai-employee-compare-three-before-cut-zhihu.md",
+  "title": "为什么内容复盘不能只看单条表现，就立刻判失败？",
+  "body": "因为单条数据常常受发布时间、审核状态和指标延迟影响。判断内容是否要改，应该先补同账号同格式近作对照，再看播放、完播和互动是否支持这个结论。",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4",
+  "video_sha256": "69372d631ced9f8df5e690d3188f012e06a69e88eb18137980f87e5add865ba3",
+  "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png",
+  "required_cover_sha256": "0e6223f4e7f4bdb514686c54580fb7c060fe9b0079df76e44cacb1fd0e32934d",
+  "duplicate_guard": {
+    "profile": {
+      "hasExpectedTitle": false,
+      "hasExpectedBody": false,
+      "exactLink": null
+    },
+    "posts": {
+      "hasExpectedTitle": false,
+      "hasExpectedBody": false,
+      "exactLink": null
+    },
+    "manage": {
+      "hasExpectedTitle": false,
+      "hasExpectedBody": false,
+      "exactLink": null
+    }
+  },
+  "error": "Error: AI tag option not found\n    at ensureAiTag (file:///Users/baishangjituan/Documents/push/zhihu_publish_20260516_cdp.mjs:640:25)\n    at async fillAndVerify (file:///Users/baishangjituan/Documents/push/zhihu_publish_20260516_cdp.mjs:669:3)\n    at async main (file:///Users/baishangjituan/Documents/push/zhihu_publish_20260516_cdp.mjs:818:46)",
+  "published_at": "发布于2026-05-16 11:36",
+  "public_url": "https://www.zhihu.com/pin/2038944165472515774",
+  "share_link": "https://www.zhihu.com/pin/2038944165472515774?page=video_pin&scene=share",
+  "external_id": "2038944165472515774",
+  "result_path": "/Users/baishangjituan/Documents/push/zhihu_20260516_publish_result.json",
+  "screenshots": {
+    "duplicateManage": "/Users/baishangjituan/Documents/push/zhihu-20260516-resume-duplicate-manage.png",
+    "duplicateProfile": "/Users/baishangjituan/Documents/push/zhihu-20260516-resume-duplicate-profile.png",
+    "duplicatePosts": "/Users/baishangjituan/Documents/push/zhihu-20260516-resume-duplicate-profile-posts.png",
+    "preSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260516-resume-pre-submit.png",
+    "afterSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260516-resume-after-submit.png",
+    "profile": "/Users/baishangjituan/Documents/push/zhihu-20260516-profile-verified.png",
+    "public": "/Users/baishangjituan/Documents/push/zhihu-20260516-public-verified.png"
+  }
+}

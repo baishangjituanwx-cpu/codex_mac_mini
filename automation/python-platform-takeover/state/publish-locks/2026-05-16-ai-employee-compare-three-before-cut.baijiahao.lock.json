@@ -1,0 +1,62 @@
+{
+  "campaign_id": "2026-05-16-ai-employee-compare-three-before-cut",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "platform": "baijiahao",
+  "status": "published_verified",
+  "locked_at": "2026-05-16T11:25:32+08:00",
+  "actor": "Codex",
+  "actor_session_id": "current-codex-desktop-session",
+  "content_package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package",
+  "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/baijiahao.md",
+  "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platform-upload-map.md",
+  "automation_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-16-ai-employee-compare-three-before-cut.yaml",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-16-ai-employee-compare-three-before-cut.json",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4",
+  "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png",
+  "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png",
+  "title": "为什么不能只看单条数据，就判内容失败？",
+  "description": "因为单条暂时没指标，不等于内容失败。更稳妥的做法是先看同账号、同格式、近三条对照，补齐播放、完播和互动，再决定是否修改。",
+  "user_confirmation": "2026-05-16 current-thread explicit request to start latest platform publish task; user emphasized correct package cover file",
+  "package_boundaries_overridden_by_user_confirmation": true,
+  "fingerprints": {
+    "video_sha256": "69372d631ced9f8df5e690d3188f012e06a69e88eb18137980f87e5add865ba3",
+    "cover_sha256": "6d9e3073d86098940d5b1072c2512bbf3b3bf466f3f8f87fb3b299e6e0562973",
+    "backup_cover_sha256": "0e6223f4e7f4bdb514686c54580fb7c060fe9b0079df76e44cacb1fd0e32934d"
+  },
+  "duplicate_guard": {
+    "local_receipt": "no_baijiahao_receipt",
+    "local_baijiahao_lock_before": "none",
+    "management_exact_title_found": false,
+    "checked_at": "2026-05-16T11:25:32+08:00",
+    "result_path": "/Users/baishangjituan/Documents/push/baijiahao_duplicate_guard_20260516_ui.json",
+    "screenshot_path": "/Users/baishangjituan/Documents/push/baijiahao-20260516-duplicate-guard-ui.png",
+    "result": "passed"
+  },
+  "cover_policy": "Baijiahao must use local horizontal 4:3 cover-horizontal-4x3.png; do not rely on platform default/AI cover.",
+  "submitted_at": "2026-05-16T11:30:54+08:00",
+  "published_at": "2026-05-16T11:30:54+08:00",
+  "verified_at": "2026-05-16T11:33:10+08:00",
+  "management_status": "已发布音频",
+  "manager_row_context": "为什么不能只看单条数据，就判内容失败？ 2026-05-16 11:30:54 已发布音频 0 0 0 0 0 0 内容加热 加入合集 查看评论 更多",
+  "share_link": "http://baijiahao.baidu.com/builder/preview/s?id=3743849488779733901",
+  "external_id": "3743849488779733901",
+  "result_path": "/Users/baishangjituan/Documents/push/baijiahao_publish_click_20260516.json",
+  "status_recheck_result_path": "/Users/baishangjituan/Documents/push/baijiahao_manager_verify_20260516.json",
+  "screenshots": {
+    "duplicate_guard": "/Users/baishangjituan/Documents/push/baijiahao-20260516-duplicate-guard-ui.png",
+    "after_video_upload": "/Users/baishangjituan/Documents/push/baijiahao-20260516-after-video-upload.png",
+    "cover_confirmed": "/Users/baishangjituan/Documents/push/baijiahao-20260516-fill-title-ai-cover.png",
+    "ready_before_submit": "/Users/baishangjituan/Documents/push/baijiahao-20260516-before-submit.png",
+    "after_submit": "/Users/baishangjituan/Documents/push/baijiahao-20260516-after-submit.png",
+    "manager_verified": "/Users/baishangjituan/Documents/push/baijiahao-20260516-manager-verified.png"
+  },
+  "feishu_notification": {
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "message_id": "om_x100b6f4a16d950acc4eb33f1d952ace",
+    "sent_at": "2026-05-16T11:33:21+08:00",
+    "idempotency_key": "bjh0516compare3",
+    "method": "lark-cli im +messages-send --as bot",
+    "summary": "Sent Baijiahao published notification with 2026-05-16 campaign, title, external_id, required horizontal cover, duplicate guard, and receipt writeback status."
+  },
+  "updated_at": "2026-05-16T11:33:40+08:00"
+}

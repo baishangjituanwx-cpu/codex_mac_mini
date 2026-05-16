@@ -2316,3 +2316,37 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-15 22:02:05 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天需要明确记录的是“新增的是共享 campaign 配置与发布台账，不是新的 Windows 转译工作”。
+
+## 2026-05-16 22:02:52 CST
+
+- 处理时间:
+  - `2026-05-16 22:02:52 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-15 22:02:05 CST` 之后追加且此前未写入本状态文件的非零批次:
+    - `2026-05-16 01:37:34 CST`
+    - `2026-05-16 11:47:45 CST`
+    - `2026-05-16 12:49:36 CST`
+    - `2026-05-16 13:49:40 CST`
+  - 同一时间段内其余追加批次，包括 `2026-05-15 22:35:11 CST` 至 `2026-05-16 21:00:49 CST` 的其余记录，结果均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - 无新增 Windows 专属补丁文件、PowerShell launcher、`.cmd` wrapper、路径分叉、快捷键桥接或文档分叉需要补写；本轮明确记录“无需转译”。
+  - 已复核上述 4 个非零批次的新增 / 修改项都只落在 `automation/python-platform-takeover/` 的共享 campaign 配置与运行态台账:
+    - `configs/content-package.2026-05-16-ai-employee-compare-three-before-cut.yaml`
+    - `configs/hermes-package.2026-05-16-ai-employee-compare-three-before-cut.json`
+    - `state/hermes-handoff/latest.json`
+    - `state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.{baijiahao,bilibili,douyin,kuaishou,toutiao,wechat_channels,weibo,zhihu}.lock.json`
+    - `state/publish-receipts/2026-05-16-ai-employee-compare-three-before-cut.json`
+  - 这些变更只是推进既有跨平台发布流程里的 content package、Hermes handoff、publish lock 和 receipt 留痕，不引入新的 Mac-only 自定义 skill 行为；现有 Windows 覆盖继续适用:
+    - `automation/python-platform-takeover/scripts/social-publisher.ps1` 继续直接消费共享 Python CLI，对 `validate-package`、`receipt-status`、`record-receipt`、`publish` 和 receipt / lock 读写工作流无需新增 Windows 包装层。
+    - `automation/python-platform-takeover/README.md` 已覆盖 Windows 下日期化 content package 的路径改写、`state/hermes-handoff/latest.json` 作为接力入口的用法，以及 `ready_for_final_confirmation`、`published_verified`、`under_review`、`verified` 等共享状态留痕，不需要因为这批 YAML / JSON / lock / receipt 落库再新增分叉说明。
+  - 明确结论:
+    - 今天没有新的 Windows 转译工作；本轮只追加状态记录，并明确记录这些新增项无需转译。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-16` 当前已记录的非零批次没有新增需要转译的 PowerShell launcher、Windows 路径处理、Windows 文档、快捷键差异、命令包装器或 repo 资产。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮只做 monitor 批次复核与状态记录，没有新增任何需要单独做 PowerShell 语法验证的 Windows 文件；判断基于 `skill-change-monitor.md` 条目核对，以及 `automation/python-platform-takeover` 现有 Windows 入口与 README 覆盖范围复核。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-16 22:02:52 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天需要明确记录的是“新增的是共享 campaign 配置与发布台账，不是新的 Windows 转译工作”。

@@ -1,0 +1,142 @@
+source_thread_id: "019d9ac2-d680-7f12-bf32-14678c576aa1"
+campaign_id: "2026-05-16-ai-employee-compare-three-before-cut"
+status: "ready_for_publish"
+package_status: "ready_for_platform_publishing"
+scope: "all_platforms"
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4"
+  backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png"
+support_files:
+  content_package_root: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package"
+  final_verify_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/final-verify.json"
+  platform_upload_map: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platform-upload-map.md"
+  cover_package_root: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package"
+platform_upload_plan:
+  douyin:
+    platform_label: "抖音"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/douyin.md"
+  kuaishou:
+    platform_label: "快手"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/kuaishou.md"
+  wechat_channels:
+    platform_label: "微信视频号"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/wechat_channels.md"
+  weibo:
+    platform_label: "微博"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/weibo.md"
+  bilibili:
+    platform_label: "B站"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/bilibili.md"
+  xiaohongshu:
+    platform_label: "小红书"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/xiaohongshu.md"
+  toutiao:
+    platform_label: "头条号"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/toutiao.md"
+  baijiahao:
+    platform_label: "百家号"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/baijiahao.md"
+  zhihu:
+    platform_label: "知乎"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/zhihu.md"
+platforms:
+  douyin:
+    title: "别凭感觉砍内容"
+    description: "小马看到单条没指标就想砍掉重做，大陈直接拦住：先比三条。指标没齐，别凭感觉砍。#AI员工 #内容运营 #复盘"
+  kuaishou:
+    title: "先比三条再改"
+    description: "单条没指标，不等于内容差。大陈让小马先看同账号同格式，再决定怎么改。"
+  wechat_channels:
+    title: "先比三条"
+    description: "机器人小马想直接砍内容，大陈叫停：指标还没齐，先比同账号同格式三条，再改。"
+  weibo:
+    title: "一条没指标，就能判内容差吗？"
+    description: "不能。大陈让机器人小马先补三条同账号同格式对照：播放、完播、互动没齐之前，别凭感觉砍内容。#AI员工 #内容运营 #复盘"
+  bilibili:
+    title: "别凭感觉砍内容：AI员工先做同账号三条对照，再决定怎么改"
+    description: "这条讲多平台发布后最容易犯的第二个错：看到单条暂时没指标，就想砍掉重做。大陈让机器人小马先补同账号、同格式、近三条对照，再判断内容要不要改。"
+  xiaohongshu:
+    title: "别急着砍内容"
+    description: "单条没指标，先别急着否定。大陈让小马先比三条同格式，再决定怎么改。"
+  toutiao:
+    title: "一条暂时没指标，AI员工能直接判内容差吗？"
+    description: "不能。先补同账号同格式近三条对照，看播放、完播、互动是否齐全，再决定是否改内容。没证据时，最怕凭感觉砍掉重做。"
+  baijiahao:
+    title: "为什么不能只看单条数据，就判内容失败？"
+    description: "因为单条暂时没指标，不等于内容失败。更稳妥的做法是先看同账号、同格式、近三条对照，补齐播放、完播和互动，再决定是否修改。"
+  zhihu:
+    title: "为什么内容复盘不能只看单条表现，就立刻判失败？"
+    description: "因为单条数据常常受发布时间、审核状态和指标延迟影响。判断内容是否要改，应该先补同账号同格式近作对照，再看播放、完播和互动是否支持这个结论。"
+publish_constraints:
+  require_management_page_verification: true
+  skip_duplicate_if_already_published: true
+  final_submit_requires_user_confirmation: true
+  do_not_publish: true
+  do_not_upload: true
+  do_not_click_submit: true
+  do_not_test_xiaohongshu: true
+fingerprints:
+  title_hash: "f1adeb98ff12f7acb5add8b6fdf393fb88fd6d33be602615a8f981690ab98851"
+  body_core_hash: "8cec325d1db4e2c317234dd5cc98d454a5671aca783160daf314091d450f60f2"
+  video_sha256: "69372d631ced9f8df5e690d3188f012e06a69e88eb18137980f87e5add865ba3"
+  raw_video_sha256: "32502b2a8b749067f283b1f1f35360758f49ad95ea530a41812ae40fcb2612d9"
+  cover_sha256: "0e6223f4e7f4bdb514686c54580fb7c060fe9b0079df76e44cacb1fd0e32934d"
+  cover_3_4_sha256: "0e6223f4e7f4bdb514686c54580fb7c060fe9b0079df76e44cacb1fd0e32934d"
+  cover_4_3_sha256: "6d9e3073d86098940d5b1072c2512bbf3b3bf466f3f8f87fb3b299e6e0562973"
+lock_dir: "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks"
+receipt_schema:
+  future_platform_receipt_fields:
+    - "actor"
+    - "actor_session_id"
+    - "status"
+    - "verified_by"
+    - "lock_path"
+    - "submitted_at"
+    - "published_at"
+    - "video_path"
+    - "cover_path"
+    - "cover_thumbnail_present"
+    - "cover_readability_passed"
+hermes:
+  json_package: "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-16-ai-employee-compare-three-before-cut.json"
+  receipt_path: "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-16-ai-employee-compare-three-before-cut.json"
+  allow_live: false
+  platforms_supported_now:
+    - "bilibili"
+    - "toutiao"
+    - "zhihu"
+    - "baijiahao"
+    - "kuaishou"
+    - "weibo"
+    - "wechat_channels"
+  unsupported_platforms:
+    douyin: "unsupported_by_current_hermes_skill"

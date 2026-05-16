@@ -1,0 +1,39 @@
+{
+  "campaign_id": "2026-05-16-ai-employee-compare-three-before-cut",
+  "platform_id": "toutiao",
+  "status": "under_review",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "created_at": "2026-05-16T11:29:30+08:00",
+  "updated_at": "2026-05-16T11:29:26+08:00",
+  "title": "一条暂时没指标，AI员工能直接判内容差吗？",
+  "description": "不能。先补同账号同格式近三条对照，看播放、完播、互动是否齐全，再决定是否改内容。没证据时，最怕凭感觉砍掉重做。",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4",
+  "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png",
+  "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png",
+  "fallback_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png",
+  "submitted_at": "2026-05-16T11:24:00+08:00",
+  "verified_at": "2026-05-16T11:29:30+08:00",
+  "verification": {
+    "manager_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
+    "manager_status": "审核中",
+    "manager_row_time": "05-16 11:24",
+    "manager_row_context": "6 条内容\n00:15\n一条暂时没指标，AI员工能直接判内容差吗？\n05-16 11:24\n审核中\n删除作品\n00:15\n审核中时，AI员工该不该改标题重发？\n展现 71\n播放 0\n点赞 0\n评论 0\n05-15 11:54",
+    "publish_success_text": "全部发表成功",
+    "screenshot": "/Users/baishangjituan/Documents/push/toutiao-manager-verified-20260516.png",
+    "result_path": "/Users/baishangjituan/Documents/push/toutiao_publish_result_20260516.json"
+  },
+  "duplicate_guard": {
+    "local_receipt_checked_before_publish": true,
+    "blocking_toutiao_receipt_absent_before_publish": true,
+    "manager_exact_title_absent_before_publish": true,
+    "manager_before_screenshot": "/Users/baishangjituan/Documents/push/toutiao-manager-before-20260516.png"
+  },
+  "feishu_notification": {
+    "sent": true,
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "message_id": "om_x100b6f4a07ac9ca8c313ddd28689487",
+    "sent_at": "2026-05-16T11:29:26+08:00",
+    "method": "lark-cli im +messages-send --as bot",
+    "idempotency_key": "tt-20260516-1124"
+  }
+}

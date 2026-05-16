@@ -1,0 +1,90 @@
+{
+  "campaign_id": "2026-05-16-ai-employee-compare-three-before-cut",
+  "platform": "kuaishou",
+  "status": "published",
+  "created_at": "2026-05-16T03:20:54.726Z",
+  "updated_at": "2026-05-16T11:34:50+08:00",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "content_package_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-16-ai-employee-compare-three-before-cut.yaml",
+  "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package",
+  "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platforms/kuaishou.md",
+  "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_content_package/platform-upload-map.md",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-16-ai-employee-compare-three-before-cut.json",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut-publish.mp4",
+  "raw_video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut.mp4",
+  "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png",
+  "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-horizontal-4x3.png",
+  "title": "先比三条再改",
+  "description": "单条没指标，不等于内容差。大陈让小马先看同账号同格式，再决定怎么改。",
+  "user_confirmation": "2026-05-16 current-thread explicit request to start latest Kuaishou publish task",
+  "package_boundaries_overridden_by_user_confirmation": true,
+  "fingerprints": {
+    "video_sha256": "69372d631ced9f8df5e690d3188f012e06a69e88eb18137980f87e5add865ba3",
+    "raw_video_sha256": "32502b2a8b749067f283b1f1f35360758f49ad95ea530a41812ae40fcb2612d9",
+    "cover_sha256": "0e6223f4e7f4bdb514686c54580fb7c060fe9b0079df76e44cacb1fd0e32934d",
+    "backup_cover_sha256": "6d9e3073d86098940d5b1072c2512bbf3b3bf466f3f8f87fb3b299e6e0562973"
+  },
+  "duplicate_guard": {
+    "local_receipt": "no_kuaishou_receipt",
+    "local_receipt_status": "not_published",
+    "checked_at": "2026-05-16T03:20:54.726Z",
+    "management_page_exact_match": false,
+    "management_pages_checked": [
+      "https://cp.kuaishou.com/article/manage/video",
+      "https://cp.kuaishou.com/article/manage/video?status=1",
+      "https://cp.kuaishou.com/article/manage/video?status=2",
+      "https://cp.kuaishou.com/article/manage/video?status=3"
+    ],
+    "management_count_before": "共33个作品",
+    "screenshots": [
+      "/Users/baishangjituan/Documents/push/kuaishou-20260516-duplicate-guard-0.png",
+      "/Users/baishangjituan/Documents/push/kuaishou-20260516-duplicate-guard-1.png",
+      "/Users/baishangjituan/Documents/push/kuaishou-20260516-duplicate-guard-2.png",
+      "/Users/baishangjituan/Documents/push/kuaishou-20260516-duplicate-guard-3.png"
+    ],
+    "result": "passed"
+  },
+  "completed_at": "2026-05-16T11:34:50+08:00",
+  "result_path": "/Users/baishangjituan/Documents/push/kuaishou_publish_result_20260516_compare_three_before_cut.json",
+  "receipt_status": "published",
+  "manager_verification": {
+    "manager_count_before": "共33个作品",
+    "manager_count_after": "共34个作品",
+    "manager_row_status_text": "已发布",
+    "manager_row_time": "2026-05-16 11:30",
+    "manager_row_context": "单条没指标，不等于内容差。大陈让小马先看同账号同格式，再决定怎么改。 已发布 2026-05-16 11:30",
+    "manager_exact_description_match": true,
+    "manager_exact_title_match": false,
+    "page_status_filter_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+    "submit_success_text_seen": true,
+    "duplicate_guard": "Before upload, local receipt had no kuaishou receipt and Kuaishou 作品管理 pages all/published/under_review/failed had no exact current description match. After submit, 作品管理 matched exact description as 已发布.",
+    "required_cover_used": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-16-ai-employee-compare-three-before-cut_cover_package/cover-vertical-3x4.png",
+    "required_cover_thumbnail_verified_in_pre_submit_phone_preview": true,
+    "required_cover_thumbnail_verified_in_manager_row": true,
+    "video_input_method": "CDP DOM.setFileInputFiles",
+    "cover_input_method": "CDP DOM.setFileInputFiles",
+    "description_readback_exact_before_submit": true,
+    "package_boundaries_overridden_by_user_confirmation": true
+  },
+  "feishu_notification": {
+    "sent": true,
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "message_id": "om_x100b6f4a1369f8a0c43b8164229ac1d",
+    "sent_at": "2026-05-16T11:34:50+08:00",
+    "method": "lark-cli im +messages-send --as bot",
+    "idempotency_key": "kuaishou-20260516-1130"
+  },
+  "screenshots": {
+    "duplicate_guard_all": "/Users/baishangjituan/Documents/push/kuaishou-20260516-duplicate-guard-0.png",
+    "duplicate_guard_published": "/Users/baishangjituan/Documents/push/kuaishou-20260516-duplicate-guard-1.png",
+    "duplicate_guard_under_review": "/Users/baishangjituan/Documents/push/kuaishou-20260516-duplicate-guard-2.png",
+    "duplicate_guard_failed": "/Users/baishangjituan/Documents/push/kuaishou-20260516-duplicate-guard-3.png",
+    "publish_page_before_upload": "/Users/baishangjituan/Documents/push/kuaishou-20260516-publish-page-before-upload.png",
+    "after_click_publish_video": "/Users/baishangjituan/Documents/push/kuaishou-20260516-after-click-publish-video.png",
+    "after_video_upload": "/Users/baishangjituan/Documents/push/kuaishou-20260516-after-video-upload.png",
+    "after_cover_upload": "/Users/baishangjituan/Documents/push/kuaishou-20260516-after-cover-upload.png",
+    "pre_submit": "/Users/baishangjituan/Documents/push/kuaishou-20260516-pre-submit-ready.png",
+    "after_submit": "/Users/baishangjituan/Documents/push/kuaishou-20260516-after-submit.png",
+    "manager_verified": "/Users/baishangjituan/Documents/push/kuaishou-20260516-manager-verified.png"
+  }
+}
