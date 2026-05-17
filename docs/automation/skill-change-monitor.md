@@ -37596,3 +37596,989 @@
 ### 变更摘要
 - 本轮没有发现晚于 `2026-05-16T15:03:21Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
 - 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-17 01:04:17 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-16T16:01:57.023Z`（本地时区为 `2026-05-17 00:01:57.023 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 记录的上一轮完成时间是 `2026-05-16T15:03:21Z`；它早于任务头，因此本轮按任务头的 `2026-05-16T16:01:57.023Z` 作为有效基线，避免把用户已定义的更晚时间窗口回退
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`last-snapshot.json`、`last-summary.json` 与 `state.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json` 的 `2507` 条持久化快照逐项比对后，结果变为 `2507 -> 2510`，发现新增 `3`、修改 `1`、删除 `0`
+- 复核本批变更文件的 `mtime`，四个命中文件都落在 `2026-05-17 00:48:16 CST`，晚于有效基线 `2026-05-17 00:01:57.023 CST`
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `3`，修改 `1`，删除 `0`
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-evidence-grid-before-verdict.yaml` `added`
+  新建 `2026-05-17-ai-employee-evidence-grid-before-verdict` 的全平台发布内容包，绑定主视频、3:4/4:3 封面、9 个平台的标题描述，以及 `do_not_publish` / `do_not_upload` / `final_submit_requires_user_confirmation` 等禁发约束。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-17-ai-employee-evidence-grid-before-verdict.json` `added`
+  新建对应的 Hermes handoff 包，把该 campaign 的标题、描述、视频、封面和指纹整理成可交接 payload；当前仅开放 `bilibili`、`toutiao`、`zhihu`、`baijiahao`、`kuaishou`、`weibo`、`wechat_channels`，并明确 `douyin` 仍为 `unsupported_by_current_hermes_skill`。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json` `added`
+  新建该 campaign 的发布回执骨架，状态为 `not_published`，仅预置 future receipt schema、锁目录和内容指纹，等待后续平台级正式回填。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/hermes-handoff/latest.json` `modified`
+  将最新 handoff 指针从 `2026-05-16-ai-employee-compare-three-before-cut` 切换到 `2026-05-17-ai-employee-evidence-grid-before-verdict`，同步替换内容包路径、receipt 路径、各平台上传素材路径、封面/视频指纹和 `updated_at` 时间戳。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-16T16:01:57.023Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现新的技能支持自动化变更批次，全部集中在 `automation/python-platform-takeover`；核心是新增 `2026-05-17-ai-employee-evidence-grid-before-verdict` 的 content package、Hermes handoff 包和初始 publish receipt，并把 `state/hermes-handoff/latest.json` 从 `2026-05-16-ai-employee-compare-three-before-cut` 切换到这条新的 ready-for-publish campaign。
+- 这批变更应在后续 GitHub 同步时一并带上，避免新的 handoff 指针、发布骨架和 campaign 配置继续只停留在本地工作区。
+
+## 2026-05-17 02:05:18 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-16T17:02:27.174Z`（本地时区为 `2026-05-17 01:02:27.174 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 记录的上一轮完成时间是 `2026-05-16T17:05:10Z`（本地时区为 `2026-05-17 01:05:10 CST`）；由于它比任务头更晚，本轮继续以 `2026-05-16T17:05:10Z` 作为有效基线，避免把上一轮已经持久化的 `2026-05-17-ai-employee-evidence-grid-before-verdict` 变更批次重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`last-snapshot.json`、`last-summary.json` 与 `state.json`，确认上一轮持久化结果为新增 `3`、修改 `1`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json` 的 `2510` 条持久化快照逐项比对后，结果保持 `2510 -> 2510`，路径集合、整数秒 `mtime` 和 `size` 都完全一致，因此没有新增、修改或删除
+- 额外按有效基线 `2026-05-16T17:05:10Z` 复筛所有受监控文件的 `mtime`；结果为空，说明自上一轮运行以来没有新的新增或修改
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-16T17:05:10Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-16T17:05:10Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-17 03:05:30 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-16T18:03:57.390Z`（本地时区为 `2026-05-17 02:03:57.390 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 记录的上一轮完成时间是 `2026-05-16T18:06:29Z`（本地时区为 `2026-05-17 02:06:29 CST`）；由于它比任务头更晚，本轮继续以 `2026-05-16T18:06:29Z` 作为有效基线，避免把上一轮已经持久化的无变更结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`last-snapshot.json`、`last-summary.json` 与 `state.json`，确认上一轮持久化结果为新增 `0`、修改 `0`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json` 的 `2510` 条持久化快照逐项比对后，结果保持 `2510 -> 2510`，路径集合、整数秒 `mtime` 和 `size` 都完全一致，因此没有新增、修改或删除
+- 额外按有效基线 `2026-05-16T18:06:29Z` 复筛所有受监控文件的 `mtime`；结果为空，说明自上一轮运行以来没有新的新增或修改
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-16T18:06:29Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-16T18:06:29Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-17 04:07:19 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-16T19:04:28.164Z`（本地时区为 `2026-05-17 03:04:28.164 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 记录的上一轮完成时间是 `2026-05-16T19:06:56Z`（本地时区为 `2026-05-17 03:06:56 CST`）；由于它比任务头更晚，本轮继续以 `2026-05-16T19:06:56Z` 作为有效基线，避免把上一轮已经持久化的无变更结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`last-snapshot.json`、`last-summary.json` 与 `state.json`，确认上一轮持久化结果为新增 `0`、修改 `0`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json` 的 `2510` 条持久化快照逐项比对后，结果保持 `2510 -> 2510`，路径集合、整数秒 `mtime` 和 `size` 都完全一致，因此没有新增、修改或删除
+- 额外按有效基线 `2026-05-16T19:06:56Z` 复筛所有受监控文件的 `mtime`；结果为空，说明自上一轮运行以来没有新的新增或修改
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-16T19:06:56Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-16T19:06:56Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-17 05:08:55 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-16T20:05:58.265Z`（本地时区为 `2026-05-17 04:05:58.265 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 记录的上一轮完成时间是 `2026-05-16T20:07:19Z`（本地时区为 `2026-05-17 04:07:19 CST`）；由于它比任务头更晚，本轮继续以 `2026-05-16T20:07:19Z` 作为有效基线，避免把上一轮已经持久化的无变更结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`last-snapshot.json`、`last-summary.json` 与 `state.json`，确认上一轮持久化结果为新增 `0`、修改 `0`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json` 的 `2510` 条持久化快照逐项比对后，结果保持 `2510 -> 2510`，路径集合、整数秒 `mtime` 和 `size` 都完全一致，因此没有新增、修改或删除
+- 额外按有效基线 `2026-05-16T20:07:19Z` 复筛所有受监控文件的 `mtime`；结果为空，说明自上一轮运行以来没有新的新增或修改
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-16T20:07:19Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-16T20:07:19Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-17 06:09:20 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-16T21:07:28.458Z`（本地时区为 `2026-05-17 05:07:28.458 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 记录的上一轮完成时间是 `2026-05-16T21:08:55Z`（本地时区为 `2026-05-17 05:08:55 CST`）；由于它比任务头更晚，本轮继续以 `2026-05-16T21:08:55Z` 作为有效基线，避免把上一轮已经持久化的无变更结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`last-snapshot.json`、`last-summary.json` 与 `state.json`，确认上一轮持久化结果为新增 `0`、修改 `0`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json` 的 `2510` 条持久化快照逐项比对后，结果保持 `2510 -> 2510`，路径集合、整数秒 `mtime` 和 `size` 都完全一致，因此没有新增、修改或删除
+- 额外按有效基线 `2026-05-16T21:08:55Z` 复筛所有受监控文件的 `mtime`；结果为空，说明自上一轮运行以来没有新的新增或修改
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-16T21:08:55Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-16T21:08:55Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-17 07:10:03 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-16T22:07:58.430Z`（本地时区为 `2026-05-17 06:07:58.430 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 记录的上一轮完成时间是 `2026-05-17T06:09:20Z`（沿用监控状态文件既有写法，对应上一轮记录里的 `2026-05-17 06:09:20 CST`）；由于它比任务头更晚，本轮继续以 `2026-05-17T06:09:20Z` 作为有效基线，避免把上一轮已经持久化的无变更结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`last-snapshot.json`、`last-summary.json` 与 `state.json`，确认上一轮持久化结果为新增 `0`、修改 `0`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json` 的 `2510` 条持久化快照逐项比对后，结果保持 `2510 -> 2510`，路径集合、整数秒 `mtime` 和 `size` 都完全一致，因此没有新增、修改或删除
+- 额外按有效基线 `2026-05-17T06:09:20Z` 复筛所有受监控文件的 `mtime`；结果为空，说明自上一轮运行以来没有新的新增或修改
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-17T06:09:20Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-17T06:09:20Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-17 08:11:28 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-16T23:08:28.848Z`（本地时区为 `2026-05-17 07:08:28.848 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 记录的上一轮完成时间是 `2026-05-16T23:11:22Z`；由于它比任务头更晚，本轮继续以 `2026-05-16T23:11:22Z` 作为有效基线，避免把上一轮已经持久化的无变更结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`last-snapshot.json`、`last-summary.json` 与 `state.json`，确认上一轮持久化结果为新增 `0`、修改 `0`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json` 的 `2510` 条持久化快照逐项比对后，结果保持 `2510 -> 2510`，路径集合、整数秒 `mtime` 和 `size` 都完全一致，因此没有新增、修改或删除
+- 额外按有效基线 `2026-05-16T23:11:22Z` 复筛所有受监控文件的 `mtime`；结果为空，说明自上一轮运行以来没有新的新增或修改
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-16T23:11:22Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-16T23:11:22Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-17 09:12:07 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-17T00:10:29.345Z`（本地时区为 `2026-05-17 08:10:29.345 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 记录的上一轮完成时间是 `2026-05-17T00:11:28Z`；由于它比任务头更晚，本轮继续以 `2026-05-17T00:11:28Z` 作为有效基线，避免把上一轮已经持久化的无变更结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`last-snapshot.json`、`last-summary.json` 与 `state.json`，确认上一轮持久化结果为新增 `0`、修改 `0`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json` 的 `2510` 条持久化快照逐项比对后，结果保持 `2510 -> 2510`，路径集合、整数秒 `mtime` 和 `size` 都完全一致，因此没有新增、修改或删除
+- 额外按有效基线 `2026-05-17T00:11:28Z` 复筛所有受监控文件的 `mtime`；结果为空，说明自上一轮运行以来没有新的新增或修改
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-17T00:11:28Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-17T00:11:28Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-17 10:14:49 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-17T01:10:59.447Z`（本地时区为 `2026-05-17 09:10:59.447 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 记录的上一轮完成时间是 `2026-05-17T01:13:43Z`；由于它比任务头更晚，本轮继续以 `2026-05-17T01:13:43Z` 作为有效基线，避免把上一轮已经持久化的无变更结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`last-snapshot.json`、`last-summary.json` 与 `state.json`，确认上一轮持久化结果为新增 `0`、修改 `0`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json` 的 `2510` 条持久化快照逐项比对后，结果从 `2510 -> 2513`，发现新增 `3`、修改 `0`、删除 `0`
+- 额外按有效基线 `2026-05-17T01:13:43Z` 复筛所有受监控文件的 `mtime`；结果与快照 diff 一致，只有同一批 `publish-locks` 新文件落在本轮窗口内
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `3`，修改 `0`，删除 `0`
+
+### 新增文件
+- 新增: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.kuaishou.lock.json`。为同名 campaign 新增快手发布锁，记录指定封面与视频指纹、25% 预览可读性检查，以及因当前自动化标签页未登录快手而被 `blocked_login_required` 拦住的去重核验结果。
+- 新增: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.wechat_channels.lock.json`。为同名 campaign 新增视频号发布锁，记录用户已在当前线程确认发布、仅允许使用 package 指定的 3:4 竖版封面，并把状态锁定为 `locked_for_publish`。
+- 新增: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.weibo.lock.json`。为同名 campaign 新增微博发布锁，记录视频与封面指纹、封面规则，以及本地 receipt 与微博主页重复检查均已通过、当前状态推进到 `publishing`。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。本轮新增文件中没有新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现新的技能支持自动化变更批次，全部集中在 `automation/python-platform-takeover/state/publish-locks/`，对应 `2026-05-17-ai-employee-evidence-grid-before-verdict` 这条 campaign 的快手、视频号和微博发布锁落库。
+- 这批状态文件表明同一 campaign 已同步进入三个平台的执行分支，但进度并不一致: 快手因登录缺失停在去重核验阻塞、视频号已锁定待发、微博已通过重复检查并进入发布中状态。
+- 因为发现了新的变更批次，本轮同步在 `github-sync-status.md` 追加待后续 GitHub 同步提示。
+
+## 2026-05-17 11:16:34 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-17T02:13:15.384Z`（本地时区为 `2026-05-17 10:13:15.384 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 记录的上一轮完成时间是 `2026-05-17T02:14:49Z`；由于它比任务头更晚，本轮继续以 `2026-05-17T02:14:49Z` 作为有效基线，避免把 `10:14:49 CST` 那批已经持久化的变更重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`last-snapshot.json`、`last-summary.json` 与 `state.json`，确认上一轮持久化结果为新增 `3`、修改 `0`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json` 的 `2513` 条持久化快照逐项比对后，结果从 `2513 -> 2517`，发现新增 `4`、修改 `4`、删除 `0`
+- 额外按有效基线 `2026-05-17T02:14:49Z` 复筛所有受监控文件的 `mtime`；结果与快照 diff 一致，全部落在 `automation/python-platform-takeover/state/` 的同一批 campaign 发布状态推进窗口内
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `4`，修改 `4`，删除 `0`
+
+### 新增文件
+- 新增: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.baijiahao.lock.json`。为同名 campaign 新增百家号发布锁，当前状态为 `submitted_unverified`，记录了这次发布必须沿用当前最新 package 任务与封面约束。
+- 新增: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.bilibili.lock.json`。为同名 campaign 新增 Bilibili 发布锁，当前状态为 `published_verified_public_api`，表明该平台已完成公开 API 侧的发布核验。
+- 新增: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.douyin.lock.json`。为同名 campaign 新增抖音发布锁，当前状态为 `published`，并记录正式发布时间 `2026-05-17T10:24:25+08:00`。
+- 新增: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.zhihu.lock.json`。为同名 campaign 新增知乎发布锁，当前状态为 `published`，记录该稿件已在 `2026-05-17 10:21 CST` 发布。
+
+### 修改文件
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.kuaishou.lock.json`。从上一轮的登录阻塞骨架扩展为完整快手发布记录，状态推进到 `published`，补齐了管理页地址、重复检查、拖拽上传、封面应用成功与 `2026-05-17T10:43:00+08:00` 发布核验说明。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.wechat_channels.lock.json`。从 `locked_for_publish` 推进到 `published_verified`，补齐了视频号管理列表首行核验结果与管理后台地址 `https://channels.weixin.qq.com/platform/post/list`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.weibo.lock.json`。从 `publishing` 推进到 `published`，补齐最终发布时间 `2026-05-17T10:42:52+08:00`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json`。共享 publish receipt 从初始骨架扩展成覆盖 `zhihu`、`douyin`、`weibo`、`kuaishou`、`bilibili`、`wechat_channels`、`baijiahao` 七个平台的完整台账，最新总状态推进到 `wechat_channels_published_verified`。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。本轮新增文件中没有新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现新的技能支持自动化变更批次，全部集中在 `automation/python-platform-takeover/state/`，对应 `2026-05-17-ai-employee-evidence-grid-before-verdict` 这条 campaign 从“三个平台锁文件初始落库”继续推进到了“七个平台状态齐备”的更后执行阶段。
+- 这批变更说明同一 campaign 在知乎、抖音、微博、快手、Bilibili、视频号上都已经形成正式发布或核验记录，百家号则新进入 `submitted_unverified` 待确认状态；共享 receipt 也同步收敛成一份多平台总台账。
+- 因为发现了新的变更批次，本轮同步在 `github-sync-status.md` 追加待后续 GitHub 同步提示。
+
+## 2026-05-17 12:17:16 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-17T03:14:15.680Z`（本地时区为 `2026-05-17 11:14:15.680 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 记录的上一轮完成时间是 `2026-05-17T03:16:34Z`；由于它比任务头更晚，本轮继续以 `2026-05-17T03:16:34Z` 作为有效基线，避免把 `11:16:34 CST` 那批已经持久化的变更重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`last-snapshot.json`、`last-summary.json` 与 `state.json`，确认上一轮持久化结果为新增 `4`、修改 `4`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json` 的 `2517` 条持久化快照逐项比对后，结果保持 `2517 -> 2517`，路径集合、整数秒 `mtime` 和 `size` 都完全一致，因此没有新增、修改或删除
+- 额外按有效基线 `2026-05-17T03:16:34Z` 复筛所有受监控文件的 `mtime`；结果为空，说明自上一轮运行以来没有新的新增或修改
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-17T03:16:34Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-17T03:16:34Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-17 13:19:23 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-17T04:15:45.385Z`（本地时区为 `2026-05-17 12:15:45.385 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 记录的上一轮完成时间是 `2026-05-17T04:17:21Z`；由于它比任务头更晚，本轮继续以 `2026-05-17T04:17:21Z` 作为有效基线，避免把 `12:17:21 CST` 那批已经持久化的无变更结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`last-snapshot.json`、`last-summary.json` 与 `state.json`，确认上一轮持久化结果为新增 `0`、修改 `0`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json` 的 `2517` 条持久化快照逐项比对后，结果从 `2517 -> 2518`，发现新增 `1`、修改 `1`、删除 `0`
+- 额外按有效基线 `2026-05-17T04:17:21Z` 复筛所有受监控文件的 `mtime`；结果与快照 diff 一致，全部集中在 `automation/python-platform-takeover/state/` 的同一批 Toutiao 发布推进窗口内
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `1`，修改 `1`，删除 `0`
+
+### 新增文件
+- 新增: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.toutiao.lock.json`。为同名 campaign 新增头条发布锁，状态为 `under_review`，记录管理后台已按精确标题核验到 `审核中`，用于阻止重复补发。
+
+### 修改文件
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json`。共享 publish receipt 新增 `toutiao` 平台台账并把顶层状态推进到 `toutiao_under_review`，补齐头条稿件标题、描述、管理后台地址、结果文件路径和对应 lock 引用。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。本轮新增文件中没有新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现新的技能支持自动化变更批次，全部集中在 `automation/python-platform-takeover/state/`，对应 `2026-05-17-ai-employee-evidence-grid-before-verdict` 这条 campaign 继续推进到“头条已提交且审核中”的新阶段。
+- 这批变更说明同一 campaign 在已有多平台台账基础上，又新增了 Toutiao 的防重发锁与审核中回执；当前共享 receipt 已明确记录头条管理页核验结果和后续查询入口。
+- 因为发现了新的变更批次，本轮同步在 `github-sync-status.md` 追加待后续 GitHub 同步提示。
+
+## 2026-05-17 14:18:25 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-17T05:16:45.882Z`（本地时区为 `2026-05-17 13:16:45.882 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 记录的上一轮完成时间是 `2026-05-17T05:19:23Z`；由于它比任务头更晚，本轮继续以 `2026-05-17T05:19:23Z` 作为有效基线，避免把 `13:19:23 CST` 那批 Toutiao 审核中变更重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`last-snapshot.json`、`last-summary.json` 与 `state.json`，确认上一轮持久化结果为新增 `1`、修改 `1`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json` 的 `2518` 条持久化快照逐项比对，结果完全一致，未发现新增、修改或删除文件
+- 额外按有效基线 `2026-05-17T05:19:23Z` 复筛所有受监控文件的 `mtime`，没有发现晚于基线的新文件变更批次
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。本轮没有新的 `.py` 文件出现，因此无需单列用途、关联技能或跨平台判断。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-17T05:19:23Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-17 15:21:09 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-17T06:17:15.712Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 记录的上一轮完成时间是 `2026-05-17T06:19:24Z`；由于它比任务头更晚，本轮以 `2026-05-17T06:19:24Z` 作为有效基线，避免重复记账 `14:18-14:19 CST` 的无变更扫描结果
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`、`last-summary.json`、`state.json` 与 `memory.md`，确认上一轮持久化结果为新增 `0`、修改 `0`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json` 的 `2518` 条持久化快照逐项比对后，结果从 `2518 -> 2521`，发现新增 `3`、修改 `1`、删除 `0`
+- 额外按有效基线 `2026-05-17T06:19:24Z` 复筛新增与变更文件的 `mtime`，全部晚于基线，且都集中在 `automation/python-platform-takeover/` 的同一条新 campaign 初始化批次
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `3`，修改 `1`，删除 `0`
+
+### 新增文件
+- 新增: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml`。新增 `2026-05-17-ai-employee-metric-window-before-rewrite` 的多平台内容包，登记发布视频、双比例封面、各平台标题/描述、素材指纹，以及 `do_not_publish` / `do_not_upload` / `final_submit_requires_user_confirmation` 等防误发约束。
+- 新增: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-17-ai-employee-metric-window-before-rewrite.json`。为同一 campaign 新增 Hermes handoff 包，把 YAML 内容包转换为自动化消费的 JSON 计划，明确回执路径、各平台上传素材映射和当前 Hermes 仅支持的发布平台集合。
+- 新增: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json`。新增该 campaign 的初始发布回执骨架，顶层状态为 `not_published`，`receipts` 仍为空，用于后续平台发布台账逐步落盘。
+
+### 修改文件
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/hermes-handoff/latest.json`。最新 handoff 指针从上一条 campaign 切换到 `2026-05-17-ai-employee-metric-window-before-rewrite`，并同步指向新的内容包与回执路径，状态更新为 `ready_for_publish`。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。本轮新增文件中没有新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现新的技能支持自动化变更批次，全部集中在 `automation/python-platform-takeover/`，核心是为 `2026-05-17-ai-employee-metric-window-before-rewrite` 新建完整的内容包、Hermes handoff 包和初始 publish receipt，并把最新 handoff 指针切到这条新 campaign。
+- 这批变更说明多平台接管发布流已经从 `ai-employee-evidence-grid-before-verdict` 继续推进到新的“指标窗口未到先建采集单”主题素材，但仍保留严格的 `do_not_publish` / `do_not_upload` 保护位，当前阶段是待后续平台操作接入的准备态。
+- 因为发现了新的变更批次，本轮同步在 `github-sync-status.md` 追加待后续 GitHub 同步提示。
+
+## 2026-05-17 16:21:59 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-17T07:19:15.891Z`（本地时区为 `2026-05-17 15:19:15.891 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 记录的上一轮完成时间是 `2026-05-17T07:21:09Z`；由于它比任务头更晚，本轮以 `2026-05-17T07:21:09Z` 作为有效基线，避免重复记账 `2026-05-17 15:21:09 CST` 的已落盘批次
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`、`last-summary.json`、`state.json` 与 `memory.md`，确认上一轮持久化结果为新增 `3`、修改 `1`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json` 的 `2521` 条持久化快照逐项比对后，结果保持 `2521 -> 2521`，路径集合、整数秒 `mtime` 和 `size` 都完全一致，因此没有新增、修改或删除
+- 额外按有效基线 `2026-05-17T07:21:09Z` 复筛所有受监控文件的 `mtime`，没有发现晚于基线的新技能或支持自动化文件批次
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。本轮没有新的 `.py` 文件出现，因此无需单列用途、关联技能或跨平台判断。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-17T07:21:09Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-17 17:22:45 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-17T08:20:16.532Z`（本地时区为 `2026-05-17 16:20:16.532 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 记录的上一轮完成时间是 `2026-05-17T08:21:59Z`；由于它比任务头更晚，本轮以 `2026-05-17T08:21:59Z` 作为有效基线，避免重复记账 `2026-05-17 16:21:59 CST` 的已落盘无变更结果
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`、`last-summary.json`、`state.json` 与 `memory.md`，确认上一轮持久化结果为新增 `0`、修改 `0`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json` 的 `2521` 条持久化快照逐项比对后，结果保持 `2521 -> 2521`，路径集合、整数秒 `mtime` 和 `size` 都完全一致，因此没有新增、修改或删除
+- 额外按有效基线 `2026-05-17T08:21:59Z` 复筛所有受监控文件的 `mtime`，没有发现晚于基线的新技能或支持自动化文件批次
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。本轮没有新的 `.py` 文件出现，因此无需单列用途、关联技能或跨平台判断。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-17T08:21:59Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-17 18:25:03 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-17T09:21:46.853Z`（本地时区为 `2026-05-17 17:21:46.853 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 记录的上一轮完成时间是 `2026-05-17T09:22:45Z`；由于它比任务头更晚，本轮以 `2026-05-17T09:22:45Z` 作为有效基线，避免重复记账 `2026-05-17 17:22:45 CST` 的已落盘无变更结果
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`、`last-summary.json`、`state.json` 与 `memory.md`，确认上一轮持久化结果为新增 `0`、修改 `0`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json` 的 `2521` 条持久化快照逐项比对后，结果保持 `2521 -> 2521`，路径集合、整数秒 `mtime` 和 `size` 都完全一致，因此没有新增、修改或删除
+- 额外按有效基线 `2026-05-17T09:22:45Z` 复筛所有受监控文件的 `mtime`，没有发现晚于基线的新技能或支持自动化文件批次
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。本轮没有新的 `.py` 文件出现，因此无需单列用途、关联技能或跨平台判断。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-17T09:22:45Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-17 19:26:07 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-17T10:23:17.410Z`（本地时区为 `2026-05-17 18:23:17.410 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-17T10:25:03Z`；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-17T10:25:03Z` 作为有效基线，避免把上一轮已经持久化的无变更结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`last-summary.json` 与 `last-snapshot.json`，确认上一轮持久化结果为新增 `0`、修改 `0`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与上一轮 `last-snapshot.json` 的 `2521` 条持久化快照逐项比对后，结果保持 `2521 -> 2521`，路径集合、整数秒 `mtime` 和 `size` 都完全一致，因此没有新增、修改或删除
+- 额外按有效基线 `2026-05-17T10:25:03Z` 复筛所有受监控文件的 `mtime`；结果为空，说明自上一轮运行以来没有新的新增或修改
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-17T10:25:03Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-17T10:25:03Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-17 20:27:44 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-17T11:24:17.543Z`（本地时区为 `2026-05-17 19:24:17.543 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-17T11:26:07Z`；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-17T11:26:07Z` 作为有效基线，避免把上一轮已经持久化的无变更结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`last-summary.json`、`last-snapshot.json` 与 `memory.md`，确认上一轮持久化结果为新增 `0`、修改 `0`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与上一轮 `last-snapshot.json` 的 `2521` 条持久化快照逐项比对后，结果保持 `2521 -> 2521`，路径集合、整数秒 `mtime` 和 `size` 都完全一致，因此没有新增、修改或删除
+- 额外按有效基线 `2026-05-17T11:26:07Z` 复筛所有受监控文件的 `mtime`；结果为空，说明自上一轮运行以来没有新的新增或修改
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-17T11:26:07Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-17T11:26:07Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。
+
+## 2026-05-17 20:28:29 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-17T11:24:17.543Z`（本地时区为 `2026-05-17 19:24:17.543 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-17T11:26:07Z`；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-17T11:26:07Z` 作为有效基线，避免把上一轮已经持久化的无变更结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`last-summary.json` 与 `last-snapshot.json`，确认上一轮持久化结果为新增 `0`、修改 `0`、删除 `0`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**`、`*.pyc`
+- 将当前受监控文件树与上一轮 `last-snapshot.json` 的 `2521` 条持久化快照逐项比对后，结果为 `2521 -> 2485`，确认新增 `0`、修改 `0`、删除 `36`
+- 额外按有效基线 `2026-05-17T11:26:07Z` 复筛所有受监控文件的 `mtime`；删除项全部落在 `automation/python-platform-takeover/`，对应四批已从监控树移除的 campaign 配置、发布锁与 receipt 台账
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `36`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-15-ai-employee-status-branch-before-rewrite.yaml`
+  - deleted
+  - 删除 2026-05-15-ai-employee-status-branch-before-rewrite 的 content package YAML，移除该 campaign 的平台文案、素材指纹与 do_not_publish 配置入口。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-16-ai-employee-compare-three-before-cut.yaml`
+  - deleted
+  - 删除 2026-05-16-ai-employee-compare-three-before-cut 的 content package YAML，移除该 campaign 的平台文案、素材指纹与 do_not_publish 配置入口。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-evidence-grid-before-verdict.yaml`
+  - deleted
+  - 删除 2026-05-17-ai-employee-evidence-grid-before-verdict 的 content package YAML，移除该 campaign 的平台文案、素材指纹与 do_not_publish 配置入口。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml`
+  - deleted
+  - 删除 2026-05-17-ai-employee-metric-window-before-rewrite 的 content package YAML，移除该 campaign 的平台文案、素材指纹与 do_not_publish 配置入口。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-15-ai-employee-status-branch-before-rewrite.json`
+  - deleted
+  - 删除 2026-05-15-ai-employee-status-branch-before-rewrite 的 Hermes handoff JSON，移除供自动化消费的平台投放计划包。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-16-ai-employee-compare-three-before-cut.json`
+  - deleted
+  - 删除 2026-05-16-ai-employee-compare-three-before-cut 的 Hermes handoff JSON，移除供自动化消费的平台投放计划包。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-17-ai-employee-evidence-grid-before-verdict.json`
+  - deleted
+  - 删除 2026-05-17-ai-employee-evidence-grid-before-verdict 的 Hermes handoff JSON，移除供自动化消费的平台投放计划包。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-17-ai-employee-metric-window-before-rewrite.json`
+  - deleted
+  - 删除 2026-05-17-ai-employee-metric-window-before-rewrite 的 Hermes handoff JSON，移除供自动化消费的平台投放计划包。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.baijiahao.lock.json`
+  - deleted
+  - 删除 2026-05-15-ai-employee-status-branch-before-rewrite 在 百家号 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.bilibili.lock.json`
+  - deleted
+  - 删除 2026-05-15-ai-employee-status-branch-before-rewrite 在 Bilibili 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.douyin.lock.json`
+  - deleted
+  - 删除 2026-05-15-ai-employee-status-branch-before-rewrite 在 抖音 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.kuaishou.lock.json`
+  - deleted
+  - 删除 2026-05-15-ai-employee-status-branch-before-rewrite 在 快手 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.toutiao.lock.json`
+  - deleted
+  - 删除 2026-05-15-ai-employee-status-branch-before-rewrite 在 头条 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.wechat_channels.lock.json`
+  - deleted
+  - 删除 2026-05-15-ai-employee-status-branch-before-rewrite 在 视频号 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.weibo.lock.json`
+  - deleted
+  - 删除 2026-05-15-ai-employee-status-branch-before-rewrite 在 微博 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.zhihu.lock.json`
+  - deleted
+  - 删除 2026-05-15-ai-employee-status-branch-before-rewrite 在 知乎 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.baijiahao.lock.json`
+  - deleted
+  - 删除 2026-05-16-ai-employee-compare-three-before-cut 在 百家号 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.bilibili.lock.json`
+  - deleted
+  - 删除 2026-05-16-ai-employee-compare-three-before-cut 在 Bilibili 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.douyin.lock.json`
+  - deleted
+  - 删除 2026-05-16-ai-employee-compare-three-before-cut 在 抖音 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.kuaishou.lock.json`
+  - deleted
+  - 删除 2026-05-16-ai-employee-compare-three-before-cut 在 快手 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.toutiao.lock.json`
+  - deleted
+  - 删除 2026-05-16-ai-employee-compare-three-before-cut 在 头条 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.wechat_channels.lock.json`
+  - deleted
+  - 删除 2026-05-16-ai-employee-compare-three-before-cut 在 视频号 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.weibo.lock.json`
+  - deleted
+  - 删除 2026-05-16-ai-employee-compare-three-before-cut 在 微博 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.zhihu.lock.json`
+  - deleted
+  - 删除 2026-05-16-ai-employee-compare-three-before-cut 在 知乎 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.baijiahao.lock.json`
+  - deleted
+  - 删除 2026-05-17-ai-employee-evidence-grid-before-verdict 在 百家号 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.bilibili.lock.json`
+  - deleted
+  - 删除 2026-05-17-ai-employee-evidence-grid-before-verdict 在 Bilibili 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.douyin.lock.json`
+  - deleted
+  - 删除 2026-05-17-ai-employee-evidence-grid-before-verdict 在 抖音 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.kuaishou.lock.json`
+  - deleted
+  - 删除 2026-05-17-ai-employee-evidence-grid-before-verdict 在 快手 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.toutiao.lock.json`
+  - deleted
+  - 删除 2026-05-17-ai-employee-evidence-grid-before-verdict 在 头条 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.wechat_channels.lock.json`
+  - deleted
+  - 删除 2026-05-17-ai-employee-evidence-grid-before-verdict 在 视频号 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.weibo.lock.json`
+  - deleted
+  - 删除 2026-05-17-ai-employee-evidence-grid-before-verdict 在 微博 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.zhihu.lock.json`
+  - deleted
+  - 删除 2026-05-17-ai-employee-evidence-grid-before-verdict 在 知乎 平台的 publish lock，清理防重发锁与当时的运行状态记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-15-ai-employee-status-branch-before-rewrite.json`
+  - deleted
+  - 删除 2026-05-15-ai-employee-status-branch-before-rewrite 的 publish receipt，移除该 campaign 的聚合发布台账。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-16-ai-employee-compare-three-before-cut.json`
+  - deleted
+  - 删除 2026-05-16-ai-employee-compare-three-before-cut 的 publish receipt，移除该 campaign 的聚合发布台账。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json`
+  - deleted
+  - 删除 2026-05-17-ai-employee-evidence-grid-before-verdict 的 publish receipt，移除该 campaign 的聚合发布台账。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json`
+  - deleted
+  - 删除 2026-05-17-ai-employee-metric-window-before-rewrite 的 publish receipt，移除该 campaign 的聚合发布台账。
+
+### 新建 Python 文件
+- 无。自 `2026-05-17T11:26:07Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 1 批新的支持自动化变更，全部集中在 `automation/python-platform-takeover/`；核心是四批历史 campaign 的 content package、Hermes handoff、publish lock 与 publish receipt 文件已从监控树移除。
+- 这批变更应后续同步到 GitHub，避免 campaign 清理结果只停留在本地工作区。
+
+## 2026-05-17 22:31:14 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-17T13:27:48.294Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-17T13:29:05Z`（本地时区为 `2026-05-17 21:29:05 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-17T13:29:05Z` 作为有效基线，避免把上一轮已经落账的删除批次重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`state.json` 与 `last-snapshot.json`，确认上一轮已经落账的是 `2026-05-17 20:28:29 CST` 那批 `36` 个删除文件，本轮不重复记录
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json`（`2026-05-17T12:28:29Z`）逐项比对后，发现 `36` 个新增文件，全部集中在 `automation/python-platform-takeover/`；没有修改或删除
+- 结果汇总: 新增 `36`，修改 `0`，删除 `0`
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-15-ai-employee-status-branch-before-rewrite.yaml` — 新增 — 为 `2026-05-15-ai-employee-status-branch-before-rewrite` 新增跨平台内容包 YAML，定义待发布视频、封面、上传映射与各平台文案。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-16-ai-employee-compare-three-before-cut.yaml` — 新增 — 为 `2026-05-16-ai-employee-compare-three-before-cut` 新增跨平台内容包 YAML，固化“三条对照后再改内容”的发布素材与平台文案。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-evidence-grid-before-verdict.yaml` — 新增 — 为 `2026-05-17-ai-employee-evidence-grid-before-verdict` 新增跨平台内容包 YAML，固化“证据三格齐了再下结论”的发布素材与平台文案。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml` — 新增 — 为 `2026-05-17-ai-employee-metric-window-before-rewrite` 新增跨平台内容包 YAML，固化“先等指标窗口再改内容”的发布素材与平台文案。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-15-ai-employee-status-branch-before-rewrite.json` — 新增 — 为 `2026-05-15-ai-employee-status-branch-before-rewrite` 新增 Hermes handoff JSON，供后续平台执行读取 campaign 元数据与约束。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-16-ai-employee-compare-three-before-cut.json` — 新增 — 为 `2026-05-16-ai-employee-compare-three-before-cut` 新增 Hermes handoff JSON，供后续平台执行读取 campaign 元数据与约束。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-17-ai-employee-evidence-grid-before-verdict.json` — 新增 — 为 `2026-05-17-ai-employee-evidence-grid-before-verdict` 新增 Hermes handoff JSON，供后续平台执行读取 campaign 元数据与约束。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-17-ai-employee-metric-window-before-rewrite.json` — 新增 — 为 `2026-05-17-ai-employee-metric-window-before-rewrite` 新增 Hermes handoff JSON，供后续平台执行读取 campaign 元数据与约束。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.baijiahao.lock.json` — 新增 — 为 `2026-05-15-ai-employee-status-branch-before-rewrite` 新增百家号发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.bilibili.lock.json` — 新增 — 为 `2026-05-15-ai-employee-status-branch-before-rewrite` 新增 B 站发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.douyin.lock.json` — 新增 — 为 `2026-05-15-ai-employee-status-branch-before-rewrite` 新增抖音发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.kuaishou.lock.json` — 新增 — 为 `2026-05-15-ai-employee-status-branch-before-rewrite` 新增快手发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.toutiao.lock.json` — 新增 — 为 `2026-05-15-ai-employee-status-branch-before-rewrite` 新增头条号发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.wechat_channels.lock.json` — 新增 — 为 `2026-05-15-ai-employee-status-branch-before-rewrite` 新增微信视频号发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.weibo.lock.json` — 新增 — 为 `2026-05-15-ai-employee-status-branch-before-rewrite` 新增微博发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.zhihu.lock.json` — 新增 — 为 `2026-05-15-ai-employee-status-branch-before-rewrite` 新增知乎发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.baijiahao.lock.json` — 新增 — 为 `2026-05-16-ai-employee-compare-three-before-cut` 新增百家号发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.bilibili.lock.json` — 新增 — 为 `2026-05-16-ai-employee-compare-three-before-cut` 新增 B 站发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.douyin.lock.json` — 新增 — 为 `2026-05-16-ai-employee-compare-three-before-cut` 新增抖音发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.kuaishou.lock.json` — 新增 — 为 `2026-05-16-ai-employee-compare-three-before-cut` 新增快手发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.toutiao.lock.json` — 新增 — 为 `2026-05-16-ai-employee-compare-three-before-cut` 新增头条号发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.wechat_channels.lock.json` — 新增 — 为 `2026-05-16-ai-employee-compare-three-before-cut` 新增微信视频号发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.weibo.lock.json` — 新增 — 为 `2026-05-16-ai-employee-compare-three-before-cut` 新增微博发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.zhihu.lock.json` — 新增 — 为 `2026-05-16-ai-employee-compare-three-before-cut` 新增知乎发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.baijiahao.lock.json` — 新增 — 为 `2026-05-17-ai-employee-evidence-grid-before-verdict` 新增百家号发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.bilibili.lock.json` — 新增 — 为 `2026-05-17-ai-employee-evidence-grid-before-verdict` 新增 B 站发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.douyin.lock.json` — 新增 — 为 `2026-05-17-ai-employee-evidence-grid-before-verdict` 新增抖音发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.kuaishou.lock.json` — 新增 — 为 `2026-05-17-ai-employee-evidence-grid-before-verdict` 新增快手发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.toutiao.lock.json` — 新增 — 为 `2026-05-17-ai-employee-evidence-grid-before-verdict` 新增头条号发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.wechat_channels.lock.json` — 新增 — 为 `2026-05-17-ai-employee-evidence-grid-before-verdict` 新增微信视频号发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.weibo.lock.json` — 新增 — 为 `2026-05-17-ai-employee-evidence-grid-before-verdict` 新增微博发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.zhihu.lock.json` — 新增 — 为 `2026-05-17-ai-employee-evidence-grid-before-verdict` 新增知乎发布锁，记录该平台的防重发占位。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-15-ai-employee-status-branch-before-rewrite.json` — 新增 — 为 `2026-05-15-ai-employee-status-branch-before-rewrite` 新增完整发布回执台账，汇总多平台执行与核验记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-16-ai-employee-compare-three-before-cut.json` — 新增 — 为 `2026-05-16-ai-employee-compare-three-before-cut` 新增完整发布回执台账，汇总多平台执行与核验记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json` — 新增 — 为 `2026-05-17-ai-employee-evidence-grid-before-verdict` 新增完整发布回执台账，汇总多平台执行与核验记录。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json` — 新增 — 为 `2026-05-17-ai-employee-metric-window-before-rewrite` 新增初始发布回执骨架，用于后续平台执行结果回填。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。本轮 `36` 个新增文件全部是 `yaml`、`json` 台账或锁文件，没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现一个新的技能支持自动化变更批次，全部集中在 `automation/python-platform-takeover`，围绕 `2026-05-15`、`2026-05-16` 与 `2026-05-17` 的四个 AI 员工 campaign 补齐了内容包、Hermes handoff、平台发布锁和回执台账。
+- 其中三组 campaign 已经落下完整多平台回执，`2026-05-17-ai-employee-metric-window-before-rewrite` 当前只新增了内容包、Hermes handoff 和初始回执骨架，尚未出现对应平台锁文件。
+- 因为出现了新的变更批次，本轮同步更新 `github-sync-status.md`，提醒后续 GitHub 同步。
+
+## 2026-05-17 23:32:24 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-17T14:29:18.135Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-17T14:31:14Z`（本地时区为 `2026-05-17 22:31:14 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以 `2026-05-17T14:31:14Z` 作为有效基线，避免把上一轮已经落账的 `36` 个新增文件重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`last-summary.json` 与 `last-snapshot.json`，确认上一轮已经落账的是 `2026-05-17 22:31:14 CST` 那批 `36` 个新增文件，本轮不重复记录
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 将当前受监控文件树与 `last-snapshot.json`（`2521` 条文件记录）逐项比对后，结果保持 `2521 -> 2521`，路径集合、整数秒 `mtime` 和 `size` 都完全一致，因此没有新增、修改或删除
+- 额外按有效基线 `2026-05-17T14:31:14Z` 复筛所有受监控文件的 `mtime`；结果为空，说明自上一轮运行以来没有新的新增或修改
+- 忽略项:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-17T14:31:14Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-17T14:31:14Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `github-sync-status.md`。

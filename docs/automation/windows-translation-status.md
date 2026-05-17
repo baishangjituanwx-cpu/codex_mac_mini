@@ -2350,3 +2350,37 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-16 22:02:52 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天需要明确记录的是“新增的是共享 campaign 配置与发布台账，不是新的 Windows 转译工作”。
+
+## 2026-05-17 22:03:11 CST
+
+- 处理时间:
+  - `2026-05-17 22:03:11 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-16 22:02:52 CST` 之后追加且此前未写入本状态文件的非零批次:
+    - `2026-05-17 10:14:49 CST`
+    - `2026-05-17 11:16:34 CST`
+    - `2026-05-17 13:19:23 CST`
+    - `2026-05-17 15:21:09 CST`
+    - `2026-05-17 20:28:29 CST`
+  - 同一时间段内其余追加批次，包括 `2026-05-17 02:05:18 CST` 至 `2026-05-17 20:27:44 CST` 的其余记录，结果均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - 无新增转译项；本轮明确记录“无需转译”。
+  - 已复核上述 5 个非零批次都只落在 `automation/python-platform-takeover/` 的共享 campaign 配置、Hermes handoff 指针、publish receipt / publish lock 台账，以及旧 campaign 台账清理:
+    - `2026-05-17-ai-employee-evidence-grid-before-verdict` 的 `state/publish-locks/*.lock.json` 与 `state/publish-receipts/*.json` 进度推进
+    - `2026-05-17-ai-employee-metric-window-before-rewrite` 的 `configs/content-package.*.yaml`、`configs/hermes-package.*.json`、`state/publish-receipts/*.json`
+    - `state/hermes-handoff/latest.json` 指向新 campaign
+    - `2026-05-15`、`2026-05-16`、`2026-05-17` 若干旧 campaign 的 config / lock / receipt 删除
+  - 这些变更没有引入新的 Mac-only 自定义 skill 行为；现有 Windows 覆盖继续适用，无需新增 PowerShell launcher、`.cmd` wrapper、Windows 路径分叉、快捷键桥接、Windows 专属文档或 repo 资产:
+    - `automation/python-platform-takeover/scripts/social-publisher.ps1` 继续消费共享 Python CLI，现有 receipt / lock / handoff 工作流无需新增 Windows 包装层。
+    - `automation/python-platform-takeover/README.md` 现有 Windows 说明已覆盖日期化 content package、Hermes handoff、receipt / lock 台账与发布状态推进语义，无需因本轮 YAML / JSON / lock / receipt 变化再做分叉。
+  - 明确结论:
+    - 今天没有新的 Windows 转译工作；本轮只追加状态记录，并明确记录这些新增、修改与删除项都属于共享自动化状态和配置演进。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-17` 当前已记录的非零批次没有新增需要转译的 PowerShell launcher、Windows 路径处理、Windows 文档、快捷键差异、命令包装器或 repo 资产。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮只做 monitor 批次复核与状态记录，没有新增任何需要单独做 PowerShell 语法验证的 Windows 文件；判断基于 `skill-change-monitor.md` 条目核对，以及 `automation/python-platform-takeover` 现有 Windows 入口与 README 覆盖范围复核。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-17 22:03:11 CST`，今天 monitor 中新增、修改或删除且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天需要明确记录的是“新增的是共享 campaign 配置与发布台账推进，删除的是旧台账清理，不是新的 Windows 转译工作”。

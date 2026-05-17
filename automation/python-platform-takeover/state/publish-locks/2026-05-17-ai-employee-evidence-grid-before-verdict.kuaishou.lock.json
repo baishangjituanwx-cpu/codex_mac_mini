@@ -1,0 +1,99 @@
+{
+  "campaign_id": "2026-05-17-ai-employee-evidence-grid-before-verdict",
+  "platform": "kuaishou",
+  "status": "published",
+  "created_at": "2026-05-17T10:03:57+08:00",
+  "updated_at": "2026-05-17T10:47:55.367+08:00",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "content_package_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-evidence-grid-before-verdict.yaml",
+  "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package",
+  "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/kuaishou.md",
+  "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platform-upload-map.md",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+  "raw_video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict.mp4",
+  "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+  "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png",
+  "title": "齐了再结论",
+  "description": "复盘不是盖章判死。状态、指标、对照三格证据齐了，再决定怎么改。",
+  "user_confirmation": "2026-05-17 current-thread explicit request to start latest Kuaishou publish task and use correct package cover",
+  "package_boundaries_overridden_by_user_confirmation": true,
+  "fingerprints": {
+    "video_sha256": "ef60958864132466d3a0a99cbcac04a1129343db5ab1fd908087e67f31601aac",
+    "raw_video_sha256": "9d7da2154398007bd0af6035424298fe14154f6ab5f8932674abdb1b68aa304f",
+    "cover_sha256": "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18",
+    "backup_cover_sha256": "defc467a5cacb002d5a4a1c4a8ced47467854f5f190a61ffa37b554ad83243cd"
+  },
+  "cover_preflight": {
+    "preview_path": "/Users/baishangjituan/Documents/push/kuaishou-20260517-cover-25pct-preview.png",
+    "cover_thumbnail_present": true,
+    "cover_readability_passed": true,
+    "note": "Main cover text AI员工补证据 and subtitle 齐了再判 are readable in 25 percent preview."
+  },
+  "duplicate_guard": {
+    "local_receipt_before_publish": "no_kuaishou_receipt",
+    "management_page_exact_searches": [
+      {
+        "query": "齐了再结论",
+        "result_count": 0,
+        "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260517-dup-search-1.png"
+      },
+      {
+        "query": "复盘不是盖章判死",
+        "result_count": 0,
+        "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260517-dup-search-2.png"
+      },
+      {
+        "query": "状态、指标、对照三格证据齐了",
+        "result_count": 0,
+        "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260517-dup-search-3.png"
+      }
+    ],
+    "result": "no_duplicate_found_before_upload"
+  },
+  "status_label": "已发布",
+  "submitted_at": "2026-05-17T10:43:00+08:00",
+  "verified_at": "2026-05-17T10:47:55.367+08:00",
+  "published_at": "2026-05-17T10:43:00+08:00",
+  "published_at_raw": "2026-05-17 10:43",
+  "verified_by": "Kuaishou creator work manager exact submitted-text row via Chrome DevTools/CDP",
+  "management_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+  "result_path": "/Users/baishangjituan/Documents/push/kuaishou_publish_result_20260517_evidence_grid_before_verdict.json",
+  "cover_mode": "package_required_vertical_3x4_uploaded_via_kuaishou_custom_cover_file_input; cover_apply_success_toast_and_preview_verified",
+  "cover_thumbnail_present": true,
+  "cover_readability_passed": true,
+  "screenshots": {
+    "duplicate_title": "/Users/baishangjituan/Documents/push/kuaishou-20260517-dup-search-1.png",
+    "duplicate_body_1": "/Users/baishangjituan/Documents/push/kuaishou-20260517-dup-search-2.png",
+    "duplicate_body_2": "/Users/baishangjituan/Documents/push/kuaishou-20260517-dup-search-3.png",
+    "after_video_dragdrop": "/Users/baishangjituan/Documents/push/kuaishou-20260517-after-video-dragdrop.png",
+    "after_cover_setfile": "/Users/baishangjituan/Documents/push/kuaishou-20260517-after-cover-setfile.png",
+    "pre_submit": "/Users/baishangjituan/Documents/push/kuaishou-20260517-pre-submit.png",
+    "after_submit": "/Users/baishangjituan/Documents/push/kuaishou-20260517-after-submit-click.png",
+    "manager_verified": "/Users/baishangjituan/Documents/push/kuaishou-20260517-manager-verified.png"
+  },
+  "feishu_notification": {
+    "sent": true,
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "message_id": "om_x100b6fa6f5d984b4b4b932e43e2a74e",
+    "sent_at": "2026-05-17T10:45:05+08:00",
+    "method": "lark-cli im +messages-send --as bot",
+    "idempotency_key": "ks-20260517-evidence-grid",
+    "note": "Notification was sent after the first manager verification showed 审核中; this receipt records the later manager recheck status 已发布. No second Feishu message was sent to avoid duplicate notifications.",
+    "first_attempt": {
+      "sent": false,
+      "error_code": 99992402,
+      "error_message": "HTTP 400: field validation failed",
+      "note": "Initial longer idempotency key was rejected before any message_id was returned."
+    }
+  },
+  "notes": [
+    "Chrome DevTools/CDP attached to existing logged-in Chrome on 127.0.0.1:9223; Chrome was not restarted.",
+    "Before upload, local receipt and Kuaishou work manager exact searches showed no existing Kuaishou receipt or duplicate manager row.",
+    "Video file input direct set did not attach the video, so the exact package video copy was uploaded by CDP drag/drop from /tmp while preserving original file hashes in this receipt.",
+    "Kuaishou page has only one visible 作品描述 field, so the package title was placed on line 1 and package copy on line 2.",
+    "The package-required vertical 3:4 cover file was uploaded through the Kuaishou custom cover image input; the page reported 封面应用成功 and the preview showed the package cover, not an AI/default cover.",
+    "After clicking 发布, Kuaishou redirected to 作品管理 and the exact submitted text appeared first with status 审核中, then rechecked as 已发布 at 2026-05-17 10:43.",
+    "One successful Feishu notification was sent after manager verification; no duplicate correction notification was sent after status changed to 已发布."
+  ]
+}

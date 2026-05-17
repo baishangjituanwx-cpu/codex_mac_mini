@@ -1,0 +1,76 @@
+{
+  "campaignId": "2026-05-17-ai-employee-metric-window-before-rewrite",
+  "sourceThreadId": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "sourceCampaignId": "2026-05-17-ai-employee-metric-window-before-rewrite",
+  "sourceConfig": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml",
+  "sourceContentRoot": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package",
+  "receiptPath": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json",
+  "scope": "all_platforms",
+  "platforms": {
+    "bilibili": {
+      "title": "指标窗没到别急着改：AI员工先建采集单，再决定内容怎么改",
+      "description": "这条讲多平台内容复盘里的执行细节：不是看到暂时没数据就改标题、换封面、重做口播，而是先建播放、完播、互动采集单，等指标窗口到了再判断。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-horizontal-4x3.png"
+    },
+    "toutiao": {
+      "title": "指标没回来时，AI员工该不该马上改内容？",
+      "description": "不应该。先建播放、完播、互动采集单，等指标窗口到了，再决定是否改标题、封面或口播结构。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png"
+    },
+    "zhihu": {
+      "title": "为什么内容指标没回来时，不应该马上改标题和封面？",
+      "description": "因为缺少播放、完播和互动数据时，所谓优化可能只是情绪动作。更稳的流程是先建指标采集单，等数据回来，再决定是否修改内容包装。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png"
+    },
+    "baijiahao": {
+      "title": "为什么指标窗口没到时，不该马上改内容？",
+      "description": "因为播放、完播、互动没回来时，修改动作很容易变成凭感觉。更稳妥的做法是先建采集单，等指标窗口到了再判断。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-horizontal-4x3.png"
+    },
+    "kuaishou": {
+      "title": "等指标再改",
+      "description": "播放、完播、互动没回来，先别改内容。AI员工先建采集单，明天再判断。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png"
+    },
+    "weibo": {
+      "title": "指标没回来，就能改标题换封面吗？",
+      "description": "不能。播放、完播、互动还没回来时，改内容很容易变成凭感觉动作。大陈让机器人小马先建采集单，等指标窗到了再改。#AI员工 #内容运营",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png"
+    },
+    "wechat_channels": {
+      "title": "等指标再改",
+      "description": "机器人小马想马上改内容，大陈叫停：指标窗没到，先建播放、完播、互动采集单。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png"
+    }
+  },
+  "fingerprints": {
+    "title_hash": "911daed97ed14be3a6153a1253d471ce7b3f20c247d9cb083e8bbbc0eefbdf1a",
+    "body_core_hash": "93d379e348c1465c05e4fa41178971b7c571673fabd444a9b3ebf0df56af7f18",
+    "video_sha256": "68d6c9fbc86e5a54a5c67032540a8261375c81e000654d7edaa00a160de80cb5",
+    "raw_video_sha256": "774ee4d34be9af5e4c1377395976d80a2a72711534160746f338a0cef72560d3",
+    "cover_sha256": "9971d4f9735b849a8e010b74365de45d04ee5c13f48d1a5244e1563561249c8b",
+    "cover_3_4_sha256": "9971d4f9735b849a8e010b74365de45d04ee5c13f48d1a5244e1563561249c8b",
+    "cover_4_3_sha256": "590c150484187c96427c600941d71f0d65a510a72d5cb1f961c65cdf893371b7"
+  },
+  "lock_dir": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks",
+  "allow_live": false,
+  "unsupportedPlatforms": {
+    "douyin": "unsupported_by_current_hermes_skill"
+  },
+  "publishConstraints": {
+    "requireManagementPageVerification": true,
+    "skipDuplicateIfAlreadyPublished": true,
+    "finalSubmitRequiresUserConfirmation": true,
+    "doNotPublish": true,
+    "doNotUpload": true,
+    "doNotClickSubmit": true,
+    "doNotTestXiaohongshu": true
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "campaign_id": "2026-05-17-ai-employee-evidence-grid-before-verdict",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "platform": "weibo",
+  "status": "published",
+  "actor": "codex",
+  "actor_session_id": "current-thread",
+  "created_at": "2026-05-17T02:08:44.421Z",
+  "updated_at": "2026-05-17T10:48:24+08:00",
+  "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/weibo.md",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+  "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+  "required_cover_rule": "支持自定义封面时必须上传指定封面；只能选帧时使用发布版首帧并写入 receipt。",
+  "fingerprints": {
+    "video_sha256": "ef60958864132466d3a0a99cbcac04a1129343db5ab1fd908087e67f31601aac",
+    "cover_sha256": "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18"
+  },
+  "steps": [
+    {
+      "step": "local_receipt_duplicate_check",
+      "status": "passed",
+      "checked_at": "2026-05-17T02:08:44.421Z"
+    },
+    {
+      "step": "asset_and_cover_preflight",
+      "status": "passed",
+      "checked_at": "2026-05-17T02:08:44.421Z"
+    },
+    {
+      "step": "weibo_profile_duplicate_check",
+      "status": "passed",
+      "checked_at": "2026-05-17T02:10:15.033Z",
+      "evidence": {
+        "profile_url": "https://weibo.com/u/2326772703",
+        "has_title": false,
+        "has_body_core": false,
+        "latest_visible": "2026-05-16 post visible; target 2026-05-17 content not present"
+      }
+    },
+    {
+      "step": "weibo_publish_and_public_post_verification",
+      "status": "passed",
+      "checked_at": "2026-05-17T10:46:20+08:00",
+      "evidence": {
+        "public_url": "https://weibo.com/2326772703/QFKMvbVrm",
+        "mblogid": "QFKMvbVrm",
+        "post_id": "5299512792842412",
+        "screenshot": "/Users/baishangjituan/Documents/push/weibo-publish-20260517/post-QFKMvbVrm.png",
+        "post_text_exact_match": true,
+        "source": "微博视频号"
+      }
+    },
+    {
+      "step": "feishu_success_notification",
+      "status": "sent",
+      "checked_at": "2026-05-17T10:48:24+08:00",
+      "evidence": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6fa68946a8b8b294848600ad7f7"
+      }
+    }
+  ],
+  "published_at": "2026-05-17T10:42:52+08:00",
+  "public_url": "https://weibo.com/2326772703/QFKMvbVrm",
+  "mobile_url": "https://m.weibo.cn/detail/5299512792842412",
+  "mblogid": "QFKMvbVrm",
+  "post_id": "5299512792842412",
+  "cover_mode": "weibo_quick_composer_no_custom_cover_control; used_publish_video_first_frame_per_package_rule; first_frame_matches_required_vertical_cover_design",
+  "ai_declaration": "含AI生成内容",
+  "result_path": "/Users/baishangjituan/Documents/push/weibo_publish_result_20260517_evidence_grid_before_verdict.json",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json",
+  "feishu_notification": {
+    "sent": true,
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "message_id": "om_x100b6fa68946a8b8b294848600ad7f7",
+    "sent_at": "2026-05-17T10:48:24+08:00",
+    "method": "lark-cli im +messages-send --as bot",
+    "idempotency_key": "weibo-20260517-evidence-grid-before-verdict"
+  }
+}

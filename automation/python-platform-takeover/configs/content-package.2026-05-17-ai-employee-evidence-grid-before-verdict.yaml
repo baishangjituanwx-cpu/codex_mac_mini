@@ -1,0 +1,142 @@
+source_thread_id: "019d9ac2-d680-7f12-bf32-14678c576aa1"
+campaign_id: "2026-05-17-ai-employee-evidence-grid-before-verdict"
+status: "ready_for_publish"
+package_status: "ready_for_platform_publishing"
+scope: "all_platforms"
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4"
+  backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+support_files:
+  content_package_root: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package"
+  final_verify_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/final-verify.json"
+  platform_upload_map: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platform-upload-map.md"
+  cover_package_root: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package"
+platform_upload_plan:
+  douyin:
+    platform_label: "抖音"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/douyin.md"
+  kuaishou:
+    platform_label: "快手"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/kuaishou.md"
+  wechat_channels:
+    platform_label: "微信视频号"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/wechat_channels.md"
+  weibo:
+    platform_label: "微博"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/weibo.md"
+  bilibili:
+    platform_label: "B站"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/bilibili.md"
+  xiaohongshu:
+    platform_label: "小红书"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/xiaohongshu.md"
+  toutiao:
+    platform_label: "头条号"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/toutiao.md"
+  baijiahao:
+    platform_label: "百家号"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/baijiahao.md"
+  zhihu:
+    platform_label: "知乎"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/zhihu.md"
+platforms:
+  douyin:
+    title: "证据没齐别下结论"
+    description: "小马想给内容盖“失败”章，大陈直接拦住：证据齐了吗？状态、指标、对照三格齐了，再下结论。#AI员工 #内容运营 #复盘"
+  kuaishou:
+    title: "齐了再结论"
+    description: "复盘不是盖章判死。状态、指标、对照三格证据齐了，再决定怎么改。"
+  wechat_channels:
+    title: "齐了再结论"
+    description: "机器人小马想直接下结论，大陈叫停：证据齐了吗？先补指标，再看状态和同账号对照。"
+  weibo:
+    title: "复盘时，证据没齐就能判失败吗？"
+    description: "不能。状态、指标、对照三格没齐，结论就容易变成情绪判断。大陈让机器人小马先补证据，再决定是否修改。#AI员工 #内容运营 #复盘"
+  bilibili:
+    title: "复盘不是盖章判死：AI员工先补三格证据，再决定内容要不要改"
+    description: "这条讲多平台内容复盘的第三个关键动作：不要在证据没齐时直接判失败。先看平台状态、内容指标、同账号对照，三格证据齐了，再决定是否改标题、封面或口播结构。"
+  xiaohongshu:
+    title: "别急着判失败"
+    description: "证据没齐，先别盖章。状态、指标、对照三格齐了，再决定怎么改。"
+  toutiao:
+    title: "内容复盘时，证据没齐能直接下结论吗？"
+    description: "不能。平台状态、内容指标、同账号对照都要补齐，才适合判断内容是否需要修改。否则很容易把延迟、审核或样本不足误判成内容失败。"
+  baijiahao:
+    title: "为什么复盘不能在证据没齐时直接判失败？"
+    description: "因为证据不足时，最危险的不是内容差，而是误判后重复动作。先补平台状态、内容指标和同账号对照，三格齐了再决定是否修改。"
+  zhihu:
+    title: "为什么内容复盘不能在证据没齐时直接下结论？"
+    description: "因为单个平台状态、单条暂时没指标，都不足以证明内容失败。更稳的流程是先补平台状态、内容级指标和同账号同格式对照，再决定是否修改。"
+publish_constraints:
+  require_management_page_verification: true
+  skip_duplicate_if_already_published: true
+  final_submit_requires_user_confirmation: true
+  do_not_publish: true
+  do_not_upload: true
+  do_not_click_submit: true
+  do_not_test_xiaohongshu: true
+fingerprints:
+  title_hash: "e0a74ca70de7ffd5fd42921cd627d9c6ae6da96e2a9e20d950dd8534d0f6a61e"
+  body_core_hash: "c546a33c9d7aad8b6eb90a14e90811422edaaa68a891367ec3986984edc1d126"
+  video_sha256: "ef60958864132466d3a0a99cbcac04a1129343db5ab1fd908087e67f31601aac"
+  raw_video_sha256: "9d7da2154398007bd0af6035424298fe14154f6ab5f8932674abdb1b68aa304f"
+  cover_sha256: "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18"
+  cover_3_4_sha256: "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18"
+  cover_4_3_sha256: "defc467a5cacb002d5a4a1c4a8ced47467854f5f190a61ffa37b554ad83243cd"
+lock_dir: "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks"
+receipt_schema:
+  future_platform_receipt_fields:
+    - "actor"
+    - "actor_session_id"
+    - "status"
+    - "verified_by"
+    - "lock_path"
+    - "submitted_at"
+    - "published_at"
+    - "video_path"
+    - "cover_path"
+    - "cover_thumbnail_present"
+    - "cover_readability_passed"
+hermes:
+  json_package: "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-17-ai-employee-evidence-grid-before-verdict.json"
+  receipt_path: "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json"
+  allow_live: false
+  platforms_supported_now:
+    - "bilibili"
+    - "toutiao"
+    - "zhihu"
+    - "baijiahao"
+    - "kuaishou"
+    - "weibo"
+    - "wechat_channels"
+  unsupported_platforms:
+    douyin: "unsupported_by_current_hermes_skill"

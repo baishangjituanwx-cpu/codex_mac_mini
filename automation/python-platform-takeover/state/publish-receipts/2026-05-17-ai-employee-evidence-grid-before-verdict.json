@@ -1,0 +1,786 @@
+{
+  "campaign_id": "2026-05-17-ai-employee-evidence-grid-before-verdict",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "status": "toutiao_under_review",
+  "created_at": "2026-05-17T00:48:16+08:00",
+  "receipt_schema": {
+    "future_platform_receipt_fields": [
+      "actor",
+      "actor_session_id",
+      "status",
+      "verified_by",
+      "lock_path",
+      "submitted_at",
+      "published_at",
+      "video_path",
+      "cover_path",
+      "cover_thumbnail_present",
+      "cover_readability_passed"
+    ]
+  },
+  "lock_dir": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks",
+  "fingerprints": {
+    "title_hash": "e0a74ca70de7ffd5fd42921cd627d9c6ae6da96e2a9e20d950dd8534d0f6a61e",
+    "body_core_hash": "c546a33c9d7aad8b6eb90a14e90811422edaaa68a891367ec3986984edc1d126",
+    "video_sha256": "ef60958864132466d3a0a99cbcac04a1129343db5ab1fd908087e67f31601aac",
+    "raw_video_sha256": "9d7da2154398007bd0af6035424298fe14154f6ab5f8932674abdb1b68aa304f",
+    "cover_sha256": "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18",
+    "cover_3_4_sha256": "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18",
+    "cover_4_3_sha256": "defc467a5cacb002d5a4a1c4a8ced47467854f5f190a61ffa37b554ad83243cd"
+  },
+  "receipts": {
+    "zhihu": {
+      "actor": "Codex",
+      "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
+      "platform_id": "zhihu",
+      "status": "published",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "title": "为什么内容复盘不能在证据没齐时直接下结论？",
+      "body": "因为单个平台状态、单条暂时没指标，都不足以证明内容失败。更稳的流程是先补平台状态、内容级指标和同账号同格式对照，再决定是否修改。",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/zhihu.md",
+      "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-17-ai-employee-evidence-grid-before-verdict-zhihu.md",
+      "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/final-verify.json",
+      "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-evidence-grid-before-verdict.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+      "uploaded_video_path": "/tmp/zhihu-20260517-publish.mp4",
+      "video_sha256": "ef60958864132466d3a0a99cbcac04a1129343db5ab1fd908087e67f31601aac",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+      "uploaded_cover_path": "/tmp/zhihu-20260517-cover-vertical-3x4.png",
+      "required_cover_sha256": "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18",
+      "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png",
+      "backup_cover_sha256": "defc467a5cacb002d5a4a1c4a8ced47467854f5f190a61ffa37b554ad83243cd",
+      "cover_mode": "required_vertical_3x4_local_file_input_confirmed_before_resume_submit",
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "verified_by": "cdp_playwright_resume_profile_and_public_readback",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.zhihu.lock.json",
+      "started_at": "2026-05-17T02:16:33.136Z",
+      "notes": [
+        "Chrome DevTools/CDP attached to existing logged-in Chrome on 127.0.0.1:9223.",
+        "No Chrome restart was performed.",
+        "A new upload tab is used; nonmatching old Zhihu drafts are ignored before upload.",
+        "Zhihu-only thread; no Feishu notification will be sent unless explicitly requested.",
+        "2026-05-17T02:20:37.064Z: Resuming after the initial script uploaded the correct video and cover but stopped before submit while selecting the Zhihu AI tag.",
+        "2026-05-17T02:21:09.473Z: Resuming after the initial script uploaded the correct video and cover but stopped before submit while selecting the Zhihu AI tag.",
+        "2026-05-17T02:21:43.228Z: Resumed current uploaded Zhihu draft via CDP and submitted after exact asset/text readback.",
+        "2026-05-17T02:21:43.228Z: No Feishu notification was sent from this Zhihu-only thread."
+      ],
+      "resumed_at": "2026-05-17T02:21:09.473Z",
+      "result_path": "/Users/baishangjituan/Documents/push/zhihu_20260517_publish_result.json",
+      "submitted_at": "2026-05-17T02:21:23.450Z",
+      "published_at": "发布于2026-05-17 10:21",
+      "recorded_at": "2026-05-17T02:21:43.228Z",
+      "current_url": "https://www.zhihu.com/pin/2039288447148505009",
+      "public_url": "https://www.zhihu.com/pin/2039288447148505009",
+      "share_link": "https://www.zhihu.com/pin/2039288447148505009?page=video_pin&scene=share",
+      "external_id": "2039288447148505009",
+      "verified_fields": {
+        "account": "智能大陈",
+        "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+        "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/zhihu.md",
+        "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-17-ai-employee-evidence-grid-before-verdict-zhihu.md",
+        "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/final-verify.json",
+        "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-evidence-grid-before-verdict.yaml",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+        "uploaded_video_path": "/tmp/zhihu-20260517-publish.mp4",
+        "video_sha256": "ef60958864132466d3a0a99cbcac04a1129343db5ab1fd908087e67f31601aac",
+        "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+        "uploaded_cover_path": "/tmp/zhihu-20260517-cover-vertical-3x4.png",
+        "required_cover_sha256": "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18",
+        "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png",
+        "backup_cover_sha256": "defc467a5cacb002d5a4a1c4a8ced47467854f5f190a61ffa37b554ad83243cd",
+        "cover_mode": "required_vertical_3x4_local_file_input_confirmed",
+        "video_tag": "含 AI 生成内容",
+        "original_video_checked": true,
+        "duplicate_guard": {
+          "profile": {
+            "hasExpectedTitle": false,
+            "hasExpectedBody": false,
+            "exactLink": null
+          },
+          "posts": {
+            "hasExpectedTitle": false,
+            "hasExpectedBody": false,
+            "exactLink": null
+          },
+          "manage": {
+            "hasExpectedTitle": false,
+            "hasExpectedBody": false,
+            "exactLink": null
+          }
+        },
+        "pre_submit_title": "为什么内容复盘不能在证据没齐时直接下结论？",
+        "pre_submit_body": "因为单个平台状态、单条暂时没指标，都不足以证明内容失败。更稳的流程是先补平台状态、内容级指标和同账号同格式对照，再决定是否修改。",
+        "pre_submit_video_check": {
+          "hasUploadedVideo": true,
+          "hasRequiredVideoName": true,
+          "localFileInputValue": ""
+        },
+        "pre_submit_cover_check": {
+          "localFileInputValue": "C:\\fakepath\\zhihu-20260517-cover-vertical-3x4.png",
+          "hasRequiredCoverFileName": true
+        },
+        "profile_context": {
+          "hasExpectedTitle": true,
+          "hasExpectedBody": true,
+          "url": "https://www.zhihu.com/people/vkvtss-81/zvideos"
+        },
+        "public_context": {
+          "hasExpectedTitle": true,
+          "hasExpectedBody": true,
+          "hasAiTag": true,
+          "url": "https://www.zhihu.com/pin/2039288447148505009"
+        },
+        "screenshots": {
+          "duplicateManage": "/Users/baishangjituan/Documents/push/zhihu-20260517-resume-duplicate-manage.png",
+          "duplicateProfile": "/Users/baishangjituan/Documents/push/zhihu-20260517-resume-duplicate-profile.png",
+          "duplicatePosts": "/Users/baishangjituan/Documents/push/zhihu-20260517-resume-duplicate-profile-posts.png",
+          "preSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260517-resume-pre-submit.png",
+          "afterSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260517-resume-after-submit.png",
+          "profile": "/Users/baishangjituan/Documents/push/zhihu-20260517-profile-verified.png",
+          "public": "/Users/baishangjituan/Documents/push/zhihu-20260517-public-verified.png"
+        }
+      }
+    },
+    "douyin": {
+      "campaign_id": "2026-05-17-ai-employee-evidence-grid-before-verdict",
+      "platform_id": "douyin",
+      "status": "published",
+      "title": "证据没齐别下结论",
+      "description": "小马想给内容盖“失败”章，大陈直接拦住：证据齐了吗？状态、指标、对照三格齐了，再下结论。#AI员工 #内容运营 #复盘",
+      "aweme_id": "7640680929517653294",
+      "item_id": "7640680929517653000",
+      "share_link": "https://www.iesdouyin.com/share/video/7640680929517653294/",
+      "source_share_url": "https://www.iesdouyin.com/share/video/7640680929517653294/?region=&mid=7640680916081249051&u_code=143eldg9c&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=inBg9Wsh2S3xgjIZUiILeksH1mbe7VD_aOr4fOhhQiM-&share_version=380000&ts=1778984731&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D",
+      "submitted_at": "2026-05-17T10:24:25+08:00",
+      "recorded_at": "2026-05-17T10:26:19+08:00",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/douyin.md",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platform-upload-map.md",
+      "automation_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-evidence-grid-before-verdict.yaml",
+      "final_verify": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/final-verify.json",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+      "uploaded_video_path": "/tmp/douyin-0517.mp4",
+      "video_sha256": "ef60958864132466d3a0a99cbcac04a1129343db5ab1fd908087e67f31601aac",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+      "uploaded_cover_path": "/tmp/douyin-0517-cover-3x4.png",
+      "required_cover_sha256": "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18",
+      "horizontal_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png",
+      "uploaded_horizontal_cover_path": "/tmp/douyin-0517-cover-4x3.png",
+      "horizontal_cover_sha256": "defc467a5cacb002d5a4a1c4a8ced47467854f5f190a61ffa37b554ad83243cd",
+      "cover_mode": "package_required_vertical_3x4_uploaded_as_custom_cover; package_horizontal_4x3_uploaded_as_horizontal_cover",
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "status_value": 102,
+      "initial_status_2_under_review_match": true,
+      "status_0_match": true,
+      "status_2_under_review_match": false,
+      "status_1_published_match": true,
+      "duration_ms": 15893,
+      "cover_uri": "tos-cn-i-dy/b2e0fd7392b343bb91738355b748b599",
+      "horizontal_cover_uri": "tos-cn-i-dy/6332aad7786f4ca394d4160cfc319e6b",
+      "verified_by": "Douyin creator work-list API exact-title match via Chrome DevTools/CDP; status 0 and status 1 matched after publish click",
+      "actor": "Codex Chrome DevTools/CDP publisher",
+      "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
+      "cdp": {
+        "cdp_base": "http://127.0.0.1:9223",
+        "target_id": "3B731A36CEA3C8F7EC792F4BCADD633E",
+        "publish_url": "https://creator.douyin.com/creator-micro/content/post/video?enter_from=publish_page",
+        "management_url": "https://creator.douyin.com/creator-micro/content/manage?enter_from=publish"
+      },
+      "screenshots": {
+        "cover_editor_after_vertical": "/tmp/douyin-0517-cover-editor-after-vertical.png",
+        "cover_editor_after_horizontal": "/tmp/douyin-0517-cover-editor-after-horizontal.png",
+        "pre_publish": "/tmp/douyin-0517-prepublish.png"
+      },
+      "feishu_notification": {
+        "sent": true,
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6fa63a6304a8c21f0a96c8f9bfa",
+        "sent_at": "2026-05-17T10:26:19+08:00",
+        "method": "lark-cli im +messages-send --as bot",
+        "idempotency_key": "douyin-20260517-evidence-grid-before-verdict"
+      },
+      "notes": [
+        "Before publishing, the campaign receipt, publish-lock directory, and Douyin work-list statuses 0, 1, and 2 were checked; the current title and body lead were absent.",
+        "Video was uploaded with DOM.setFileInputFiles through Chrome DevTools/CDP.",
+        "The package-required vertical cover cover-vertical-3x4.png was uploaded in the cover editor and verified visually; the package horizontal cover cover-horizontal-4x3.png was uploaded for the horizontal cover and verified visually.",
+        "Video check, cover effect check, and cover quality check passed before clicking publish; the page redirected to management and showed 发布成功.",
+        "Post-submit verification first matched status 0 and status 2, then refreshed into status 0 and status 1 with status_value 102; the result is recorded as published.",
+        "A single Feishu notification was sent after verified success."
+      ],
+      "published_at": "2026-05-17T10:24:25+08:00",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.douyin.lock.json",
+      "result_path": "/Users/baishangjituan/Documents/push/douyin_publish_result_20260517_evidence_grid_before_verdict.json"
+    },
+    "weibo": {
+      "campaign_id": "2026-05-17-ai-employee-evidence-grid-before-verdict",
+      "platform_id": "weibo",
+      "status": "published",
+      "account": "智者大陈",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "title": "复盘时，证据没齐就能判失败吗？",
+      "body": "不能。状态、指标、对照三格没齐，结论就容易变成情绪判断。大陈让机器人小马先补证据，再决定是否修改。#AI员工 #内容运营 #复盘",
+      "public_url": "https://weibo.com/2326772703/QFKMvbVrm",
+      "mobile_url": "https://m.weibo.cn/detail/5299512792842412",
+      "mblogid": "QFKMvbVrm",
+      "post_id": "5299512792842412",
+      "author": "智者大陈",
+      "source": "微博视频号",
+      "published_at": "2026-05-17T10:42:52+08:00",
+      "submitted_at": "2026-05-17T10:42:52+08:00",
+      "recorded_at": "2026-05-17T10:46:20+08:00",
+      "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/weibo.md",
+      "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/weibo/2026-05-17-ai-employee-evidence-grid-before-verdict-weibo.md",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platform-upload-map.md",
+      "automation_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-evidence-grid-before-verdict.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+      "video_sha256": "ef60958864132466d3a0a99cbcac04a1129343db5ab1fd908087e67f31601aac",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+      "required_cover_sha256": "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18",
+      "first_frame_path": "/Users/baishangjituan/Documents/push/weibo-20260517-publish-first-frame.png",
+      "first_frame_sha256": "78339b755903b825fef54ae054750faf1137534f0532c1e649b811a043487704",
+      "cover_mode": "weibo_quick_composer_no_custom_cover_control; used_publish_video_first_frame_per_package_rule; first_frame_matches_required_vertical_cover_design",
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "ai_declaration": "含AI生成内容",
+      "duplicate_guard": {
+        "local_receipts": "passed_no_existing_weibo_receipt_for_current_title_body_or_video_hash_before_publish",
+        "profile_before_publish": "passed_profile_missing_current_marker_before_publish",
+        "search_after_publish": "matched_new_post_39_seconds_after_publish"
+      },
+      "verification": {
+        "status": "verified",
+        "verified_by": "opencli_weibo_post_and_logged_in_public_post_readback",
+        "post_command": {
+          "author": "智者大陈",
+          "created_at": "Sun May 17 10:42:52 +0800 2026",
+          "id": "5299512792842412",
+          "mblogid": "QFKMvbVrm",
+          "source": "微博视频号",
+          "text_exact_match": true,
+          "url": "https://weibo.com/2326772703/QFKMvbVrm"
+        },
+        "public_page_readback": {
+          "url": "https://weibo.com/2326772703/QFKMvbVrm",
+          "title": "微博正文 - 微博",
+          "text_contains_expected_body": true,
+          "text_contains_duration": "00:15",
+          "text_contains_status_count_36": true
+        },
+        "profile_statuses_after_publish": 36
+      },
+      "screenshots": {
+        "duplicate_profile_before": "/Users/baishangjituan/Documents/push/weibo-publish-20260517/profile-before-duplicate-check.png",
+        "public_post_after": "/Users/baishangjituan/Documents/push/weibo-publish-20260517/post-QFKMvbVrm.png"
+      },
+      "actor": "Codex OpenCLI Browser Bridge publisher",
+      "actor_session_id": "current-thread-opencli-browser-bridge",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.weibo.lock.json",
+      "result_path": "/Users/baishangjituan/Documents/push/weibo_publish_result_20260517_evidence_grid_before_verdict.json",
+      "notes": [
+        "This thread is restricted to Weibo publishing; no other platform publishing was performed in this run.",
+        "Chrome DevTools/CDP on 127.0.0.1:9223 was available but not logged in to Weibo, so the logged-in OpenCLI Browser Bridge session was used without restarting Chrome.",
+        "The package-required cover file is cover-vertical-3x4.png. The Weibo quick composer exposed no separate custom cover control, so the publish video first frame was used according to the package rule; the first frame visually matches the required cover design.",
+        "AI content declaration was selected and read back as 含AI生成内容 before send.",
+        "The page returned 发布成功; public post readback and opencli weibo post verified the post URL and content."
+      ],
+      "feishu_notification": {
+        "sent": true,
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6fa68946a8b8b294848600ad7f7",
+        "sent_at": "2026-05-17T10:48:24+08:00",
+        "method": "lark-cli im +messages-send --as bot",
+        "idempotency_key": "weibo-20260517-evidence-grid-before-verdict"
+      }
+    },
+    "kuaishou": {
+      "campaign_id": "2026-05-17-ai-employee-evidence-grid-before-verdict",
+      "platform_id": "kuaishou",
+      "platform": "kuaishou",
+      "status": "published",
+      "status_label": "已发布",
+      "title": "齐了再结论",
+      "description": "复盘不是盖章判死。状态、指标、对照三格证据齐了，再决定怎么改。",
+      "submitted_text": "齐了再结论\n复盘不是盖章判死。状态、指标、对照三格证据齐了，再决定怎么改。",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/kuaishou.md",
+      "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platform-upload-map.md",
+      "automation_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-evidence-grid-before-verdict.yaml",
+      "final_verify": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/final-verify.json",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+      "uploaded_video_path": "/tmp/kuaishou-20260517.mp4",
+      "raw_video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict.mp4",
+      "video_sha256": "ef60958864132466d3a0a99cbcac04a1129343db5ab1fd908087e67f31601aac",
+      "raw_video_sha256": "9d7da2154398007bd0af6035424298fe14154f6ab5f8932674abdb1b68aa304f",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+      "uploaded_cover_path": "/tmp/kuaishou-20260517-cover-vertical-3x4.png",
+      "required_cover_sha256": "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18",
+      "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png",
+      "backup_cover_sha256": "defc467a5cacb002d5a4a1c4a8ced47467854f5f190a61ffa37b554ad83243cd",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+      "cover_mode": "package_required_vertical_3x4_uploaded_via_kuaishou_custom_cover_file_input; cover_apply_success_toast_and_preview_verified",
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "actor": "Codex Chrome DevTools/CDP publisher",
+      "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.kuaishou.lock.json",
+      "submitted_at": "2026-05-17T10:43:00+08:00",
+      "verified_at": "2026-05-17T10:47:55.367+08:00",
+      "published_at": "2026-05-17T10:43:00+08:00",
+      "published_at_raw": "2026-05-17 10:43",
+      "current_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+      "management_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+      "verified_by": "Kuaishou creator work manager exact submitted-text row via Chrome DevTools/CDP",
+      "manager_verification": {
+        "url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+        "title": "快手创作者服务平台",
+        "hasFullText": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasTerminalStatus": true,
+        "status": "已发布",
+        "rowText": "7\n智能大陈\n发布作品\n首页\n内容管理\n作品管理\n合集管理\n互动管理\n数据中心\n成长中心\n创作服务\n其他服务\n视频管理\n时间范围\n~\n\n共365天\n\n全部作品已发布待发布未通过\n共1个作品\n齐了再结论 复盘不是盖章判死。状态、指标、对照三格证据齐了，再决定怎么改。\n已发布\n2026-05-17 10:43\n\nwww.kuai hou.com 2019~2026 @ All right  Re erved 京ICP备15023266号-136  京公网安备11010802038443号\n\n遇到\n\n问题",
+        "publishedAtRaw": "2026-05-17 10:43",
+        "body": "7\n智能大陈\n发布作品\n首页\n内容管理\n作品管理\n合集管理\n互动管理\n数据中心\n成长中心\n创作服务\n其他服务\n视频管理\n时间范围\n~\n\n共365天\n\n全部作品已发布待发布未通过\n共1个作品\n齐了再结论 复盘不是盖章判死。状态、指标、对照三格证据齐了，再决定怎么改。\n已发布\n2026-05-17 10:43\n\nwww.kuaishou.com 2019~2026 @ All rights Reserved 京ICP备15023266号-136  京公网安备11010802038443号\n\n遇到\n\n问题"
+      },
+      "duplicate_guard": {
+        "local_receipt_before_publish": "no_kuaishou_receipt",
+        "management_page_exact_searches": [
+          {
+            "query": "齐了再结论",
+            "result_count": 0,
+            "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260517-dup-search-1.png"
+          },
+          {
+            "query": "复盘不是盖章判死",
+            "result_count": 0,
+            "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260517-dup-search-2.png"
+          },
+          {
+            "query": "状态、指标、对照三格证据齐了",
+            "result_count": 0,
+            "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260517-dup-search-3.png"
+          }
+        ],
+        "result": "no_duplicate_found_before_upload"
+      },
+      "cdp": {
+        "cdp_base": "http://127.0.0.1:9223",
+        "target_id": "D6AE7E068AEEAF42CFF67599D752F6F2",
+        "publish_url": "https://cp.kuaishou.com/article/publish/video?tabType=1",
+        "management_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish"
+      },
+      "screenshots": {
+        "duplicate_title": "/Users/baishangjituan/Documents/push/kuaishou-20260517-dup-search-1.png",
+        "duplicate_body_1": "/Users/baishangjituan/Documents/push/kuaishou-20260517-dup-search-2.png",
+        "duplicate_body_2": "/Users/baishangjituan/Documents/push/kuaishou-20260517-dup-search-3.png",
+        "after_video_dragdrop": "/Users/baishangjituan/Documents/push/kuaishou-20260517-after-video-dragdrop.png",
+        "after_cover_setfile": "/Users/baishangjituan/Documents/push/kuaishou-20260517-after-cover-setfile.png",
+        "pre_submit": "/Users/baishangjituan/Documents/push/kuaishou-20260517-pre-submit.png",
+        "after_submit": "/Users/baishangjituan/Documents/push/kuaishou-20260517-after-submit-click.png",
+        "manager_verified": "/Users/baishangjituan/Documents/push/kuaishou-20260517-manager-verified.png"
+      },
+      "feishu_notification": {
+        "sent": true,
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6fa6f5d984b4b4b932e43e2a74e",
+        "sent_at": "2026-05-17T10:45:05+08:00",
+        "method": "lark-cli im +messages-send --as bot",
+        "idempotency_key": "ks-20260517-evidence-grid",
+        "note": "Notification was sent after the first manager verification showed 审核中; this receipt records the later manager recheck status 已发布. No second Feishu message was sent to avoid duplicate notifications.",
+        "first_attempt": {
+          "sent": false,
+          "error_code": 99992402,
+          "error_message": "HTTP 400: field validation failed",
+          "note": "Initial longer idempotency key was rejected before any message_id was returned."
+        }
+      },
+      "notes": [
+        "Chrome DevTools/CDP attached to existing logged-in Chrome on 127.0.0.1:9223; Chrome was not restarted.",
+        "Before upload, local receipt and Kuaishou work manager exact searches showed no existing Kuaishou receipt or duplicate manager row.",
+        "Video file input direct set did not attach the video, so the exact package video copy was uploaded by CDP drag/drop from /tmp while preserving original file hashes in this receipt.",
+        "Kuaishou page has only one visible 作品描述 field, so the package title was placed on line 1 and package copy on line 2.",
+        "The package-required vertical 3:4 cover file was uploaded through the Kuaishou custom cover image input; the page reported 封面应用成功 and the preview showed the package cover, not an AI/default cover.",
+        "After clicking 发布, Kuaishou redirected to 作品管理 and the exact submitted text appeared first with status 审核中, then rechecked as 已发布 at 2026-05-17 10:43.",
+        "One successful Feishu notification was sent after manager verification; no duplicate correction notification was sent after status changed to 已发布."
+      ],
+      "result_path": "/Users/baishangjituan/Documents/push/kuaishou_publish_result_20260517_evidence_grid_before_verdict.json",
+      "recorded_at": "2026-05-17T10:47:55.367+08:00"
+    },
+    "bilibili": {
+      "platform_id": "bilibili",
+      "campaign_id": "2026-05-17-ai-employee-evidence-grid-before-verdict",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "status": "published_verified_public_api",
+      "verified_state": "已发布",
+      "public_url": "https://www.bilibili.com/video/BV1sFL76cE6b/",
+      "bvid": "BV1sFL76cE6b",
+      "aid": 116587642231681,
+      "cid": 38392236737,
+      "title": "复盘不是盖章判死：AI员工先补三格证据，再决定内容要不要改",
+      "description": "这条讲多平台内容复盘的第三个关键动作：不要在证据没齐时直接判失败。先看平台状态、内容指标、同账号对照，三格证据齐了，再决定是否改标题、封面或口播结构。",
+      "category": "人工智能",
+      "tid": 207,
+      "human_type2": 1011,
+      "tags": [
+        "AI员工",
+        "内容运营",
+        "数据复盘",
+        "短视频运营"
+      ],
+      "ai_declaration": "作者声明：该视频使用人工智能合成技术",
+      "platform_ai_declaration": "含AI生成内容",
+      "creation_statement": {
+        "id": 1
+      },
+      "public_argue_msg": "含AI生成内容",
+      "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/bilibili.md",
+      "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/final-verify.json",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+      "video_sha256": "ef60958864132466d3a0a99cbcac04a1129343db5ab1fd908087e67f31601aac",
+      "cover": {
+        "expected_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png",
+        "expected_cover_sha256": "defc467a5cacb002d5a4a1c4a8ced47467854f5f190a61ffa37b554ad83243cd",
+        "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+        "backup_cover_sha256": "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18",
+        "uploaded_cover_url": "https://archive.biliimg.com/bfs/archive/f5e641757a60267caaa7a0d0958472883d543904.jpg",
+        "public_cover_url": "https://i1.hdslb.com/bfs/archive/f5e641757a60267caaa7a0d0958472883d543904.jpg",
+        "public_cover_path": "/Users/baishangjituan/Documents/push/bilibili-20260517-platform-cover.jpg",
+        "public_cover_sha256": "8d026a06ec4d02d239427046bec16639f4b1350c2849b37a74daa7a3c66d2429",
+        "public_cover_dimensions": {
+          "width": 1440,
+          "height": 810
+        },
+        "mode": "package_required_horizontal_4x3_uploaded_as_custom_cover",
+        "correct_package_cover_used": true,
+        "thumbnail_present": true,
+        "readability_passed": true,
+        "verified_against_required_cover": true,
+        "note": "内容包指定的 cover-horizontal-4x3.png 已通过真实图片上传控件上传；平台返回的 archive 封面与公开页封面已下载核验。"
+      },
+      "public_api": {
+        "code": 0,
+        "message": "OK",
+        "bvid": "BV1sFL76cE6b",
+        "aid": 116587642231681,
+        "cid": 38392236737,
+        "state": 0,
+        "duration": 16,
+        "title": "复盘不是盖章判死：AI员工先补三格证据，再决定内容要不要改",
+        "desc": "这条讲多平台内容复盘的第三个关键动作：不要在证据没齐时直接判失败。先看平台状态、内容指标、同账号对照，三格证据齐了，再决定是否改标题、封面或口播结构。",
+        "pic": "https://i1.hdslb.com/bfs/archive/f5e641757a60267caaa7a0d0958472883d543904.jpg",
+        "tid": 207,
+        "tname": "",
+        "pubdate": 1778986380,
+        "ctime": 1778986381,
+        "argue_msg": "含AI生成内容",
+        "verified_url": "https://api.bilibili.com/x/web-interface/view?bvid=BV1sFL76cE6b",
+        "verified_at": "2026-05-17T02:57:44.890Z"
+      },
+      "submit_response": {
+        "endpoint": "https://member.bilibili.com/x/vu/web/add/v3",
+        "code": 0,
+        "message": "0",
+        "aid": 116587642231681,
+        "bvid": "BV1sFL76cE6b",
+        "verified_by_network_capture": true
+      },
+      "browser_route": {
+        "cdp_checked_first": true,
+        "cdp_available": false,
+        "checked_endpoints": [
+          "BROWSER_CDP_URL",
+          "http://127.0.0.1:9222/json/version",
+          "http://127.0.0.1:9223/json/version"
+        ],
+        "fallback_used": "OpenCLI BrowserBridge against logged-in Chrome",
+        "chrome_restarted": false
+      },
+      "screenshots": {
+        "pre_submit": "/Users/baishangjituan/Documents/push/bilibili-20260517-pre-submit.png",
+        "manager_attempt": "/Users/baishangjituan/Documents/push/bilibili-manager-verified-20260517.png"
+      },
+      "verification_method": "submit_success_page_network_capture_and_public_api",
+      "manager_verification_note": "稿件管理列表当时未立即刷新出同标题行；提交成功页、add/v3 响应 code=0 和公开 view API code=0 已确认发布成功。",
+      "result_path": "/Users/baishangjituan/Documents/push/bilibili_publish_result_20260517.json",
+      "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.bilibili.lock.json",
+      "recorded_at": "2026-05-17T02:57:44.890Z",
+      "recorded_at_asia_shanghai": "2026年5月17日 10:57:44",
+      "actor": "Codex OpenCLI BrowserBridge publisher",
+      "actor_session_id": "opencli-browser-bridge-current-thread",
+      "duplicate_guard": {
+        "local_receipt_checked_before_publish": true,
+        "same_campaign_existing_bilibili_receipt_before_publish": false,
+        "no_republish_after_success": true
+      },
+      "feishu_notification": {
+        "status": "sent",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6fa6a2461398c4230b617557ac8",
+        "create_time": "2026-05-17 10:58:16",
+        "identity": "bot",
+        "sent_after_verified_publish": true,
+        "sent_at": "2026-05-17T02:58:33.152Z"
+      }
+    },
+    "wechat_channels": {
+      "actor": "Codex",
+      "actor_session_id": "opencli-browserbridge-workspace-wechat-live-20260517-publish",
+      "platform_id": "wechat_channels",
+      "status": "published_verified",
+      "status_code_from_wechat_component": 1,
+      "status_interpretation": "published_verified_by_management_list_and_vue_component",
+      "component_verification": {
+        "isPostHasPosted": true,
+        "isPostProcessSuccess": true,
+        "isPostProcessFail": false,
+        "isCoverEmpty": false,
+        "showFailRetryBtn": false
+      },
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "campaign_id": "2026-05-17-ai-employee-evidence-grid-before-verdict",
+      "title": "齐了再下结论",
+      "package_title": "齐了再结论",
+      "title_adjustment": "视频号短标题建议/要求 6-16 个字符；按内容语义扩展为 6 字“齐了再下结论”。",
+      "description": "机器人小马想直接下结论，大陈叫停：证据齐了吗？先补指标，再看状态和同账号对照。",
+      "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platform-upload-map.md",
+      "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-evidence-grid-before-verdict.yaml",
+      "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/final-verify.json",
+      "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.wechat_channels.lock.json",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+      "uploaded_video_path": "/tmp/wc17-video.mp4",
+      "video_sha256": "ef60958864132466d3a0a99cbcac04a1129343db5ab1fd908087e67f31601aac",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+      "uploaded_cover_path": "/tmp/wc17-cover.png",
+      "required_cover_sha256": "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18",
+      "cover_mode": "required_vertical_3x4_native_file_upload_confirmed_in_edit_cover_modal",
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "object_id": "export/UzFfBgAAxOajIFcYeCbpjMzT4DCa4izHPoPpmuPbT74-Wci25Q",
+      "object_nonce": "10493831989366069169",
+      "management_url": "https://channels.weixin.qq.com/platform/post/list",
+      "public_link": null,
+      "public_link_note": "复制视频链接需要前台剪贴板权限；本次未取得公开短链，已用管理页对象和列表首行完成核验。",
+      "published_at_from_management_list": "2026-05-17 11:01 Asia/Shanghai",
+      "verified_at": "2026-05-17T11:06:51+08:00",
+      "verified_by": "wechat_channels_management_list_dom_and_vue_component_state",
+      "management_row_text": "机器人小马想直接下结论，大陈叫停：证据齐了吗？先补指标，再看状态和同账号对照。\n2026年05月17日 11:01\n0\n0\n0\n0\n0\n置顶\n分享\n评论管理\n修改描述和封面\n可见权限\n删除",
+      "screenshots": {
+        "create_ready": "/tmp/wechat-live-create-ready.png",
+        "cover_modal_after_native_upload": "/tmp/screen-after-cover-select.png",
+        "cover_applied": "/tmp/wechat-cover-after-native-confirm.png",
+        "before_publish_click": "/tmp/wechat-final-preclick-20260517.png",
+        "after_publish_click": "/tmp/wechat-after-publish-click.png",
+        "management_list_after_publish": "/tmp/wechat-list-after-publish.png"
+      },
+      "notes": [
+        "Video uploaded with native macOS file chooser from /tmp/wc17-video.mp4; sha256 matches package video.",
+        "Cover uploaded with native macOS file chooser from /tmp/wc17-cover.png; sha256 matches package 3:4 vertical cover.",
+        "Submission returned to content management list and first row exact description/time matches this campaign.",
+        "List page does not render short title visibly; title was read back from create form before submit."
+      ],
+      "feishu_notification": {
+        "status": "sent",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6fa7437938acb18c5317bb12f2c",
+        "sent_at": "2026-05-17T11:07:07+08:00",
+        "sent_via": "lark-cli bot"
+      }
+    },
+    "baijiahao": {
+      "actor": "Codex BrowserBridge publisher",
+      "actor_session_id": "baijiahao-20260517-publish-v4",
+      "platform_id": "baijiahao",
+      "status": "submitted_unverified",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "title": "为什么复盘不能在证据没齐时直接判失败？",
+      "description": "因为证据不足时，最危险的不是内容差，而是误判后重复动作。先补平台状态、内容指标和同账号对照，三格齐了再决定是否修改。",
+      "content_type": "video",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/baijiahao.md",
+      "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-evidence-grid-before-verdict.yaml",
+      "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/final-verify.json",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+      "uploaded_video_path": "/tmp/bjh0517.mp4",
+      "video_sha256": "ef60958864132466d3a0a99cbcac04a1129343db5ab1fd908087e67f31601aac",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png",
+      "uploaded_cover_path": "/tmp/bjh0517-cover-4x3.png",
+      "required_cover_sha256": "defc467a5cacb002d5a4a1c4a8ced47467854f5f190a61ffa37b554ad83243cd",
+      "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+      "backup_cover_sha256": "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18",
+      "cover_mode": "package_required_horizontal_4x3_local_file_input_confirmed",
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "verified_by": "OpenCLI BrowserBridge success-page readback; manager exact-title polling did not confirm within window",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.baijiahao.lock.json",
+      "submitted_at": "2026-05-17T03:03:14.689Z",
+      "recorded_at": "2026-05-17T11:07:17+08:00",
+      "platform_success_text": "提交成功，正在审核中...\n\n查看发布状态再写一篇\n招募任务火热进行中，快来参与吧\n手机查看\n百+是一款内容加热工具，发布内容后推荐量低？百+可帮您加热内容，获得亿万曝光和互动。\n已帮助0万篇内容，获得0亿流量立即投放\n规则中心\n问题咨询\n展开\n视频发布成功",
+      "current_url_after_submit": "https://baijiahao.baidu.com/builder/rc/clue?aside=0&footer=true&from=videoV2&firstPublish=undefined&word_bag_id=null",
+      "manager_url": "https://baijiahao.baidu.com/builder/rc/content?currentPage=1&pageSize=10&search=%E4%B8%BA%E4%BB%80%E4%B9%88%E5%A4%8D%E7%9B%98%E4%B8%8D%E8%83%BD%E5%9C%A8%E8%AF%81%E6%8D%AE%E6%B2%A1%E9%BD%90%E6%97%B6%E7%9B%B4%E6%8E%A5%E5%88%A4%E5%A4%B1%E8%B4%A5%EF%BC%9F&type=&collection=&startDate=&endDate=",
+      "manager_status": null,
+      "manager_exact_title_present": false,
+      "pre_submit_readback_path": "/Users/baishangjituan/Documents/push/baijiahao_presubmit_readback_20260517.json",
+      "manager_verification_path": "/Users/baishangjituan/Documents/push/baijiahao_manager_verify_20260517.json",
+      "result_path": "/Users/baishangjituan/Documents/push/baijiahao_publish_action_v4_20260517.json",
+      "verified_fields": {
+        "title_exact_readback": true,
+        "ai_statement_readback": true,
+        "cover_source_1440x1080": true,
+        "cover_horizontal_preview_1440x810": true,
+        "publish_button_enabled_before_click": true,
+        "safety_checkpoint_seen": false,
+        "success_page_text_seen": true,
+        "manager_exact_title_present": false,
+        "screenshots": {
+          "duplicate_guard": "/Users/baishangjituan/Documents/push/baijiahao-20260517-publish-v4-duplicate.png",
+          "after_video_upload": "/Users/baishangjituan/Documents/push/baijiahao-20260517-after-video-upload-final.png",
+          "after_cover": "/Users/baishangjituan/Documents/push/baijiahao-20260517-fill-title-ai-cover-final.png",
+          "before_submit": "/Users/baishangjituan/Documents/push/baijiahao-20260517-before-submit.png",
+          "after_submit": "/Users/baishangjituan/Documents/push/baijiahao-20260517-after-submit.png",
+          "manager_verified": "/Users/baishangjituan/Documents/push/baijiahao-20260517-manager-verified.png"
+        }
+      },
+      "warning": "Publish was clicked exactly once and Baijiahao showed a success/under-review page, but the exact title did not appear in management polling. Do not auto-republish; check/resolve existing submission first."
+    },
+    "toutiao": {
+      "actor": "Codex CDP publisher",
+      "actor_session_id": "chrome-cdp-127.0.0.1:9223-current-logged-in-session",
+      "platform_id": "toutiao",
+      "campaign_id": "2026-05-17-ai-employee-evidence-grid-before-verdict",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "content_type": "video",
+      "status": "under_review",
+      "verified_state": "审核中",
+      "title": "内容复盘时，证据没齐能直接下结论吗？",
+      "description": "不能。平台状态、内容指标、同账号对照都要补齐，才适合判断内容是否需要修改。否则很容易把延迟、审核或样本不足误判成内容失败。",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/toutiao.md",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platform-upload-map.md",
+      "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/final-verify.json",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+      "video_sha256": "ef60958864132466d3a0a99cbcac04a1129343db5ab1fd908087e67f31601aac",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+      "required_cover_sha256": "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18",
+      "cover_mode": "package_required_vertical_3x4_uploaded_via_cdp_dom_set_file_input_files",
+      "correct_package_cover_used": true,
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "ai_declaration_checked": true,
+      "generate_article_checked": false,
+      "pre_submit_readback": {
+        "titleValue": "内容复盘时，证据没齐能直接下结论吗？",
+        "wordLimit": "18/30",
+        "videoOk": true,
+        "coverText": "封面\n编辑\n替换\n清晰美观的封面有利于推荐，建议分辨率不低于 618*1000（大小不超过 20M）",
+        "checkboxes": [
+          {
+            "text": "生成图文",
+            "checked": false,
+            "cls": "byte-checkbox"
+          },
+          {
+            "text": "取自站外",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          },
+          {
+            "text": "引用站内",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          },
+          {
+            "text": "自行拍摄",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          },
+          {
+            "text": "AI生成",
+            "checked": true,
+            "cls": "byte-checkbox checkbot-item checkbox-with-tip byte-checkbox-checked"
+          },
+          {
+            "text": "虚构演绎，故事经历",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item checkbox-with-tip"
+          },
+          {
+            "text": "投资观点，仅供参考",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          },
+          {
+            "text": "健康医疗分享，仅供参考",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          }
+        ]
+      },
+      "verified_by": "Chrome DevTools Protocol DOM readback and Toutiao work manager exact-title row",
+      "manager_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
+      "manager_status": "under_review",
+      "manager_row_text": "头条号\n消息\n11\n在头条创作的第 38 天\n百商集团\n主页\n创作\n文章\n视频\n微头条\n音频\n管理\n作品管理\n评论管理\n草稿箱\n数据\n收益数据\n作品数据\n粉丝数据\n进阶创作\n付费专栏\n提现\n成长指南\n首发激励\n创作权益\n头条认证\n创作灵感\n创作训练营\n工具\n功能实验室\n直播工具\n创作保护\n图片素材\n设置\n全部文章视频微头条小视频音频合集草稿箱\n状态：\n全部\n~\n共 27 条内容\n00:15\n内容复盘时，证据没齐能直接下结论吗？\n05-17 12:55\n审核中\n删除作品\n00:15\n一条暂时没指标，AI员工能直接判内容差吗？\n展现 159\n播放 0\n点赞 0\n评论 0\n05-16 11:24\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n审核中时，AI员工该不该改标题重发？\n展现 230\n播放 0\n点赞 0\n评论 0\n05-15 11:54\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n缺内容级指标时，AI员工该不该先判内容差？\n展现 356\n播放 37\n点赞 0\n评论 0\n05-14 13:23\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n审核中或缺链接时，AI员工该不该再发布一次？\n展现 359\n播放 0\n点赞 0\n评论 0\n05-13 16:46\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n平台状态不一致时，AI员工该怎么判断？\n展现 432\n播放 0\n点赞 0\n评论 0\n05-12 17:48\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n视频发完就走？AI员工必须先把回执交清楚\n展现 862\n播放 0\n点赞 0\n评论 0\n05-05 13:12\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n视频发完就做下一条？大陈让AI员工先做三条对照\n展现 1,010\n播放 0\n点赞 0\n评论 0\n05-04 14:31\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n机器人小马说全平台已发布，大陈为什么说还没复盘？\n展现 1,082\n播放 1",
+      "submitted_at": "2026-05-17T04:55:43.666Z",
+      "verified_at": "2026-05-17T04:56:37.355Z",
+      "verified_at_asia_shanghai": "2026年5月17日 12:56:37",
+      "current_url_after_submit": "https://mp.toutiao.com/profile_v4/xigua/small-video",
+      "screenshots": {
+        "cover_applied": "/Users/baishangjituan/Documents/push/toutiao-cdp-cover-applied-20260517.png",
+        "pre_submit": "/Users/baishangjituan/Documents/push/toutiao-cdp-pre-submit-20260517.png",
+        "after_publish": "/Users/baishangjituan/Documents/push/toutiao-cdp-after-publish-click-20260517.png",
+        "manager": "/Users/baishangjituan/Documents/push/toutiao-cdp-manager-verified-20260517.png"
+      },
+      "result_path": "/Users/baishangjituan/Documents/push/toutiao_publish_result_20260517.json",
+      "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.toutiao.lock.json",
+      "browser_route": {
+        "cdp_checked_first": true,
+        "cdp_available": true,
+        "cdp_base": "http://127.0.0.1:9223",
+        "fallback_used": null,
+        "chrome_restarted": false,
+        "note": "User explicitly required CDP priority; video and cover were both injected through CDP/DOM file inputs."
+      },
+      "notes": [
+        "Local receipt and manager duplicate guard found no existing Toutiao item for this campaign before submit.",
+        "Video uploaded through CDP DOM.setFileInputFiles to the Toutiao video file input.",
+        "Required vertical 3:4 cover file cover-vertical-3x4.png was uploaded through the image-only local cover input using CDP DOM.setFileInputFiles.",
+        "Pre-submit readback showed title exact, video upload successful, cover area as 编辑/替换, AI生成 checked, and 生成图文 unchecked.",
+        "After clicking 发布, Toutiao redirected to作品管理 and the first manager check showed the exact title with status 审核中."
+      ],
+      "feishu_notification": {
+        "status": "sent",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6fa0e76bc0b4b487b02d62486e5",
+        "create_time": "2026-05-17 12:56:58",
+        "identity": "bot",
+        "sent_after_verified_publish": true,
+        "sent_at": "2026-05-17T04:57:11.116Z",
+        "idempotency_key": "tt-20260517-evidence-grid"
+      }
+    }
+  },
+  "updated_at": "2026-05-17T04:56:37.355Z",
+  "notifications": [
+    "feishu_notified_2026-05-17T10:47:55.367+08:00: kuaishou published receipt sent to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6fa6f5d984b4b4b932e43e2a74e.",
+    "feishu_notified_2026-05-17T04:57:11.116Z: toutiao under_review receipt sent to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6fa0e76bc0b4b487b02d62486e5."
+  ],
+  "previous_status_before_bilibili": "kuaishou_published",
+  "last_platform": "toutiao",
+  "last_updated_at": "2026-05-17T02:57:44.890Z",
+  "feishu_notification": {
+    "status": "sent",
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "message_id": "om_x100b6fa0e76bc0b4b487b02d62486e5",
+    "create_time": "2026-05-17 12:56:58",
+    "identity": "bot",
+    "sent_after_verified_publish": true,
+    "sent_at": "2026-05-17T04:57:11.116Z",
+    "idempotency_key": "tt-20260517-evidence-grid"
+  },
+  "last_published_platform": "toutiao",
+  "updated_at_asia_shanghai": "2026年5月17日 12:56:37"
+}

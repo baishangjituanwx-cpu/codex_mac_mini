@@ -1,0 +1,20 @@
+{
+  "campaign_id": "2026-05-17-ai-employee-evidence-grid-before-verdict",
+  "platform_id": "douyin",
+  "status": "published",
+  "title": "证据没齐别下结论",
+  "aweme_id": "7640680929517653294",
+  "share_link": "https://www.iesdouyin.com/share/video/7640680929517653294/",
+  "submitted_at": "2026-05-17T10:24:25+08:00",
+  "recorded_at": "2026-05-17T10:26:19+08:00",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+  "video_sha256": "ef60958864132466d3a0a99cbcac04a1129343db5ab1fd908087e67f31601aac",
+  "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+  "cover_sha256": "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18",
+  "horizontal_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png",
+  "horizontal_cover_sha256": "defc467a5cacb002d5a4a1c4a8ced47467854f5f190a61ffa37b554ad83243cd",
+  "verified_by": "Douyin creator work-list API exact-title match via Chrome DevTools/CDP; status 0 and status 1 matched after publish click",
+  "result_path": "/Users/baishangjituan/Documents/push/douyin_publish_result_20260517_evidence_grid_before_verdict.json",
+  "published_at": "2026-05-17T10:24:25+08:00"
+}

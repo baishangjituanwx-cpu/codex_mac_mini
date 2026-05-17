@@ -1,0 +1,39 @@
+{
+  "campaign_id": "2026-05-17-ai-employee-evidence-grid-before-verdict",
+  "platform": "wechat_channels",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "actor": "codex",
+  "actor_session_id": "codex-2026-05-17T02:06:03.851Z",
+  "status": "published_verified",
+  "locked_at": "2026-05-17T02:06:03.851Z",
+  "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package",
+  "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platform-upload-map.md",
+  "automation_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-evidence-grid-before-verdict.yaml",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+  "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+  "package_title": "齐了再结论",
+  "package_description": "机器人小马想直接下结论，大陈叫停：证据齐了吗？先补指标，再看状态和同账号对照。",
+  "notes": [
+    "User explicitly confirmed publish in current thread.",
+    "Use only package-specified WeChat Channels vertical 3:4 cover.",
+    "2026-05-17T11:06:51+08:00: Published to WeChat Channels and verified from management list first row."
+  ],
+  "completed_at": "2026-05-17T11:06:51+08:00",
+  "verified_at": "2026-05-17T11:06:51+08:00",
+  "object_id": "export/UzFfBgAAxOajIFcYeCbpjMzT4DCa4izHPoPpmuPbT74-Wci25Q",
+  "management_url": "https://channels.weixin.qq.com/platform/post/list",
+  "title": "齐了再下结论",
+  "description": "机器人小马想直接下结论，大陈叫停：证据齐了吗？先补指标，再看状态和同账号对照。",
+  "video_sha256": "ef60958864132466d3a0a99cbcac04a1129343db5ab1fd908087e67f31601aac",
+  "cover_sha256": "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18",
+  "result_path": "/Users/baishangjituan/Documents/push/wechat_channels_publish_result_20260517_evidence_grid_before_verdict.json",
+  "feishu_notification": {
+    "status": "sent",
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "message_id": "om_x100b6fa7437938acb18c5317bb12f2c",
+    "sent_at": "2026-05-17T11:07:07+08:00",
+    "sent_via": "lark-cli bot"
+  },
+  "updated_at": "2026-05-17T11:07:30+08:00"
+}

@@ -1,0 +1,76 @@
+{
+  "campaignId": "2026-05-17-ai-employee-evidence-grid-before-verdict",
+  "sourceThreadId": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "sourceCampaignId": "2026-05-17-ai-employee-evidence-grid-before-verdict",
+  "sourceConfig": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-evidence-grid-before-verdict.yaml",
+  "sourceContentRoot": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package",
+  "receiptPath": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json",
+  "scope": "all_platforms",
+  "platforms": {
+    "bilibili": {
+      "title": "复盘不是盖章判死：AI员工先补三格证据，再决定内容要不要改",
+      "description": "这条讲多平台内容复盘的第三个关键动作：不要在证据没齐时直接判失败。先看平台状态、内容指标、同账号对照，三格证据齐了，再决定是否改标题、封面或口播结构。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    },
+    "toutiao": {
+      "title": "内容复盘时，证据没齐能直接下结论吗？",
+      "description": "不能。平台状态、内容指标、同账号对照都要补齐，才适合判断内容是否需要修改。否则很容易把延迟、审核或样本不足误判成内容失败。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    },
+    "zhihu": {
+      "title": "为什么内容复盘不能在证据没齐时直接下结论？",
+      "description": "因为单个平台状态、单条暂时没指标，都不足以证明内容失败。更稳的流程是先补平台状态、内容级指标和同账号同格式对照，再决定是否修改。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    },
+    "baijiahao": {
+      "title": "为什么复盘不能在证据没齐时直接判失败？",
+      "description": "因为证据不足时，最危险的不是内容差，而是误判后重复动作。先补平台状态、内容指标和同账号对照，三格齐了再决定是否修改。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    },
+    "kuaishou": {
+      "title": "齐了再结论",
+      "description": "复盘不是盖章判死。状态、指标、对照三格证据齐了，再决定怎么改。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    },
+    "weibo": {
+      "title": "复盘时，证据没齐就能判失败吗？",
+      "description": "不能。状态、指标、对照三格没齐，结论就容易变成情绪判断。大陈让机器人小马先补证据，再决定是否修改。#AI员工 #内容运营 #复盘",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    },
+    "wechat_channels": {
+      "title": "齐了再结论",
+      "description": "机器人小马想直接下结论，大陈叫停：证据齐了吗？先补指标，再看状态和同账号对照。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    }
+  },
+  "fingerprints": {
+    "title_hash": "e0a74ca70de7ffd5fd42921cd627d9c6ae6da96e2a9e20d950dd8534d0f6a61e",
+    "body_core_hash": "c546a33c9d7aad8b6eb90a14e90811422edaaa68a891367ec3986984edc1d126",
+    "video_sha256": "ef60958864132466d3a0a99cbcac04a1129343db5ab1fd908087e67f31601aac",
+    "raw_video_sha256": "9d7da2154398007bd0af6035424298fe14154f6ab5f8932674abdb1b68aa304f",
+    "cover_sha256": "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18",
+    "cover_3_4_sha256": "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18",
+    "cover_4_3_sha256": "defc467a5cacb002d5a4a1c4a8ced47467854f5f190a61ffa37b554ad83243cd"
+  },
+  "lock_dir": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks",
+  "allow_live": false,
+  "unsupportedPlatforms": {
+    "douyin": "unsupported_by_current_hermes_skill"
+  },
+  "publishConstraints": {
+    "requireManagementPageVerification": true,
+    "skipDuplicateIfAlreadyPublished": true,
+    "finalSubmitRequiresUserConfirmation": true,
+    "doNotPublish": true,
+    "doNotUpload": true,
+    "doNotClickSubmit": true,
+    "doNotTestXiaohongshu": true
+  }
+}

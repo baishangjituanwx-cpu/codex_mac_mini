@@ -1,0 +1,23 @@
+{
+  "platform_id": "toutiao",
+  "campaign_id": "2026-05-17-ai-employee-evidence-grid-before-verdict",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "status": "under_review",
+  "verified_state": "审核中",
+  "title": "内容复盘时，证据没齐能直接下结论吗？",
+  "description": "不能。平台状态、内容指标、同账号对照都要补齐，才适合判断内容是否需要修改。否则很容易把延迟、审核或样本不足误判成内容失败。",
+  "content_type": "video",
+  "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/toutiao.md",
+  "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platform-upload-map.md",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+  "video_sha256": "ef60958864132466d3a0a99cbcac04a1129343db5ab1fd908087e67f31601aac",
+  "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+  "required_cover_sha256": "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18",
+  "result_path": "/Users/baishangjituan/Documents/push/toutiao_publish_result_20260517.json",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json",
+  "manager_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
+  "manager_screenshot": "/Users/baishangjituan/Documents/push/toutiao-cdp-manager-verified-20260517.png",
+  "created_at": "2026-05-17T04:56:37.355Z",
+  "created_at_asia_shanghai": "2026年5月17日 12:56:37",
+  "reason": "Toutiao work manager verified exact-title row as 审核中; block duplicate reposts."
+}

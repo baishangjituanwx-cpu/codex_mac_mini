@@ -1,0 +1,47 @@
+{
+  "campaign_id": "2026-05-17-ai-employee-evidence-grid-before-verdict",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "platform": "zhihu",
+  "status": "published",
+  "updated_at": "2026-05-17T02:21:43.229Z",
+  "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/zhihu.md",
+  "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-17-ai-employee-evidence-grid-before-verdict-zhihu.md",
+  "title": "为什么内容复盘不能在证据没齐时直接下结论？",
+  "body": "因为单个平台状态、单条暂时没指标，都不足以证明内容失败。更稳的流程是先补平台状态、内容级指标和同账号同格式对照，再决定是否修改。",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict-publish.mp4",
+  "video_sha256": "ef60958864132466d3a0a99cbcac04a1129343db5ab1fd908087e67f31601aac",
+  "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+  "required_cover_sha256": "96653715a2e3c42d280eba3395be99ea67567ef4d41668de2727984b1b268f18",
+  "duplicate_guard": {
+    "profile": {
+      "hasExpectedTitle": false,
+      "hasExpectedBody": false,
+      "exactLink": null
+    },
+    "posts": {
+      "hasExpectedTitle": false,
+      "hasExpectedBody": false,
+      "exactLink": null
+    },
+    "manage": {
+      "hasExpectedTitle": false,
+      "hasExpectedBody": false,
+      "exactLink": null
+    }
+  },
+  "error": "Error: video readback mismatch before submit: {\"hasUploadedVideo\":false,\"hasRequiredVideoName\":false,\"localFileInputValue\":\"\"}\n    at main (file:///private/tmp/zhihu_resume_20260517_expanded.mjs:453:13)",
+  "published_at": "发布于2026-05-17 10:21",
+  "public_url": "https://www.zhihu.com/pin/2039288447148505009",
+  "share_link": "https://www.zhihu.com/pin/2039288447148505009?page=video_pin&scene=share",
+  "external_id": "2039288447148505009",
+  "result_path": "/Users/baishangjituan/Documents/push/zhihu_20260517_publish_result.json",
+  "screenshots": {
+    "duplicateManage": "/Users/baishangjituan/Documents/push/zhihu-20260517-resume-duplicate-manage.png",
+    "duplicateProfile": "/Users/baishangjituan/Documents/push/zhihu-20260517-resume-duplicate-profile.png",
+    "duplicatePosts": "/Users/baishangjituan/Documents/push/zhihu-20260517-resume-duplicate-profile-posts.png",
+    "preSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260517-resume-pre-submit.png",
+    "afterSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260517-resume-after-submit.png",
+    "profile": "/Users/baishangjituan/Documents/push/zhihu-20260517-profile-verified.png",
+    "public": "/Users/baishangjituan/Documents/push/zhihu-20260517-public-verified.png"
+  }
+}
