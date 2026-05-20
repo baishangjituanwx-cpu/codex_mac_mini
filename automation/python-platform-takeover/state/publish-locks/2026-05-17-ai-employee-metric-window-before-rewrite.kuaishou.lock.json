@@ -1,0 +1,113 @@
+{
+  "campaign_id": "2026-05-17-ai-employee-metric-window-before-rewrite",
+  "platform": "kuaishou",
+  "status": "published",
+  "created_at": "2026-05-20T16:48:37.673+08:00",
+  "updated_at": "2026-05-20T17:01:14+08:00",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "content_package_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml",
+  "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package",
+  "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/kuaishou.md",
+  "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platform-upload-map.md",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+  "raw_video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite.mp4",
+  "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
+  "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-horizontal-4x3.png",
+  "title": "等指标再改",
+  "description": "播放、完播、互动没回来，先别改内容。AI员工先建采集单，明天再判断。",
+  "user_confirmation": "2026-05-20 current-thread explicit request to start latest Kuaishou publish task and use correct package cover",
+  "package_boundaries_overridden_by_user_confirmation": true,
+  "fingerprints": {
+    "video_sha256": "68d6c9fbc86e5a54a5c67032540a8261375c81e000654d7edaa00a160de80cb5",
+    "raw_video_sha256": "774ee4d34be9af5e4c1377395976d80a2a72711534160746f338a0cef72560d3",
+    "cover_sha256": "9971d4f9735b849a8e010b74365de45d04ee5c13f48d1a5244e1563561249c8b",
+    "backup_cover_sha256": "590c150484187c96427c600941d71f0d65a510a72d5cb1f961c65cdf893371b7"
+  },
+  "asset_preflight": {
+    "video": {
+      "width": 720,
+      "height": 1280,
+      "duration_seconds": 15.869002,
+      "size_bytes": 5150390
+    },
+    "cover": {
+      "width": 1080,
+      "height": 1440,
+      "preview_path": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-cover-25pct-preview.png",
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "note": "Main cover text AI员工等指标 is readable at 25 percent preview."
+    }
+  },
+  "duplicate_guard": {
+    "local_receipt": "no_kuaishou_receipt",
+    "local_receipt_status": "not_published",
+    "management_page_exact_searches": [
+      {
+        "query": "等指标再改",
+        "result_count": 0,
+        "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-dup-search-title.png"
+      },
+      {
+        "query": "播放、完播、互动没回来",
+        "result_count": 2,
+        "note": "Only broad prior topic rows; no exact current title or AI员工先建采集单 body, not same package duplicate.",
+        "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-dup-search-body1.png"
+      },
+      {
+        "query": "AI员工先建采集单",
+        "result_count": 0,
+        "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-dup-search-body2.png"
+      }
+    ],
+    "result": "no_same_package_duplicate_found_before_upload"
+  },
+  "status_label": "已发布",
+  "submitted_at": "2026-05-20T16:56:00+08:00",
+  "verified_at": "2026-05-20T17:01:14+08:00",
+  "published_at": "2026-05-20T16:56:00+08:00",
+  "published_at_raw": "2026-05-20 16:56",
+  "result_path": "/Users/baishangjituan/Documents/push/kuaishou_publish_result_20260517_metric_window_before_rewrite.json",
+  "manager_verified_screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-manager-verified.png",
+  "feishu_notification": {
+    "sent": false,
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "idempotency_key": "ks-20260517-metric-window",
+    "attempted_at": "2026-05-20T17:01:14+08:00",
+    "method": "lark-cli im +messages-send",
+    "attempts": [
+      {
+        "as": "bot",
+        "sent": false,
+        "error_code": 230002,
+        "error_message": "HTTP 400: Bot/User can NOT be out of the chat."
+      },
+      {
+        "as": "user",
+        "sent": false,
+        "error_type": "need_user_authorization",
+        "error_message": "need_user_authorization (user: )"
+      }
+    ]
+  },
+  "manager_verification": {
+    "url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+    "title": "快手创作者服务平台",
+    "hasFullText": true,
+    "hasTitle": true,
+    "hasDescription": true,
+    "hasTerminalStatus": true,
+    "status": "已发布",
+    "rowText": "等指标再改 播放、完播、互动没回来，先别改内容。AI员工先建采集单，明天再判断。\n已发布\n2026-05-20 16:56",
+    "publishedAtRaw": "2026-05-20 16:56",
+    "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-manager-verified.png"
+  },
+  "cdp": {
+    "cdp_base": "http://127.0.0.1:9223",
+    "target_id": "D6AE7E068AEEAF42CFF67599D752F6F2",
+    "publish_url": "https://cp.kuaishou.com/article/publish/video?tabType=1",
+    "management_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+    "chrome_restarted": false
+  }
+}

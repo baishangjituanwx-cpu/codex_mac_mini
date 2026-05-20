@@ -1,0 +1,106 @@
+{
+  "campaign_id": "2026-05-17-ai-employee-metric-window-before-rewrite",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "platform": "weibo",
+  "status": "published_verified",
+  "actor": "codex",
+  "actor_session_id": "current-thread",
+  "created_at": "2026-05-20T17:25:54+08:00",
+  "updated_at": "2026-05-20T17:33:05.550+08:00",
+  "confirmation": {
+    "user_confirmed_publish": true,
+    "confirmed_in_thread": true,
+    "scope": "weibo_only"
+  },
+  "route": {
+    "preferred": "cdp",
+    "cdp_url": "http://127.0.0.1:9224",
+    "fallback": "opencli_if_cdp_unavailable",
+    "gui_screenshot_route": "not_used_for_primary_actions"
+  },
+  "package": {
+    "yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml",
+    "platform_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/weibo.md",
+    "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platform-upload-map.md",
+    "content_library_entry": "/Users/baishangjituan/Documents/New project/content-library/posts/weibo/2026-05-17-ai-employee-metric-window-before-rewrite-weibo.md"
+  },
+  "content": {
+    "title": "指标没回来，就能改标题换封面吗？",
+    "body": "不能。播放、完播、互动还没回来时，改内容很容易变成凭感觉动作。大陈让机器人小马先建采集单，等指标窗到了再改。#AI员工 #内容运营"
+  },
+  "assets": {
+    "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+    "video_sha256": "68d6c9fbc86e5a54a5c67032540a8261375c81e000654d7edaa00a160de80cb5",
+    "video_dimensions": "720x1280",
+    "video_duration_seconds": 15.869002,
+    "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
+    "required_cover_sha256": "9971d4f9735b849a8e010b74365de45d04ee5c13f48d1a5244e1563561249c8b",
+    "required_cover_dimensions": "1080x1440",
+    "cover_rule": "upload required 3:4 cover if custom cover control exists; if Weibo only permits frame selection, use publish video first frame and record reason"
+  },
+  "guards": {
+    "local_receipt_weibo_present": false,
+    "platform_duplicate_check": "passed",
+    "duplicate": {
+      "searches": [
+        {
+          "q": "凭感觉动作",
+          "status": 200,
+          "total": 0,
+          "matched": false,
+          "matched_mblogid": null
+        },
+        {
+          "q": "指标窗到了再改",
+          "status": 200,
+          "total": 0,
+          "matched": false,
+          "matched_mblogid": null
+        },
+        {
+          "q": "指标没回来，就能改标题换封面吗？",
+          "status": 200,
+          "total": 0,
+          "matched": false,
+          "matched_mblogid": null
+        }
+      ],
+      "mymblog": {
+        "status": 200,
+        "checked_items": 20,
+        "matched": false
+      }
+    }
+  },
+  "verification": {
+    "status": "verified",
+    "verified_by": "cdp_attached_playwright_weibo_api_and_public_readback",
+    "result_path": "/Users/baishangjituan/Documents/push/weibo_publish_result_20260520_metric_window_before_rewrite.json"
+  },
+  "submitted_at": "2026-05-20T17:31:40.327+08:00",
+  "published_at": "Wed May 20 17:32:07 +0800 2026",
+  "public_url": "https://weibo.com/2326772703/R0ihMlTvZ",
+  "mobile_url": "https://m.weibo.cn/detail/5300702945218291",
+  "mblogid": "R0ihMlTvZ",
+  "post_id": "5300702945218291",
+  "cover_mode": "weibo_quick_composer_no_custom_cover_control; used_publish_video_first_frame_per_package_rule; first_frame_matches_required_vertical_cover_design",
+  "feishu_notification": {
+    "sent": false,
+    "attempted_at": "2026-05-20T17:33:05.550+08:00",
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "method": "lark-cli im +messages-send",
+    "bot_attempt": {
+      "ok": false,
+      "code": 230002,
+      "message": "HTTP 400: Bot/User can NOT be out of the chat."
+    },
+    "user_attempt": {
+      "ok": false,
+      "message": "need_user_authorization"
+    },
+    "idempotency_keys": [
+      "weibo-20260520-metric-window-before-rewrite",
+      "weibo-20260520-metric-window-before-rewrite-user"
+    ]
+  }
+}

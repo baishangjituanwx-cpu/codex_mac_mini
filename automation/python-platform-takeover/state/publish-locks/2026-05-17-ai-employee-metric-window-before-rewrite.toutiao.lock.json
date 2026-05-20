@@ -1,0 +1,23 @@
+{
+  "platform_id": "toutiao",
+  "campaign_id": "2026-05-17-ai-employee-metric-window-before-rewrite",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "status": "under_review",
+  "verified_state": "审核中",
+  "title": "指标没回来时，AI员工该不该马上改内容？",
+  "description": "不应该。先建播放、完播、互动采集单，等指标窗口到了，再决定是否改标题、封面或口播结构。",
+  "content_type": "video",
+  "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/toutiao.md",
+  "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platform-upload-map.md",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+  "video_sha256": "68d6c9fbc86e5a54a5c67032540a8261375c81e000654d7edaa00a160de80cb5",
+  "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
+  "required_cover_sha256": "9971d4f9735b849a8e010b74365de45d04ee5c13f48d1a5244e1563561249c8b",
+  "result_path": "/Users/baishangjituan/Documents/push/toutiao_publish_result_20260517_metric_window.json",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json",
+  "manager_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
+  "manager_screenshot": "/Users/baishangjituan/Documents/push/toutiao-cdp-manager-verified-20260517-metric-window.png",
+  "created_at": "2026-05-20T08:57:25.624Z",
+  "created_at_asia_shanghai": "2026年5月20日 16:57:25",
+  "reason": "Toutiao work manager verified exact-title row as 审核中; block duplicate reposts."
+}

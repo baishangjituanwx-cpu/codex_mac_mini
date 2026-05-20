@@ -1,0 +1,48 @@
+{
+  "campaign_id": "2026-05-17-ai-employee-metric-window-before-rewrite",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "platform": "zhihu",
+  "status": "published",
+  "updated_at": "2026-05-20T08:54:58.389Z",
+  "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/zhihu.md",
+  "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-17-ai-employee-metric-window-before-rewrite-zhihu.md",
+  "title": "为什么内容指标没回来时，不应该马上改标题和封面？",
+  "body": "因为缺少播放、完播和互动数据时，所谓优化可能只是情绪动作。更稳的流程是先建指标采集单，等数据回来，再决定是否修改内容包装。",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+  "video_sha256": "68d6c9fbc86e5a54a5c67032540a8261375c81e000654d7edaa00a160de80cb5",
+  "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
+  "required_cover_sha256": "9971d4f9735b849a8e010b74365de45d04ee5c13f48d1a5244e1563561249c8b",
+  "duplicate_guard": {
+    "profile": {
+      "hasExpectedTitle": false,
+      "hasExpectedBody": false,
+      "exactLink": null
+    },
+    "posts": {
+      "hasExpectedTitle": false,
+      "hasExpectedBody": false,
+      "exactLink": null
+    },
+    "manage": {
+      "hasExpectedTitle": false,
+      "hasExpectedBody": false,
+      "exactLink": null
+    }
+  },
+  "published_at": "发布于2026-05-20 16:52",
+  "public_url": "https://www.zhihu.com/pin/2040474574991660742",
+  "share_link": "https://www.zhihu.com/pin/2040474574991660742?page=video_pin&scene=share",
+  "external_id": "2040474574991660742",
+  "result_path": "/Users/baishangjituan/Documents/push/zhihu_20260517_metric_window_publish_result.json",
+  "screenshots": {
+    "duplicateManage": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-resume-duplicate-manage.png",
+    "duplicateProfile": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-resume-duplicate-profile.png",
+    "duplicatePosts": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-resume-duplicate-profile-posts.png",
+    "uploadReady": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-upload-ready.png",
+    "coverReady": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-cover-ready.png",
+    "preSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-resume-pre-submit.png",
+    "afterSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-resume-after-submit.png",
+    "profile": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-profile-verified.png",
+    "public": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-public-verified-manual.png"
+  }
+}

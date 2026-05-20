@@ -1,8 +1,857 @@
 {
   "campaign_id": "2026-05-17-ai-employee-metric-window-before-rewrite",
   "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
-  "status": "not_published",
-  "receipts": {},
+  "status": "weibo_published_verified",
+  "receipts": {
+    "zhihu": {
+      "actor": "Codex",
+      "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
+      "platform_id": "zhihu",
+      "status": "published",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "title": "为什么内容指标没回来时，不应该马上改标题和封面？",
+      "body": "因为缺少播放、完播和互动数据时，所谓优化可能只是情绪动作。更稳的流程是先建指标采集单，等数据回来，再决定是否修改内容包装。",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/zhihu.md",
+      "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-17-ai-employee-metric-window-before-rewrite-zhihu.md",
+      "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/final-verify.json",
+      "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+      "uploaded_video_path": "/tmp/zhihu-20260517-metric-window-publish.mp4",
+      "video_sha256": "68d6c9fbc86e5a54a5c67032540a8261375c81e000654d7edaa00a160de80cb5",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "uploaded_cover_path": "/tmp/zhihu-20260517-metric-window-cover-vertical-3x4.png",
+      "required_cover_sha256": "9971d4f9735b849a8e010b74365de45d04ee5c13f48d1a5244e1563561249c8b",
+      "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "backup_cover_sha256": "590c150484187c96427c600941d71f0d65a510a72d5cb1f961c65cdf893371b7",
+      "cover_mode": "required_vertical_3x4_local_file_input_confirmed",
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "verified_by": "cdp_playwright_profile_and_manual_public_pin_readback",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.zhihu.lock.json",
+      "started_at": "2026-05-20T08:50:29.781Z",
+      "notes": [
+        "Chrome DevTools/CDP attached to existing logged-in Chrome on 127.0.0.1:9223.",
+        "No Chrome restart was performed.",
+        "A new upload tab is used; nonmatching old Zhihu drafts are ignored before upload.",
+        "Zhihu-only thread; no Feishu notification will be sent unless explicitly requested.",
+        "2026-05-20T08:52:45.950Z: Resuming after the initial script uploaded the correct video and cover but stopped before submit while selecting the Zhihu AI tag.",
+        "2026-05-20T08:54:58.389Z: Submitted via CDP-attached logged-in Chrome; Zhihu returned publish success.",
+        "2026-05-20T08:54:58.389Z: Manual CDP public pin verification passed after the resume script's verifier opened a non-Zhihu tab.",
+        "2026-05-20T08:54:58.389Z: No Feishu notification was sent from this Zhihu-only thread."
+      ],
+      "resumed_at": "2026-05-20T08:52:45.950Z",
+      "result_path": "/Users/baishangjituan/Documents/push/zhihu_20260517_metric_window_publish_result.json",
+      "submitted_at": "2026-05-20T08:52:55Z",
+      "published_at": "发布于2026-05-20 16:52",
+      "recorded_at": "2026-05-20T08:54:58.389Z",
+      "current_url": "https://www.zhihu.com/pin/2040474574991660742",
+      "public_url": "https://www.zhihu.com/pin/2040474574991660742",
+      "share_link": "https://www.zhihu.com/pin/2040474574991660742?page=video_pin&scene=share",
+      "external_id": "2040474574991660742",
+      "verified_fields": {
+        "account": "智能大陈",
+        "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+        "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/zhihu.md",
+        "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-17-ai-employee-metric-window-before-rewrite-zhihu.md",
+        "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/final-verify.json",
+        "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+        "uploaded_video_path": "/tmp/zhihu-20260517-metric-window-publish.mp4",
+        "video_sha256": "68d6c9fbc86e5a54a5c67032540a8261375c81e000654d7edaa00a160de80cb5",
+        "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
+        "uploaded_cover_path": "/tmp/zhihu-20260517-metric-window-cover-vertical-3x4.png",
+        "required_cover_sha256": "9971d4f9735b849a8e010b74365de45d04ee5c13f48d1a5244e1563561249c8b",
+        "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-horizontal-4x3.png",
+        "backup_cover_sha256": "590c150484187c96427c600941d71f0d65a510a72d5cb1f961c65cdf893371b7",
+        "cover_mode": "required_vertical_3x4_local_file_input_confirmed",
+        "video_tag": "含 AI 生成内容",
+        "original_video_checked": true,
+        "duplicate_guard": {
+          "profile": {
+            "hasExpectedTitle": false,
+            "hasExpectedBody": false,
+            "exactLink": null
+          },
+          "posts": {
+            "hasExpectedTitle": false,
+            "hasExpectedBody": false,
+            "exactLink": null
+          },
+          "manage": {
+            "hasExpectedTitle": false,
+            "hasExpectedBody": false,
+            "exactLink": null
+          }
+        },
+        "pre_submit_title": "为什么内容指标没回来时，不应该马上改标题和封面？",
+        "pre_submit_body": "因为缺少播放、完播和互动数据时，所谓优化可能只是情绪动作。更稳的流程是先建指标采集单，等数据回来，再决定是否修改内容包装。",
+        "pre_submit_video_check": {
+          "hasUploadedVideo": true,
+          "hasRequiredVideoName": true,
+          "localFileInputValue": ""
+        },
+        "pre_submit_cover_check": {
+          "localFileInputValue": "C:\\fakepath\\zhihu-20260517-metric-window-cover-vertical-3x4.png",
+          "hasRequiredCoverFileName": true
+        },
+        "profile_context": {
+          "url": "https://www.zhihu.com/people/vkvtss-81/zvideos",
+          "hasExpectedTitle": true,
+          "hasExpectedBody": true,
+          "hasAiTag": true,
+          "publishedAt": "发布于2026-05-20 16:52",
+          "exactLink": {
+            "text": "为什么内容指标没回来时，不应该马上改标题和封面？",
+            "href": "https://www.zhihu.com/pin/2040474574991660742?page=video_pin&scene=share"
+          }
+        },
+        "public_context": {
+          "url": "https://www.zhihu.com/pin/2040474574991660742",
+          "documentTitle": "(12 封私信 / 12 条消息) 智能大陈 的想法: 为什么内容指标没回来时，不应该马上改标题和封面？ | 因为缺少播放、完播和互动数据时，所谓优化可能只… - 知乎",
+          "hasExpectedTitle": true,
+          "hasExpectedBody": true,
+          "hasAiTag": true,
+          "publishedAt": "发布于2026-05-20 16:52"
+        },
+        "screenshots": {
+          "duplicateManage": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-resume-duplicate-manage.png",
+          "duplicateProfile": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-resume-duplicate-profile.png",
+          "duplicatePosts": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-resume-duplicate-profile-posts.png",
+          "uploadReady": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-upload-ready.png",
+          "coverReady": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-cover-ready.png",
+          "preSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-resume-pre-submit.png",
+          "afterSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-resume-after-submit.png",
+          "profile": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-profile-verified.png",
+          "public": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-public-verified-manual.png"
+        }
+      }
+    },
+    "toutiao": {
+      "actor": "Codex CDP publisher",
+      "actor_session_id": "chrome-cdp-127.0.0.1:9223-current-logged-in-session",
+      "platform_id": "toutiao",
+      "campaign_id": "2026-05-17-ai-employee-metric-window-before-rewrite",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "content_type": "video",
+      "status": "under_review",
+      "verified_state": "审核中",
+      "title": "指标没回来时，AI员工该不该马上改内容？",
+      "description": "不应该。先建播放、完播、互动采集单，等指标窗口到了，再决定是否改标题、封面或口播结构。",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/toutiao.md",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platform-upload-map.md",
+      "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/final-verify.json",
+      "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+      "video_sha256": "68d6c9fbc86e5a54a5c67032540a8261375c81e000654d7edaa00a160de80cb5",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "required_cover_sha256": "9971d4f9735b849a8e010b74365de45d04ee5c13f48d1a5244e1563561249c8b",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "cover_sha256": "9971d4f9735b849a8e010b74365de45d04ee5c13f48d1a5244e1563561249c8b",
+      "cover_mode": "package_required_vertical_3x4_uploaded_via_cdp_dom_set_file_input_files",
+      "correct_package_cover_used": true,
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "ai_declaration_checked": true,
+      "generate_article_checked": false,
+      "pre_submit_readback": {
+        "titleValue": "指标没回来时，AI员工该不该马上改内容？",
+        "wordLimit": "19/30",
+        "videoOk": true,
+        "coverText": "封面\n编辑\n替换\n清晰美观的封面有利于推荐，建议分辨率不低于 618*1000（大小不超过 20M）",
+        "checkboxes": [
+          {
+            "text": "生成图文",
+            "checked": false,
+            "cls": "byte-checkbox"
+          },
+          {
+            "text": "取自站外",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          },
+          {
+            "text": "引用站内",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          },
+          {
+            "text": "自行拍摄",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          },
+          {
+            "text": "AI生成",
+            "checked": true,
+            "cls": "byte-checkbox checkbot-item checkbox-with-tip byte-checkbox-checked"
+          },
+          {
+            "text": "虚构演绎，故事经历",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item checkbox-with-tip"
+          },
+          {
+            "text": "投资观点，仅供参考",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          },
+          {
+            "text": "健康医疗分享，仅供参考",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          }
+        ]
+      },
+      "verified_by": "Chrome DevTools Protocol DOM readback and Toutiao work manager exact-title row",
+      "manager_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
+      "manager_status": "under_review",
+      "manager_row_text": "头条号\n消息\n11\n在头条创作的第 41 天\n百商集团\n主页\n创作\n文章\n视频\n微头条\n音频\n管理\n作品管理\n评论管理\n草稿箱\n数据\n收益数据\n作品数据\n粉丝数据\n进阶创作\n付费专栏\n提现\n成长指南\n首发激励\n创作权益\n头条认证\n创作灵感\n创作训练营\n工具\n功能实验室\n直播工具\n创作保护\n图片素材\n设置\n全部文章视频微头条小视频音频合集草稿箱\n状态：\n全部\n~\n共 28 条内容\n00:15\n指标没回来时，AI员工该不该马上改内容？\n05-20 16:55\n审核中\n删除作品\n00:15\n内容复盘时，证据没齐能直接下结论吗？\n展现 305\n播放 0\n点赞 0\n评论 0\n05-17 12:55\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n一条暂时没指标，AI员工能直接判内容差吗？\n展现 463\n播放 0\n点赞 0\n评论 0\n05-16 11:24\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n审核中时，AI员工该不该改标题重发？\n展现 536\n播放 0\n点赞 0\n评论 0\n05-15 11:54\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n缺内容级指标时，AI员工该不该先判内容差？\n展现 646\n播放 37\n点赞 0\n评论 0\n05-14 13:23\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n审核中或缺链接时，AI员工该不该再发布一次？\n展现 649\n播放 0\n点赞 0\n评论 0\n05-13 16:46\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n平台状态不一致时，AI员工该怎么判断？\n展现 721\n播放 0\n点赞 0\n评论 0\n05-12 17:48\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n视频发完就走？AI员工必须先把回执交清楚\n展现 1,154\n播放 0\n点赞 0\n评论 0\n05-05 13:12\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n视频发完就做下一条？大陈让AI员工先做三条对照\n展现 1,300\n播放 0\n点赞 ",
+      "submitted_at": "2026-05-20T08:55:39.767Z",
+      "verified_at": "2026-05-20T08:57:25.624Z",
+      "verified_at_asia_shanghai": "2026年5月20日 16:57:25",
+      "current_url_after_submit": "https://mp.toutiao.com/profile_v4/xigua/small-video",
+      "screenshots": {
+        "cover_applied": "/Users/baishangjituan/Documents/push/toutiao-cdp-pre-submit-20260517-metric-window.png",
+        "pre_submit": "/Users/baishangjituan/Documents/push/toutiao-cdp-pre-submit-20260517-metric-window.png",
+        "after_publish": "/Users/baishangjituan/Documents/push/toutiao-cdp-after-publish-click-20260517-metric-window.png",
+        "manager": "/Users/baishangjituan/Documents/push/toutiao-cdp-manager-verified-20260517-metric-window.png"
+      },
+      "result_path": "/Users/baishangjituan/Documents/push/toutiao_publish_result_20260517_metric_window.json",
+      "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.toutiao.lock.json",
+      "browser_route": {
+        "cdp_checked_first": true,
+        "cdp_available": true,
+        "cdp_base": "http://127.0.0.1:9223",
+        "fallback_used": null,
+        "chrome_restarted": false,
+        "note": "User explicitly required CDP priority; video and cover were injected through CDP DOM file inputs. GUI screenshots are evidence only."
+      },
+      "notes": [
+        "Local receipt and Toutiao manager duplicate guard found no existing exact-title Toutiao item for this campaign before submit.",
+        "Video uploaded through CDP DOM.setFileInputFiles to the Toutiao video file input.",
+        "Required vertical 3:4 cover file cover-vertical-3x4.png was uploaded through the image-only local cover input using CDP DOM.setFileInputFiles.",
+        "Pre-submit readback showed exact title, successful video upload, cover area as 编辑/替换, AI生成 checked, and 生成图文 unchecked.",
+        "After clicking 发布, Toutiao redirected to作品管理 and manager exact-title row showed 审核中.",
+        "Feishu notification was attempted after verification but failed because the configured chat is not reachable by bot/user identity.",
+        "cover_applied screenshot is represented by the pre-submit CDP screenshot; the dedicated cover-applied capture was skipped after CDP file input caused a short-lived helper process to exit, while the DOM readback verified 编辑/替换 before submit."
+      ],
+      "feishu_notification": {
+        "status": "failed",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "sent_after_verified_publish": true,
+        "attempted_at": "2026-05-20T08:57:25.624Z",
+        "attempted_at_asia_shanghai": "2026年5月20日 16:57:25",
+        "idempotency_key": "tt-20260520-metric-window",
+        "bot_error": {
+          "code": 230002,
+          "message": "HTTP 400: Bot/User can NOT be out of the chat."
+        },
+        "user_error": "need_user_authorization",
+        "note": "Toutiao publish was verified before notification attempts; notification failed because the configured Feishu chat currently cannot be reached by bot/user identity."
+      }
+    },
+    "douyin": {
+      "actor": "Codex CDP publisher",
+      "actor_session_id": "chrome-cdp-127.0.0.1:9223-current-logged-in-session",
+      "platform_id": "douyin",
+      "campaign_id": "2026-05-17-ai-employee-metric-window-before-rewrite",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "content_type": "video",
+      "status": "published",
+      "verified_state": "published_work_list_status_1_exact_match",
+      "title": "没指标先别改内容",
+      "description": "小马想马上改标题换封面，大陈直接拦住：指标窗到了吗？播放、完播、互动还没回，先建采集单，明天再改。#AI员工 #内容运营 #复盘",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/douyin.md",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platform-upload-map.md",
+      "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/final-verify.json",
+      "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+      "uploaded_video_path": "/tmp/douyin-0520-metric-window.mp4",
+      "video_sha256": "68d6c9fbc86e5a54a5c67032540a8261375c81e000654d7edaa00a160de80cb5",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "required_cover_sha256": "9971d4f9735b849a8e010b74365de45d04ee5c13f48d1a5244e1563561249c8b",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "cover_sha256": "9971d4f9735b849a8e010b74365de45d04ee5c13f48d1a5244e1563561249c8b",
+      "horizontal_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "horizontal_cover_sha256": "590c150484187c96427c600941d71f0d65a510a72d5cb1f961c65cdf893371b7",
+      "uploaded_cover_path": "/tmp/douyin-0520-metric-window-cover-3x4.png",
+      "uploaded_horizontal_cover_path": "/tmp/douyin-0520-metric-window-cover-4x3.png",
+      "cover_mode": "package_required_vertical_3x4_and_horizontal_4x3_uploaded_via_cdp_dom_set_file_input_files",
+      "correct_package_cover_used": true,
+      "cover_thumbnail_present": true,
+      "cover_effect_check_passed": true,
+      "cover_quality_check_passed": true,
+      "pre_submit_readback": {
+        "titleValue": "没指标先别改内容",
+        "descLeadMatched": true,
+        "videoReady": true,
+        "videoCheckPassed": true,
+        "hasCoverVertical": true,
+        "hasCoverHorizontal": true,
+        "hasCoverEffectPassed": true,
+        "hasCoverCheckPassed": true,
+        "hasCoverMissingWarning": false,
+        "publishButtonEnabled": true
+      },
+      "verified_by": "Chrome DevTools Protocol publish click plus Douyin work_list exact title and description lead match",
+      "manager_status": "published",
+      "aweme_id": "7641895362827013427",
+      "item_id": 7641895362827013000,
+      "share_url": "https://www.iesdouyin.com/share/video/7641895362827013427/",
+      "raw_share_url": "https://www.iesdouyin.com/share/video/7641895362827013427/?region=&mid=7641895355373603611&u_code=143eldg9c&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=4PD7TAKyZMuN2VOzIcx5IiuLPWNACnonmsrWk_XaTPQ-&share_version=380000&ts=1779267445&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D",
+      "status_value": 102,
+      "work_list_status_param": "1",
+      "cover_uri": "tos-cn-i-dy/906e5483650346a1a5e3c8f610c0e458",
+      "horizontal_cover_uri": "tos-cn-i-dy/24e1dc63639342e581e521e26d907f6e",
+      "submitted_at": "2026-05-20T08:58:28.440Z",
+      "verified_at": "2026-05-20T08:59:44.464Z",
+      "verified_at_asia_shanghai": "2026/5/20 16:59:44",
+      "screenshots": {
+        "pre_publish": "/tmp/douyin-0520-prepublish.png",
+        "vertical_cover_editor": "/tmp/douyin-0520-cover-editor-after-vertical.png",
+        "horizontal_cover_editor": "/tmp/douyin-0520-cover-editor-after-horizontal.png"
+      },
+      "result_path": "/Users/baishangjituan/Documents/push/douyin_publish_result_20260517_metric_window_before_rewrite.json",
+      "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.douyin.lock.json",
+      "browser_route": {
+        "cdp_checked_first": true,
+        "cdp_available": true,
+        "cdp_base": "http://127.0.0.1:9223",
+        "fallback_used": null,
+        "chrome_restarted": false,
+        "note": "User explicitly required CDP priority; video and both package cover files were injected through CDP DOM file inputs."
+      },
+      "notes": [
+        "Local receipt and Douyin work_list duplicate guard found no existing exact-title Douyin item for this campaign before submit.",
+        "Video uploaded through CDP DOM.setFileInputFiles to the Douyin video file input.",
+        "Required vertical 3:4 cover file cover-vertical-3x4.png and horizontal 4:3 cover file cover-horizontal-4x3.png were uploaded from the content package through image file inputs.",
+        "Pre-submit readback showed video ready, video check passed, vertical and horizontal cover present, cover effect check passed, cover quality check passed, and publish button enabled.",
+        "After clicking 发布, Douyin redirected to作品管理 with 发布成功, and work_list exact-title/lead verification matched aweme_id 7641895362827013427.",
+        "A second work_list verification found the item in status=1 published list with exact title and description lead match; local receipt updated from under_review to published."
+      ],
+      "feishu_notification": {
+        "status": "failed",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "sent_after_verified_publish": true,
+        "attempted_at": "2026-05-20T08:59:01.165Z",
+        "attempted_at_asia_shanghai": "2026/5/20 16:59:01",
+        "idempotency_key": "dy-20260520-metric-window-before-rewrite",
+        "bot_error": {
+          "code": 230002,
+          "message": "HTTP 400: Bot/User can NOT be out of the chat."
+        },
+        "user_error": "need_user_authorization",
+        "note": "Douyin publish was verified before notification attempts; notification failed because the configured Feishu chat currently cannot be reached by bot/user identity."
+      },
+      "published_at": "2026-05-20T08:59:44.464Z",
+      "published_at_asia_shanghai": "2026/5/20 16:59:44"
+    },
+    "baijiahao": {
+      "actor": "Codex",
+      "actor_session_id": "Chrome CDP 127.0.0.1:9223:baijiahao-20260520-metric-window",
+      "platform_id": "baijiahao",
+      "status": "blocked_login_before_upload",
+      "stage": "login_required_before_upload",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "title": "为什么指标窗口没到时，不该马上改内容？",
+      "description": "因为播放、完播、互动没回来时，修改动作很容易变成凭感觉。更稳妥的做法是先建采集单，等指标窗口到了再判断。",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/baijiahao.md",
+      "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/final-verify.json",
+      "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+      "video_sha256": "68d6c9fbc86e5a54a5c67032540a8261375c81e000654d7edaa00a160de80cb5",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "required_cover_sha256": "590c150484187c96427c600941d71f0d65a510a72d5cb1f961c65cdf893371b7",
+      "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "backup_cover_sha256": "9971d4f9735b849a8e010b74365de45d04ee5c13f48d1a5244e1563561249c8b",
+      "cover_mode": "required_horizontal_4x3_local_file_input_not_uploaded",
+      "verified_by": "not_uploaded_login_required",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.baijiahao.lock.json",
+      "updated_at": "2026-05-20T09:15:49.170Z",
+      "duplicate_guard_path": "/Users/baishangjituan/Documents/push/baijiahao_duplicate_guard_20260520_metric_window.json",
+      "blocked_reason": "baijiahao_login_page",
+      "upload_started": false,
+      "video_uploaded": false,
+      "cover_uploaded": false,
+      "publish_click_happened": false,
+      "duplicate_guard": {
+        "checked_at": "2026-05-20T09:15:49.097Z",
+        "label": "pre_publish_duplicate_guard",
+        "href": "https://baijiahao.baidu.com/builder/theme/bjh/login",
+        "page_title": "百家号",
+        "exact_title_present": false,
+        "safety": true,
+        "form_ready": false,
+        "upload_button": false,
+        "status": null,
+        "context": "",
+        "text_head": "登录\n百度内容创作经营平台\n照见灵感，每天都有新发现\n登录/注册百家号\n百度多平台经营 让创作更高效\n经营分发\n\n全平台分发，亿级流量助力内容破圈\n\n特色内容\n\n多形态创作，图文视频尽显多元表达\n\n专业机构\n\n高效管理赋能，专属权益护航机构成长\n\n生态互通\n\n多端账号互通，全域生态激发流量增长\n\n百度首页\n使用手册\n常见问题\n服务协议\n投诉建议\n社区规范\n\n京公网安备11000002000001号\n互联网新闻信息服务许可\n©2026 Baidu\n使用百度前必读\n\n移动创作管理平台，随时随地做管理\n\n快捷创作·查看数据·粉丝互动\n\n使用百度APP扫码 立即体验创作中心"
+      },
+      "browser_backend": "Chrome CDP 127.0.0.1:9223",
+      "browser_bridge_error": "Daemon is running but the Browser Extension is not connected.\nPlease install and enable the opencli Browser Bridge extension in Chrome or Chromium.",
+      "result_path": "/Users/baishangjituan/Documents/push/baijiahao_publish_result_20260520_metric_window.json"
+    },
+    "kuaishou": {
+      "campaign_id": "2026-05-17-ai-employee-metric-window-before-rewrite",
+      "platform_id": "kuaishou",
+      "platform": "kuaishou",
+      "status": "published",
+      "status_label": "已发布",
+      "title": "等指标再改",
+      "description": "播放、完播、互动没回来，先别改内容。AI员工先建采集单，明天再判断。",
+      "submitted_text": "等指标再改\n播放、完播、互动没回来，先别改内容。AI员工先建采集单，明天再判断。",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/kuaishou.md",
+      "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platform-upload-map.md",
+      "automation_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml",
+      "final_verify": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/final-verify.json",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+      "uploaded_video_path": "/tmp/kuaishou-20260517-metric-window.mp4",
+      "raw_video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite.mp4",
+      "video_sha256": "68d6c9fbc86e5a54a5c67032540a8261375c81e000654d7edaa00a160de80cb5",
+      "raw_video_sha256": "774ee4d34be9af5e4c1377395976d80a2a72711534160746f338a0cef72560d3",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "uploaded_cover_path": "/tmp/kuaishou-20260517-metric-window-cover-vertical-3x4.png",
+      "required_cover_sha256": "9971d4f9735b849a8e010b74365de45d04ee5c13f48d1a5244e1563561249c8b",
+      "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "backup_cover_sha256": "590c150484187c96427c600941d71f0d65a510a72d5cb1f961c65cdf893371b7",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "cover_mode": "package_required_vertical_3x4_uploaded_via_kuaishou_custom_cover_file_input; preview_verified_before_submit",
+      "correct_package_cover_used": true,
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "actor": "Codex Chrome DevTools/CDP publisher",
+      "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.kuaishou.lock.json",
+      "submitted_at": "2026-05-20T16:56:00+08:00",
+      "verified_at": "2026-05-20T17:01:14+08:00",
+      "verified_at_iso": "2026-05-20T09:01:14.151Z",
+      "published_at": "2026-05-20T16:56:00+08:00",
+      "published_at_raw": "2026-05-20 16:56",
+      "current_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+      "management_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+      "verified_by": "Kuaishou creator work manager exact submitted-text row via Chrome DevTools/CDP",
+      "manager_verification": {
+        "url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+        "title": "快手创作者服务平台",
+        "hasFullText": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasTerminalStatus": true,
+        "status": "已发布",
+        "rowText": "等指标再改 播放、完播、互动没回来，先别改内容。AI员工先建采集单，明天再判断。\n已发布\n2026-05-20 16:56",
+        "publishedAtRaw": "2026-05-20 16:56",
+        "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-manager-verified.png"
+      },
+      "duplicate_guard": {
+        "local_receipt_before_publish": "no_kuaishou_receipt",
+        "local_receipt_status_before_publish": "not_published",
+        "management_page_exact_searches": [
+          {
+            "query": "等指标再改",
+            "result_count": 0,
+            "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-dup-search-title.png"
+          },
+          {
+            "query": "播放、完播、互动没回来",
+            "result_count": 2,
+            "note": "Only broad prior topic rows; no exact current title or AI员工先建采集单 body, not same-package duplicate.",
+            "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-dup-search-body1.png"
+          },
+          {
+            "query": "AI员工先建采集单",
+            "result_count": 0,
+            "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-dup-search-body2.png"
+          }
+        ],
+        "result": "no_same_package_duplicate_found_before_upload"
+      },
+      "cdp": {
+        "cdp_base": "http://127.0.0.1:9223",
+        "target_id": "D6AE7E068AEEAF42CFF67599D752F6F2",
+        "publish_url": "https://cp.kuaishou.com/article/publish/video?tabType=1",
+        "management_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+        "chrome_restarted": false
+      },
+      "screenshots": {
+        "duplicate_title": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-dup-search-title.png",
+        "duplicate_body_1": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-dup-search-body1.png",
+        "duplicate_body_2": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-dup-search-body2.png",
+        "publish_page_after_reload": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-publish-page-after-reload.png",
+        "after_video_upload": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-after-video-upload.png",
+        "after_cover_upload": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-after-cover-upload.png",
+        "pre_submit": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-pre-submit.png",
+        "after_submit": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-after-submit-click.png",
+        "manager_verified": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-manager-verified.png",
+        "cover_preview_25pct": "/Users/baishangjituan/Documents/push/kuaishou-20260517-metric-window-cover-25pct-preview.png"
+      },
+      "feishu_notification": {
+        "sent": false,
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "idempotency_key": "ks-20260517-metric-window",
+        "attempted_at": "2026-05-20T17:01:14+08:00",
+        "method": "lark-cli im +messages-send",
+        "attempts": [
+          {
+            "as": "bot",
+            "sent": false,
+            "error_code": 230002,
+            "error_message": "HTTP 400: Bot/User can NOT be out of the chat."
+          },
+          {
+            "as": "user",
+            "sent": false,
+            "error_type": "need_user_authorization",
+            "error_message": "need_user_authorization (user: )"
+          }
+        ]
+      },
+      "notes": [
+        "Chrome DevTools/CDP attached to existing logged-in Chrome on 127.0.0.1:9223; Chrome was not restarted.",
+        "Before upload, local receipt and Kuaishou work manager exact searches showed no existing Kuaishou receipt or same-package duplicate manager row.",
+        "The exact package video copy was uploaded by CDP drag/drop from /tmp while preserving original file hashes in this receipt.",
+        "Kuaishou page has only one visible 作品描述 field, so the package title was placed on line 1 and package copy on line 2.",
+        "The package-required vertical 3:4 cover file cover-vertical-3x4.png was uploaded through the Kuaishou custom cover image input; the preview showed the package cover, not an AI/default cover.",
+        "After clicking 发布, Kuaishou redirected to 作品管理 and the exact submitted text appeared with status 已发布 at 2026-05-20 16:56.",
+        "Feishu notification was attempted after verification but failed because bot is not in the target chat and user authorization is unavailable."
+      ],
+      "result_path": "/Users/baishangjituan/Documents/push/kuaishou_publish_result_20260517_metric_window_before_rewrite.json",
+      "recorded_at": "2026-05-20T17:01:14+08:00"
+    },
+    "bilibili": {
+      "platform": "bilibili",
+      "platform_id": "bilibili",
+      "campaign_id": "2026-05-17-ai-employee-metric-window-before-rewrite",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "status": "submitted_verified_public_api_and_manager",
+      "verified_state": "public_api_state_0; manager_row_showed_转码中_审核中_after_submit",
+      "submitted_at": "2026-05-20T09:12:10.826Z",
+      "submitted_at_asia_shanghai": "2026-05-20T17:12:10+08:00",
+      "actor": "Codex raw CDP publisher",
+      "actor_session_id": "chrome-cdp-127.0.0.1:9223-current-logged-in-session",
+      "cdp": {
+        "priority_route_used": true,
+        "browser_cdp_url_env": "",
+        "endpoint_used": "http://127.0.0.1:9223",
+        "raw_cdp_used": true,
+        "chrome_restarted": false,
+        "opencli_fallback_used": false,
+        "opencli_note": "OpenCLI daemon was running but extension was not connected; CDP endpoint 9223 was used instead."
+      },
+      "title": "指标窗没到别急着改：AI员工先建采集单，再决定内容怎么改",
+      "description": "这条讲多平台内容复盘里的执行细节：不是看到暂时没数据就改标题、换封面、重做口播，而是先建播放、完播、互动采集单，等指标窗口到了再判断。",
+      "public_url": "https://www.bilibili.com/video/BV1N8L165EmC/",
+      "bvid": "BV1N8L165EmC",
+      "aid": 116606097169105,
+      "cid": 38474156897,
+      "category": "人工智能",
+      "tid": 207,
+      "human_type2": 1011,
+      "tags": [
+        "AI员工",
+        "内容运营",
+        "数据复盘",
+        "短视频运营"
+      ],
+      "ai_declaration": "作者声明：该视频使用人工智能合成技术",
+      "platform_ai_declaration": "含AI生成内容",
+      "creation_statement": {
+        "id": 1
+      },
+      "video": {
+        "path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+        "sha256": "68d6c9fbc86e5a54a5c67032540a8261375c81e000654d7edaa00a160de80cb5"
+      },
+      "cover": {
+        "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-horizontal-4x3.png",
+        "required_cover_sha256": "590c150484187c96427c600941d71f0d65a510a72d5cb1f961c65cdf893371b7",
+        "required_cover_dimensions": "1440x1080",
+        "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
+        "backup_cover_sha256": "9971d4f9735b849a8e010b74365de45d04ee5c13f48d1a5244e1563561249c8b",
+        "package_required_cover_used": true,
+        "upload_file_input_value_seen": "C:\\fakepath\\cover-horizontal-4x3.png",
+        "cover_mode": "package_required_horizontal_4x3_uploaded_via_cdp_dom_file_input_and_synced_to_bilibili_16x9_prompt",
+        "platform_cover_url": "https://archive.biliimg.com/bfs/archive/f82546561d927fdc2cb047bc88a532df9fe28f61.jpg",
+        "platform_cover43_url": "https://archive.biliimg.com/bfs/archive/e81cd1de6fe5334ef1952c117f84ccf802e225c5.jpg",
+        "public_api_pic": "http://i0.hdslb.com/bfs/archive/f82546561d927fdc2cb047bc88a532df9fe28f61.jpg",
+        "downloaded_platform_cover_path": "/Users/baishangjituan/Documents/push/bilibili-metric-window-20260520-platform-cover.jpg",
+        "downloaded_platform_cover_sha256": "50331cf127a65c92875a37fa5ec48a820211a1e85ba8c417f984210d0c2c9936",
+        "downloaded_platform_cover_dimensions": "720x405",
+        "cover_preview_readability_passed": true,
+        "correct_package_cover_used": true
+      },
+      "verification": {
+        "submit_api": "POST /x/vu/web/add/v3 returned code=0",
+        "public_api": "GET /x/web-interface/view returned code=0, state=0, exact title and description matched",
+        "manager_page": "managerAfter.match.matched=true with exact title row; row showed 转码中 and 审核中",
+        "tags_request_body": "AI员工,数据复盘,短视频运营,内容运营",
+        "verified_by": "add_v3_code0_public_api_code0_and_bilibili_manager_exact_title_row"
+      },
+      "paths": {
+        "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/bilibili.md",
+        "package_config": "/Users/baishangjituan/Documents/push/bilibili_package_metric_window_20260520.json",
+        "final_verify": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/final-verify.json",
+        "publish_result": "/Users/baishangjituan/Documents/push/bilibili_publish_result_metric_window_20260520.json",
+        "receipt": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json",
+        "lock": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.bilibili.lock.json",
+        "pre_submit_screenshot": "/Users/baishangjituan/Documents/push/bilibili-metric-window-20260520-pre-submit.png",
+        "manager_screenshot": "/Users/baishangjituan/Documents/push/bilibili-manager-verified-metric-window-20260520.png"
+      },
+      "notes": [
+        "Actual publish was handled through Chrome DevTools Protocol on the logged-in Chrome session.",
+        "No Chrome restart was performed.",
+        "The exact cover required by the Bilibili package was used; platform later exposed a 16:9 derivative cover URL."
+      ],
+      "feishu_notification": {
+        "attempted_at": "2026-05-20T09:12:57.736Z",
+        "attempted_at_asia_shanghai": "2026-05-20T17:12:57+08:00",
+        "status": "failed_notification_only_publish_verified",
+        "bot_attempt": {
+          "ok": false,
+          "code": 230002,
+          "message": "HTTP 400: Bot/User can NOT be out of the chat.",
+          "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40"
+        },
+        "user_attempt": {
+          "ok": false,
+          "error": "need_user_authorization (user: )"
+        },
+        "note": "Bilibili publish remains verified; only Feishu notification delivery failed due chat membership/user authorization."
+      }
+    },
+    "wechat_channels": {
+      "actor": "Codex CDP publisher",
+      "actor_session_id": "chrome-cdp-127.0.0.1:9223-current-logged-in-session",
+      "platform_id": "wechat_channels",
+      "campaign_id": "2026-05-17-ai-employee-metric-window-before-rewrite",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "content_type": "video",
+      "status": "published_verified",
+      "verified_state": "已发布",
+      "title": "等指标再修改",
+      "original_package_title": "等指标再改",
+      "title_adjustment": {
+        "applied": true,
+        "reason": "WeChat Channels title validation required at least 6 Chinese characters; package title had 5.",
+        "from": "等指标再改",
+        "to": "等指标再修改"
+      },
+      "description": "机器人小马想马上改内容，大陈叫停：指标窗没到，先建播放、完播、互动采集单。",
+      "content_package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platform-upload-map.md",
+      "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/final-verify.json",
+      "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+      "uploaded_video_path": "/tmp/wc20-metric-window-video.mp4",
+      "video_sha256": "68d6c9fbc86e5a54a5c67032540a8261375c81e000654d7edaa00a160de80cb5",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "uploaded_cover_path": "/tmp/wc20-metric-window-cover.png",
+      "required_cover_sha256": "9971d4f9735b849a8e010b74365de45d04ee5c13f48d1a5244e1563561249c8b",
+      "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "backup_cover_sha256": "590c150484187c96427c600941d71f0d65a510a72d5cb1f961c65cdf893371b7",
+      "cover_mode": "package_required_vertical_3x4_uploaded_via_wechat_cover_editor_local_file_input",
+      "correct_package_cover_used": true,
+      "cover_thumbnail_present": true,
+      "cover_uploaded_as_custom_cover": true,
+      "browser_route": {
+        "cdp_checked_first": true,
+        "cdp_available": true,
+        "cdp_base": "http://127.0.0.1:9223",
+        "fallback_used": null,
+        "chrome_restarted": false,
+        "note": "User required CDP/opencli priority; publish flow used the existing logged-in Chrome through CDP and real local file chooser/file input handling."
+      },
+      "pre_publish_readback": {
+        "title": "等指标再修改",
+        "description": "机器人小马想马上改内容，大陈叫停：指标窗没到，先建播放、完播、互动采集单。",
+        "video_upload_status": "done_percent_100_processed_response_present",
+        "cover_preview_state": "个人主页和分享卡片(3:4)",
+        "cover_url_present_in_payload": true,
+        "full_cover_url_present_in_payload": true
+      },
+      "post_create_api": {
+        "http_status": 201,
+        "errCode": 0,
+        "errMsg": "request successful"
+      },
+      "verified_by": "Chrome DevTools Protocol Vue state, publish API response, and WeChat Channels management-list exact top-row readback",
+      "manager_url": "https://channels.weixin.qq.com/platform/post/list",
+      "manager_frame_url": "https://channels.weixin.qq.com/micro/content/post/list",
+      "object_id": "export/UzFfBgAAxIejIEwoGU_0jMzT4DCa9-IJIbN6X2JLeiYg9GOdYA",
+      "create_time_unix": 1779268802,
+      "published_at": "2026-05-20T17:20:02+08:00",
+      "list_status": 1,
+      "visible_type": 1,
+      "manager_row_text": "机器人小马想马上改内容，大陈叫停：指标窗没到，先建播放、完播、互动采集单。\n2026年05月20日 17:20\n0\n0\n0\n0\n0\n置顶\n分享\n评论管理\n修改描述和封面\n可见权限\n删除",
+      "platform_media": {
+        "url": "https://finder.video.qq.com/251/20302/stodownload?encfilekey=rjD5jyTuFrIpZ2ibE8T7YmwgiahniaXswqzMhDib3GwO7IKc1teriamxDTvPHmUEt27yl7RkoL1Fv9fW11TBwhVVBvPl1q65zzSLqENE93WVFAx9hNY6ic5hF03g&token=cztXnd9GyrHehmxA2PMaOxteSnPx9eFupTrhzbuicXgvRxhiaKj8zxLo39KhuRr5rBAvBYWUagmGU4bS5ZjszXyGicPCM3uDX6AvibRgLPmic0eqzMBIogvaRf4N2DkDJxu2C3lDqaiaEa0otdsp83wAuicBD0jiaHHQW4RAQFibbxCyhVe3XUxpKwUViadL8zyCbJmA2fqJYhucrSHXAavbLSB52cBlibxz7n8KgAPab30iaA0WQic4&bizid=1023&dotrans=0&hy=SH&idx=1&m=&uzid=7a22e&basedata=CAMSA3hWMCIJCgcKA3hWMBAA&sign=VF2rxwqp5EKj-u4pDn575lcLgJvoHDpwqVhfwKMbFoN_df1ztHBnGXiQTXDMsI4mWG5Fi2_Zm1CPWOIOL0D_jA",
+        "thumbUrl": "https://finder.video.qq.com/251/20304/stodownload?encfilekey=S7s6ianIic0ia4PicKJSfB8EjyjpQibPUAXoleskiamibmAkicz6d5fbkHYn3ibIcqntGAxbSSesicRX4xCNomXq3yD2XXKtLJ2bTOlibcQ7foXhn4Ja4oIIIXyeyn9GQ&token=6xykWLEnztKIzBicPuvgFxvgicbEMYsSbPCjhiatiapcNPsictrRg8rEsQdzNYKWMA3Voic8rYDZU4HdOlTWxeqXuDZMzdYVdOibf3cU8mwuWQHuSq6KvZdiaHZyDJTO8s6hA1ibtHIlsoqGqbFKibf1OAibGqJrC4cp7fYrLkjtn3sYjy6GAHK1sROwZs0DAPiccuTyicH5DYibWyZaGIUf7SuDWzU1oRp21NicWic2ccxo&bizid=1023&dotrans=0&hy=SH&idx=1&m=&uzid=1&picformat=200&wxampicformat=503",
+        "coverUrl": "https://finder.video.qq.com/251/20304/stodownload?encfilekey=rjD5jyTuFrIpZ2ibE8T7Ym3K77SEULgkiaVaHyiaTzejMQaFENicfb4ezmq6tERZKFPKVjDVK3jjC7UZXBbJnxcbUibPb0cfl5MrAI2YuwUPichicZKXGMed2hjOA&token=Cvvj5Ix3eeyD0TVgRZ2eE4K0IJGN3m1gghRGCl5FPlxrJXJuwkCibLFf8mQv2Trn1BVRwa65cR1cuI13dIrZC9B0GAiasdquB0cfWoIkPS3O3t5KzwQ4UVia20Oo3QrkCLxhtyVvU0icAZf6Fo0e3YFpI9WlXF5OjWAHjF6PxuHiba8HK4RJ4zObnQ1Yx1cCDKiaFZN7p4RogUNbswt64MaNsojOFXcDibWEcgr&hy=SZ&idx=1&m=&scene=2&uzid=1&picformat=200&wxampicformat=503",
+        "fullCoverUrl": "https://finder.video.qq.com/251/20304/stodownload?encfilekey=rjD5jyTuFrIpZ2ibE8T7Ym3K77SEULgkiaVaHyiaTzejMQaFENicfb4ezmq6tERZKFPK7c0dRFssxJ4D6852Ku1wz5ibJ0TUO4GbOlMIWJdFZrQicibV9Jn0RnN8Q&token=6xykWLEnztKIzBicPuvgFxvohuNkGgnRB4G3v5gX5V61IOkVh3Vr9K7jJYROjx19Yc1WUjQQ9zIN9SFldfcIhsokStOyk4tJRyMALiaZfqaDqOIwad3zWUr4JDugybqibt3iabWhX11OqTD1OHnnMkBQk89nDgJmqOSdLeLpJVias0nWwCEibSFF6n9wNiceiapEKh4sp2jbXGyZ4dHicjoYPpyg4KMXMl2VT0f3E&hy=SZ&idx=1&m=&scene=2&uzid=1&picformat=200&wxampicformat=503",
+        "width": 720,
+        "height": 1280,
+        "md5sum": "4ec64b097909a1ad2b3cc415d29397dc",
+        "fileSize": "5150392"
+      },
+      "verified_at": "2026-05-20T09:24:50.642Z",
+      "verified_at_asia_shanghai": "2026年5月20日 17:24:50",
+      "result_path": "/Users/baishangjituan/Documents/push/wechat_channels_20260517_metric_window_publish_result.json",
+      "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.wechat_channels.lock.json",
+      "notes": [
+        "Management-list duplicate check found no existing exact target description/title before upload.",
+        "Video was uploaded through a real video file input in the CDP-attached logged-in Chrome session.",
+        "Required vertical 3:4 cover file cover-vertical-3x4.png was uploaded through the visible WeChat cover editor image input and confirmed before publish.",
+        "The original package short title was rejected by platform validation (标题至少6个字); the minimal semantic expansion 等指标再修改 was used and recorded.",
+        "Post-publish management list top row matched the target description and adjusted title, with objectId and custom cover URLs present."
+      ],
+      "feishu_notification": {
+        "status": "failed",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "attempted_at": "2026-05-20T09:25:34.888Z",
+        "bot_error": "HTTP 400: Bot/User can NOT be out of the chat (code 230002)",
+        "user_error": "need_user_authorization",
+        "note": "Publish was verified; notification delivery failed because the configured Feishu identity cannot send to the target chat."
+      }
+    },
+    "weibo": {
+      "campaign_id": "2026-05-17-ai-employee-metric-window-before-rewrite",
+      "platform_id": "weibo",
+      "status": "published",
+      "account": "智者大陈",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "title": "指标没回来，就能改标题换封面吗？",
+      "body": "不能。播放、完播、互动还没回来时，改内容很容易变成凭感觉动作。大陈让机器人小马先建采集单，等指标窗到了再改。#AI员工 #内容运营",
+      "public_url": "https://weibo.com/2326772703/R0ihMlTvZ",
+      "mobile_url": "https://m.weibo.cn/detail/5300702945218291",
+      "mblogid": "R0ihMlTvZ",
+      "post_id": "5300702945218291",
+      "author": "智者大陈",
+      "source": "微博视频号",
+      "published_at": "Wed May 20 17:32:07 +0800 2026",
+      "submitted_at": "2026-05-20T17:31:40.327+08:00",
+      "recorded_at": "2026-05-20T17:32:13.536+08:00",
+      "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/weibo.md",
+      "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/weibo/2026-05-17-ai-employee-metric-window-before-rewrite-weibo.md",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platform-upload-map.md",
+      "automation_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
+      "video_sha256": "68d6c9fbc86e5a54a5c67032540a8261375c81e000654d7edaa00a160de80cb5",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "required_cover_sha256": "9971d4f9735b849a8e010b74365de45d04ee5c13f48d1a5244e1563561249c8b",
+      "first_frame_path": "/Users/baishangjituan/Documents/push/weibo-publish-20260520-metric-window/publish-first-frame.png",
+      "first_frame_sha256": "2b9b1bfb4ff36b323a062a602e8bf3da24316b53c515b68f4ffad06e790eb1dc",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "cover_mode": "weibo_quick_composer_no_custom_cover_control; used_publish_video_first_frame_per_package_rule; first_frame_matches_required_vertical_cover_design",
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "ai_declaration": "含AI生成内容",
+      "duplicate_guard": {
+        "local_receipts": "passed_no_existing_weibo_receipt_before_publish",
+        "profile_before_publish": "passed_profile_missing_current_marker_before_publish",
+        "details": {
+          "searches": [
+            {
+              "q": "凭感觉动作",
+              "status": 200,
+              "total": 0,
+              "matched": false,
+              "matched_mblogid": null
+            },
+            {
+              "q": "指标窗到了再改",
+              "status": 200,
+              "total": 0,
+              "matched": false,
+              "matched_mblogid": null
+            },
+            {
+              "q": "指标没回来，就能改标题换封面吗？",
+              "status": 200,
+              "total": 0,
+              "matched": false,
+              "matched_mblogid": null
+            }
+          ],
+          "mymblog": {
+            "status": 200,
+            "checked_items": 20,
+            "matched": false
+          }
+        }
+      },
+      "verification": {
+        "status": "verified",
+        "verified_by": "cdp_attached_playwright_weibo_api_and_public_readback",
+        "matched_by": "mymblog",
+        "checked_after_ms": 26530,
+        "text_exact_match": true,
+        "public_page_readback": {
+          "url": "https://weibo.com/2326772703/R0ihMlTvZ",
+          "title": "微博正文 - 微博",
+          "text_contains_marker": true,
+          "text_contains_secondary_marker": true,
+          "text_contains_duration": true,
+          "body_excerpt": "2\n无障碍\n首页\n全部关注\n最新微博\n好友圈\n自定义分组\n管理\n悄悄关注\n返回\n智者大陈\n公开\n智者大陈\n26-5-20 17:32\n发布于 新加坡\n来自 微博视频号\n4\n阅读\n推广\n不能。播放、完播、互动还没回来时，改内容很容易变成凭感觉动作。大陈让机器人小马先建采集单，等指标窗到了再改。#AI员工 #内容运营 智者大陈的微博视频 ​​​\n播放视频\n博主声明：该内容使用AI生成技术\n00:15\n转发\n评论\n赞\n分享这条博文\n同时转发\n评论\n还没有人评论哦~快来抢沙发！\n智者大陈\n7\n关注\n0\n粉丝\n37\n微博\n专注于AI员工服务和垂直智能体应用\n男新加坡\n查看个人主页\n微博热搜\n点击刷新\n我的\n热搜\n1\n韩安冉向女明星道歉\n15:33登顶\n2\n何润东商务 有人莫名其妙就发财了\n758294\n3\n除了王一博没有人这样对粉丝\n77305\n520送礼上淘宝更优惠\n4\n豆包越来越诡异了\n14:07登顶\n5\n柳州地震\n01:00登顶\n6\n曾沛慈一关灯就唱生日歌\n68702\n田曦薇喊你喝沪上阿姨摩登咖啡\n7\n性侵权珉娥嫌疑人时隔18年定罪\n121305\n8\n韩安冉说女明星们都很美\n69417\n9\niPhone绝版配件回归\n89439\n10\n吃掉宋芽芽追星运\n78555\n查看完整热搜榜单\n帮助中心\n微博客服 4000-960-960\n自助服务中心\n常见问题\n合作&服务\n微博营销\n合作热线 4000-980-980\n开放平台\n更多\n举报中心\n违规投诉 010-60618076\n处理大厅\n舞弊举报\n更多\n关于微博\nAbout Weibo\n客户端下载\n微博招聘\n网站备案信息\n微博隐私安全中心\nCopyright © 2009-2026\n营业执照"
+        },
+        "post_command": {
+          "author": "智者大陈",
+          "created_at": "Wed May 20 17:32:07 +0800 2026",
+          "id": "5300702945218291",
+          "mblogid": "R0ihMlTvZ",
+          "source": "微博视频号",
+          "text_raw": "不能。播放、完播、互动还没回来时，改内容很容易变成凭感觉动作。大陈让机器人小马先建采集单，等指标窗到了再改。#AI员工 #内容运营 http://t.cn/AX6v9KDl ​​​",
+          "url": "https://weibo.com/2326772703/R0ihMlTvZ"
+        }
+      },
+      "cover_inspection": {
+        "cover_mode": "weibo_quick_composer_no_custom_cover_control; used_publish_video_first_frame_per_package_rule; first_frame_matches_required_vertical_cover_design",
+        "custom_cover_control_found": false,
+        "inspected_inputs": [
+          {
+            "index": 0,
+            "accept": "image/*, .jpg, .jpeg, .bmp, .gif, .png, .heif, .heic, video/mp4,video/x-m4v,video/*,.mkv,.flv",
+            "className": "_file_hqmwy_20",
+            "name": "",
+            "value": ""
+          }
+        ],
+        "inspected_text_contains_cover": false,
+        "note": "The package-required 3:4 cover file was used as the target for any custom cover control, but the current Weibo quick composer exposed no image-only cover file input or cover editor; per package rule, the publish video first frame is the operational fallback."
+      },
+      "actor": "Codex CDP-attached Playwright publisher",
+      "actor_session_id": "current-thread-cdp-127.0.0.1:9224",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.weibo.lock.json",
+      "result_path": "/Users/baishangjituan/Documents/push/weibo_publish_result_20260520_metric_window_before_rewrite.json",
+      "notes": [
+        "This thread is restricted to Weibo publishing; no other platform publishing was performed in this run.",
+        "Chrome DevTools/CDP on 127.0.0.1:9224 was used for DOM input, file upload, submit, and API/public readback; GUI screenshot routing was not used as the primary path.",
+        "The package-required cover file is cover-vertical-3x4.png. If Weibo quick composer exposed no custom cover control, the publish video first frame was used according to the package rule and recorded in cover_mode.",
+        "AI content declaration was selected and read back before send."
+      ],
+      "feishu_notification": {
+        "sent": false,
+        "attempted_at": "2026-05-20T17:33:05.550+08:00",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "method": "lark-cli im +messages-send",
+        "bot_attempt": {
+          "ok": false,
+          "code": 230002,
+          "message": "HTTP 400: Bot/User can NOT be out of the chat."
+        },
+        "user_attempt": {
+          "ok": false,
+          "message": "need_user_authorization"
+        },
+        "idempotency_keys": [
+          "weibo-20260520-metric-window-before-rewrite",
+          "weibo-20260520-metric-window-before-rewrite-user"
+        ]
+      }
+    }
+  },
   "receipt_schema": {
     "future_platform_receipt_fields": [
       "actor",
@@ -18,5 +867,38 @@
       "cover_readability_passed"
     ]
   },
-  "created_at": "2026-05-17T15:01:54+08:00"
+  "created_at": "2026-05-17T15:01:54+08:00",
+  "updated_at": "2026-05-20T17:33:05.550+08:00",
+  "updated_at_asia_shanghai": "2026-05-20T17:12:10+08:00",
+  "last_platform": "bilibili",
+  "last_published_platform": "bilibili",
+  "feishu_notification": {
+    "attempted_at": "2026-05-20T09:12:57.736Z",
+    "attempted_at_asia_shanghai": "2026-05-20T17:12:57+08:00",
+    "status": "failed_notification_only_publish_verified",
+    "bot_attempt": {
+      "ok": false,
+      "code": 230002,
+      "message": "HTTP 400: Bot/User can NOT be out of the chat.",
+      "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40"
+    },
+    "user_attempt": {
+      "ok": false,
+      "error": "need_user_authorization (user: )"
+    },
+    "note": "Bilibili publish remains verified; only Feishu notification delivery failed due chat membership/user authorization."
+  },
+  "notifications": [
+    "feishu_failed_2026-05-20T08:57:25.624Z: toutiao under_review verified, but notification to oc_45f4f2c2f0a783f636969cd821179f40 failed with bot code 230002 and user need_user_authorization.",
+    "douyin_verified_2026-05-20T08:58:28.440Z: under_review/work_list matched aweme_id 7641895362827013427; Feishu notification pending.",
+    "feishu_failed_2026-05-20T08:59:01.165Z: douyin under_review verified, but notification to oc_45f4f2c2f0a783f636969cd821179f40 failed with bot code 230002 and user need_user_authorization.",
+    "douyin_published_2026-05-20T08:59:44.464Z: published work_list status=1 matched aweme_id 7641895362827013427."
+  ],
+  "previous_status_before_bilibili": "kuaishou_published",
+  "updated_at_after_feishu_attempt": "2026-05-20T09:12:57.736Z",
+  "updated_at_after_feishu_attempt_asia_shanghai": "2026-05-20T17:12:57+08:00",
+  "last_blocked_platform": "baijiahao",
+  "notes": [
+    "2026-05-20T09:15:49.170Z: Baijiahao publish blocked before upload: baijiahao_login_page. No video upload, cover upload, or publish click happened."
+  ]
 }
