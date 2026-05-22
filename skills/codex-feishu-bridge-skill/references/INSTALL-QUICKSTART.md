@@ -53,7 +53,17 @@ Set-Location "$HOME\.codex-feishu-bridge"
 npm install
 ```
 
-4. Ask the operator for Feishu `App ID` and `App Secret`, then configure `lark-cli`.
+4. Review `.bridge.env`.
+
+The installer copies `.bridge.env.example` to `.bridge.env` on first install. Both the macOS shell launchers and the Windows PowerShell launchers read this file, and `src/bridge.js` now loads it directly as a fallback when started without the wrappers.
+
+Optional values worth setting before first auth:
+
+- `LARK_CLI_PROFILE` when the machine keeps multiple `lark-cli` profiles
+- `CODEX_BRIDGE_PUBLISH_NOTIFY_CHAT_ID` / `CODEX_BRIDGE_PROGRESS_NOTIFY_CHAT_ID` for default push targets
+- `CODEX_BRIDGE_PROGRESS_THREAD_IDS` for desktop-side thread ids that should emit milestone progress pushes even when they were not bound from Feishu first
+
+5. Ask the operator for Feishu `App ID` and `App Secret`, then configure `lark-cli`.
 
 macOS:
 
@@ -67,7 +77,7 @@ Windows PowerShell:
 .\node_modules\@larksuite\cli\bin\lark-cli.exe config init --app-id <APP_ID> --app-secret-stdin --brand feishu
 ```
 
-5. Run Feishu login.
+6. Run Feishu login.
 
 macOS:
 
@@ -81,7 +91,7 @@ Windows PowerShell:
 .\node_modules\@larksuite\cli\bin\lark-cli.exe auth login --domain im,event --recommend
 ```
 
-6. Verify auth.
+7. Verify auth.
 
 macOS:
 
@@ -95,7 +105,7 @@ Windows PowerShell:
 .\node_modules\@larksuite\cli\bin\lark-cli.exe auth status
 ```
 
-7. Re-confirm notify targets.
+8. Re-confirm notify targets.
 
 macOS:
 
@@ -116,7 +126,7 @@ Or later in Feishu:
 /setprogresshere
 ```
 
-8. Start the service.
+9. Start the service.
 
 macOS:
 
@@ -130,7 +140,7 @@ Windows PowerShell:
 .\scripts\bridge-start.ps1
 ```
 
-9. Verify.
+10. Verify.
 
 macOS:
 

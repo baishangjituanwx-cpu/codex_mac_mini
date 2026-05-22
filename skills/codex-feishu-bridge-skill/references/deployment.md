@@ -178,16 +178,22 @@ Windows:
 
 The bridge can watch one or more local Codex threads and auto-push a completion summary to Feishu when a publish run finishes successfully.
 
+The deployed `.bridge.env` file is the preferred cross-platform place to keep these overrides. The macOS shell launchers, Windows PowerShell launchers, and `src/bridge.js` itself all load the same file.
+
 Useful environment variables:
 
 - `CODEX_BRIDGE_PUBLISH_NOTIFY_CHAT_ID`
   Target Feishu chat id for completion pushes. Re-confirm this on each new installation.
 - `CODEX_BRIDGE_PROGRESS_NOTIFY_CHAT_ID`
   Target Feishu chat id for live task-progress pushes. Re-confirm this on each new installation.
+- `CODEX_BRIDGE_PROGRESS_THREAD_IDS`
+  Comma-separated Codex thread ids that should emit desktop-side milestone pushes even when they were resumed locally instead of from Feishu.
 - `CODEX_BRIDGE_MONITOR_THREAD_NAMES`
   Comma-separated thread-name patterns to monitor.
 - `CODEX_BRIDGE_PUBLISH_SUCCESS_KEYWORDS`
   Comma-separated success phrases. Auto-push only happens when the latest result text contains one of them.
+- `LARK_CLI_PROFILE`
+  Optional `lark-cli` profile name. Set this when the Windows or macOS machine uses multiple Feishu app profiles and the bridge should pin one explicitly.
 
 Default success phrases include:
 
