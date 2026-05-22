@@ -1,0 +1,47 @@
+{
+  "campaign_id": "2026-05-22-ai-employee-no-new-status-not-failure",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "platform": "zhihu",
+  "status": "published",
+  "updated_at": "2026-05-22T08:33:58.635Z",
+  "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/zhihu.md",
+  "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-22-ai-employee-no-new-status-not-failure-zhihu.md",
+  "title": "为什么内容复盘里不能把“无新增”直接判断为失败？",
+  "body": "因为无新增、没指标、未核验都只是状态信息，不是失败证据。真正稳妥的复盘流程，是先补作品行状态、指标窗口和同账号同格式对照，再决定是否修改内容包装。",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+  "video_sha256": "afbe934c9439ceacab91de95cf7cf9a10bb2ea3e3526403e30ffe30e8e23e202",
+  "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+  "required_cover_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+  "duplicate_guard": {
+    "profile": {
+      "hasExpectedTitle": false,
+      "hasExpectedBody": false,
+      "exactLink": null
+    },
+    "posts": {
+      "hasExpectedTitle": false,
+      "hasExpectedBody": false,
+      "exactLink": null
+    },
+    "manage": {
+      "hasExpectedTitle": false,
+      "hasExpectedBody": false,
+      "exactLink": null
+    }
+  },
+  "error": "Error: title readback mismatch before submit\n    at submit (file:///private/tmp/zhihu_publish_20260522_no_new_status_expanded.mjs:712:38)\n    at async main (file:///private/tmp/zhihu_publish_20260522_no_new_status_expanded.mjs:829:25)",
+  "published_at": "发布于2026-05-22 16:33",
+  "public_url": "https://www.zhihu.com/pin/2041194410700952883",
+  "share_link": "https://www.zhihu.com/pin/2041194410700952883?page=video_pin&scene=share",
+  "external_id": "2041194410700952883",
+  "result_path": "/Users/baishangjituan/Documents/push/zhihu_20260522_no_new_status_publish_result.json",
+  "screenshots": {
+    "duplicateManage": "/Users/baishangjituan/Documents/push/zhihu-20260522-no-new-status-resume-duplicate-manage.png",
+    "duplicateProfile": "/Users/baishangjituan/Documents/push/zhihu-20260522-no-new-status-resume-duplicate-profile.png",
+    "duplicatePosts": "/Users/baishangjituan/Documents/push/zhihu-20260522-no-new-status-resume-duplicate-profile-posts.png",
+    "preSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260522-no-new-status-resume-pre-submit.png",
+    "afterSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260522-no-new-status-resume-after-submit.png",
+    "profile": "/Users/baishangjituan/Documents/push/zhihu-20260522-no-new-status-profile-verified.png",
+    "public": "/Users/baishangjituan/Documents/push/zhihu-20260522-no-new-status-public-verified.png"
+  }
+}

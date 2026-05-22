@@ -1,0 +1,76 @@
+{
+  "campaignId": "2026-05-22-ai-employee-no-new-status-not-failure",
+  "sourceThreadId": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "sourceCampaignId": "2026-05-22-ai-employee-no-new-status-not-failure",
+  "sourceConfig": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-22-ai-employee-no-new-status-not-failure.yaml",
+  "sourceContentRoot": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package",
+  "receiptPath": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-22-ai-employee-no-new-status-not-failure.json",
+  "scope": "all_platforms",
+  "platforms": {
+    "bilibili": {
+      "title": "别把无新增写成失败：AI员工先补三格证据，再决定内容要不要改",
+      "description": "这条讲内容复盘里最容易误判的一步：看到“今日无新增”不要直接写失败。先核验作品行状态、指标窗口和同账号同格式对照，三格齐了，再决定是否改标题、封面或口播结构。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png"
+    },
+    "toutiao": {
+      "title": "无新增时，AI员工能直接判断内容失败吗？",
+      "description": "不能。无新增只是状态分支，不是失败结论。应该先核验作品行状态、指标窗口和同账号同格式对照，证据齐了再决定是否修改内容。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png"
+    },
+    "zhihu": {
+      "title": "为什么内容复盘里不能把“无新增”直接判断为失败？",
+      "description": "因为无新增、没指标、未核验都只是状态信息，不是失败证据。真正稳妥的复盘流程，是先补作品行状态、指标窗口和同账号同格式对照，再决定是否修改内容包装。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png"
+    },
+    "baijiahao": {
+      "title": "为什么“无新增”不能直接写成内容失败？",
+      "description": "因为无新增只说明当前没有新增执行记录，不等于内容失败。更稳妥的做法是先补作品状态、指标窗口和同账号对照，三格证据齐了再判断。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png"
+    },
+    "kuaishou": {
+      "title": "无新增不是失败",
+      "description": "别把无新增写成失败。先核验状态、指标、对照，证据齐了再改。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png"
+    },
+    "weibo": {
+      "title": "无新增，就能直接判内容失败吗？",
+      "description": "不能。无新增只是状态，不是失败结论。后台没核验、指标没回来、同账号对照没补齐时，先别改标题封面，先把三格证据补齐。#AI员工 #内容运营",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png"
+    },
+    "wechat_channels": {
+      "title": "无新增不是失败",
+      "description": "机器人小马想把“今日无新增”写成失败，大陈叫停：后台还没核验，先补状态、指标、对照三格证据。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png"
+    }
+  },
+  "fingerprints": {
+    "title_hash": "5d61f19d53ea38cd6bbf6f573390100b36799f2987290351f1c307ac8e32e0b1",
+    "body_core_hash": "8ebd1ec9bb2bfcb39379b2b43ebc8c8a1c43e3efbe163794f432bebe433f52a6",
+    "video_sha256": "afbe934c9439ceacab91de95cf7cf9a10bb2ea3e3526403e30ffe30e8e23e202",
+    "raw_video_sha256": "d322edbc144790b08a07248f895e19ecd2c2b51a6b4c1a80ee2920fec803cf0e",
+    "cover_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+    "cover_3_4_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+    "cover_4_3_sha256": "5b2b48a6c77009d4a84653b79d37244fd300b5ddc3fd7cadb5cf10ce99b4447a"
+  },
+  "lock_dir": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks",
+  "allow_live": false,
+  "unsupportedPlatforms": {
+    "douyin": "unsupported_by_current_hermes_skill"
+  },
+  "publishConstraints": {
+    "requireManagementPageVerification": true,
+    "skipDuplicateIfAlreadyPublished": true,
+    "finalSubmitRequiresUserConfirmation": true,
+    "doNotPublish": true,
+    "doNotUpload": true,
+    "doNotClickSubmit": true,
+    "doNotTestXiaohongshu": true
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "platform_id": "toutiao",
+  "campaign_id": "2026-05-22-ai-employee-no-new-status-not-failure",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "status": "under_review",
+  "verified_state": "审核中",
+  "title": "无新增时，AI员工能直接判断内容失败吗？",
+  "description": "不能。无新增只是状态分支，不是失败结论。应该先核验作品行状态、指标窗口和同账号同格式对照，证据齐了再决定是否修改内容。",
+  "content_type": "video",
+  "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/toutiao.md",
+  "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platform-upload-map.md",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+  "video_sha256": "afbe934c9439ceacab91de95cf7cf9a10bb2ea3e3526403e30ffe30e8e23e202",
+  "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+  "required_cover_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+  "result_path": "/Users/baishangjituan/Documents/push/toutiao_publish_result_20260522_no_new_status.json",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-22-ai-employee-no-new-status-not-failure.json",
+  "manager_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
+  "manager_screenshot": "/Users/baishangjituan/Documents/push/toutiao-cdp-manager-verified-20260522-no-new-status.png",
+  "created_at": "2026-05-22T08:37:12.317Z",
+  "created_at_asia_shanghai": "2026年5月22日 16:37:12",
+  "reason": "Toutiao work manager verified exact-title row as 审核中; block duplicate reposts."
+}

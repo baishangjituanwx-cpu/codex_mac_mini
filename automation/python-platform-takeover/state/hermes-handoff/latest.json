@@ -1,86 +1,86 @@
 {
   "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
-  "campaign_id": "2026-05-17-ai-employee-metric-window-before-rewrite",
+  "campaign_id": "2026-05-22-ai-employee-no-new-status-not-failure",
   "status": "ready_for_publish",
-  "content_package_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml",
-  "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package",
-  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json",
+  "content_package_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-22-ai-employee-no-new-status-not-failure.yaml",
+  "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-22-ai-employee-no-new-status-not-failure.json",
   "scope": "all_platforms",
   "platform_upload_plan": {
     "douyin": {
       "platform_label": "抖音",
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-horizontal-4x3.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/douyin.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/douyin.md"
     },
     "kuaishou": {
       "platform_label": "快手",
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-horizontal-4x3.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/kuaishou.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/kuaishou.md"
     },
     "wechat_channels": {
       "platform_label": "微信视频号",
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-horizontal-4x3.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/wechat_channels.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/wechat_channels.md"
     },
     "weibo": {
       "platform_label": "微博",
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-horizontal-4x3.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/weibo.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/weibo.md"
     },
     "bilibili": {
       "platform_label": "B站",
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-horizontal-4x3.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/bilibili.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/bilibili.md"
     },
     "xiaohongshu": {
       "platform_label": "小红书",
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-horizontal-4x3.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/xiaohongshu.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/xiaohongshu.md"
     },
     "toutiao": {
       "platform_label": "头条号",
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-horizontal-4x3.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/toutiao.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/toutiao.md"
     },
     "baijiahao": {
       "platform_label": "百家号",
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-horizontal-4x3.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/baijiahao.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/baijiahao.md"
     },
     "zhihu": {
       "platform_label": "知乎",
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-vertical-3x4.png",
-      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_cover_package/cover-horizontal-4x3.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/zhihu.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "backup_cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/zhihu.md"
     }
   },
   "fingerprints": {
-    "title_hash": "911daed97ed14be3a6153a1253d471ce7b3f20c247d9cb083e8bbbc0eefbdf1a",
-    "body_core_hash": "93d379e348c1465c05e4fa41178971b7c571673fabd444a9b3ebf0df56af7f18",
-    "video_sha256": "68d6c9fbc86e5a54a5c67032540a8261375c81e000654d7edaa00a160de80cb5",
-    "raw_video_sha256": "774ee4d34be9af5e4c1377395976d80a2a72711534160746f338a0cef72560d3",
-    "cover_sha256": "9971d4f9735b849a8e010b74365de45d04ee5c13f48d1a5244e1563561249c8b",
-    "cover_3_4_sha256": "9971d4f9735b849a8e010b74365de45d04ee5c13f48d1a5244e1563561249c8b",
-    "cover_4_3_sha256": "590c150484187c96427c600941d71f0d65a510a72d5cb1f961c65cdf893371b7"
+    "title_hash": "5d61f19d53ea38cd6bbf6f573390100b36799f2987290351f1c307ac8e32e0b1",
+    "body_core_hash": "8ebd1ec9bb2bfcb39379b2b43ebc8c8a1c43e3efbe163794f432bebe433f52a6",
+    "video_sha256": "afbe934c9439ceacab91de95cf7cf9a10bb2ea3e3526403e30ffe30e8e23e202",
+    "raw_video_sha256": "d322edbc144790b08a07248f895e19ecd2c2b51a6b4c1a80ee2920fec803cf0e",
+    "cover_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+    "cover_3_4_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+    "cover_4_3_sha256": "5b2b48a6c77009d4a84653b79d37244fd300b5ddc3fd7cadb5cf10ce99b4447a"
   },
   "lock_dir": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks",
   "allow_live": false,
-  "updated_at": "2026-05-17T15:01:54+08:00"
+  "updated_at": "2026-05-22T16:21:25+08:00"
 }

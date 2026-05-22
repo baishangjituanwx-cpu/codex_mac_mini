@@ -2541,3 +2541,51 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-21 22:01:16 CST`，今天 monitor 中新增、修改或删除且落到当前仓库的自定义 skill / supporting automation 变更为零；Mac 与 Windows 覆盖今日均完整，并已明确记录“今天没有需要补做的 Windows 转译”。
+
+## 2026-05-22 22:03:25 CST
+
+- 处理时间:
+  - `2026-05-22 22:03:25 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-21 22:01:16 CST` 之后追加且此前未写入本状态文件的 `2026-05-22` 批次已全部复核。
+  - 本轮纳入复核的批次:
+    - `2026-05-22 07:38:15 CST`
+    - `2026-05-22 08:38:41 CST`
+    - `2026-05-22 09:39:53 CST`
+    - `2026-05-22 11:43:03 CST`
+    - `2026-05-22 14:47:37 CST`
+    - `2026-05-22 17:51:36 CST`
+    - `2026-05-22 19:53:16 CST`
+  - 其中仅 `2026-05-22 17:51:36 CST` 为非零变更批次；其余批次结果均为 `新增 0，修改 0，删除 0`。
+  - `2026-05-22 17:51:36 CST` 的非零变更项:
+    - `~/.codex/skills/codex-feishu-bridge/assets/template/src/bridge.js`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.baijiahao.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.wechat_channels.lock.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-22-ai-employee-no-new-status-not-failure.json`
+- 已完成的 Windows 补全:
+  - `skills/codex-feishu-bridge-skill`:
+    - 将仓库内模板运行时 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/src/bridge.js`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/src/bridge.js) 同步到最新监控到的 bridge 行为，补齐以下跨平台能力，Windows 可直接复用:
+      - `.bridge.env` 自动加载，保证直接从 PowerShell 启动 `node src/bridge.js` 时也会读取本地配置
+      - `LARK_CLI_PROFILE` 参数透传，支持 Windows 机器上的多 profile `lark-cli`
+      - 显式 `CODEX_BRIDGE_PROGRESS_THREAD_IDS` 与本地 progress 游标持久化，支持未先经 Feishu 绑定的本地桌面线程在 Windows 上继续推送里程碑进度
+      - Bot 被移出群聊或 chat push 失败时，按 `senderOpenId` 回退发信
+    - 更新 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/.bridge.env.example`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/.bridge.env.example)，补入:
+      - `LARK_CLI_PROFILE`
+      - `CODEX_BRIDGE_PROGRESS_THREAD_IDS`
+    - 更新 Windows / 双平台文档，明确新的配置入口和 PowerShell 可用方式:
+      - [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART.md)
+      - [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/deployment.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/deployment.md)
+      - [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/user-guide.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/user-guide.md)
+  - `automation/python-platform-takeover/state/*`:
+    - 本批次仅为发布锁和 receipt 台账补录，不是新的自定义 skill / launcher / doc 行为。
+    - 确认这些 JSON 状态文件不需要单独的 Windows 包装脚本、路径说明、快捷键映射或命令分发改写。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-22` 已记录批次没有遗漏的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机执行了 `node --check skills/codex-feishu-bridge-skill/assets/template/src/bridge.js`，通过。
+  - 本机未执行 Windows PowerShell 实机回归；当前判断基于仓库文件同步、文档核对与 Node 语法检查。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-22 22:03:25 CST`，今天 monitor 中唯一需要转译的自定义 skill 变更已同步到仓库并补齐 Windows 可用说明；同日其余非零项仅为 automation 状态台账，不存在额外 Windows 缺口。

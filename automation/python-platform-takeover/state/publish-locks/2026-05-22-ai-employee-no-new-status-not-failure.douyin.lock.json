@@ -1,0 +1,16 @@
+{
+  "campaign_id": "2026-05-22-ai-employee-no-new-status-not-failure",
+  "platform_id": "douyin",
+  "status": "published_verified",
+  "aweme_id": "7642631390067969318",
+  "title": "无新增别判失败",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "created_at": "2026-05-22T08:34:59.737Z",
+  "created_at_asia_shanghai": "2026/5/22 16:34:59",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-22-ai-employee-no-new-status-not-failure.json",
+  "result_path": "/Users/baishangjituan/Documents/push/douyin_publish_result_20260522_no_new_status_not_failure.json",
+  "video_sha256": "afbe934c9439ceacab91de95cf7cf9a10bb2ea3e3526403e30ffe30e8e23e202",
+  "cover_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+  "horizontal_cover_sha256": "5b2b48a6c77009d4a84653b79d37244fd300b5ddc3fd7cadb5cf10ce99b4447a",
+  "share_url": "https://www.iesdouyin.com/share/video/7642631390067969318/"
+}

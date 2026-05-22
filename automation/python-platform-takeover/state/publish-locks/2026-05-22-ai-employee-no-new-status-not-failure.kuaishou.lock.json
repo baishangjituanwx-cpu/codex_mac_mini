@@ -1,0 +1,116 @@
+{
+  "campaign_id": "2026-05-22-ai-employee-no-new-status-not-failure",
+  "platform": "kuaishou",
+  "status": "published",
+  "created_at": "2026-05-22T16:33:35+08:00",
+  "updated_at": "2026-05-22T16:45:34+08:00",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "content_package_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-22-ai-employee-no-new-status-not-failure.yaml",
+  "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package",
+  "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/kuaishou.md",
+  "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platform-upload-map.md",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-22-ai-employee-no-new-status-not-failure.json",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+  "raw_video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure.mp4",
+  "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+  "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+  "title": "无新增不是失败",
+  "description": "别把无新增写成失败。先核验状态、指标、对照，证据齐了再改。",
+  "user_confirmation": "2026-05-22 current-thread explicit request to start latest Kuaishou publish task and use correct package cover, CDP/opencli priority",
+  "package_boundaries_overridden_by_user_confirmation": true,
+  "fingerprints": {
+    "video_sha256": "afbe934c9439ceacab91de95cf7cf9a10bb2ea3e3526403e30ffe30e8e23e202",
+    "raw_video_sha256": "d322edbc144790b08a07248f895e19ecd2c2b51a6b4c1a80ee2920fec803cf0e",
+    "cover_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+    "backup_cover_sha256": "5b2b48a6c77009d4a84653b79d37244fd300b5ddc3fd7cadb5cf10ce99b4447a"
+  },
+  "asset_preflight": {
+    "video": {
+      "width": 720,
+      "height": 1280,
+      "duration_seconds": 15.869002,
+      "size_bytes": 4273982
+    },
+    "cover": {
+      "width": 1080,
+      "height": 1440,
+      "preview_path": "/Users/baishangjituan/Documents/push/kuaishou-20260522-no-new-status-cover-25pct-preview.png",
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "note": "Main cover text AI员工别误判 is readable at 25 percent preview."
+    }
+  },
+  "duplicate_guard": {
+    "local_receipt": "no_kuaishou_receipt",
+    "local_receipt_status": "not_published",
+    "management_page_exact_searches": [
+      {
+        "query": "无新增不是失败",
+        "result_count": 0,
+        "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260522-no-new-status-dup-search-title.png"
+      },
+      {
+        "query": "别把无新增写成失败",
+        "result_count": 0,
+        "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260522-no-new-status-dup-search-body1.png"
+      },
+      {
+        "query": "证据齐了再改",
+        "result_count": 0,
+        "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260522-no-new-status-dup-search-body2.png"
+      }
+    ],
+    "result": "no_same_package_duplicate_found_before_upload"
+  },
+  "cdp": {
+    "cdp_base": "http://127.0.0.1:9223",
+    "target_id": "CABB7DA5F75B7CF6DCF178965FEFD3EF",
+    "old_kuaishou_target_id": "D6AE7E068AEEAF42CFF67599D752F6F2",
+    "publish_url": "https://cp.kuaishou.com/article/publish/video?tabType=1",
+    "management_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+    "chrome_restarted": false,
+    "note": "Existing Kuaishou tab rendered blank for publish URL, so a new CDP target was created on the same logged-in Chrome session without restart."
+  },
+  "status_label": "已发布",
+  "submitted_at": "2026-05-22T16:39:00+08:00",
+  "verified_at": "2026-05-22T16:45:34+08:00",
+  "published_at": "2026-05-22T16:39:00+08:00",
+  "published_at_raw": "2026-05-22 16:39",
+  "result_path": "/Users/baishangjituan/Documents/push/kuaishou_publish_result_20260522_no_new_status_not_failure.json",
+  "manager_verified_screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260522-no-new-status-manager-verified.png",
+  "manager_verification": {
+    "url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+    "title": "快手创作者服务平台",
+    "hasFullText": true,
+    "hasTitle": true,
+    "hasDescription": true,
+    "hasTerminalStatus": true,
+    "status": "已发布",
+    "rowText": "无新增不是失败 别把无新增写成失败。先核验状态、指标、对照，证据齐了再改。\n已发布\n2026-05-22 16:39",
+    "publishedAtRaw": "2026-05-22 16:39",
+    "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260522-no-new-status-manager-verified.png",
+    "coverThumbnailLooksLikePackageCover": true,
+    "coverThumbnailText": "AI员工别误判"
+  },
+  "feishu_notification": {
+    "sent": false,
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "idempotency_key": "ks-20260522-no-new-status",
+    "attempted_at": "2026-05-22T16:45:34+08:00",
+    "method": "lark-cli im +messages-send",
+    "attempts": [
+      {
+        "as": "bot",
+        "sent": false,
+        "error_code": 230002,
+        "error_message": "HTTP 400: Bot/User can NOT be out of the chat."
+      },
+      {
+        "as": "user",
+        "sent": false,
+        "error_type": "need_user_authorization",
+        "error_message": "need_user_authorization (user: )"
+      }
+    ]
+  }
+}

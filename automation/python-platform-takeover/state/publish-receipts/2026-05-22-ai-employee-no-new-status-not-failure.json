@@ -1,0 +1,878 @@
+{
+  "campaign_id": "2026-05-22-ai-employee-no-new-status-not-failure",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "status": "published",
+  "receipts": {
+    "baijiahao": {
+      "actor": "Codex",
+      "actor_session_id": "Chrome CDP 127.0.0.1:9223",
+      "platform_id": "baijiahao",
+      "status": "published",
+      "stage": "manager_verified",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "title": "为什么“无新增”不能直接写成内容失败？",
+      "description": "因为无新增只说明当前没有新增执行记录，不等于内容失败。更稳妥的做法是先补作品状态、指标窗口和同账号对照，三格证据齐了再判断。",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/baijiahao.md",
+      "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/final-verify.json",
+      "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-22-ai-employee-no-new-status-not-failure.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "video_sha256": "afbe934c9439ceacab91de95cf7cf9a10bb2ea3e3526403e30ffe30e8e23e202",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+      "required_cover_sha256": "5b2b48a6c77009d4a84653b79d37244fd300b5ddc3fd7cadb5cf10ce99b4447a",
+      "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "backup_cover_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+      "cover_mode": "custom_horizontal_4x3_uploaded_via_cdp_file_input",
+      "verified_by": "Baijiahao 作品管理 exact-title row via Chrome CDP after 全部 tab refresh",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.baijiahao.lock.json",
+      "updated_at": "2026-05-22T09:37:30.920Z",
+      "duplicate_guard_path": "/Users/baishangjituan/Documents/push/baijiahao_duplicate_guard_20260522_no_new_status.json",
+      "blocked_reason": "CDP/OpenCLI were prioritized: CDP port 9223 is reachable but is on the Baijiahao login page; OpenCLI daemon is running but the browser extension is not connected, and the prior BrowserBridge editor DOM was empty with no upload input.",
+      "upload_started": true,
+      "video_uploaded": true,
+      "cover_uploaded": true,
+      "publish_click_happened": true,
+      "result_path": "/Users/baishangjituan/Documents/push/baijiahao_cdp_manual_submit_20260522_no_new_status.json",
+      "cdp_state_path": "/Users/baishangjituan/Documents/push/baijiahao_cdp_login_state_20260522_no_new_status.json",
+      "cdp_href": "https://baijiahao.baidu.com/builder/theme/bjh/login",
+      "cdp_title": "百家号——从这里影响世界",
+      "opencli_extension_connected": false,
+      "screenshot_after_video_upload": "/Users/baishangjituan/Documents/push/baijiahao-20260522-no-new-status-after-video-upload.png",
+      "title_fill": {
+        "ok": true,
+        "tag": "DIV",
+        "value": "2026-05-22-ai-employee-no-new-status-not-failure-publish",
+        "candidateCount": 1
+      },
+      "ai_statement": {
+        "ok": true,
+        "value": "含AI生成内容"
+      },
+      "cover_input_mark": [
+        {
+          "idx": 0,
+          "accept": "image/*",
+          "cls": "",
+          "marker": "1"
+        },
+        {
+          "idx": 1,
+          "accept": "image/*",
+          "cls": "",
+          "marker": "1"
+        }
+      ],
+      "screenshot_after_cover": "/Users/baishangjituan/Documents/push/baijiahao-20260522-no-new-status-after-cover.png",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+      "cover_sha256": "5b2b48a6c77009d4a84653b79d37244fd300b5ddc3fd7cadb5cf10ce99b4447a",
+      "cover_readability_passed": true,
+      "note": "2026-05-22T17:37:27+08:00: Baijiahao published verified in manager exact-title row; required horizontal 4:3 cover uploaded before submit.",
+      "submitted_at": "2026-05-22T09:27:04.530Z",
+      "management_url": "https://baijiahao.baidu.com/builder/rc/content?currentPage=1&pageSize=10&search=&type=&collection=&startDate=&endDate=&clearBeforeFetch=false",
+      "published_at": "2026-05-22T17:27:48+08:00",
+      "recorded_at": "2026-05-22T17:37:27+08:00",
+      "cover_thumbnail_present": true,
+      "manager_exact_title_present": true,
+      "manager_status_text": "已发布音频",
+      "manager_context": "作品管理 全部 共26篇 为什么“无新增”不能直接写成内容失败？ 2026-05-22 17:27:48 已发布音频 0 0 0 0 0 0 内容加热 加入合集 查看评论 更多",
+      "feishu_notification": {
+        "ok": false,
+        "cli": "/Users/baishangjituan/Documents/New project/node_modules/@larksuite/cli/bin/lark-cli",
+        "error": "Command failed: /Users/baishangjituan/Documents/New project/node_modules/@larksuite/cli/bin/lark-cli im +messages-send --as bot --chat-id oc_45f4f2c2f0a783f636969cd821179f40 --text 平台：百家号\n标题：为什么“无新增”不能直接写成内容失败？\n状态：published / 已发布音频\n核验时间：2026-05-22T17:37:27+08:00\n管理页：https://baijiahao.baidu.com/builder/rc/content?currentPage=1&pageSize=10&search=&type=&collection=&startDate=&endDate=&clearBeforeFetch=false\n封面：/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png\n{\n  \"ok\": false,\n  \"identity\": \"bot\",\n  \"error\": {\n    \"type\": \"api_error\",\n    \"code\": 230002,\n    \"message\": \"HTTP 400: Bot/User can NOT be out of the chat.\",\n    \"detail\": null\n  },\n  \"_notice\": {\n    \"update\": {\n      \"current\": \"1.0.19\",\n      \"latest\": \"1.0.38\",\n      \"message\": \"lark-cli 1.0.38 available, current 1.0.19\"\n    }\n  }\n}\n",
+        "sent_at": "2026-05-22T17:37:27+08:00"
+      }
+    },
+    "zhihu": {
+      "actor": "Codex",
+      "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
+      "platform_id": "zhihu",
+      "status": "published",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "title": "为什么内容复盘里不能把“无新增”直接判断为失败？",
+      "body": "因为无新增、没指标、未核验都只是状态信息，不是失败证据。真正稳妥的复盘流程，是先补作品行状态、指标窗口和同账号同格式对照，再决定是否修改内容包装。",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/zhihu.md",
+      "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-22-ai-employee-no-new-status-not-failure-zhihu.md",
+      "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/final-verify.json",
+      "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-22-ai-employee-no-new-status-not-failure.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "uploaded_video_path": "/tmp/zhihu-20260522-no-new-status-publish.mp4",
+      "video_sha256": "afbe934c9439ceacab91de95cf7cf9a10bb2ea3e3526403e30ffe30e8e23e202",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "uploaded_cover_path": "/tmp/zhihu-20260522-no-new-status-cover-vertical-3x4.png",
+      "required_cover_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+      "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+      "backup_cover_sha256": "5b2b48a6c77009d4a84653b79d37244fd300b5ddc3fd7cadb5cf10ce99b4447a",
+      "cover_mode": "required_vertical_3x4_local_file_input_confirmed_before_resume_submit",
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "verified_by": "cdp_playwright_resume_profile_and_public_readback",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.zhihu.lock.json",
+      "started_at": "2026-05-22T08:30:17.777Z",
+      "notes": [
+        "Chrome DevTools/CDP attached to existing logged-in Chrome on 127.0.0.1:9223.",
+        "No Chrome restart was performed.",
+        "A new upload tab is used; nonmatching old Zhihu drafts are ignored before upload.",
+        "Zhihu-only thread; no Feishu notification will be sent unless explicitly requested.",
+        "2026-05-22T08:33:26.726Z: Resuming after the initial script uploaded the correct video and cover but stopped before submit while selecting the Zhihu AI tag.",
+        "2026-05-22T08:33:58.633Z: Resumed current uploaded Zhihu draft via CDP and submitted after exact asset/text readback.",
+        "2026-05-22T08:33:58.633Z: No Feishu notification was sent from this Zhihu-only thread."
+      ],
+      "resumed_at": "2026-05-22T08:33:26.726Z",
+      "result_path": "/Users/baishangjituan/Documents/push/zhihu_20260522_no_new_status_publish_result.json",
+      "submitted_at": "2026-05-22T08:33:39.593Z",
+      "published_at": "发布于2026-05-22 16:33",
+      "recorded_at": "2026-05-22T08:33:58.633Z",
+      "current_url": "https://www.zhihu.com/pin/2041194410700952883",
+      "public_url": "https://www.zhihu.com/pin/2041194410700952883",
+      "share_link": "https://www.zhihu.com/pin/2041194410700952883?page=video_pin&scene=share",
+      "external_id": "2041194410700952883",
+      "verified_fields": {
+        "account": "智能大陈",
+        "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+        "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/zhihu.md",
+        "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-22-ai-employee-no-new-status-not-failure-zhihu.md",
+        "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/final-verify.json",
+        "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-22-ai-employee-no-new-status-not-failure.yaml",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+        "uploaded_video_path": "/tmp/zhihu-20260522-no-new-status-publish.mp4",
+        "video_sha256": "afbe934c9439ceacab91de95cf7cf9a10bb2ea3e3526403e30ffe30e8e23e202",
+        "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+        "uploaded_cover_path": "/tmp/zhihu-20260522-no-new-status-cover-vertical-3x4.png",
+        "required_cover_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+        "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+        "backup_cover_sha256": "5b2b48a6c77009d4a84653b79d37244fd300b5ddc3fd7cadb5cf10ce99b4447a",
+        "cover_mode": "required_vertical_3x4_local_file_input_confirmed",
+        "video_tag": "含 AI 生成内容",
+        "original_video_checked": true,
+        "duplicate_guard": {
+          "profile": {
+            "hasExpectedTitle": false,
+            "hasExpectedBody": false,
+            "exactLink": null
+          },
+          "posts": {
+            "hasExpectedTitle": false,
+            "hasExpectedBody": false,
+            "exactLink": null
+          },
+          "manage": {
+            "hasExpectedTitle": false,
+            "hasExpectedBody": false,
+            "exactLink": null
+          }
+        },
+        "pre_submit_title": "为什么内容复盘里不能把“无新增”直接判断为失败？",
+        "pre_submit_body": "因为无新增、没指标、未核验都只是状态信息，不是失败证据。真正稳妥的复盘流程，是先补作品行状态、指标窗口和同账号同格式对照，再决定是否修改内容包装。",
+        "pre_submit_video_check": {
+          "hasUploadedVideo": true,
+          "hasRequiredVideoName": true,
+          "localFileInputValue": ""
+        },
+        "pre_submit_cover_check": {
+          "localFileInputValue": "C:\\fakepath\\zhihu-20260522-no-new-status-cover-vertical-3x4.png",
+          "hasRequiredCoverFileName": true
+        },
+        "profile_context": {
+          "hasExpectedTitle": true,
+          "hasExpectedBody": true,
+          "url": "https://www.zhihu.com/people/vkvtss-81/zvideos"
+        },
+        "public_context": {
+          "hasExpectedTitle": true,
+          "hasExpectedBody": true,
+          "hasAiTag": true,
+          "url": "https://www.zhihu.com/pin/2041194410700952883"
+        },
+        "screenshots": {
+          "duplicateManage": "/Users/baishangjituan/Documents/push/zhihu-20260522-no-new-status-resume-duplicate-manage.png",
+          "duplicateProfile": "/Users/baishangjituan/Documents/push/zhihu-20260522-no-new-status-resume-duplicate-profile.png",
+          "duplicatePosts": "/Users/baishangjituan/Documents/push/zhihu-20260522-no-new-status-resume-duplicate-profile-posts.png",
+          "preSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260522-no-new-status-resume-pre-submit.png",
+          "afterSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260522-no-new-status-resume-after-submit.png",
+          "profile": "/Users/baishangjituan/Documents/push/zhihu-20260522-no-new-status-profile-verified.png",
+          "public": "/Users/baishangjituan/Documents/push/zhihu-20260522-no-new-status-public-verified.png"
+        }
+      }
+    },
+    "weibo": {
+      "campaign_id": "2026-05-22-ai-employee-no-new-status-not-failure",
+      "platform_id": "weibo",
+      "status": "published",
+      "account": "智者大陈",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "title": "无新增，就能直接判内容失败吗？",
+      "body": "不能。无新增只是状态，不是失败结论。后台没核验、指标没回来、同账号对照没补齐时，先别改标题封面，先把三格证据补齐。#AI员工 #内容运营",
+      "public_url": "https://weibo.com/2326772703/R0AJV4vVt",
+      "mobile_url": "https://m.weibo.cn/detail/5301412311076039",
+      "mblogid": "R0AJV4vVt",
+      "post_id": "5301412311076039",
+      "author": "智者大陈",
+      "source": "微博视频号",
+      "published_at": "Fri May 22 16:30:53 +0800 2026",
+      "submitted_at": "2026-05-22T16:30:25.504+08:00",
+      "recorded_at": "2026-05-22T16:31:02.290+08:00",
+      "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/weibo.md",
+      "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/weibo/2026-05-22-ai-employee-no-new-status-not-failure-weibo.md",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platform-upload-map.md",
+      "automation_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-22-ai-employee-no-new-status-not-failure.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "video_sha256": "afbe934c9439ceacab91de95cf7cf9a10bb2ea3e3526403e30ffe30e8e23e202",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "required_cover_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+      "first_frame_path": "/Users/baishangjituan/Documents/push/weibo-publish-20260522-no-new-status/publish-first-frame.png",
+      "first_frame_sha256": "96f38c0dad4328cfac18fe1a61553c38bbfb65932ff388d3fba0729dbbb1cbee",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "cover_mode": "weibo_quick_composer_no_custom_cover_control; used_publish_video_first_frame_per_package_rule; first_frame_matches_required_vertical_cover_design",
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "ai_declaration": "含AI生成内容",
+      "duplicate_guard": {
+        "local_receipts": "passed_no_existing_weibo_receipt_before_publish",
+        "profile_before_publish": "passed_profile_missing_current_marker_before_publish",
+        "details": {
+          "searches": [
+            {
+              "q": "无新增只是状态",
+              "status": 200,
+              "total": 0,
+              "matched": false,
+              "matched_mblogid": null
+            },
+            {
+              "q": "三格证据补齐",
+              "status": 200,
+              "total": "1",
+              "matched": false,
+              "matched_mblogid": null
+            },
+            {
+              "q": "无新增，就能直接判内容失败吗？",
+              "status": 200,
+              "total": 0,
+              "matched": false,
+              "matched_mblogid": null
+            }
+          ],
+          "mymblog": {
+            "status": 200,
+            "checked_items": 20,
+            "matched": false
+          }
+        }
+      },
+      "verification": {
+        "status": "verified",
+        "verified_by": "cdp_attached_playwright_weibo_api_and_public_readback",
+        "matched_by": "mymblog",
+        "checked_after_ms": 30133,
+        "text_exact_match": true,
+        "public_page_readback": {
+          "url": "https://weibo.com/2326772703/R0AJV4vVt",
+          "title": "微博正文 - 微博",
+          "text_contains_marker": true,
+          "text_contains_secondary_marker": true,
+          "text_contains_duration": true,
+          "body_excerpt": "2\n无障碍\n首页\n全部关注\n最新微博\n好友圈\n自定义分组\n管理\n悄悄关注\n返回\n智者大陈\n公开\n智者大陈\n26-5-22 16:30\n发布于 新加坡\n来自 微博视频号\n6\n阅读\n推广\n不能。无新增只是状态，不是失败结论。后台没核验、指标没回来、同账号对照没补齐时，先别改标题封面，先把三格证据补齐。#AI员工 #内容运营 智者大陈的微博视频 ​​​\n播放视频\n博主声明：该内容使用AI生成技术\n00:15\n转发\n评论\n赞\n分享这条博文\n同时转发\n评论\n还没有人评论哦~快来抢沙发！\n智者大陈\n7\n关注\n0\n粉丝\n38\n微博\n专注于AI员工服务和垂直智能体应用\n男新加坡\n查看个人主页\n微博热搜\n点击刷新\n我的\n热搜\n1\n南枝李思潼跳街舞\n62529\n2\n曾沛慈 全部看浪姐不准看歌手\n848827\n3\n韩安冉新男友被赶出来了\n426827\n小米YU7GT首发评测\n4\n洛克王国\n54845\n5\n庾澄庆伊能静歌手浪姐封面\n236623\n6\n周也的粉丝现状\n426828\n7\n时团上六休一\n236629\n8\n女子捡到金项链发现异常立马扔掉\n11:48登顶\n9\n好久没见到这么锤的瓜了\n426814\n10\n伊能静自曝48岁生女肚子被打开2次\n296633\n查看完整热搜榜单\n帮助中心\n微博客服 4000-960-960\n自助服务中心\n常见问题\n合作&服务\n微博营销\n合作热线 4000-980-980\n开放平台\n更多\n举报中心\n违规投诉 010-60618076\n处理大厅\n舞弊举报\n更多\n关于微博\nAbout Weibo\n客户端下载\n微博招聘\n网站备案信息\n微博隐私安全中心\nCopyright © 2009-2026\n营业执照"
+        },
+        "post_command": {
+          "author": "智者大陈",
+          "created_at": "Fri May 22 16:30:53 +0800 2026",
+          "id": "5301412311076039",
+          "mblogid": "R0AJV4vVt",
+          "source": "微博视频号",
+          "text_raw": "不能。无新增只是状态，不是失败结论。后台没核验、指标没回来、同账号对照没补齐时，先别改标题封面，先把三格证据补齐。#AI员工 #内容运营 http://t.cn/AX642z9P ​​​",
+          "url": "https://weibo.com/2326772703/R0AJV4vVt"
+        }
+      },
+      "cover_inspection": {
+        "cover_mode": "weibo_quick_composer_no_custom_cover_control; used_publish_video_first_frame_per_package_rule; first_frame_matches_required_vertical_cover_design",
+        "custom_cover_control_found": false,
+        "inspected_inputs": [
+          {
+            "index": 0,
+            "accept": "image/*, .jpg, .jpeg, .bmp, .gif, .png, .heif, .heic, video/mp4,video/x-m4v,video/*,.mkv,.flv",
+            "className": "_file_hqmwy_20",
+            "name": "",
+            "value": ""
+          }
+        ],
+        "inspected_text_contains_cover": true,
+        "note": "The package-required 3:4 cover file was used as the target for any custom cover control, but the current Weibo quick composer exposed no image-only cover file input or cover editor; per package rule, the publish video first frame is the operational fallback."
+      },
+      "actor": "Codex CDP-attached Playwright publisher",
+      "actor_session_id": "current-thread-cdp-127.0.0.1:9224",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.weibo.lock.json",
+      "result_path": "/Users/baishangjituan/Documents/push/weibo_publish_result_20260522_no_new_status_not_failure.json",
+      "notes": [
+        "This thread is restricted to Weibo publishing; no other platform publishing was performed in this run.",
+        "Chrome DevTools/CDP on 127.0.0.1:9224 was used for DOM input, file upload, submit, and API/public readback; GUI screenshot routing was not used as the primary path.",
+        "The package-required cover file is cover-vertical-3x4.png. If Weibo quick composer exposed no custom cover control, the publish video first frame was used according to the package rule and recorded in cover_mode.",
+        "AI content declaration was selected and read back before send."
+      ],
+      "feishu_notification": {
+        "sent": false,
+        "attempted_at": "2026-05-22T16:32:04.641+08:00",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "method": "lark-cli im +messages-send",
+        "bot_attempt": {
+          "ok": false,
+          "code": 230002,
+          "message": "HTTP 400: Bot/User can NOT be out of the chat."
+        },
+        "user_attempt": {
+          "ok": false,
+          "message": "need_user_authorization"
+        },
+        "idempotency_keys": [
+          "weibo-20260522-no-new-status-not-failure",
+          "weibo-20260522-no-new-status-not-failure-user"
+        ]
+      }
+    },
+    "bilibili": {
+      "platform": "bilibili",
+      "platform_id": "bilibili",
+      "campaign_id": "2026-05-22-ai-employee-no-new-status-not-failure",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "status": "submitted_verified_public_api_and_manager",
+      "verified_state": "public_api_state_0; manager_row_showed_转码完成_审核中_after_submit",
+      "submitted_at": "2026-05-22T08:33:52.412Z",
+      "submitted_at_asia_shanghai": "2026-05-22T16:33:52+08:00",
+      "actor": "Codex raw CDP publisher",
+      "actor_session_id": "chrome-cdp-127.0.0.1:9223-existing-upload-target",
+      "cdp": {
+        "priority_route_used": true,
+        "endpoint_used": "http://127.0.0.1:9223",
+        "browser_cdp_url_env": "",
+        "raw_cdp_used": true,
+        "reused_upload_page": true,
+        "chrome_restarted": false,
+        "opencli_fallback_used": false,
+        "duplicate_check": "Existing Bilibili manager target inspected before upload; exact new title was not present."
+      },
+      "title": "别把无新增写成失败：AI员工先补三格证据，再决定内容要不要改",
+      "description": "这条讲内容复盘里最容易误判的一步：看到“今日无新增”不要直接写失败。先核验作品行状态、指标窗口和同账号同格式对照，三格齐了，再决定是否改标题、封面或口播结构。",
+      "public_url": "https://www.bilibili.com/video/BV1YBGt6PEvo/",
+      "bvid": "BV1YBGt6PEvo",
+      "aid": 116617287572064,
+      "cid": 38524947103,
+      "category": "人工智能",
+      "tid": 207,
+      "human_type2": 1011,
+      "tags": [
+        "AI员工",
+        "内容运营",
+        "数据复盘",
+        "短视频运营"
+      ],
+      "ai_declaration": "作者声明：该视频使用人工智能合成技术",
+      "platform_ai_declaration": "含AI生成内容",
+      "creation_statement": {
+        "id": 1
+      },
+      "video": {
+        "path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+        "sha256": "afbe934c9439ceacab91de95cf7cf9a10bb2ea3e3526403e30ffe30e8e23e202"
+      },
+      "cover": {
+        "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+        "required_cover_sha256": "5b2b48a6c77009d4a84653b79d37244fd300b5ddc3fd7cadb5cf10ce99b4447a",
+        "required_cover_dimensions": "1440x1080",
+        "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+        "backup_cover_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+        "package_required_cover_used": true,
+        "cover_preview_25pct_path": "/Users/baishangjituan/Documents/push/bilibili-20260522-no-new-status-cover-25pct.png",
+        "cover_preview_readability_passed": true,
+        "upload_file_input_value_expected": "cover-horizontal-4x3.png",
+        "cover_mode": "package_required_horizontal_4x3_uploaded_via_cdp_dom_set_file_input_files",
+        "platform_cover_url": "https://archive.biliimg.com/bfs/archive/653680ed6be6a8cc17324d0aee59221866971d71.jpg",
+        "platform_cover43_url": "https://archive.biliimg.com/bfs/archive/b9a1746414802ebbeb0d3664a5d9c7baaa89a791.jpg",
+        "public_api_pic": "http://i2.hdslb.com/bfs/archive/653680ed6be6a8cc17324d0aee59221866971d71.jpg",
+        "downloaded_platform_cover_path": "/Users/baishangjituan/Documents/push/bilibili-no-new-status-20260522-platform-cover.jpg",
+        "downloaded_platform_cover_sha256": "61d0277b35c1bff9205e77ca8c13fa96f389e462e88682d6687e8a88a170fd21",
+        "downloaded_platform_cover_dimensions": "1440x810",
+        "correct_package_cover_used": true
+      },
+      "verification": {
+        "submit_api": "POST /x/vu/web/add/v3 returned code=0",
+        "public_api": "GET /x/web-interface/view returned code=0, state=0, exact title and description matched",
+        "manager_page": "managerAfter.match.matched=true with exact title row; row showed 转码完成 and 审核中",
+        "tags_request_body": "AI员工,内容运营,数据复盘,短视频运营",
+        "verified_by": "add_v3_code0_public_api_code0_and_bilibili_manager_exact_title_row"
+      },
+      "paths": {
+        "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/bilibili.md",
+        "package_config": "/Users/baishangjituan/Documents/push/bilibili_package_no_new_status_20260522.json",
+        "final_verify": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/final-verify.json",
+        "publish_result": "/Users/baishangjituan/Documents/push/bilibili_publish_result_no_new_status_20260522.json",
+        "receipt": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-22-ai-employee-no-new-status-not-failure.json",
+        "lock": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.bilibili.lock.json",
+        "pre_submit_screenshot": "/Users/baishangjituan/Documents/push/bilibili-no-new-status-20260522-pre-submit.png",
+        "manager_screenshot": "/Users/baishangjituan/Documents/push/bilibili-manager-verified-no-new-status-20260522.png"
+      },
+      "notes": [
+        "Actual publish was handled through Chrome DevTools Protocol on the logged-in Chrome session.",
+        "No Chrome restart was performed.",
+        "The exact Bilibili package cover-horizontal-4x3.png was used; Bilibili exposed a 16:9 derivative public cover and a 4:3 archive cover URL in the submit payload."
+      ],
+      "feishu_notification": {
+        "attempted_at": "2026-05-22T08:34:36.765Z",
+        "attempted_at_asia_shanghai": "2026-05-22T16:34:36+08:00",
+        "status": "failed_notification_only_publish_verified",
+        "bot_attempt": {
+          "ok": false,
+          "code": 230002,
+          "message": "HTTP 400: Bot/User can NOT be out of the chat.",
+          "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40"
+        },
+        "user_attempt": {
+          "ok": false,
+          "error": "need_user_authorization (user: )"
+        },
+        "note": "Bilibili publish remains verified; only Feishu notification delivery failed due chat membership/user authorization."
+      }
+    },
+    "douyin": {
+      "actor": "Codex CDP publisher",
+      "actor_session_id": "chrome-cdp-127.0.0.1:9223-current-logged-in-session",
+      "platform_id": "douyin",
+      "campaign_id": "2026-05-22-ai-employee-no-new-status-not-failure",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "content_type": "video",
+      "status": "published",
+      "verified_state": "published_work_list_status_1_exact_match",
+      "title": "无新增别判失败",
+      "description": "小马看到“今日无新增”就想盖失败章，大陈直接拦住：先别判失败。状态、指标、对照三格证据齐了，再决定改不改。#AI员工 #内容复盘 #内容运营",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/douyin.md",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platform-upload-map.md",
+      "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/final-verify.json",
+      "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-22-ai-employee-no-new-status-not-failure.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "uploaded_video_path": "/tmp/douyin-0522-no-new-status.mp4",
+      "video_sha256": "afbe934c9439ceacab91de95cf7cf9a10bb2ea3e3526403e30ffe30e8e23e202",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "required_cover_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "cover_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+      "horizontal_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+      "horizontal_cover_sha256": "5b2b48a6c77009d4a84653b79d37244fd300b5ddc3fd7cadb5cf10ce99b4447a",
+      "uploaded_cover_path": "/tmp/douyin-0522-no-new-status-cover-3x4.png",
+      "uploaded_horizontal_cover_path": "/tmp/douyin-0522-no-new-status-cover-4x3.png",
+      "cover_mode": "package_required_vertical_3x4_and_horizontal_4x3_uploaded_via_cdp_dom_set_file_input_files",
+      "correct_package_cover_used": true,
+      "cover_thumbnail_present": true,
+      "cover_effect_check_passed": true,
+      "cover_quality_check_passed": true,
+      "pre_submit_readback": {
+        "titleValue": "无新增别判失败",
+        "descLeadMatched": true,
+        "videoReady": true,
+        "videoCheckPassed": true,
+        "hasCoverVertical": true,
+        "hasCoverHorizontal": true,
+        "hasCoverEffectPassed": true,
+        "hasCoverCheckPassed": true,
+        "hasCoverMissingWarning": false,
+        "publishButtonEnabled": true
+      },
+      "verified_by": "Chrome DevTools Protocol publish click plus Douyin work_list exact title and description lead match",
+      "manager_status": "published",
+      "aweme_id": "7642631390067969318",
+      "item_id": 7642631390067969000,
+      "share_url": "https://www.iesdouyin.com/share/video/7642631390067969318/",
+      "raw_share_url": "https://www.iesdouyin.com/share/video/7642631390067969318/?region=&mid=7642631345809656619&u_code=143eldg9c&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=f.DmL9RpmVlrAXx3SeO6xe1V_Y_rQNERJssUphFS7kM-&share_version=380000&ts=1779438843&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D",
+      "status_value": 102,
+      "work_list_status_param": "1",
+      "cover_uri": "tos-cn-i-dy/90334a3d895d43009dd3c5636ba63d23",
+      "horizontal_cover_uri": "tos-cn-i-dy/71f049350c0e47ecade59e1974f74759",
+      "submitted_at": "2026-05-22T08:34:59.737Z",
+      "published_at": "2026-05-22T08:34:59.737Z",
+      "verified_at": "2026-05-22T08:34:59.737Z",
+      "verified_at_asia_shanghai": "2026/5/22 16:34:59",
+      "screenshots": {
+        "pre_publish": "/tmp/douyin-0522-prepublish.png",
+        "vertical_cover_editor": "/tmp/douyin-0522-cover-editor-after-vertical.png",
+        "horizontal_cover_editor": "/tmp/douyin-0522-cover-editor-after-horizontal.png"
+      },
+      "result_path": "/Users/baishangjituan/Documents/push/douyin_publish_result_20260522_no_new_status_not_failure.json",
+      "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-22-ai-employee-no-new-status-not-failure.json",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.douyin.lock.json",
+      "browser_route": {
+        "cdp_checked_first": true,
+        "cdp_available": true,
+        "cdp_base": "http://127.0.0.1:9223",
+        "fallback_used": null,
+        "chrome_restarted": false,
+        "note": "User required browser CDP/OpenCLI priority; CDP was available and used. OpenCLI was not needed."
+      },
+      "notes": [
+        "Local receipt and Douyin work_list duplicate guard found no existing exact-title Douyin item for this campaign before submit.",
+        "Video uploaded through CDP DOM.setFileInputFiles to the Douyin video file input.",
+        "Required vertical 3:4 cover file cover-vertical-3x4.png and horizontal 4:3 cover file cover-horizontal-4x3.png were uploaded from the content package through image file inputs.",
+        "Pre-submit readback showed video ready, video check passed, vertical and horizontal cover present, cover effect check passed, cover quality check passed, and publish button enabled.",
+        "After clicking 发布, Douyin redirected to作品管理 with 发布成功, and work_list status=1 exact-title/lead verification matched aweme_id 7642631390067969318."
+      ],
+      "feishu_notification": {
+        "status": "failed",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "sent_after_verified_publish": true,
+        "attempted_at": "2026-05-22T08:35:49.624Z",
+        "attempted_at_asia_shanghai": "2026/5/22 16:35:49",
+        "idempotency_key": "dy-20260522-no-new-status-not-failure",
+        "bot_error": {
+          "code": 230002,
+          "message": "HTTP 400: Bot/User can NOT be out of the chat."
+        },
+        "user_error": "need_user_authorization",
+        "note": "Douyin publish was verified before notification attempts; notification failed because the configured Feishu chat currently cannot be reached by bot/user identity."
+      }
+    },
+    "toutiao": {
+      "actor": "Codex CDP publisher",
+      "actor_session_id": "chrome-cdp-127.0.0.1:9223-current-logged-in-session",
+      "platform_id": "toutiao",
+      "campaign_id": "2026-05-22-ai-employee-no-new-status-not-failure",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "content_type": "video",
+      "status": "under_review",
+      "verified_state": "审核中",
+      "title": "无新增时，AI员工能直接判断内容失败吗？",
+      "description": "不能。无新增只是状态分支，不是失败结论。应该先核验作品行状态、指标窗口和同账号同格式对照，证据齐了再决定是否修改内容。",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/toutiao.md",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platform-upload-map.md",
+      "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/final-verify.json",
+      "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-22-ai-employee-no-new-status-not-failure.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "video_sha256": "afbe934c9439ceacab91de95cf7cf9a10bb2ea3e3526403e30ffe30e8e23e202",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "required_cover_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+      "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+      "backup_cover_sha256": "5b2b48a6c77009d4a84653b79d37244fd300b5ddc3fd7cadb5cf10ce99b4447a",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "cover_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+      "cover_mode": "package_required_vertical_3x4_uploaded_via_cdp_dom_set_file_input_files",
+      "correct_package_cover_used": true,
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "ai_declaration_checked": true,
+      "generate_article_checked": false,
+      "pre_submit_readback": {
+        "titleValue": "无新增时，AI员工能直接判断内容失败吗？",
+        "wordLimit": "19/30",
+        "videoOk": true,
+        "coverText": "封面\n编辑\n替换\n清晰美观的封面有利于推荐，建议分辨率不低于 618*1000（大小不超过 20M）",
+        "checkboxes": [
+          {
+            "text": "生成图文",
+            "checked": false,
+            "cls": "byte-checkbox"
+          },
+          {
+            "text": "取自站外",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          },
+          {
+            "text": "引用站内",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          },
+          {
+            "text": "自行拍摄",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          },
+          {
+            "text": "AI生成",
+            "checked": true,
+            "cls": "byte-checkbox checkbot-item checkbox-with-tip byte-checkbox-checked"
+          },
+          {
+            "text": "虚构演绎，故事经历",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item checkbox-with-tip"
+          },
+          {
+            "text": "投资观点，仅供参考",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          },
+          {
+            "text": "健康医疗分享，仅供参考",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          }
+        ]
+      },
+      "verified_by": "Chrome DevTools Protocol DOM readback and Toutiao work manager exact-title row",
+      "manager_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
+      "manager_status": "under_review",
+      "manager_row_text": "头条号\n消息\n13\n在头条创作的第 43 天\n百商集团\n主页\n创作\n文章\n视频\n微头条\n音频\n管理\n作品管理\n评论管理\n草稿箱\n数据\n收益数据\n作品数据\n粉丝数据\n进阶创作\n付费专栏\n提现\n成长指南\n首发激励\n创作权益\n头条认证\n创作灵感\n创作训练营\n工具\n功能实验室\n直播工具\n创作保护\n图片素材\n设置\n全部文章视频微头条小视频音频合集草稿箱\n状态：\n全部\n~\n共 29 条内容\n00:15\n无新增时，AI员工能直接判断内容失败吗？\n05-22 16:37\n审核中\n删除作品\n00:15\n指标没回来时，AI员工该不该马上改内容？\n展现 145\n播放 4\n点赞 0\n评论 0\n05-20 16:55\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n内容复盘时，证据没齐能直接下结论吗？\n展现 446\n播放 0\n点赞 0\n评论 0\n05-17 12:55\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n一条暂时没指标，AI员工能直接判内容差吗？\n展现 604\n播放 0\n点赞 0\n评论 0\n05-16 11:24\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n审核中时，AI员工该不该改标题重发？\n展现 670\n播放 0\n点赞 0\n评论 0\n05-15 11:54\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n缺内容级指标时，AI员工该不该先判内容差？\n展现 780\n播放 37\n点赞 0\n评论 0\n05-14 13:23\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n审核中或缺链接时，AI员工该不该再发布一次？\n展现 783\n播放 0\n点赞 0\n评论 0\n05-13 16:46\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n平台状态不一致时，AI员工该怎么判断？\n展现 855\n播放 0\n点赞 0\n评论 0\n05-12 17:48\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n视频发完就走？AI员工必须先把回执交清楚\n展现 1,290\n播放 0\n点赞 0\n评论 ",
+      "submitted_at": "2026-05-22T08:37:12.317Z",
+      "verified_at": "2026-05-22T08:37:12.317Z",
+      "verified_at_asia_shanghai": "2026年5月22日 16:37:12",
+      "current_url_after_submit": "https://mp.toutiao.com/profile_v4/xigua/small-video",
+      "screenshots": {
+        "cover_applied": "/Users/baishangjituan/Documents/push/toutiao-cdp-cover-applied-20260522-no-new-status.png",
+        "pre_submit": "/Users/baishangjituan/Documents/push/toutiao-cdp-pre-submit-20260522-no-new-status.png",
+        "after_publish": "/Users/baishangjituan/Documents/push/toutiao-cdp-after-publish-click-20260522-no-new-status.png",
+        "manager": "/Users/baishangjituan/Documents/push/toutiao-cdp-manager-verified-20260522-no-new-status.png"
+      },
+      "result_path": "/Users/baishangjituan/Documents/push/toutiao_publish_result_20260522_no_new_status.json",
+      "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-22-ai-employee-no-new-status-not-failure.json",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.toutiao.lock.json",
+      "browser_route": {
+        "cdp_checked_first": true,
+        "cdp_available": true,
+        "cdp_base": "http://127.0.0.1:9223",
+        "fallback_used": null,
+        "chrome_restarted": false,
+        "note": "User explicitly required CDP/opencli priority; video and cover were injected through CDP DOM file inputs. GUI screenshots are evidence only."
+      },
+      "notes": [
+        "Local receipt and Toutiao manager duplicate guard found no existing exact-title Toutiao item for this campaign before submit.",
+        "Video uploaded through CDP DOM.setFileInputFiles to the Toutiao video file input.",
+        "Required vertical 3:4 cover file cover-vertical-3x4.png was uploaded through the image-only local cover input using CDP DOM.setFileInputFiles.",
+        "Pre-submit readback showed exact title, successful video upload, cover area as 编辑/替换, AI生成 checked, and 生成图文 unchecked.",
+        "After clicking 发布, Toutiao redirected to作品管理 and manager exact-title row showed 审核中.",
+        "Feishu notification was attempted after verification but failed because the configured chat/user identity is unreachable."
+      ],
+      "feishu_notification": {
+        "status": "failed",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "sent_after_verified_publish": true,
+        "attempted_at": "2026-05-22T08:39:13.563Z",
+        "attempted_at_asia_shanghai": "2026年5月22日 16:39:13",
+        "idempotency_key": "tt-20260522-no-new-status",
+        "bot_error": "Command failed: lark-cli im +messages-send --as bot --chat-id oc_45f4f2c2f0a783f636969cd821179f40 --text 平台：头条号\ncampaign_id：2026-05-22-ai-employee-no-new-status-not-failure\n标题：无新增时，AI员工能直接判断内容失败吗？\n状态：under_review\n核验时间：2026年5月22日 16:37:12\n管理页：https://mp.toutiao.com/profile_v4/manage/content/all\n视频：/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4\n封面：/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png\n结果：/Users/baishangjituan/Documents/push/toutiao_publish_result_20260522_no_new_status.json\n{\n  \"ok\": false,\n  \"identity\": \"bot\",\n  \"error\": {\n    \"type\": \"api_error\",\n    \"code\": 230002,\n    \"message\": \"HTTP 400: Bot/User can NOT be out of the chat.\",\n    \"detail\": null\n  },\n  \"_notice\": {\n    \"update\": {\n      \"current\": \"1.0.19\",\n      \"latest\": \"1.0.38\",\n      \"message\": \"lark-cli 1.0.38 available, current 1.0.19\"\n    }\n  }\n}\n",
+        "bot_stdout": "",
+        "bot_stderr": "{\n  \"ok\": false,\n  \"identity\": \"bot\",\n  \"error\": {\n    \"type\": \"api_error\",\n    \"code\": 230002,\n    \"message\": \"HTTP 400: Bot/User can NOT be out of the chat.\",\n    \"detail\": null\n  },\n  \"_notice\": {\n    \"update\": {\n      \"current\": \"1.0.19\",\n      \"latest\": \"1.0.38\",\n      \"message\": \"lark-cli 1.0.38 available, current 1.0.19\"\n    }\n  }\n}\n",
+        "user_error": "Command failed: lark-cli im +messages-send --as user --chat-id oc_45f4f2c2f0a783f636969cd821179f40 --text 平台：头条号\ncampaign_id：2026-05-22-ai-employee-no-new-status-not-failure\n标题：无新增时，AI员工能直接判断内容失败吗？\n状态：under_review\n核验时间：2026年5月22日 16:37:12\n管理页：https://mp.toutiao.com/profile_v4/manage/content/all\n视频：/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4\n封面：/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png\n结果：/Users/baishangjituan/Documents/push/toutiao_publish_result_20260522_no_new_status.json\nError: need_user_authorization (user: )\n",
+        "user_stdout": "",
+        "user_stderr": "Error: need_user_authorization (user: )\n",
+        "note": "Toutiao publish was verified before notification attempts; notification failed because the configured Feishu chat/user identity is not reachable."
+      }
+    },
+    "kuaishou": {
+      "campaign_id": "2026-05-22-ai-employee-no-new-status-not-failure",
+      "platform_id": "kuaishou",
+      "platform": "kuaishou",
+      "status": "published",
+      "status_label": "已发布",
+      "title": "无新增不是失败",
+      "description": "别把无新增写成失败。先核验状态、指标、对照，证据齐了再改。",
+      "submitted_text": "无新增不是失败\n别把无新增写成失败。先核验状态、指标、对照，证据齐了再改。",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/kuaishou.md",
+      "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platform-upload-map.md",
+      "automation_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-22-ai-employee-no-new-status-not-failure.yaml",
+      "final_verify": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/final-verify.json",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "uploaded_video_path": "/tmp/kuaishou-20260522-no-new-status.mp4",
+      "raw_video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure.mp4",
+      "video_sha256": "afbe934c9439ceacab91de95cf7cf9a10bb2ea3e3526403e30ffe30e8e23e202",
+      "raw_video_sha256": "d322edbc144790b08a07248f895e19ecd2c2b51a6b4c1a80ee2920fec803cf0e",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "uploaded_cover_path": "/tmp/kuaishou-20260522-no-new-status-cover-vertical-3x4.png",
+      "required_cover_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+      "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+      "backup_cover_sha256": "5b2b48a6c77009d4a84653b79d37244fd300b5ddc3fd7cadb5cf10ce99b4447a",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "cover_mode": "package_required_vertical_3x4_uploaded_via_cdp_DOM_setFileInputFiles; preview_and_manager_thumbnail_verified",
+      "correct_package_cover_used": true,
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "actor": "Codex Chrome DevTools/CDP publisher",
+      "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.kuaishou.lock.json",
+      "submitted_at": "2026-05-22T16:39:00+08:00",
+      "verified_at": "2026-05-22T16:45:34+08:00",
+      "published_at": "2026-05-22T16:39:00+08:00",
+      "published_at_raw": "2026-05-22 16:39",
+      "current_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+      "management_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+      "verified_by": "Kuaishou creator work manager exact submitted-text row via Chrome DevTools/CDP",
+      "manager_verification": {
+        "url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+        "title": "快手创作者服务平台",
+        "hasFullText": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasTerminalStatus": true,
+        "status": "已发布",
+        "rowText": "无新增不是失败 别把无新增写成失败。先核验状态、指标、对照，证据齐了再改。\n已发布\n2026-05-22 16:39",
+        "publishedAtRaw": "2026-05-22 16:39",
+        "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260522-no-new-status-manager-verified.png",
+        "coverThumbnailLooksLikePackageCover": true,
+        "coverThumbnailText": "AI员工别误判"
+      },
+      "duplicate_guard": {
+        "local_receipt_before_publish": "no_kuaishou_receipt",
+        "local_receipt_status_before_publish": "not_published",
+        "management_page_exact_searches": [
+          {
+            "query": "无新增不是失败",
+            "result_count": 0,
+            "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260522-no-new-status-dup-search-title.png"
+          },
+          {
+            "query": "别把无新增写成失败",
+            "result_count": 0,
+            "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260522-no-new-status-dup-search-body1.png"
+          },
+          {
+            "query": "证据齐了再改",
+            "result_count": 0,
+            "screenshot": "/Users/baishangjituan/Documents/push/kuaishou-20260522-no-new-status-dup-search-body2.png"
+          }
+        ],
+        "result": "no_same_package_duplicate_found_before_upload"
+      },
+      "cdp": {
+        "cdp_base": "http://127.0.0.1:9223",
+        "target_id": "CABB7DA5F75B7CF6DCF178965FEFD3EF",
+        "old_kuaishou_target_id": "D6AE7E068AEEAF42CFF67599D752F6F2",
+        "publish_url": "https://cp.kuaishou.com/article/publish/video?tabType=1",
+        "management_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+        "chrome_restarted": false,
+        "note": "Existing Kuaishou tab rendered blank for publish URL, so a new CDP target was created on the same logged-in Chrome session without restart."
+      },
+      "screenshots": {
+        "duplicate_title": "/Users/baishangjituan/Documents/push/kuaishou-20260522-no-new-status-dup-search-title.png",
+        "duplicate_body_1": "/Users/baishangjituan/Documents/push/kuaishou-20260522-no-new-status-dup-search-body1.png",
+        "duplicate_body_2": "/Users/baishangjituan/Documents/push/kuaishou-20260522-no-new-status-dup-search-body2.png",
+        "cover_preview_25pct": "/Users/baishangjituan/Documents/push/kuaishou-20260522-no-new-status-cover-25pct-preview.png",
+        "publish_page_before_upload": "/Users/baishangjituan/Documents/push/kuaishou-20260522-newtab-publish-inspect.png",
+        "after_video_upload": "/Users/baishangjituan/Documents/push/kuaishou-20260522-no-new-status-after-video-upload.png",
+        "after_cover_upload": "/Users/baishangjituan/Documents/push/kuaishou-20260522-no-new-status-after-cover-upload.png",
+        "pre_submit": "/Users/baishangjituan/Documents/push/kuaishou-20260522-no-new-status-pre-submit.png",
+        "after_submit": "/Users/baishangjituan/Documents/push/kuaishou-20260522-no-new-status-after-submit-click.png",
+        "manager_verified": "/Users/baishangjituan/Documents/push/kuaishou-20260522-no-new-status-manager-verified.png"
+      },
+      "feishu_notification": {
+        "sent": false,
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "idempotency_key": "ks-20260522-no-new-status",
+        "attempted_at": "2026-05-22T16:45:34+08:00",
+        "method": "lark-cli im +messages-send",
+        "attempts": [
+          {
+            "as": "bot",
+            "sent": false,
+            "error_code": 230002,
+            "error_message": "HTTP 400: Bot/User can NOT be out of the chat."
+          },
+          {
+            "as": "user",
+            "sent": false,
+            "error_type": "need_user_authorization",
+            "error_message": "need_user_authorization (user: )"
+          }
+        ]
+      },
+      "notes": [
+        "Chrome DevTools/CDP attached to existing logged-in Chrome on 127.0.0.1:9223; Chrome was not restarted.",
+        "Before upload, local receipt and Kuaishou work manager exact searches showed no existing Kuaishou receipt or same-package duplicate manager row.",
+        "The exact package video copy was uploaded through CDP DOM.setFileInputFiles from /tmp while preserving original file hashes in this receipt.",
+        "Kuaishou page has only one visible 作品描述 field, so the package title was placed on line 1 and package copy on line 2.",
+        "The package-required vertical 3:4 cover file cover-vertical-3x4.png was uploaded through the Kuaishou custom cover image input; preview and management thumbnail showed the package cover, not an AI/default cover.",
+        "After clicking 发布, Kuaishou redirected to 作品管理 and the exact submitted text appeared with status 已发布 at 2026-05-22 16:39.",
+        "Feishu notification was attempted after verification but failed because bot is not in the target chat and user authorization is unavailable."
+      ],
+      "result_path": "/Users/baishangjituan/Documents/push/kuaishou_publish_result_20260522_no_new_status_not_failure.json",
+      "recorded_at": "2026-05-22T16:45:34+08:00"
+    },
+    "wechat_channels": {
+      "platform": "wechat_channels",
+      "status": "published_verified_under_review",
+      "published_at": "2026-05-22T09:06:03.817Z",
+      "title": "无新增不是失败",
+      "description": "机器人小马想把“今日无新增”写成失败，大陈叫停：后台还没核验，先补状态、指标、对照三格证据。",
+      "object_id": "export/UzFfBgAAxOujPAFGUgf2jMzT4DCaunC_Mv2hruw4CYxB4zmiRw",
+      "export_id": "export/UzFfBgAAxOujPAFGUgf2jMzT4DCaunC_Mv2hruw4CYxB4zmiRw",
+      "object_nonce": "8203072181316180793",
+      "create_time": 1779440544,
+      "list_time_text": "2026年05月22日 17:02",
+      "list_status_code": 1,
+      "list_status_text": "审核中",
+      "disable_show_wording": "视频审核中",
+      "visible_type": 1,
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+      "video_sha256": "afbe934c9439ceacab91de95cf7cf9a10bb2ea3e3526403e30ffe30e8e23e202",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+      "cover_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+      "correct_package_cover_used": true,
+      "cover_mode": "package_required_vertical_3x4_uploaded_via_wechat_cover_editor_cdp_DOM_setFileInputFiles",
+      "browser_route": "Chrome CDP/opencli preferred route, no GUI screenshot publishing",
+      "result_path": "/Users/baishangjituan/Documents/push/wechat_channels_20260522_no_new_status_publish_result.json",
+      "verified_management_list": true,
+      "verified_short_title_from_vue_props": true,
+      "verified_description_from_management_row": true,
+      "verified_custom_cover_from_management_row": true,
+      "feishu_notification": {
+        "attempted_at": "2026-05-22T09:06:52.664Z",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "bot": {
+          "ok": false,
+          "code": 230002,
+          "message": "HTTP 400: Bot/User can NOT be out of the chat."
+        },
+        "user": {
+          "ok": false,
+          "message": "need_user_authorization"
+        },
+        "status": "failed_not_in_chat_or_user_not_authorized"
+      }
+    }
+  },
+  "receipt_schema": {
+    "future_platform_receipt_fields": [
+      "actor",
+      "actor_session_id",
+      "status",
+      "verified_by",
+      "lock_path",
+      "submitted_at",
+      "published_at",
+      "video_path",
+      "cover_path",
+      "cover_thumbnail_present",
+      "cover_readability_passed"
+    ]
+  },
+  "created_at": "2026-05-22T16:21:25+08:00",
+  "updated_at": "2026-05-22T09:37:30.920Z",
+  "last_blocked_platform": "baijiahao",
+  "notes": [
+    "2026-05-22T08:29:11.167Z: Baijiahao publish blocked before upload: empty editor DOM/no video file input; no upload or publish click happened.",
+    "2026-05-22T17:27:04+08:00: CDP pre-submit validated exact title, AI statement, and required horizontal cover; about to click publish.",
+    "2026-05-22T17:35:06+08:00: Publish signal seen but manager exact-title row not found before timeout; no automatic retry.",
+    "2026-05-22T17:37:27+08:00: Baijiahao published verified in manager exact-title row; required horizontal 4:3 cover uploaded before submit."
+  ],
+  "previous_status_before_bilibili": "zhihu_publish_in_progress",
+  "last_platform": "toutiao",
+  "last_published_platform": "douyin",
+  "updated_at_asia_shanghai": "2026年5月22日 16:39:15",
+  "feishu_notification": {
+    "attempted_at": "2026-05-22T09:06:52.664Z",
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "bot": {
+      "ok": false,
+      "code": 230002,
+      "message": "HTTP 400: Bot/User can NOT be out of the chat."
+    },
+    "user": {
+      "ok": false,
+      "message": "need_user_authorization"
+    },
+    "status": "failed_not_in_chat_or_user_not_authorized"
+  },
+  "updated_at_after_feishu_attempt": "2026-05-22T08:34:36.765Z",
+  "updated_at_after_feishu_attempt_asia_shanghai": "2026-05-22T16:34:36+08:00",
+  "notifications": [
+    "douyin_published_2026-05-22T08:34:59.737Z: published work_list status=1 matched aweme_id 7642631390067969318.",
+    "feishu_failed_2026-05-22T08:35:49.624Z: douyin published verified, but notification to oc_45f4f2c2f0a783f636969cd821179f40 failed with bot code 230002 and user need_user_authorization.",
+    "feishu_failed_2026-05-22T08:39:13.563Z: toutiao under_review verified, but notification to oc_45f4f2c2f0a783f636969cd821179f40 failed."
+  ],
+  "last_submitted_platform": "toutiao"
+}

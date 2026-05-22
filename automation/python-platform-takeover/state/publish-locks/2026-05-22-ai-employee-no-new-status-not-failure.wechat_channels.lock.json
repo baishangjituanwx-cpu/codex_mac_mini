@@ -1,0 +1,48 @@
+{
+  "campaign_id": "2026-05-22-ai-employee-no-new-status-not-failure",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "platform": "wechat_channels",
+  "status": "published_verified_under_review",
+  "locked_at": "2026-05-22T08:45:01.410Z",
+  "actor": "Codex CDP publisher",
+  "user_authorized_publish": true,
+  "content_package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package",
+  "platform_upload_map_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platform-upload-map.md",
+  "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-22-ai-employee-no-new-status-not-failure.yaml",
+  "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/final-verify.json",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+  "uploaded_video_path": "/tmp/wc22-no-new-status-video.mp4",
+  "video_sha256": "afbe934c9439ceacab91de95cf7cf9a10bb2ea3e3526403e30ffe30e8e23e202",
+  "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+  "uploaded_cover_path": "/tmp/wc22-no-new-status-cover.png",
+  "required_cover_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+  "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+  "backup_cover_sha256": "5b2b48a6c77009d4a84653b79d37244fd300b5ddc3fd7cadb5cf10ce99b4447a",
+  "short_title_from_package": "无新增不是失败",
+  "description": "机器人小马想把“今日无新增”写成失败，大陈叫停：后台还没核验，先补状态、指标、对照三格证据。",
+  "cover_policy": "must_upload_required_vertical_3x4_cover",
+  "cover_readability_preflight": {
+    "preview_path": "/tmp/wc22-no-new-status-cover-preview.png",
+    "passed": true
+  },
+  "updated_at": "2026-05-22T09:06:52.664Z",
+  "object_id": "export/UzFfBgAAxOujPAFGUgf2jMzT4DCaunC_Mv2hruw4CYxB4zmiRw",
+  "title": "无新增不是失败",
+  "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+  "correct_package_cover_used": true,
+  "result_path": "/Users/baishangjituan/Documents/push/wechat_channels_20260522_no_new_status_publish_result.json",
+  "feishu_notification": {
+    "attempted_at": "2026-05-22T09:06:52.664Z",
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "bot": {
+      "ok": false,
+      "code": 230002,
+      "message": "HTTP 400: Bot/User can NOT be out of the chat."
+    },
+    "user": {
+      "ok": false,
+      "message": "need_user_authorization"
+    },
+    "status": "failed_not_in_chat_or_user_not_authorized"
+  }
+}

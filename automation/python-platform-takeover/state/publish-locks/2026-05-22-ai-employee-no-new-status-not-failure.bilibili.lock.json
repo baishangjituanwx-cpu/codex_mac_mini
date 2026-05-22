@@ -1,0 +1,26 @@
+{
+  "lock_schema": "platform_publish_lock.v1",
+  "campaign_id": "2026-05-22-ai-employee-no-new-status-not-failure",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "platform": "bilibili",
+  "status": "published_locked_after_verified_submit",
+  "locked_at": "2026-05-22T08:33:52.412Z",
+  "locked_at_asia_shanghai": "2026-05-22T16:33:52+08:00",
+  "reason": "Prevent duplicate Bilibili publishing for this campaign after verified CDP submit.",
+  "public_url": "https://www.bilibili.com/video/BV1YBGt6PEvo/",
+  "bvid": "BV1YBGt6PEvo",
+  "aid": 116617287572064,
+  "cid": 38524947103,
+  "title": "别把无新增写成失败：AI员工先补三格证据，再决定内容要不要改",
+  "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-horizontal-4x3.png",
+  "required_cover_sha256": "5b2b48a6c77009d4a84653b79d37244fd300b5ddc3fd7cadb5cf10ce99b4447a",
+  "publish_result": "/Users/baishangjituan/Documents/push/bilibili_publish_result_no_new_status_20260522.json",
+  "receipt": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-22-ai-employee-no-new-status-not-failure.json",
+  "verification": {
+    "submit_api": "POST /x/vu/web/add/v3 returned code=0",
+    "public_api": "GET /x/web-interface/view returned code=0, state=0, exact title and description matched",
+    "manager_page": "managerAfter.match.matched=true with exact title row; row showed 转码完成 and 审核中",
+    "tags_request_body": "AI员工,内容运营,数据复盘,短视频运营",
+    "verified_by": "add_v3_code0_public_api_code0_and_bilibili_manager_exact_title_row"
+  }
+}

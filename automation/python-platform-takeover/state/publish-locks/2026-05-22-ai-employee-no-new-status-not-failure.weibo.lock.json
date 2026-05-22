@@ -1,0 +1,109 @@
+{
+  "campaign_id": "2026-05-22-ai-employee-no-new-status-not-failure",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "platform": "weibo",
+  "status": "published_verified",
+  "actor": "codex",
+  "actor_session_id": "current-thread",
+  "created_at": "2026-05-22T16:28:30+08:00",
+  "updated_at": "2026-05-22T16:32:04.641+08:00",
+  "confirmation": {
+    "user_confirmed_publish": true,
+    "confirmed_in_thread": true,
+    "scope": "weibo_only"
+  },
+  "route": {
+    "preferred": "cdp",
+    "cdp_url": "http://127.0.0.1:9224",
+    "fallback": "opencli_if_cdp_unavailable",
+    "opencli_status": "daemon_running_extension_not_connected",
+    "gui_screenshot_route": "not_used_for_primary_actions"
+  },
+  "package": {
+    "yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-22-ai-employee-no-new-status-not-failure.yaml",
+    "platform_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/weibo.md",
+    "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platform-upload-map.md",
+    "content_library_entry": "/Users/baishangjituan/Documents/New project/content-library/posts/weibo/2026-05-22-ai-employee-no-new-status-not-failure-weibo.md"
+  },
+  "content": {
+    "title": "无新增，就能直接判内容失败吗？",
+    "body": "不能。无新增只是状态，不是失败结论。后台没核验、指标没回来、同账号对照没补齐时，先别改标题封面，先把三格证据补齐。#AI员工 #内容运营"
+  },
+  "assets": {
+    "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure-publish.mp4",
+    "video_sha256": "afbe934c9439ceacab91de95cf7cf9a10bb2ea3e3526403e30ffe30e8e23e202",
+    "video_dimensions": "720x1280",
+    "video_duration_seconds": 15.869002,
+    "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_cover_package/cover-vertical-3x4.png",
+    "required_cover_sha256": "376c0cca39485bb1ee1fb9cfb5f91f8a5e84ea05dcf6e847001c2cd3111dfc4b",
+    "required_cover_dimensions": "1080x1440",
+    "first_frame_path": "/Users/baishangjituan/Documents/push/weibo-publish-20260522-no-new-status/publish-first-frame.png",
+    "first_frame_sha256": "96f38c0dad4328cfac18fe1a61553c38bbfb65932ff388d3fba0729dbbb1cbee",
+    "cover_rule": "upload required 3:4 cover if custom cover control exists; if Weibo only permits frame selection, use publish video first frame and record reason"
+  },
+  "guards": {
+    "local_receipt_weibo_present": false,
+    "platform_duplicate_check": "passed",
+    "duplicate": {
+      "searches": [
+        {
+          "q": "无新增只是状态",
+          "status": 200,
+          "total": 0,
+          "matched": false,
+          "matched_mblogid": null
+        },
+        {
+          "q": "三格证据补齐",
+          "status": 200,
+          "total": "1",
+          "matched": false,
+          "matched_mblogid": null
+        },
+        {
+          "q": "无新增，就能直接判内容失败吗？",
+          "status": 200,
+          "total": 0,
+          "matched": false,
+          "matched_mblogid": null
+        }
+      ],
+      "mymblog": {
+        "status": 200,
+        "checked_items": 20,
+        "matched": false
+      }
+    }
+  },
+  "verification": {
+    "status": "verified",
+    "verified_by": "cdp_attached_playwright_weibo_api_and_public_readback",
+    "result_path": "/Users/baishangjituan/Documents/push/weibo_publish_result_20260522_no_new_status_not_failure.json"
+  },
+  "submitted_at": "2026-05-22T16:30:25.504+08:00",
+  "published_at": "Fri May 22 16:30:53 +0800 2026",
+  "public_url": "https://weibo.com/2326772703/R0AJV4vVt",
+  "mobile_url": "https://m.weibo.cn/detail/5301412311076039",
+  "mblogid": "R0AJV4vVt",
+  "post_id": "5301412311076039",
+  "cover_mode": "weibo_quick_composer_no_custom_cover_control; used_publish_video_first_frame_per_package_rule; first_frame_matches_required_vertical_cover_design",
+  "feishu_notification": {
+    "sent": false,
+    "attempted_at": "2026-05-22T16:32:04.641+08:00",
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "method": "lark-cli im +messages-send",
+    "bot_attempt": {
+      "ok": false,
+      "code": 230002,
+      "message": "HTTP 400: Bot/User can NOT be out of the chat."
+    },
+    "user_attempt": {
+      "ok": false,
+      "message": "need_user_authorization"
+    },
+    "idempotency_keys": [
+      "weibo-20260522-no-new-status-not-failure",
+      "weibo-20260522-no-new-status-not-failure-user"
+    ]
+  }
+}
