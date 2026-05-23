@@ -218,6 +218,7 @@
 - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
 - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
 - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+
 - 对比基线:
 - 任务消息里的 `Last run: 2026-05-22T10:51:22.348Z`（本地时区为 `2026-05-22 18:51:22.348 CST`）
 - `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-22T10:52:34Z`（本地时区为 `2026-05-22 18:52:34 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免重复记账
@@ -42628,3 +42629,1705 @@
 ### 变更摘要
 - 本轮没有发现晚于 `2026-05-22T14:57:17Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与持久化的 `2540` 条快照一致。
 - 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-23 00:59:48 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-22T15:57:22.940Z`（本地时区为 `2026-05-22 23:57:22.940 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-22T15:59:12Z`（本地时区为 `2026-05-22 23:59:12 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 额外忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 当前受监控文件树与上一轮 `last-snapshot.json` 的 `2540` 条持久化快照逐项比对后，结果保持 `2540 -> 2540`，路径集合、整数秒 `mtime` 和 `size` 都完全一致，因此没有新增、修改或删除
+- 额外按上一轮实际完成时间 `2026-05-22T15:59:12Z` 复筛受监控文件的精确 `mtime`；结果为空，说明自上一轮完成以来没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-22T15:59:12Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-22T15:59:12Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与持久化的 `2540` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+
+## 2026-05-23 02:00:55 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-22T16:58:22.866Z`（本地时区为 `2026-05-23 00:58:22.866 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-22T16:59:48Z`（本地时区为 `2026-05-23 00:59:48 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 额外忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前受监控文件树与上一轮 `last-snapshot.json` 的 `2540` 条持久化快照逐项比对后，结果保持 `2540 -> 2540`，路径集合、整数秒 `mtime` 和 `size` 都完全一致，因此没有新增、修改或删除
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-22T16:59:48Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-22T16:59:48Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+
+## 2026-05-23 03:03:10 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-22T17:59:52.635Z`（本地时区为 `2026-05-23 01:59:52.635 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-22T18:00:55Z`（本地时区为 `2026-05-23 02:00:55 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 额外忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 当前受监控文件树与上一轮 `last-snapshot.json` 的 `2540` 条持久化快照逐项比对后，结果保持 `2540 -> 2540`，路径集合、精确 `mtime` 和 `size` 都一致，因此没有新增、修改或删除
+- 额外按上一轮实际完成时间 `2026-05-22T18:00:55Z` 复筛受监控文件的精确 `mtime`；结果为空，说明自上一轮完成以来没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-22T18:00:55Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-22T18:00:55Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `2540` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+
+## 2026-05-23 04:02:42 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-22T19:00:52.633Z`（本地时区为 `2026-05-23 03:00:52.633 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-22T19:03:10Z`（本地时区为 `2026-05-23 03:03:10 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 额外忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 当前受监控文件树与上一轮 `last-snapshot.json` 的 `2540` 条持久化快照逐项比对后，结果保持 `2540 -> 2540`，路径集合、精确 `mtime` 和 `size` 都一致，因此没有新增、修改或删除
+- 额外按上一轮实际完成时间 `2026-05-22T19:03:10Z` 复筛受监控文件的精确 `mtime`；结果为空，说明自上一轮完成以来没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-22T19:03:10Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-22T19:03:10Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `2540` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+
+## 2026-05-23 05:03:23 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-22T20:01:23.819Z`（本地时区为 `2026-05-23 04:01:23.819 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-22T20:02:42Z`（本地时区为 `2026-05-23 04:02:42 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 额外忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 当前受监控文件树与上一轮 `last-snapshot.json` 的 `2540` 条持久化快照逐项比对后，结果保持 `2540 -> 2540`，路径集合、`size` 与排除浮点精度抖动后的精确 `mtime` 都一致，因此没有新增、修改或删除
+- 额外按上一轮实际完成时间 `2026-05-22T20:02:42Z` 复筛受监控文件的精确 `mtime`；结果为空，说明自上一轮完成以来没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-22T20:02:42Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-22T20:02:42Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `2540` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-23 06:07:37 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-22T21:01:54.270Z`（本地时区为 `2026-05-23 05:01:54.270 CST`）
+- `~/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-22T22:02:38Z`（本地时区为 `2026-05-23 06:02:38 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免重复记账
+- 判定依据:
+- 复核 `~/.codex/automations/skill-monitor/{memory.md,state.json,last-summary.json,last-snapshot.json}`；其中 `memory.md` 缺失，本轮已补建
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 额外忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前受监控文件树与上一轮 `last-snapshot.json` 的 `2540` 条持久化快照逐项比对后，结果保持 `2540 -> 2540`，没有新增或删除，但有 `936` 个文件的 `mtime` 或 `size` 与快照不一致
+- 额外按上一轮实际完成时间 `2026-05-22T22:02:38Z` 复筛受监控文件的精确 `mtime`；命中 `0` 个文件，说明这批更新大多保留了旧时间戳，必须依赖快照差异而不是“晚于基线的 mtime” 才能识别
+- 结果汇总: 新增 `0`，修改 `936`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 修改: `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/SKILL.md`；本地 Codex skill `clash-verge-standard-env` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/agents/openai.yaml`；本地 Codex skill `clash-verge-standard-env` 的 agent 配置已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/references/rules-enhancement.yaml`；本地 Codex skill `clash-verge-standard-env` 的参考资料已刷新：`rules-enhancement`。
+- 修改: `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/references/verge.template.yaml`；本地 Codex skill `clash-verge-standard-env` 的参考资料已刷新：`verge template`。
+- 修改: `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/scripts/apply_standard_env.py`；本地 Codex skill `clash-verge-standard-env` 的辅助脚本已刷新：`apply-standard-env`。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/SKILL.md`；本地 Codex skill `codex-feishu-bridge` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/agents/openai.yaml`；本地 Codex skill `codex-feishu-bridge` 的 agent 配置已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/.bridge.env.example`；本地 Codex skill `codex-feishu-bridge` 的模板资源已刷新：`.bridge.env.example`。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/launchd/com.codex.feishu-bridge.plist`；本地 Codex skill `codex-feishu-bridge` 的模板资源已刷新：`com.codex.feishu-bridge.plist`。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/package.json`；本地 Codex skill `codex-feishu-bridge` 的模板资源已刷新：`package.json`。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/bridge-logs.sh`；本地 Codex skill `codex-feishu-bridge` 的模板资源已刷新：`bridge-logs.sh`。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/bridge-start.sh`；本地 Codex skill `codex-feishu-bridge` 的模板资源已刷新：`bridge-start.sh`。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/bridge-status.sh`；本地 Codex skill `codex-feishu-bridge` 的模板资源已刷新：`bridge-status.sh`。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/bridge-stop.sh`；本地 Codex skill `codex-feishu-bridge` 的模板资源已刷新：`bridge-stop.sh`。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/configure_notify_target.sh`；本地 Codex skill `codex-feishu-bridge` 的模板资源已刷新：`configure_notify_target.sh`。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/mirror-view.command`；本地 Codex skill `codex-feishu-bridge` 的模板资源已刷新：`mirror-view.command`。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/mirror-view.sh`；本地 Codex skill `codex-feishu-bridge` 的模板资源已刷新：`mirror-view.sh`。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/run-bridge.sh`；本地 Codex skill `codex-feishu-bridge` 的模板资源已刷新：`run-bridge.sh`。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/src/bridge.js`；本地 Codex skill `codex-feishu-bridge` 的模板资源已刷新：`bridge.js`。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/references/INSTALL-QUICKSTART.md`；本地 Codex skill `codex-feishu-bridge` 的参考资料已刷新：`INSTALL-QUICKSTART`。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/references/architecture.md`；本地 Codex skill `codex-feishu-bridge` 的参考资料已刷新：`architecture`。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/references/deployment.md`；本地 Codex skill `codex-feishu-bridge` 的参考资料已刷新：`deployment`。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/references/user-guide.md`；本地 Codex skill `codex-feishu-bridge` 的参考资料已刷新：`user-guide`。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/scripts/install_bridge_template.sh`；本地 Codex skill `codex-feishu-bridge` 的辅助脚本已刷新：`install-bridge-template`。
+- 修改: `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/scripts/package_skill_bundle.sh`；本地 Codex skill `codex-feishu-bridge` 的辅助脚本已刷新：`package-skill-bundle`。
+- 修改: `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/SKILL.md`；本地 Codex skill `coze-seedance15pro-sales-workflow` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/agents/openai.yaml`；本地 Codex skill `coze-seedance15pro-sales-workflow` 的 agent 配置已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/config.json`；本地 Codex skill `coze-seedance15pro-sales-workflow` 的配置或说明文件已刷新：`config.json`。
+- 修改: `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/references/exported-workflow.yaml`；本地 Codex skill `coze-seedance15pro-sales-workflow` 的参考资料已刷新：`exported-workflow`。
+- 修改: `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/references/manifest.yml`；本地 Codex skill `coze-seedance15pro-sales-workflow` 的参考资料已刷新：`manifest`。
+- 修改: `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/references/runtime-config.md`；本地 Codex skill `coze-seedance15pro-sales-workflow` 的参考资料已刷新：`runtime-config`。
+- 修改: `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/references/workflow-summary.md`；本地 Codex skill `coze-seedance15pro-sales-workflow` 的参考资料已刷新：`workflow-summary`。
+- 修改: `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/scripts/run_workflow.py`；本地 Codex skill `coze-seedance15pro-sales-workflow` 的辅助脚本已刷新：`run-workflow`。
+- 修改: `/Users/baishangjituan/.codex/skills/dachen-founder-flywheel/SKILL.md`；本地 Codex skill `dachen-founder-flywheel` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/dachen-founder-flywheel/references/review-scorecard.md`；本地 Codex skill `dachen-founder-flywheel` 的参考资料已刷新：`review-scorecard`。
+- 修改: `/Users/baishangjituan/.codex/skills/data-review/SKILL.md`；本地 Codex skill `data-review` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/data-review/agents/openai.yaml`；本地 Codex skill `data-review` 的 agent 配置已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/data-review/references/account-slice-analysis.md`；本地 Codex skill `data-review` 的参考资料已刷新：`account-slice-analysis`。
+- 修改: `/Users/baishangjituan/.codex/skills/data-review/references/dashboard-export-template.json`；本地 Codex skill `data-review` 的参考资料已刷新：`dashboard-export-template`。
+- 修改: `/Users/baishangjituan/.codex/skills/data-review/references/diagnosis-and-decisions.md`；本地 Codex skill `data-review` 的参考资料已刷新：`diagnosis-and-decisions`。
+- 修改: `/Users/baishangjituan/.codex/skills/data-review/references/docker-dashboard-contract.md`；本地 Codex skill `data-review` 的参考资料已刷新：`docker-dashboard-contract`。
+- 修改: `/Users/baishangjituan/.codex/skills/data-review/references/platform-metrics.md`；本地 Codex skill `data-review` 的参考资料已刷新：`platform-metrics`。
+- 修改: `/Users/baishangjituan/.codex/skills/data-review/references/report-template.md`；本地 Codex skill `data-review` 的参考资料已刷新：`report-template`。
+- 修改: `/Users/baishangjituan/.codex/skills/hermes-feishu-operator/SKILL.md`；本地 Codex skill `hermes-feishu-operator` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/hermes-feishu-operator/agents/openai.yaml`；本地 Codex skill `hermes-feishu-operator` 的 agent 配置已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.sh`；本地 Codex skill `hermes-feishu-operator` 的辅助脚本已刷新：`send-hermes-feishu-prompt`。
+- 修改: `/Users/baishangjituan/.codex/skills/kuaishou-ops/SKILL.md`；本地 Codex skill `kuaishou-ops` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-approval/SKILL.md`；本地 Codex skill `lark-approval` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-attendance/SKILL.md`；本地 Codex skill `lark-attendance` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/SKILL.md`；本地 Codex skill `lark-base` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/dashboard-block-data-config.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`dashboard-block-data-config`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/examples.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`examples`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/formula-field-guide.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`formula-field-guide`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-advperm-disable.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-advperm-disable`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-advperm-enable.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-advperm-enable`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-base-copy.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-base-copy`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-base-create.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-base-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-base-get.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-base-get`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-arrange.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-dashboard-arrange`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-create.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-dashboard-block-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-delete.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-dashboard-block-delete`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-get.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-dashboard-block-get`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-list.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-dashboard-block-list`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-update.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-dashboard-block-update`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-create.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-dashboard-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-delete.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-dashboard-delete`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-get.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-dashboard-get`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-list.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-dashboard-list`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-update.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-dashboard-update`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-dashboard`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-data-query.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-data-query`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-create.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-field-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-delete.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-field-delete`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-get.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-field-get`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-list.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-field-list`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-search-options.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-field-search-options`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-update.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-field-update`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-field`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-create.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-form-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-delete.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-form-delete`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-get.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-form-get`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-list.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-form-list`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-create.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-form-questions-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-delete.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-form-questions-delete`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-list.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-form-questions-list`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-update.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-form-questions-update`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-form-questions`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-update.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-form-update`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-form`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-history.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-history`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-batch-create.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-record-batch-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-batch-update.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-record-batch-update`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-delete.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-record-delete`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-get.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-record-get`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-history-list.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-record-history-list`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-list.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-record-list`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-search.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-record-search`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-upload-attachment.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-record-upload-attachment`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-upsert.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-record-upsert`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-record`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-create.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-role-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-delete.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-role-delete`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-get.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-role-get`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-list.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-role-list`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-update.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-role-update`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-shortcut-field-properties.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-shortcut-field-properties`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-shortcut-record-value.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-shortcut-record-value`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-create.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-table-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-delete.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-table-delete`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-get.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-table-get`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-list.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-table-list`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-update.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-table-update`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-table`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-create.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-view-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-delete.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-view-delete`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-card.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-view-get-card`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-filter.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-view-get-filter`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-group.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-view-get-group`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-sort.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-view-get-sort`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-timebar.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-view-get-timebar`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-visible-fields.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-view-get-visible-fields`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-view-get`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-list.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-view-list`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-rename.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-view-rename`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-card.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-view-set-card`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-filter.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-view-set-filter`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-group.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-view-set-group`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-sort.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-view-set-sort`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-timebar.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-view-set-timebar`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-visible-fields.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-view-set-visible-fields`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-view`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-create.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-workflow-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-disable.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-workflow-disable`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-enable.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-workflow-enable`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-get.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-workflow-get`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-guide.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-workflow-guide`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-list.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-workflow-list`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-schema.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-workflow-schema`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-update.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-workflow-update`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-workflow`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workspace.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lark-base-workspace`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/lookup-field-guide.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`lookup-field-guide`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-base/references/role-config.md`；本地 Codex skill `lark-base` 的参考资料已刷新：`role-config`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-calendar/SKILL.md`；本地 Codex skill `lark-calendar` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-agenda.md`；本地 Codex skill `lark-calendar` 的参考资料已刷新：`lark-calendar-agenda`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-create.md`；本地 Codex skill `lark-calendar` 的参考资料已刷新：`lark-calendar-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-freebusy.md`；本地 Codex skill `lark-calendar` 的参考资料已刷新：`lark-calendar-freebusy`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-room-find.md`；本地 Codex skill `lark-calendar` 的参考资料已刷新：`lark-calendar-room-find`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-rsvp.md`；本地 Codex skill `lark-calendar` 的参考资料已刷新：`lark-calendar-rsvp`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-schedule-meeting.md`；本地 Codex skill `lark-calendar` 的参考资料已刷新：`lark-calendar-schedule-meeting`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-suggestion.md`；本地 Codex skill `lark-calendar` 的参考资料已刷新：`lark-calendar-suggestion`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-contact/SKILL.md`；本地 Codex skill `lark-contact` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-contact/references/lark-contact-get-user.md`；本地 Codex skill `lark-contact` 的参考资料已刷新：`lark-contact-get-user`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-contact/references/lark-contact-search-user.md`；本地 Codex skill `lark-contact` 的参考资料已刷新：`lark-contact-search-user`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-doc/SKILL.md`；本地 Codex skill `lark-doc` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-create.md`；本地 Codex skill `lark-doc` 的参考资料已刷新：`lark-doc-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-fetch.md`；本地 Codex skill `lark-doc` 的参考资料已刷新：`lark-doc-fetch`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-media-download.md`；本地 Codex skill `lark-doc` 的参考资料已刷新：`lark-doc-media-download`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-media-insert.md`；本地 Codex skill `lark-doc` 的参考资料已刷新：`lark-doc-media-insert`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-media-preview.md`；本地 Codex skill `lark-doc` 的参考资料已刷新：`lark-doc-media-preview`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-search.md`；本地 Codex skill `lark-doc` 的参考资料已刷新：`lark-doc-search`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-update.md`；本地 Codex skill `lark-doc` 的参考资料已刷新：`lark-doc-update`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-whiteboard.md`；本地 Codex skill `lark-doc` 的参考资料已刷新：`lark-doc-whiteboard`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-drive/SKILL.md`；本地 Codex skill `lark-drive` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-add-comment.md`；本地 Codex skill `lark-drive` 的参考资料已刷新：`lark-drive-add-comment`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-create-folder.md`；本地 Codex skill `lark-drive` 的参考资料已刷新：`lark-drive-create-folder`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-create-shortcut.md`；本地 Codex skill `lark-drive` 的参考资料已刷新：`lark-drive-create-shortcut`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-delete.md`；本地 Codex skill `lark-drive` 的参考资料已刷新：`lark-drive-delete`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-download.md`；本地 Codex skill `lark-drive` 的参考资料已刷新：`lark-drive-download`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-export-download.md`；本地 Codex skill `lark-drive` 的参考资料已刷新：`lark-drive-export-download`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-export.md`；本地 Codex skill `lark-drive` 的参考资料已刷新：`lark-drive-export`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-import.md`；本地 Codex skill `lark-drive` 的参考资料已刷新：`lark-drive-import`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-move.md`；本地 Codex skill `lark-drive` 的参考资料已刷新：`lark-drive-move`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-reactions.md`；本地 Codex skill `lark-drive` 的参考资料已刷新：`lark-drive-reactions`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-task-result.md`；本地 Codex skill `lark-drive` 的参考资料已刷新：`lark-drive-task-result`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-upload.md`；本地 Codex skill `lark-drive` 的参考资料已刷新：`lark-drive-upload`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-event/SKILL.md`；本地 Codex skill `lark-event` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-event/references/lark-event-subscribe.md`；本地 Codex skill `lark-event` 的参考资料已刷新：`lark-event-subscribe`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-im/SKILL.md`；本地 Codex skill `lark-im` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-create.md`；本地 Codex skill `lark-im` 的参考资料已刷新：`lark-im-chat-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-identity.md`；本地 Codex skill `lark-im` 的参考资料已刷新：`lark-im-chat-identity`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-messages-list.md`；本地 Codex skill `lark-im` 的参考资料已刷新：`lark-im-chat-messages-list`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-search.md`；本地 Codex skill `lark-im` 的参考资料已刷新：`lark-im-chat-search`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-update.md`；本地 Codex skill `lark-im` 的参考资料已刷新：`lark-im-chat-update`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-mget.md`；本地 Codex skill `lark-im` 的参考资料已刷新：`lark-im-messages-mget`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-reply.md`；本地 Codex skill `lark-im` 的参考资料已刷新：`lark-im-messages-reply`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-resources-download.md`；本地 Codex skill `lark-im` 的参考资料已刷新：`lark-im-messages-resources-download`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-search.md`；本地 Codex skill `lark-im` 的参考资料已刷新：`lark-im-messages-search`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-send.md`；本地 Codex skill `lark-im` 的参考资料已刷新：`lark-im-messages-send`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-reactions.md`；本地 Codex skill `lark-im` 的参考资料已刷新：`lark-im-reactions`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-threads-messages-list.md`；本地 Codex skill `lark-im` 的参考资料已刷新：`lark-im-threads-messages-list`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-mail/SKILL.md`；本地 Codex skill `lark-mail` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-draft-create.md`；本地 Codex skill `lark-mail` 的参考资料已刷新：`lark-mail-draft-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-draft-edit.md`；本地 Codex skill `lark-mail` 的参考资料已刷新：`lark-mail-draft-edit`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-forward.md`；本地 Codex skill `lark-mail` 的参考资料已刷新：`lark-mail-forward`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-message.md`；本地 Codex skill `lark-mail` 的参考资料已刷新：`lark-mail-message`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-messages.md`；本地 Codex skill `lark-mail` 的参考资料已刷新：`lark-mail-messages`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-reply-all.md`；本地 Codex skill `lark-mail` 的参考资料已刷新：`lark-mail-reply-all`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-reply.md`；本地 Codex skill `lark-mail` 的参考资料已刷新：`lark-mail-reply`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-send.md`；本地 Codex skill `lark-mail` 的参考资料已刷新：`lark-mail-send`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-signature.md`；本地 Codex skill `lark-mail` 的参考资料已刷新：`lark-mail-signature`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-thread.md`；本地 Codex skill `lark-mail` 的参考资料已刷新：`lark-mail-thread`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-triage.md`；本地 Codex skill `lark-mail` 的参考资料已刷新：`lark-mail-triage`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-watch.md`；本地 Codex skill `lark-mail` 的参考资料已刷新：`lark-mail-watch`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-minutes/SKILL.md`；本地 Codex skill `lark-minutes` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-minutes/references/lark-minutes-download.md`；本地 Codex skill `lark-minutes` 的参考资料已刷新：`lark-minutes-download`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-minutes/references/lark-minutes-search.md`；本地 Codex skill `lark-minutes` 的参考资料已刷新：`lark-minutes-search`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-okr/SKILL.md`；本地 Codex skill `lark-okr` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-contentblock.md`；本地 Codex skill `lark-okr` 的参考资料已刷新：`lark-okr-contentblock`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-cycle-detail.md`；本地 Codex skill `lark-okr` 的参考资料已刷新：`lark-okr-cycle-detail`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-cycle-list.md`；本地 Codex skill `lark-okr` 的参考资料已刷新：`lark-okr-cycle-list`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-entities.md`；本地 Codex skill `lark-okr` 的参考资料已刷新：`lark-okr-entities`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-openapi-explorer/SKILL.md`；本地 Codex skill `lark-openapi-explorer` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-shared/SKILL.md`；本地 Codex skill `lark-shared` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/SKILL.md`；本地 Codex skill `lark-sheets` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-add-dimension.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-add-dimension`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-append.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-append`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-batch-set-style.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-batch-set-style`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-create-filter-view-condition.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-create-filter-view-condition`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-create-filter-view.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-create-filter-view`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-create.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-dimension.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-delete-dimension`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-dropdown.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-delete-dropdown`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-filter-view-condition.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-delete-filter-view-condition`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-filter-view.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-delete-filter-view`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-export.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-export`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-find.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-find`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-formula.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-formula`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-get-dropdown.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-get-dropdown`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-get-filter-view-condition.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-get-filter-view-condition`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-get-filter-view.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-get-filter-view`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-info.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-info`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-insert-dimension.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-insert-dimension`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-list-filter-view-conditions.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-list-filter-view-conditions`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-list-filter-views.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-list-filter-views`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-merge-cells.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-merge-cells`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-move-dimension.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-move-dimension`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-read.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-read`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-replace.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-replace`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-set-dropdown.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-set-dropdown`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-set-style.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-set-style`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-unmerge-cells.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-unmerge-cells`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-dimension.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-update-dimension`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-dropdown.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-update-dropdown`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-filter-view-condition.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-update-filter-view-condition`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-filter-view.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-update-filter-view`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-write-image.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-write-image`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-write.md`；本地 Codex skill `lark-sheets` 的参考资料已刷新：`lark-sheets-write`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-skill-maker/SKILL.md`；本地 Codex skill `lark-skill-maker` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-slides/SKILL.md`；本地 Codex skill `lark-slides` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-slides/references/examples.md`；本地 Codex skill `lark-slides` 的参考资料已刷新：`examples`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-create.md`；本地 Codex skill `lark-slides` 的参考资料已刷新：`lark-slides-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-media-upload.md`；本地 Codex skill `lark-slides` 的参考资料已刷新：`lark-slides-media-upload`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-xml-presentation-slide-create.md`；本地 Codex skill `lark-slides` 的参考资料已刷新：`lark-slides-xml-presentation-slide-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-xml-presentation-slide-delete.md`；本地 Codex skill `lark-slides` 的参考资料已刷新：`lark-slides-xml-presentation-slide-delete`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-xml-presentations-get.md`；本地 Codex skill `lark-slides` 的参考资料已刷新：`lark-slides-xml-presentations-get`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-slides/references/slide-templates.md`；本地 Codex skill `lark-slides` 的参考资料已刷新：`slide-templates`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-slides/references/slides_demo.xml`；本地 Codex skill `lark-slides` 的参考资料已刷新：`slides-demo`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-slides/references/slides_xml_schema_definition.xml`；本地 Codex skill `lark-slides` 的参考资料已刷新：`slides-xml-schema-definition`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-slides/references/xml-format-guide.md`；本地 Codex skill `lark-slides` 的参考资料已刷新：`xml-format-guide`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-slides/references/xml-schema-quick-ref.md`；本地 Codex skill `lark-slides` 的参考资料已刷新：`xml-schema-quick-ref`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-task/SKILL.md`；本地 Codex skill `lark-task` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-assign.md`；本地 Codex skill `lark-task` 的参考资料已刷新：`lark-task-assign`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-comment.md`；本地 Codex skill `lark-task` 的参考资料已刷新：`lark-task-comment`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-complete.md`；本地 Codex skill `lark-task` 的参考资料已刷新：`lark-task-complete`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-create.md`；本地 Codex skill `lark-task` 的参考资料已刷新：`lark-task-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-followers.md`；本地 Codex skill `lark-task` 的参考资料已刷新：`lark-task-followers`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-get-my-tasks.md`；本地 Codex skill `lark-task` 的参考资料已刷新：`lark-task-get-my-tasks`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-get-related-tasks.md`；本地 Codex skill `lark-task` 的参考资料已刷新：`lark-task-get-related-tasks`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-reminder.md`；本地 Codex skill `lark-task` 的参考资料已刷新：`lark-task-reminder`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-reopen.md`；本地 Codex skill `lark-task` 的参考资料已刷新：`lark-task-reopen`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-search.md`；本地 Codex skill `lark-task` 的参考资料已刷新：`lark-task-search`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-set-ancestor.md`；本地 Codex skill `lark-task` 的参考资料已刷新：`lark-task-set-ancestor`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-subscribe-event.md`；本地 Codex skill `lark-task` 的参考资料已刷新：`lark-task-subscribe-event`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-create.md`；本地 Codex skill `lark-task` 的参考资料已刷新：`lark-task-tasklist-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-members.md`；本地 Codex skill `lark-task` 的参考资料已刷新：`lark-task-tasklist-members`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-search.md`；本地 Codex skill `lark-task` 的参考资料已刷新：`lark-task-tasklist-search`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-task-add.md`；本地 Codex skill `lark-task` 的参考资料已刷新：`lark-task-tasklist-task-add`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-update.md`；本地 Codex skill `lark-task` 的参考资料已刷新：`lark-task-update`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-vc/SKILL.md`；本地 Codex skill `lark-vc` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-vc/references/lark-vc-notes.md`；本地 Codex skill `lark-vc` 的参考资料已刷新：`lark-vc-notes`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-vc/references/lark-vc-recording.md`；本地 Codex skill `lark-vc` 的参考资料已刷新：`lark-vc-recording`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-vc/references/lark-vc-search.md`；本地 Codex skill `lark-vc` 的参考资料已刷新：`lark-vc-search`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/SKILL.md`；本地 Codex skill `lark-whiteboard` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/connectors.md`；本地 Codex skill `lark-whiteboard` 的参考资料已刷新：`connectors`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/content.md`；本地 Codex skill `lark-whiteboard` 的参考资料已刷新：`content`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/lark-whiteboard-query.md`；本地 Codex skill `lark-whiteboard` 的参考资料已刷新：`lark-whiteboard-query`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/lark-whiteboard-update.md`；本地 Codex skill `lark-whiteboard` 的参考资料已刷新：`lark-whiteboard-update`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/layout.md`；本地 Codex skill `lark-whiteboard` 的参考资料已刷新：`layout`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/schema.md`；本地 Codex skill `lark-whiteboard` 的参考资料已刷新：`schema`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/style.md`；本地 Codex skill `lark-whiteboard` 的参考资料已刷新：`style`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/typography.md`；本地 Codex skill `lark-whiteboard` 的参考资料已刷新：`typography`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/routes/dsl.md`；本地 Codex skill `lark-whiteboard` 的文件已刷新：`routes/dsl.md`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/routes/mermaid.md`；本地 Codex skill `lark-whiteboard` 的文件已刷新：`routes/mermaid.md`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/routes/svg.md`；本地 Codex skill `lark-whiteboard` 的文件已刷新：`routes/svg.md`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/architecture.md`；本地 Codex skill `lark-whiteboard` 的文件已刷新：`scenes/architecture.md`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/bar-chart.md`；本地 Codex skill `lark-whiteboard` 的文件已刷新：`scenes/bar-chart.md`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/comparison.md`；本地 Codex skill `lark-whiteboard` 的文件已刷新：`scenes/comparison.md`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/fishbone.md`；本地 Codex skill `lark-whiteboard` 的文件已刷新：`scenes/fishbone.md`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/flowchart.md`；本地 Codex skill `lark-whiteboard` 的文件已刷新：`scenes/flowchart.md`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/flywheel.md`；本地 Codex skill `lark-whiteboard` 的文件已刷新：`scenes/flywheel.md`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/funnel.md`；本地 Codex skill `lark-whiteboard` 的文件已刷新：`scenes/funnel.md`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/line-chart.md`；本地 Codex skill `lark-whiteboard` 的文件已刷新：`scenes/line-chart.md`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/mermaid.md`；本地 Codex skill `lark-whiteboard` 的文件已刷新：`scenes/mermaid.md`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/milestone.md`；本地 Codex skill `lark-whiteboard` 的文件已刷新：`scenes/milestone.md`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/organization.md`；本地 Codex skill `lark-whiteboard` 的文件已刷新：`scenes/organization.md`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/pyramid.md`；本地 Codex skill `lark-whiteboard` 的文件已刷新：`scenes/pyramid.md`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/swimlane.md`；本地 Codex skill `lark-whiteboard` 的文件已刷新：`scenes/swimlane.md`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/treemap.md`；本地 Codex skill `lark-whiteboard` 的文件已刷新：`scenes/treemap.md`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-wiki/SKILL.md`；本地 Codex skill `lark-wiki` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-wiki/references/lark-wiki-move.md`；本地 Codex skill `lark-wiki` 的参考资料已刷新：`lark-wiki-move`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-wiki/references/lark-wiki-node-create.md`；本地 Codex skill `lark-wiki` 的参考资料已刷新：`lark-wiki-node-create`。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-workflow-meeting-summary/SKILL.md`；本地 Codex skill `lark-workflow-meeting-summary` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/lark-workflow-standup-report/SKILL.md`；本地 Codex skill `lark-workflow-standup-report` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/platform-cover-ops/SKILL.md`；本地 Codex skill `platform-cover-ops` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/platform-ops-hub/SKILL.md`；本地 Codex skill `platform-ops-hub` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/playwright/scripts/playwright_cli.sh`；本地 Codex skill `playwright` 的辅助脚本已刷新：`playwright-cli`。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/SKILL.md`；本地 Codex skill `seedance-video-api` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/agents/openai.yaml`；本地 Codex skill `seedance-video-api` 的 agent 配置已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0.json`；本地 Codex skill `seedance-video-api` 的示例载荷已刷新：`asset-reference-identity-lock-seedance-2-0`。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0_fast.json`；本地 Codex skill `seedance-video-api` 的示例载荷已刷新：`asset-reference-identity-lock-seedance-2-0-fast`。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/extend_bridge_seedance_2_0.json`；本地 Codex skill `seedance-video-api` 的示例载荷已刷新：`extend-bridge-seedance-2-0`。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/extend_single_seedance_2_0.json`；本地 Codex skill `seedance-video-api` 的示例载荷已刷新：`extend-single-seedance-2-0`。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/i2v_first_frame_seedance_2_0.json`；本地 Codex skill `seedance-video-api` 的示例载荷已刷新：`i2v-first-frame-seedance-2-0`。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/multimodal_reference_seedance_2_0.json`；本地 Codex skill `seedance-video-api` 的示例载荷已刷新：`multimodal-reference-seedance-2-0`。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/t2v_seedance_2_0.json`；本地 Codex skill `seedance-video-api` 的示例载荷已刷新：`t2v-seedance-2-0`。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/t2v_seedance_2_0_fast.json`；本地 Codex skill `seedance-video-api` 的示例载荷已刷新：`t2v-seedance-2-0-fast`。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/references/api-basics.md`；本地 Codex skill `seedance-video-api` 的参考资料已刷新：`api-basics`。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/references/cover-execution.md`；本地 Codex skill `seedance-video-api` 的参考资料已刷新：`cover-execution`。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/references/cover-package.md`；本地 Codex skill `seedance-video-api` 的参考资料已刷新：`cover-package`。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/references/prompt-template.md`；本地 Codex skill `seedance-video-api` 的参考资料已刷新：`prompt-template`。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/references/real-person-consistency.md`；本地 Codex skill `seedance-video-api` 的参考资料已刷新：`real-person-consistency`。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/references/workflows.md`；本地 Codex skill `seedance-video-api` 的参考资料已刷新：`workflows`。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/build_cover_package.py`；本地 Codex skill `seedance-video-api` 的辅助脚本已刷新：`build-cover-package`。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/extract_cover_candidates.py`；本地 Codex skill `seedance-video-api` 的辅助脚本已刷新：`extract-cover-candidates`。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/init_cover_package.py`；本地 Codex skill `seedance-video-api` 的辅助脚本已刷新：`init-cover-package`。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/render_cover_package.py`；本地 Codex skill `seedance-video-api` 的辅助脚本已刷新：`render-cover-package`。
+- 修改: `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/seedance_cli.py`；本地 Codex skill `seedance-video-api` 的辅助脚本已刷新：`seedance-cli`。
+- 修改: `/Users/baishangjituan/.codex/skills/social-publish-automation/SKILL.md`；本地 Codex skill `social-publish-automation` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/social-publish-automation/references/platform-notes.md`；本地 Codex skill `social-publish-automation` 的参考资料已刷新：`platform-notes`。
+- 修改: `/Users/baishangjituan/.codex/skills/toutiao-ops/SKILL.md`；本地 Codex skill `toutiao-ops` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/wechat-channels-launchagent-keepalive/SKILL.md`；本地 Codex skill `wechat-channels-launchagent-keepalive` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/wechat-channels-launchagent-keepalive/agents/openai.yaml`；本地 Codex skill `wechat-channels-launchagent-keepalive` 的 agent 配置已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/wechat-channels-ops/SKILL.md`；本地 Codex skill `wechat-channels-ops` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/wechat-channels-ops/references/platform-notes.md`；本地 Codex skill `wechat-channels-ops` 的参考资料已刷新：`platform-notes`。
+- 修改: `/Users/baishangjituan/.codex/skills/xiaohongshu-ops/SKILL.md`；本地 Codex skill `xiaohongshu-ops` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/xiaohongshu-ops/references/platform-notes.md`；本地 Codex skill `xiaohongshu-ops` 的参考资料已刷新：`platform-notes`。
+- 修改: `/Users/baishangjituan/.codex/skills/xiaoyunque-source-video/SKILL.md`；本地 Codex skill `xiaoyunque-source-video` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/xiaoyunque-source-video/agents/openai.yaml`；本地 Codex skill `xiaoyunque-source-video` 的 agent 配置已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/xiaoyunque-source-video/references/prompt-template.md`；本地 Codex skill `xiaoyunque-source-video` 的参考资料已刷新：`prompt-template`。
+- 修改: `/Users/baishangjituan/.codex/skills/xiaoyunque-source-video/references/source-video-playbook.md`；本地 Codex skill `xiaoyunque-source-video` 的参考资料已刷新：`source-video-playbook`。
+- 修改: `/Users/baishangjituan/.codex/skills/xyq-nest-skill/.gitignore`；本地 Codex skill `xyq-nest-skill` 的配置或说明文件已刷新：`.gitignore`。
+- 修改: `/Users/baishangjituan/.codex/skills/xyq-nest-skill/README.md`；本地 Codex skill `xyq-nest-skill` 的配置或说明文件已刷新：`README.md`。
+- 修改: `/Users/baishangjituan/.codex/skills/xyq-nest-skill/SKILL.md`；本地 Codex skill `xyq-nest-skill` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/.codex/skills/xyq-nest-skill/scripts/_common.py`；本地 Codex skill `xyq-nest-skill` 的辅助脚本已刷新：`-common`。
+- 修改: `/Users/baishangjituan/.codex/skills/xyq-nest-skill/scripts/download_results.py`；本地 Codex skill `xyq-nest-skill` 的辅助脚本已刷新：`download-results`。
+- 修改: `/Users/baishangjituan/.codex/skills/xyq-nest-skill/scripts/get_thread.py`；本地 Codex skill `xyq-nest-skill` 的辅助脚本已刷新：`get-thread`。
+- 修改: `/Users/baishangjituan/.codex/skills/xyq-nest-skill/scripts/submit_run.py`；本地 Codex skill `xyq-nest-skill` 的辅助脚本已刷新：`submit-run`。
+- 修改: `/Users/baishangjituan/.codex/skills/xyq-nest-skill/scripts/upload_file.py`；本地 Codex skill `xyq-nest-skill` 的辅助脚本已刷新：`upload-file`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/.env.example`；支持自动化的环境变量示例已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md`；支持自动化的使用说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-17-ai-first-replace-three-tasks.yaml`；campaign 配置已刷新：`2026-04-17-ai-first-replace-three-tasks`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-20-ai-content-platform-execution.yaml`；campaign 配置已刷新：`2026-04-20-ai-content-platform-execution`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-21-platform-execution-next-round.yaml`；campaign 配置已刷新：`2026-04-21-platform-execution-next-round`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-22-platform-execution-three-steps.yaml`；campaign 配置已刷新：`2026-04-22-platform-execution-three-steps`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml`；campaign 配置已刷新：`2026-04-23-platform-execution-feedback-fields`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-24-platform-execution-writeback-fields.yaml`；campaign 配置已刷新：`2026-04-24-platform-execution-writeback-fields`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-25-platform-execution-six-writeback-fields.yaml`；campaign 配置已刷新：`2026-04-25-platform-execution-six-writeback-fields`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-27-platform-execution-verify-before-republish.yaml`；campaign 配置已刷新：`2026-04-27-platform-execution-verify-before-republish`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-28-platform-execution-early-zero-not-failure.yaml`；campaign 配置已刷新：`2026-04-28-platform-execution-early-zero-not-failure`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-29-platform-execution-lock-campaign-four-checks.yaml`；campaign 配置已刷新：`2026-04-29-platform-execution-lock-campaign-four-checks`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-30-repair-existing-not-republish.yaml`；campaign 配置已刷新：`2026-04-30-repair-existing-not-republish`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-01-dachen-xiaoma-argue-fix-old-post.yaml`；campaign 配置已刷新：`2026-05-01-dachen-xiaoma-argue-fix-old-post`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-02-ai-employee-writeback-after-publish.yaml`；campaign 配置已刷新：`2026-05-02-ai-employee-writeback-after-publish`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-03-ai-employee-data-center-review.weibo.yaml`；campaign 配置已刷新：`2026-05-03-ai-employee-data-center-review.weibo`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-03-ai-employee-data-center-review.yaml`；campaign 配置已刷新：`2026-05-03-ai-employee-data-center-review`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-04-ai-employee-three-format-comparison.kuaishou.yaml`；campaign 配置已刷新：`2026-05-04-ai-employee-three-format-comparison.kuaishou`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-04-ai-employee-three-format-comparison.weibo.yaml`；campaign 配置已刷新：`2026-05-04-ai-employee-three-format-comparison.weibo`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-04-ai-employee-three-format-comparison.yaml`；campaign 配置已刷新：`2026-05-04-ai-employee-three-format-comparison`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-audit-wait-no-republish.yaml`；campaign 配置已刷新：`2026-05-05-ai-employee-audit-wait-no-republish`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-receipt-handoff.kuaishou.yaml`；campaign 配置已刷新：`2026-05-05-ai-employee-receipt-handoff.kuaishou`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-receipt-handoff.weibo.yaml`；campaign 配置已刷新：`2026-05-05-ai-employee-receipt-handoff.weibo`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-receipt-handoff.yaml`；campaign 配置已刷新：`2026-05-05-ai-employee-receipt-handoff`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-12-ai-employee-status-split-before-judgment.yaml`；campaign 配置已刷新：`2026-05-12-ai-employee-status-split-before-judgment`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-13-ai-employee-receipt-lock-before-republish.yaml`；campaign 配置已刷新：`2026-05-13-ai-employee-receipt-lock-before-republish`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-14-ai-employee-no-metrics-no-judgment.yaml`；campaign 配置已刷新：`2026-05-14-ai-employee-no-metrics-no-judgment`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-15-ai-employee-status-branch-before-rewrite.yaml`；campaign 配置已刷新：`2026-05-15-ai-employee-status-branch-before-rewrite`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-16-ai-employee-compare-three-before-cut.yaml`；campaign 配置已刷新：`2026-05-16-ai-employee-compare-three-before-cut`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-evidence-grid-before-verdict.yaml`；campaign 配置已刷新：`2026-05-17-ai-employee-evidence-grid-before-verdict`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml`；campaign 配置已刷新：`2026-05-17-ai-employee-metric-window-before-rewrite`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-22-ai-employee-no-new-status-not-failure.yaml`；campaign 配置已刷新：`2026-05-22-ai-employee-no-new-status-not-failure`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.demo.yaml`；campaign 配置已刷新：`demo`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.example.yaml`；campaign 配置已刷新：`example`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-05-ai-employee-audit-wait-no-republish.json`；Hermes handoff 包已刷新：`2026-05-05-ai-employee-audit-wait-no-republish`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-12-ai-employee-status-split-before-judgment.json`；Hermes handoff 包已刷新：`2026-05-12-ai-employee-status-split-before-judgment`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-13-ai-employee-receipt-lock-before-republish.json`；Hermes handoff 包已刷新：`2026-05-13-ai-employee-receipt-lock-before-republish`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-14-ai-employee-no-metrics-no-judgment.json`；Hermes handoff 包已刷新：`2026-05-14-ai-employee-no-metrics-no-judgment`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-15-ai-employee-status-branch-before-rewrite.json`；Hermes handoff 包已刷新：`2026-05-15-ai-employee-status-branch-before-rewrite`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-16-ai-employee-compare-three-before-cut.json`；Hermes handoff 包已刷新：`2026-05-16-ai-employee-compare-three-before-cut`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-17-ai-employee-evidence-grid-before-verdict.json`；Hermes handoff 包已刷新：`2026-05-17-ai-employee-evidence-grid-before-verdict`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-17-ai-employee-metric-window-before-rewrite.json`；Hermes handoff 包已刷新：`2026-05-17-ai-employee-metric-window-before-rewrite`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-22-ai-employee-no-new-status-not-failure.json`；Hermes handoff 包已刷新：`2026-05-22-ai-employee-no-new-status-not-failure`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/baijiahao.yaml`；平台映射配置已刷新：`baijiahao`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/douyin.yaml`；平台映射配置已刷新：`douyin`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/kuaishou.yaml`；平台映射配置已刷新：`kuaishou`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/toutiao.yaml`；平台映射配置已刷新：`toutiao`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/wechat_channels.yaml`；平台映射配置已刷新：`wechat-channels`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/weibo.yaml`；平台映射配置已刷新：`weibo`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/xiaohongshu.yaml`；平台映射配置已刷新：`xiaohongshu`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/zhihu.yaml`；平台映射配置已刷新：`zhihu`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platforms.example.yaml`；平台配置示例已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/pyproject.toml`；支持自动化的 Python 包元数据与依赖声明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/quickstart-mac.sh`；自动化脚本已刷新：`quickstart-mac`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/quickstart-windows.ps1`；自动化脚本已刷新：`quickstart-windows`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/social-publisher.ps1`；自动化脚本已刷新：`social-publisher`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/social-publisher.sh`；自动化脚本已刷新：`social-publisher`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/start-chrome-cdp.ps1`；自动化脚本已刷新：`start-chrome-cdp`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/start-chrome-cdp.sh`；自动化脚本已刷新：`start-chrome-cdp`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/__init__.py`；publisher 模块已刷新：`--init--`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/__main__.py`；publisher 模块已刷新：`--main--`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/browser.py`；publisher 模块已刷新：`browser`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/cli.py`；publisher 模块已刷新：`cli`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/content_package.py`；publisher 模块已刷新：`content-package`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/doctor.py`；publisher 模块已刷新：`doctor`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/env.py`；publisher 模块已刷新：`env`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platform_mapping.py`；publisher 模块已刷新：`platform-mapping`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/__init__.py`；publisher 平台实现已刷新：`--init--`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/baijiahao.py`；publisher 平台实现已刷新：`baijiahao`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/base.py`；publisher 平台实现已刷新：`base`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/douyin.py`；publisher 平台实现已刷新：`douyin`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/kuaishou.py`；publisher 平台实现已刷新：`kuaishou`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/toutiao.py`；publisher 平台实现已刷新：`toutiao`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py`；publisher 平台实现已刷新：`wechat-channels`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/weibo.py`；publisher 平台实现已刷新：`weibo`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/xiaohongshu.py`；publisher 平台实现已刷新：`xiaohongshu`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/zhihu.py`；publisher 平台实现已刷新：`zhihu`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/publish_receipts.py`；publisher 模块已刷新：`publish-receipts`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher_takeover.egg-info/PKG-INFO`；打包元数据已刷新：`PKG-INFO`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher_takeover.egg-info/SOURCES.txt`；打包元数据已刷新：`SOURCES.txt`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher_takeover.egg-info/dependency_links.txt`；打包元数据已刷新：`dependency_links.txt`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher_takeover.egg-info/entry_points.txt`；打包元数据已刷新：`entry_points.txt`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher_takeover.egg-info/requires.txt`；打包元数据已刷新：`requires.txt`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher_takeover.egg-info/top_level.txt`；打包元数据已刷新：`top_level.txt`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/hermes-handoff/latest.json`；Hermes handoff 状态已刷新：`latest.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json`；发布锁状态已刷新：`2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json.stale-1778485572`；发布锁状态已刷新：`2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json.stale-1778485572`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json.stale-1778486096`；发布锁状态已刷新：`2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json.stale-1778486096`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.baijiahao.lock.json`；发布锁状态已刷新：`2026-05-12-ai-employee-status-split-before-judgment.baijiahao.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.bilibili.lock.json`；发布锁状态已刷新：`2026-05-12-ai-employee-status-split-before-judgment.bilibili.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.kuaishou.lock.json`；发布锁状态已刷新：`2026-05-12-ai-employee-status-split-before-judgment.kuaishou.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.toutiao.lock.json`；发布锁状态已刷新：`2026-05-12-ai-employee-status-split-before-judgment.toutiao.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.zhihu.lock.json`；发布锁状态已刷新：`2026-05-12-ai-employee-status-split-before-judgment.zhihu.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.baijiahao.lock.json`；发布锁状态已刷新：`2026-05-13-ai-employee-receipt-lock-before-republish.baijiahao.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.bilibili.lock.json`；发布锁状态已刷新：`2026-05-13-ai-employee-receipt-lock-before-republish.bilibili.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.douyin.lock.json`；发布锁状态已刷新：`2026-05-13-ai-employee-receipt-lock-before-republish.douyin.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.kuaishou.lock.json`；发布锁状态已刷新：`2026-05-13-ai-employee-receipt-lock-before-republish.kuaishou.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.toutiao.lock.json`；发布锁状态已刷新：`2026-05-13-ai-employee-receipt-lock-before-republish.toutiao.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.zhihu.lock.json`；发布锁状态已刷新：`2026-05-13-ai-employee-receipt-lock-before-republish.zhihu.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.baijiahao.lock.json`；发布锁状态已刷新：`2026-05-14-ai-employee-no-metrics-no-judgment.baijiahao.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.bilibili.lock.json`；发布锁状态已刷新：`2026-05-14-ai-employee-no-metrics-no-judgment.bilibili.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.douyin.lock.json`；发布锁状态已刷新：`2026-05-14-ai-employee-no-metrics-no-judgment.douyin.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.kuaishou.lock.json`；发布锁状态已刷新：`2026-05-14-ai-employee-no-metrics-no-judgment.kuaishou.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.toutiao.lock.json`；发布锁状态已刷新：`2026-05-14-ai-employee-no-metrics-no-judgment.toutiao.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.wechat_channels.lock.json`；发布锁状态已刷新：`2026-05-14-ai-employee-no-metrics-no-judgment.wechat_channels.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.weibo.lock.json`；发布锁状态已刷新：`2026-05-14-ai-employee-no-metrics-no-judgment.weibo.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.zhihu.lock.json`；发布锁状态已刷新：`2026-05-14-ai-employee-no-metrics-no-judgment.zhihu.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.baijiahao.lock.json`；发布锁状态已刷新：`2026-05-15-ai-employee-status-branch-before-rewrite.baijiahao.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.bilibili.lock.json`；发布锁状态已刷新：`2026-05-15-ai-employee-status-branch-before-rewrite.bilibili.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.douyin.lock.json`；发布锁状态已刷新：`2026-05-15-ai-employee-status-branch-before-rewrite.douyin.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.kuaishou.lock.json`；发布锁状态已刷新：`2026-05-15-ai-employee-status-branch-before-rewrite.kuaishou.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.toutiao.lock.json`；发布锁状态已刷新：`2026-05-15-ai-employee-status-branch-before-rewrite.toutiao.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.wechat_channels.lock.json`；发布锁状态已刷新：`2026-05-15-ai-employee-status-branch-before-rewrite.wechat_channels.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.weibo.lock.json`；发布锁状态已刷新：`2026-05-15-ai-employee-status-branch-before-rewrite.weibo.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.zhihu.lock.json`；发布锁状态已刷新：`2026-05-15-ai-employee-status-branch-before-rewrite.zhihu.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.baijiahao.lock.json`；发布锁状态已刷新：`2026-05-16-ai-employee-compare-three-before-cut.baijiahao.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.bilibili.lock.json`；发布锁状态已刷新：`2026-05-16-ai-employee-compare-three-before-cut.bilibili.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.douyin.lock.json`；发布锁状态已刷新：`2026-05-16-ai-employee-compare-three-before-cut.douyin.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.kuaishou.lock.json`；发布锁状态已刷新：`2026-05-16-ai-employee-compare-three-before-cut.kuaishou.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.toutiao.lock.json`；发布锁状态已刷新：`2026-05-16-ai-employee-compare-three-before-cut.toutiao.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.wechat_channels.lock.json`；发布锁状态已刷新：`2026-05-16-ai-employee-compare-three-before-cut.wechat_channels.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.weibo.lock.json`；发布锁状态已刷新：`2026-05-16-ai-employee-compare-three-before-cut.weibo.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.zhihu.lock.json`；发布锁状态已刷新：`2026-05-16-ai-employee-compare-three-before-cut.zhihu.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.baijiahao.lock.json`；发布锁状态已刷新：`2026-05-17-ai-employee-evidence-grid-before-verdict.baijiahao.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.bilibili.lock.json`；发布锁状态已刷新：`2026-05-17-ai-employee-evidence-grid-before-verdict.bilibili.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.douyin.lock.json`；发布锁状态已刷新：`2026-05-17-ai-employee-evidence-grid-before-verdict.douyin.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.kuaishou.lock.json`；发布锁状态已刷新：`2026-05-17-ai-employee-evidence-grid-before-verdict.kuaishou.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.toutiao.lock.json`；发布锁状态已刷新：`2026-05-17-ai-employee-evidence-grid-before-verdict.toutiao.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.wechat_channels.lock.json`；发布锁状态已刷新：`2026-05-17-ai-employee-evidence-grid-before-verdict.wechat_channels.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.weibo.lock.json`；发布锁状态已刷新：`2026-05-17-ai-employee-evidence-grid-before-verdict.weibo.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.zhihu.lock.json`；发布锁状态已刷新：`2026-05-17-ai-employee-evidence-grid-before-verdict.zhihu.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.baijiahao.lock.json`；发布锁状态已刷新：`2026-05-17-ai-employee-metric-window-before-rewrite.baijiahao.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.bilibili.lock.json`；发布锁状态已刷新：`2026-05-17-ai-employee-metric-window-before-rewrite.bilibili.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.douyin.lock.json`；发布锁状态已刷新：`2026-05-17-ai-employee-metric-window-before-rewrite.douyin.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.kuaishou.lock.json`；发布锁状态已刷新：`2026-05-17-ai-employee-metric-window-before-rewrite.kuaishou.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.toutiao.lock.json`；发布锁状态已刷新：`2026-05-17-ai-employee-metric-window-before-rewrite.toutiao.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.wechat_channels.lock.json`；发布锁状态已刷新：`2026-05-17-ai-employee-metric-window-before-rewrite.wechat_channels.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.weibo.lock.json`；发布锁状态已刷新：`2026-05-17-ai-employee-metric-window-before-rewrite.weibo.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.zhihu.lock.json`；发布锁状态已刷新：`2026-05-17-ai-employee-metric-window-before-rewrite.zhihu.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.baijiahao.lock.json`；发布锁状态已刷新：`2026-05-22-ai-employee-no-new-status-not-failure.baijiahao.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.bilibili.lock.json`；发布锁状态已刷新：`2026-05-22-ai-employee-no-new-status-not-failure.bilibili.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.douyin.lock.json`；发布锁状态已刷新：`2026-05-22-ai-employee-no-new-status-not-failure.douyin.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.kuaishou.lock.json`；发布锁状态已刷新：`2026-05-22-ai-employee-no-new-status-not-failure.kuaishou.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.toutiao.lock.json`；发布锁状态已刷新：`2026-05-22-ai-employee-no-new-status-not-failure.toutiao.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.wechat_channels.lock.json`；发布锁状态已刷新：`2026-05-22-ai-employee-no-new-status-not-failure.wechat_channels.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.weibo.lock.json`；发布锁状态已刷新：`2026-05-22-ai-employee-no-new-status-not-failure.weibo.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.zhihu.lock.json`；发布锁状态已刷新：`2026-05-22-ai-employee-no-new-status-not-failure.zhihu.lock.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json`；发布回执台账已刷新：`2026-04-24-platform-execution-writeback-fields.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-25-platform-execution-six-writeback-fields.json`；发布回执台账已刷新：`2026-04-25-platform-execution-six-writeback-fields.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-27-platform-execution-verify-before-republish.json`；发布回执台账已刷新：`2026-04-27-platform-execution-verify-before-republish.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-28-platform-execution-early-zero-not-failure.json`；发布回执台账已刷新：`2026-04-28-platform-execution-early-zero-not-failure.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-29-platform-execution-lock-campaign-four-checks.json`；发布回执台账已刷新：`2026-04-29-platform-execution-lock-campaign-four-checks.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-30-repair-existing-not-republish.json`；发布回执台账已刷新：`2026-04-30-repair-existing-not-republish.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`；发布回执台账已刷新：`2026-05-01-dachen-xiaoma-argue-fix-old-post.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-02-ai-employee-writeback-after-publish.json`；发布回执台账已刷新：`2026-05-02-ai-employee-writeback-after-publish.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-03-ai-employee-data-center-review.json`；发布回执台账已刷新：`2026-05-03-ai-employee-data-center-review.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-04-ai-employee-three-format-comparison.json`；发布回执台账已刷新：`2026-05-04-ai-employee-three-format-comparison.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-05-ai-employee-audit-wait-no-republish.json`；发布回执台账已刷新：`2026-05-05-ai-employee-audit-wait-no-republish.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-05-ai-employee-receipt-handoff.json`；发布回执台账已刷新：`2026-05-05-ai-employee-receipt-handoff.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-12-ai-employee-status-split-before-judgment.json`；发布回执台账已刷新：`2026-05-12-ai-employee-status-split-before-judgment.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-13-ai-employee-receipt-lock-before-republish.json`；发布回执台账已刷新：`2026-05-13-ai-employee-receipt-lock-before-republish.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-14-ai-employee-no-metrics-no-judgment.json`；发布回执台账已刷新：`2026-05-14-ai-employee-no-metrics-no-judgment.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-15-ai-employee-status-branch-before-rewrite.json`；发布回执台账已刷新：`2026-05-15-ai-employee-status-branch-before-rewrite.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-16-ai-employee-compare-three-before-cut.json`；发布回执台账已刷新：`2026-05-16-ai-employee-compare-three-before-cut.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json`；发布回执台账已刷新：`2026-05-17-ai-employee-evidence-grid-before-verdict.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json`；发布回执台账已刷新：`2026-05-17-ai-employee-metric-window-before-rewrite.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-22-ai-employee-no-new-status-not-failure.json`；发布回执台账已刷新：`2026-05-22-ai-employee-no-new-status-not-failure.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/bilibili-management-published-20260502-1545.png`；自动化截图证据已刷新：`bilibili-management-published-20260502-1545.png`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-after-click-cdp-20260503.png`；自动化截图证据已刷新：`kuaishou-after-click-cdp-20260503.png`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-after-dom-publish-click-20260503.png`；自动化截图证据已刷新：`kuaishou-after-dom-publish-click-20260503.png`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-before-manual-publish-cdp-20260502.png`；自动化截图证据已刷新：`kuaishou-before-manual-publish-cdp-20260502.png`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-before-publish-cdp-20260503.png`；自动化截图证据已刷新：`kuaishou-before-publish-cdp-20260503.png`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-debug-after-script-stop-20260503.png`；自动化截图证据已刷新：`kuaishou-debug-after-script-stop-20260503.png`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-0-20260505.png`；自动化截图证据已刷新：`kuaishou-debug-current-0-0-20260505.png`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-1-20260505.png`；自动化截图证据已刷新：`kuaishou-debug-current-0-1-20260505.png`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-2-20260505.png`；自动化截图证据已刷新：`kuaishou-debug-current-0-2-20260505.png`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-3-20260505.png`；自动化截图证据已刷新：`kuaishou-debug-current-0-3-20260505.png`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-4-20260505.png`；自动化截图证据已刷新：`kuaishou-debug-current-0-4-20260505.png`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-dom-inspect-0-1-20260505.png`；自动化截图证据已刷新：`kuaishou-dom-inspect-0-1-20260505.png`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-inspect-7-20260504.png`；自动化截图证据已刷新：`kuaishou-inspect-7-20260504.png`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-inspect-9-20260504.png`；自动化截图证据已刷新：`kuaishou-inspect-9-20260504.png`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-management-published-20260502-1508.png`；自动化截图证据已刷新：`kuaishou-management-published-20260502-1508.png`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-management-published-20260503-2107.png`；自动化截图证据已刷新：`kuaishou-management-published-20260503-2107.png`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-management-under-review-20260502.png`；自动化截图证据已刷新：`kuaishou-management-under-review-20260502.png`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-management-verify-20260503.png`；自动化截图证据已刷新：`kuaishou-management-verify-20260503.png`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-publish-page-20260502-1.png`；自动化截图证据已刷新：`kuaishou-publish-page-20260502-1.png`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_browser_controller.py`；测试用例已刷新：`test-browser-controller`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_content_package.py`；测试用例已刷新：`test-content-package`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_doctor.py`；测试用例已刷新：`test-doctor`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_env.py`；测试用例已刷新：`test-env`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_platform_base.py`；测试用例已刷新：`test-platform-base`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_publish_receipts.py`；测试用例已刷新：`test-publish-receipts`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_wechat_channels.py`；测试用例已刷新：`test-wechat-channels`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/README.md`；监控文件 `` 的配置或说明文件已刷新：`README.md`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/scripts/sync-skills.ps1`；监控文件 `` 的文件已刷新：`sync-skills.ps1`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/scripts/sync-skills.sh`；监控文件 `` 的文件已刷新：`sync-skills.sh`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills-manifest.txt`；监控文件 `` 的文件已刷新：`skills-manifest.txt`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`；skill-center 技能 `clash-verge-standard-env` 的参考资料已刷新：`rules-enhancement`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/SKILL.md`；skill-center 技能 `dachen-founder-flywheel` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/references/review-scorecard.md`；skill-center 技能 `dachen-founder-flywheel` 的参考资料已刷新：`review-scorecard`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/SKILL.md`；skill-center 技能 `data-review` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/dashboard-export-template.json`；skill-center 技能 `data-review` 的参考资料已刷新：`dashboard-export-template`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/docker-dashboard-contract.md`；skill-center 技能 `data-review` 的参考资料已刷新：`docker-dashboard-contract`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/report-template.md`；skill-center 技能 `data-review` 的参考资料已刷新：`report-template`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/kuaishou-ops/SKILL.md`；skill-center 技能 `kuaishou-ops` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-approval/SKILL.md`；skill-center 技能 `lark-approval` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-attendance/SKILL.md`；skill-center 技能 `lark-attendance` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/SKILL.md`；skill-center 技能 `lark-base` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/dashboard-block-data-config.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`dashboard-block-data-config`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/examples.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`examples`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/formula-field-guide.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`formula-field-guide`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-advperm-disable.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-advperm-disable`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-advperm-enable.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-advperm-enable`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-base-copy.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-base-copy`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-base-create.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-base-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-base-get.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-base-get`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-arrange.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-dashboard-arrange`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-create.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-dashboard-block-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-delete.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-dashboard-block-delete`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-get.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-dashboard-block-get`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-list.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-dashboard-block-list`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-update.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-dashboard-block-update`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-create.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-dashboard-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-delete.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-dashboard-delete`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-get.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-dashboard-get`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-list.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-dashboard-list`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-update.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-dashboard-update`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-dashboard`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-data-query.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-data-query`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-create.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-field-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-delete.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-field-delete`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-get.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-field-get`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-list.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-field-list`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-search-options.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-field-search-options`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-update.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-field-update`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-field`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-create.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-form-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-delete.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-form-delete`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-get.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-form-get`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-list.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-form-list`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-create.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-form-questions-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-delete.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-form-questions-delete`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-list.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-form-questions-list`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-update.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-form-questions-update`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-form-questions`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-update.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-form-update`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-form`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-history.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-history`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-batch-create.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-record-batch-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-batch-update.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-record-batch-update`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-delete.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-record-delete`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-get.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-record-get`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-history-list.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-record-history-list`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-list.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-record-list`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-search.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-record-search`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-upload-attachment.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-record-upload-attachment`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-upsert.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-record-upsert`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-record`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-create.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-role-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-delete.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-role-delete`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-get.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-role-get`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-list.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-role-list`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-update.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-role-update`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-shortcut-field-properties.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-shortcut-field-properties`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-shortcut-record-value.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-shortcut-record-value`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-create.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-table-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-delete.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-table-delete`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-get.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-table-get`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-list.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-table-list`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-update.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-table-update`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-table`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-create.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-view-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-delete.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-view-delete`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-card.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-view-get-card`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-filter.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-view-get-filter`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-group.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-view-get-group`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-sort.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-view-get-sort`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-timebar.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-view-get-timebar`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-visible-fields.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-view-get-visible-fields`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-view-get`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-list.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-view-list`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-rename.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-view-rename`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-card.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-view-set-card`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-filter.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-view-set-filter`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-group.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-view-set-group`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-sort.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-view-set-sort`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-timebar.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-view-set-timebar`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-visible-fields.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-view-set-visible-fields`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-view`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-create.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-workflow-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-disable.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-workflow-disable`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-enable.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-workflow-enable`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-get.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-workflow-get`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-guide.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-workflow-guide`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-list.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-workflow-list`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-schema.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-workflow-schema`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-update.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-workflow-update`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-workflow`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workspace.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lark-base-workspace`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lookup-field-guide.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`lookup-field-guide`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/role-config.md`；skill-center 技能 `lark-base` 的参考资料已刷新：`role-config`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/SKILL.md`；skill-center 技能 `lark-calendar` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-agenda.md`；skill-center 技能 `lark-calendar` 的参考资料已刷新：`lark-calendar-agenda`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-create.md`；skill-center 技能 `lark-calendar` 的参考资料已刷新：`lark-calendar-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-freebusy.md`；skill-center 技能 `lark-calendar` 的参考资料已刷新：`lark-calendar-freebusy`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-room-find.md`；skill-center 技能 `lark-calendar` 的参考资料已刷新：`lark-calendar-room-find`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-rsvp.md`；skill-center 技能 `lark-calendar` 的参考资料已刷新：`lark-calendar-rsvp`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-schedule-meeting.md`；skill-center 技能 `lark-calendar` 的参考资料已刷新：`lark-calendar-schedule-meeting`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-suggestion.md`；skill-center 技能 `lark-calendar` 的参考资料已刷新：`lark-calendar-suggestion`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-contact/SKILL.md`；skill-center 技能 `lark-contact` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-contact/references/lark-contact-get-user.md`；skill-center 技能 `lark-contact` 的参考资料已刷新：`lark-contact-get-user`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-contact/references/lark-contact-search-user.md`；skill-center 技能 `lark-contact` 的参考资料已刷新：`lark-contact-search-user`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/SKILL.md`；skill-center 技能 `lark-doc` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-create.md`；skill-center 技能 `lark-doc` 的参考资料已刷新：`lark-doc-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-fetch.md`；skill-center 技能 `lark-doc` 的参考资料已刷新：`lark-doc-fetch`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-media-download.md`；skill-center 技能 `lark-doc` 的参考资料已刷新：`lark-doc-media-download`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-media-insert.md`；skill-center 技能 `lark-doc` 的参考资料已刷新：`lark-doc-media-insert`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-media-preview.md`；skill-center 技能 `lark-doc` 的参考资料已刷新：`lark-doc-media-preview`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-search.md`；skill-center 技能 `lark-doc` 的参考资料已刷新：`lark-doc-search`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-update.md`；skill-center 技能 `lark-doc` 的参考资料已刷新：`lark-doc-update`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-whiteboard.md`；skill-center 技能 `lark-doc` 的参考资料已刷新：`lark-doc-whiteboard`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/SKILL.md`；skill-center 技能 `lark-drive` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-add-comment.md`；skill-center 技能 `lark-drive` 的参考资料已刷新：`lark-drive-add-comment`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-create-folder.md`；skill-center 技能 `lark-drive` 的参考资料已刷新：`lark-drive-create-folder`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-create-shortcut.md`；skill-center 技能 `lark-drive` 的参考资料已刷新：`lark-drive-create-shortcut`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-delete.md`；skill-center 技能 `lark-drive` 的参考资料已刷新：`lark-drive-delete`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-download.md`；skill-center 技能 `lark-drive` 的参考资料已刷新：`lark-drive-download`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-export-download.md`；skill-center 技能 `lark-drive` 的参考资料已刷新：`lark-drive-export-download`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-export.md`；skill-center 技能 `lark-drive` 的参考资料已刷新：`lark-drive-export`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-import.md`；skill-center 技能 `lark-drive` 的参考资料已刷新：`lark-drive-import`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-move.md`；skill-center 技能 `lark-drive` 的参考资料已刷新：`lark-drive-move`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-reactions.md`；skill-center 技能 `lark-drive` 的参考资料已刷新：`lark-drive-reactions`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-task-result.md`；skill-center 技能 `lark-drive` 的参考资料已刷新：`lark-drive-task-result`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-upload.md`；skill-center 技能 `lark-drive` 的参考资料已刷新：`lark-drive-upload`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-event/SKILL.md`；skill-center 技能 `lark-event` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-event/references/lark-event-subscribe.md`；skill-center 技能 `lark-event` 的参考资料已刷新：`lark-event-subscribe`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/SKILL.md`；skill-center 技能 `lark-im` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-create.md`；skill-center 技能 `lark-im` 的参考资料已刷新：`lark-im-chat-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-identity.md`；skill-center 技能 `lark-im` 的参考资料已刷新：`lark-im-chat-identity`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-messages-list.md`；skill-center 技能 `lark-im` 的参考资料已刷新：`lark-im-chat-messages-list`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-search.md`；skill-center 技能 `lark-im` 的参考资料已刷新：`lark-im-chat-search`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-update.md`；skill-center 技能 `lark-im` 的参考资料已刷新：`lark-im-chat-update`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-mget.md`；skill-center 技能 `lark-im` 的参考资料已刷新：`lark-im-messages-mget`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-reply.md`；skill-center 技能 `lark-im` 的参考资料已刷新：`lark-im-messages-reply`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-resources-download.md`；skill-center 技能 `lark-im` 的参考资料已刷新：`lark-im-messages-resources-download`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-search.md`；skill-center 技能 `lark-im` 的参考资料已刷新：`lark-im-messages-search`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-send.md`；skill-center 技能 `lark-im` 的参考资料已刷新：`lark-im-messages-send`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-reactions.md`；skill-center 技能 `lark-im` 的参考资料已刷新：`lark-im-reactions`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-threads-messages-list.md`；skill-center 技能 `lark-im` 的参考资料已刷新：`lark-im-threads-messages-list`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/SKILL.md`；skill-center 技能 `lark-mail` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-draft-create.md`；skill-center 技能 `lark-mail` 的参考资料已刷新：`lark-mail-draft-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-draft-edit.md`；skill-center 技能 `lark-mail` 的参考资料已刷新：`lark-mail-draft-edit`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-forward.md`；skill-center 技能 `lark-mail` 的参考资料已刷新：`lark-mail-forward`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-message.md`；skill-center 技能 `lark-mail` 的参考资料已刷新：`lark-mail-message`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-messages.md`；skill-center 技能 `lark-mail` 的参考资料已刷新：`lark-mail-messages`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-reply-all.md`；skill-center 技能 `lark-mail` 的参考资料已刷新：`lark-mail-reply-all`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-reply.md`；skill-center 技能 `lark-mail` 的参考资料已刷新：`lark-mail-reply`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-send.md`；skill-center 技能 `lark-mail` 的参考资料已刷新：`lark-mail-send`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-signature.md`；skill-center 技能 `lark-mail` 的参考资料已刷新：`lark-mail-signature`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-thread.md`；skill-center 技能 `lark-mail` 的参考资料已刷新：`lark-mail-thread`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-triage.md`；skill-center 技能 `lark-mail` 的参考资料已刷新：`lark-mail-triage`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-watch.md`；skill-center 技能 `lark-mail` 的参考资料已刷新：`lark-mail-watch`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-minutes/SKILL.md`；skill-center 技能 `lark-minutes` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-minutes/references/lark-minutes-download.md`；skill-center 技能 `lark-minutes` 的参考资料已刷新：`lark-minutes-download`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-minutes/references/lark-minutes-search.md`；skill-center 技能 `lark-minutes` 的参考资料已刷新：`lark-minutes-search`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/SKILL.md`；skill-center 技能 `lark-okr` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-contentblock.md`；skill-center 技能 `lark-okr` 的参考资料已刷新：`lark-okr-contentblock`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-cycle-detail.md`；skill-center 技能 `lark-okr` 的参考资料已刷新：`lark-okr-cycle-detail`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-cycle-list.md`；skill-center 技能 `lark-okr` 的参考资料已刷新：`lark-okr-cycle-list`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-entities.md`；skill-center 技能 `lark-okr` 的参考资料已刷新：`lark-okr-entities`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-openapi-explorer/SKILL.md`；skill-center 技能 `lark-openapi-explorer` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-shared/SKILL.md`；skill-center 技能 `lark-shared` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/SKILL.md`；skill-center 技能 `lark-sheets` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-add-dimension.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-add-dimension`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-append.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-append`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-batch-set-style.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-batch-set-style`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-create-filter-view-condition.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-create-filter-view-condition`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-create-filter-view.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-create-filter-view`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-create.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-dimension.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-delete-dimension`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-dropdown.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-delete-dropdown`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-filter-view-condition.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-delete-filter-view-condition`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-filter-view.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-delete-filter-view`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-export.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-export`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-find.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-find`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-formula.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-formula`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-get-dropdown.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-get-dropdown`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-get-filter-view-condition.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-get-filter-view-condition`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-get-filter-view.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-get-filter-view`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-info.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-info`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-insert-dimension.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-insert-dimension`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-list-filter-view-conditions.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-list-filter-view-conditions`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-list-filter-views.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-list-filter-views`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-merge-cells.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-merge-cells`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-move-dimension.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-move-dimension`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-read.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-read`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-replace.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-replace`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-set-dropdown.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-set-dropdown`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-set-style.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-set-style`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-unmerge-cells.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-unmerge-cells`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-dimension.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-update-dimension`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-dropdown.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-update-dropdown`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-filter-view-condition.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-update-filter-view-condition`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-filter-view.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-update-filter-view`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-write-image.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-write-image`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-write.md`；skill-center 技能 `lark-sheets` 的参考资料已刷新：`lark-sheets-write`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-skill-maker/SKILL.md`；skill-center 技能 `lark-skill-maker` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/SKILL.md`；skill-center 技能 `lark-slides` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/examples.md`；skill-center 技能 `lark-slides` 的参考资料已刷新：`examples`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-create.md`；skill-center 技能 `lark-slides` 的参考资料已刷新：`lark-slides-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-media-upload.md`；skill-center 技能 `lark-slides` 的参考资料已刷新：`lark-slides-media-upload`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-xml-presentation-slide-create.md`；skill-center 技能 `lark-slides` 的参考资料已刷新：`lark-slides-xml-presentation-slide-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-xml-presentation-slide-delete.md`；skill-center 技能 `lark-slides` 的参考资料已刷新：`lark-slides-xml-presentation-slide-delete`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-xml-presentations-get.md`；skill-center 技能 `lark-slides` 的参考资料已刷新：`lark-slides-xml-presentations-get`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/slide-templates.md`；skill-center 技能 `lark-slides` 的参考资料已刷新：`slide-templates`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/slides_demo.xml`；skill-center 技能 `lark-slides` 的参考资料已刷新：`slides-demo`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/slides_xml_schema_definition.xml`；skill-center 技能 `lark-slides` 的参考资料已刷新：`slides-xml-schema-definition`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/xml-format-guide.md`；skill-center 技能 `lark-slides` 的参考资料已刷新：`xml-format-guide`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/xml-schema-quick-ref.md`；skill-center 技能 `lark-slides` 的参考资料已刷新：`xml-schema-quick-ref`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/SKILL.md`；skill-center 技能 `lark-task` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-assign.md`；skill-center 技能 `lark-task` 的参考资料已刷新：`lark-task-assign`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-comment.md`；skill-center 技能 `lark-task` 的参考资料已刷新：`lark-task-comment`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-complete.md`；skill-center 技能 `lark-task` 的参考资料已刷新：`lark-task-complete`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-create.md`；skill-center 技能 `lark-task` 的参考资料已刷新：`lark-task-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-followers.md`；skill-center 技能 `lark-task` 的参考资料已刷新：`lark-task-followers`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-get-my-tasks.md`；skill-center 技能 `lark-task` 的参考资料已刷新：`lark-task-get-my-tasks`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-get-related-tasks.md`；skill-center 技能 `lark-task` 的参考资料已刷新：`lark-task-get-related-tasks`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-reminder.md`；skill-center 技能 `lark-task` 的参考资料已刷新：`lark-task-reminder`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-reopen.md`；skill-center 技能 `lark-task` 的参考资料已刷新：`lark-task-reopen`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-search.md`；skill-center 技能 `lark-task` 的参考资料已刷新：`lark-task-search`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-set-ancestor.md`；skill-center 技能 `lark-task` 的参考资料已刷新：`lark-task-set-ancestor`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-subscribe-event.md`；skill-center 技能 `lark-task` 的参考资料已刷新：`lark-task-subscribe-event`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-create.md`；skill-center 技能 `lark-task` 的参考资料已刷新：`lark-task-tasklist-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-members.md`；skill-center 技能 `lark-task` 的参考资料已刷新：`lark-task-tasklist-members`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-search.md`；skill-center 技能 `lark-task` 的参考资料已刷新：`lark-task-tasklist-search`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-task-add.md`；skill-center 技能 `lark-task` 的参考资料已刷新：`lark-task-tasklist-task-add`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-update.md`；skill-center 技能 `lark-task` 的参考资料已刷新：`lark-task-update`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/SKILL.md`；skill-center 技能 `lark-vc` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/references/lark-vc-notes.md`；skill-center 技能 `lark-vc` 的参考资料已刷新：`lark-vc-notes`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/references/lark-vc-recording.md`；skill-center 技能 `lark-vc` 的参考资料已刷新：`lark-vc-recording`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/references/lark-vc-search.md`；skill-center 技能 `lark-vc` 的参考资料已刷新：`lark-vc-search`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/SKILL.md`；skill-center 技能 `lark-whiteboard` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/connectors.md`；skill-center 技能 `lark-whiteboard` 的参考资料已刷新：`connectors`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/content.md`；skill-center 技能 `lark-whiteboard` 的参考资料已刷新：`content`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/lark-whiteboard-query.md`；skill-center 技能 `lark-whiteboard` 的参考资料已刷新：`lark-whiteboard-query`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/lark-whiteboard-update.md`；skill-center 技能 `lark-whiteboard` 的参考资料已刷新：`lark-whiteboard-update`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/layout.md`；skill-center 技能 `lark-whiteboard` 的参考资料已刷新：`layout`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/schema.md`；skill-center 技能 `lark-whiteboard` 的参考资料已刷新：`schema`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/style.md`；skill-center 技能 `lark-whiteboard` 的参考资料已刷新：`style`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/typography.md`；skill-center 技能 `lark-whiteboard` 的参考资料已刷新：`typography`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/routes/dsl.md`；skill-center 技能 `lark-whiteboard` 的文件已刷新：`routes/dsl.md`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/routes/mermaid.md`；skill-center 技能 `lark-whiteboard` 的文件已刷新：`routes/mermaid.md`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/routes/svg.md`；skill-center 技能 `lark-whiteboard` 的文件已刷新：`routes/svg.md`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/architecture.md`；skill-center 技能 `lark-whiteboard` 的文件已刷新：`scenes/architecture.md`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/bar-chart.md`；skill-center 技能 `lark-whiteboard` 的文件已刷新：`scenes/bar-chart.md`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/comparison.md`；skill-center 技能 `lark-whiteboard` 的文件已刷新：`scenes/comparison.md`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/fishbone.md`；skill-center 技能 `lark-whiteboard` 的文件已刷新：`scenes/fishbone.md`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/flowchart.md`；skill-center 技能 `lark-whiteboard` 的文件已刷新：`scenes/flowchart.md`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/flywheel.md`；skill-center 技能 `lark-whiteboard` 的文件已刷新：`scenes/flywheel.md`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/funnel.md`；skill-center 技能 `lark-whiteboard` 的文件已刷新：`scenes/funnel.md`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/line-chart.md`；skill-center 技能 `lark-whiteboard` 的文件已刷新：`scenes/line-chart.md`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/mermaid.md`；skill-center 技能 `lark-whiteboard` 的文件已刷新：`scenes/mermaid.md`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/milestone.md`；skill-center 技能 `lark-whiteboard` 的文件已刷新：`scenes/milestone.md`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/organization.md`；skill-center 技能 `lark-whiteboard` 的文件已刷新：`scenes/organization.md`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/pyramid.md`；skill-center 技能 `lark-whiteboard` 的文件已刷新：`scenes/pyramid.md`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/swimlane.md`；skill-center 技能 `lark-whiteboard` 的文件已刷新：`scenes/swimlane.md`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/treemap.md`；skill-center 技能 `lark-whiteboard` 的文件已刷新：`scenes/treemap.md`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-wiki/SKILL.md`；skill-center 技能 `lark-wiki` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-wiki/references/lark-wiki-move.md`；skill-center 技能 `lark-wiki` 的参考资料已刷新：`lark-wiki-move`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-wiki/references/lark-wiki-node-create.md`；skill-center 技能 `lark-wiki` 的参考资料已刷新：`lark-wiki-node-create`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-workflow-meeting-summary/SKILL.md`；skill-center 技能 `lark-workflow-meeting-summary` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-workflow-standup-report/SKILL.md`；skill-center 技能 `lark-workflow-standup-report` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/platform-cover-ops/SKILL.md`；skill-center 技能 `platform-cover-ops` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh`；skill-center 技能 `playwright` 的辅助脚本已刷新：`playwright-cli`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/SKILL.md`；skill-center 技能 `seedance-video-api` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/agents/openai.yaml`；skill-center 技能 `seedance-video-api` 的 agent 配置已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0.json`；skill-center 技能 `seedance-video-api` 的示例载荷已刷新：`asset-reference-identity-lock-seedance-2-0`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0_fast.json`；skill-center 技能 `seedance-video-api` 的示例载荷已刷新：`asset-reference-identity-lock-seedance-2-0-fast`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/extend_bridge_seedance_2_0.json`；skill-center 技能 `seedance-video-api` 的示例载荷已刷新：`extend-bridge-seedance-2-0`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/extend_single_seedance_2_0.json`；skill-center 技能 `seedance-video-api` 的示例载荷已刷新：`extend-single-seedance-2-0`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/i2v_first_frame_seedance_2_0.json`；skill-center 技能 `seedance-video-api` 的示例载荷已刷新：`i2v-first-frame-seedance-2-0`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/multimodal_reference_seedance_2_0.json`；skill-center 技能 `seedance-video-api` 的示例载荷已刷新：`multimodal-reference-seedance-2-0`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/t2v_seedance_2_0.json`；skill-center 技能 `seedance-video-api` 的示例载荷已刷新：`t2v-seedance-2-0`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/t2v_seedance_2_0_fast.json`；skill-center 技能 `seedance-video-api` 的示例载荷已刷新：`t2v-seedance-2-0-fast`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/api-basics.md`；skill-center 技能 `seedance-video-api` 的参考资料已刷新：`api-basics`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/cover-execution.md`；skill-center 技能 `seedance-video-api` 的参考资料已刷新：`cover-execution`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/cover-package.md`；skill-center 技能 `seedance-video-api` 的参考资料已刷新：`cover-package`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/customer-trial-intake-and-production-sop.md`；skill-center 技能 `seedance-video-api` 的参考资料已刷新：`customer-trial-intake-and-production-sop`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/prompt-rule-09-subtitle-whitelist.md`；skill-center 技能 `seedance-video-api` 的参考资料已刷新：`prompt-rule-09-subtitle-whitelist`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/prompt-rule-10-dialogue-subtitle-hard-requirements.md`；skill-center 技能 `seedance-video-api` 的参考资料已刷新：`prompt-rule-10-dialogue-subtitle-hard-requirements`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/prompt-template.md`；skill-center 技能 `seedance-video-api` 的参考资料已刷新：`prompt-template`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/real-person-consistency.md`；skill-center 技能 `seedance-video-api` 的参考资料已刷新：`real-person-consistency`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/workflows.md`；skill-center 技能 `seedance-video-api` 的参考资料已刷新：`workflows`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/build_cover_package.ps1`；skill-center 技能 `seedance-video-api` 的辅助脚本已刷新：`build-cover-package`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/build_cover_package.py`；skill-center 技能 `seedance-video-api` 的辅助脚本已刷新：`build-cover-package`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/extract_cover_candidates.ps1`；skill-center 技能 `seedance-video-api` 的辅助脚本已刷新：`extract-cover-candidates`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/extract_cover_candidates.py`；skill-center 技能 `seedance-video-api` 的辅助脚本已刷新：`extract-cover-candidates`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/init_cover_package.ps1`；skill-center 技能 `seedance-video-api` 的辅助脚本已刷新：`init-cover-package`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/init_cover_package.py`；skill-center 技能 `seedance-video-api` 的辅助脚本已刷新：`init-cover-package`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/invoke_seedance_script.ps1`；skill-center 技能 `seedance-video-api` 的辅助脚本已刷新：`invoke-seedance-script`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/render_cover_package.ps1`；skill-center 技能 `seedance-video-api` 的辅助脚本已刷新：`render-cover-package`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/render_cover_package.py`；skill-center 技能 `seedance-video-api` 的辅助脚本已刷新：`render-cover-package`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.ps1`；skill-center 技能 `seedance-video-api` 的辅助脚本已刷新：`seedance-cli`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.py`；skill-center 技能 `seedance-video-api` 的辅助脚本已刷新：`seedance-cli`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.sh`；skill-center 技能 `seedance-video-api` 的辅助脚本已刷新：`seedance-cli`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/SKILL.md`；skill-center 技能 `social-publish-automation` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/references/platform-notes.md`；skill-center 技能 `social-publish-automation` 的参考资料已刷新：`platform-notes`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/toutiao-ops/SKILL.md`；skill-center 技能 `toutiao-ops` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/SKILL.md`；skill-center 技能 `wechat-channels-launchagent-keepalive` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/agents/openai.yaml`；skill-center 技能 `wechat-channels-launchagent-keepalive` 的 agent 配置已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/register-keepalive-task.ps1`；skill-center 技能 `wechat-channels-launchagent-keepalive` 的辅助脚本已刷新：`register-keepalive-task`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/run-keepalive.ps1`；skill-center 技能 `wechat-channels-launchagent-keepalive` 的辅助脚本已刷新：`run-keepalive`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/wechat_channels_keepalive.py`；skill-center 技能 `wechat-channels-launchagent-keepalive` 的辅助脚本已刷新：`wechat-channels-keepalive`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/SKILL.md`；skill-center 技能 `wechat-channels-ops` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/references/platform-notes.md`；skill-center 技能 `wechat-channels-ops` 的参考资料已刷新：`platform-notes`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/SKILL.md`；skill-center 技能 `xiaohongshu-ops` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/references/platform-notes.md`；skill-center 技能 `xiaohongshu-ops` 的参考资料已刷新：`platform-notes`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/SKILL.md`；skill-center 技能 `xiaoyunque-source-video` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/agents/openai.yaml`；skill-center 技能 `xiaoyunque-source-video` 的 agent 配置已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/prompt-template.md`；skill-center 技能 `xiaoyunque-source-video` 的参考资料已刷新：`prompt-template`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/source-video-playbook.md`；skill-center 技能 `xiaoyunque-source-video` 的参考资料已刷新：`source-video-playbook`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/.gitignore`；skill-center 技能 `xyq-nest-skill` 的配置或说明文件已刷新：`.gitignore`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/README.md`；skill-center 技能 `xyq-nest-skill` 的配置或说明文件已刷新：`README.md`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/SKILL.md`；skill-center 技能 `xyq-nest-skill` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/_common.py`；skill-center 技能 `xyq-nest-skill` 的辅助脚本已刷新：`-common`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/download_results.cmd`；skill-center 技能 `xyq-nest-skill` 的辅助脚本已刷新：`download-results`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/download_results.ps1`；skill-center 技能 `xyq-nest-skill` 的辅助脚本已刷新：`download-results`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/download_results.py`；skill-center 技能 `xyq-nest-skill` 的辅助脚本已刷新：`download-results`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/get_thread.cmd`；skill-center 技能 `xyq-nest-skill` 的辅助脚本已刷新：`get-thread`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/get_thread.ps1`；skill-center 技能 `xyq-nest-skill` 的辅助脚本已刷新：`get-thread`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/get_thread.py`；skill-center 技能 `xyq-nest-skill` 的辅助脚本已刷新：`get-thread`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/invoke_xyq_script.ps1`；skill-center 技能 `xyq-nest-skill` 的辅助脚本已刷新：`invoke-xyq-script`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/submit_run.cmd`；skill-center 技能 `xyq-nest-skill` 的辅助脚本已刷新：`submit-run`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/submit_run.ps1`；skill-center 技能 `xyq-nest-skill` 的辅助脚本已刷新：`submit-run`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/submit_run.py`；skill-center 技能 `xyq-nest-skill` 的辅助脚本已刷新：`submit-run`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/upload_file.cmd`；skill-center 技能 `xyq-nest-skill` 的辅助脚本已刷新：`upload-file`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/upload_file.ps1`；skill-center 技能 `xyq-nest-skill` 的辅助脚本已刷新：`upload-file`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/upload_file.py`；skill-center 技能 `xyq-nest-skill` 的辅助脚本已刷新：`upload-file`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/SKILL.md`；仓库技能镜像 `codex-feishu-bridge-skill` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/agents/openai.yaml`；仓库技能镜像 `codex-feishu-bridge-skill` 的 agent 配置已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/.bridge.env.example`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`.bridge.env.example`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/launchd/com.codex.feishu-bridge.plist`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`com.codex.feishu-bridge.plist`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/package.json`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`package.json`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-logs.ps1`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`bridge-logs.ps1`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-logs.sh`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`bridge-logs.sh`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.ps1`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`bridge-start.ps1`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.sh`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`bridge-start.sh`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-status.ps1`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`bridge-status.ps1`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-status.sh`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`bridge-status.sh`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-stop.ps1`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`bridge-stop.ps1`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-stop.sh`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`bridge-stop.sh`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/configure_notify_target.ps1`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`configure_notify_target.ps1`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/configure_notify_target.sh`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`configure_notify_target.sh`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.cmd`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`mirror-view.cmd`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.command`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`mirror-view.command`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.js`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`mirror-view.js`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.ps1`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`mirror-view.ps1`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.sh`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`mirror-view.sh`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/run-bridge.ps1`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`run-bridge.ps1`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/run-bridge.sh`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`run-bridge.sh`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/run-platform-script.js`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`run-platform-script.js`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/src/bridge.js`；仓库技能镜像 `codex-feishu-bridge-skill` 的模板资源已刷新：`bridge.js`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART.md`；仓库技能镜像 `codex-feishu-bridge-skill` 的参考资料已刷新：`INSTALL-QUICKSTART`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/architecture.md`；仓库技能镜像 `codex-feishu-bridge-skill` 的参考资料已刷新：`architecture`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/deployment.md`；仓库技能镜像 `codex-feishu-bridge-skill` 的参考资料已刷新：`deployment`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/user-guide.md`；仓库技能镜像 `codex-feishu-bridge-skill` 的参考资料已刷新：`user-guide`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/install_bridge_template.ps1`；仓库技能镜像 `codex-feishu-bridge-skill` 的辅助脚本已刷新：`install-bridge-template`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/install_bridge_template.sh`；仓库技能镜像 `codex-feishu-bridge-skill` 的辅助脚本已刷新：`install-bridge-template`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/package_skill_bundle.sh`；仓库技能镜像 `codex-feishu-bridge-skill` 的辅助脚本已刷新：`package-skill-bundle`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/SKILL.md`；仓库技能镜像 `multi-platform-content-review-skill` 的技能说明已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/agents/openai.yaml`；仓库技能镜像 `multi-platform-content-review-skill` 的 agent 配置已刷新。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/account-slice-analysis.md`；仓库技能镜像 `multi-platform-content-review-skill` 的参考资料已刷新：`account-slice-analysis`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/dashboard-export-template.json`；仓库技能镜像 `multi-platform-content-review-skill` 的参考资料已刷新：`dashboard-export-template`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/diagnosis-and-decisions.md`；仓库技能镜像 `multi-platform-content-review-skill` 的参考资料已刷新：`diagnosis-and-decisions`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/docker-dashboard-contract.md`；仓库技能镜像 `multi-platform-content-review-skill` 的参考资料已刷新：`docker-dashboard-contract`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/platform-metrics.md`；仓库技能镜像 `multi-platform-content-review-skill` 的参考资料已刷新：`platform-metrics`。
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/report-template.md`；仓库技能镜像 `multi-platform-content-review-skill` 的参考资料已刷新：`report-template`。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-22T22:02:38Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现一次大批量技能刷新：`~/.codex/skills`、仓库 `skills/` 与 `skill-center/skills/` 同步出现镜像式修改，重点覆盖 `codex-feishu-bridge`、Lark 系列技能、`seedance-video-api`、`xyq-nest-skill`、`data-review` 与 `clash-verge-standard-env`。
+- `automation/python-platform-takeover` 同步刷新了 campaign / Hermes 配置、publisher 代码、状态台账、截图证据与测试文件，属于支持自动化的整批更新。
+- 这批文件在当前树与上一轮 `2540` 条快照对比中表现为 `0` 新增、`936` 修改、`0` 删除；虽然都是新发现的树差异，但 `mtime` 没有晚于基线的命中项，说明这次主要是保留旧时间戳的拷贝/镜像更新，必须依赖快照比对识别。
+- 其中仓库已跟踪的 bridge 文件差异可见新的 `.bridge.env` 参数示例、`LARK_CLI_PROFILE`/显式进度线程支持，以及 bridge 文档说明补充；其余大部分文件通过镜像刷新一起进入本批次。
+
+## 2026-05-23 07:04:51 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-22T22:02:24.903Z`（本地时区为 `2026-05-23 06:02:24.903 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-22T22:07:37Z`（本地时区为 `2026-05-23 06:07:37 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免把上一轮已记录的 936 文件镜像刷新重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 先对当前受监控文件树与上一轮 `last-snapshot.json` 的 `2540` 条持久化快照逐项比对，结果保持 `2540 -> 2540`，路径集合、整数秒 `mtime` 与 `size` 全部一致，因此没有新增、修改或删除
+- 再交叉检查仓库 `skills/`、`skill-center/` 与 `automation/` 的当前 `git status`，确认工作树里仍可见的技能相关脏文件都已经包含在上一轮快照中，本轮没有出现新的技能或支持自动化差异
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-22T22:07:37Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-22T22:07:37Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-23 08:05:58 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-22T23:03:24.901Z`（本地时区为 `2026-05-23 07:03:24.901 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-22T23:04:51Z`（本地时区为 `2026-05-23 07:04:51 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免把上一轮已经落盘的 zero-change 结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 对当前受监控文件树与上一轮 `last-snapshot.json` 的 `2540` 条持久化快照逐项比对，结果保持 `2540 -> 2540`，路径集合、整数秒 `mtime` 与 `size` 全部一致，因此没有新增、修改或删除
+- 交叉检查仓库 `skills/`、`skill-center/` 与 `automation/` 的当前工作树状态，确认目前仍存在的技能相关脏文件都已经包含在上一轮快照中，本轮没有出现新的技能或支持自动化差异
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-22T23:04:51Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-22T23:04:51Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-23 09:07:46 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-23T00:04:25.443Z`（本地时区为 `2026-05-23 08:04:25.443 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-23T00:05:58Z`（本地时区为 `2026-05-23 08:05:58 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免把上一轮已经确认的 zero-change 结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前受监控文件树与上一轮 `last-snapshot.json` 的 `2540` 条持久化快照逐项比对，结果保持 `2540 -> 2540`，路径集合、整数秒 `mtime` 与 `size` 全部一致，因此没有新增、修改或删除
+- 交叉检查仓库 `skills/`、`skill-center/` 与 `automation/` 的当前工作树状态，确认目前仍存在的技能相关脏文件都已经包含在 `2026-05-23 06:07:37 CST` 那批已落账的 `936` 个修改中，本轮没有出现新的技能或支持自动化差异
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-23T00:05:58Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-23T00:05:58Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- `docs/automation/github-sync-status.md` 已经包含 `2026-05-23 06:07:37 CST` 的待同步提醒；由于本轮没有新批次，故不再追加新的同步说明。
+
+## 2026-05-23 10:07:38 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-23T01:05:25.755Z`（本地时区为 `2026-05-23 09:05:25.755 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-23T01:07:46Z`（本地时区为 `2026-05-23 09:07:46 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免把并发监控已经确认的 zero-change 结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前受监控文件树与上一轮 `last-snapshot.json` 的 `2540` 条持久化快照逐项比对，结果保持 `2540 -> 2540`，路径集合、整数秒 `mtime` 与 `size` 全部一致，因此没有新增、修改或删除
+- 额外按有效运行基线 `2026-05-23T01:07:46Z` 复筛受监控文件的精确 `mtime`；结果仍为空，说明上轮完成之后没有新的技能或支持自动化文件写入
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-23T01:07:46Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-23T01:07:46Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- `docs/automation/github-sync-status.md` 已经包含 `2026-05-23 06:07:37 CST` 的待同步提醒；由于本轮没有新批次，故不再追加新的同步说明。
+
+## 2026-05-23 11:09:49 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-23T02:05:56.030Z`（本地时区为 `2026-05-23 10:05:56.030 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-23T02:07:38Z`（本地时区为 `2026-05-23 10:07:38 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免把上一轮已经确认的 zero-change 结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前受监控文件树与上一轮 `last-snapshot.json` 的 `2540` 条持久化快照逐项比对，结果保持 `2540 -> 2540`，路径集合、整数秒 `mtime` 与 `size` 全部一致，因此没有新增、修改或删除
+- 额外按有效运行基线 `2026-05-23T02:07:38Z` 复筛受监控文件的精确 `mtime`；结果仍为空，说明上轮完成之后没有新的技能或支持自动化文件写入
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-23T02:07:38Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-23T02:07:38Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- `docs/automation/github-sync-status.md` 已经包含 `2026-05-23 06:07:37 CST` 的待同步提醒；由于本轮没有新批次，故不再追加新的同步说明。
+
+## 2026-05-23 12:11:50 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-23T03:07:56.319Z`（本地时区为 `2026-05-23 11:07:56.319 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-23T03:09:49Z`（本地时区为 `2026-05-23 11:09:49 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免把上一轮已经确认的 zero-change 结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前受监控文件树与上一轮 `last-snapshot.json` 的 `2540` 条持久化快照逐项比对，结果保持 `2540 -> 2540`，路径集合、整数秒 `mtime` 与 `size` 全部一致，因此没有新增、修改或删除
+- 额外按有效运行基线 `2026-05-23T03:09:49Z` 复筛受监控文件的精确 `mtime`；结果仍为空，说明上轮完成之后没有新的技能或支持自动化文件写入
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-23T03:09:49Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-23T03:09:49Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- `docs/automation/github-sync-status.md` 已经包含 `2026-05-23 06:07:37 CST` 的待同步提醒；由于本轮没有新批次，故不再追加新的同步说明。
+
+## 2026-05-23 13:12:04 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-23T04:09:56.400Z`（本地时区为 `2026-05-23 12:09:56.400 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-23T04:11:50Z`（本地时区为 `2026-05-23 12:11:50 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免把上一轮已经确认的 zero-change 结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前受监控文件树与上一轮 `last-snapshot.json` 的 `2540` 条持久化快照逐项比对，结果保持 `2540 -> 2540`，路径集合、整数秒 `mtime` 与 `size` 全部一致，因此没有新增、修改或删除
+- 额外按有效运行基线 `2026-05-23T04:11:50Z` 复筛受监控文件的精确 `mtime`；结果仍为空，说明上轮完成之后没有新的技能或支持自动化文件写入
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-23T04:11:50Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-23T04:11:50Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- `docs/automation/github-sync-status.md` 已经包含 `2026-05-23 06:07:37 CST` 的待同步提醒；由于本轮没有新批次，故不再追加新的同步说明。
+
+## 2026-05-23 14:13:25 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-23T05:10:56.316Z`（本地时区为 `2026-05-23 13:10:56.316 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-23T05:12:04Z`（本地时区为 `2026-05-23 13:12:04 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免把上一轮已经确认的 zero-change 结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前受监控文件树与上一轮 `last-snapshot.json` 的 `2540` 条持久化快照逐项比对，结果保持 `2540 -> 2540`，路径集合、整数秒 `mtime` 与 `size` 全部一致，因此没有新增、修改或删除
+- 额外按有效运行基线 `2026-05-23T05:12:04Z` 复筛受监控文件的精确 `mtime`；结果仍为空，说明上轮完成之后没有新的技能或支持自动化文件写入
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-23T05:12:04Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-23T05:12:04Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- `docs/automation/github-sync-status.md` 已经包含 `2026-05-23 06:07:37 CST` 的待同步提醒；由于本轮没有新批次，故不再追加新的同步说明。
+
+## 2026-05-23 15:13:42 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-23T06:11:26.703Z`（本地时区为 `2026-05-23 14:11:26.703 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-23T06:13:25Z`（本地时区为 `2026-05-23 14:13:25 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免把上一轮已经确认的 zero-change 结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前受监控文件树与上一轮 `last-snapshot.json` 的 `2540` 条持久化快照逐项比对，结果保持 `2540 -> 2540`，路径集合、整数秒 `mtime` 与 `size` 全部一致，因此没有新增、修改或删除
+- 额外按有效运行基线 `2026-05-23T06:13:25Z` 复筛受监控文件的精确 `mtime`；结果仍为空，说明上轮完成之后没有新的技能或支持自动化文件写入
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-23T06:13:25Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-23T06:13:25Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- `docs/automation/github-sync-status.md` 已经包含 `2026-05-23 06:07:37 CST` 的待同步提醒；由于本轮没有新批次，故不再追加新的同步说明。
+
+## 2026-05-23 16:16:13 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-23T07:12:39.657Z`（本地时区为 `2026-05-23 15:12:39.657 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-23T07:14:09Z`（本地时区为 `2026-05-23 15:14:09 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免把上一轮已经确认的 zero-change 结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前受监控文件树与上一轮 `last-snapshot.json` 的 `2540` 条持久化快照逐项比对，结果保持 `2540 -> 2540`，路径集合、整数秒 `mtime` 与 `size` 全部一致，因此没有新增、修改或删除
+- 额外按有效运行基线 `2026-05-23T07:14:09Z` 复筛受监控文件的精确 `mtime`；结果仍为空，说明上轮完成之后没有新的技能或支持自动化文件写入
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-23T07:14:09Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-23T07:14:09Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- `docs/automation/github-sync-status.md` 已经包含 `2026-05-23 06:07:37 CST` 的待同步提醒；由于本轮没有新批次，故不再追加新的同步说明。
+
+## 2026-05-23 17:17:58 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-23T08:14:39.835Z`（本地时区为 `2026-05-23 16:14:39.835 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-23T08:16:13Z`（本地时区为 `2026-05-23 16:16:13 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免把上一轮已经确认的 zero-change 结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前受监控文件树与上一轮 `last-snapshot.json` 的 `2540` 条持久化快照逐项比对，结果保持 `2540 -> 2540`，路径集合、整数秒 `mtime` 与 `size` 全部一致，因此没有新增、修改或删除
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-23T08:16:13Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-23T08:16:13Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- `docs/automation/github-sync-status.md` 已经包含 `2026-05-23 06:07:37 CST` 的待同步提醒；由于本轮没有新批次，故不再追加新的同步说明。
+
+## 2026-05-23 18:19:34 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-23T09:16:09.852Z`（本地时区为 `2026-05-23 17:16:09.852 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-23T09:17:58Z`（本地时区为 `2026-05-23 17:17:58 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免把上一轮已经确认的 zero-change 结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前受监控文件树与上一轮 `last-snapshot.json` 的 `2540` 条持久化快照逐项比对，结果保持 `2540 -> 2540`，路径集合、整数秒 `mtime` 与 `size` 全部一致，因此没有新增、修改或删除
+- 额外按有效运行基线 `2026-05-23T09:17:58Z` 复筛受监控文件的精确 `mtime`；结果仍为空，说明上轮完成之后没有新的技能或支持自动化文件写入
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-23T09:17:58Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-23T09:17:58Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化快照一致。
+- `docs/automation/github-sync-status.md` 已经包含 `2026-05-23 06:07:37 CST` 的待同步提醒；由于本轮没有新批次，故不再追加新的同步说明。
+
+## 2026-05-23 19:21:19 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-23T10:17:39.978Z`（本地时区为 `2026-05-23 18:17:39.978 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-23T10:19:34Z`（本地时区为 `2026-05-23 18:19:34 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免把上一轮已经确认的 zero-change 结果重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前受监控文件树与上一轮 `last-snapshot.json` 的 `2540` 条持久化快照逐项比对后，结果变为 `2540 -> 2543`，新增 `3` 个文件，且 `state/hermes-handoff/latest.json` 的整数秒 `mtime` 与 `size` 发生变化
+- 额外按有效运行基线 `2026-05-23T10:19:34Z` 复筛受监控文件的精确 `mtime`；命中的仍是同一组 `4` 个文件，说明它们都发生在上轮完成之后
+- 结果汇总: 新增 `3`，修改 `1`，删除 `0`
+
+### 新增文件
+- 新增: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-23-ai-employee-pending-status-before-rewrite.yaml`；新增 `2026-05-23-ai-employee-pending-status-before-rewrite` 的全平台 content package，定义视频/封面资产、九个平台上传计划、平台文案、指纹哈希，以及 `do_not_publish` / `do_not_upload` / `do_not_click_submit` 等安全约束。
+- 新增: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-23-ai-employee-pending-status-before-rewrite.json`；新增对应的 Hermes handoff 包，落地七个当前支持平台的标题/描述/素材路径、receipt 目标、内容指纹，并明确 `allow_live=false` 且抖音仍标记为 `unsupported_by_current_hermes_skill`。
+- 新增: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-23-ai-employee-pending-status-before-rewrite.json`；为该 campaign 建立初始 publish receipt 台账，状态为 `not_published`，`receipts` 为空，并预置后续各平台回执字段 schema。
+
+### 修改文件
+- 修改: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/hermes-handoff/latest.json`；latest handoff 指针切换到 `2026-05-23-ai-employee-pending-status-before-rewrite`，同步更新 content package 路径、receipt 路径、全平台上传计划、素材指纹和 `updated_at` 时间戳。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-23T10:19:34Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 1 个新的技能/支持自动化变更批次，合计 `3` 个新增、`1` 个修改、`0` 个删除；变更全部集中在 `automation/python-platform-takeover` 的新 campaign 包、receipt 骨架和 latest handoff 指针。
+- 这批变化把 `2026-05-23-ai-employee-pending-status-before-rewrite` 这条 campaign 接入了现有 publisher 台账链路，但仍保持 `do_not_publish` 与 `allow_live=false` 的防误发约束，因此需要后续进入 GitHub 同步视野。
+
+## 2026-05-23 20:20:37 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-23T11:18:10.408Z`（本地时区为 `2026-05-23 19:18:10.408 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 当前记录的 `last_run_completed_at` 为 `2026-05-23T19:20:29Z`，但它晚于本轮实际扫描时间 `2026-05-23T12:20:37Z`，属于未来时间戳，因此本轮不把它当作可信基线
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`、两个 pending 文档，以及当前仓库中的最新监控记录
+- 确认 `2026-05-23 19:21:19 CST` 那条现有记录已经完整覆盖自 `2026-05-23T11:18:10.408Z` 以来的真实技能/支持自动化变更：新增 `3`、修改 `1`、删除 `0`
+- 将当前文件树与 `last-snapshot.json` 对照后，只额外看到 `/Users/baishangjituan/.codex/skills/current-run-snapshot.json`；该文件内容是整棵 skills 树的监控快照副本，不属于自定义 skill 本体或 supporting automation 资产，因此本轮按监控产物排除，不计入技能变更
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`（无额外变更；上一条 `2026-05-23 19:21:19 CST` 记录已覆盖本消息要求的变更批次）
+
+### 新增文件
+- 无。本轮没有发现除已记录批次之外的新 skill-related 文件。
+
+### 修改文件
+- 无。本轮没有发现除已记录批次之外的新 skill-related 文件修改。
+
+### 删除文件
+- 无。本轮没有发现除已记录批次之外的 skill-related 文件删除。
+
+### 新建 Python 文件
+- 无。自 `2026-05-23T11:18:10.408Z` 以来，四个扫描目录中没有出现新的 `.py` 技能文件或 supporting automation Python 文件。
+
+### 变更摘要
+- 自本次任务消息给定的 `Last run` 以来，唯一的真实技能/支持自动化变更批次就是上方已记录的 `2026-05-23 19:21:19 CST` 那组 `automation/python-platform-takeover` 变更。
+- 本轮复核没有发现额外需要补记到 `github-sync-status.md` 的新批次；现存同步提示已足以覆盖后续 GitHub 跟进。
+
+## 2026-05-23 21:21:48 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-23T12:20:10.539Z`（本地时区为 `2026-05-23 20:20:10.539 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-23T12:24:33Z`（本地时区为 `2026-05-23 20:24:33 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 额外忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前受监控文件树与上一轮 `last-snapshot.json` 的 `2543` 条持久化快照逐项比对后，结果保持 `2543 -> 2543`，路径集合、整数秒 `mtime` 和 `size` 都完全一致，因此没有新增、修改或删除
+- 额外按上一轮实际完成时间 `2026-05-23T12:24:33Z` 复筛受监控文件的精确 `mtime`；结果为空，说明自上一轮完成以来没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-23T12:24:33Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-23T12:24:33Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与持久化的 `2543` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-23 22:22:25 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-23T13:20:40.903Z`（本地时区为 `2026-05-23 21:20:40.903 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-23T13:21:48Z`（本地时区为 `2026-05-23 21:21:48 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 额外忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前受监控文件树与上一轮 `last-snapshot.json` 的 `2543` 条持久化快照逐项比对后，结果保持 `2543 -> 2543`，路径集合、整数秒 `mtime` 和 `size` 都完全一致，因此没有新增、修改或删除
+- 额外按上一轮实际完成时间 `2026-05-23T13:21:48Z` 复筛受监控文件的精确 `mtime`；结果为空，说明自上一轮完成以来没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自 `2026-05-23T13:21:48Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于 `2026-05-23T13:21:48Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与持久化的 `2543` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-23 23:24:29 CST
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-23T14:21:11.000Z`（本地时区为 `2026-05-23 22:21:11.000 CST`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前记录的上一轮实际完成时间是 `2026-05-23T14:22:25Z`（本地时区为 `2026-05-23 22:22:25 CST`）；由于它比任务消息里的 `Last run` 更晚，本轮继续以该持久化结果作为有效运行基线，避免重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 额外忽略本轮会被自动追加的监控文档 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前受监控文件树与上一轮 `last-snapshot.json` 的 `2543` 条持久化快照逐项比对后，结果变为 `2543 -> 2537`，没有新增或修改，但有 `6` 个文件路径消失
+- 结果汇总: 新增 `0`，修改 `0`，删除 `6`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 删除: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher_takeover.egg-info/PKG-INFO`；删除 `social_publisher_takeover` 的发行包元数据主清单，原本记录包名、版本与基础说明。
+- 删除: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher_takeover.egg-info/SOURCES.txt`；删除 setuptools 生成的源码打包文件列表，原本枚举该支持自动化分发时纳入的脚本与资源。
+- 删除: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher_takeover.egg-info/dependency_links.txt`；删除发行包依赖链接占位文件，表明本地打包产物目录被整体清理。
+- 删除: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher_takeover.egg-info/entry_points.txt`；删除 CLI 入口点声明文件，原本用于暴露 `social-publisher-takeover` 命令。
+- 删除: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher_takeover.egg-info/requires.txt`；删除打包依赖清单，原本列出该发布接管自动化运行所需 Python 依赖。
+- 删除: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher_takeover.egg-info/top_level.txt`；删除顶层模块名记录文件，原本标记发行包导出的顶层 Python package。
+
+### 新建 Python 文件
+- 无。自 `2026-05-23T14:22:25Z` 以来，四个扫描目录中没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 1 个新的技能/支持自动化变更批次，合计 `0` 个新增、`0` 个修改、`6` 个删除；变更全部集中在 `automation/python-platform-takeover/social_publisher_takeover.egg-info/`。
+- 这批变化本质上是 `python-platform-takeover` 支持自动化的 setuptools/egg-info 本地打包元数据被整体清理，属于发布接管工具分发痕迹删除；如果这是有意去产物，需要后续同步到 GitHub 以免快照持续重复报变。

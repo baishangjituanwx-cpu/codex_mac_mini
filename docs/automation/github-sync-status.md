@@ -2493,3 +2493,46 @@
   - 未提交 `automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json` 及其两个 `.stale-*` 文件，因为它们是旧运行态残留，不属于 `2026-05-22` 这批待同步变更。
   - 未在 `codex/windows-version-20260411` 重复创建 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` 与 `*.cmd` 的新提交，因为这些 Windows launcher 已由该分支现有本地提交 `Refresh xyq nest Windows launchers` 承载。
   - 由于当前环境禁止连接 GitHub SSH 端口 `22`，本轮只能把 generic / Windows 两侧的新提交与执行记录保留在本地分支，等待后续在允许联网的运行环境中补推。
+
+## 2026-05-23 06:07:37 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `936`，删除 `0`。
+- 这批变更以三套技能目录的镜像刷新和 `automation/python-platform-takeover` 的整批配置/状态/脚本更新为主，重点覆盖 `codex-feishu-bridge`、Lark 系列、`seedance-video-api`、`xyq-nest-skill` 与 publisher 台账。
+- 建议后续执行 GitHub 同步，避免这批 skill 文档、模板脚本与 supporting automation 状态只停留在本地工作区。
+
+## 2026-05-23 19:21:19 CST
+- 检测到新的技能变更批次: 新增 `3`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover`；核心是新增 `2026-05-23-ai-employee-pending-status-before-rewrite` 的 content package、Hermes handoff 包和初始 publish receipt，并把 `state/hermes-handoff/latest.json` 切换到这条新 campaign。
+- 建议后续执行 GitHub 同步，避免这批新的 campaign 配置、receipt 骨架与 latest handoff 指针继续只停留在本地工作区。
+
+## 2026-05-23 23:24:29 CST
+- 检测到新的技能变更批次: 新增 `0`，修改 `0`，删除 `6`。
+- 这批变更集中在 `automation/python-platform-takeover/social_publisher_takeover.egg-info/`；核心是 `social_publisher_takeover` 的打包元数据目录被整体清理，包括发行包清单、源码列表、CLI 入口与依赖声明。
+- 建议后续执行 GitHub 同步，确认这次 egg-info 清理是否为有意的仓库卫生调整，避免同一批删除长期只停留在本地工作区。
+
+## 2026-05-24 00:04:59 CST
+- 处理时间:
+  - `2026-05-24 00:04:59 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的 latest dated entry 为 `2026-05-23 22:03:21 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含 `automation/python-platform-takeover` 的 `2026-05-23-ai-employee-pending-status-before-rewrite` content package、Hermes handoff package、初始 publish receipt 与 `state/hermes-handoff/latest.json` 指针切换，以及 `docs/automation/{skill-change-monitor,windows-translation-status,github-sync-status}.md` 的 `2026-05-23` 至 `2026-05-24` 自动化记录。
+  - `codex/windows-version-20260411`: 是。当前默认工作区中的 `skills/codex-feishu-bridge-skill` bridge 运行时和部署文档更新、以及 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` / `*.cmd` Windows launcher，均已由该分支现有本地提交承载。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。已新增提交 `Add 2026-05-23 python takeover handoff package`，并将本次状态记录整理为提交 `Record 2026-05-24 GitHub sync execution`。
+  - `codex/windows-version-20260411`: 是。沿用该分支已有的未推送本地提交 `Refresh xyq nest Windows launchers` 与 `Sync bridge progress thread support`，本轮未重复造新提交。
+- 是否已推送:
+  - `codex/default-python-sync`: 否。`git push origin codex/default-python-sync` 因 `ssh: connect to host github.com port 22: Operation not permitted` 失败。
+  - `codex/windows-version-20260411`: 否。`git push origin codex/windows-version-20260411` 因 `ssh: connect to host github.com port 22: Operation not permitted` 失败。
+- 提交信息:
+  - `codex/default-python-sync`: `Add 2026-05-23 python takeover handoff package`
+  - `codex/default-python-sync`: `Record 2026-05-24 GitHub sync execution`
+  - `codex/windows-version-20260411`: `Refresh xyq nest Windows launchers`
+  - `codex/windows-version-20260411`: `Sync bridge progress thread support`
+- 若跳过，说明跳过原因:
+  - 未提交 `automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json` 及其两个 `.stale-*` 文件，因为它们是旧运行态残留，不属于 `2026-05-23` 这批待同步变更。
+  - 未在 `codex/default-python-sync` 混入 `skills/codex-feishu-bridge-skill/**` 与 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` / `*.cmd`，因为这些 Windows bridge / launcher 更新已经由 `codex/windows-version-20260411` 的本地提交承载。
+  - 由于当前环境禁止连接 GitHub SSH 端口 `22`，本轮只能把 generic / Windows 两侧的提交与执行记录保留在本地分支，等待后续在允许联网的运行环境中补推。
