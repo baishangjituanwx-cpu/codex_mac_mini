@@ -1,0 +1,76 @@
+{
+  "campaignId": "2026-05-23-ai-employee-pending-status-before-rewrite",
+  "sourceThreadId": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "sourceCampaignId": "2026-05-23-ai-employee-pending-status-before-rewrite",
+  "sourceConfig": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-23-ai-employee-pending-status-before-rewrite.yaml",
+  "sourceContentRoot": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package",
+  "receiptPath": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-23-ai-employee-pending-status-before-rewrite.json",
+  "scope": "all_platforms",
+  "platforms": {
+    "bilibili": {
+      "title": "审核中不是失败：AI员工先把结论改成未核验，再决定要不要改内容",
+      "description": "这条讲内容复盘里最容易误判的一步：看到审核中、暂无数据，不要直接盖失败章。先把结论栏改成未核验，明天补作品状态、指标回流和同账号对照，证据齐了再决定是否改标题、封面或口播结构。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-horizontal-4x3.png"
+    },
+    "toutiao": {
+      "title": "审核中和暂无数据时，AI员工能直接判内容失败吗？",
+      "description": "不能。审核中、暂无数据、指标未回流都只是状态信息，不是失败结论。应该先把结论改成未核验，等作品状态、指标和同账号对照齐了再判断。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png"
+    },
+    "zhihu": {
+      "title": "为什么内容复盘里不能把“审核中、暂无数据”直接判为失败？",
+      "description": "因为审核中、暂无数据、未回流都只是状态信息，不是失败证据。真正稳妥的流程，是先把结论改成未核验，再补作品状态、指标回流和同账号同格式对照。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png"
+    },
+    "baijiahao": {
+      "title": "为什么“审核中/暂无数据”不能直接写成内容失败？",
+      "description": "因为这些信息只说明当前状态还没核验完成，不代表内容失败。更稳妥的做法是先写未核验，再补作品状态、指标回流和同账号对照，证据齐了再决定是否修改。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-horizontal-4x3.png"
+    },
+    "kuaishou": {
+      "title": "先写未核验",
+      "description": "审核中、暂无数据，不等于失败。先把结论改成未核验，等状态、指标、对照齐了再动。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png"
+    },
+    "weibo": {
+      "title": "审核中/暂无数据，就能判内容失败吗？",
+      "description": "不能。审核中、暂无数据、未回流，都只是状态信息，不是失败证据。先写未核验，等状态、指标、同账号对照齐了，再决定是否改标题封面。#AI员工 #内容运营",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png"
+    },
+    "wechat_channels": {
+      "title": "先写未核验",
+      "description": "机器人小马想把审核中写成失败，大陈叫停：数据还没回流，先改成未核验，明天补状态、指标、对照。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png"
+    }
+  },
+  "fingerprints": {
+    "title_hash": "e4334f7b2d8c15edb26e7974b3e37d2fca284cbc8c6ae67bf49571494ce56aff",
+    "body_core_hash": "6db0ca22dc743d537df496ac1384aaf44936d41793def0fe721370b2c2b75b24",
+    "video_sha256": "51f3ff2a889178a9762d14f15baab6186a25d34f4d78281d6707793815ebafbc",
+    "raw_video_sha256": "0ca82d9e9b65ea602a98b87a5c1289c1ee92230980665776d30ea5b59e1be696",
+    "cover_sha256": "cb36bcf05e1dd9557796a42c48f59b2d91f4821537cfb08e14d170d764c242ed",
+    "cover_3_4_sha256": "cb36bcf05e1dd9557796a42c48f59b2d91f4821537cfb08e14d170d764c242ed",
+    "cover_4_3_sha256": "210e4fbf9043bd3c2ea61c5784cf636ed172a67f816f004974f4e293a8dcc2fb"
+  },
+  "lock_dir": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks",
+  "allow_live": false,
+  "unsupportedPlatforms": {
+    "douyin": "unsupported_by_current_hermes_skill"
+  },
+  "publishConstraints": {
+    "requireManagementPageVerification": true,
+    "skipDuplicateIfAlreadyPublished": true,
+    "finalSubmitRequiresUserConfirmation": true,
+    "doNotPublish": true,
+    "doNotUpload": true,
+    "doNotClickSubmit": true,
+    "doNotTestXiaohongshu": true
+  }
+}
