@@ -38,6 +38,9 @@ Prefer it when the task involves:
 - If the newest ready package has no matching receipt file under `state/publish-receipts/`, create or initialize that receipt for the new campaign. Never fall back to the previous campaign's receipt just because it is the latest existing receipt.
 - If an older receipt is `published` but a newer ready package exists, treat the older receipt as historical only; it must not satisfy or block the newer campaign's publishing task.
 - On Windows in this repo, keep that lock check on the shared CLI path: `.\scripts\social-publisher.ps1 validate-package <yaml>` plus `receipt-status` / `record-receipt --status not_started` against the same `campaign_id`, not a separate handwritten checklist.
+- If the package declares handoff-only publish constraints such as `publish_constraints.allow_live: false`, `no_publish_in_handoff_generation: true`, `no_upload_in_handoff_generation: true`, or `no_submit_click_in_handoff_generation: true`, stop at validation and receipt initialization. On Windows, record the package state with `.\scripts\social-publisher.ps1 receipt-status <yaml>` or `record-receipt --status not_published`, but do not run `publish --execute`, do not open the native chooser, and do not click submit.
+- If a Hermes handoff package includes `fingerprints` and `lock_dir`, preserve those values on Windows exactly as received. They are part of the duplicate-prevention contract, not optional metadata to rewrite or drop during package cleanup.
+- On Windows, treat `automation/python-platform-takeover/state/hermes-handoff/latest.json` as valid only when it still points to a real `ready_for_publish` campaign. If it points to a smoke-test package, `/tmp` scratch package, or stale historical package, stop and repair the handoff instead of publishing from it.
 - Confirm local asset paths, title, body, declarations, and platform-specific extras.
 - Avoid mid-flow content rewriting unless the platform rejects the original package.
 - For video platforms with a custom cover, run a cover-readability preflight before opening the platform editor: view or render the cover at roughly 25 percent scale and confirm the main title is readable in the small preview.
@@ -103,10 +106,15 @@ Prefer it when the task involves:
 - For 微信视频号, `处理中` with a confirmed newest management-row object ID, exact title/description, and readable intended cover thumbnail is also notify-worthy.
 - Use a separate message per platform. Do not merge multiple platforms into one message unless the user explicitly asks.
 - Default send toolchain:
-- prefer `./node_modules/@larksuite/cli/bin/lark-cli` from `/Users/baishangjituan/Documents/New project`
-- fallback to global `lark-cli` if the local binary is unavailable
+- on macOS, prefer `/Users/baishangjituan/Documents/New project/node_modules/@larksuite/cli/bin/lark-cli` from `/Users/baishangjituan/Documents/New project`
+- on a Windows repo mirror, prefer `.\scripts\send_feishu_notify.cmd` or `.\scripts\send_feishu_notify.ps1` from `skill-center\skills\social-publish-automation\scripts`; that wrapper resolves the repo-local `lark-cli.cmd` / `lark-cli.exe` first and keeps the fixed chat + profile defaults aligned with this skill
+- for this machine's fixed notify chat, use `--profile legacy-a958`; the default/global profile can return `230002 Bot/User can NOT be out of the chat` because it belongs to the wrong Feishu app
+- fallback to global `lark-cli` only if the local binary is unavailable and record that fallback in the receipt
 - Preferred send form:
-- `lark-cli im +messages-send --as bot --chat-id "oc_45f4f2c2f0a783f636969cd821179f40" --text "<message>"`
+- `/Users/baishangjituan/Documents/New project/node_modules/@larksuite/cli/bin/lark-cli --profile legacy-a958 im +messages-send --as bot --chat-id "oc_45f4f2c2f0a783f636969cd821179f40" --idempotency-key "<platform-campaign-key>" --text "<message>"`
+- Windows wrapper form:
+- `.\scripts\send_feishu_notify.cmd --idempotency-key "<platform-campaign-key>" --text "<message>"`
+- If a previous notify attempt failed with `230002` or `need_user_authorization`, retry once with the local binary and `--profile legacy-a958` before marking Feishu notification as failed.
 - Minimum message fields:
 - platform
 - title or asset identifier
