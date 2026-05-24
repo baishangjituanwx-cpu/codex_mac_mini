@@ -1,0 +1,134 @@
+{
+  "campaign_id": "2026-05-23-ai-employee-pending-status-before-rewrite",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "platform": "weibo",
+  "status": "published_verified",
+  "locked_at": "2026-05-24T04:38:52Z",
+  "locked_at_local": "2026-05-24T12:38:52+0800",
+  "actor": "Codex",
+  "route": {
+    "primary": "OpenCLI Browser Bridge",
+    "cdp_checked": {
+      "endpoint": "http://127.0.0.1:9223",
+      "usable_for_weibo": false,
+      "reason": "CDP profile opened Weibo public newlogin page, not the logged-in account."
+    },
+    "opencli_checked": {
+      "doctor": "ok",
+      "extension_connected": true,
+      "account_uid": "2326772703",
+      "account_name": "智者大陈"
+    }
+  },
+  "content": {
+    "title": "审核中/暂无数据，就能判内容失败吗？",
+    "body": "不能。审核中、暂无数据、未回流，都只是状态信息，不是失败证据。先写未核验，等状态、指标、同账号对照齐了，再决定是否改标题封面。#AI员工 #内容运营",
+    "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platforms/weibo.md",
+    "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platform-upload-map.md",
+    "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/final-verify.json",
+    "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-23-ai-employee-pending-status-before-rewrite.yaml"
+  },
+  "assets": {
+    "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+    "video_sha256": "51f3ff2a889178a9762d14f15baab6186a25d34f4d78281d6707793815ebafbc",
+    "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png",
+    "required_cover_sha256": "cb36bcf05e1dd9557796a42c48f59b2d91f4821537cfb08e14d170d764c242ed",
+    "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-horizontal-4x3.png",
+    "backup_cover_sha256": "210e4fbf9043bd3c2ea61c5784cf636ed172a67f816f004974f4e293a8dcc2fb",
+    "publish_first_frame_path": "/Users/baishangjituan/Documents/push/weibo-publish-20260524-pending-status/publish-first-frame.png",
+    "publish_first_frame_sha256": "89a7479b0cfc7f26a3c411196f1b4f109abde243169854110a257dcf655d2e45"
+  },
+  "duplicate_guard": {
+    "local_receipt_weibo": "absent",
+    "local_lock_weibo_before_this_lock": "absent",
+    "profile_recent_api_checked": true,
+    "profile_recent_marker_found": false,
+    "checked_markers": [
+      "审核中/暂无数据，就能判内容失败吗？",
+      "审核中、暂无数据、未回流",
+      "先写未核验，等状态、指标、同账号对照齐了"
+    ]
+  },
+  "cover_rule": {
+    "required": "支持自定义封面时必须上传指定竖版 3:4 封面；只能选帧时使用发布版视频首帧并写入 receipt。",
+    "required_cover_visual_checked": true,
+    "publish_first_frame_matches_required_cover_design": true
+  },
+  "updated_at": "2026-05-24T12:48:47.721+08:00",
+  "guards": {
+    "local_receipt_weibo_present": false,
+    "platform_duplicate_check": "passed",
+    "duplicate": {
+      "searches": [
+        {
+          "q": "审核中、暂无数据、未回流",
+          "status": 200,
+          "total": 0,
+          "matched": false,
+          "matched_mblogid": null
+        },
+        {
+          "q": "同账号对照齐了",
+          "status": 200,
+          "total": "2",
+          "matched": false,
+          "matched_mblogid": null
+        },
+        {
+          "q": "审核中/暂无数据，就能判内容失败吗？",
+          "status": 200,
+          "total": 0,
+          "matched": false,
+          "matched_mblogid": null
+        }
+      ],
+      "mymblog": {
+        "status": 200,
+        "checked_items": 20,
+        "matched": false
+      }
+    }
+  },
+  "submitted_at": "2026-05-24T12:48:19.059+08:00",
+  "published_at": "Sun May 24 12:48:42 +0800 2026",
+  "public_url": "https://weibo.com/2326772703/R0S8JcR8y",
+  "mobile_url": "https://m.weibo.cn/detail/5302081173064198",
+  "mblogid": "R0S8JcR8y",
+  "post_id": "5302081173064198",
+  "cover_mode": "weibo_quick_composer_no_custom_cover_control; used_publish_video_first_frame_per_package_rule; first_frame_matches_required_vertical_cover_design",
+  "verification": {
+    "status": "verified",
+    "verified_by": "cdp_attached_playwright_weibo_api_and_public_readback",
+    "result_path": "/Users/baishangjituan/Documents/push/weibo_publish_result_20260524_pending_status_before_rewrite.json"
+  },
+  "verified_at": "2026-05-24T12:48:47.721+08:00",
+  "feishu_notification": {
+    "sent": true,
+    "repaired": true,
+    "sent_at": "2026-05-24T13:08:35+08:00",
+    "profile": "legacy-a958",
+    "identity": "bot",
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "message_id": "om_x100b6e1c33fd74b4c4dc4fb99252b88",
+    "create_time": "2026-05-24 13:08:35",
+    "idempotency_key": "wb0524pending-legacy",
+    "repair_reference_thread_id": "019d58ff-91b3-7f10-9703-4c9e0e469a35",
+    "repair_note": "Target chat belongs to the legacy Feishu app profile; resend succeeded with lark-cli --profile legacy-a958.",
+    "previous_attempts": [
+      {
+        "identity": "bot",
+        "profile": "cli_a96b083d34a1dbc4",
+        "ok": false,
+        "code": 230002,
+        "message": "HTTP 400: Bot/User can NOT be out of the chat."
+      },
+      {
+        "identity": "user",
+        "profile": "cli_a96b083d34a1dbc4",
+        "ok": false,
+        "code": "need_user_authorization",
+        "message": "need_user_authorization (user: )"
+      }
+    ]
+  }
+}

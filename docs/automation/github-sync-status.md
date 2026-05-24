@@ -2536,3 +2536,18 @@
   - 未提交 `automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json` 及其两个 `.stale-*` 文件，因为它们是旧运行态残留，不属于 `2026-05-23` 这批待同步变更。
   - 未在 `codex/default-python-sync` 混入 `skills/codex-feishu-bridge-skill/**` 与 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` / `*.cmd`，因为这些 Windows bridge / launcher 更新已经由 `codex/windows-version-20260411` 的本地提交承载。
   - 由于当前环境禁止连接 GitHub SSH 端口 `22`，本轮只能把 generic / Windows 两侧的提交与执行记录保留在本地分支，等待后续在允许联网的运行环境中补推。
+
+## 2026-05-24 00:26:20 CST
+- 检测到新的技能变更批次: 新增 `6`，修改 `0`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/social_publisher_takeover.egg-info/`；核心是 `social-publisher-takeover` 的 egg-info 打包元数据被重新生成，恢复了发行包主清单、源码列表、CLI 入口和依赖声明。
+- 建议后续执行 GitHub 同步，确认这次 egg-info 回补是否属于有意保留的分发元数据，避免同一批再生文件长期只停留在本地工作区。
+
+## 2026-05-24 13:39:26 CST
+- 检测到新的技能变更批次: 新增 `2`，修改 `12`，删除 `0`。
+- 这批变更分布在 `~/.codex/skills/social-publish-automation/SKILL.md`、`skill-center/skills/social-publish-automation/SKILL.md` 和 `automation/python-platform-takeover/state/`；核心是把固定飞书 chat 的 `legacy-a958` profile、幂等键与失败后补发规则写进 skill 文档，同时为 `2026-05-23-ai-employee-pending-status-before-rewrite` 新增 B 站/微信视频号锁文件，并回填多条知乎、快手、微博、微信视频号和总 receipt 的通知修复结果。
+- 建议后续执行 GitHub 同步，避免这批 skill 操作口径和多平台发布核验台账继续只停留在本地工作区。
+
+## 2026-05-24 22:48:15 CST
+- 检测到新的技能变更批次: 新增 `2`，修改 `1`，删除 `0`。
+- 这批变更集中在 `skill-center/skills/social-publish-automation/`；核心是新增 Windows 版 Feishu notify PowerShell / cmd wrapper，并把固定 `legacy-a958` profile、幂等键和 230002/授权失败重试规则写入 skill 文档。
+- 建议后续执行 GitHub 同步，避免这批 Windows 通知入口和发送规范调整继续只停留在本地工作区。

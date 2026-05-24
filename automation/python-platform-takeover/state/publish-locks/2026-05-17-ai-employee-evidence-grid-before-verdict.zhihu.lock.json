@@ -43,5 +43,33 @@
     "afterSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260517-resume-after-submit.png",
     "profile": "/Users/baishangjituan/Documents/push/zhihu-20260517-profile-verified.png",
     "public": "/Users/baishangjituan/Documents/push/zhihu-20260517-public-verified.png"
+  },
+  "feishu_notification_updated_at": "2026-05-24T12:48:13+08:00",
+  "feishu_notification": {
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "message_id": "om_x100b6e1c7e2524a0c28db1fc8b189bf",
+    "method": "lark-cli --profile legacy-a958 im +messages-send --as bot",
+    "profile": "legacy-a958",
+    "sent_at": "2026-05-24T12:48:13+08:00",
+    "backfill": true,
+    "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+    "dedupe_key": "zhihu-backfill-2026-05-17-ai-employee-evidence-grid-before-verdict",
+    "text": "知乎发布通知补发\n平台：知乎\ncampaign_id：2026-05-17-ai-employee-evidence-grid-before-verdict\n标题：为什么内容复盘不能在证据没齐时直接下结论？\n状态：published / 已发布并完成公开核验\n核验时间：2026-05-17T02:21:43.228Z\n发布时间：发布于2026-05-17 10:21\n公开链接：https://www.zhihu.com/pin/2039288447148505009\n内容包：/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-evidence-grid-before-verdict_content_package/platforms/zhihu.md",
+    "output": {
+      "ok": true,
+      "identity": "bot",
+      "data": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "create_time": "2026-05-24 12:48:14",
+        "message_id": "om_x100b6e1c7e2524a0c28db1fc8b189bf"
+      },
+      "_notice": {
+        "update": {
+          "current": "1.0.19",
+          "latest": "1.0.39",
+          "message": "lark-cli 1.0.39 available, current 1.0.19"
+        }
+      }
+    }
   }
 }

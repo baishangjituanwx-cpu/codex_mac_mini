@@ -43,5 +43,33 @@
     "afterSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260522-no-new-status-resume-after-submit.png",
     "profile": "/Users/baishangjituan/Documents/push/zhihu-20260522-no-new-status-profile-verified.png",
     "public": "/Users/baishangjituan/Documents/push/zhihu-20260522-no-new-status-public-verified.png"
+  },
+  "feishu_notification_updated_at": "2026-05-24T12:48:17+08:00",
+  "feishu_notification": {
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "message_id": "om_x100b6e1c7fe3dca8c256e512d1a8acf",
+    "method": "lark-cli --profile legacy-a958 im +messages-send --as bot",
+    "profile": "legacy-a958",
+    "sent_at": "2026-05-24T12:48:17+08:00",
+    "backfill": true,
+    "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+    "dedupe_key": "zhihu-backfill-2026-05-22-ai-employee-no-new-status-not-failure",
+    "text": "知乎发布通知补发\n平台：知乎\ncampaign_id：2026-05-22-ai-employee-no-new-status-not-failure\n标题：为什么内容复盘里不能把“无新增”直接判断为失败？\n状态：published / 已发布并完成公开核验\n核验时间：2026-05-22T08:33:58.633Z\n发布时间：发布于2026-05-22 16:33\n公开链接：https://www.zhihu.com/pin/2041194410700952883\n内容包：/Users/baishangjituan/Documents/seedance/outputs/2026-05-22-ai-employee-no-new-status-not-failure_content_package/platforms/zhihu.md",
+    "output": {
+      "ok": true,
+      "identity": "bot",
+      "data": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "create_time": "2026-05-24 12:48:19",
+        "message_id": "om_x100b6e1c7fe3dca8c256e512d1a8acf"
+      },
+      "_notice": {
+        "update": {
+          "current": "1.0.19",
+          "latest": "1.0.39",
+          "message": "lark-cli 1.0.39 available, current 1.0.19"
+        }
+      }
+    }
   }
 }

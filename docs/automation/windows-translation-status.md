@@ -2633,3 +2633,59 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-23 22:03:21 CST`，今天 monitor 中唯一的非零批次只是共享 campaign 配置与台账推进，不需要新增 Windows 分叉；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-05-24 22:03:25 CST
+
+- 处理时间:
+  - `2026-05-24 22:03:25 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-23 22:03:21 CST` 之后追加且此前未写入本状态文件的 `2026-05-23` / `2026-05-24` 批次已全部复核。
+  - 其中仅以下 3 个批次为非零变更；其余自 `2026-05-23 22:22:25 CST` 到 `2026-05-24 21:47:33 CST` 的追加批次结果均为 `新增 0，修改 0，删除 0`:
+    - `2026-05-23 23:24:29 CST`
+    - `2026-05-24 00:26:20 CST`
+    - `2026-05-24 13:39:26 CST`
+  - `2026-05-23 23:24:29 CST` 的非零变更项:
+    - `automation/python-platform-takeover/social_publisher_takeover.egg-info/*` 删除 `6` 个打包元数据文件
+  - `2026-05-24 00:26:20 CST` 的非零变更项:
+    - `automation/python-platform-takeover/social_publisher_takeover.egg-info/*` 回补 `6` 个打包元数据文件
+  - `2026-05-24 13:39:26 CST` 的非零变更项:
+    - `~/.codex/skills/social-publish-automation/SKILL.md`
+    - `skill-center/skills/social-publish-automation/SKILL.md`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.zhihu.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.zhihu.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.zhihu.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.{bilibili,wechat_channels}.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.{kuaishou,weibo,zhihu}.lock.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-22-ai-employee-no-new-status-not-failure.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-23-ai-employee-pending-status-before-rewrite.json`
+- 已完成的 Windows 补全:
+  - `skill-center/skills/social-publish-automation`:
+    - 新增 Windows PowerShell 通知包装脚本:
+      - `skill-center/skills/social-publish-automation/scripts/send_feishu_notify.ps1`
+    - 新增 Windows `cmd` 入口:
+      - `skill-center/skills/social-publish-automation/scripts/send_feishu_notify.cmd`
+    - 更新 `skill-center/skills/social-publish-automation/SKILL.md`，把最新飞书通知规则改成 Mac / Windows 双说明，明确:
+      - macOS 继续优先使用本机 `/Users/baishangjituan/Documents/New project/node_modules/@larksuite/cli/bin/lark-cli`
+      - Windows 镜像优先使用 `.\scripts\send_feishu_notify.cmd` 或 `.\scripts\send_feishu_notify.ps1`
+      - Windows wrapper 会优先解析仓库内 `node_modules\.bin\lark-cli.cmd` / `node_modules\@larksuite\cli\bin\lark-cli.exe`
+      - 固定 chat 继续默认绑定 `legacy-a958` profile 和 `idempotency-key`
+      - 若遇到 `230002` / `need_user_authorization`，仍按最新 skill 规则先用本地 binary + `legacy-a958` 重试
+  - `automation/python-platform-takeover/social_publisher_takeover.egg-info/*`:
+    - 已确认 `2026-05-23 23:24:29 CST` 的删除和 `2026-05-24 00:26:20 CST` 的回补都只是共享打包产物波动，不是新的 Mac-only skill 行为，不需要单独补 PowerShell launcher、Windows 路径文档、快捷键桥接或命令包装器。
+  - `automation/python-platform-takeover/state/*`:
+    - 已确认 `2026-05-24 13:39:26 CST` 中其余新增 / 修改项都是共享 publish lock、publish receipt 和飞书通知台账补录。
+    - 这些 JSON 状态文件继续复用现有 Windows 入口，不需要单独的新脚本或文档分叉:
+      - `automation/python-platform-takeover/scripts/social-publisher.ps1`
+      - `automation/python-platform-takeover/scripts/start-chrome-cdp.ps1`
+      - `automation/python-platform-takeover/README.md`
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-24` 当前已记录批次没有遗漏的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未发现 `pwsh`，因此未执行 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、仓库文件改写与静态路径/参数核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-24 22:03:25 CST`，今天 monitor 中唯一需要补 Windows 落点的是 `social-publish-automation` 的飞书通知入口；现已补入 PowerShell / `.cmd` wrapper 并更新文档，其余非零项均为共享台账或打包产物，不存在额外 Windows 缺口。

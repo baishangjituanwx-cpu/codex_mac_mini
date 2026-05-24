@@ -1,0 +1,11 @@
+{
+  "locked": true,
+  "campaign_id": "2026-05-23-ai-employee-pending-status-before-rewrite",
+  "platform": "douyin",
+  "status": "under_review",
+  "aweme_id": "7643312742249581839",
+  "replaces_aweme_id": "7643308588823252258",
+  "created_at": "2026-05-24T04:39:12.937Z",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-23-ai-employee-pending-status-before-rewrite.json",
+  "result_path": "/Users/baishangjituan/Documents/push/douyin_republish_result_20260523_pending_status_before_rewrite_vertical_cover_fix.json"
+}

@@ -1,8 +1,1055 @@
 {
   "campaign_id": "2026-05-23-ai-employee-pending-status-before-rewrite",
   "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
-  "status": "not_published",
-  "receipts": {},
+  "status": "wechat_channels_published_verified",
+  "receipts": {
+    "zhihu": {
+      "actor": "Codex",
+      "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
+      "platform_id": "zhihu",
+      "status": "published",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "title": "为什么内容复盘里不能把“审核中、暂无数据”直接判为失败？",
+      "body": "因为审核中、暂无数据、未回流都只是状态信息，不是失败证据。真正稳妥的流程，是先把结论改成未核验，再补作品状态、指标回流和同账号同格式对照。",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platforms/zhihu.md",
+      "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-23-ai-employee-pending-status-before-rewrite-zhihu.md",
+      "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/final-verify.json",
+      "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-23-ai-employee-pending-status-before-rewrite.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+      "uploaded_video_path": "/tmp/zhihu-20260523-pending-status-publish.mp4",
+      "video_sha256": "51f3ff2a889178a9762d14f15baab6186a25d34f4d78281d6707793815ebafbc",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "uploaded_cover_path": "/tmp/zhihu-20260523-pending-status-cover-vertical-3x4.png",
+      "required_cover_sha256": "cb36bcf05e1dd9557796a42c48f59b2d91f4821537cfb08e14d170d764c242ed",
+      "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "backup_cover_sha256": "210e4fbf9043bd3c2ea61c5784cf636ed172a67f816f004974f4e293a8dcc2fb",
+      "cover_mode": "required_vertical_3x4_local_file_input_confirmed_before_resume_submit",
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "verified_by": "cdp_playwright_resume_profile_and_public_readback",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.zhihu.lock.json",
+      "started_at": "2026-05-24T04:11:36.376Z",
+      "notes": [
+        "Chrome DevTools/CDP attached to existing logged-in Chrome on 127.0.0.1:9223.",
+        "No Chrome restart was performed.",
+        "A new upload tab is used; nonmatching old Zhihu drafts are ignored before upload.",
+        "Zhihu-only thread; no Feishu notification will be sent unless explicitly requested.",
+        "2026-05-24T04:14:20.450Z: Resuming after the initial script uploaded the correct video and cover but stopped before submit while selecting the Zhihu AI tag.",
+        "2026-05-24T04:14:48.299Z: Resumed current uploaded Zhihu draft via CDP and submitted after exact asset/text readback.",
+        "2026-05-24T04:14:48.299Z: No Feishu notification was sent from this Zhihu-only thread.",
+        "feishu_failed_2026-05-24T12:47:51+08:00: Zhihu publish notification failed for oc_45f4f2c2f0a783f636969cd821179f40, exit_code=1.",
+        "feishu_notified_2026-05-24T12:48:19+08:00: sent Zhihu publish notification to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6e1c7f9e44a4c32639bede3189d."
+      ],
+      "resumed_at": "2026-05-24T04:14:20.450Z",
+      "result_path": "/Users/baishangjituan/Documents/push/zhihu_20260523_pending_status_publish_result.json",
+      "submitted_at": "2026-05-24T04:14:29.530Z",
+      "published_at": "发布于2026-05-24 12:14",
+      "recorded_at": "2026-05-24T04:14:48.298Z",
+      "current_url": "https://www.zhihu.com/pin/2041853977000727549",
+      "public_url": "https://www.zhihu.com/pin/2041853977000727549",
+      "share_link": "https://www.zhihu.com/pin/2041853977000727549?page=video_pin&scene=share",
+      "external_id": "2041853977000727549",
+      "verified_fields": {
+        "account": "智能大陈",
+        "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+        "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platforms/zhihu.md",
+        "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-23-ai-employee-pending-status-before-rewrite-zhihu.md",
+        "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/final-verify.json",
+        "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-23-ai-employee-pending-status-before-rewrite.yaml",
+        "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+        "uploaded_video_path": "/tmp/zhihu-20260523-pending-status-publish.mp4",
+        "video_sha256": "51f3ff2a889178a9762d14f15baab6186a25d34f4d78281d6707793815ebafbc",
+        "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png",
+        "uploaded_cover_path": "/tmp/zhihu-20260523-pending-status-cover-vertical-3x4.png",
+        "required_cover_sha256": "cb36bcf05e1dd9557796a42c48f59b2d91f4821537cfb08e14d170d764c242ed",
+        "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-horizontal-4x3.png",
+        "backup_cover_sha256": "210e4fbf9043bd3c2ea61c5784cf636ed172a67f816f004974f4e293a8dcc2fb",
+        "cover_mode": "required_vertical_3x4_local_file_input_confirmed",
+        "video_tag": "含 AI 生成内容",
+        "original_video_checked": true,
+        "duplicate_guard": {
+          "profile": {
+            "hasExpectedTitle": false,
+            "hasExpectedBody": true,
+            "exactLink": null
+          },
+          "posts": {
+            "hasExpectedTitle": false,
+            "hasExpectedBody": false,
+            "exactLink": null
+          },
+          "manage": {
+            "hasExpectedTitle": false,
+            "hasExpectedBody": true,
+            "exactLink": null
+          }
+        },
+        "pre_submit_title": "为什么内容复盘里不能把“审核中、暂无数据”直接判为失败？",
+        "pre_submit_body": "因为审核中、暂无数据、未回流都只是状态信息，不是失败证据。真正稳妥的流程，是先把结论改成未核验，再补作品状态、指标回流和同账号同格式对照。",
+        "pre_submit_video_check": {
+          "hasUploadedVideo": true,
+          "hasRequiredVideoName": true,
+          "localFileInputValue": ""
+        },
+        "pre_submit_cover_check": {
+          "localFileInputValue": "C:\\fakepath\\zhihu-20260523-pending-status-cover-vertical-3x4.png",
+          "hasRequiredCoverFileName": true
+        },
+        "profile_context": {
+          "hasExpectedTitle": true,
+          "hasExpectedBody": true,
+          "url": "https://www.zhihu.com/people/vkvtss-81/zvideos"
+        },
+        "public_context": {
+          "hasExpectedTitle": true,
+          "hasExpectedBody": true,
+          "hasAiTag": true,
+          "url": "https://www.zhihu.com/pin/2041853977000727549"
+        },
+        "screenshots": {
+          "duplicateManage": "/Users/baishangjituan/Documents/push/zhihu-20260523-pending-status-resume-duplicate-manage.png",
+          "duplicateProfile": "/Users/baishangjituan/Documents/push/zhihu-20260523-pending-status-resume-duplicate-profile.png",
+          "duplicatePosts": "/Users/baishangjituan/Documents/push/zhihu-20260523-pending-status-resume-duplicate-profile-posts.png",
+          "preSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260523-pending-status-resume-pre-submit.png",
+          "afterSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260523-pending-status-resume-after-submit.png",
+          "profile": "/Users/baishangjituan/Documents/push/zhihu-20260523-pending-status-profile-verified.png",
+          "public": "/Users/baishangjituan/Documents/push/zhihu-20260523-pending-status-public-verified.png"
+        }
+      },
+      "feishu_notification": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6e1c7f9e44a4c32639bede3189d",
+        "method": "lark-cli --profile legacy-a958 im +messages-send --as bot",
+        "profile": "legacy-a958",
+        "sent_at": "2026-05-24T12:48:19+08:00",
+        "backfill": true,
+        "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+        "dedupe_key": "zhihu-backfill-2026-05-23-ai-employee-pending-status-before-rewrite",
+        "text": "知乎发布通知补发\n平台：知乎\ncampaign_id：2026-05-23-ai-employee-pending-status-before-rewrite\n标题：为什么内容复盘里不能把“审核中、暂无数据”直接判为失败？\n状态：published / 已发布并完成公开核验\n核验时间：2026-05-24T04:14:48.298Z\n发布时间：发布于2026-05-24 12:14\n公开链接：https://www.zhihu.com/pin/2041853977000727549\n内容包：/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platforms/zhihu.md",
+        "output": {
+          "ok": true,
+          "identity": "bot",
+          "data": {
+            "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+            "create_time": "2026-05-24 12:48:21",
+            "message_id": "om_x100b6e1c7f9e44a4c32639bede3189d"
+          },
+          "_notice": {
+            "update": {
+              "current": "1.0.19",
+              "latest": "1.0.39",
+              "message": "lark-cli 1.0.39 available, current 1.0.19"
+            }
+          }
+        }
+      }
+    },
+    "baijiahao": {
+      "status": "published",
+      "updated_at": "2026-05-24T04:28:41.670Z",
+      "stage": "manager_verified",
+      "actor": "Codex",
+      "actor_session_id": "Chrome CDP 127.0.0.1:9223:AC0BF7F339DCE426F3D928E322510728",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "title": "为什么“审核中/暂无数据”不能直接写成内容失败？",
+      "description": "因为这些信息只说明当前状态还没核验完成，不代表内容失败。更稳妥的做法是先写未核验，再补作品状态、指标回流和同账号对照，证据齐了再决定是否修改。",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platforms/baijiahao.md",
+      "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/final-verify.json",
+      "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-23-ai-employee-pending-status-before-rewrite.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+      "video_sha256": "51f3ff2a889178a9762d14f15baab6186a25d34f4d78281d6707793815ebafbc",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "cover_sha256": "210e4fbf9043bd3c2ea61c5784cf636ed172a67f816f004974f4e293a8dcc2fb",
+      "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "backup_cover_sha256": "cb36bcf05e1dd9557796a42c48f59b2d91f4821537cfb08e14d170d764c242ed",
+      "cover_mode": "custom_horizontal_4x3_uploaded_via_cdp_file_input",
+      "upload_started": true,
+      "video_uploaded": true,
+      "cover_uploaded": true,
+      "publish_click_happened": true,
+      "result_path": "/Users/baishangjituan/Documents/push/baijiahao_cdp_manual_submit_20260523_pending_status.json",
+      "platform_id": "baijiahao",
+      "required_cover_sha256": "210e4fbf9043bd3c2ea61c5784cf636ed172a67f816f004974f4e293a8dcc2fb",
+      "duplicate_guard_path": "/Users/baishangjituan/Documents/push/baijiahao_duplicate_guard_20260523_pending_status.json",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.baijiahao.lock.json",
+      "target_id": "AC0BF7F339DCE426F3D928E322510728",
+      "title_fill": {
+        "ok": true,
+        "changed": [
+          {
+            "tag": "DIV",
+            "contenteditable": true,
+            "value": "2026-05-23-ai-employee-pending-status-before-rewrite-publish"
+          }
+        ],
+        "candidateCount": 1
+      },
+      "ai_statement": {
+        "ok": true,
+        "value": "含AI生成内容"
+      },
+      "cover_input_mark": [
+        {
+          "i": 0,
+          "accept": "image/*",
+          "marker": "1"
+        },
+        {
+          "i": 1,
+          "accept": "image/*",
+          "marker": "1"
+        }
+      ],
+      "cover_thumbnail_present": true,
+      "error": "pre-submit validation failed: title_not_exact",
+      "submitted_at": "2026-05-24T04:27:36.188Z",
+      "pre_submit_path": "/Users/baishangjituan/Documents/push/baijiahao_presubmit_readback_20260523_pending_status.json",
+      "verified_by": "Baijiahao 作品管理 exact-title row via Chrome CDP after submit",
+      "management_url": "https://baijiahao.baidu.com/builder/rc/content?currentPage=1&pageSize=10&search=%E4%B8%BA%E4%BB%80%E4%B9%88%E2%80%9C%E5%AE%A1%E6%A0%B8%E4%B8%AD%2F%E6%9A%82%E6%97%A0%E6%95%B0%E6%8D%AE%E2%80%9D%E4%B8%8D%E8%83%BD%E7%9B%B4%E6%8E%A5%E5%86%99%E6%88%90%E5%86%85%E5%AE%B9%E5%A4%B1%E8%B4%A5%EF%BC%9F&type=&collection=&startDate=&endDate=",
+      "published_at": "2026-05-24T12:28:40+08:00",
+      "recorded_at": "2026-05-24T12:28:40+08:00",
+      "cover_readability_passed": true,
+      "manager_exact_title_present": true,
+      "manager_status_text": "已发布音频",
+      "manager_context": "题，即问即答\n11\n发布作品\n首页\n内容管理\n作品管理\n话题管理\n素材管理\n原创保护\n互动管理\n评论管理\n私信管理\n粉丝管理\n消息管理\n数据中心\n内容分析\n号主页分析\n变现中心\n收入中心\n电商带货\n度星选商单\n内容分销\n百享计划\n成长中心\n成长权益\n学习中心\n搜索话题\n百家榜\n海报生成\n咨询中心\n咨询工作台\n咨询消息\n咨询知识库\n咨询数据\n个人中心\n全部\n图文\n视频\n小视频\n动态\n直播\n合集\n图集\n|\nAI成片\n手机查看\n全部\n已发布\n待发布\n未通过\n已撤回\n草稿\n共24篇\n为什么“审核中/暂无数据”不能直接写成内容失败？\n2026-05-24 12:28:02\n已发布音频\n0\n0\n0\n0\n0\n0\n内容加热\n加入合集\n查看评论\n更多\n为什么“无新增”不能直接写成内容失败？\n2026-05-22 17:27:48\n已发布音频\n0\n0\n0\n0\n0\n0\n内容加热\n加入合集\n查看评论\n更多\n为什么不能只看单条数据，就判内容失败？\n2026-05-16 11:30:54\n已发布音频\n0\n0\n0\n0\n0\n0\n内容加热\n加入合集\n查看评论\n更多\n为什么复盘不能在证据没齐时直接判失败？\n2026-05-17 11:04:47\n已发布音频\n0\n0\n0\n0\n0\n0\n内容加热\n加入合集\n查看评论\n更多\n为什么不能把所有平台都直接判成发布失败？\n2026-05-12 18:30:54\n已发布音频\n0\n0\n0\n0\n0\n0\n内容加热\n加入合集\n查看评论\n更多\n为什么审核中时，不该马上改题重发？\n2026-05-15 12:02:02\n已发布音频\n0\n0\n0\n0\n0\n0\n内容加热\n加入合集\n查看评论\n更多\n为什么没有内容级指标时，不能先说内容差？\n2026-05-14 13:24:20\n已发布音频\n1\n0\n0\n0\n0\n0\n内容加热\n加入合集\n查看评论\n更多\n视频发布成功后为什么还要进数据中心？大陈给机器人小马上了一课\n2026-05-03 21:10:32\n已发布音频\n3\n0\n0\n0\n0\n0\n内容加热\n加入合集\n查看评论\n更多\n为什么缺发布证据时，不能马上重复发布？\n2026-05-14 11:36:27\n已发布音频\n0\n0\n0\n0\n0\n0\n内容加热\n加入合集\n查看评论\n更多\n为什么内容团队最该先交给 AI 的，不是创意，而是平台执行链？\n2026-04-20 16:56:22\n已发布\n0\n0\n0\n0\n0\n0\n内容加热\n查看评论\n详细数据\n更多\n1\n2\n3\n规则中心\n问题咨询\n收起",
+      "manager_verify_path": "/Users/baishangjituan/Documents/push/baijiahao_manager_verify_20260523_pending_status.json",
+      "note": "2026-05-24T12:28:40+08:00: Baijiahao published verified in manager; required horizontal 4:3 cover uploaded before submit.",
+      "feishu_notification": {
+        "ok": true,
+        "repaired": true,
+        "repair_reference_thread_id": "019d58ff-91b3-7f10-9703-4c9e0e469a35",
+        "cli": "/Users/baishangjituan/Documents/New project/node_modules/@larksuite/cli/bin/lark-cli",
+        "profile": "legacy-a958",
+        "identity": "bot",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6e1c6ab9f0b0c22fd9b9e1bdda8",
+        "create_time": "2026-05-24 12:44:55",
+        "sent_at": "2026-05-24T12:44:55+08:00",
+        "repaired_at": "2026-05-24T12:44:55+08:00",
+        "text_summary": "百家号发布成功通知；标题：为什么“审核中/暂无数据”不能直接写成内容失败？；状态：published / 已发布音频；封面使用 cover-horizontal-4x3.png。",
+        "lark_cli_notice": {
+          "current": "1.0.19",
+          "latest": "1.0.39",
+          "message": "lark-cli 1.0.39 available, current 1.0.19"
+        },
+        "previous_error": {
+          "ok": false,
+          "cli": "/Users/baishangjituan/Documents/New project/node_modules/@larksuite/cli/bin/lark-cli",
+          "error": "Command failed: /Users/baishangjituan/Documents/New project/node_modules/@larksuite/cli/bin/lark-cli im +messages-send --as bot --chat-id oc_45f4f2c2f0a783f636969cd821179f40 --text 平台：百家号\n标题：为什么“审核中/暂无数据”不能直接写成内容失败？\n状态：published / 已发布音频\n核验时间：2026-05-24T12:28:40+08:00\n管理页：https://baijiahao.baidu.com/builder/rc/content?currentPage=1&pageSize=10&search=%E4%B8%BA%E4%BB%80%E4%B9%88%E2%80%9C%E5%AE%A1%E6%A0%B8%E4%B8%AD%2F%E6%9A%82%E6%97%A0%E6%95%B0%E6%8D%AE%E2%80%9D%E4%B8%8D%E8%83%BD%E7%9B%B4%E6%8E%A5%E5%86%99%E6%88%90%E5%86%85%E5%AE%B9%E5%A4%B1%E8%B4%A5%EF%BC%9F&type=&collection=&startDate=&endDate=\n封面：/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-horizontal-4x3.png\n{\n  \"ok\": false,\n  \"identity\": \"bot\",\n  \"error\": {\n    \"type\": \"api_error\",\n    \"code\": 230002,\n    \"message\": \"HTTP 400: Bot/User can NOT be out of the chat.\",\n    \"detail\": null\n  },\n  \"_notice\": {\n    \"update\": {\n      \"current\": \"1.0.19\",\n      \"latest\": \"1.0.39\",\n      \"message\": \"lark-cli 1.0.39 available, current 1.0.19\"\n    }\n  }\n}\n",
+          "sent_at": "2026-05-24T12:28:41+08:00"
+        }
+      }
+    },
+    "toutiao": {
+      "actor": "Codex CDP publisher",
+      "actor_session_id": "chrome-cdp-127.0.0.1:9223-current-logged-in-session",
+      "platform_id": "toutiao",
+      "campaign_id": "2026-05-23-ai-employee-pending-status-before-rewrite",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "content_type": "video",
+      "status": "under_review",
+      "verified_state": "审核中",
+      "title": "审核中和暂无数据时，AI员工能直接判内容失败吗？",
+      "description": "不能。审核中、暂无数据、指标未回流都只是状态信息，不是失败结论。应该先把结论改成未核验，等作品状态、指标和同账号对照齐了再判断。",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platforms/toutiao.md",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platform-upload-map.md",
+      "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/final-verify.json",
+      "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-23-ai-employee-pending-status-before-rewrite.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+      "video_sha256": "51f3ff2a889178a9762d14f15baab6186a25d34f4d78281d6707793815ebafbc",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "required_cover_sha256": "cb36bcf05e1dd9557796a42c48f59b2d91f4821537cfb08e14d170d764c242ed",
+      "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "backup_cover_sha256": "210e4fbf9043bd3c2ea61c5784cf636ed172a67f816f004974f4e293a8dcc2fb",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "cover_sha256": "cb36bcf05e1dd9557796a42c48f59b2d91f4821537cfb08e14d170d764c242ed",
+      "cover_mode": "package_required_vertical_3x4_uploaded_via_cdp_dom_set_file_input_files",
+      "correct_package_cover_used": true,
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "ai_declaration_checked": true,
+      "generate_article_checked": false,
+      "pre_submit_readback": {
+        "titleValue": "审核中和暂无数据时，AI员工能直接判内容失败吗？",
+        "wordLimit": "23/30",
+        "videoOk": true,
+        "coverText": "封面\n编辑\n替换\n清晰美观的封面有利于推荐，建议分辨率不低于 618*1000（大小不超过 20M）",
+        "checkboxes": [
+          {
+            "text": "生成图文",
+            "checked": false,
+            "cls": "byte-checkbox"
+          },
+          {
+            "text": "取自站外",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          },
+          {
+            "text": "引用站内",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          },
+          {
+            "text": "自行拍摄",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          },
+          {
+            "text": "AI生成",
+            "checked": true,
+            "cls": "byte-checkbox checkbot-item checkbox-with-tip byte-checkbox-checked"
+          },
+          {
+            "text": "虚构演绎，故事经历",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item checkbox-with-tip"
+          },
+          {
+            "text": "投资观点，仅供参考",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          },
+          {
+            "text": "健康医疗分享，仅供参考",
+            "checked": false,
+            "cls": "byte-checkbox checkbot-item"
+          }
+        ]
+      },
+      "verified_by": "Chrome DevTools Protocol DOM readback and Toutiao work manager exact-title row",
+      "manager_url": "https://mp.toutiao.com/profile_v4/manage/content/all",
+      "manager_status": "under_review",
+      "manager_row_text": "头条号\n消息\n13\n在头条创作的第 45 天\n百商集团\n开始创作\n全部文章视频微头条小视频音频合集草稿箱\n状态：\n全部\n~\n共 30 条内容\n00:15\n审核中和暂无数据时，AI员工能直接判内容失败吗？\n05-24 12:14\n审核中\n删除作品\n00:15\n无新增时，AI员工能直接判断内容失败吗？\n展现 130\n播放 0\n点赞 0\n评论 0\n05-22 16:37\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n指标没回来时，AI员工该不该马上改内容？\n展现 275\n播放 4\n点赞 0\n评论 0\n05-20 16:55\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n内容复盘时，证据没齐能直接下结论吗？\n展现 576\n播放 0\n点赞 0\n评论 0\n05-17 12:55\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n一条暂时没指标，AI员工能直接判内容差吗？\n展现 728\n播放 0\n点赞 0\n评论 0\n05-16 11:24\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n审核中时，AI员工该不该改标题重发？\n展现 794\n播放 0\n点赞 0\n评论 0\n05-15 11:54\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n缺内容级指标时，AI员工该不该先判内容差？\n展现 904\n播放 37\n点赞 0\n评论 0\n05-14 13:23\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n审核中或缺链接时，AI员工该不该再发布一次？\n展现 907\n播放 0\n点赞 0\n评论 0\n05-13 16:46\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n平台状态不一致时，AI员工该怎么判断？\n展现 979\n播放 0\n点赞 0\n评论 0\n05-12 17:48\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n00:15\n视频发完就走？AI员工必须先把回执交清楚\n展现 1,414\n播放 0\n点赞 0\n评论 0\n05-05 13:12\n已发布\n查看数据\n查看评论\n设为仅我可见\n删除作品\n123\n关于今日头条|用户协议|隐私政策|社区规范|自律公约|侵权投诉|联系我们© 2026 toutiao.com All Rights Reserved",
+      "submitted_at": "2026-05-24T04:14:20.999Z",
+      "verified_at": "2026-05-24T04:14:20.999Z",
+      "verified_at_asia_shanghai": "2026年5月24日 12:14:21",
+      "current_url_after_submit": "https://mp.toutiao.com/profile_v4/xigua/small-video",
+      "screenshots": {
+        "cover_applied": "/Users/baishangjituan/Documents/push/toutiao-cdp-cover-applied-20260523-pending-status.png",
+        "pre_submit": "/Users/baishangjituan/Documents/push/toutiao-cdp-pre-submit-20260523-pending-status.png",
+        "after_publish": "/Users/baishangjituan/Documents/push/toutiao-cdp-after-publish-click-20260523-pending-status.png",
+        "manager": "/Users/baishangjituan/Documents/push/toutiao-cdp-manager-verified-20260523-pending-status.png"
+      },
+      "result_path": "/Users/baishangjituan/Documents/push/toutiao_publish_result_20260523_pending_status.json",
+      "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-23-ai-employee-pending-status-before-rewrite.json",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.toutiao.lock.json",
+      "browser_route": {
+        "cdp_checked_first": true,
+        "cdp_available": true,
+        "cdp_base": "http://127.0.0.1:9223",
+        "fallback_used": null,
+        "chrome_restarted": false,
+        "note": "User explicitly required CDP/opencli priority; video and cover were injected through CDP DOM file inputs. GUI screenshots are evidence only."
+      },
+      "notes": [
+        "Local receipt and Toutiao manager duplicate guard found no existing exact-title Toutiao item for this campaign before submit.",
+        "Video uploaded through CDP DOM.setFileInputFiles to the Toutiao video file input.",
+        "Required vertical 3:4 cover file cover-vertical-3x4.png was uploaded through the image-only local cover input using CDP DOM.setFileInputFiles.",
+        "Pre-submit readback showed exact title, successful video upload, cover area as 编辑/替换, AI生成 checked, and 生成图文 unchecked.",
+        "After clicking 发布, Toutiao redirected to作品管理 and manager exact-title row showed 审核中.",
+        "Feishu notification was attempted after verification but failed because the configured chat/user identity is unreachable.",
+        "2026-05-24T04:44:33.036Z: Feishu notification repaired and sent with profile legacy-a958, message_id=om_x100b6e1c6de7c4a0c213bb7d510767d."
+      ],
+      "feishu_notification": {
+        "status": "sent",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "profile": "legacy-a958",
+        "cli_path": "/Users/baishangjituan/Documents/New project/node_modules/@larksuite/cli/bin/lark-cli",
+        "sent_after_verified_publish": true,
+        "repair_attempted_at": "2026-05-24T04:44:33.036Z",
+        "repair_attempted_at_asia_shanghai": "2026年5月24日 12:44:33",
+        "idempotency_key": "tt-20260523-pending-status",
+        "previous_status": "failed",
+        "previous_bot_error": "Command failed: lark-cli im +messages-send --as bot --chat-id oc_45f4f2c2f0a783f636969cd821179f40 --text 平台：头条号\ncampaign_id：2026-05-23-ai-employee-pending-status-before-rewrite\n标题：审核中和暂无数据时，AI员工能直接判内容失败吗？\n状态：under_review\n核验时间：2026年5月24日 12:14:21\n管理页：https://mp.toutiao.com/profile_v4/manage/content/all\n视频：/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4\n封面：/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png\n结果：/Users/baishangjituan/Documents/push/toutiao_publish_result_20260523_pending_status.json\n{\n  \"ok\": false,\n  \"identity\": \"bot\",\n  \"error\": {\n    \"type\": \"api_error\",\n    \"code\": 230002,\n    \"message\": \"HTTP 400: Bot/User can NOT be out of the chat.\",\n    \"detail\": null\n  },\n  \"_notice\": {\n    \"update\": {\n      \"current\": \"1.0.19\",\n      \"latest\": \"1.0.38\",\n      \"message\": \"lark-cli 1.0.38 available, current 1.0.19\"\n    }\n  }\n}\n",
+        "message_id": "om_x100b6e1c6de7c4a0c213bb7d510767d",
+        "create_time": "2026-05-24 12:44:34",
+        "bot_stdout": "{\n  \"ok\": true,\n  \"identity\": \"bot\",\n  \"data\": {\n    \"chat_id\": \"oc_45f4f2c2f0a783f636969cd821179f40\",\n    \"create_time\": \"2026-05-24 12:44:34\",\n    \"message_id\": \"om_x100b6e1c6de7c4a0c213bb7d510767d\"\n  },\n  \"_notice\": {\n    \"update\": {\n      \"current\": \"1.0.19\",\n      \"latest\": \"1.0.39\",\n      \"message\": \"lark-cli 1.0.39 available, current 1.0.19\"\n    }\n  }\n}\n",
+        "bot_stderr": "",
+        "note": "Feishu notification repaired by using local @larksuite/cli with --profile legacy-a958, matching the bridge profile from reference thread 019d58ff-91b3-7f10-9703-4c9e0e469a35."
+      }
+    },
+    "douyin": {
+      "platform": "douyin",
+      "status": "under_review",
+      "replacement_reason": "user_reported_previous_cover_was_not_the_required_vertical_cover_file",
+      "replaces_aweme_id": "7643308588823252258",
+      "verified_state": "replacement_under_review_work_list_status_2_and_all_status_0_exact_match",
+      "submitted_at": "2026-05-24T04:39:12.937Z",
+      "verified_at": "2026-05-24T04:39:12.937Z",
+      "actor": "Codex CDP publisher",
+      "actor_session_id": "chrome-cdp-127.0.0.1:9223-current-logged-in-session",
+      "browser_route": {
+        "primary": "Chrome DevTools Protocol",
+        "cdp_base": "http://127.0.0.1:9223",
+        "opencli_used": false,
+        "fallback_used": false
+      },
+      "campaign_id": "2026-05-23-ai-employee-pending-status-before-rewrite",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "title": "审核中别判失败",
+      "description": "小马看到“审核中、暂无数据”就想盖失败章，大陈直接拦住：先别盖章。数据还没回流，先写未核验，明天补状态、指标、对照。#AI员工 #内容复盘 #内容运营",
+      "aweme_id": "7643312742249581839",
+      "item_id": "7643312742249582000",
+      "share_url": "https://www.iesdouyin.com/share/video/7643312742249581839/?region=&mid=7643312722523802394&u_code=143eldg9c&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=6yIt4z_t7bVceUfvprewwQ6zwv.Yad_b0rS49yNf32M-&share_version=380000&ts=1779597479&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D",
+      "status_param_matches": [
+        "2",
+        "0"
+      ],
+      "status_value": 102,
+      "create_time_unix": 1779597434,
+      "duration_ms": 15883,
+      "cover_uri": "tos-cn-i-dy/02e07a1ed1bd4a978b1fc51d15022cf8",
+      "horizontal_cover_uri": null,
+      "content_package": {
+        "douyin": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platforms/douyin.md",
+        "upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platform-upload-map.md",
+        "yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-23-ai-employee-pending-status-before-rewrite.yaml"
+      },
+      "assets": {
+        "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+        "video_tmp_path": "/tmp/douyin-republish-0524-pending-status.mp4",
+        "video_sha256": "51f3ff2a889178a9762d14f15baab6186a25d34f4d78281d6707793815ebafbc",
+        "required_vertical_cover_3x4": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png",
+        "required_vertical_cover_tmp_path": "/tmp/douyin-republish-0524-STRICT-VERTICAL-3x4.png",
+        "required_vertical_cover_sha256": "cb36bcf05e1dd9557796a42c48f59b2d91f4821537cfb08e14d170d764c242ed",
+        "horizontal_cover_uploaded": false,
+        "horizontal_cover_note": "No external horizontal file uploaded in replacement flow; platform may derive horizontal preview from the required vertical cover."
+      },
+      "cover_mode": "strict_required_vertical_3x4_cover_uploaded_via_cdp_dom_set_file_input_files; no external horizontal cover file selected",
+      "correct_package_cover_used": true,
+      "cover_quality_check": {
+        "vertical_editor_screenshot": "/tmp/douyin-republish-0524-vertical-editor-confirm.png",
+        "prepublish_screenshot": "/tmp/douyin-republish-0524-prepublish-vertical-main.png",
+        "visible_state_before_publish": "right preview selected 竖封面 and showed the required vertical cover image",
+        "cover_check_text_seen": [
+          "封面检测通过",
+          "暂未发现封面低质问题"
+        ],
+        "horizontal_warning_present": true,
+        "horizontal_warning_accepted_reason": "user requested correcting the cover to the required vertical cover file; horizontal upload was intentionally skipped to avoid wrong cover selection"
+      },
+      "verification": {
+        "work_list_status_2_match": true,
+        "work_list_status_0_match": true,
+        "work_list_status_1_match": false,
+        "page_publish_success_text_seen": true,
+        "distinguished_from_previous_aweme_id": "7643308588823252258"
+      },
+      "feishu_notification": {
+        "attempted": true,
+        "success": true,
+        "sent_at": "2026-05-24T04:43:38.707Z",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6e1c50f4f8b0c2349bdfc87305f",
+        "identity": "bot",
+        "lark_cli_profile": "legacy-a958",
+        "fix_reference_thread_id": "019d58ff-91b3-7f10-9703-4c9e0e469a35",
+        "previous_failure_reason": "default lark-cli profile used wrong app identity; target chat belongs to legacy-a958 app profile",
+        "command_pattern": "lark-cli --profile legacy-a958 im +messages-send --as bot --chat-id <chat_id> --text <message>"
+      }
+    },
+    "kuaishou": {
+      "actor": "Codex Chrome DevTools/CDP publisher",
+      "actor_session_id": "cdp-127.0.0.1:9223-current-thread",
+      "status": "published",
+      "status_label": "已发布",
+      "verified_by": "Kuaishou creator work manager all/published list exact submitted text row via Chrome DevTools/CDP",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.kuaishou.lock.json",
+      "submitted_at": "2026-05-24T12:20:16+08:00",
+      "published_at": "2026-05-24T12:20:00+08:00",
+      "published_at_raw": "2026-05-24 12:20",
+      "verified_at": "2026-05-24T12:23:48.242+08:00",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+      "uploaded_video_path": "/tmp/kuaishou-20260523-pending-status-before-rewrite.mp4",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "uploaded_cover_path": "/tmp/kuaishou-20260523-pending-status-before-rewrite-cover-vertical-3x4.png",
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "correct_package_cover_used": true,
+      "title": "先写未核验",
+      "description": "审核中、暂无数据，不等于失败。先把结论改成未核验，等状态、指标、对照齐了再动。",
+      "management_url": "https://cp.kuaishou.com/article/manage/video?status=1&from=publish",
+      "result_path": "/Users/baishangjituan/Documents/push/kuaishou_publish_result_20260523_pending_status_before_rewrite.json",
+      "feishu_notification_sent": true,
+      "feishu_notification": {
+        "sent": true,
+        "status": "sent",
+        "repaired": true,
+        "repair_reference_thread_id": "019d58ff-91b3-7f10-9703-4c9e0e469a35",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "profile": "legacy-a958",
+        "identity": "bot",
+        "method": "lark-cli --profile legacy-a958 im +messages-send --as bot",
+        "cli_path": "/Users/baishangjituan/Documents/New project/node_modules/@larksuite/cli/bin/lark-cli",
+        "idempotency_key": "ks-20260523-kuaishou-feishu-repair",
+        "attempted_at": "2026-05-24T04:45:36Z",
+        "sent_at": "2026-05-24T12:45:36+08:00",
+        "create_time": "2026-05-24 12:45:36",
+        "message_id": "om_x100b6e1c69c6c8a4c29f99fd8383b03",
+        "sent_after_verified_publish": true,
+        "text_summary": "快手发布完成通知；标题：先写未核验；状态：published / 已发布；封面使用内容包规定的 cover-vertical-3x4.png。",
+        "previous_failure_reason": "default lark-cli profile used the wrong app identity; target chat belongs to legacy-a958 app profile",
+        "command_pattern": "lark-cli --profile legacy-a958 im +messages-send --as bot --chat-id <chat_id> --idempotency-key <key> --text <message>",
+        "lark_cli_notice": {
+          "current": "1.0.19",
+          "latest": "1.0.39",
+          "message": "lark-cli 1.0.39 available, current 1.0.19"
+        }
+      },
+      "notes": [
+        "2026-05-24T12:45:36+08:00: Feishu notification repaired and sent with profile legacy-a958, message_id=om_x100b6e1c69c6c8a4c29f99fd8383b03."
+      ]
+    },
+    "douyin_superseded_previous": {
+      "platform": "douyin",
+      "status": "under_review",
+      "verified_state": "under_review_work_list_status_2_and_all_status_0_exact_match",
+      "submitted_at": "2026-05-24T04:22:33.089Z",
+      "verified_at": "2026-05-24T04:22:33.089Z",
+      "actor": "Codex CDP publisher",
+      "actor_session_id": "chrome-cdp-127.0.0.1:9223-current-logged-in-session",
+      "browser_route": {
+        "primary": "Chrome DevTools Protocol",
+        "cdp_base": "http://127.0.0.1:9223",
+        "opencli_used": false,
+        "fallback_used": false
+      },
+      "campaign_id": "2026-05-23-ai-employee-pending-status-before-rewrite",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "title": "审核中别判失败",
+      "description": "小马看到“审核中、暂无数据”就想盖失败章，大陈直接拦住：先别盖章。数据还没回流，先写未核验，明天补状态、指标、对照。#AI员工 #内容复盘 #内容运营",
+      "aweme_id": "7643308588823252258",
+      "item_id": "7643308588823252000",
+      "share_url": "https://www.iesdouyin.com/share/video/7643308588823252258/?region=&mid=7643308574923590442&u_code=143eldg9c&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=4ekRV7jnpG.qcY7C3y_lTfLzU0WF7d9va2Shw5aGJAI-&share_version=380000&ts=1779596490&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D",
+      "status_param_matches": [
+        "2",
+        "0"
+      ],
+      "status_value": 141,
+      "status_payload": {
+        "in_reviewing": false,
+        "reviewed": false,
+        "self_see": true,
+        "private_status": 0,
+        "is_delete": false,
+        "is_prohibited": false
+      },
+      "create_time_unix": 1779596468,
+      "duration_ms": 15883,
+      "cover_uri": "tos-cn-i-dy/dadf60bea6e84f4b82c7d4606d8b0a76",
+      "horizontal_cover_uri": "tos-cn-i-dy/68f1c1a36200494889748a823ff0abf8",
+      "content_package": {
+        "douyin": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platforms/douyin.md",
+        "upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platform-upload-map.md",
+        "yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-23-ai-employee-pending-status-before-rewrite.yaml"
+      },
+      "assets": {
+        "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+        "video_sha256": "51f3ff2a889178a9762d14f15baab6186a25d34f4d78281d6707793815ebafbc",
+        "vertical_cover_3x4": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png",
+        "vertical_cover_sha256": "cb36bcf05e1dd9557796a42c48f59b2d91f4821537cfb08e14d170d764c242ed",
+        "horizontal_cover_4x3": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-horizontal-4x3.png",
+        "horizontal_cover_sha256": "210e4fbf9043bd3c2ea61c5784cf636ed172a67f816f004974f4e293a8dcc2fb"
+      },
+      "cover_mode": "package_required_vertical_3x4_and_horizontal_4x3_uploaded_via_cdp_dom_set_file_input_files",
+      "correct_package_cover_used": true,
+      "cover_quality_check": {
+        "horizontal_snapshot_confirmed": "/tmp/douyin-0524-cover-editor-after-horizontal.png",
+        "vertical_snapshot_confirmed": "/tmp/douyin-0524-cover-editor-after-vertical.png",
+        "check_text_seen_before_close": [
+          "封面检测通过",
+          "暂未发现封面低质问题"
+        ],
+        "missing_double_cover_warning_after_preflight": false
+      },
+      "screenshots": {
+        "vertical_cover_editor": "/tmp/douyin-0524-cover-editor-after-vertical.png",
+        "horizontal_cover_editor": "/tmp/douyin-0524-cover-editor-after-horizontal.png",
+        "prepublish": "/tmp/douyin-0524-prepublish.png"
+      },
+      "verification": {
+        "work_list_status_2_match": true,
+        "work_list_status_0_match": true,
+        "work_list_status_1_match": false,
+        "duplicate_guard_before_publish": "no existing match in status 0/1/2 and no local lock before publish",
+        "page_publish_success_text_seen": true
+      },
+      "feishu_notification": {
+        "attempted": true,
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "success": false,
+        "bot_error": "HTTP 400: Bot/User can NOT be out of the chat. code=230002",
+        "user_error": "need_user_authorization",
+        "attempted_at": "2026-05-24T04:22:33.089Z"
+      },
+      "superseded_by_aweme_id": "7643312742249581839",
+      "superseded_at": "2026-05-24T04:39:12.937Z",
+      "superseded_reason": "user_reported_previous_cover_was_not_the_required_vertical_cover_file"
+    },
+    "bilibili": {
+      "platform": "bilibili",
+      "status": "submitted_verified_public_api",
+      "verified": true,
+      "verified_by": [
+        "cdp_submit_response",
+        "public_view_api"
+      ],
+      "submitted_at": "2026-05-24T04:40:30.023Z",
+      "verified_at": "2026-05-24T04:44:55.155Z",
+      "campaign_id": "2026-05-23-ai-employee-pending-status-before-rewrite",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platforms/bilibili.md",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+      "video_sha256": "51f3ff2a889178a9762d14f15baab6186a25d34f4d78281d6707793815ebafbc",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "cover_sha256": "210e4fbf9043bd3c2ea61c5784cf636ed172a67f816f004974f4e293a8dcc2fb",
+      "title": "审核中不是失败：AI员工先把结论改成未核验，再决定要不要改内容",
+      "description": "这条讲内容复盘里最容易误判的一步：看到审核中、暂无数据，不要直接盖失败章。先把结论栏改成未核验，明天补作品状态、指标回流和同账号对照，证据齐了再决定是否改标题、封面或口播结构。",
+      "category": "人工智能",
+      "tid": 207,
+      "tags": [
+        "AI员工",
+        "内容运营",
+        "数据复盘",
+        "短视频运营"
+      ],
+      "ai_declaration": "含AI生成内容；作者声明：该视频使用人工智能合成技术",
+      "bvid": "BV1s7GE6oEVy",
+      "aid": 116627706288702,
+      "cid": 38572131039,
+      "public_url": "https://www.bilibili.com/video/BV1s7GE6oEVy/",
+      "submit_api": {
+        "url": "https://member.bilibili.com/x/vu/web/add/v3?web_location=333.1024&t=1779597629043&csrf=1e8174145110e1e2fb62efe0ffd43db9&w_rid=59ec73ddb41bd453ad63097a88d77f8f&wts=1779597629&b_wet=Mz0i9x%2FmDofK8TkmHeHi3OXN1BiPynXBKG9SJNXaSkV%2FbBNTUk%2BPQdP8fSbqNqqYYV2Mf4%2FXLbPTfLoc4j5nf1%2BExjreU7%2F91r79OjXVD1SrEz%2FWZkn5ySzG1oMgUo08uJj3VV5mMWx%2BSdOuPRdlJtw8V3jmVhJjyV%2BiF2P2uxk%3D.kly7UJlXEKhh%2FufnVevsOFGJYKhhUSIoPb7mLlTbcIVVBHMPU4qha%2BaVNFEh2iON2FyxsIcrLVaL6tdHDSk24sNWj6GrIC6kkwXM9hfESWdA5tMVRu%2BlL5YDFu%2BRTSqeLhvX2dtOkmzsiuU%2FTSIAlSvKVX6h45%2BihX%2F4FbZRLvp7xIXua5PoLzAEAcT%2FpPTP9LgUroWL7qdIAhpseeR7FDOr%2FT8upDHWM3Ka2OUi4EGM%2B3qpBPTYDJ7vIwB%2BaZh7h8%2BAo845g9etvMRWghGpVGTKqnF%2BewWQuyVez5TejHf%2FMzJe4RK1STM%2FzFSfz2h%2BZw75wuP30DYk%2Bi8q0OeDEcJTlQXpwyIn0Yi%2F4dBikVRkqFQX9h4a4j0MmCRE%2FtvCtN63vgOAe1%2F1nIA5Q%2BWRleW%2F2ei8NeklzIujTWLX8616jF6Zeevp41VZux4m3m%2BDIn%2FxjEyMteHVAVgfdb8TLQmH27j4rpxW249ep%2Bq0ksh51%2BiHCy8gWzAyI%2BzuYA9jf8aW2W0xCXMF5bztyZc6inCPPzJXZBJHEUvcpMl6Xf%2FJaGuDkr3pPloawBHdXuEPyWCC24BEaIG7aQp%2Bnm1diOnFs6bHlG86WMeoqsddyh%2B1RPI2XcR7fV%2Fo%2FvhBgdblhRbsQ%2F1IjXlxZYUBwTBwia2r3Ml2K8pJqUgJX1QnIFo%3D.v1",
+        "method": "POST",
+        "response_status": 200,
+        "response_body": "{\"code\":0,\"message\":\"0\",\"ttl\":1,\"data\":{\"aid\":116627706288702,\"bvid\":\"BV1s7GE6oEVy\"}}",
+        "code": 0,
+        "message": "0"
+      },
+      "submitted_form": {
+        "title": "审核中不是失败：AI员工先把结论改成未核验，再决定要不要改内容",
+        "desc": "这条讲内容复盘里最容易误判的一步：看到审核中、暂无数据，不要直接盖失败章。先把结论栏改成未核验，明天补作品状态、指标回流和同账号对照，证据齐了再决定是否改标题、封面或口播结构。",
+        "tag": "AI员工,内容运营,数据复盘,短视频运营",
+        "tid": 207,
+        "human_type2": 1011,
+        "creation_statement": {
+          "id": 1
+        },
+        "cover": "https://archive.biliimg.com/bfs/archive/6bc42e30968066e2b01d9b75b046bed06040d96e.jpg",
+        "cover43": "https://archive.biliimg.com/bfs/archive/6ab4ee1222d8de13ff75236cce96d8fd5e1e06c2.jpg"
+      },
+      "public_api_verification": {
+        "checked_at": "2026-05-24T04:44:55.155Z",
+        "endpoint": "https://api.bilibili.com/x/web-interface/view?bvid=BV1s7GE6oEVy",
+        "code": 0,
+        "message": "OK",
+        "state": 0,
+        "title": "审核中不是失败：AI员工先把结论改成未核验，再决定要不要改内容",
+        "bvid": "BV1s7GE6oEVy",
+        "aid": 116627706288702,
+        "pic": "http://i1.hdslb.com/bfs/archive/6bc42e30968066e2b01d9b75b046bed06040d96e.jpg",
+        "desc": "这条讲内容复盘里最容易误判的一步：看到审核中、暂无数据，不要直接盖失败章。先把结论栏改成未核验，明天补作品状态、指标回流和同账号对照，证据齐了再决定是否改标题、封面或口播结构。",
+        "matched_title": true,
+        "matched_desc": true,
+        "verified": true
+      },
+      "cover_verification": {
+        "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-horizontal-4x3.png",
+        "required_cover_sha256": "210e4fbf9043bd3c2ea61c5784cf636ed172a67f816f004974f4e293a8dcc2fb",
+        "required_cover_dimensions": {
+          "pixelWidth": 1440,
+          "pixelHeight": 1080
+        },
+        "required_cover_preview_25pct": "/Users/baishangjituan/Documents/push/bilibili-20260523-pending-status-cover-25pct.png",
+        "submitted_cover_url": "https://archive.biliimg.com/bfs/archive/6bc42e30968066e2b01d9b75b046bed06040d96e.jpg",
+        "submitted_cover43_url": "https://archive.biliimg.com/bfs/archive/6ab4ee1222d8de13ff75236cce96d8fd5e1e06c2.jpg",
+        "public_cover_url": "http://i1.hdslb.com/bfs/archive/6bc42e30968066e2b01d9b75b046bed06040d96e.jpg",
+        "downloaded_public_cover_path": "/Users/baishangjituan/Documents/push/bilibili-pending-status-20260523-platform-cover.jpg",
+        "downloaded_public_cover_sha256": "da180f344b2fb84295ad19ebe5bf06c1b0ff2d293f9e5414741260ecdf3cce73",
+        "downloaded_public_cover_dimensions": {
+          "pixelWidth": 1440,
+          "pixelHeight": 810
+        },
+        "note": "B站提交请求包含 cover43 自定义封面 URL；公开 pic 为平台转码后的 16:9 展示封面。原始上传文件为内容包规定的 4:3 横版封面。",
+        "verified_required_file_used": true
+      },
+      "cdp": {
+        "endpoint": "http://127.0.0.1:9223",
+        "browser": "Chrome/148.0.7778.168",
+        "mode": "CDP attached Playwright / Chrome DevTools Protocol",
+        "chrome_restarted": false,
+        "video_upload_method": "CDP DOM.setFileInputFiles plus input/change event dispatch",
+        "cover_upload_method": "CDP-controlled page upload with required cover file"
+      },
+      "manager_after": {
+        "matched": false,
+        "row": "",
+        "bv": "BVHgBzVhbcto",
+        "anchors": [
+          {
+            "href": "https://www.bilibili.com/video/BV1YBGt6PEvo/",
+            "text": "00:00:16"
+          },
+          {
+            "href": "https://www.bilibili.com/video/BV1YBGt6PEvo/",
+            "text": "别把无新增写成失败：AI员工先补三格证据，再决定内容要不要改"
+          },
+          {
+            "href": "https://www.bilibili.com/video/BV1N8L165EmC/",
+            "text": "00:00:16"
+          },
+          {
+            "href": "https://www.bilibili.com/video/BV1N8L165EmC/",
+            "text": "指标窗没到别急着改：AI员工先建采集单，再决定内容怎么改"
+          },
+          {
+            "href": "https://www.bilibili.com/video/BV1sFL76cE6b/",
+            "text": "00:00:16"
+          },
+          {
+            "href": "https://www.bilibili.com/video/BV1sFL76cE6b/",
+            "text": "复盘不是盖章判死：AI员工先补三格证据，再决定内容要不要改"
+          },
+          {
+            "href": "https://www.bilibili.com/video/BV1F15r69EJr/",
+            "text": "00:00:16"
+          },
+          {
+            "href": "https://www.bilibili.com/video/BV1F15r69EJr/",
+            "text": "别凭感觉砍内容：AI员工先做同账号三条对照，再决定怎么改"
+          },
+          {
+            "href": "https://www.bilibili.com/video/BV1Pp5Y6qEFa/",
+            "text": "00:00:16"
+          },
+          {
+            "href": "https://www.bilibili.com/video/BV1Pp5Y6qEFa/",
+            "text": "审核中不是失败：大陈让机器人小马先写状态分支，再看指标"
+          },
+          {
+            "href": "https://www.bilibili.com/video/BV1NX5Q6fEqr/",
+            "text": "00:00:16"
+          },
+          {
+            "href": "https://www.bilibili.com/video/BV1NX5Q6fEqr/",
+            "text": "没拿到指标前，别急着判内容差：大陈让机器人小马先补三件事"
+          },
+          {
+            "href": "https://www.bilibili.com/video/BV1wc5X6WE24/",
+            "text": "00:00:16"
+          },
+          {
+            "href": "https://www.bilibili.com/video/BV1wc5X6WE24/",
+            "text": "没拿到指标前，别急着判内容差：大陈让机器人小马先补三件事"
+          },
+          {
+            "href": "https://www.bilibili.com/video/BV1Tz5165Eag/",
+            "text": "00:00:16"
+          },
+          {
+            "href": "https://www.bilibili.com/video/BV1Tz5165Eag/",
+            "text": "别用重复发布补不确定：大陈让机器人小马先查回执和状态词"
+          },
+          {
+            "href": "https://www.bilibili.com/video/BV1cr5T6bEyP/",
+            "text": "00:00:16"
+          },
+          {
+            "href": "https://www.bilibili.com/video/BV1cr5T6bEyP/",
+            "text": "别把全平台都判失败：大陈让机器人小马先分状态再复查"
+          },
+          {
+            "href": "https://www.bilibili.com/video/BV1x35b6bEBS/",
+            "text": "00:00:16"
+          },
+          {
+            "href": "https://www.bilibili.com/video/BV1x35b6bEBS/",
+            "text": "等待不是失败：大陈让机器人小马先看状态再决定要不要重发"
+          }
+        ]
+      },
+      "notes": "稿件管理页列表发布后短时间未展示该标题；公开 view API 已返回 code=0 且标题、简介、BVID、AID 均匹配。",
+      "feishu_notification": {
+        "attempted_at": "2026-05-24T05:10:20.078Z",
+        "repaired_at": "2026-05-24T05:10:20.078Z",
+        "ok": true,
+        "identity": "bot",
+        "lark_cli_profile": "legacy-a958",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "create_time": "2026-05-24 13:09:49",
+        "message_id": "om_x100b6e1ccf1984a8c347d7631939b33",
+        "repair_reference_thread_id": "019d58ff-91b3-7f10-9703-4c9e0e469a35",
+        "repair_summary": "目标飞书会话属于旧 app 身份；按参考会话结论显式使用 lark-cli --profile legacy-a958 后补发成功。第一次带 idempotency-key 失败为字段校验问题，去掉后发送成功。",
+        "previous_failures": [
+          {
+            "as": "bot",
+            "ok": false,
+            "code": 230002,
+            "message": "HTTP 400: Bot/User can NOT be out of the chat.",
+            "root_cause": "used default lark-cli profile instead of legacy-a958"
+          },
+          {
+            "as": "user",
+            "ok": false,
+            "message": "need_user_authorization (user: )"
+          },
+          {
+            "as": "bot",
+            "ok": false,
+            "profile": "legacy-a958",
+            "code": 99992402,
+            "message": "HTTP 400: field validation failed",
+            "root_cause": "idempotency-key rejected by current lark-cli/API validation"
+          }
+        ],
+        "sent_text_summary": "B站发布完成通知，包含标题、BVID、链接、AID、CDP 发布路径和封面文件说明。"
+      }
+    },
+    "weibo": {
+      "campaign_id": "2026-05-23-ai-employee-pending-status-before-rewrite",
+      "platform_id": "weibo",
+      "status": "published",
+      "account": "智者大陈",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "title": "审核中/暂无数据，就能判内容失败吗？",
+      "body": "不能。审核中、暂无数据、未回流，都只是状态信息，不是失败证据。先写未核验，等状态、指标、同账号对照齐了，再决定是否改标题封面。#AI员工 #内容运营",
+      "public_url": "https://weibo.com/2326772703/R0S8JcR8y",
+      "mobile_url": "https://m.weibo.cn/detail/5302081173064198",
+      "mblogid": "R0S8JcR8y",
+      "post_id": "5302081173064198",
+      "author": "智者大陈",
+      "source": "微博视频号",
+      "published_at": "Sun May 24 12:48:42 +0800 2026",
+      "submitted_at": "2026-05-24T12:48:19.059+08:00",
+      "recorded_at": "2026-05-24T12:48:47.721+08:00",
+      "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platforms/weibo.md",
+      "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/weibo/2026-05-23-ai-employee-pending-status-before-rewrite-weibo.md",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platform-upload-map.md",
+      "automation_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-23-ai-employee-pending-status-before-rewrite.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+      "video_sha256": "51f3ff2a889178a9762d14f15baab6186a25d34f4d78281d6707793815ebafbc",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "required_cover_sha256": "cb36bcf05e1dd9557796a42c48f59b2d91f4821537cfb08e14d170d764c242ed",
+      "first_frame_path": "/Users/baishangjituan/Documents/push/weibo-publish-20260524-pending-status/publish-first-frame.png",
+      "first_frame_sha256": "89a7479b0cfc7f26a3c411196f1b4f109abde243169854110a257dcf655d2e45",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "cover_mode": "weibo_quick_composer_no_custom_cover_control; used_publish_video_first_frame_per_package_rule; first_frame_matches_required_vertical_cover_design",
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "ai_declaration": "含AI生成内容",
+      "duplicate_guard": {
+        "local_receipts": "passed_no_existing_weibo_receipt_before_publish",
+        "profile_before_publish": "passed_profile_missing_current_marker_before_publish",
+        "details": {
+          "searches": [
+            {
+              "q": "审核中、暂无数据、未回流",
+              "status": 200,
+              "total": 0,
+              "matched": false,
+              "matched_mblogid": null
+            },
+            {
+              "q": "同账号对照齐了",
+              "status": 200,
+              "total": "2",
+              "matched": false,
+              "matched_mblogid": null
+            },
+            {
+              "q": "审核中/暂无数据，就能判内容失败吗？",
+              "status": 200,
+              "total": 0,
+              "matched": false,
+              "matched_mblogid": null
+            }
+          ],
+          "mymblog": {
+            "status": 200,
+            "checked_items": 20,
+            "matched": false
+          }
+        }
+      },
+      "verification": {
+        "status": "verified",
+        "verified_by": "cdp_attached_playwright_weibo_api_and_public_readback",
+        "matched_by": "mymblog",
+        "checked_after_ms": 21625,
+        "text_exact_match": true,
+        "public_page_readback": {
+          "url": "https://weibo.com/2326772703/R0S8JcR8y",
+          "title": "微博正文 - 微博",
+          "text_contains_marker": true,
+          "text_contains_secondary_marker": true,
+          "text_contains_duration": true,
+          "body_excerpt": "3\n无障碍\n首页\n全部关注\n最新微博\n好友圈\n自定义分组\n管理\n悄悄关注\n返回\n智者大陈\n公开\n智者大陈\n26-5-24 12:48\n发布于 新加坡\n来自 微博视频号\n5\n阅读\n推广\n不能。审核中、暂无数据、未回流，都只是状态信息，不是失败证据。先写未核验，等状态、指标、同账号对照齐了，再决定是否改标题封面。#AI员工 #内容运营 智者大陈的微博视频 ​​​\n播放视频\n博主声明：该内容使用AI生成技术\n00:15\n转发\n评论\n赞\n分享这条博文\n同时转发\n评论\n还没有人评论哦~快来抢沙发！\n智者大陈\n7\n关注\n0\n粉丝\n40\n微博\n专注于AI员工服务和垂直智能体应用\n男新加坡\n查看个人主页\n微博热搜\n点击刷新\n我的\n热搜\n1\n迅猛龙分享海边蛋糕裙\n110811\n2\n浪姐最合理的一次\n68897\n3\n张凌赫太多人的隐私就不发了\n623893\n王鹤棣和雅迪的摩登之夜\n4\n武契奇抵京\n512254\n5\n李登科声援沈月\n凌晨霸榜\n6\n黄晓明曾回应王鹤棣说他埋半截了\n185079\n奈丝公主卢昱晓京东见面会\n7\n汪铎生日蛋糕没放糖\n62652\n8\n女子回应从未同房被要求退返72万\n441090\n9\n白鹿公益歌曲\n68557\n10\n王鹤棣潮牌盖章80\n凌晨霸榜\n查看完整热搜榜单\n帮助中心\n微博客服 4000-960-960\n自助服务中心\n常见问题\n合作&服务\n微博营销\n合作热线 4000-980-980\n开放平台\n更多\n举报中心\n违规投诉 010-60618076\n处理大厅\n舞弊举报\n更多\n关于微博\nAbout Weibo\n客户端下载\n微博招聘\n网站备案信息\n微博隐私安全中心\nCopyright © 2009-2026\n营业执照"
+        },
+        "post_command": {
+          "author": "智者大陈",
+          "created_at": "Sun May 24 12:48:42 +0800 2026",
+          "id": "5302081173064198",
+          "mblogid": "R0S8JcR8y",
+          "source": "微博视频号",
+          "text_raw": "不能。审核中、暂无数据、未回流，都只是状态信息，不是失败证据。先写未核验，等状态、指标、同账号对照齐了，再决定是否改标题封面。#AI员工 #内容运营 http://t.cn/AX6MQXyt ​​​",
+          "url": "https://weibo.com/2326772703/R0S8JcR8y"
+        }
+      },
+      "cover_inspection": {
+        "cover_mode": "weibo_quick_composer_no_custom_cover_control; used_publish_video_first_frame_per_package_rule; first_frame_matches_required_vertical_cover_design",
+        "custom_cover_control_found": false,
+        "inspected_inputs": [
+          {
+            "index": 0,
+            "accept": "image/*, .jpg, .jpeg, .bmp, .gif, .png, .heif, .heic, video/mp4,video/x-m4v,video/*,.mkv,.flv",
+            "className": "_file_hqmwy_20",
+            "name": "",
+            "value": ""
+          }
+        ],
+        "inspected_text_contains_cover": false,
+        "note": "The package-required 3:4 cover file was used as the target for any custom cover control, but the current Weibo quick composer exposed no image-only cover file input or cover editor; per package rule, the publish video first frame is the operational fallback."
+      },
+      "actor": "Codex CDP-attached Playwright publisher",
+      "actor_session_id": "current-thread-cdp-127.0.0.1:9224",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.weibo.lock.json",
+      "result_path": "/Users/baishangjituan/Documents/push/weibo_publish_result_20260524_pending_status_before_rewrite.json",
+      "notes": [
+        "This thread is restricted to Weibo publishing; no other platform publishing was performed in this run.",
+        "Chrome DevTools/CDP on 127.0.0.1:9224 was used for DOM input, file upload, submit, and API/public readback; GUI screenshot routing was not used as the primary path.",
+        "The package-required cover file is cover-vertical-3x4.png. If Weibo quick composer exposed no custom cover control, the publish video first frame was used according to the package rule and recorded in cover_mode.",
+        "AI content declaration was selected and read back before send."
+      ],
+      "feishu_notification": {
+        "sent": true,
+        "repaired": true,
+        "sent_at": "2026-05-24T13:08:35+08:00",
+        "profile": "legacy-a958",
+        "identity": "bot",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6e1c33fd74b4c4dc4fb99252b88",
+        "create_time": "2026-05-24 13:08:35",
+        "idempotency_key": "wb0524pending-legacy",
+        "repair_reference_thread_id": "019d58ff-91b3-7f10-9703-4c9e0e469a35",
+        "repair_note": "Target chat belongs to the legacy Feishu app profile; resend succeeded with lark-cli --profile legacy-a958.",
+        "previous_attempts": [
+          {
+            "identity": "bot",
+            "profile": "cli_a96b083d34a1dbc4",
+            "ok": false,
+            "code": 230002,
+            "message": "HTTP 400: Bot/User can NOT be out of the chat."
+          },
+          {
+            "identity": "user",
+            "profile": "cli_a96b083d34a1dbc4",
+            "ok": false,
+            "code": "need_user_authorization",
+            "message": "need_user_authorization (user: )"
+          }
+        ]
+      }
+    },
+    "wechat_channels": {
+      "actor": "Codex",
+      "actor_session_id": "chrome-cdp-127.0.0.1:9223-current-logged-in-session",
+      "platform_id": "wechat_channels",
+      "campaign_id": "2026-05-23-ai-employee-pending-status-before-rewrite",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "content_type": "video",
+      "status": "published_verified",
+      "verified_state": "published_management_row_verified",
+      "title": "先写未核验",
+      "description": "机器人小马想把审核中写成失败，大陈叫停：数据还没回流，先改成未核验，明天补状态、指标、对照。",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platforms/wechat_channels.md",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platform-upload-map.md",
+      "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/final-verify.json",
+      "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-23-ai-employee-pending-status-before-rewrite.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+      "uploaded_video_path": "/tmp/wc23-pending-status-video.mp4",
+      "video_sha256": "51f3ff2a889178a9762d14f15baab6186a25d34f4d78281d6707793815ebafbc",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "uploaded_cover_path": "/tmp/wc23-pending-status-cover.png",
+      "required_cover_sha256": "cb36bcf05e1dd9557796a42c48f59b2d91f4821537cfb08e14d170d764c242ed",
+      "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-horizontal-4x3.png",
+      "backup_cover_sha256": "210e4fbf9043bd3c2ea61c5784cf636ed172a67f816f004974f4e293a8dcc2fb",
+      "cover_mode": "required_vertical_3x4_uploaded_via_wechat_cover_editor_cdp_DOM_setFileInputFiles",
+      "correct_package_cover_used": true,
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "cover_readability_evidence": "Local 300x400 preview checked before publish; compose preview accepted 1080x1440 custom cover; management row media.coverUrl uses the uploaded cover key, not auto thumbUrl.",
+      "duplicate_guard": {
+        "checked_at": "2026-05-24T12:50:00+08:00",
+        "recent_rows_checked": 20,
+        "exact_duplicate": false,
+        "near_duplicate_same_title": false,
+        "previous_latest_campaign": "2026-05-22-ai-employee-no-new-status-not-failure"
+      },
+      "pre_submit_validation": {
+        "title_exact": true,
+        "description_exact": true,
+        "framework_shortTitle_exact": true,
+        "framework_description_exact": true,
+        "canPost": true,
+        "coverUrl_present": true,
+        "mediaUrl_present": true,
+        "publish_button_real_button_clicked": true
+      },
+      "management_url": "https://channels.weixin.qq.com/platform/post/list",
+      "publish_url": "https://channels.weixin.qq.com/platform/post/create",
+      "published_at": "2026-05-24T12:57:42+08:00",
+      "verified_at": "2026-05-24T12:57:42+08:00",
+      "recorded_at": "2026-05-24T04:58:55.855Z",
+      "object_id": "export/UzFfBgAAxOijJH5FD1DzjMzT4DCaK-9A9KLdjsUqGSwAK5dTsA",
+      "export_id": "export/UzFfBgAAxOijJH5FD1DzjMzT4DCaK-9A9KLdjsUqGSwAK5dTsA",
+      "object_nonce": "2364263224468679337",
+      "list_row": {
+        "idx": 0,
+        "objectId": "export/UzFfBgAAxOijJH5FD1DzjMzT4DCaK-9A9KLdjsUqGSwAK5dTsA",
+        "exportId": "export/UzFfBgAAxOijJH5FD1DzjMzT4DCaK-9A9KLdjsUqGSwAK5dTsA",
+        "objectNonce": "2364263224468679337",
+        "createTime": 1779598506,
+        "list_time_text": "2026年05月24日 12:55",
+        "status": 1,
+        "visibleType": 1,
+        "disable": "",
+        "title": "先写未核验",
+        "description": "机器人小马想把审核中写成失败，大陈叫停：数据还没回流，先改成未核验，明天补状态、指标、对照。",
+        "visible": "机器人小马想把审核中写成失败，大陈叫停：数据还没回流，先改成未核验，明天补状态、指标、对照。\n2026年05月24日 12:55\n0\n0\n0\n0\n0\n置顶\n分享\n评论管理\n修改描述和封面\n可见权限\n删除",
+        "media": {
+          "url": "https://finder.video.qq.com/251/20302/stodownload?encfilekey=rjD5jyTuFrIpZ2ibE8T7YmwgiahniaXswqzXGM0Sics1jcQmnNVzcLiaxOhBLpZ47VUWaa4Oib9YV1ulvEiaOluv2mFMAaxia6SVZgqHtE63SPuQN4hV5Pic3mXglNA&token=cztXnd9GyrH4QRuIywp4Hs5OVgMgNeQKs0djSRdvgAkIbmIw1Ye5V6KdQ7iamey2m1WJqTJUQbDiar17WXtDWyGyPmTrWR2fBWx2ib7h8h7CHUMBlDFFSQStom8vhLL4lnuoP3QAvZQqHxOp5Tw8leicr83ofV3HYW8xPF65zZHZKYHhsEcIPghHauF64DbrM6icyL0grnMkmZicK0RwktxHbB0j4ia26VWBEJ0KhIHrqkRT3c&bizid=1023&dotrans=0&hy=SH&idx=1&m=&uzid=7a1ac&basedata=CAMSA3hWMCJRCgcKA3hWMBAACgoKBnhXVDExMxAACgoKBnhXVDExMhABCgoKBnhXVDExMRAACgoKBnhXVDE1OBAACgoKBnhXVDE1NxABCgoKBnhXVDE1NhAA&sign=2fBH-QGI1fhIIHZVL-82NJgQKBlSqAKCS25IMVDZ4DbwTiJn1dXK198SX5VYvN9-PnyyfzVCPSHlgBiyVa3KOw",
+          "coverUrl": "https://finder.video.qq.com/251/20304/stodownload?encfilekey=rjD5jyTuFrIpZ2ibE8T7Ym3K77SEULgkia4CevpPeTqlX61gPvyljPbNRxl5E3Tib2SbyzJ9jZ7HAP6Umuea9JzO0S9Cg1yItDnWoFv7jrKQwiaAIrYbA3dLBQ&token=Cvvj5Ix3eeyD0TVgRZ2eE6LibfMCo3U0b8J0jpJNEtDkkBYIsrRbNxtRqCFhYoJym4jB4Drdfsl2hVMiaLdPNr7RmicFk86Z6RaOZbZFBuCAD9z45S3UmCxSVSmKhcthGIueibV11A9enJQusm9SvrWLOlJgVMMO7Qp5GJI7DSdwXcb7rlssMyYexhKoDicYPggjyaXibo8KAKyTmyI9owdf8zWLzJ5WFrwwT8&hy=SZ&idx=1&m=&scene=2&uzid=1&picformat=200&wxampicformat=503",
+          "fullCoverUrl": "https://finder.video.qq.com/251/20304/stodownload?encfilekey=rjD5jyTuFrIpZ2ibE8T7Ym3K77SEULgkia4CevpPeTqlX61gPvyljPbNRxl5E3Tib2SxEYtcZUEatUNc5u57EVHpibID5BU5rNziaaPD5hJpRTtfMkrEYVq7ibxg&token=Cvvj5Ix3eeyD0TVgRZ2eE3jc1A5kg6NGc4PwhmzSDHKCGRBPQhpFJF0L0BOTc2rbMy4KyKZibktVNAlfIY0fFG16nJnyVe4zAgITQy1OoRtFbwuzaWUGO9ER2JgicADAfIlXqXibBdvCc2Edn3rkqkGk93oSF7OChjXeqZUxG4Q8BIrnKrxMbpVziaW2vaZuy6R1CJMA564EeP8Er1l7UhVy7mcprhjgvEC2&hy=SZ&idx=1&m=&scene=2&uzid=1&picformat=200&wxampicformat=503",
+          "thumbUrl": "https://finder.video.qq.com/251/20304/stodownload?encfilekey=S7s6ianIic0ia4PicKJSfB8EjyjpQibPUAXolJ0SiayicJ0L2gNfhSxhBnMJkBhibcowrl3fUbcf5xza1vQo9GFFN2dVa9CXKeH89bx4ricEKpZfJv4fCBHypD24UCQ&token=Cvvj5Ix3eeyD0TVgRZ2eExJxKQepoa9dL6IKhRfM23XDuP2lw8zYibsZicicwv5osdHghyjNk7eV21F1v7Q9W3Tgw6RW4zm8bdSNR48JuDibCuA9m860etcodg5K24KwCNkCDtjoss68DpNsECDnlVsdekTG5loQ3ygk4xgubrSL1TU2Mf5BOQSGdgWE3QdxWdCicicibcgxXvbWibS5MzUuHAeWPavMXowick2c5&bizid=1023&dotrans=0&hy=SH&idx=1&m=&uzid=1&picformat=200&wxampicformat=503",
+          "width": 720,
+          "height": 1280,
+          "videoPlayLen": 15,
+          "fileSize": "4665511",
+          "md5sum": "22aaa591bdb787ee079395c05118c206"
+        }
+      },
+      "feishu_notification": {
+        "ok": true,
+        "cli": "/Users/baishangjituan/Documents/New project/node_modules/@larksuite/cli/bin/lark-cli",
+        "profile": "legacy-a958",
+        "identity": "bot",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6e1c1aac3ca4c2d6e04950755d3",
+        "create_time": "2026-05-24 12:57:42",
+        "sent_at": "2026-05-24T12:57:42+08:00",
+        "text_summary": "微信视频号发布成功通知；短标题：先写未核验；状态：published / 管理页最新行已核验；封面使用 cover-vertical-3x4.png。",
+        "lark_cli_notice": {
+          "current": "1.0.19",
+          "latest": "1.0.39",
+          "message": "lark-cli 1.0.39 available, current 1.0.19"
+        }
+      },
+      "result_path": "/Users/baishangjituan/Documents/push/wechat_channels_20260523_pending_status_publish_result.json",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.wechat_channels.lock.json"
+    }
+  },
   "receipt_schema": {
     "future_platform_receipt_fields": [
       "actor",
@@ -18,5 +1065,53 @@
       "cover_readability_passed"
     ]
   },
-  "created_at": "2026-05-23T18:20:56+08:00"
+  "created_at": "2026-05-23T18:20:56+08:00",
+  "updated_at": "2026-05-24T04:58:55.855Z",
+  "notes": [
+    "feishu_notified_2026-05-24T12:45:36+08:00: kuaishou published receipt sent to oc_45f4f2c2f0a783f636969cd821179f40, message_id=om_x100b6e1c69c6c8a4c29f99fd8383b03, profile=legacy-a958."
+  ],
+  "previous_status_before_toutiao_update": "zhihu_published",
+  "platform_statuses": {
+    "toutiao": "under_review",
+    "bilibili": "submitted_verified_public_api"
+  },
+  "bilibili_status": "submitted_verified_public_api",
+  "last_platform": "bilibili",
+  "last_published_platform": "bilibili",
+  "last_bilibili_public_url": "https://www.bilibili.com/video/BV1s7GE6oEVy/",
+  "feishu_notification": {
+    "attempted_at": "2026-05-24T05:10:20.078Z",
+    "repaired_at": "2026-05-24T05:10:20.078Z",
+    "ok": true,
+    "identity": "bot",
+    "lark_cli_profile": "legacy-a958",
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "create_time": "2026-05-24 13:09:49",
+    "message_id": "om_x100b6e1ccf1984a8c347d7631939b33",
+    "repair_reference_thread_id": "019d58ff-91b3-7f10-9703-4c9e0e469a35",
+    "repair_summary": "目标飞书会话属于旧 app 身份；按参考会话结论显式使用 lark-cli --profile legacy-a958 后补发成功。第一次带 idempotency-key 失败为字段校验问题，去掉后发送成功。",
+    "previous_failures": [
+      {
+        "as": "bot",
+        "ok": false,
+        "code": 230002,
+        "message": "HTTP 400: Bot/User can NOT be out of the chat.",
+        "root_cause": "used default lark-cli profile instead of legacy-a958"
+      },
+      {
+        "as": "user",
+        "ok": false,
+        "message": "need_user_authorization (user: )"
+      },
+      {
+        "as": "bot",
+        "ok": false,
+        "profile": "legacy-a958",
+        "code": 99992402,
+        "message": "HTTP 400: field validation failed",
+        "root_cause": "idempotency-key rejected by current lark-cli/API validation"
+      }
+    ],
+    "sent_text_summary": "B站发布完成通知，包含标题、BVID、链接、AID、CDP 发布路径和封面文件说明。"
+  }
 }

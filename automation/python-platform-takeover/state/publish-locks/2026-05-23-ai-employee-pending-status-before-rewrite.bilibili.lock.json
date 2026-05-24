@@ -1,0 +1,14 @@
+{
+  "campaign_id": "2026-05-23-ai-employee-pending-status-before-rewrite",
+  "platform": "bilibili",
+  "status": "published",
+  "bvid": "BV1s7GE6oEVy",
+  "aid": 116627706288702,
+  "public_url": "https://www.bilibili.com/video/BV1s7GE6oEVy/",
+  "title": "审核中不是失败：AI员工先把结论改成未核验，再决定要不要改内容",
+  "created_at": "2026-05-24T04:44:55.155Z",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-23-ai-employee-pending-status-before-rewrite.json",
+  "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platforms/bilibili.md",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "lock_reason": "prevent duplicate B站 publish after verified CDP submission"
+}

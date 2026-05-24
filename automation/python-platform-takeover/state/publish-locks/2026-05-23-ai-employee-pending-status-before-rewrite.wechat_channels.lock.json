@@ -1,0 +1,42 @@
+{
+  "campaign_id": "2026-05-23-ai-employee-pending-status-before-rewrite",
+  "platform": "wechat_channels",
+  "locked_at": "2026-05-24T04:47:53.301Z",
+  "status": "published_verified",
+  "package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package",
+  "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platform-upload-map.md",
+  "automation_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-23-ai-employee-pending-status-before-rewrite.yaml",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+  "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png",
+  "tmp_video_path": "/tmp/wc23-pending-status-video.mp4",
+  "tmp_cover_path": "/tmp/wc23-pending-status-cover.png",
+  "video_sha256": "51f3ff2a889178a9762d14f15baab6186a25d34f4d78281d6707793815ebafbc",
+  "cover_sha256": "cb36bcf05e1dd9557796a42c48f59b2d91f4821537cfb08e14d170d764c242ed",
+  "title": "先写未核验",
+  "description": "机器人小马想把审核中写成失败，大陈叫停：数据还没回流，先改成未核验，明天补状态、指标、对照。",
+  "route": "chrome_cdp_DOM_setFileInputFiles_preferred",
+  "note": "User explicitly authorized publish; package required vertical 3:4 cover.",
+  "published_at": "2026-05-24T12:57:42+08:00",
+  "verified_at": "2026-05-24T12:57:42+08:00",
+  "recorded_at": "2026-05-24T04:58:55.855Z",
+  "object_id": "export/UzFfBgAAxOijJH5FD1DzjMzT4DCaK-9A9KLdjsUqGSwAK5dTsA",
+  "export_id": "export/UzFfBgAAxOijJH5FD1DzjMzT4DCaK-9A9KLdjsUqGSwAK5dTsA",
+  "object_nonce": "2364263224468679337",
+  "result_path": "/Users/baishangjituan/Documents/push/wechat_channels_20260523_pending_status_publish_result.json",
+  "feishu_notification": {
+    "ok": true,
+    "cli": "/Users/baishangjituan/Documents/New project/node_modules/@larksuite/cli/bin/lark-cli",
+    "profile": "legacy-a958",
+    "identity": "bot",
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "message_id": "om_x100b6e1c1aac3ca4c2d6e04950755d3",
+    "create_time": "2026-05-24 12:57:42",
+    "sent_at": "2026-05-24T12:57:42+08:00",
+    "text_summary": "微信视频号发布成功通知；短标题：先写未核验；状态：published / 管理页最新行已核验；封面使用 cover-vertical-3x4.png。",
+    "lark_cli_notice": {
+      "current": "1.0.19",
+      "latest": "1.0.39",
+      "message": "lark-cli 1.0.39 available, current 1.0.19"
+    }
+  }
+}

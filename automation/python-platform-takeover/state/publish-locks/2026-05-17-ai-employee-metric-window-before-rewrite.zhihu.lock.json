@@ -44,5 +44,33 @@
     "afterSubmit": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-resume-after-submit.png",
     "profile": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-profile-verified.png",
     "public": "/Users/baishangjituan/Documents/push/zhihu-20260517-metric-window-public-verified-manual.png"
+  },
+  "feishu_notification_updated_at": "2026-05-24T12:48:14+08:00",
+  "feishu_notification": {
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "message_id": "om_x100b6e1c7fde4ca4c3b0d974309bff5",
+    "method": "lark-cli --profile legacy-a958 im +messages-send --as bot",
+    "profile": "legacy-a958",
+    "sent_at": "2026-05-24T12:48:14+08:00",
+    "backfill": true,
+    "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+    "dedupe_key": "zhihu-backfill-2026-05-17-ai-employee-metric-window-before-rewrite",
+    "text": "知乎发布通知补发\n平台：知乎\ncampaign_id：2026-05-17-ai-employee-metric-window-before-rewrite\n标题：为什么内容指标没回来时，不应该马上改标题和封面？\n状态：published / 已发布并完成公开核验\n核验时间：2026-05-20T08:54:58.389Z\n发布时间：发布于2026-05-20 16:52\n公开链接：https://www.zhihu.com/pin/2040474574991660742\n内容包：/Users/baishangjituan/Documents/seedance/outputs/2026-05-17-ai-employee-metric-window-before-rewrite_content_package/platforms/zhihu.md",
+    "output": {
+      "ok": true,
+      "identity": "bot",
+      "data": {
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "create_time": "2026-05-24 12:48:17",
+        "message_id": "om_x100b6e1c7fde4ca4c3b0d974309bff5"
+      },
+      "_notice": {
+        "update": {
+          "current": "1.0.19",
+          "latest": "1.0.39",
+          "message": "lark-cli 1.0.39 available, current 1.0.19"
+        }
+      }
+    }
   }
 }

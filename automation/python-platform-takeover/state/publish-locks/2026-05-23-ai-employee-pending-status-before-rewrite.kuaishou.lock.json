@@ -1,0 +1,196 @@
+{
+  "campaign_id": "2026-05-23-ai-employee-pending-status-before-rewrite",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "platform": "kuaishou",
+  "status": "published",
+  "created_at": "2026-05-24T04:15:46.771Z",
+  "actor": "codex",
+  "actor_session_id": "current-thread",
+  "user_confirmation_override": {
+    "confirmed": true,
+    "evidence": "用户在当前线程明确要求开始发布并确认发布，且要求优先使用 Chrome DevTools/CDP/opencli。"
+  },
+  "package_status": "ready_for_platform_publishing",
+  "title": "先写未核验",
+  "description": "审核中、暂无数据，不等于失败。先把结论改成未核验，等状态、指标、对照齐了再动。",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite-publish.mp4",
+  "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png",
+  "tmp_video_path": "/tmp/kuaishou-20260523-pending-status-before-rewrite.mp4",
+  "tmp_cover_path": "/tmp/kuaishou-20260523-pending-status-before-rewrite-cover-vertical-3x4.png",
+  "video_sha256": "51f3ff2a889178a9762d14f15baab6186a25d34f4d78281d6707793815ebafbc",
+  "cover_sha256": "cb36bcf05e1dd9557796a42c48f59b2d91f4821537cfb08e14d170d764c242ed",
+  "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package",
+  "upload_map_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-23-ai-employee-pending-status-before-rewrite_content_package/platform-upload-map.md",
+  "duplicate_guard_path": "/Users/baishangjituan/Documents/push/kuaishou_duplicate_guard_20260523_pending_status_before_rewrite.json",
+  "duplicate_guard_decision": "pass_no_duplicate_found",
+  "duplicate_guard_checked_at": "2026-05-24T04:15:21.639Z",
+  "duplicate_guard_summary": [
+    {
+      "tab": "全部作品",
+      "kind": "title",
+      "text": "先写未核验",
+      "count": "共0个作品",
+      "exactTextPresent": false,
+      "empty": true
+    },
+    {
+      "tab": "全部作品",
+      "kind": "desc_fragment_1",
+      "text": "审核中、暂无数据，不等于失败。",
+      "count": "共0个作品",
+      "exactTextPresent": false,
+      "empty": true
+    },
+    {
+      "tab": "全部作品",
+      "kind": "desc_fragment_2",
+      "text": "等状态、指标、对照齐了再动。",
+      "count": "共0个作品",
+      "exactTextPresent": false,
+      "empty": true
+    },
+    {
+      "tab": "已发布",
+      "kind": "title",
+      "text": "先写未核验",
+      "count": "共0个作品",
+      "exactTextPresent": false,
+      "empty": true
+    },
+    {
+      "tab": "已发布",
+      "kind": "desc_fragment_1",
+      "text": "审核中、暂无数据，不等于失败。",
+      "count": "共0个作品",
+      "exactTextPresent": false,
+      "empty": true
+    },
+    {
+      "tab": "已发布",
+      "kind": "desc_fragment_2",
+      "text": "等状态、指标、对照齐了再动。",
+      "count": "共0个作品",
+      "exactTextPresent": false,
+      "empty": true
+    },
+    {
+      "tab": "待发布",
+      "kind": "title",
+      "text": "先写未核验",
+      "count": "共0个作品",
+      "exactTextPresent": false,
+      "empty": true
+    },
+    {
+      "tab": "待发布",
+      "kind": "desc_fragment_1",
+      "text": "审核中、暂无数据，不等于失败。",
+      "count": "共0个作品",
+      "exactTextPresent": false,
+      "empty": true
+    },
+    {
+      "tab": "待发布",
+      "kind": "desc_fragment_2",
+      "text": "等状态、指标、对照齐了再动。",
+      "count": "共0个作品",
+      "exactTextPresent": false,
+      "empty": true
+    },
+    {
+      "tab": "未通过",
+      "kind": "title",
+      "text": "先写未核验",
+      "count": "共0个作品",
+      "exactTextPresent": false,
+      "empty": true
+    },
+    {
+      "tab": "未通过",
+      "kind": "desc_fragment_1",
+      "text": "审核中、暂无数据，不等于失败。",
+      "count": "共0个作品",
+      "exactTextPresent": false,
+      "empty": true
+    },
+    {
+      "tab": "未通过",
+      "kind": "desc_fragment_2",
+      "text": "等状态、指标、对照齐了再动。",
+      "count": "共0个作品",
+      "exactTextPresent": false,
+      "empty": true
+    }
+  ],
+  "updated_at": "2026-05-24T12:45:36+08:00",
+  "submitted_at": "2026-05-24T12:20:16+08:00",
+  "published_at": "2026-05-24T12:20:00+08:00",
+  "published_at_raw": "2026-05-24 12:20",
+  "verified_at": "2026-05-24T12:23:48.242+08:00",
+  "result_path": "/Users/baishangjituan/Documents/push/kuaishou_publish_result_20260523_pending_status_before_rewrite.json",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-23-ai-employee-pending-status-before-rewrite.json",
+  "manager_verification": {
+    "url": "https://cp.kuaishou.com/article/manage/video?status=1&from=publish",
+    "title": "快手创作者服务平台",
+    "activeTab": "已发布",
+    "countText": "共38个作品",
+    "hasFullText": true,
+    "hasTitle": true,
+    "hasDescription": true,
+    "hasTerminalStatus": true,
+    "status": "已发布",
+    "rowText": "14\n智能大陈\n发布作品\n首页\n内容管理\n作品管理\n合集管理\n互动管理\n数据中心\n数据概览\n作品分析\n直播数据\n粉丝分析\n成长中心\n创作服务\n创作灵感\n活动中心\n热点榜单\n创作学院\n其他服务\n音乐人\n作品推广\n推广资源管理\n创建直播\n视频管理\n时间范围\n~\n\n共365天\n\n全部作品已发布待发布未通过\n共38个作品\n00:15\n先写未核验 审核中、暂无数据，不等于失败。先把结论改成未核验，等状态、指标、对照齐了再动。\n已发布\n2026-05-24 12:20\n 1\n 0\n 0\n00:15\n无新增不是失败 别把无新增写成失败。先核验状态、指标、对照，证据齐了再改。\n已发布\n2026-05-22 16:40\n 467\n 2\n 7\n00:15\n等指标再改 播放、完播、互动没回来，先别改内容。AI员工先建采集单，明天再判断。\n已发布\n2026-05-20 16:56\n 83\n 1\n 4\n00:15\n齐了再结论 复盘不是盖章判死。状态、指标、对照三格证据齐了，再决定怎么改。\n已发布\n2026-05-17 10:44\n流量助推\n 518\n 0\n 7\n00:15\n单条没指标，不等于内容差。大陈让小马先看同账号同格式，再决定怎么改。\n已发布\n2026-05-16 11:30\n 1\n 0\n 0\n00:15\n审核中不是失败。小马想改题重发，大陈让它先写状态词、等分支落盘。\n已发布\n2026-05-15 12:31\n 3\n 1\n 0\n00:15\n没有作品行、数据和对照，别急着说内容差。小马要下结论，大陈让它先补核验。\n已发布\n2026-05-14 13:22\n 2\n 0\n 0\n00:15\n小马想再点一次发布，大陈说先查回执。审核中不是失败，缺证据先补证据。\n已发布\n2026-05-14 11:36\n 1\n 0\n 0\n00:15\n平台列表一乱，小马差点全判失败。大陈说，先分已发布、审核中、待核验，再决定下一步。\n已发布\n2026-05-13 08:33\n 2\n 1\n 0\n00:15\n发完视频不等于交接完成。小马刚想做下一条，大陈让它先把链接、时间、状态和封面确认写回表里。\n已发布\n2026-05-05 13:18\n 5\n 2\n 0\n00:15\n发完一条视频，不是马上赶下一条。大陈让机器人小马先把播放、完播、互动和近3条同格式内容放到一张表里，再决定怎么改。\n已发布\n2026-05-04 14:34\n 84\n 2\n 7\n00:15\n机器人小马说全平台已发布，刚想收工就被问住：播放、完播、互动在哪？大陈说，只发布不算复盘，AI员工还要把数据带回来。\n已发布\n2026-05-03 21:08\n 2\n 1\n 0\n00:15\n机器人小马发完就想走，大陈说还没完。公开链接、平台、发布时间、状态词没写回，后面复盘就断链。\n已发布\n2026-05-02 15:09\n 4\n 1\n 0\n00:15\n机器人小马一着急就要重发，大陈说先停。 发布后看到异常，先查管理列表状态词：审核中先等，能编辑先修旧条，失败再重发。 #AI员工 #发布流程 #先看状态词\n已发布\n2026-05-01 12:35\n 2\n 1\n 0\n00:15\n看到封面错、描述不对，别马上再发一条。 先查管理列表状态： - 能修改就修旧条 - 审核中就等待 - 真正失败才重发 这样不会把归因越弄越乱。AI员工先核验，人再做发布判断。\n已发布\n2026-04-30 14:28\n 3\n 2\n 0\n00:15\n别直接点发表。先锁当前批次，再把视频、封面、短标题、描述四项逐项比对。旧回执不能当新证据，任一项不对就先停下。AI员工先核验，人再做发布判断。\n已发布\n2026-04-29 15:31\n 2\n 0\n 0\n00:15\n别把早窗 0 直接写成失败。先去管理页看状态词：已发布、审核中、修改审核中、失败。封面错了先修旧条，确认失败再重发。AI员工负责查列表，人负责判断。\n已发布\n2026-04-29 10:55\n 6\n 1\n 0\n00:15\n别把暂未可见直接写成失败。先去管理页看状态：已发布、审核中、草稿、失败。封面错了先修旧条，确认失败再重发。AI员工负责查列表，人负责判断。\n已发布\n2026-04-27 14:38\n 2\n 2\n 0\n00:15\n很多团队复盘会错位， 不是不会看数据， 而是发完以后 没先写回真实字段。 先补这 6 个： 标题、链接、时间、 状态、诊断、动作。 人做判断， AI 负责补字段。\n已发布\n2026-04-26 23:05\n 50\n 0\n 3\n00:15\n内容发完不等于结束。很多团队第二天复盘总错位，真正漏掉的是发完以后没把真实标题、真实链接、发布时间和状态词写回字段。更该先交给 AI 的，是补字段和写回复盘表。人做判断，AI 负责写回。\n已发布\n2026-04-24 14:22\n 4\n 1\n 0\n00:15\n写完内容不等于结束。 真正耗人的， 是后面的三步执行： 改写、 分发、 回填字段。 链接、发布时间、状态词， 这些重复动作更该先交给 AI。 人做判断， AI 跑平台。\n已发布\n2026-04-23 12:25\n 2\n 0\n 0\n00:15\n写完内容不等于结束。真正耗人的，是后面的三步执行：改写、分发、回填复盘。这三步更该先交给 AI。人做判断，AI 跑平台。\n已发布\n2026-04-22 16:48\n 1\n 0\n 0\n00:15\n写完内容不等于结束。真正耗人的，往往是后面的平台执行链。内容改写适配、平台分发执行、回填链接和复盘，这三类活更该先交给 AI。人做判断，AI 跑流程。\n已发布\n2026-04-21 16:10\n 2\n 1\n 0\n00:15\n很多团队做内容最累的，不是想法不够，是平台执行全靠人手动跑。改文案、传封面、发多平台、回填复盘，这一段更该先交给 AI 员工。人做判断，AI 跑流程。\n已发布\n2026-04-20 16:27\n 5\n 1\n 0\n00:32\n很多团队上 AI 没提效，不是模型不行，是第一步就先谈裁人。 更该先交给 AI 的，是内容初稿、标准回复、纪要复盘这 3 类重复活。 先替重复活，别先替人。\n已发布\n2026-04-17 15:45\n 2,306\n 2\n 0\n00:28\n很多团队上 AI 没提效，问题往往不是模型不够强，而是第一步就先盯着裁人。更该先交给 AI 的，是内容初稿、标准回复、会议纪要和复盘这些重复活。先替劳动，别先替人。\n已发布\n2026-04-13 17:24\n 4\n 1\n 0\n00:35\n一上AI就先裁人，顺序错了 很多团队上 AI 没提效，不是模型不行，是第一步就先谈裁人。 更该先交给 AI 的，是内容初稿、标准回复、纪要复盘这些重复活。 先替劳动，别先替人。\n已发布\n2026-04-13 00:58\n 2,384\n 0\n 9\n00:25\n很多人担心 AI 先替人。 但现实往往是， 最先被接走的不是人， 而是你每天最忙的重复劳动。 先写内容，先回标准问题，先做周报复盘。 把重复执行交给 AI，人去做判断和信任。 #AI员工 #智能体应用 #创业判断\n已发布\n2026-04-10 22:33\n 4\n 2\n 0\n00:15\n很多团队上 AI 的第一反应，是先谈裁人。但更该先替掉的，其实是重复劳动。先写内容，先回客户，先做复盘。人继续做判断、创意和信任。这一步顺序错了，AI 很难真正提效。\n已发布\n2026-04-09 13:47\n 3\n 1\n 0\n00:32\n她一边擦眼泪，公司一边说要上 AI 员工。如果 AI 最后只换来裁员，说明第一步就做错了。AI 不该先替掉人，而该先替掉写内容、回客户、做复盘这些重复劳动。先把人从重复执行里解放出来，再谈效率。\n已发布\n2026-04-07 14:12\n 4\n 1\n 0\n\nwww.kuaishou.com 2019~2026 @ All rights Reserved 京ICP备15023266号-136  京公网安备11010802038443号\n\n遇到\n\n问题",
+    "publishedAtRaw": "2026-05-24 12:20",
+    "screenshot": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-management-verify-retry-20260523.png",
+    "note": "Immediate post-submit redirect first showed 审核中; subsequent 作品管理 all/published list showed 已发布. Exact search for the new title returned 0 during index lag, so verification used the full manager list DOM row."
+  },
+  "feishu_notification": {
+    "sent": true,
+    "status": "sent",
+    "repaired": true,
+    "repair_reference_thread_id": "019d58ff-91b3-7f10-9703-4c9e0e469a35",
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "profile": "legacy-a958",
+    "identity": "bot",
+    "method": "lark-cli --profile legacy-a958 im +messages-send --as bot",
+    "cli_path": "/Users/baishangjituan/Documents/New project/node_modules/@larksuite/cli/bin/lark-cli",
+    "idempotency_key": "ks-20260523-kuaishou-feishu-repair",
+    "attempted_at": "2026-05-24T04:45:36Z",
+    "sent_at": "2026-05-24T12:45:36+08:00",
+    "create_time": "2026-05-24 12:45:36",
+    "message_id": "om_x100b6e1c69c6c8a4c29f99fd8383b03",
+    "sent_after_verified_publish": true,
+    "text_summary": "快手发布完成通知；标题：先写未核验；状态：published / 已发布；封面使用内容包规定的 cover-vertical-3x4.png。",
+    "previous_failure_reason": "default lark-cli profile used the wrong app identity; target chat belongs to legacy-a958 app profile",
+    "command_pattern": "lark-cli --profile legacy-a958 im +messages-send --as bot --chat-id <chat_id> --idempotency-key <key> --text <message>",
+    "lark_cli_notice": {
+      "current": "1.0.19",
+      "latest": "1.0.39",
+      "message": "lark-cli 1.0.39 available, current 1.0.19"
+    },
+    "previous_failed_notification": {
+      "sent": false,
+      "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+      "idempotency_key": "ks-20260523-pending-status-before-rewrite",
+      "attempted_at": "2026-05-24T04:22:34.906Z",
+      "method": "lark-cli im +messages-send",
+      "attempts": [
+        {
+          "as": "bot",
+          "sent": false,
+          "status": 1,
+          "stderr": "{\n  \"ok\": false,\n  \"identity\": \"bot\",\n  \"error\": {\n    \"type\": \"api_error\",\n    \"code\": 230002,\n    \"message\": \"HTTP 400: Bot/User can NOT be out of the chat.\",\n    \"detail\": null\n  },\n  \"_notice\": {\n    \"update\": {\n      \"current\": \"1.0.19\",\n      \"latest\": \"1.0.39\",\n      \"message\": \"lark-cli 1.0.39 available, current 1.0.19\"\n    }\n  }\n}\n"
+        },
+        {
+          "as": "user",
+          "sent": false,
+          "status": 1,
+          "stderr": "Error: need_user_authorization (user: )\n"
+        }
+      ]
+    }
+  },
+  "notes": [
+    "2026-05-24T12:45:36+08:00: Feishu notification repaired and sent with profile legacy-a958, message_id=om_x100b6e1c69c6c8a4c29f99fd8383b03."
+  ]
+}
