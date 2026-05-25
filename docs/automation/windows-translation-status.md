@@ -2689,3 +2689,54 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-24 22:03:25 CST`，今天 monitor 中唯一需要补 Windows 落点的是 `social-publish-automation` 的飞书通知入口；现已补入 PowerShell / `.cmd` wrapper 并更新文档，其余非零项均为共享台账或打包产物，不存在额外 Windows 缺口。
+
+## 2026-05-25 22:01:13 CST
+
+- 处理时间:
+  - `2026-05-25 22:01:13 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-24 22:03:25 CST` 之后追加且此前未写入本状态文件的最新批次已全部复核。
+  - 非零批次只有 2 个:
+    - `2026-05-24 22:48:15 CST`
+    - `2026-05-25 00:49:33 CST`
+  - 其余新增批次:
+    - `2026-05-24 23:48:45 CST`
+    - `2026-05-25 01:51:41 CST`
+    - `2026-05-25 02:53:30 CST`
+    - `2026-05-25 03:55:19 CST`
+    - `2026-05-25 04:57:08 CST`
+    - `2026-05-25 05:59:35 CST`
+    - `2026-05-25 07:00:08 CST`
+    - `2026-05-25 08:01:23 CST`
+    - `2026-05-25 10:04:22 CST`
+    - `2026-05-25 18:12:46 CST`
+    - `2026-05-25 21:17:09 CST`
+  - `2026-05-24 22:48:15 CST` 的非零变更项:
+    - `skill-center/skills/social-publish-automation/SKILL.md`
+    - `skill-center/skills/social-publish-automation/scripts/send_feishu_notify.ps1`
+    - `skill-center/skills/social-publish-automation/scripts/send_feishu_notify.cmd`
+  - `2026-05-25 00:49:33 CST` 的非零变更项:
+    - `~/.codex/skills/social-publish-automation/SKILL.md`
+- 已完成的 Windows 补全:
+  - `skill-center/skills/social-publish-automation`:
+    - 已复核 `send_feishu_notify.ps1` 与 `send_feishu_notify.cmd` 仍在仓库中，且 PowerShell wrapper 已覆盖 repo-local `lark-cli` 解析、固定 `legacy-a958` profile、固定 chat、`--idempotency-key` 与 `bot/user` 发送模式。
+    - 已复核仓库版 `SKILL.md` 仍保留并明确了 Windows 等价行为，无需再补新脚本或文档分叉:
+      - CDP 可用性优先用 `Invoke-WebRequest http://127.0.0.1:9222/json/version` 验证
+      - 首选 `automation/python-platform-takeover/scripts/social-publisher.ps1` 做 `doctor`、`validate-package`、`receipt-status` 与 `record-receipt`
+      - Windows 原生上传 fallback 继续要求 `%TEMP%` 短路径，而不是 `.lnk` / symlink / 搜索结果
+      - Feishu 通知继续优先走 `.\scripts\send_feishu_notify.cmd` 或 `.\scripts\send_feishu_notify.ps1`
+      - `blocked_account_review_pending` 与扩展 receipt 字段仍按 Windows 镜像规则视为共享 CLI 可处理状态，不需要手工删字段
+  - `~/.codex/skills/social-publish-automation/SKILL.md`:
+    - 已对比 live skill 与 repo mirror；`2026-05-25 00:49:33 CST` 这次修改只是把 live 副本收窄为更通用的说明。
+    - 仓库镜像当前仍保留更完整的 Windows 专用落点，因此没有新的 Windows 缺口需要回填到 repo。
+  - 结论:
+    - 今天没有新增需要我再实现的 Windows 代码或资产；本轮只追加状态记录，明确最新批次已被 Windows 镜像覆盖。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-25` 当前已记录批次没有遗漏的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未发现 `pwsh`，因此未做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、仓库 / live skill 文档 diff，以及已存在 Windows wrapper 脚本内容核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-25 22:01:13 CST`，最新 monitor 批次里的 Windows 落点已经由仓库现有 `social-publish-automation` 文档和 `send_feishu_notify.{ps1,cmd}` 覆盖；今天无需新增 Windows 补丁文件。
