@@ -12,6 +12,21 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-26 18:49:34 CST
+- 检测到新的技能变更批次: 新增 `2`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-locks/`；核心是 `2026-05-26-ai-employee-three-grid-before-verdict` 的 Bilibili manual-review 锁新增了两份 `.stale-override-*` 归档，并把当前 live lock 刷新到新的 Hermes 会话与 stale 时间窗。
+- 建议后续执行 GitHub 同步，避免这组新的 Bilibili 锁归档和重复人工复核留痕继续只停留在本地工作区。
+
+## 2026-05-26 16:46:38 CST
+- 检测到新的技能变更批次: 新增 `1`，修改 `0`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-locks/`；核心是 `2026-05-26-ai-employee-three-grid-before-verdict` 新增了一个 Bilibili publish lock，记录 Hermes 会话、`needs_manual_review` 状态、对应 handoff package / receipt 路径，并在锁文件内标记为 stale。
+- 建议后续执行 GitHub 同步，避免这条新的 Bilibili 发布防重发与人工复核留痕继续只停留在本地工作区。
+
+## 2026-05-26 14:42:23 CST
+- 检测到新的技能变更批次: 新增 `3`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/`；核心是新增 `2026-05-26-ai-employee-three-grid-before-verdict` 的全平台 content package、Hermes handoff 包和空白 publish receipt，并把 `state/hermes-handoff/latest.json` 从 `2026-05-23-ai-employee-pending-status-before-rewrite` 切换到这个新的 handoff campaign。
+- 建议后续执行 GitHub 同步，避免这批新的 handoff 配置、素材指纹和多平台发布回填台账继续只停留在本地工作区。
+
 ## 2026-05-26 00:06:34 CST
 - 处理时间:
   - `2026-05-26 00:06:34 CST`

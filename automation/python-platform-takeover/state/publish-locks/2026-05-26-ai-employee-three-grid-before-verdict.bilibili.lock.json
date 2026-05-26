@@ -1,0 +1,12 @@
+{
+  "campaign_id": "2026-05-26-ai-employee-three-grid-before-verdict",
+  "platform": "bilibili",
+  "actor": "hermes",
+  "actor_session_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "started_at": "2026-05-26T10:20:15.267Z",
+  "expires_at": "2026-05-26T10:50:15.267Z",
+  "status": "needs_manual_review",
+  "package_json": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-26-ai-employee-three-grid-before-verdict.json",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-26-ai-employee-three-grid-before-verdict.json",
+  "staled_at": "2026-05-26T10:21:25.266Z"
+}

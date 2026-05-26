@@ -1,0 +1,142 @@
+source_thread_id: "019d9ac2-d680-7f12-bf32-14678c576aa1"
+campaign_id: "2026-05-26-ai-employee-three-grid-before-verdict"
+status: "ready_for_publish"
+package_status: "ready_for_platform_publishing"
+scope: "all_platforms"
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4"
+  backup_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+support_files:
+  content_package_root: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package"
+  final_verify_path: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/final-verify.json"
+  platform_upload_map: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platform-upload-map.md"
+  cover_package_root: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package"
+platform_upload_plan:
+  douyin:
+    platform_label: "抖音"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/douyin.md"
+  kuaishou:
+    platform_label: "快手"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/kuaishou.md"
+  wechat_channels:
+    platform_label: "微信视频号"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/wechat_channels.md"
+  weibo:
+    platform_label: "微博"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/weibo.md"
+  bilibili:
+    platform_label: "B站"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/bilibili.md"
+  xiaohongshu:
+    platform_label: "小红书"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/xiaohongshu.md"
+  toutiao:
+    platform_label: "头条号"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/toutiao.md"
+  baijiahao:
+    platform_label: "百家号"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/baijiahao.md"
+  zhihu:
+    platform_label: "知乎"
+    video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4"
+    cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png"
+    backup_cover: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-horizontal-4x3.png"
+    platform_file: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/zhihu.md"
+platforms:
+  douyin:
+    title: "没指标别判死"
+    description: "小马看到“暂无指标”就想盖失败章，大陈直接拦住：先别判死。状态、指标、对照三格齐了，再判断要不要改包装。#AI员工 #内容复盘 #内容运营"
+  kuaishou:
+    title: "先补三格"
+    description: "没指标，不等于失败。先补状态、指标、对照，证据齐了再判断。"
+  wechat_channels:
+    title: "先补三格"
+    description: "机器人小马想把“暂无指标”写成失败，大陈叫停：先补状态、指标、对照三格证据，齐了再判断。"
+  weibo:
+    title: "没指标，就能直接判内容失败吗？"
+    description: "不能。没指标、无新增、未核验，都只能说明证据没齐。先补状态、指标、同账号对照，再决定要不要改标题封面。#AI员工 #内容运营"
+  bilibili:
+    title: "别用没指标判死内容：AI员工先补三格证据，再决定要不要改包装"
+    description: "这条讲内容复盘里最容易误判的一步：看到暂无指标，不要直接写失败。先看作品行状态，再等指标窗口，再做同账号同格式对照。三格证据齐了，再决定标题、封面或口播结构要不要改。"
+  xiaohongshu:
+    title: "别用没指标判死"
+    description: "没指标，不等于失败。先补三格：状态、指标、对照，证据齐了再改。"
+  toutiao:
+    title: "没指标时，AI员工能直接判断内容失败吗？"
+    description: "不能。没指标只能说明证据还没齐，不代表内容失败。更稳妥的流程是先补作品行状态、指标窗口和同账号对照，再决定是否修改标题、封面或内容结构。"
+  baijiahao:
+    title: "为什么“暂无指标”不能直接写成内容失败？"
+    description: "因为暂无指标只说明数据和对照还没有补齐，不是失败证据。应该先补作品行状态、指标窗口和同账号同格式对照，三格齐了再判断。"
+  zhihu:
+    title: "为什么内容复盘里不能用“没指标”直接判定失败？"
+    description: "因为没指标、无新增、未核验都只是证据缺口，不是失败证据。真正稳妥的流程，是先补作品行状态、指标窗口和同账号同格式对照，再决定是否改包装。"
+publish_constraints:
+  require_management_page_verification: true
+  skip_duplicate_if_already_published: true
+  final_submit_requires_user_confirmation: true
+  do_not_publish: true
+  do_not_upload: true
+  do_not_click_submit: true
+  do_not_test_xiaohongshu: true
+fingerprints:
+  title_hash: "70bf3baf8a1dfb5e8fdeb7096dad23f4fea299af07874a455e892861a17c9adb"
+  body_core_hash: "979e0dce8fe9deeff4db2969558e880aa3173a7a0265fd3798743b88ab9cfcea"
+  video_sha256: "3a79dd193eeb9e64411c17c96d2d9b51ee3684f2dd215a963cedbd108440f750"
+  raw_video_sha256: "c7ed295870efec7d175763e614701591241f38e10d07c36ca003a9d15fece00d"
+  cover_sha256: "18adccd09b146ae3e1b0743f8ad1495acb2e54dfb54065bcfb7e295a3f070ab7"
+  cover_3_4_sha256: "18adccd09b146ae3e1b0743f8ad1495acb2e54dfb54065bcfb7e295a3f070ab7"
+  cover_4_3_sha256: "94b88ea7a8b6feb7c68ad8036821f568d64b28ca91d00dfd4f0c0886367ea9dd"
+lock_dir: "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks"
+receipt_schema:
+  future_platform_receipt_fields:
+    - "actor"
+    - "actor_session_id"
+    - "status"
+    - "verified_by"
+    - "lock_path"
+    - "submitted_at"
+    - "published_at"
+    - "video_path"
+    - "cover_path"
+    - "cover_thumbnail_present"
+    - "cover_readability_passed"
+hermes:
+  json_package: "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-26-ai-employee-three-grid-before-verdict.json"
+  receipt_path: "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-26-ai-employee-three-grid-before-verdict.json"
+  allow_live: false
+  platforms_supported_now:
+    - "bilibili"
+    - "toutiao"
+    - "zhihu"
+    - "baijiahao"
+    - "kuaishou"
+    - "weibo"
+    - "wechat_channels"
+  unsupported_platforms:
+    douyin: "unsupported_by_current_hermes_skill"
