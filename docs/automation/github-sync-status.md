@@ -12,6 +12,36 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-27 00:04:38 CST
+- 处理时间:
+  - `2026-05-27 00:04:38 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的 latest dated entry 为 `2026-05-26 22:03:51 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含 `automation/python-platform-takeover/` 的新 handoff package、receipt、Bilibili publish lock 留痕，以及 `docs/automation/{skill-change-monitor,windows-translation-status,github-sync-status}.md` 的新增自动化记录。
+  - `codex/windows-version-20260411`: 是。Windows bridge / deploy 相关变更已经存在于该分支的本地 ahead 提交中；本轮复核的工作区内容与该分支当前文件一致，因此无需再新建额外变更。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。已新增提交 `Sync 2026-05-26 python takeover handoff state`。
+  - `codex/windows-version-20260411`: 是。沿用该分支既有的 4 个本地待推送提交，无需重复造新提交。
+- 是否已推送:
+  - `codex/default-python-sync`: 否。当前运行环境禁止访问 GitHub SSH 端口 `22`；本轮最终 `git push origin codex/default-python-sync` 仍会被该限制阻断。
+  - `codex/windows-version-20260411`: 否。执行 `git push origin codex/windows-version-20260411` 返回 `ssh: connect to host github.com port 22: Operation not permitted`。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync 2026-05-26 python takeover handoff state`
+  - `codex/windows-version-20260411`: `Refresh xyq nest Windows launchers`
+  - `codex/windows-version-20260411`: `Sync bridge progress thread support`
+  - `codex/windows-version-20260411`: `Update Windows publish handoff and notify guidance`
+  - `codex/windows-version-20260411`: `Add Windows Feishu notify launchers`
+- 若跳过，说明跳过原因:
+  - 未提交 `automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json` 及其两个 `.stale-*` 文件，因为它们是旧运行态残留，不属于本轮待同步批次。
+  - 未在 `codex/default-python-sync` 混入 `skills/codex-feishu-bridge-skill/**`、`skill-center/skills/social-publish-automation/**` 或 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` / `*.cmd`，因为这些属于 Windows 专用 bridge / launcher 资产。
+  - `codex/windows-version-20260411` 本轮没有新增提交，因为相关 Windows 变更已经整理在该分支现有的本地 ahead 提交中。
+  - 由于当前环境禁止连接 GitHub，default / Windows 两侧本轮只能完成本地整理与提交记录，无法真正上传到远端。
+
 ## 2026-05-26 18:49:34 CST
 - 检测到新的技能变更批次: 新增 `2`，修改 `1`，删除 `0`。
 - 这批变更集中在 `automation/python-platform-takeover/state/publish-locks/`；核心是 `2026-05-26-ai-employee-three-grid-before-verdict` 的 Bilibili manual-review 锁新增了两份 `.stale-override-*` 归档，并把当前 live lock 刷新到新的 Hermes 会话与 stale 时间窗。
