@@ -1,0 +1,61 @@
+{
+  "updated_at": "2026-05-27T10:29:13.003Z",
+  "guards": {
+    "local_receipt_weibo_present": false,
+    "platform_duplicate_check": "passed",
+    "duplicate": {
+      "searches": [
+        {
+          "q": "没指标、无新增、未核验",
+          "status": 200,
+          "total": 0,
+          "matched": false,
+          "matched_mblogid": null
+        },
+        {
+          "q": "同账号对照",
+          "status": 200,
+          "total": "3",
+          "matched": false,
+          "matched_mblogid": null
+        },
+        {
+          "q": "没指标，就能直接判内容失败吗？",
+          "status": 200,
+          "total": 0,
+          "matched": false,
+          "matched_mblogid": null
+        }
+      ],
+      "mymblog": {
+        "status": 200,
+        "checked_items": 20,
+        "matched": false
+      }
+    }
+  },
+  "status": "published_verified",
+  "submitted_at": "2026-05-27T18:26:29.073+08:00",
+  "published_at": "Wed May 27 18:26:56 +0800 2026",
+  "public_url": "https://weibo.com/2326772703/R1mDveI6O",
+  "mobile_url": "https://m.weibo.cn/detail/5303253453506150",
+  "mblogid": "R1mDveI6O",
+  "post_id": "5303253453506150",
+  "cover_mode": "weibo_quick_composer_no_custom_cover_control; used_publish_video_first_frame_per_package_rule; first_frame_matches_required_vertical_cover_design",
+  "verification": {
+    "status": "verified",
+    "verified_by": "cdp_attached_playwright_weibo_api_and_public_readback",
+    "result_path": "/Users/baishangjituan/Documents/push/weibo_publish_result_20260527_three_grid_before_verdict.json"
+  },
+  "feishu_notification": {
+    "status": "sent",
+    "sent": true,
+    "profile": "legacy-a958",
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "message_id": "om_x100b6e583ba41ca4c21e4c5e709d3a5",
+    "sent_at": "2026-05-27T10:29:13.003Z",
+    "sent_at_local": "2026-05-27 18:28:38",
+    "idempotency_key": "weibo-R1mDveI6O",
+    "note": "Feishu notification sent after verified Weibo publish-success via lark-cli --profile legacy-a958."
+  }
+}

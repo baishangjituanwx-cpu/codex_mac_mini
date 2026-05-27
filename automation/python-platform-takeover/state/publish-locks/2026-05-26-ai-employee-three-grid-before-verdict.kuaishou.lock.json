@@ -1,0 +1,42 @@
+{
+  "campaign_id": "2026-05-26-ai-employee-three-grid-before-verdict",
+  "platform": "kuaishou",
+  "status": "published_verified_notified",
+  "actor": "Codex CDP",
+  "actor_session_id": "cdp-127.0.0.1:9222-current-thread",
+  "started_at": "2026-05-27T10:29:00.194Z",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4",
+  "uploaded_video_path": "/tmp/kuaishou-20260526-three-grid-publish.mp4",
+  "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+  "duplicate_guard_path": "/Users/baishangjituan/Documents/push/kuaishou_duplicate_guard_20260526_three_grid_before_verdict.json",
+  "updated_at": "2026-05-27T11:11:42.880Z",
+  "submitted_text": "先补三格\n没指标，不等于失败。先补状态、指标、对照，证据齐了再判断。",
+  "uploaded_cover_path": "/tmp/kuaishou-20260526-three-grid-cover-vertical-3x4.png",
+  "cover_blob_evidence": "/Users/baishangjituan/Documents/push/kuaishou_current_cover_blob_20260526_three_grid.png",
+  "publish_click_started_at": "2026-05-27T11:02:32.802Z",
+  "publish_button_rect": {
+    "x": 296,
+    "y": 682,
+    "w": 96,
+    "h": 36
+  },
+  "publish_click_state_path": "/Users/baishangjituan/Documents/push/kuaishou_publish_click_state_20260526_three_grid.json",
+  "current_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+  "platform_state": "已发布",
+  "result_path": "/Users/baishangjituan/Documents/push/kuaishou_publish_result_20260526_three_grid_before_verdict.json",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-26-ai-employee-three-grid-before-verdict.json",
+  "manager_url": "https://cp.kuaishou.com/article/manage/video?status=1&from=publish",
+  "verified_at": "2026-05-27T11:04:34.302Z",
+  "published_at_local": "2026-05-27 19:02",
+  "feishu_notification": {
+    "status": "sent",
+    "sent": true,
+    "profile": "legacy-a958",
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "message_id": "om_x100b6e595abe90b0c222d878efc727a",
+    "sent_at": "2026-05-27T11:11:03.000Z",
+    "sent_at_local": "2026-05-27 19:11:03",
+    "idempotency_key": "kuaishou-2026-05-26-three-grid",
+    "note": "Feishu notification sent after verified Kuaishou published state via lark-cli --profile legacy-a958."
+  }
+}

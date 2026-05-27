@@ -1,0 +1,64 @@
+{
+  "campaign_id": "2026-05-26-ai-employee-three-grid-before-verdict",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "platform": "zhihu",
+  "status": "published",
+  "updated_at": "2026-05-27T09:29:59.146Z",
+  "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/zhihu.md",
+  "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-26-ai-employee-three-grid-before-verdict-zhihu.md",
+  "title": "为什么内容复盘里不能用“没指标”直接判定失败？",
+  "body": "因为没指标、无新增、未核验都只是证据缺口，不是失败证据。真正稳妥的流程，是先补作品行状态、指标窗口和同账号同格式对照，再决定是否改包装。",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4",
+  "video_sha256": "3a79dd193eeb9e64411c17c96d2d9b51ee3684f2dd215a963cedbd108440f750",
+  "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+  "required_cover_sha256": "18adccd09b146ae3e1b0743f8ad1495acb2e54dfb54065bcfb7e295a3f070ab7",
+  "duplicate_guard": {
+    "local_receipt_status": "failed",
+    "platform_check": "passed_profile_posts_manage_no_exact_duplicate",
+    "details": {
+      "profile": {
+        "hasExpectedTitle": false,
+        "hasExpectedBody": false,
+        "exactLink": null
+      },
+      "posts": {
+        "hasExpectedTitle": false,
+        "hasExpectedBody": false,
+        "exactLink": null
+      },
+      "manage": {
+        "hasExpectedTitle": false,
+        "hasExpectedBody": false,
+        "exactLink": null
+      }
+    }
+  },
+  "published_at": "2026-05-27T09:17:52.000Z",
+  "verified_at": "2026-05-27T09:19:41.625Z",
+  "public_url": "https://www.zhihu.com/pin/2043014830819390014",
+  "share_url": "https://www.zhihu.com/pin/2043014830819390014",
+  "content_id": "2043014830819390014",
+  "pin_id": "2043014830819390014",
+  "video_id": "2043014832987846201",
+  "remote_video_status": "success",
+  "ai_disclaimer": "含 AI 生成内容",
+  "cover_thumbnail_url": "https://pic1.zhimg.com/v2-2d53cbf6d00414d83f7bcb217da06b8f.png",
+  "cover_readability_passed": true,
+  "verification_evidence": {
+    "publish_modal": "发布成功，感谢你的第 38 篇创作",
+    "detail_page": "https://www.zhihu.com/pin/2043014830819390014",
+    "creator_manage": "new video appears at top of creation management page",
+    "profile_videos": "new video appears at top of profile videos page"
+  },
+  "feishu_notification": {
+    "status": "sent",
+    "profile": "legacy-a958",
+    "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+    "message_id": "om_x100b6e5f3b875c98c248ede4918199f",
+    "sent_at_local": "2026-05-27 17:20:20",
+    "sent_at": "2026-05-27T09:20:40.881Z",
+    "idempotency_key": "zhihu-2043014830819390014",
+    "note": "Initial long idempotency key was rejected with Lark field validation 99992402; resent successfully with shorter idempotency key."
+  },
+  "result_path": "/Users/baishangjituan/Documents/push/zhihu_20260526_three_grid_publish_result.json"
+}

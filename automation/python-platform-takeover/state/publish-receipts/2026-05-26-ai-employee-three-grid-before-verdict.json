@@ -1,8 +1,414 @@
 {
   "campaign_id": "2026-05-26-ai-employee-three-grid-before-verdict",
   "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
-  "status": "not_published",
-  "receipts": {},
+  "status": "published_with_wechat_channels_description_repair_needed;weibo_published_verified;kuaishou_published_verified",
+  "receipts": {
+    "zhihu": {
+      "actor": "Codex",
+      "actor_session_id": "cdp-127.0.0.1:9222-current-thread",
+      "platform_id": "zhihu",
+      "status": "published",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "title": "为什么内容复盘里不能用“没指标”直接判定失败？",
+      "body": "因为没指标、无新增、未核验都只是证据缺口，不是失败证据。真正稳妥的流程，是先补作品行状态、指标窗口和同账号同格式对照，再决定是否改包装。",
+      "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/zhihu.md",
+      "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/zhihu/2026-05-26-ai-employee-three-grid-before-verdict-zhihu.md",
+      "final_verify_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/final-verify.json",
+      "automation_yaml_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-26-ai-employee-three-grid-before-verdict.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4",
+      "uploaded_video_path": "/tmp/zhihu-20260526-three-grid-publish.mp4",
+      "video_sha256": "3a79dd193eeb9e64411c17c96d2d9b51ee3684f2dd215a963cedbd108440f750",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+      "uploaded_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+      "required_cover_sha256": "18adccd09b146ae3e1b0743f8ad1495acb2e54dfb54065bcfb7e295a3f070ab7",
+      "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-horizontal-4x3.png",
+      "backup_cover_sha256": "94b88ea7a8b6feb7c68ad8036821f568d64b28ca91d00dfd4f0c0886367ea9dd",
+      "cover_mode": "required_vertical_3x4_local_file_input",
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "verified_by": "zhihu_api_public_detail_creator_manage_profile_via_cdp",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.zhihu.lock.json",
+      "started_at": "2026-05-27T08:56:42.589Z",
+      "notes": [
+        "Chrome DevTools/CDP attached to existing logged-in Chrome on 127.0.0.1:9223.",
+        "No Chrome restart was performed.",
+        "A new upload tab is used; nonmatching old Zhihu drafts are ignored before upload.",
+        "2026-05-27T09:29:59.146Z: Feishu notification sent after verified Zhihu publish-success, message_id=om_x100b6e5f3b875c98c248ede4918199f."
+      ],
+      "content_type": "video",
+      "published_at": "2026-05-27T09:17:52.000Z",
+      "submitted_at": "2026-05-27T09:17:52.000Z",
+      "verified_at": "2026-05-27T09:19:41.625Z",
+      "content_id": "2043014830819390014",
+      "pin_id": "2043014830819390014",
+      "video_id": "2043014832987846201",
+      "public_url": "https://www.zhihu.com/pin/2043014830819390014",
+      "share_url": "https://www.zhihu.com/pin/2043014830819390014",
+      "immersion_url": "https://www.zhihu.com/video/immersion/feed/2043014830819390014?object_type=pin&scene=",
+      "platform_state": "normal",
+      "view_permission": "all",
+      "ai_disclaimer": "含 AI 生成内容",
+      "video_duration_seconds": 16,
+      "video_width": 478,
+      "video_height": 848,
+      "remote_video_status": "success",
+      "remote_video_hd_width": 720,
+      "remote_video_hd_height": 1280,
+      "cover_thumbnail_url": "https://pic1.zhimg.com/v2-2d53cbf6d00414d83f7bcb217da06b8f.png",
+      "cover_remote_url": "https://pic1.zhimg.com/v2-2d53cbf6d00414d83f7bcb217da06b8f.png",
+      "is_custom_thumbnail": true,
+      "duplicate_guard": {
+        "local_receipt_status_before_retry": "failed",
+        "platform_check_before_publish": "passed_profile_posts_manage_no_exact_duplicate",
+        "result": "no_prior_zhihu_duplicate_found_before_submit"
+      },
+      "cdp_endpoint": "http://127.0.0.1:9222",
+      "verification_evidence": {
+        "publish_modal": "发布成功，感谢你的第 38 篇创作",
+        "publish_api": "POST /api/v4/content/publish returned 200",
+        "detail_page": "public detail page contains title/body and AI disclaimer",
+        "creator_manage": "creator manage page shows new video published just now",
+        "profile_videos": "profile videos page shows title/body at top",
+        "pin_api": "GET /api/v4/pins/2043014830819390014 returned state=normal, self_create=true, custom thumbnail URL"
+      },
+      "remediation_notes": [
+        "Video upload initially stalled at 0% because OSS PUT was routed through proxy; added/loaded DIRECT rule for oss-cn-hangzhou.aliyuncs.com in local Clash/Mihomo profile.",
+        "Removed duplicate uploaded video item before submission; final preflight had exactly one VideoUploadItem.",
+        "Uploaded and confirmed the content-package required vertical 3:4 cover file before submit."
+      ],
+      "feishu_notification": {
+        "status": "sent",
+        "profile": "legacy-a958",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6e5f3b875c98c248ede4918199f",
+        "sent_at_local": "2026-05-27 17:20:20",
+        "sent_at": "2026-05-27T09:20:40.881Z",
+        "idempotency_key": "zhihu-2043014830819390014",
+        "note": "Initial long idempotency key was rejected with Lark field validation 99992402; resent successfully with shorter idempotency key."
+      },
+      "result_path": "/Users/baishangjituan/Documents/push/zhihu_20260526_three_grid_publish_result.json"
+    },
+    "bilibili": {
+      "platform": "bilibili",
+      "status": "published_verified_public_api",
+      "campaign_id": "2026-05-26-ai-employee-three-grid-before-verdict",
+      "title": "别用没指标判死内容：AI员工先补三格证据，再决定要不要改包装",
+      "desc": "这条讲内容复盘里最容易误判的一步：看到暂无指标，不要直接写失败。先看作品行状态，再等指标窗口，再做同账号同格式对照。三格证据齐了，再决定标题、封面或口播结构要不要改。",
+      "bvid": "BV1QaGy6GEPH",
+      "aid": 116645842392558,
+      "public_url": "https://www.bilibili.com/video/BV1QaGy6GEPH/",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-horizontal-4x3.png",
+      "package_json": "/Users/baishangjituan/Documents/push/bilibili_package_three_grid_20260526.json",
+      "result_path": "/Users/baishangjituan/Documents/push/bilibili_publish_result_three_grid_20260526.json",
+      "submitted_at": "2026-05-27T09:35:42.000Z",
+      "verified_at": "2026-05-27T09:47:32.626Z",
+      "verification": {
+        "public_api": {
+          "endpoint": "https://api.bilibili.com/x/web-interface/view?bvid=BV1QaGy6GEPH",
+          "code": 0,
+          "state": 0,
+          "duration": 16,
+          "title_matches": true,
+          "desc_matches": true,
+          "pic": "http://i0.hdslb.com/bfs/archive/1d3ec185596c0baf33a4f7b551ce7c997d822ad3.jpg"
+        },
+        "manager": {
+          "page": "https://member.bilibili.com/platform/upload-manager/article",
+          "row_text": "00:00:16 别用没指标判死内容：AI员工先补三格证据，再决定要不要改包装 2026年05月27日 17:36:08 编辑 数据 0 0 0 0 0 0 0",
+          "exact_title_row_verified": true
+        },
+        "cover": {
+          "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-horizontal-4x3.png",
+          "required_cover_sha256": "94b88ea7a8b6feb7c68ad8036821f568d64b28ca91d00dfd4f0c0886367ea9dd",
+          "public_cover_download": "/Users/baishangjituan/Documents/push/bili-cover-BV1QaGy6GEPH.jpg",
+          "public_cover_preview": "/Users/baishangjituan/Documents/push/bili-cover-BV1QaGy6GEPH-preview.jpg",
+          "public_cover_sha256": "661792a8084292272581832d05f80f07063ef499e1f2e600edec5c58bb81b946",
+          "readability_checked": true,
+          "note": "公开封面视觉核验显示主标题“AI员工补证据”可读；使用内容包指定 horizontal 4x3 封面上传。"
+        },
+        "duplicate_cleanup": {
+          "duplicate_bvid": "BV1QaGy6GEji",
+          "duplicate_aid": 116645842392864,
+          "issue": "earlier submit created a duplicate with incorrectly cropped public cover",
+          "action": "set_only_self_via_bilibili_frontend_api",
+          "endpoint": "/x/vu/web/edit/visibility?csrf=***",
+          "response_code": 0,
+          "manager_status": "仅自己可见",
+          "public_api_after_cleanup": {
+            "code": 62012,
+            "message": "62012"
+          },
+          "kept_bvid": "BV1QaGy6GEPH"
+        }
+      }
+    },
+    "wechat_channels": {
+      "platform": "wechat_channels",
+      "campaign_id": "2026-05-26-ai-employee-three-grid-before-verdict",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "status": "published_needs_description_repair_after_review",
+      "title_expected": "先补三格",
+      "title_verified": "先补三格",
+      "description_expected": "机器人小马想把“暂无指标”写成失败，大陈叫停：先补状态、指标、对照三格证据，齐了再判断。",
+      "description_verified": "",
+      "description_issue": "WeChat Channels management list returned desc.description as empty after publish; edit action currently opens read-only original-info dialog while video is under review, so repair is blocked until audit allows editing.",
+      "object_id": "export/UzFfBgAAxLajVC85RED_jMzT4DCaYbva5RqkuZTLMLmUcP9WKA",
+      "create_time": 1779875087,
+      "displayed_publish_time": "2026年05月27日 17:44",
+      "platform_status": 1,
+      "visible_type": 1,
+      "review_state": "视频审核中",
+      "duplicate_guard": "management list checked before upload; no exact or near duplicate found in recent rows",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4",
+      "video_sha256": "3a79dd193eeb9e64411c17c96d2d9b51ee3684f2dd215a963cedbd108440f750",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+      "cover_sha256": "18adccd09b146ae3e1b0743f8ad1495acb2e54dfb54065bcfb7e295a3f070ab7",
+      "cover_mode": "required_vertical_3x4_uploaded_via_cdp_DOM_setFileInputFiles",
+      "cover_verified": true,
+      "cover_evidence": {
+        "upload_preview_natural_size": "1080x1440",
+        "compose_cover_url_key_prefix": "RVhUZa3HmBibgjJTZCHplgQ2bicb4jFqjA",
+        "management_thumb_natural_size": "540x720",
+        "management_media_cover_url_key_prefix": "RVhUZa3HmBibgjJTZCHplgQ2bicb4jFqjA"
+      },
+      "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platform-upload-map.md",
+      "automation_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-26-ai-employee-three-grid-before-verdict.yaml",
+      "cdp_endpoint": "http://127.0.0.1:9222",
+      "submitted_at": "2026-05-27T09:48:31.325Z",
+      "verified_at": "2026-05-27T09:48:31.325Z",
+      "remediation_required": "After video review completes, open management list > latest row > 修改描述和封面, set description to expected text, keep the uploaded vertical cover unchanged, then verify row desc.description matches expected.",
+      "result_path": "/Users/baishangjituan/Documents/push/wechat_channels_20260526_three_grid_publish_result.json",
+      "feishu_notification": {
+        "status": "sent_issue_notification",
+        "profile": "legacy-a958",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6e5faec890b4c4c59ecbd410c65",
+        "sent_at": "2026-05-27T09:49:05.813Z",
+        "idempotency_key": "wc-20260526-three-grid-desc-repair",
+        "note": "Notification sent because publish was submitted but description repair is required after review; no bot reauthorization was needed."
+      }
+    },
+    "weibo": {
+      "campaign_id": "2026-05-26-ai-employee-three-grid-before-verdict",
+      "platform_id": "weibo",
+      "status": "published",
+      "account": "智者大陈",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "title": "没指标，就能直接判内容失败吗？",
+      "body": "不能。没指标、无新增、未核验，都只能说明证据没齐。先补状态、指标、同账号对照，再决定要不要改标题封面。#AI员工 #内容运营",
+      "public_url": "https://weibo.com/2326772703/R1mDveI6O",
+      "mobile_url": "https://m.weibo.cn/detail/5303253453506150",
+      "mblogid": "R1mDveI6O",
+      "post_id": "5303253453506150",
+      "author": "智者大陈",
+      "source": "微博视频号",
+      "published_at": "Wed May 27 18:26:56 +0800 2026",
+      "submitted_at": "2026-05-27T18:26:29.073+08:00",
+      "recorded_at": "2026-05-27T18:27:02.232+08:00",
+      "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/weibo.md",
+      "content_library_post": "/Users/baishangjituan/Documents/New project/content-library/posts/weibo/2026-05-26-ai-employee-three-grid-before-verdict-weibo.md",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platform-upload-map.md",
+      "automation_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-26-ai-employee-three-grid-before-verdict.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4",
+      "video_sha256": "3a79dd193eeb9e64411c17c96d2d9b51ee3684f2dd215a963cedbd108440f750",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+      "required_cover_sha256": "18adccd09b146ae3e1b0743f8ad1495acb2e54dfb54065bcfb7e295a3f070ab7",
+      "first_frame_path": "/Users/baishangjituan/Documents/push/weibo-publish-20260527-three-grid/publish-first-frame.png",
+      "first_frame_sha256": "3c5b8fd377aae466911381b7e42d4ed32077581be3a74e0e071c855d19b00902",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+      "cover_mode": "weibo_quick_composer_no_custom_cover_control; used_publish_video_first_frame_per_package_rule; first_frame_matches_required_vertical_cover_design",
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "ai_declaration": "含AI生成内容",
+      "duplicate_guard": {
+        "local_receipts": "passed_no_existing_weibo_receipt_before_publish",
+        "profile_before_publish": "passed_profile_missing_current_marker_before_publish",
+        "details": {
+          "searches": [
+            {
+              "q": "没指标、无新增、未核验",
+              "status": 200,
+              "total": 0,
+              "matched": false,
+              "matched_mblogid": null
+            },
+            {
+              "q": "同账号对照",
+              "status": 200,
+              "total": "3",
+              "matched": false,
+              "matched_mblogid": null
+            },
+            {
+              "q": "没指标，就能直接判内容失败吗？",
+              "status": 200,
+              "total": 0,
+              "matched": false,
+              "matched_mblogid": null
+            }
+          ],
+          "mymblog": {
+            "status": 200,
+            "checked_items": 20,
+            "matched": false
+          }
+        }
+      },
+      "verification": {
+        "status": "verified",
+        "verified_by": "cdp_attached_playwright_weibo_api_and_public_readback",
+        "matched_by": "mymblog",
+        "checked_after_ms": 27874,
+        "text_exact_match": true,
+        "public_page_readback": {
+          "url": "https://weibo.com/2326772703/R1mDveI6O",
+          "title": "微博正文 - 微博",
+          "text_contains_marker": true,
+          "text_contains_secondary_marker": true,
+          "text_contains_duration": true,
+          "body_excerpt": "4\n无障碍\n首页\n全部关注\n最新微博\n好友圈\n自定义分组\n管理\n悄悄关注\n返回\n智者大陈\n公开\n智者大陈\n26-5-27 18:26\n发布于 新加坡\n来自 微博视频号\n3\n阅读\n推广\n不能。没指标、无新增、未核验，都只能说明证据没齐。先补状态、指标、同账号对照，再决定要不要改标题封面。#AI员工 #内容运营 智者大陈的微博视频 ​​​\n播放视频\n博主声明：该内容使用AI生成技术\n00:15\n转发\n评论\n赞\n分享这条博文\n同时转发\n评论\n还没有人评论哦~快来抢沙发！\n智者大陈\n7\n关注\n0\n粉丝\n41\n微博\n专注于AI员工服务和垂直智能体应用\n男新加坡\n查看个人主页\n微博热搜\n点击刷新\n我的\n热搜\n1\n陈瑶晒和张月合照\n559699\n2\n金高银 淡极生艳\n257126\n3\n难怪有菀菀之姿 原来是菀菀之子\n234653\n上京东看明星独家直播领红包\n4\n175kg男孩体内发现大量致胖菌\n164384\n5\n深圳南坪快速大火\n18:09登顶\n6\n新男友说韩安冉在房子里扫出5个针孔摄像头\n54619\n极狐问道V9志同道合的伙伴们\n7\n宋亚轩金丝眼镜西装杀\n69625\n8\n向太曝古天乐出道前坐过牢\n下午霸榜\n9\n老婆表达下辈子还在一起老公应激了\n84295\n10\n田曦薇染新发色\n136049\n查看完整热搜榜单\n帮助中心\n微博客服 4000-960-960\n自助服务中心\n常见问题\n合作&服务\n微博营销\n合作热线 4000-980-980\n开放平台\n更多\n举报中心\n违规投诉 010-60618076\n处理大厅\n舞弊举报\n更多\n关于微博\nAbout Weibo\n客户端下载\n微博招聘\n网站备案信息\n微博隐私安全中心\nCopyright © 2009-2026\n营业执照"
+        },
+        "post_command": {
+          "author": "智者大陈",
+          "created_at": "Wed May 27 18:26:56 +0800 2026",
+          "id": "5303253453506150",
+          "mblogid": "R1mDveI6O",
+          "source": "微博视频号",
+          "text_raw": "不能。没指标、无新增、未核验，都只能说明证据没齐。先补状态、指标、同账号对照，再决定要不要改标题封面。#AI员工 #内容运营 http://t.cn/AX6YC52c ​​​",
+          "url": "https://weibo.com/2326772703/R1mDveI6O"
+        }
+      },
+      "cover_inspection": {
+        "cover_mode": "weibo_quick_composer_no_custom_cover_control; used_publish_video_first_frame_per_package_rule; first_frame_matches_required_vertical_cover_design",
+        "custom_cover_control_found": false,
+        "inspected_inputs": [
+          {
+            "index": 0,
+            "accept": "image/*, .jpg, .jpeg, .bmp, .gif, .png, .heif, .heic, video/mp4,video/x-m4v,video/*,.mkv,.flv",
+            "className": "_file_hqmwy_20",
+            "name": "",
+            "value": ""
+          }
+        ],
+        "inspected_text_contains_cover": false,
+        "note": "The package-required 3:4 cover file was used as the target for any custom cover control, but the current Weibo quick composer exposed no image-only cover file input or cover editor; per package rule, the publish video first frame is the operational fallback."
+      },
+      "actor": "Codex CDP-attached Playwright publisher",
+      "actor_session_id": "current-thread-cdp-127.0.0.1:9222",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.weibo.lock.json",
+      "result_path": "/Users/baishangjituan/Documents/push/weibo_publish_result_20260527_three_grid_before_verdict.json",
+      "notes": [
+        "This thread is restricted to Weibo publishing; no other platform publishing was performed in this run.",
+        "Chrome DevTools/CDP on 127.0.0.1:9222 was used for DOM input, file upload, submit, and API/public readback; GUI screenshot routing was not used as the primary path.",
+        "The package-required cover file is cover-vertical-3x4.png. If Weibo quick composer exposed no custom cover control, the publish video first frame was used according to the package rule and recorded in cover_mode.",
+        "AI content declaration was selected and read back before send."
+      ],
+      "feishu_notification": {
+        "status": "sent",
+        "sent": true,
+        "profile": "legacy-a958",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6e583ba41ca4c21e4c5e709d3a5",
+        "sent_at": "2026-05-27T10:29:13.003Z",
+        "sent_at_local": "2026-05-27 18:28:38",
+        "idempotency_key": "weibo-R1mDveI6O",
+        "note": "Feishu notification sent after verified Weibo publish-success via lark-cli --profile legacy-a958."
+      },
+      "updated_at": "2026-05-27T10:29:13.003Z"
+    },
+    "kuaishou": {
+      "campaign_id": "2026-05-26-ai-employee-three-grid-before-verdict",
+      "platform": "kuaishou",
+      "platform_id": "kuaishou",
+      "status": "published",
+      "platform_state": "已发布",
+      "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+      "actor": "Codex Chrome DevTools/CDP publisher",
+      "actor_session_id": "cdp-127.0.0.1:9222-current-thread",
+      "cdp_endpoint": "http://127.0.0.1:9222",
+      "title": "先补三格",
+      "description": "没指标，不等于失败。先补状态、指标、对照，证据齐了再判断。",
+      "submitted_text": "先补三格\n没指标，不等于失败。先补状态、指标、对照，证据齐了再判断。",
+      "content_type": "video",
+      "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package",
+      "platform_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/kuaishou.md",
+      "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platform-upload-map.md",
+      "automation_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-26-ai-employee-three-grid-before-verdict.yaml",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4",
+      "uploaded_video_path": "/tmp/kuaishou-20260526-three-grid-publish.mp4",
+      "raw_video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict.mp4",
+      "video_sha256": "3a79dd193eeb9e64411c17c96d2d9b51ee3684f2dd215a963cedbd108440f750",
+      "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+      "uploaded_cover_path": "/tmp/kuaishou-20260526-three-grid-cover-vertical-3x4.png",
+      "required_cover_sha256": "18adccd09b146ae3e1b0743f8ad1495acb2e54dfb54065bcfb7e295a3f070ab7",
+      "uploaded_cover_sha256": "18adccd09b146ae3e1b0743f8ad1495acb2e54dfb54065bcfb7e295a3f070ab7",
+      "backup_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-horizontal-4x3.png",
+      "backup_cover_sha256": "94b88ea7a8b6feb7c68ad8036821f568d64b28ca91d00dfd4f0c0886367ea9dd",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png",
+      "cover_mode": "package_required_vertical_3x4_uploaded_via_cdp_DOM_setFileInputFiles; Kuaishou processed active preview blob to 720x1280 JPEG",
+      "correct_package_cover_used": true,
+      "cover_thumbnail_present": true,
+      "cover_readability_passed": true,
+      "cover_blob_evidence": "/Users/baishangjituan/Documents/push/kuaishou_current_cover_blob_20260526_three_grid.png",
+      "cover_blob_sha256": "a4a68195089ee9dccc1d0f498784d758f30b35e21e56e4397fe29077eabbc22f",
+      "cover_blob": {
+        "src": "blob:https://cp.kuaishou.com/224f9d94-6dec-4341-8c67-2f7f7d8bf4d6",
+        "naturalWidth": 720,
+        "naturalHeight": 1280,
+        "className": ""
+      },
+      "duplicate_guard_path": "/Users/baishangjituan/Documents/push/kuaishou_duplicate_guard_20260526_three_grid_before_verdict.json",
+      "prepublish_state_path": "/Users/baishangjituan/Documents/push/kuaishou_prepublish_state_20260526_three_grid.json",
+      "publish_click_state_path": "/Users/baishangjituan/Documents/push/kuaishou_publish_click_state_20260526_three_grid.json",
+      "management_probe_path": "/Users/baishangjituan/Documents/push/kuaishou_management_verify_probe_20260526_three_grid.json",
+      "lock_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.kuaishou.lock.json",
+      "submitted_at": "2026-05-27T11:02:41.361Z",
+      "publish_click_started_at": "2026-05-27T11:02:41.361Z",
+      "published_at_local": "2026-05-27 19:02",
+      "verified_at": "2026-05-27T11:04:34.302Z",
+      "verified_at_local": "2026-05-27 19:04",
+      "manager_url": "https://cp.kuaishou.com/article/manage/video?status=1&from=publish",
+      "current_url": "https://cp.kuaishou.com/article/manage/video?status=1&from=publish",
+      "verified_by": "kuaishou_management_status_1_via_cdp_dom_text_readback",
+      "manager_verification": {
+        "status_tab": {
+          "id": 1,
+          "name": "已发布"
+        },
+        "exact_text_present": true,
+        "row_text": "00:15\n先补三格 没指标，不等于失败。先补状态、指标、对照，证据齐了再判断。\n已发布\n2026-05-27 19:02",
+        "count_text": "共39个作品",
+        "row_status": "已发布",
+        "row_published_at_local": "2026-05-27 19:02",
+        "evidence_path": "/Users/baishangjituan/Documents/push/kuaishou_management_verify_probe_20260526_three_grid.json"
+      },
+      "duplicate_guard": {
+        "result": "passed_no_prior_exact_duplicate_found_before_submit",
+        "evidence_path": "/Users/baishangjituan/Documents/push/kuaishou_duplicate_guard_20260526_three_grid_before_verdict.json"
+      },
+      "notes": [
+        "Chrome DevTools/CDP on 127.0.0.1:9222 was used for file upload, text input, submit, and management readback.",
+        "OpenCLI was unavailable because the browser extension was not connected; CDP path was used as requested.",
+        "The package-required Kuaishou cover was cover-vertical-3x4.png. It was uploaded via DOM.setFileInputFiles, then visually/DOM-verified as the active preview blob before publish.",
+        "Final Kuaishou management page status=1 (已发布) showed the exact submitted text at the top row with local publish time 2026-05-27 19:02."
+      ],
+      "feishu_notification": {
+        "status": "sent",
+        "sent": true,
+        "profile": "legacy-a958",
+        "chat_id": "oc_45f4f2c2f0a783f636969cd821179f40",
+        "message_id": "om_x100b6e595abe90b0c222d878efc727a",
+        "sent_at": "2026-05-27T11:11:03.000Z",
+        "sent_at_local": "2026-05-27 19:11:03",
+        "idempotency_key": "kuaishou-2026-05-26-three-grid",
+        "note": "Feishu notification sent after verified Kuaishou published state via lark-cli --profile legacy-a958."
+      },
+      "result_path": "/Users/baishangjituan/Documents/push/kuaishou_publish_result_20260526_three_grid_before_verdict.json",
+      "updated_at": "2026-05-27T11:11:42.880Z"
+    }
+  },
   "receipt_schema": {
     "future_platform_receipt_fields": [
       "actor",
@@ -18,5 +424,12 @@
       "cover_readability_passed"
     ]
   },
-  "created_at": "2026-05-26T14:08:19+08:00"
+  "created_at": "2026-05-26T14:08:19+08:00",
+  "updated_at": "2026-05-27T11:11:42.880Z",
+  "notes": [
+    "2026-05-27T09:47:32.626Z: B站 BV1QaGy6GEPH published and verified public; duplicate BV1QaGy6GEji set to only-self after bad-cover duplicate cleanup.",
+    "2026-05-27T09:48:31.325Z: 视频号 submitted, cover/title verified, but management list returned empty description; repair is blocked while video is under review.",
+    "2026-05-27T09:49:05.813Z: Feishu issue notification sent for WeChat Channels description repair, message_id=om_x100b6e5faec890b4c4c59ecbd410c65.",
+    "2026-05-27T11:07:05.606Z: Kuaishou published via CDP and verified in management status=1 with exact row text; correct package vertical cover used."
+  ]
 }

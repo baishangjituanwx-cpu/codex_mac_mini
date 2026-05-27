@@ -12,6 +12,16 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-27 18:22:37 CST
+- 检测到新的技能变更批次: 新增 `2`，修改 `2`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/state/`；核心是 `2026-05-26-ai-employee-three-grid-before-verdict` 新增了视频号与知乎 publish lock，同时把 Bilibili lock 和总 receipt 补齐到“已公开验证 / 待补描述修复”的最新状态。
+- 建议后续执行 GitHub 同步，避免这组新增锁文件、Bilibili 去重清理结果和视频号待修复台账继续只停留在本地工作区。
+
+## 2026-05-27 17:20:37 CST
+- 检测到新的技能变更批次: 新增 `1`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover`；核心是 `2026-05-26-ai-employee-three-grid-before-verdict` 新增了 Zhihu publish lock，并把同名 receipt 从空骨架补全为正式发布回执，带上公开链接、平台内容 ID、核验证据和上传补救说明。
+- 建议后续执行 GitHub 同步，避免这组新的 Zhihu 发布防重发锁与发布台账继续只停留在本地工作区。
+
 ## 2026-05-27 00:04:38 CST
 - 处理时间:
   - `2026-05-27 00:04:38 CST`
@@ -2626,6 +2636,11 @@
 - 检测到新的技能变更批次: 新增 `2`，修改 `12`，删除 `0`。
 - 这批变更分布在 `~/.codex/skills/social-publish-automation/SKILL.md`、`skill-center/skills/social-publish-automation/SKILL.md` 和 `automation/python-platform-takeover/state/`；核心是把固定飞书 chat 的 `legacy-a958` profile、幂等键与失败后补发规则写进 skill 文档，同时为 `2026-05-23-ai-employee-pending-status-before-rewrite` 新增 B 站/微信视频号锁文件，并回填多条知乎、快手、微博、微信视频号和总 receipt 的通知修复结果。
 - 建议后续执行 GitHub 同步，避免这批 skill 操作口径和多平台发布核验台账继续只停留在本地工作区。
+
+## 2026-05-27 19:23:43 CST
+- 检测到新的技能变更批次: 新增 `2`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/state/`；核心是 `2026-05-26-ai-employee-three-grid-before-verdict` 新增了快手与微博 publish lock，并把总 receipt 扩展到包含微博、快手的公开链接、去重核验、封面策略和飞书通知回执。
+- 建议后续执行 GitHub 同步，避免这组新增锁文件和多平台 receipt 补录结果继续只停留在本地工作区。
 
 ## 2026-05-24 22:48:15 CST
 - 检测到新的技能变更批次: 新增 `2`，修改 `1`，删除 `0`。

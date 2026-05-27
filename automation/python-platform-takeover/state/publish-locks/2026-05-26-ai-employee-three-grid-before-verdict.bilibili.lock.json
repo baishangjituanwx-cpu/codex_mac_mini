@@ -5,8 +5,26 @@
   "actor_session_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
   "started_at": "2026-05-26T10:20:15.267Z",
   "expires_at": "2026-05-26T10:50:15.267Z",
-  "status": "needs_manual_review",
+  "status": "published_verified_public_api",
   "package_json": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-26-ai-employee-three-grid-before-verdict.json",
   "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-26-ai-employee-three-grid-before-verdict.json",
-  "staled_at": "2026-05-26T10:21:25.266Z"
+  "staled_at": "2026-05-26T10:21:25.266Z",
+  "completed_at": "2026-05-27T09:47:32.626Z",
+  "bvid": "BV1QaGy6GEPH",
+  "aid": 116645842392558,
+  "public_url": "https://www.bilibili.com/video/BV1QaGy6GEPH/",
+  "duplicate_cleanup": {
+    "duplicate_bvid": "BV1QaGy6GEji",
+    "duplicate_aid": 116645842392864,
+    "issue": "earlier submit created a duplicate with incorrectly cropped public cover",
+    "action": "set_only_self_via_bilibili_frontend_api",
+    "endpoint": "/x/vu/web/edit/visibility?csrf=***",
+    "response_code": 0,
+    "manager_status": "仅自己可见",
+    "public_api_after_cleanup": {
+      "code": 62012,
+      "message": "62012"
+    },
+    "kept_bvid": "BV1QaGy6GEPH"
+  }
 }

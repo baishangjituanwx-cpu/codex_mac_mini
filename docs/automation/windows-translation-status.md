@@ -2792,3 +2792,59 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-26 22:03:51 CST`，今天新增的 handoff、receipt、publish-lock 批次都已被仓库现有 Windows 流程覆盖；今天明确没有需要补做的新 Windows 转译。
+
+## 2026-05-27 22:04:11 CST
+
+- 处理时间:
+  - `2026-05-27 22:04:11 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-26 22:03:51 CST` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 非零批次只有 3 个:
+    - `2026-05-27 17:20:37 CST`
+    - `2026-05-27 18:22:37 CST`
+    - `2026-05-27 19:23:43 CST`
+  - 其余新增批次:
+    - `2026-05-26 22:53:21 CST`
+    - `2026-05-27 00:55:06 CST`
+    - `2026-05-27 05:01:29 CST`
+    - `2026-05-27 08:05:14 CST`
+    - `2026-05-27 09:06:17 CST`
+    - `2026-05-27 10:07:38 CST`
+    - `2026-05-27 14:15:12 CST`
+    - `2026-05-27 14:17:51 CST`
+    - `2026-05-27 15:19:31 CST`
+    - `2026-05-27 16:19:48 CST`
+    - `2026-05-27 20:24:57 CST`
+    - `2026-05-27 21:25:54 CST`
+  - `2026-05-27 17:20:37 CST` 的非零变更项:
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.zhihu.lock.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-26-ai-employee-three-grid-before-verdict.json`
+  - `2026-05-27 18:22:37 CST` 的非零变更项:
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.wechat_channels.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.zhihu.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-26-ai-employee-three-grid-before-verdict.json`
+  - `2026-05-27 19:23:43 CST` 的非零变更项:
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.kuaishou.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.weibo.lock.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-26-ai-employee-three-grid-before-verdict.json`
+- 已完成的 Windows 补全:
+  - 无新增 Windows 专属脚本、文档分叉或命令包装器需要落库；今天未新增需要翻译的 Mac-only 自定义 skill 行为。
+  - 已明确复核上述 3 个非零批次都只是 `automation/python-platform-takeover/state` 下的 publish lock / receipt 运行态落库，不是新的平台操作流程实现。
+  - 已确认仓库现有 Windows 入口已经覆盖这些新增语义，无需再补 PowerShell 启动器、路径规则、快捷键说明或额外资源:
+    - `automation/python-platform-takeover/README.md` 已写明 Windows PowerShell 对 `validate-package`、`receipt-status`、`record-receipt --status not_published`、`state/hermes-handoff/latest.json` 与 handoff-only 包的处理规则。
+    - `skill-center/skills/social-publish-automation/SKILL.md` 已写明 Windows 侧 CDP / Browser Bridge 入口、`allow_live: false` 与 `no_publish_in_handoff_generation` 等约束、`%TEMP%` 短路径回退、以及微信视频号 / 知乎 / Bilibili / 微博 / 快手的共享防重发与验证要求。
+    - `skill-center/skills/social-publish-automation/scripts/send_feishu_notify.ps1`
+    - `skill-center/skills/social-publish-automation/scripts/send_feishu_notify.cmd`
+      现有 Windows 通知包装器已覆盖今天新增 receipt / lock 中继续沿用的飞书成功通知语义，不需要再补新的 Windows 发送入口。
+  - 结论:
+    - 今天实际转译结果为“无新增转译项”；已把 `2026-05-27` 尚未落盘到本文件的 monitor 批次正式记账，明确它们已经被现有 Windows 版本覆盖。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-27` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未发现 `pwsh`，因此未做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核，以及现有 Windows README / skill / wrapper 内容核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-27 22:04:11 CST`，今天新增的 Zhihu / Bilibili / 微信视频号 / 微博 / 快手 publish lock 与 receipt 状态批次都已被仓库现有 Windows 流程覆盖；今天明确没有需要补做的新 Windows 转译。
