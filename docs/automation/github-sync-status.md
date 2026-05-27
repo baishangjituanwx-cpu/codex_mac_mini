@@ -12,6 +12,35 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-28 00:04:11 CST
+- 处理时间:
+  - `2026-05-28 00:04:11 CST`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的 latest dated entry 为 `2026-05-27 22:04:11 CST`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含 `automation/python-platform-takeover/state/` 的 `2026-05-26-ai-employee-three-grid-before-verdict` Zhihu / Bilibili / 微信视频号 / 微博 / 快手 publish lock 与总 receipt 更新，以及 `docs/automation/{skill-change-monitor,windows-translation-status,github-sync-status}.md` 的 `2026-05-27` 自动化记录。
+  - `codex/windows-version-20260411`: 否。默认工作区里待分流的 `skills/codex-feishu-bridge-skill/**`、`skill-center/skills/social-publish-automation/SKILL.md` 与 `skill-center/skills/social-publish-automation/scripts/send_feishu_notify.*` 已由该分支现有本地提交承载，且当前文件内容与该分支 `HEAD` 一致，本轮无需再造新提交。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。已新增提交 `df323e7`，提交信息为 `Sync May 27 publish receipts and monitor logs`。
+  - `codex/windows-version-20260411`: 是。沿用该分支已有但尚未推送的本地提交 `Refresh xyq nest Windows launchers`、`Sync bridge progress thread support`、`Update Windows publish handoff and notify guidance` 与 `Add Windows Feishu notify launchers`；本轮未新增提交。
+- 是否已推送:
+  - `codex/default-python-sync`: 否。`git push origin codex/default-python-sync` 因 `ssh: connect to host github.com port 22: Operation not permitted` 失败。
+  - `codex/windows-version-20260411`: 否。`git push origin codex/windows-version-20260411` 因 `ssh: connect to host github.com port 22: Operation not permitted` 失败。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync May 27 publish receipts and monitor logs`
+  - `codex/windows-version-20260411`: `Refresh xyq nest Windows launchers`
+  - `codex/windows-version-20260411`: `Sync bridge progress thread support`
+  - `codex/windows-version-20260411`: `Update Windows publish handoff and notify guidance`
+  - `codex/windows-version-20260411`: `Add Windows Feishu notify launchers`
+- 若跳过，说明跳过原因:
+  - 未提交 `automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json` 及其两个 `.stale-*` 文件，因为它们是更早前的旧运行态残留，不属于 `2026-05-27` 这批待同步变更。
+  - 未在 `codex/windows-version-20260411` 重复创建 bridge / Windows notify 新提交，因为当前默认工作区中的对应文件内容已与该分支现有 `HEAD` 一致；本轮只确认并尝试推送该分支已有的本地提交队列。
+  - 当前环境禁止访问 GitHub SSH 端口 `22`，因此两条分支都未能上传到远端 GitHub。
+
 ## 2026-05-27 18:22:37 CST
 - 检测到新的技能变更批次: 新增 `2`，修改 `2`，删除 `0`。
 - 这批变更集中在 `automation/python-platform-takeover/state/`；核心是 `2026-05-26-ai-employee-three-grid-before-verdict` 新增了视频号与知乎 publish lock，同时把 Bilibili lock 和总 receipt 补齐到“已公开验证 / 待补描述修复”的最新状态。
