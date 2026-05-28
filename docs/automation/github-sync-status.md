@@ -2699,3 +2699,33 @@
   - 未提交 `automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json` 及其两个 `.stale-*` 文件，因为它们是旧运行态残留，不属于本轮待同步批次。
   - 未在 `codex/default-python-sync` 混入 `skills/codex-feishu-bridge-skill/**`、`skill-center/skills/social-publish-automation/scripts/send_feishu_notify.*` 与 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` / `*.cmd`，因为这些 Windows-only bridge / launcher 资产已经由 `codex/windows-version-20260411` 的现有本地提交承载；本轮只补了该分支新增的 `SKILL.md` 文档差异。
   - 当前环境禁止访问 GitHub SSH 端口 `22`，因此两条分支都只完成了本地提交，未能上传到远端 GitHub。
+
+## 2026-05-29 00:03:27 CST (+0800)
+- 处理时间:
+  - `2026-05-29 00:03:27 CST (+0800)`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的 latest dated entry 为 `2026-05-28 22:01:41 CST (+0800)`。
+  - 该条记录明确写明本轮待同步批次“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含 `docs/automation/skill-change-monitor.md` 里追加的 `2026-05-28` 多个零变更扫描批次，以及 `docs/automation/windows-translation-status.md` 的 `2026-05-28 22:01:41 CST (+0800)` 完整性记录。
+  - `codex/windows-version-20260411`: 是。该分支已有未推送的 Windows 专属本地提交，覆盖 `skills/codex-feishu-bridge-skill/**` 的 bridge 环境变量 / 本地进度推送更新、`skill-center/skills/social-publish-automation/` 的 Windows Feishu notify wrapper 与说明、以及 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` / `*.cmd` launcher。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。已新增提交 `45fed72`，提交信息为 `Sync May 28 monitor and translation records`。
+  - `codex/windows-version-20260411`: 否。本轮未新增提交；待推送的 Windows 变更已经由该分支现有本地提交承载。
+- 是否已推送:
+  - `codex/default-python-sync`: 否。执行 `git push origin codex/default-python-sync` 返回 `ssh: connect to host github.com port 22: Operation not permitted`。
+  - `codex/windows-version-20260411`: 否。执行 `git push origin codex/windows-version-20260411` 返回 `ssh: connect to host github.com port 22: Operation not permitted`。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync May 28 monitor and translation records`
+  - `codex/default-python-sync`: `Record 2026-05-29 GitHub sync execution`
+  - `codex/windows-version-20260411`: `Add Windows Feishu notify launchers`
+  - `codex/windows-version-20260411`: `Update Windows publish handoff and notify guidance`
+  - `codex/windows-version-20260411`: `Sync bridge progress thread support`
+  - `codex/windows-version-20260411`: `Refresh xyq nest Windows launchers`
+- 若跳过，说明跳过原因:
+  - 未提交 `automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json` 及其两个 `.stale-*` 文件，因为它们是 `2026-05-11` 的旧运行态残留，不属于 `2026-05-28` 这批待同步记录。
+  - 未在 `codex/default-python-sync` 混入 `skills/codex-feishu-bridge-skill/**`、`skill-center/skills/social-publish-automation/scripts/send_feishu_notify.*` 与 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` / `*.cmd`，因为这些 Windows-only bridge / launcher 资产已经由 `codex/windows-version-20260411` 的现有本地提交承载，本轮只尝试推送该分支既有队列。
+  - 当前环境禁止访问 GitHub SSH 端口 `22`，因此两条分支都未能上传到远端 GitHub；本轮只完成了默认分支的新提交和执行日志落盘。
