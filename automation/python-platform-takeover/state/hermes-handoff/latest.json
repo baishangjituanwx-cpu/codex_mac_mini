@@ -1,68 +1,68 @@
 {
   "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
-  "campaign_id": "2026-05-26-ai-employee-three-grid-before-verdict",
+  "campaign_id": "2026-05-30-ai-employee-no-rush-repost-before-receipt",
   "status": "ready_for_publish",
-  "content_package_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-26-ai-employee-three-grid-before-verdict.yaml",
-  "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package",
-  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-26-ai-employee-three-grid-before-verdict.json",
+  "content_package_yaml": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-30-ai-employee-no-rush-repost-before-receipt.yaml",
+  "content_package_root": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_content_package",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json",
   "scope": "all_platforms",
   "platform_upload_plan": {
     "douyin": {
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/douyin.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_cover_package/cover-vertical-3x4.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_content_package/platforms/douyin.md"
     },
     "kuaishou": {
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/kuaishou.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_cover_package/cover-vertical-3x4.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_content_package/platforms/kuaishou.md"
     },
     "wechat_channels": {
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/wechat_channels.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_cover_package/cover-vertical-3x4.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_content_package/platforms/wechat_channels.md"
     },
     "weibo": {
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/weibo.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_cover_package/cover-vertical-3x4.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_content_package/platforms/weibo.md"
     },
     "bilibili": {
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-horizontal-4x3.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/bilibili.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_content_package/platforms/bilibili.md"
     },
     "xiaohongshu": {
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/xiaohongshu.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_cover_package/cover-vertical-3x4.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_content_package/platforms/xiaohongshu.md"
     },
     "toutiao": {
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/toutiao.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_cover_package/cover-vertical-3x4.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_content_package/platforms/toutiao.md"
     },
     "baijiahao": {
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-horizontal-4x3.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/baijiahao.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_cover_package/cover-horizontal-4x3.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_content_package/platforms/baijiahao.md"
     },
     "zhihu": {
-      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict-publish.mp4",
-      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_cover_package/cover-vertical-3x4.png",
-      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-26-ai-employee-three-grid-before-verdict_content_package/platforms/zhihu.md"
+      "video": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt-publish.mp4",
+      "cover": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_cover_package/cover-vertical-3x4.png",
+      "platform_file": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_content_package/platforms/zhihu.md"
     }
   },
   "fingerprints": {
-    "title_hash": "70bf3baf8a1dfb5e8fdeb7096dad23f4fea299af07874a455e892861a17c9adb",
-    "body_core_hash": "979e0dce8fe9deeff4db2969558e880aa3173a7a0265fd3798743b88ab9cfcea",
-    "video_sha256": "3a79dd193eeb9e64411c17c96d2d9b51ee3684f2dd215a963cedbd108440f750",
-    "raw_video_sha256": "c7ed295870efec7d175763e614701591241f38e10d07c36ca003a9d15fece00d",
-    "cover_sha256": "18adccd09b146ae3e1b0743f8ad1495acb2e54dfb54065bcfb7e295a3f070ab7",
-    "cover_3_4_sha256": "18adccd09b146ae3e1b0743f8ad1495acb2e54dfb54065bcfb7e295a3f070ab7",
-    "cover_4_3_sha256": "94b88ea7a8b6feb7c68ad8036821f568d64b28ca91d00dfd4f0c0886367ea9dd"
+    "title_hash": "1109e598d844f82d92d32a270e82b7cb7d9294f957a6cc6cc9bdddf99b2faaa1",
+    "body_core_hash": "982a77da02f750de1be9bab198bbe1a620100efc1eece79b9459402868f375b1",
+    "video_sha256": "48dab7a67ce3d8c3fa8ac2cca109d16edc41b25366cbf1be610b37841dc89b88",
+    "raw_video_sha256": "0c0e621d501df6e0b722375afefcef47c18e7745dd2fca75c8762b260d6f2617",
+    "cover_sha256": "30b50cc279947655fbd105137d5d9ff65304e921c487da6894258f3cb2790d01",
+    "cover_3_4_sha256": "30b50cc279947655fbd105137d5d9ff65304e921c487da6894258f3cb2790d01",
+    "cover_4_3_sha256": "f8b1faf3ecee719951004824976ba37fe55bcead92cf802b778ae8a4c181c504"
   },
   "lock_dir": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks",
   "allow_live": false,
-  "updated_at": "2026-05-26T14:08:19+08:00"
+  "updated_at": "2026-05-30T13:39:50+08:00"
 }

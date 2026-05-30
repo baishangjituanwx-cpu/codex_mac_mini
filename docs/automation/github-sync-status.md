@@ -12,6 +12,40 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-05-31 00:05:22 CST (+0800)
+- 处理时间:
+  - `2026-05-31 00:05:22 CST (+0800)`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的 latest dated entry 为 `2026-05-30 22:02:19 CST (+0800)`。
+  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含 `automation/python-platform-takeover` 的 `2026-05-30-ai-employee-no-rush-repost-before-receipt` content package、Hermes handoff package、初始 publish receipt 与 `state/hermes-handoff/latest.json` 指针切换，以及 `docs/automation/{skill-change-monitor,windows-translation-status,github-sync-status}.md` 的 `2026-05-30` 自动化记录。
+  - `codex/windows-version-20260411`: 是，但不是本轮新生成的工作树差异；linked worktree 仍 `ahead 4`，默认工作区里的 bridge 文档 / 模板与 Windows launcher 内容已经与该分支 `HEAD` 一致，因此本轮无需新增 Windows 提交。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。已将本轮 generic / Mac-compatible handoff 状态、自动化日志与本条执行记录一起提交为 `Sync 2026-05-30 handoff package and automation logs`。
+  - `codex/windows-version-20260411`: 是。沿用该分支已有但尚未推送的本地提交 `Refresh xyq nest Windows launchers`、`Sync bridge progress thread support`、`Update Windows publish handoff and notify guidance` 与 `Add Windows Feishu notify launchers`；本轮未新增提交。
+- 是否已推送:
+  - `codex/default-python-sync`: 否。`git push origin codex/default-python-sync` 因 `ssh: connect to host github.com port 22: Operation not permitted` 失败。
+  - `codex/windows-version-20260411`: 否。`git push origin codex/windows-version-20260411` 因 `ssh: connect to host github.com port 22: Operation not permitted` 失败。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync 2026-05-30 handoff package and automation logs`
+  - `codex/windows-version-20260411`: `Refresh xyq nest Windows launchers`
+  - `codex/windows-version-20260411`: `Sync bridge progress thread support`
+  - `codex/windows-version-20260411`: `Update Windows publish handoff and notify guidance`
+  - `codex/windows-version-20260411`: `Add Windows Feishu notify launchers`
+- 若跳过，说明跳过原因:
+  - 未提交 `automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json` 及其两个 `.stale-*` 文件，因为它们是旧运行态残留，不属于本轮待同步变更。
+  - 未在 `codex/default-python-sync` 混入 `skills/codex-feishu-bridge-skill/**`、`skill-center/skills/social-publish-automation/**` 或 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` / `*.cmd`，因为这些 Windows bridge / launcher 资产已由 `codex/windows-version-20260411` 的现有本地提交承载。
+  - 当前环境禁止连接 GitHub SSH 端口 `22`，因此 default / Windows 两条分支本轮都只能完成本地整理与提交记录，无法真正上传到远端 GitHub。
+
+## 2026-05-30 13:44:57 CST (+0800)
+- 检测到新的技能变更批次: 新增 `3`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover`；核心是 `2026-05-30-ai-employee-no-rush-repost-before-receipt` 新增了 content package、Hermes handoff package 与初始 publish receipt，并把 `state/hermes-handoff/latest.json` 切到这组新 campaign。
+- 建议后续执行 GitHub 同步，避免这组新的发布准备配置与 handoff 指针继续只停留在本地工作区。
+
 ## 2026-05-30 00:04:05 CST (+0800)
 - 处理时间:
   - `2026-05-30 00:04:05 CST (+0800)`

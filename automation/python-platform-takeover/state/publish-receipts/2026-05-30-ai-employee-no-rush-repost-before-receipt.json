@@ -1,0 +1,23 @@
+{
+  "campaign_id": "2026-05-30-ai-employee-no-rush-repost-before-receipt",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "status": "not_published",
+  "package_status": "ready_for_publish",
+  "receipts": {},
+  "receipt_schema": {
+    "future_platform_receipt_fields": [
+      "actor",
+      "actor_session_id",
+      "status",
+      "verified_by",
+      "lock_path",
+      "submitted_at",
+      "published_at",
+      "video_path",
+      "cover_path",
+      "cover_thumbnail_present",
+      "cover_readability_passed"
+    ]
+  },
+  "created_at": "2026-05-30T13:39:50+08:00"
+}
