@@ -15,6 +15,35 @@
 - 补记说明:
 - `2026-05-31 15:19:08 CST (+0800)` 的新变更批次在当时已被 monitor 检出，但没有及时追加到本仓库文档；本次先补齐该条，再记录当前新批次。
 
+## 2026-06-01 00:04:12 CST (+0800)
+- 处理时间:
+  - `2026-06-01 00:04:12 CST (+0800)`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的 latest dated entry 为 `2026-05-31 22:02:23 CST (+0800)`。
+  - 该条记录明确写明本轮待同步批次“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含 `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json` 的 Bilibili receipt 终态补录，以及 `docs/automation/{skill-change-monitor,windows-translation-status,github-sync-status}.md` 的 `2026-05-31` 自动化记录。
+  - `codex/windows-version-20260411`: 是。当前工作区里的 `skill-center/skills/social-publish-automation/SKILL.md` 与 `skills/codex-feishu-bridge-skill/**` bridge env / runtime / deployment 文档改动与该分支本地 `HEAD` 一致；本轮无需新增 Windows 提交，只需尝试推送该分支既有 ahead 队列。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。已新增提交 `39d3ddb`，提交信息为 `Sync 2026-05-31 receipt and automation status`。
+  - `codex/windows-version-20260411`: 否。本轮未新增提交；待同步的 Windows 专属内容已经存在于该分支现有的本地 ahead 提交中。
+- 是否已推送:
+  - `codex/default-python-sync`: 否。执行 `git push origin codex/default-python-sync` 返回 `ssh: connect to host github.com port 22: Operation not permitted`。
+  - `codex/windows-version-20260411`: 否。执行 `git push origin codex/windows-version-20260411` 返回 `ssh: connect to host github.com port 22: Operation not permitted`。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync 2026-05-31 receipt and automation status`
+  - `codex/windows-version-20260411`: `Refresh xyq nest Windows launchers`
+  - `codex/windows-version-20260411`: `Sync bridge progress thread support`
+  - `codex/windows-version-20260411`: `Update Windows publish handoff and notify guidance`
+  - `codex/windows-version-20260411`: `Add Windows Feishu notify launchers`
+- 若跳过，说明跳过原因:
+  - 未提交 `automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json` 及其两个 `.stale-*` 文件，因为它们是旧运行态残留，不属于本轮待同步批次。
+  - 未在 `codex/default-python-sync` 混入 `skill-center/skills/social-publish-automation/SKILL.md`、`skills/codex-feishu-bridge-skill/**`、`skill-center/skills/social-publish-automation/scripts/send_feishu_notify.*` 或 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` / `*.cmd`，因为这些 Windows bridge / launcher 资产已经由 `codex/windows-version-20260411` 的现有本地提交承载。
+  - 当前环境禁止连接 GitHub SSH 端口 `22`，因此 default / Windows 两条分支本轮都只能完成本地整理、提交与执行记录落盘，无法真正上传到远端 GitHub。
+
 ## 2026-05-31 16:21:45 CST (+0800)
 - 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
 - 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`；核心是在已确认发布成功的 Bilibili receipt 上补齐封面修复留痕，把 `cover_upload_verified` 更新为 `true`，并新增 `published_cover_repaired`、`cover_repaired_at`、`cover_repair_method=obu_datatransfer_fetch` 与 `V0.36.5` edit-page 封面修复说明。
@@ -2816,4 +2845,3 @@
 - 检测到新的技能变更批次: 新增 `1495`，修改 `0`，删除 `0`。
 - 这批变更全部来自新的 `~/.codex/skills/github-nightly-sync-20260531-run2/` 镜像目录，覆盖 `automation/python-platform-takeover`、大量 `skill-center/skills/**` / `skills/**` 定义，以及配套文档、workflow、测试和资产文件。
 - 建议后续执行 GitHub 同步，避免这组新的技能镜像与支持自动化资产继续只停留在本地工作区。
-
