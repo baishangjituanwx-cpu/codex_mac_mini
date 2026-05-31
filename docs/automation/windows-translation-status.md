@@ -2975,3 +2975,66 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-30 22:02:19 CST (+0800)`，今天 monitor 新增批次里只有一组 handoff / receipt 配置资产变更，且它已经被仓库现有 Windows 路径改写规则和 handoff-only 处理流程覆盖；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-05-31 22:02:23 CST (+0800)
+
+- 处理时间:
+  - `2026-05-31 22:02:23 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-30 22:02:19 CST (+0800)` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 非零批次共有 `4` 个:
+    - `2026-05-31 01:00:22 CST (+0800)`
+    - `2026-05-31 14:18:45 CST (+0800)`
+    - `2026-05-31 15:19:08 CST (+0800)`
+    - `2026-05-31 16:21:45 CST (+0800)`
+  - 其余新增批次:
+    - `2026-05-31 02:02:18 CST (+0800)`
+    - `2026-05-31 03:03:33 CST (+0800)`
+    - `2026-05-31 04:04:05 CST (+0800)`
+    - `2026-05-31 05:05:06 CST (+0800)`
+    - `2026-05-31 06:05:42 CST (+0800)`
+    - `2026-05-31 07:06:43 CST (+0800)`
+    - `2026-05-31 08:07:48 CST (+0800)`
+    - `2026-05-31 09:09:22 CST (+0800)`
+    - `2026-05-31 10:11:37 CST (+0800)`
+    - `2026-05-31 11:16:47 CST (+0800)`
+    - `2026-05-31 12:15:52 CST (+0800)`
+    - `2026-05-31 13:17:25 CST (+0800)`
+    - `2026-05-31 17:23:06 CST (+0800)`
+    - `2026-05-31 18:24:53 CST (+0800)`
+    - `2026-05-31 20:27:48 CST (+0800)`
+    - `2026-05-31 21:29:02 CST (+0800)`
+  - `2026-05-31 01:00:22 CST (+0800)` 的非零变更项:
+    - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/**`
+  - `2026-05-31 14:18:45 CST (+0800)`、`2026-05-31 15:19:08 CST (+0800)`、`2026-05-31 16:21:45 CST (+0800)` 的非零变更项:
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`
+- 已完成的 Windows 补全:
+  - 今天没有新增落库的 Windows 转译文件；已明确记录“本轮无新增 Windows 补丁”这一结论。
+  - 已复核 `2026-05-31 01:00:22 CST (+0800)` 这批 `1495` 个新增文件只是把现有仓库镜像到 `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/`，没有向工作仓库引入新的 Mac-only 自定义 skill 行为。
+  - 已对 mirror 与工作仓库做差异复核，确认工作仓库在 Windows 支持上反而比 mirror 更完整，因此无需把 mirror 内容再回填一轮 Windows 补丁:
+    - `skill-center/skills/social-publish-automation/SKILL.md` 已写明 Windows 下使用 `scripts/send_feishu_notify.cmd` / `scripts/send_feishu_notify.ps1`、固定 `legacy-a958` profile，以及失败后重试策略。
+    - `skill-center/skills/social-publish-automation/scripts/send_feishu_notify.cmd`
+    - `skill-center/skills/social-publish-automation/scripts/send_feishu_notify.ps1`
+    - `skill-center/skills/xyq-nest-skill/scripts/{download_results,get_thread,submit_run,upload_file}.cmd`
+    - `skill-center/skills/xyq-nest-skill/scripts/{download_results,get_thread,submit_run,upload_file}.ps1`
+    - `skill-center/skills/xyq-nest-skill/scripts/invoke_xyq_script.ps1`
+    - `skills/codex-feishu-bridge-skill/assets/template/scripts/{bridge-start,bridge-stop,bridge-status,bridge-logs,configure_notify_target,run-bridge}.ps1`
+    - `skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.cmd`
+    - `skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.ps1`
+    - `skills/codex-feishu-bridge-skill/references/{INSTALL-QUICKSTART,deployment,user-guide}.md` 已包含 Windows `.ps1` / `.cmd` 启动、`.bridge.env`、`LARK_CLI_PROFILE` 与路径说明。
+  - 已复核 `2026-05-31 14:18:45 CST (+0800)`、`2026-05-31 15:19:08 CST (+0800)`、`2026-05-31 16:21:45 CST (+0800)` 只是在同一份 Bilibili publish receipt 上连续补写状态:
+    - 从空白 / `not_published` 留痕补成 `submit_stuck_processing`
+    - 再推进为 `published_verified_manager_page`
+    - 最后补写封面修复成功与二次核验留痕
+  - 上述 receipt 变更均为跨平台数据状态更新，不需要新增 Windows 启动器、路径包装器、快捷键分叉或文档分支；现有 Windows 覆盖已由以下文件承接:
+    - `automation/python-platform-takeover/README.md`
+    - `skill-center/skills/social-publish-automation/SKILL.md`
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-31` 当前已记录的非零批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未执行 Windows PowerShell 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、mirror-vs-workspace 差异检查，以及现有 Windows 包装脚本 / 文档文件核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-31 22:02:23 CST (+0800)`，今天新增的 mirror 批次没有带来新的待转译行为，三次 receipt 更新也都是跨平台数据留痕；Mac 与 Windows 覆盖今日均完整。

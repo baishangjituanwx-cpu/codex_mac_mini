@@ -12,6 +12,24 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+- 补记说明:
+- `2026-05-31 15:19:08 CST (+0800)` 的新变更批次在当时已被 monitor 检出，但没有及时追加到本仓库文档；本次先补齐该条，再记录当前新批次。
+
+## 2026-05-31 16:21:45 CST (+0800)
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`；核心是在已确认发布成功的 Bilibili receipt 上补齐封面修复留痕，把 `cover_upload_verified` 更新为 `true`，并新增 `published_cover_repaired`、`cover_repaired_at`、`cover_repair_method=obu_datatransfer_fetch` 与 `V0.36.5` edit-page 封面修复说明。
+- 建议后续执行 GitHub 同步，避免这条新的发布后封面修复核验记录继续只停留在本地工作区。
+
+## 2026-05-31 15:19:08 CST (+0800)
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`；核心是把上一轮的 Bilibili `submit_stuck_processing` 失败回执推进为 `published_verified_manager_page`，补入 `BV19YVn67ENG`、`published_at` / `verified_at`、声明弹窗修复说明和管理页已发布的核验证据。
+- 建议后续执行 GitHub 同步，避免这条新的发布成功回执与管理页核验结论继续只停留在本地工作区。
+
+## 2026-05-31 14:18:45 CST (+0800)
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/`；核心是 `2026-05-30-ai-employee-no-rush-repost-before-receipt` 的 Bilibili receipt 从空白状态补成 `submit_stuck_processing` 留痕，写入了 `ppc-bilibili-pilot-v036` 会话、`BVHgBzVhbctowFD0SzPBZ76DOZ5hMh`、封面上传失败，以及“提交中”卡死且管理页未出现稿件的核验结论。
+- 建议后续执行 GitHub 同步，避免这条新的发布失败回执与人工核验结论继续只停留在本地工作区。
+
 ## 2026-05-31 00:05:22 CST (+0800)
 - 处理时间:
   - `2026-05-31 00:05:22 CST (+0800)`
@@ -2793,3 +2811,9 @@
   - 未提交 `automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json` 及其两个 `.stale-*` 文件，因为它们是 `2026-05-11` 的旧运行态残留，不属于 `2026-05-28` 这批待同步记录。
   - 未在 `codex/default-python-sync` 混入 `skills/codex-feishu-bridge-skill/**`、`skill-center/skills/social-publish-automation/scripts/send_feishu_notify.*` 与 `skill-center/skills/xyq-nest-skill/scripts/*.ps1` / `*.cmd`，因为这些 Windows-only bridge / launcher 资产已经由 `codex/windows-version-20260411` 的现有本地提交承载，本轮只尝试推送该分支既有队列。
   - 当前环境禁止访问 GitHub SSH 端口 `22`，因此两条分支都未能上传到远端 GitHub；本轮只完成了默认分支的新提交和执行日志落盘。
+
+## 2026-05-31 01:00:22 CST (+0800)
+- 检测到新的技能变更批次: 新增 `1495`，修改 `0`，删除 `0`。
+- 这批变更全部来自新的 `~/.codex/skills/github-nightly-sync-20260531-run2/` 镜像目录，覆盖 `automation/python-platform-takeover`、大量 `skill-center/skills/**` / `skills/**` 定义，以及配套文档、workflow、测试和资产文件。
+- 建议后续执行 GitHub 同步，避免这组新的技能镜像与支持自动化资产继续只停留在本地工作区。
+

@@ -1,9 +1,47 @@
 {
   "campaign_id": "2026-05-30-ai-employee-no-rush-repost-before-receipt",
   "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
-  "status": "not_published",
+  "status": "bilibili:published_verified_manager_page",
   "package_status": "ready_for_publish",
-  "receipts": {},
+  "receipts": {
+    "bilibili": {
+      "actor": "pilot-runner",
+      "actor_session_id": "ppc-bilibili-pilot-v036",
+      "platform_id": "bilibili",
+      "status": "published_verified_manager_page",
+      "title": "无新增别急着补发：AI员工先查回执、状态、对照，别污染样本",
+      "bvid": "BV19YVn67ENG",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt-publish.mp4",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_cover_package/cover-horizontal-4x3.png",
+      "video_upload_method": "obu_datatransfer_fetch",
+      "video_upload_verified": true,
+      "cover_upload_method": "obu_datatransfer_fetch",
+      "cover_upload_verified": true,
+      "declaration": "含AI生成内容",
+      "published_at": "2026-05-31T15:01:28+08:00",
+      "verified_at": "2026-05-31T15:05:00+08:00",
+      "verification_evidence": {
+        "manager_page_status": "published",
+        "manager_page_total": 24,
+        "manager_page_passed": 24,
+        "bvid": "BV19YVn67ENG",
+        "title_found_in_manager": true,
+        "publish_date": "2026年05月31日 15:01:28",
+        "cover_repaired": true,
+        "cover_repair_method": "obu_datatransfer_fetch"
+      },
+      "notes": [
+        "OBU DataTransfer video upload: obu_datatransfer_fetch (verified=true)",
+        "OBU DataTransfer cover upload: failed (no image file input found)",
+        "Declaration: 含AI生成内容 (required by Bilibili before publish)",
+        "Session: ppc-bilibili-pilot-v036",
+        "V0.36.4: Resumed from submit_stuck_processing, fixed declaration modal, publish confirmed on manager page",
+        "V0.36.5: Cover repaired via edit page. Used OBU DataTransfer fetch to upload cover-horizontal-4x3.png. Edit submitted and confirmed on manager page."
+      ],
+      "cover_repair_status": "published_cover_repaired",
+      "cover_repaired_at": "2026-05-31T15:20:00+08:00"
+    }
+  },
   "receipt_schema": {
     "future_platform_receipt_fields": [
       "actor",

@@ -12,6 +12,535 @@
 - 变更摘要
 - 如果有新建 `.py` 文件，单独列出路径、用途、以及与哪个 skill 相关
 
+- 补记说明:
+- `2026-05-31 15:19:08 CST (+0800)` 这一批次在当时已经被 monitor 检出并写入 `~/.codex/automations/skill-monitor/pending-skill-change-entry.md`，但未及时落盘到本仓库文档；本次先补齐该条，再记录当前新批次，保证时间线完整。
+
+## 2026-05-31 22:30:38 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-31T13:27:50.926Z`（本地时区为 `2026-05-31 21:27:50.926 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-31T13:29:18Z`（本地时区为 `2026-05-31 21:29:18 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/{memory.md,state.json,last-summary.json,last-snapshot.json}`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4065 -> 4065`
+- 额外按有效基线 `2026-05-31T13:29:18Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-31T13:29:18Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-05-31T13:29:18Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4065` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-31 21:29:02 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-31T12:26:20.651Z`（本地时区为 `2026-05-31 20:26:20.651 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-31T12:27:48Z`（本地时区为 `2026-05-31 20:27:48 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4065 -> 4065`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-31T12:27:48Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-05-31T12:27:48Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4065` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-31 20:27:48 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-31T11:24:50.354Z`（本地时区为 `2026-05-31 19:24:50.354 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-31T11:29:00Z`（本地时区为 `2026-05-31 19:29:00 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4065 -> 4065`
+- 额外按有效基线 `2026-05-31T11:29:00Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-31T11:29:00Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-05-31T11:29:00Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4065` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-31 18:24:53 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-31T09:21:41.660Z`（本地时区为 `2026-05-31 17:21:41.660 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-31T09:23:06Z`（本地时区为 `2026-05-31 17:23:06 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4065 -> 4065`
+- 额外按有效基线 `2026-05-31T09:23:06Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-31T09:23:06Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-05-31T09:23:06Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4065` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-31 16:21:45 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-31T07:17:50.855Z`（本地时区为 `2026-05-31 15:17:50.855 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-31T07:20:07Z`（本地时区为 `2026-05-31 15:20:07 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；结果保持 `4065 -> 4065`，但发现 `1` 个文件的 `mtimeMs` / 内容发生变化
+- 额外按有效基线 `2026-05-31T07:20:07Z` 复筛受监控文件的精确 `mtimeMs`；命中的仍是同一份 publish receipt，因此本轮按 `1` 个修改批次记账
+- 结果汇总: 新增 `0`，修改 `1`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json` | 修改 | 在已确认 `published_verified_manager_page` 的 Bilibili 回执上继续补写封面修复留痕：将 `cover_upload_verified` 改为 `true`，新增 `cover_repair_status=published_cover_repaired` 与 `cover_repaired_at=2026-05-31T15:20:00+08:00`，并在 `verification_evidence` / `notes` 中记录通过 edit page 用 `obu_datatransfer_fetch` 补传封面、管理页再次确认成功。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-31T07:20:07Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 1 个新的技能支持自动化变更批次，仍集中在 `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`。相较于上一轮已经确认“发布成功”的状态，这次新增的是发布后封面修复的完整留痕，说明该 campaign 的 Bilibili 稿件不仅已发布，还已补齐封面并再次通过管理页核验。
+- 因为发现新的变更批次，已同步在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 追加待后续 GitHub 同步提示。
+
+## 2026-05-31 17:23:06 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-31T08:19:41.433Z`（本地时区为 `2026-05-31 16:19:41.433 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-31T08:21:45Z`（本地时区为 `2026-05-31 16:21:45 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4065 -> 4065`
+- 额外按有效基线 `2026-05-31T08:21:45Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-31T08:21:45Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-05-31T08:21:45Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4065` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-31 15:19:08 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-31T06:17:20.528Z`（本地时区为 `2026-05-31 14:17:20.528 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-31T06:20:29Z`（本地时区为 `2026-05-31 14:20:29 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；结果保持 `4065 -> 4065`，但发现 `1` 个文件的 `mtimeMs` / 内容再次变化
+- 额外按有效基线 `2026-05-31T06:20:29Z` 复筛受监控文件的精确 `mtimeMs`；命中的仍是同一份 publish receipt，因此本轮按 `1` 个修改批次记账
+- 结果汇总: 新增 `0`，修改 `1`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json` | 修改 | 将上一轮的 Bilibili `submit_stuck_processing` 失败回执推进为 `published_verified_manager_page` 成功回执，把 BVID 从 `BVHgBzVhbctowFD0SzPBZ76DOZ5hMh` 更新为 `BV19YVn67ENG`，补入 `published_at` / `verified_at`、声明弹窗已修复说明和管理页 `published` 核验证据，同时保留封面上传失败记录。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-31T06:20:29Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 1 个新的技能支持自动化变更批次，集中在 `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`。核心变化是把该 campaign 的 Bilibili 状态从“提交卡死、管理页未入库”的失败核验留痕，推进为“管理页已验证发布成功”的正式回执。
+- 因为发现新的变更批次，后续应把这条状态更新同步到 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，提醒后续 GitHub 同步。
+
+## 2026-05-31 14:18:45 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-31T05:16:20.309Z`（本地时区为 `2026-05-31 13:16:20.309 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-31T05:17:15.553Z`（本地时区为 `2026-05-31 13:17:15.553 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；结果保持 `4065 -> 4065`，但发现 `1` 个文件的 `mtimeMs` / 内容发生变化
+- 额外按有效基线 `2026-05-31T05:17:15.553Z` 复筛受监控文件的精确 `mtimeMs`；命中的仍是同一份 publish receipt，因此本轮按 `1` 个修改批次记账
+- 结果汇总: 新增 `0`，修改 `1`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json` - 从空 `receipts` / `not_published` 状态补写为一条 Bilibili 发布回执，记录 `ppc-bilibili-pilot-v036` 会话、`BVHgBzVhbctowFD0SzPBZ76DOZ5hMh`、视频上传已验证但封面上传失败，以及 `提交中...` 卡死、管理页未出现稿件的核验结论，并把总状态改成 `bilibili:submit_stuck_processing`。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-31T05:17:15.553Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现一个新的技能支持自动化变更批次，集中在 `automation/python-platform-takeover/state/publish-receipts/`；核心是 `2026-05-30-ai-employee-no-rush-repost-before-receipt` 的 Bilibili 发布回执从空白台账补成了“视频上传成功但提交卡在处理中、管理页未入库”的失败核验留痕。
+- 因为出现了新的非零批次，已同步在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 追加待后续 GitHub 同步提示。
+
+## 2026-05-31 13:17:25 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-31T04:14:20.039Z`（本地时区为 `2026-05-31 12:14:20.039 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-31T04:15:20.000Z`（本地时区为 `2026-05-31 12:15:20 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4065 -> 4065`
+- 额外按有效基线 `2026-05-31T04:15:20.000Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-31T04:15:20.000Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-05-31T04:15:20.000Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4065` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-31 12:15:52 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-31T03:12:16.397Z`（本地时区为 `2026-05-31 11:12:16.397 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-31T03:16:47.000Z`（本地时区为 `2026-05-31 11:16:47 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4065 -> 4065`
+- 额外按有效基线 `2026-05-31T03:16:47.000Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-31T03:16:47.000Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-05-31T03:16:47.000Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4065` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-31 11:16:47 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-31T02:10:15.878Z`（本地时区为 `2026-05-31 10:10:15.878 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-31T02:11:37.334Z`（本地时区为 `2026-05-31 10:11:37.334 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4065 -> 4065`
+- 额外按有效基线 `2026-05-31T02:11:37.334Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-31T02:11:37.334Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-05-31T02:11:37.334Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4065` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-31 10:11:37 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-31T01:08:15.569Z`（本地时区为 `2026-05-31 09:08:15.569 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-31T01:09:21.000Z`（本地时区为 `2026-05-31 09:09:21.000 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system`、`~/.codex/skills/__windows_translate_repo__`、`~/.codex/skills/$CODEX_HOME`、本地监控目录 `~/.codex/automations/skill-monitor`、`.git`、`.venv`、`node_modules`、`site-packages`、`__pycache__`、`.pytest_cache` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4065 -> 4065`
+- 额外按有效基线 `2026-05-31T01:09:21.000Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-31T01:09:21.000Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-05-31T01:09:21.000Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4065` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-31 09:09:22 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-31T00:06:45.266Z`（本地时区为 `2026-05-31 08:06:45.266 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-31T00:07:40Z`（本地时区为 `2026-05-31 08:07:40 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4065 -> 4065`
+- 额外按有效基线 `2026-05-31T00:07:40Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-31T00:07:40Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-05-31T00:07:40Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4065` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-31 08:07:48 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-30T23:05:44.966Z`（本地时区为 `2026-05-31 07:05:44.966 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-30T23:06:43Z`（本地时区为 `2026-05-31 07:06:43 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4065 -> 4065`
+- 额外按有效基线 `2026-05-30T23:06:43Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-30T23:06:43Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-05-30T23:06:43Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4065` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-31 06:05:42 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-30T21:03:44.357Z`（本地时区为 `2026-05-31 05:03:44.357 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-30T21:04:37Z`（本地时区为 `2026-05-31 05:04:37 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4065 -> 4065`
+- 额外按有效基线 `2026-05-30T21:04:37Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-30T21:04:37Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-05-30T21:04:37Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4065` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-31 05:05:06 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-30T20:02:44.061Z`（本地时区为 `2026-05-31 04:02:44.061 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-30T20:04:24Z`（本地时区为 `2026-05-31 04:04:24 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 脏文件重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 与当前工作树中的 skill / automation 脏文件
+- 继续按既有监控口径排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 对 repo 内当前技能相关脏文件逐个复核精确 `mtime`；`skill-center/skills/social-publish-automation/SKILL.md`、`skills/codex-feishu-bridge-skill/**`、`skill-center/skills/social-publish-automation/scripts/send_feishu_notify.*`、`skill-center/skills/xyq-nest-skill/scripts/*.cmd|*.ps1` 以及 `automation/python-platform-takeover/state/publish-locks/*.json*` 的时间戳都早于有效基线，因此仍属于此前已吸收的旧批次
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-30T20:04:24Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-05-30T20:04:24Z` 的新技能或支持自动化文件变更批次；当前看到的技能相关脏文件都来自更早的已记录批次。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
 ## 2026-05-30 20:56:10 CST (+0800)
 - 扫描范围:
 - `/Users/baishangjituan/.codex/skills`
@@ -207,6 +736,39 @@
 
 ### 变更摘要
 - 本轮没有发现晚于有效基线 `2026-05-29T21:33:56Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `2567` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-31 02:02:18 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-30T16:58:43.019Z`（本地时区为 `2026-05-31 00:58:43.019 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-30T17:04:30Z`（本地时区为 `2026-05-31 01:04:30 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把已经写入 `2026-05-31 01:00:22 CST (+0800)` 记录的 `1495` 条镜像新增重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4065 -> 4065`
+- 额外复核当前工作区中的技能相关脏文件后，确认它们都已被更晚的 `4065` 条持久化快照吸收，因此不构成本轮新增变更批次
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-30T17:04:30Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-05-30T17:04:30Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4065` 条快照一致。
 - 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
 
 ## 2026-05-30 05:32:53 CST (+0800)
@@ -49969,4 +50531,1796 @@
 
 ### 变更摘要
 - 本轮没有发现晚于有效基线 `2026-05-30T14:58:40.000Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `2570` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-31 01:00:22 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-30T15:57:12.942Z`（本地时区为 `2026-05-30 23:57:12.942 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 与 `last-snapshot.json` 在本轮扫描前的最新持久化完成时间均不早于 `2026-05-30T15:58:16.192Z`（本地时区为 `2026-05-30 23:58:16.192 CST (+0800)`）；由于它晚于任务消息里的 Last run，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `2570` 条持久化快照逐项比对；本轮发现一个新的 skill mirror 目录 `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/`，因此结果从 `2570` 条增长到 `4065` 条
+- 有效基线之后出现的精确 `mtimeMs` 命中共 `1495` 条；与快照差异交叉核对后，新增内容全部来自新落地的 `github-nightly-sync-20260531-run2` 镜像目录
+- 结果汇总: 新增 `1495`，修改 `0`，删除 `0`
+
+### 新增文件
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/.env.dashboard.example` - Added mirrored dashboard environment example for the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/.github/workflows/dashboard-sync-checks.yml` - Added mirrored GitHub Actions workflow dashboard-sync-checks.yml.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/.gitignore` - Added mirrored gitignore for the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/.env.example` - Added mirrored environment template for python-platform-takeover automation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-17-ai-first-replace-three-tasks.yaml` - Added mirrored content package config 2026-04-17-ai-first-replace-three-tasks for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-20-ai-content-platform-execution.yaml` - Added mirrored content package config 2026-04-20-ai-content-platform-execution for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-21-platform-execution-next-round.yaml` - Added mirrored content package config 2026-04-21-platform-execution-next-round for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-22-platform-execution-three-steps.yaml` - Added mirrored content package config 2026-04-22-platform-execution-three-steps for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml` - Added mirrored content package config 2026-04-23-platform-execution-feedback-fields for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-24-platform-execution-writeback-fields.yaml` - Added mirrored content package config 2026-04-24-platform-execution-writeback-fields for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-25-platform-execution-six-writeback-fields.yaml` - Added mirrored content package config 2026-04-25-platform-execution-six-writeback-fields for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-27-platform-execution-verify-before-republish.yaml` - Added mirrored content package config 2026-04-27-platform-execution-verify-before-republish for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-28-platform-execution-early-zero-not-failure.yaml` - Added mirrored content package config 2026-04-28-platform-execution-early-zero-not-failure for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-29-platform-execution-lock-campaign-four-checks.yaml` - Added mirrored content package config 2026-04-29-platform-execution-lock-campaign-four-checks for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-30-repair-existing-not-republish.yaml` - Added mirrored content package config 2026-04-30-repair-existing-not-republish for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-01-dachen-xiaoma-argue-fix-old-post.yaml` - Added mirrored content package config 2026-05-01-dachen-xiaoma-argue-fix-old-post for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-02-ai-employee-writeback-after-publish.yaml` - Added mirrored content package config 2026-05-02-ai-employee-writeback-after-publish for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-03-ai-employee-data-center-review.weibo.yaml` - Added mirrored content package config 2026-05-03-ai-employee-data-center-review.weibo for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-03-ai-employee-data-center-review.yaml` - Added mirrored content package config 2026-05-03-ai-employee-data-center-review for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-04-ai-employee-three-format-comparison.kuaishou.yaml` - Added mirrored content package config 2026-05-04-ai-employee-three-format-comparison.kuaishou for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-04-ai-employee-three-format-comparison.weibo.yaml` - Added mirrored content package config 2026-05-04-ai-employee-three-format-comparison.weibo for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-04-ai-employee-three-format-comparison.yaml` - Added mirrored content package config 2026-05-04-ai-employee-three-format-comparison for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-audit-wait-no-republish.yaml` - Added mirrored content package config 2026-05-05-ai-employee-audit-wait-no-republish for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-receipt-handoff.kuaishou.yaml` - Added mirrored content package config 2026-05-05-ai-employee-receipt-handoff.kuaishou for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-receipt-handoff.weibo.yaml` - Added mirrored content package config 2026-05-05-ai-employee-receipt-handoff.weibo for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-receipt-handoff.yaml` - Added mirrored content package config 2026-05-05-ai-employee-receipt-handoff for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-12-ai-employee-status-split-before-judgment.yaml` - Added mirrored content package config 2026-05-12-ai-employee-status-split-before-judgment for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-13-ai-employee-receipt-lock-before-republish.yaml` - Added mirrored content package config 2026-05-13-ai-employee-receipt-lock-before-republish for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-14-ai-employee-no-metrics-no-judgment.yaml` - Added mirrored content package config 2026-05-14-ai-employee-no-metrics-no-judgment for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-15-ai-employee-status-branch-before-rewrite.yaml` - Added mirrored content package config 2026-05-15-ai-employee-status-branch-before-rewrite for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-16-ai-employee-compare-three-before-cut.yaml` - Added mirrored content package config 2026-05-16-ai-employee-compare-three-before-cut for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-evidence-grid-before-verdict.yaml` - Added mirrored content package config 2026-05-17-ai-employee-evidence-grid-before-verdict for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml` - Added mirrored content package config 2026-05-17-ai-employee-metric-window-before-rewrite for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-22-ai-employee-no-new-status-not-failure.yaml` - Added mirrored content package config 2026-05-22-ai-employee-no-new-status-not-failure for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-23-ai-employee-pending-status-before-rewrite.yaml` - Added mirrored content package config 2026-05-23-ai-employee-pending-status-before-rewrite for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-26-ai-employee-three-grid-before-verdict.yaml` - Added mirrored content package config 2026-05-26-ai-employee-three-grid-before-verdict for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-30-ai-employee-no-rush-repost-before-receipt.yaml` - Added mirrored content package config 2026-05-30-ai-employee-no-rush-repost-before-receipt for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.demo.yaml` - Added mirrored content package config demo for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.example.yaml` - Added mirrored content package config example for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-05-ai-employee-audit-wait-no-republish.json` - Added mirrored Hermes handoff package 2026-05-05-ai-employee-audit-wait-no-republish for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-12-ai-employee-status-split-before-judgment.json` - Added mirrored Hermes handoff package 2026-05-12-ai-employee-status-split-before-judgment for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-13-ai-employee-receipt-lock-before-republish.json` - Added mirrored Hermes handoff package 2026-05-13-ai-employee-receipt-lock-before-republish for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-14-ai-employee-no-metrics-no-judgment.json` - Added mirrored Hermes handoff package 2026-05-14-ai-employee-no-metrics-no-judgment for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-15-ai-employee-status-branch-before-rewrite.json` - Added mirrored Hermes handoff package 2026-05-15-ai-employee-status-branch-before-rewrite for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-16-ai-employee-compare-three-before-cut.json` - Added mirrored Hermes handoff package 2026-05-16-ai-employee-compare-three-before-cut for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-17-ai-employee-evidence-grid-before-verdict.json` - Added mirrored Hermes handoff package 2026-05-17-ai-employee-evidence-grid-before-verdict for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-17-ai-employee-metric-window-before-rewrite.json` - Added mirrored Hermes handoff package 2026-05-17-ai-employee-metric-window-before-rewrite for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-22-ai-employee-no-new-status-not-failure.json` - Added mirrored Hermes handoff package 2026-05-22-ai-employee-no-new-status-not-failure for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-23-ai-employee-pending-status-before-rewrite.json` - Added mirrored Hermes handoff package 2026-05-23-ai-employee-pending-status-before-rewrite for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-26-ai-employee-three-grid-before-verdict.json` - Added mirrored Hermes handoff package 2026-05-26-ai-employee-three-grid-before-verdict for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-30-ai-employee-no-rush-repost-before-receipt.json` - Added mirrored Hermes handoff package 2026-05-30-ai-employee-no-rush-repost-before-receipt for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platform-mappings/baijiahao.yaml` - Added mirrored platform mapping for baijiahao in python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platform-mappings/douyin.yaml` - Added mirrored platform mapping for douyin in python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platform-mappings/kuaishou.yaml` - Added mirrored platform mapping for kuaishou in python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platform-mappings/toutiao.yaml` - Added mirrored platform mapping for toutiao in python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platform-mappings/wechat_channels.yaml` - Added mirrored platform mapping for wechat_channels in python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platform-mappings/weibo.yaml` - Added mirrored platform mapping for weibo in python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platform-mappings/xiaohongshu.yaml` - Added mirrored platform mapping for xiaohongshu in python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platform-mappings/zhihu.yaml` - Added mirrored platform mapping for zhihu in python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platforms.example.yaml` - Added mirrored example platform account mapping for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/pyproject.toml` - Added mirrored Python project metadata for python-platform-takeover automation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/README.md` - Added mirrored operator README for python-platform-takeover automation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/scripts/quickstart-mac.sh` - Added mirrored helper script quickstart-mac.sh for python-platform-takeover automation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/scripts/quickstart-windows.ps1` - Added mirrored helper script quickstart-windows.ps1 for python-platform-takeover automation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/scripts/social-publisher.ps1` - Added mirrored helper script social-publisher.ps1 for python-platform-takeover automation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/scripts/social-publisher.sh` - Added mirrored helper script social-publisher.sh for python-platform-takeover automation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/scripts/start-chrome-cdp.ps1` - Added mirrored helper script start-chrome-cdp.ps1 for python-platform-takeover automation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/scripts/start-chrome-cdp.sh` - Added mirrored helper script start-chrome-cdp.sh for python-platform-takeover automation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/__init__.py` - Added mirrored social publisher module __init__.py.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/__main__.py` - Added mirrored social publisher module __main__.py.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/browser.py` - Added mirrored social publisher module browser.py.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/cli.py` - Added mirrored social publisher module cli.py.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/content_package.py` - Added mirrored social publisher module content_package.py.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/doctor.py` - Added mirrored social publisher module doctor.py.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/env.py` - Added mirrored social publisher module env.py.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platform_mapping.py` - Added mirrored social publisher module platform_mapping.py.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/__init__.py` - Added mirrored publisher implementation for __init__ in python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/baijiahao.py` - Added mirrored publisher implementation for baijiahao in python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/base.py` - Added mirrored publisher implementation for base in python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/douyin.py` - Added mirrored publisher implementation for douyin in python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/kuaishou.py` - Added mirrored publisher implementation for kuaishou in python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/toutiao.py` - Added mirrored publisher implementation for toutiao in python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py` - Added mirrored publisher implementation for wechat_channels in python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/weibo.py` - Added mirrored publisher implementation for weibo in python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/xiaohongshu.py` - Added mirrored publisher implementation for xiaohongshu in python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/zhihu.py` - Added mirrored publisher implementation for zhihu in python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/publish_receipts.py` - Added mirrored social publisher module publish_receipts.py.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/hermes-handoff/latest.json` - Added mirrored runtime state artifact latest.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.baijiahao.lock.json` - Added mirrored runtime state artifact 2026-05-12-ai-employee-status-split-before-judgment.baijiahao.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.bilibili.lock.json` - Added mirrored runtime state artifact 2026-05-12-ai-employee-status-split-before-judgment.bilibili.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.kuaishou.lock.json` - Added mirrored runtime state artifact 2026-05-12-ai-employee-status-split-before-judgment.kuaishou.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.toutiao.lock.json` - Added mirrored runtime state artifact 2026-05-12-ai-employee-status-split-before-judgment.toutiao.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.zhihu.lock.json` - Added mirrored runtime state artifact 2026-05-12-ai-employee-status-split-before-judgment.zhihu.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.baijiahao.lock.json` - Added mirrored runtime state artifact 2026-05-13-ai-employee-receipt-lock-before-republish.baijiahao.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.bilibili.lock.json` - Added mirrored runtime state artifact 2026-05-13-ai-employee-receipt-lock-before-republish.bilibili.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.douyin.lock.json` - Added mirrored runtime state artifact 2026-05-13-ai-employee-receipt-lock-before-republish.douyin.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.kuaishou.lock.json` - Added mirrored runtime state artifact 2026-05-13-ai-employee-receipt-lock-before-republish.kuaishou.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.toutiao.lock.json` - Added mirrored runtime state artifact 2026-05-13-ai-employee-receipt-lock-before-republish.toutiao.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.zhihu.lock.json` - Added mirrored runtime state artifact 2026-05-13-ai-employee-receipt-lock-before-republish.zhihu.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.baijiahao.lock.json` - Added mirrored runtime state artifact 2026-05-14-ai-employee-no-metrics-no-judgment.baijiahao.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.bilibili.lock.json` - Added mirrored runtime state artifact 2026-05-14-ai-employee-no-metrics-no-judgment.bilibili.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.douyin.lock.json` - Added mirrored runtime state artifact 2026-05-14-ai-employee-no-metrics-no-judgment.douyin.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.kuaishou.lock.json` - Added mirrored runtime state artifact 2026-05-14-ai-employee-no-metrics-no-judgment.kuaishou.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.toutiao.lock.json` - Added mirrored runtime state artifact 2026-05-14-ai-employee-no-metrics-no-judgment.toutiao.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.wechat_channels.lock.json` - Added mirrored runtime state artifact 2026-05-14-ai-employee-no-metrics-no-judgment.wechat_channels.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.weibo.lock.json` - Added mirrored runtime state artifact 2026-05-14-ai-employee-no-metrics-no-judgment.weibo.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.zhihu.lock.json` - Added mirrored runtime state artifact 2026-05-14-ai-employee-no-metrics-no-judgment.zhihu.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.baijiahao.lock.json` - Added mirrored runtime state artifact 2026-05-15-ai-employee-status-branch-before-rewrite.baijiahao.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.bilibili.lock.json` - Added mirrored runtime state artifact 2026-05-15-ai-employee-status-branch-before-rewrite.bilibili.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.douyin.lock.json` - Added mirrored runtime state artifact 2026-05-15-ai-employee-status-branch-before-rewrite.douyin.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.kuaishou.lock.json` - Added mirrored runtime state artifact 2026-05-15-ai-employee-status-branch-before-rewrite.kuaishou.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.toutiao.lock.json` - Added mirrored runtime state artifact 2026-05-15-ai-employee-status-branch-before-rewrite.toutiao.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.wechat_channels.lock.json` - Added mirrored runtime state artifact 2026-05-15-ai-employee-status-branch-before-rewrite.wechat_channels.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.weibo.lock.json` - Added mirrored runtime state artifact 2026-05-15-ai-employee-status-branch-before-rewrite.weibo.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.zhihu.lock.json` - Added mirrored runtime state artifact 2026-05-15-ai-employee-status-branch-before-rewrite.zhihu.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.baijiahao.lock.json` - Added mirrored runtime state artifact 2026-05-16-ai-employee-compare-three-before-cut.baijiahao.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.bilibili.lock.json` - Added mirrored runtime state artifact 2026-05-16-ai-employee-compare-three-before-cut.bilibili.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.douyin.lock.json` - Added mirrored runtime state artifact 2026-05-16-ai-employee-compare-three-before-cut.douyin.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.kuaishou.lock.json` - Added mirrored runtime state artifact 2026-05-16-ai-employee-compare-three-before-cut.kuaishou.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.toutiao.lock.json` - Added mirrored runtime state artifact 2026-05-16-ai-employee-compare-three-before-cut.toutiao.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.wechat_channels.lock.json` - Added mirrored runtime state artifact 2026-05-16-ai-employee-compare-three-before-cut.wechat_channels.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.weibo.lock.json` - Added mirrored runtime state artifact 2026-05-16-ai-employee-compare-three-before-cut.weibo.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.zhihu.lock.json` - Added mirrored runtime state artifact 2026-05-16-ai-employee-compare-three-before-cut.zhihu.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.baijiahao.lock.json` - Added mirrored runtime state artifact 2026-05-17-ai-employee-evidence-grid-before-verdict.baijiahao.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.bilibili.lock.json` - Added mirrored runtime state artifact 2026-05-17-ai-employee-evidence-grid-before-verdict.bilibili.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.douyin.lock.json` - Added mirrored runtime state artifact 2026-05-17-ai-employee-evidence-grid-before-verdict.douyin.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.kuaishou.lock.json` - Added mirrored runtime state artifact 2026-05-17-ai-employee-evidence-grid-before-verdict.kuaishou.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.toutiao.lock.json` - Added mirrored runtime state artifact 2026-05-17-ai-employee-evidence-grid-before-verdict.toutiao.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.wechat_channels.lock.json` - Added mirrored runtime state artifact 2026-05-17-ai-employee-evidence-grid-before-verdict.wechat_channels.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.weibo.lock.json` - Added mirrored runtime state artifact 2026-05-17-ai-employee-evidence-grid-before-verdict.weibo.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.zhihu.lock.json` - Added mirrored runtime state artifact 2026-05-17-ai-employee-evidence-grid-before-verdict.zhihu.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.baijiahao.lock.json` - Added mirrored runtime state artifact 2026-05-17-ai-employee-metric-window-before-rewrite.baijiahao.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.bilibili.lock.json` - Added mirrored runtime state artifact 2026-05-17-ai-employee-metric-window-before-rewrite.bilibili.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.douyin.lock.json` - Added mirrored runtime state artifact 2026-05-17-ai-employee-metric-window-before-rewrite.douyin.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.kuaishou.lock.json` - Added mirrored runtime state artifact 2026-05-17-ai-employee-metric-window-before-rewrite.kuaishou.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.toutiao.lock.json` - Added mirrored runtime state artifact 2026-05-17-ai-employee-metric-window-before-rewrite.toutiao.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.wechat_channels.lock.json` - Added mirrored runtime state artifact 2026-05-17-ai-employee-metric-window-before-rewrite.wechat_channels.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.weibo.lock.json` - Added mirrored runtime state artifact 2026-05-17-ai-employee-metric-window-before-rewrite.weibo.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.zhihu.lock.json` - Added mirrored runtime state artifact 2026-05-17-ai-employee-metric-window-before-rewrite.zhihu.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.baijiahao.lock.json` - Added mirrored runtime state artifact 2026-05-22-ai-employee-no-new-status-not-failure.baijiahao.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.bilibili.lock.json` - Added mirrored runtime state artifact 2026-05-22-ai-employee-no-new-status-not-failure.bilibili.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.douyin.lock.json` - Added mirrored runtime state artifact 2026-05-22-ai-employee-no-new-status-not-failure.douyin.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.kuaishou.lock.json` - Added mirrored runtime state artifact 2026-05-22-ai-employee-no-new-status-not-failure.kuaishou.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.toutiao.lock.json` - Added mirrored runtime state artifact 2026-05-22-ai-employee-no-new-status-not-failure.toutiao.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.wechat_channels.lock.json` - Added mirrored runtime state artifact 2026-05-22-ai-employee-no-new-status-not-failure.wechat_channels.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.weibo.lock.json` - Added mirrored runtime state artifact 2026-05-22-ai-employee-no-new-status-not-failure.weibo.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.zhihu.lock.json` - Added mirrored runtime state artifact 2026-05-22-ai-employee-no-new-status-not-failure.zhihu.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.baijiahao.lock.json` - Added mirrored runtime state artifact 2026-05-23-ai-employee-pending-status-before-rewrite.baijiahao.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.bilibili.lock.json` - Added mirrored runtime state artifact 2026-05-23-ai-employee-pending-status-before-rewrite.bilibili.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.douyin.lock.json` - Added mirrored runtime state artifact 2026-05-23-ai-employee-pending-status-before-rewrite.douyin.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.kuaishou.lock.json` - Added mirrored runtime state artifact 2026-05-23-ai-employee-pending-status-before-rewrite.kuaishou.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.toutiao.lock.json` - Added mirrored runtime state artifact 2026-05-23-ai-employee-pending-status-before-rewrite.toutiao.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.wechat_channels.lock.json` - Added mirrored runtime state artifact 2026-05-23-ai-employee-pending-status-before-rewrite.wechat_channels.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.weibo.lock.json` - Added mirrored runtime state artifact 2026-05-23-ai-employee-pending-status-before-rewrite.weibo.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.zhihu.lock.json` - Added mirrored runtime state artifact 2026-05-23-ai-employee-pending-status-before-rewrite.zhihu.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json` - Added mirrored runtime state artifact 2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json.stale-override-1779789719` - Added mirrored runtime state artifact 2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json.stale-override-1779789719 for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json.stale-override-1779790507` - Added mirrored runtime state artifact 2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json.stale-override-1779790507 for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.kuaishou.lock.json` - Added mirrored runtime state artifact 2026-05-26-ai-employee-three-grid-before-verdict.kuaishou.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.wechat_channels.lock.json` - Added mirrored runtime state artifact 2026-05-26-ai-employee-three-grid-before-verdict.wechat_channels.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.weibo.lock.json` - Added mirrored runtime state artifact 2026-05-26-ai-employee-three-grid-before-verdict.weibo.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.zhihu.lock.json` - Added mirrored runtime state artifact 2026-05-26-ai-employee-three-grid-before-verdict.zhihu.lock.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json` - Added mirrored runtime state artifact 2026-04-24-platform-execution-writeback-fields.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-04-25-platform-execution-six-writeback-fields.json` - Added mirrored runtime state artifact 2026-04-25-platform-execution-six-writeback-fields.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-04-27-platform-execution-verify-before-republish.json` - Added mirrored runtime state artifact 2026-04-27-platform-execution-verify-before-republish.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-04-28-platform-execution-early-zero-not-failure.json` - Added mirrored runtime state artifact 2026-04-28-platform-execution-early-zero-not-failure.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-04-29-platform-execution-lock-campaign-four-checks.json` - Added mirrored runtime state artifact 2026-04-29-platform-execution-lock-campaign-four-checks.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-04-30-repair-existing-not-republish.json` - Added mirrored runtime state artifact 2026-04-30-repair-existing-not-republish.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json` - Added mirrored runtime state artifact 2026-05-01-dachen-xiaoma-argue-fix-old-post.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-02-ai-employee-writeback-after-publish.json` - Added mirrored runtime state artifact 2026-05-02-ai-employee-writeback-after-publish.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-03-ai-employee-data-center-review.json` - Added mirrored runtime state artifact 2026-05-03-ai-employee-data-center-review.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-04-ai-employee-three-format-comparison.json` - Added mirrored runtime state artifact 2026-05-04-ai-employee-three-format-comparison.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-05-ai-employee-audit-wait-no-republish.json` - Added mirrored runtime state artifact 2026-05-05-ai-employee-audit-wait-no-republish.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-05-ai-employee-receipt-handoff.json` - Added mirrored runtime state artifact 2026-05-05-ai-employee-receipt-handoff.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-12-ai-employee-status-split-before-judgment.json` - Added mirrored runtime state artifact 2026-05-12-ai-employee-status-split-before-judgment.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-13-ai-employee-receipt-lock-before-republish.json` - Added mirrored runtime state artifact 2026-05-13-ai-employee-receipt-lock-before-republish.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-14-ai-employee-no-metrics-no-judgment.json` - Added mirrored runtime state artifact 2026-05-14-ai-employee-no-metrics-no-judgment.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-15-ai-employee-status-branch-before-rewrite.json` - Added mirrored runtime state artifact 2026-05-15-ai-employee-status-branch-before-rewrite.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-16-ai-employee-compare-three-before-cut.json` - Added mirrored runtime state artifact 2026-05-16-ai-employee-compare-three-before-cut.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json` - Added mirrored runtime state artifact 2026-05-17-ai-employee-evidence-grid-before-verdict.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json` - Added mirrored runtime state artifact 2026-05-17-ai-employee-metric-window-before-rewrite.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-22-ai-employee-no-new-status-not-failure.json` - Added mirrored runtime state artifact 2026-05-22-ai-employee-no-new-status-not-failure.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-23-ai-employee-pending-status-before-rewrite.json` - Added mirrored runtime state artifact 2026-05-23-ai-employee-pending-status-before-rewrite.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-26-ai-employee-three-grid-before-verdict.json` - Added mirrored runtime state artifact 2026-05-26-ai-employee-three-grid-before-verdict.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json` - Added mirrored runtime state artifact 2026-05-30-ai-employee-no-rush-repost-before-receipt.json for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/bilibili-management-published-20260502-1545.png` - Added mirrored runtime state artifact bilibili-management-published-20260502-1545.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-after-click-cdp-20260503.png` - Added mirrored runtime state artifact kuaishou-after-click-cdp-20260503.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-after-dom-publish-click-20260503.png` - Added mirrored runtime state artifact kuaishou-after-dom-publish-click-20260503.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-after-publish-click-20260523.png` - Added mirrored runtime state artifact kuaishou-after-publish-click-20260523.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-before-manual-publish-cdp-20260502.png` - Added mirrored runtime state artifact kuaishou-before-manual-publish-cdp-20260502.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-before-publish-20260523-cover-check.png` - Added mirrored runtime state artifact kuaishou-before-publish-20260523-cover-check.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-before-publish-cdp-20260503.png` - Added mirrored runtime state artifact kuaishou-before-publish-cdp-20260503.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-debug-after-script-stop-20260503.png` - Added mirrored runtime state artifact kuaishou-debug-after-script-stop-20260503.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-0-20260505.png` - Added mirrored runtime state artifact kuaishou-debug-current-0-0-20260505.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-1-20260505.png` - Added mirrored runtime state artifact kuaishou-debug-current-0-1-20260505.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-2-20260505.png` - Added mirrored runtime state artifact kuaishou-debug-current-0-2-20260505.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-3-20260505.png` - Added mirrored runtime state artifact kuaishou-debug-current-0-3-20260505.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-4-20260505.png` - Added mirrored runtime state artifact kuaishou-debug-current-0-4-20260505.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-dom-inspect-0-1-20260505.png` - Added mirrored runtime state artifact kuaishou-dom-inspect-0-1-20260505.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-inspect-7-20260504.png` - Added mirrored runtime state artifact kuaishou-inspect-7-20260504.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-inspect-9-20260504.png` - Added mirrored runtime state artifact kuaishou-inspect-9-20260504.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-management-published-20260502-1508.png` - Added mirrored runtime state artifact kuaishou-management-published-20260502-1508.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-management-published-20260503-2107.png` - Added mirrored runtime state artifact kuaishou-management-published-20260503-2107.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-management-under-review-20260502.png` - Added mirrored runtime state artifact kuaishou-management-under-review-20260502.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-management-verify-20260503.png` - Added mirrored runtime state artifact kuaishou-management-verify-20260503.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-management-verify-20260523.png` - Added mirrored runtime state artifact kuaishou-management-verify-20260523.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-management-verify-retry-20260523.png` - Added mirrored runtime state artifact kuaishou-management-verify-retry-20260523.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-publish-page-20260502-1.png` - Added mirrored runtime state artifact kuaishou-publish-page-20260502-1.png for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_browser_controller.py` - Added mirrored automated test test_browser_controller.py for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_content_package.py` - Added mirrored automated test test_content_package.py for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_doctor.py` - Added mirrored automated test test_doctor.py for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_env.py` - Added mirrored automated test test_env.py for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_platform_base.py` - Added mirrored automated test test_platform_base.py for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_publish_receipts.py` - Added mirrored automated test test_publish_receipts.py for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_wechat_channels.py` - Added mirrored automated test test_wechat_channels.py for python-platform-takeover.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/CHANGELOG.md` - Added mirrored workspace file CHANGELOG.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/CONTRIBUTING.md` - Added mirrored workspace file CONTRIBUTING.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/automation/github-sync-status.md` - Added mirrored GitHub sync status log for the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/automation/README.md` - Added mirrored documentation file README.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/automation/skill-change-monitor.md` - Added mirrored skill change monitor log for the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/automation/windows-translation-status.md` - Added mirrored documentation file windows-translation-status.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/browser-operation-sop.md` - Added mirrored documentation file browser-operation-sop.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/browser-tab-takeover-runbook.md` - Added mirrored documentation file browser-tab-takeover-runbook.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/dashboard-sync-runbook.md` - Added mirrored documentation file dashboard-sync-runbook.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/dashboard-upload-api-contract.md` - Added mirrored documentation file dashboard-upload-api-contract.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/github-upload-checklist.md` - Added mirrored documentation file github-upload-checklist.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/latest-success-flow.md` - Added mirrored documentation file latest-success-flow.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/mempalace-remote-sync.md` - Added mirrored documentation file mempalace-remote-sync.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/public-release-checklist.md` - Added mirrored documentation file public-release-checklist.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/python-automation-roadmap.md` - Added mirrored documentation file python-automation-roadmap.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/system-architecture.md` - Added mirrored documentation file system-architecture.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/LICENSE` - Added mirrored workspace file LICENSE.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/package.json` - Added mirrored workspace file package.json.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/README.md` - Added mirrored root README for the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/dashboard-doctor.js` - Added mirrored workspace file dashboard-doctor.js.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/dashboard-export-review.js` - Added mirrored workspace file dashboard-export-review.js.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/dashboard-fixture-smoke.js` - Added mirrored workspace file dashboard-fixture-smoke.js.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/dashboard-sync-review.js` - Added mirrored workspace file dashboard-sync-review.js.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/dashboard-sync.ps1` - Added mirrored workspace file dashboard-sync.ps1.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/dashboard-sync.sh` - Added mirrored workspace file dashboard-sync.sh.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/dashboard-upload.js` - Added mirrored workspace file dashboard-upload.js.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/douyin-packaging-guard.mjs` - Added mirrored workspace file douyin-packaging-guard.mjs.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/init_campaign.js` - Added mirrored workspace file init_campaign.js.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/lib/load-dashboard-env.js` - Added mirrored workspace file load-dashboard-env.js.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/lib/workspace-paths.js` - Added mirrored workspace file workspace-paths.js.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/sync_remote_mempalace.sh` - Added mirrored workspace file sync_remote_mempalace.sh.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/validate-dashboard-export.js` - Added mirrored workspace file validate-dashboard-export.js.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/README.md` - Added mirrored workspace file README.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/scripts/sync-skills.ps1` - Added mirrored workspace file sync-skills.ps1.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/scripts/sync-skills.sh` - Added mirrored workspace file sync-skills.sh.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills-manifest.txt` - Added mirrored workspace file skills-manifest.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/agents/openai.yaml` - Added mirrored agent manifest for aspnet-core.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/assets/dotnet-logo.png` - Added mirrored asset dotnet-logo.png for aspnet-core.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/_sections.md` - Added mirrored reference _sections.md for aspnet-core.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/apis-minimal-and-controllers.md` - Added mirrored reference apis-minimal-and-controllers.md for aspnet-core.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/data-state-and-services.md` - Added mirrored reference data-state-and-services.md for aspnet-core.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/program-and-pipeline.md` - Added mirrored reference program-and-pipeline.md for aspnet-core.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/realtime-grpc-and-background-work.md` - Added mirrored reference realtime-grpc-and-background-work.md for aspnet-core.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/security-and-identity.md` - Added mirrored reference security-and-identity.md for aspnet-core.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/source-map.md` - Added mirrored reference source-map.md for aspnet-core.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/stack-selection.md` - Added mirrored reference stack-selection.md for aspnet-core.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/testing-performance-and-operations.md` - Added mirrored reference testing-performance-and-operations.md for aspnet-core.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/ui-blazor.md` - Added mirrored reference ui-blazor.md for aspnet-core.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/ui-mvc.md` - Added mirrored reference ui-mvc.md for aspnet-core.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/ui-razor-pages.md` - Added mirrored reference ui-razor-pages.md for aspnet-core.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/versioning-and-upgrades.md` - Added mirrored reference versioning-and-upgrades.md for aspnet-core.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/SKILL.md` - Added mirrored skill definition for aspnet-core.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/baijiahao-ops/agents/openai.yaml` - Added mirrored agent manifest for baijiahao-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/baijiahao-ops/references/platform-notes.md` - Added mirrored reference platform-notes.md for baijiahao-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/baijiahao-ops/SKILL.md` - Added mirrored skill definition for baijiahao-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/agents/openai.yaml` - Added mirrored agent manifest for chatgpt-apps.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/references/app-archetypes.md` - Added mirrored reference app-archetypes.md for chatgpt-apps.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/references/apps-sdk-docs-workflow.md` - Added mirrored reference apps-sdk-docs-workflow.md for chatgpt-apps.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/references/interactive-state-sync-patterns.md` - Added mirrored reference interactive-state-sync-patterns.md for chatgpt-apps.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/references/repo-contract-and-validation.md` - Added mirrored reference repo-contract-and-validation.md for chatgpt-apps.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/references/search-fetch-standard.md` - Added mirrored reference search-fetch-standard.md for chatgpt-apps.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/references/upstream-example-workflow.md` - Added mirrored reference upstream-example-workflow.md for chatgpt-apps.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/references/window-openai-patterns.md` - Added mirrored reference window-openai-patterns.md for chatgpt-apps.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/scripts/scaffold_node_ext_apps.mjs` - Added mirrored helper script scaffold_node_ext_apps.mjs for chatgpt-apps.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/SKILL.md` - Added mirrored skill definition for chatgpt-apps.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/clash-verge-standard-env/agents/openai.yaml` - Added mirrored agent manifest for clash-verge-standard-env.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml` - Added mirrored reference rules-enhancement.yaml for clash-verge-standard-env.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/clash-verge-standard-env/references/verge.template.yaml` - Added mirrored reference verge.template.yaml for clash-verge-standard-env.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/clash-verge-standard-env/scripts/apply_standard_env.py` - Added mirrored helper script apply_standard_env.py for clash-verge-standard-env.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/clash-verge-standard-env/SKILL.md` - Added mirrored skill definition for clash-verge-standard-env.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/agents/openai.yaml` - Added mirrored agent manifest for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/assets/cloudflare-small.svg` - Added mirrored asset cloudflare-small.svg for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/assets/cloudflare.png` - Added mirrored asset cloudflare.png for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/agents-sdk/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/agents-sdk/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/agents-sdk/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/agents-sdk/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/agents-sdk/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-gateway/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-gateway/dynamic-routing.md` - Added mirrored reference dynamic-routing.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-gateway/features.md` - Added mirrored reference features.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-gateway/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-gateway/sdk-integration.md` - Added mirrored reference sdk-integration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-gateway/troubleshooting.md` - Added mirrored reference troubleshooting.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-search/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-search/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-search/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-search/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-search/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/analytics-engine/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/analytics-engine/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/analytics-engine/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/analytics-engine/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/analytics-engine/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api-shield/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api-shield/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api-shield/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api-shield/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api-shield/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/argo-smart-routing/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/argo-smart-routing/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/argo-smart-routing/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/argo-smart-routing/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/argo-smart-routing/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bindings/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bindings/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bindings/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bindings/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bindings/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bot-management/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bot-management/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bot-management/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bot-management/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bot-management/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/browser-rendering/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/browser-rendering/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/browser-rendering/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/browser-rendering/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/browser-rendering/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/c3/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/c3/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/c3/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/c3/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/c3/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cache-reserve/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cache-reserve/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cache-reserve/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cache-reserve/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cache-reserve/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/containers/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/containers/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/containers/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/containers/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/containers/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cron-triggers/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cron-triggers/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cron-triggers/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cron-triggers/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cron-triggers/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/d1/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/d1/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/d1/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/d1/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/d1/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ddos/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ddos/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ddos/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ddos/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ddos/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/do-storage/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/do-storage/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/do-storage/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/do-storage/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/do-storage/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/do-storage/testing.md` - Added mirrored reference testing.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/durable-objects/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/durable-objects/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/durable-objects/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/durable-objects/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/durable-objects/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-routing/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-routing/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-routing/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-routing/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-routing/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-workers/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-workers/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-workers/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-workers/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-workers/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/hyperdrive/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/hyperdrive/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/hyperdrive/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/hyperdrive/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/hyperdrive/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/images/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/images/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/images/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/images/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/images/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/kv/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/kv/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/kv/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/kv/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/kv/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/miniflare/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/miniflare/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/miniflare/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/miniflare/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/miniflare/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/network-interconnect/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/network-interconnect/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/network-interconnect/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/network-interconnect/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/network-interconnect/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/observability/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/observability/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/observability/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/observability/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/observability/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages-functions/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages-functions/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages-functions/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages-functions/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages-functions/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pipelines/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pipelines/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pipelines/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pipelines/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pipelines/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pulumi/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pulumi/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pulumi/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pulumi/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pulumi/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/queues/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/queues/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/queues/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/queues/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/queues/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-data-catalog/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-data-catalog/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-data-catalog/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-data-catalog/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-data-catalog/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-sql/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-sql/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-sql/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-sql/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-sql/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtime-sfu/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtime-sfu/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtime-sfu/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtime-sfu/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtime-sfu/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtimekit/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtimekit/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtimekit/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtimekit/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtimekit/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/sandbox/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/sandbox/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/sandbox/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/sandbox/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/sandbox/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/secrets-store/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/secrets-store/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/secrets-store/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/secrets-store/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/secrets-store/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/smart-placement/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/smart-placement/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/smart-placement/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/smart-placement/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/smart-placement/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/snippets/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/snippets/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/snippets/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/snippets/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/snippets/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/spectrum/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/spectrum/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/spectrum/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/spectrum/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/spectrum/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/static-assets/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/static-assets/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/static-assets/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/static-assets/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/static-assets/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/stream/api-live.md` - Added mirrored reference api-live.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/stream/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/stream/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/stream/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/stream/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/stream/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tail-workers/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tail-workers/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tail-workers/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tail-workers/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tail-workers/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/terraform/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/terraform/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/terraform/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/terraform/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/terraform/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tunnel/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tunnel/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tunnel/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tunnel/networking.md` - Added mirrored reference networking.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tunnel/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tunnel/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turn/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turn/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turn/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turn/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turn/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turnstile/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turnstile/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turnstile/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turnstile/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turnstile/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/vectorize/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/vectorize/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/vectorize/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/vectorize/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/vectorize/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/waf/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/waf/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/waf/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/waf/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/waf/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/web-analytics/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/web-analytics/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/web-analytics/integration.md` - Added mirrored reference integration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/web-analytics/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/web-analytics/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workerd/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workerd/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workerd/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workerd/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workerd/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-ai/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-ai/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-ai/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-ai/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-ai/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-for-platforms/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-for-platforms/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-for-platforms/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-for-platforms/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-for-platforms/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-playground/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-playground/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-playground/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-playground/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-playground/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-vpc/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-vpc/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-vpc/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-vpc/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-vpc/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers/frameworks.md` - Added mirrored reference frameworks.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workflows/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workflows/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workflows/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workflows/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workflows/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/wrangler/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/wrangler/auth.md` - Added mirrored reference auth.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/wrangler/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/wrangler/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/wrangler/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/wrangler/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/zaraz/api.md` - Added mirrored reference api.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/zaraz/configuration.md` - Added mirrored reference configuration.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/zaraz/gotchas.md` - Added mirrored reference gotchas.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/zaraz/IMPLEMENTATION_SUMMARY.md` - Added mirrored reference IMPLEMENTATION_SUMMARY.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/zaraz/patterns.md` - Added mirrored reference patterns.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/zaraz/README.md` - Added mirrored reference README.md for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/SKILL.md` - Added mirrored skill definition for cloudflare-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/agents/openai.yaml` - Added mirrored agent manifest for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/.bridge.env.example` - Added mirrored asset .bridge.env.example for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/launchd/com.codex.feishu-bridge.plist` - Added mirrored asset com.codex.feishu-bridge.plist for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/package.json` - Added mirrored asset package.json for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/scripts/bridge-logs.sh` - Added mirrored helper script bridge-logs.sh for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/scripts/bridge-start.sh` - Added mirrored helper script bridge-start.sh for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/scripts/bridge-status.sh` - Added mirrored helper script bridge-status.sh for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/scripts/bridge-stop.sh` - Added mirrored helper script bridge-stop.sh for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/scripts/configure_notify_target.sh` - Added mirrored helper script configure_notify_target.sh for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/scripts/mirror-view.command` - Added mirrored helper script mirror-view.command for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/scripts/mirror-view.sh` - Added mirrored helper script mirror-view.sh for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/scripts/run-bridge.sh` - Added mirrored helper script run-bridge.sh for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/src/bridge.js` - Added mirrored asset bridge.js for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/references/architecture.md` - Added mirrored reference architecture.md for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/references/deployment.md` - Added mirrored reference deployment.md for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/references/INSTALL-QUICKSTART.md` - Added mirrored reference INSTALL-QUICKSTART.md for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/references/user-guide.md` - Added mirrored reference user-guide.md for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/scripts/install_bridge_template.sh` - Added mirrored helper script install_bridge_template.sh for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/scripts/package_skill_bundle.sh` - Added mirrored helper script package_skill_bundle.sh for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/SKILL.md` - Added mirrored skill definition for codex-feishu-bridge.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/agents/openai.yaml` - Added mirrored agent manifest for coze-seedance15pro-sales-workflow.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/config.json` - Added mirrored workspace file config.json.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/references/exported-workflow.yaml` - Added mirrored reference exported-workflow.yaml for coze-seedance15pro-sales-workflow.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/references/manifest.yml` - Added mirrored reference manifest.yml for coze-seedance15pro-sales-workflow.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/references/runtime-config.md` - Added mirrored reference runtime-config.md for coze-seedance15pro-sales-workflow.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/references/workflow-summary.md` - Added mirrored reference workflow-summary.md for coze-seedance15pro-sales-workflow.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/scripts/run_workflow.py` - Added mirrored helper script run_workflow.py for coze-seedance15pro-sales-workflow.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/SKILL.md` - Added mirrored skill definition for coze-seedance15pro-sales-workflow.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/agents/openai.yaml` - Added mirrored agent manifest for dachen-founder-flywheel.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/references/daily-automation-spec.md` - Added mirrored reference daily-automation-spec.md for dachen-founder-flywheel.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/references/flywheel-operating-system.md` - Added mirrored reference flywheel-operating-system.md for dachen-founder-flywheel.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/references/review-scorecard.md` - Added mirrored reference review-scorecard.md for dachen-founder-flywheel.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/references/weekly-content-calendar.md` - Added mirrored reference weekly-content-calendar.md for dachen-founder-flywheel.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/scripts/validate_flywheel_skill.rb` - Added mirrored helper script validate_flywheel_skill.rb for dachen-founder-flywheel.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/SKILL.md` - Added mirrored skill definition for dachen-founder-flywheel.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/data-review/agents/openai.yaml` - Added mirrored agent manifest for data-review.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/data-review/references/account-slice-analysis.md` - Added mirrored reference account-slice-analysis.md for data-review.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/data-review/references/dashboard-export-template.json` - Added mirrored reference dashboard-export-template.json for data-review.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/data-review/references/diagnosis-and-decisions.md` - Added mirrored reference diagnosis-and-decisions.md for data-review.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/data-review/references/docker-dashboard-contract.md` - Added mirrored reference docker-dashboard-contract.md for data-review.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/data-review/references/platform-metrics.md` - Added mirrored reference platform-metrics.md for data-review.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/data-review/references/report-template.md` - Added mirrored reference report-template.md for data-review.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/data-review/SKILL.md` - Added mirrored skill definition for data-review.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/develop-web-game/agents/openai.yaml` - Added mirrored agent manifest for develop-web-game.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/develop-web-game/assets/game-small.svg` - Added mirrored asset game-small.svg for develop-web-game.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/develop-web-game/assets/game.png` - Added mirrored asset game.png for develop-web-game.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/develop-web-game/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/develop-web-game/references/action_payloads.json` - Added mirrored reference action_payloads.json for develop-web-game.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/develop-web-game/scripts/web_game_playwright_client.js` - Added mirrored helper script web_game_playwright_client.js for develop-web-game.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/develop-web-game/SKILL.md` - Added mirrored skill definition for develop-web-game.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/doc/agents/openai.yaml` - Added mirrored agent manifest for doc.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/doc/assets/doc-small.svg` - Added mirrored asset doc-small.svg for doc.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/doc/assets/doc.png` - Added mirrored asset doc.png for doc.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/doc/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/doc/scripts/render_docx.py` - Added mirrored helper script render_docx.py for doc.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/doc/SKILL.md` - Added mirrored skill definition for doc.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/douyin-ops/agents/openai.yaml` - Added mirrored agent manifest for douyin-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/douyin-ops/references/platform-notes.md` - Added mirrored reference platform-notes.md for douyin-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/douyin-ops/SKILL.md` - Added mirrored skill definition for douyin-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/agents/openai.yaml` - Added mirrored agent manifest for figma-code-connect-components.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/assets/figma-small.svg` - Added mirrored asset figma-small.svg for figma-code-connect-components.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/assets/figma.png` - Added mirrored asset figma.png for figma-code-connect-components.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/assets/icon.svg` - Added mirrored asset icon.svg for figma-code-connect-components.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/LICENSE.TXT` - Added mirrored workspace file LICENSE.TXT.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/references/mapping-checklist.md` - Added mirrored reference mapping-checklist.md for figma-code-connect-components.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/scripts/normalize_node_id.py` - Added mirrored helper script normalize_node_id.py for figma-code-connect-components.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/SKILL.md` - Added mirrored skill definition for figma-code-connect-components.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/agents/openai.yaml` - Added mirrored agent manifest for figma-create-design-system-rules.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/assets/figma-small.svg` - Added mirrored asset figma-small.svg for figma-create-design-system-rules.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/assets/figma.png` - Added mirrored asset figma.png for figma-create-design-system-rules.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/assets/icon.svg` - Added mirrored asset icon.svg for figma-create-design-system-rules.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/LICENSE.TXT` - Added mirrored workspace file LICENSE.TXT.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/references/rule-template.md` - Added mirrored reference rule-template.md for figma-create-design-system-rules.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/scripts/check_agents_md.sh` - Added mirrored helper script check_agents_md.sh for figma-create-design-system-rules.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/SKILL.md` - Added mirrored skill definition for figma-create-design-system-rules.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/agents/openai.yaml` - Added mirrored agent manifest for figma-create-new-file.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/assets/figma-small.svg` - Added mirrored asset figma-small.svg for figma-create-new-file.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/assets/figma.png` - Added mirrored asset figma.png for figma-create-new-file.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/assets/icon.svg` - Added mirrored asset icon.svg for figma-create-new-file.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/LICENSE.TXT` - Added mirrored workspace file LICENSE.TXT.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/maintainers.yml` - Added mirrored workspace file maintainers.yml.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/SKILL.md` - Added mirrored skill definition for figma-create-new-file.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-design/agents/openai.yaml` - Added mirrored agent manifest for figma-generate-design.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-design/assets/figma-small.svg` - Added mirrored asset figma-small.svg for figma-generate-design.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-design/assets/figma.png` - Added mirrored asset figma.png for figma-generate-design.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-design/assets/icon.svg` - Added mirrored asset icon.svg for figma-generate-design.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-design/LICENSE.TXT` - Added mirrored workspace file LICENSE.TXT.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-design/maintainers.yml` - Added mirrored workspace file maintainers.yml.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-design/SKILL.md` - Added mirrored skill definition for figma-generate-design.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/agents/openai.yaml` - Added mirrored agent manifest for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/assets/figma-small.svg` - Added mirrored asset figma-small.svg for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/assets/figma.png` - Added mirrored asset figma.png for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/assets/icon.svg` - Added mirrored asset icon.svg for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/LICENSE.TXT` - Added mirrored workspace file LICENSE.TXT.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/maintainers.yml` - Added mirrored workspace file maintainers.yml.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/references/code-connect-setup.md` - Added mirrored reference code-connect-setup.md for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/references/component-creation.md` - Added mirrored reference component-creation.md for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/references/discovery-phase.md` - Added mirrored reference discovery-phase.md for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/references/documentation-creation.md` - Added mirrored reference documentation-creation.md for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/references/error-recovery.md` - Added mirrored reference error-recovery.md for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/references/naming-conventions.md` - Added mirrored reference naming-conventions.md for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/references/token-creation.md` - Added mirrored reference token-creation.md for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/bindVariablesToComponent.js` - Added mirrored helper script bindVariablesToComponent.js for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/cleanupOrphans.js` - Added mirrored helper script cleanupOrphans.js for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/createComponentWithVariants.js` - Added mirrored helper script createComponentWithVariants.js for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/createDocumentationPage.js` - Added mirrored helper script createDocumentationPage.js for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/createSemanticTokens.js` - Added mirrored helper script createSemanticTokens.js for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/createVariableCollection.js` - Added mirrored helper script createVariableCollection.js for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/inspectFileStructure.js` - Added mirrored helper script inspectFileStructure.js for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/rehydrateState.js` - Added mirrored helper script rehydrateState.js for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/validateCreation.js` - Added mirrored helper script validateCreation.js for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/SKILL.md` - Added mirrored skill definition for figma-generate-library.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-implement-design/agents/openai.yaml` - Added mirrored agent manifest for figma-implement-design.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-implement-design/assets/figma-small.svg` - Added mirrored asset figma-small.svg for figma-implement-design.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-implement-design/assets/figma.png` - Added mirrored asset figma.png for figma-implement-design.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-implement-design/assets/icon.svg` - Added mirrored asset icon.svg for figma-implement-design.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-implement-design/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-implement-design/SKILL.md` - Added mirrored skill definition for figma-implement-design.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/agents/openai.yaml` - Added mirrored agent manifest for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/assets/figma-small.svg` - Added mirrored asset figma-small.svg for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/assets/figma.png` - Added mirrored asset figma.png for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/assets/icon.svg` - Added mirrored asset icon.svg for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/LICENSE.TXT` - Added mirrored workspace file LICENSE.TXT.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/maintainers.yml` - Added mirrored workspace file maintainers.yml.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/api-reference.md` - Added mirrored reference api-reference.md for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/common-patterns.md` - Added mirrored reference common-patterns.md for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/component-patterns.md` - Added mirrored reference component-patterns.md for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/effect-style-patterns.md` - Added mirrored reference effect-style-patterns.md for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/gotchas.md` - Added mirrored reference gotchas.md for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/maintainers.yml` - Added mirrored reference maintainers.yml for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/plugin-api-patterns.md` - Added mirrored reference plugin-api-patterns.md for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/plugin-api-standalone.d.ts` - Added mirrored reference plugin-api-standalone.d.ts for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/plugin-api-standalone.index.md` - Added mirrored reference plugin-api-standalone.index.md for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/text-style-patterns.md` - Added mirrored reference text-style-patterns.md for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/validation-and-recovery.md` - Added mirrored reference validation-and-recovery.md for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/variable-patterns.md` - Added mirrored reference variable-patterns.md for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/maintainers.yml` - Added mirrored reference maintainers.yml for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-components--creating.md` - Added mirrored reference wwds-components--creating.md for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-components--using.md` - Added mirrored reference wwds-components--using.md for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-components.md` - Added mirrored reference wwds-components.md for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-effect-styles.md` - Added mirrored reference wwds-effect-styles.md for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-text-styles.md` - Added mirrored reference wwds-text-styles.md for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-variables--creating.md` - Added mirrored reference wwds-variables--creating.md for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-variables--using.md` - Added mirrored reference wwds-variables--using.md for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-variables.md` - Added mirrored reference wwds-variables.md for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds.md` - Added mirrored reference wwds.md for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/SKILL.md` - Added mirrored skill definition for figma-use.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/agents/openai.yaml` - Added mirrored agent manifest for figma.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/assets/figma-small.svg` - Added mirrored asset figma-small.svg for figma.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/assets/figma.png` - Added mirrored asset figma.png for figma.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/assets/icon.svg` - Added mirrored asset icon.svg for figma.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/references/figma-mcp-config.md` - Added mirrored reference figma-mcp-config.md for figma.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/references/figma-tools-and-prompts.md` - Added mirrored reference figma-tools-and-prompts.md for figma.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/SKILL.md` - Added mirrored skill definition for figma.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/frontend-skill/agents/openai.yaml` - Added mirrored agent manifest for frontend-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/frontend-skill/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/frontend-skill/SKILL.md` - Added mirrored skill definition for frontend-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-address-comments/agents/openai.yaml` - Added mirrored agent manifest for gh-address-comments.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-address-comments/assets/github-small.svg` - Added mirrored asset github-small.svg for gh-address-comments.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-address-comments/assets/github.png` - Added mirrored asset github.png for gh-address-comments.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-address-comments/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-address-comments/scripts/fetch_comments.py` - Added mirrored helper script fetch_comments.py for gh-address-comments.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-address-comments/SKILL.md` - Added mirrored skill definition for gh-address-comments.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-fix-ci/agents/openai.yaml` - Added mirrored agent manifest for gh-fix-ci.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-fix-ci/assets/github-small.svg` - Added mirrored asset github-small.svg for gh-fix-ci.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-fix-ci/assets/github.png` - Added mirrored asset github.png for gh-fix-ci.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-fix-ci/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-fix-ci/scripts/inspect_pr_checks.py` - Added mirrored helper script inspect_pr_checks.py for gh-fix-ci.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-fix-ci/SKILL.md` - Added mirrored skill definition for gh-fix-ci.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/agents/openai.yaml` - Added mirrored agent manifest for jupyter-notebook.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/assets/experiment-template.ipynb` - Added mirrored asset experiment-template.ipynb for jupyter-notebook.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/assets/jupyter-small.svg` - Added mirrored asset jupyter-small.svg for jupyter-notebook.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/assets/jupyter.png` - Added mirrored asset jupyter.png for jupyter-notebook.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/assets/tutorial-template.ipynb` - Added mirrored asset tutorial-template.ipynb for jupyter-notebook.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/references/experiment-patterns.md` - Added mirrored reference experiment-patterns.md for jupyter-notebook.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/references/notebook-structure.md` - Added mirrored reference notebook-structure.md for jupyter-notebook.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/references/quality-checklist.md` - Added mirrored reference quality-checklist.md for jupyter-notebook.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/references/tutorial-patterns.md` - Added mirrored reference tutorial-patterns.md for jupyter-notebook.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/scripts/new_notebook.py` - Added mirrored helper script new_notebook.py for jupyter-notebook.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/SKILL.md` - Added mirrored skill definition for jupyter-notebook.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/kuaishou-ops/agents/openai.yaml` - Added mirrored agent manifest for kuaishou-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/kuaishou-ops/references/platform-notes.md` - Added mirrored reference platform-notes.md for kuaishou-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/kuaishou-ops/SKILL.md` - Added mirrored skill definition for kuaishou-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-approval/SKILL.md` - Added mirrored skill definition for lark-approval.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-attendance/SKILL.md` - Added mirrored skill definition for lark-attendance.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/dashboard-block-data-config.md` - Added mirrored reference dashboard-block-data-config.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/examples.md` - Added mirrored reference examples.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/formula-field-guide.md` - Added mirrored reference formula-field-guide.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-advperm-disable.md` - Added mirrored reference lark-base-advperm-disable.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-advperm-enable.md` - Added mirrored reference lark-base-advperm-enable.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-base-copy.md` - Added mirrored reference lark-base-base-copy.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-base-create.md` - Added mirrored reference lark-base-base-create.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-base-get.md` - Added mirrored reference lark-base-base-get.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-arrange.md` - Added mirrored reference lark-base-dashboard-arrange.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-block-create.md` - Added mirrored reference lark-base-dashboard-block-create.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-block-delete.md` - Added mirrored reference lark-base-dashboard-block-delete.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-block-get.md` - Added mirrored reference lark-base-dashboard-block-get.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-block-list.md` - Added mirrored reference lark-base-dashboard-block-list.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-block-update.md` - Added mirrored reference lark-base-dashboard-block-update.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-create.md` - Added mirrored reference lark-base-dashboard-create.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-delete.md` - Added mirrored reference lark-base-dashboard-delete.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-get.md` - Added mirrored reference lark-base-dashboard-get.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-list.md` - Added mirrored reference lark-base-dashboard-list.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-update.md` - Added mirrored reference lark-base-dashboard-update.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard.md` - Added mirrored reference lark-base-dashboard.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-data-query.md` - Added mirrored reference lark-base-data-query.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-field-create.md` - Added mirrored reference lark-base-field-create.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-field-delete.md` - Added mirrored reference lark-base-field-delete.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-field-get.md` - Added mirrored reference lark-base-field-get.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-field-list.md` - Added mirrored reference lark-base-field-list.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-field-search-options.md` - Added mirrored reference lark-base-field-search-options.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-field-update.md` - Added mirrored reference lark-base-field-update.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-field.md` - Added mirrored reference lark-base-field.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-create.md` - Added mirrored reference lark-base-form-create.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-delete.md` - Added mirrored reference lark-base-form-delete.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-get.md` - Added mirrored reference lark-base-form-get.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-list.md` - Added mirrored reference lark-base-form-list.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-questions-create.md` - Added mirrored reference lark-base-form-questions-create.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-questions-delete.md` - Added mirrored reference lark-base-form-questions-delete.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-questions-list.md` - Added mirrored reference lark-base-form-questions-list.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-questions-update.md` - Added mirrored reference lark-base-form-questions-update.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-questions.md` - Added mirrored reference lark-base-form-questions.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-update.md` - Added mirrored reference lark-base-form-update.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form.md` - Added mirrored reference lark-base-form.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-history.md` - Added mirrored reference lark-base-history.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-batch-create.md` - Added mirrored reference lark-base-record-batch-create.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-batch-update.md` - Added mirrored reference lark-base-record-batch-update.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-delete.md` - Added mirrored reference lark-base-record-delete.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-get.md` - Added mirrored reference lark-base-record-get.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-history-list.md` - Added mirrored reference lark-base-record-history-list.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-list.md` - Added mirrored reference lark-base-record-list.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-search.md` - Added mirrored reference lark-base-record-search.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-upload-attachment.md` - Added mirrored reference lark-base-record-upload-attachment.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-upsert.md` - Added mirrored reference lark-base-record-upsert.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record.md` - Added mirrored reference lark-base-record.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-role-create.md` - Added mirrored reference lark-base-role-create.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-role-delete.md` - Added mirrored reference lark-base-role-delete.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-role-get.md` - Added mirrored reference lark-base-role-get.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-role-list.md` - Added mirrored reference lark-base-role-list.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-role-update.md` - Added mirrored reference lark-base-role-update.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-shortcut-field-properties.md` - Added mirrored reference lark-base-shortcut-field-properties.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-shortcut-record-value.md` - Added mirrored reference lark-base-shortcut-record-value.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-table-create.md` - Added mirrored reference lark-base-table-create.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-table-delete.md` - Added mirrored reference lark-base-table-delete.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-table-get.md` - Added mirrored reference lark-base-table-get.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-table-list.md` - Added mirrored reference lark-base-table-list.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-table-update.md` - Added mirrored reference lark-base-table-update.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-table.md` - Added mirrored reference lark-base-table.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-create.md` - Added mirrored reference lark-base-view-create.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-delete.md` - Added mirrored reference lark-base-view-delete.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-get-card.md` - Added mirrored reference lark-base-view-get-card.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-get-filter.md` - Added mirrored reference lark-base-view-get-filter.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-get-group.md` - Added mirrored reference lark-base-view-get-group.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-get-sort.md` - Added mirrored reference lark-base-view-get-sort.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-get-timebar.md` - Added mirrored reference lark-base-view-get-timebar.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-get-visible-fields.md` - Added mirrored reference lark-base-view-get-visible-fields.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-get.md` - Added mirrored reference lark-base-view-get.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-list.md` - Added mirrored reference lark-base-view-list.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-rename.md` - Added mirrored reference lark-base-view-rename.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-set-card.md` - Added mirrored reference lark-base-view-set-card.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-set-filter.md` - Added mirrored reference lark-base-view-set-filter.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-set-group.md` - Added mirrored reference lark-base-view-set-group.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-set-sort.md` - Added mirrored reference lark-base-view-set-sort.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-set-timebar.md` - Added mirrored reference lark-base-view-set-timebar.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-set-visible-fields.md` - Added mirrored reference lark-base-view-set-visible-fields.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view.md` - Added mirrored reference lark-base-view.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-create.md` - Added mirrored reference lark-base-workflow-create.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-disable.md` - Added mirrored reference lark-base-workflow-disable.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-enable.md` - Added mirrored reference lark-base-workflow-enable.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-get.md` - Added mirrored reference lark-base-workflow-get.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-guide.md` - Added mirrored reference lark-base-workflow-guide.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-list.md` - Added mirrored reference lark-base-workflow-list.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-schema.md` - Added mirrored reference lark-base-workflow-schema.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-update.md` - Added mirrored reference lark-base-workflow-update.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow.md` - Added mirrored reference lark-base-workflow.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workspace.md` - Added mirrored reference lark-base-workspace.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lookup-field-guide.md` - Added mirrored reference lookup-field-guide.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/role-config.md` - Added mirrored reference role-config.md for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/SKILL.md` - Added mirrored skill definition for lark-base.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/references/lark-calendar-agenda.md` - Added mirrored reference lark-calendar-agenda.md for lark-calendar.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/references/lark-calendar-create.md` - Added mirrored reference lark-calendar-create.md for lark-calendar.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/references/lark-calendar-freebusy.md` - Added mirrored reference lark-calendar-freebusy.md for lark-calendar.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/references/lark-calendar-room-find.md` - Added mirrored reference lark-calendar-room-find.md for lark-calendar.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/references/lark-calendar-rsvp.md` - Added mirrored reference lark-calendar-rsvp.md for lark-calendar.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/references/lark-calendar-schedule-meeting.md` - Added mirrored reference lark-calendar-schedule-meeting.md for lark-calendar.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/references/lark-calendar-suggestion.md` - Added mirrored reference lark-calendar-suggestion.md for lark-calendar.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/SKILL.md` - Added mirrored skill definition for lark-calendar.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-contact/references/lark-contact-get-user.md` - Added mirrored reference lark-contact-get-user.md for lark-contact.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-contact/references/lark-contact-search-user.md` - Added mirrored reference lark-contact-search-user.md for lark-contact.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-contact/SKILL.md` - Added mirrored skill definition for lark-contact.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-create.md` - Added mirrored reference lark-doc-create.md for lark-doc.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-fetch.md` - Added mirrored reference lark-doc-fetch.md for lark-doc.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-media-download.md` - Added mirrored reference lark-doc-media-download.md for lark-doc.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-media-insert.md` - Added mirrored reference lark-doc-media-insert.md for lark-doc.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-media-preview.md` - Added mirrored reference lark-doc-media-preview.md for lark-doc.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-search.md` - Added mirrored reference lark-doc-search.md for lark-doc.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-update.md` - Added mirrored reference lark-doc-update.md for lark-doc.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-whiteboard.md` - Added mirrored reference lark-doc-whiteboard.md for lark-doc.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/SKILL.md` - Added mirrored skill definition for lark-doc.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-add-comment.md` - Added mirrored reference lark-drive-add-comment.md for lark-drive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-create-folder.md` - Added mirrored reference lark-drive-create-folder.md for lark-drive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-create-shortcut.md` - Added mirrored reference lark-drive-create-shortcut.md for lark-drive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-delete.md` - Added mirrored reference lark-drive-delete.md for lark-drive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-download.md` - Added mirrored reference lark-drive-download.md for lark-drive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-export-download.md` - Added mirrored reference lark-drive-export-download.md for lark-drive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-export.md` - Added mirrored reference lark-drive-export.md for lark-drive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-import.md` - Added mirrored reference lark-drive-import.md for lark-drive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-move.md` - Added mirrored reference lark-drive-move.md for lark-drive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-reactions.md` - Added mirrored reference lark-drive-reactions.md for lark-drive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-task-result.md` - Added mirrored reference lark-drive-task-result.md for lark-drive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-upload.md` - Added mirrored reference lark-drive-upload.md for lark-drive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/SKILL.md` - Added mirrored skill definition for lark-drive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-event/references/lark-event-subscribe.md` - Added mirrored reference lark-event-subscribe.md for lark-event.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-event/SKILL.md` - Added mirrored skill definition for lark-event.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-chat-create.md` - Added mirrored reference lark-im-chat-create.md for lark-im.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-chat-identity.md` - Added mirrored reference lark-im-chat-identity.md for lark-im.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-chat-messages-list.md` - Added mirrored reference lark-im-chat-messages-list.md for lark-im.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-chat-search.md` - Added mirrored reference lark-im-chat-search.md for lark-im.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-chat-update.md` - Added mirrored reference lark-im-chat-update.md for lark-im.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-messages-mget.md` - Added mirrored reference lark-im-messages-mget.md for lark-im.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-messages-reply.md` - Added mirrored reference lark-im-messages-reply.md for lark-im.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-messages-resources-download.md` - Added mirrored reference lark-im-messages-resources-download.md for lark-im.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-messages-search.md` - Added mirrored reference lark-im-messages-search.md for lark-im.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-messages-send.md` - Added mirrored reference lark-im-messages-send.md for lark-im.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-reactions.md` - Added mirrored reference lark-im-reactions.md for lark-im.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-threads-messages-list.md` - Added mirrored reference lark-im-threads-messages-list.md for lark-im.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/SKILL.md` - Added mirrored skill definition for lark-im.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-draft-create.md` - Added mirrored reference lark-mail-draft-create.md for lark-mail.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-draft-edit.md` - Added mirrored reference lark-mail-draft-edit.md for lark-mail.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-forward.md` - Added mirrored reference lark-mail-forward.md for lark-mail.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-message.md` - Added mirrored reference lark-mail-message.md for lark-mail.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-messages.md` - Added mirrored reference lark-mail-messages.md for lark-mail.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-reply-all.md` - Added mirrored reference lark-mail-reply-all.md for lark-mail.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-reply.md` - Added mirrored reference lark-mail-reply.md for lark-mail.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-send.md` - Added mirrored reference lark-mail-send.md for lark-mail.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-signature.md` - Added mirrored reference lark-mail-signature.md for lark-mail.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-thread.md` - Added mirrored reference lark-mail-thread.md for lark-mail.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-triage.md` - Added mirrored reference lark-mail-triage.md for lark-mail.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-watch.md` - Added mirrored reference lark-mail-watch.md for lark-mail.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/SKILL.md` - Added mirrored skill definition for lark-mail.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-minutes/references/lark-minutes-download.md` - Added mirrored reference lark-minutes-download.md for lark-minutes.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-minutes/references/lark-minutes-search.md` - Added mirrored reference lark-minutes-search.md for lark-minutes.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-minutes/SKILL.md` - Added mirrored skill definition for lark-minutes.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-okr/references/lark-okr-contentblock.md` - Added mirrored reference lark-okr-contentblock.md for lark-okr.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-okr/references/lark-okr-cycle-detail.md` - Added mirrored reference lark-okr-cycle-detail.md for lark-okr.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-okr/references/lark-okr-cycle-list.md` - Added mirrored reference lark-okr-cycle-list.md for lark-okr.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-okr/references/lark-okr-entities.md` - Added mirrored reference lark-okr-entities.md for lark-okr.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-okr/SKILL.md` - Added mirrored skill definition for lark-okr.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-openapi-explorer/SKILL.md` - Added mirrored skill definition for lark-openapi-explorer.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-shared/SKILL.md` - Added mirrored skill definition for lark-shared.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-add-dimension.md` - Added mirrored reference lark-sheets-add-dimension.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-append.md` - Added mirrored reference lark-sheets-append.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-batch-set-style.md` - Added mirrored reference lark-sheets-batch-set-style.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-create-filter-view-condition.md` - Added mirrored reference lark-sheets-create-filter-view-condition.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-create-filter-view.md` - Added mirrored reference lark-sheets-create-filter-view.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-create.md` - Added mirrored reference lark-sheets-create.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-delete-dimension.md` - Added mirrored reference lark-sheets-delete-dimension.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-delete-dropdown.md` - Added mirrored reference lark-sheets-delete-dropdown.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-delete-filter-view-condition.md` - Added mirrored reference lark-sheets-delete-filter-view-condition.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-delete-filter-view.md` - Added mirrored reference lark-sheets-delete-filter-view.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-export.md` - Added mirrored reference lark-sheets-export.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-find.md` - Added mirrored reference lark-sheets-find.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-formula.md` - Added mirrored reference lark-sheets-formula.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-get-dropdown.md` - Added mirrored reference lark-sheets-get-dropdown.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-get-filter-view-condition.md` - Added mirrored reference lark-sheets-get-filter-view-condition.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-get-filter-view.md` - Added mirrored reference lark-sheets-get-filter-view.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-info.md` - Added mirrored reference lark-sheets-info.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-insert-dimension.md` - Added mirrored reference lark-sheets-insert-dimension.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-list-filter-view-conditions.md` - Added mirrored reference lark-sheets-list-filter-view-conditions.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-list-filter-views.md` - Added mirrored reference lark-sheets-list-filter-views.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-merge-cells.md` - Added mirrored reference lark-sheets-merge-cells.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-move-dimension.md` - Added mirrored reference lark-sheets-move-dimension.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-read.md` - Added mirrored reference lark-sheets-read.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-replace.md` - Added mirrored reference lark-sheets-replace.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-set-dropdown.md` - Added mirrored reference lark-sheets-set-dropdown.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-set-style.md` - Added mirrored reference lark-sheets-set-style.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-unmerge-cells.md` - Added mirrored reference lark-sheets-unmerge-cells.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-update-dimension.md` - Added mirrored reference lark-sheets-update-dimension.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-update-dropdown.md` - Added mirrored reference lark-sheets-update-dropdown.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-update-filter-view-condition.md` - Added mirrored reference lark-sheets-update-filter-view-condition.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-update-filter-view.md` - Added mirrored reference lark-sheets-update-filter-view.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-write-image.md` - Added mirrored reference lark-sheets-write-image.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-write.md` - Added mirrored reference lark-sheets-write.md for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/SKILL.md` - Added mirrored skill definition for lark-sheets.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-skill-maker/SKILL.md` - Added mirrored skill definition for lark-skill-maker.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/examples.md` - Added mirrored reference examples.md for lark-slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/lark-slides-create.md` - Added mirrored reference lark-slides-create.md for lark-slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/lark-slides-media-upload.md` - Added mirrored reference lark-slides-media-upload.md for lark-slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/lark-slides-xml-presentation-slide-create.md` - Added mirrored reference lark-slides-xml-presentation-slide-create.md for lark-slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/lark-slides-xml-presentation-slide-delete.md` - Added mirrored reference lark-slides-xml-presentation-slide-delete.md for lark-slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/lark-slides-xml-presentations-get.md` - Added mirrored reference lark-slides-xml-presentations-get.md for lark-slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/slide-templates.md` - Added mirrored reference slide-templates.md for lark-slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/slides_demo.xml` - Added mirrored reference slides_demo.xml for lark-slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/slides_xml_schema_definition.xml` - Added mirrored reference slides_xml_schema_definition.xml for lark-slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/xml-format-guide.md` - Added mirrored reference xml-format-guide.md for lark-slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/xml-schema-quick-ref.md` - Added mirrored reference xml-schema-quick-ref.md for lark-slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/SKILL.md` - Added mirrored skill definition for lark-slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-assign.md` - Added mirrored reference lark-task-assign.md for lark-task.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-comment.md` - Added mirrored reference lark-task-comment.md for lark-task.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-complete.md` - Added mirrored reference lark-task-complete.md for lark-task.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-create.md` - Added mirrored reference lark-task-create.md for lark-task.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-followers.md` - Added mirrored reference lark-task-followers.md for lark-task.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-get-my-tasks.md` - Added mirrored reference lark-task-get-my-tasks.md for lark-task.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-get-related-tasks.md` - Added mirrored reference lark-task-get-related-tasks.md for lark-task.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-reminder.md` - Added mirrored reference lark-task-reminder.md for lark-task.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-reopen.md` - Added mirrored reference lark-task-reopen.md for lark-task.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-search.md` - Added mirrored reference lark-task-search.md for lark-task.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-set-ancestor.md` - Added mirrored reference lark-task-set-ancestor.md for lark-task.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-subscribe-event.md` - Added mirrored reference lark-task-subscribe-event.md for lark-task.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-tasklist-create.md` - Added mirrored reference lark-task-tasklist-create.md for lark-task.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-tasklist-members.md` - Added mirrored reference lark-task-tasklist-members.md for lark-task.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-tasklist-search.md` - Added mirrored reference lark-task-tasklist-search.md for lark-task.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-tasklist-task-add.md` - Added mirrored reference lark-task-tasklist-task-add.md for lark-task.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-update.md` - Added mirrored reference lark-task-update.md for lark-task.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/SKILL.md` - Added mirrored skill definition for lark-task.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-vc/references/lark-vc-notes.md` - Added mirrored reference lark-vc-notes.md for lark-vc.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-vc/references/lark-vc-recording.md` - Added mirrored reference lark-vc-recording.md for lark-vc.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-vc/references/lark-vc-search.md` - Added mirrored reference lark-vc-search.md for lark-vc.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-vc/SKILL.md` - Added mirrored skill definition for lark-vc.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/connectors.md` - Added mirrored reference connectors.md for lark-whiteboard.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/content.md` - Added mirrored reference content.md for lark-whiteboard.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/lark-whiteboard-query.md` - Added mirrored reference lark-whiteboard-query.md for lark-whiteboard.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/lark-whiteboard-update.md` - Added mirrored reference lark-whiteboard-update.md for lark-whiteboard.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/layout.md` - Added mirrored reference layout.md for lark-whiteboard.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/schema.md` - Added mirrored reference schema.md for lark-whiteboard.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/style.md` - Added mirrored reference style.md for lark-whiteboard.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/typography.md` - Added mirrored reference typography.md for lark-whiteboard.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/routes/dsl.md` - Added mirrored workspace file dsl.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/routes/mermaid.md` - Added mirrored workspace file mermaid.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/routes/svg.md` - Added mirrored workspace file svg.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/architecture.md` - Added mirrored workspace file architecture.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/bar-chart.md` - Added mirrored workspace file bar-chart.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/comparison.md` - Added mirrored workspace file comparison.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/fishbone.md` - Added mirrored workspace file fishbone.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/flowchart.md` - Added mirrored workspace file flowchart.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/flywheel.md` - Added mirrored workspace file flywheel.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/funnel.md` - Added mirrored workspace file funnel.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/line-chart.md` - Added mirrored workspace file line-chart.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/mermaid.md` - Added mirrored workspace file mermaid.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/milestone.md` - Added mirrored workspace file milestone.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/organization.md` - Added mirrored workspace file organization.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/pyramid.md` - Added mirrored workspace file pyramid.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/swimlane.md` - Added mirrored workspace file swimlane.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/treemap.md` - Added mirrored workspace file treemap.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/SKILL.md` - Added mirrored skill definition for lark-whiteboard.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-wiki/references/lark-wiki-move.md` - Added mirrored reference lark-wiki-move.md for lark-wiki.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-wiki/references/lark-wiki-node-create.md` - Added mirrored reference lark-wiki-node-create.md for lark-wiki.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-wiki/SKILL.md` - Added mirrored skill definition for lark-wiki.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-workflow-meeting-summary/SKILL.md` - Added mirrored skill definition for lark-workflow-meeting-summary.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-workflow-standup-report/SKILL.md` - Added mirrored skill definition for lark-workflow-standup-report.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/linear/agents/openai.yaml` - Added mirrored agent manifest for linear.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/linear/assets/linear-small.svg` - Added mirrored asset linear-small.svg for linear.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/linear/assets/linear.png` - Added mirrored asset linear.png for linear.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/linear/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/linear/SKILL.md` - Added mirrored skill definition for linear.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/agents/openai.yaml` - Added mirrored agent manifest for netlify-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/assets/netlify-small.svg` - Added mirrored asset netlify-small.svg for netlify-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/assets/netlify.png` - Added mirrored asset netlify.png for netlify-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/references/cli-commands.md` - Added mirrored reference cli-commands.md for netlify-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/references/deployment-patterns.md` - Added mirrored reference deployment-patterns.md for netlify-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/references/netlify-toml.md` - Added mirrored reference netlify-toml.md for netlify-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/SKILL.md` - Added mirrored skill definition for netlify-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/agents/openai.yaml` - Added mirrored agent manifest for notion-knowledge-capture.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/assets/notion-small.svg` - Added mirrored asset notion-small.svg for notion-knowledge-capture.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/assets/notion.png` - Added mirrored asset notion.png for notion-knowledge-capture.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/evaluations/conversation-to-wiki.json` - Added mirrored workspace file conversation-to-wiki.json.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/evaluations/decision-record.json` - Added mirrored workspace file decision-record.json.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/evaluations/README.md` - Added mirrored workspace file README.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/examples/conversation-to-faq.md` - Added mirrored workspace file conversation-to-faq.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/examples/decision-capture.md` - Added mirrored workspace file decision-capture.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/examples/how-to-guide.md` - Added mirrored workspace file how-to-guide.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/reference/database-best-practices.md` - Added mirrored workspace file database-best-practices.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/reference/decision-log-database.md` - Added mirrored workspace file decision-log-database.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/reference/documentation-database.md` - Added mirrored workspace file documentation-database.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/reference/faq-database.md` - Added mirrored workspace file faq-database.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/reference/how-to-guide-database.md` - Added mirrored workspace file how-to-guide-database.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/reference/learning-database.md` - Added mirrored workspace file learning-database.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/reference/team-wiki-database.md` - Added mirrored workspace file team-wiki-database.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/SKILL.md` - Added mirrored skill definition for notion-knowledge-capture.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/agents/openai.yaml` - Added mirrored agent manifest for notion-meeting-intelligence.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/assets/notion-small.svg` - Added mirrored asset notion-small.svg for notion-meeting-intelligence.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/assets/notion.png` - Added mirrored asset notion.png for notion-meeting-intelligence.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/evaluations/decision-meeting-prep.json` - Added mirrored workspace file decision-meeting-prep.json.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/evaluations/README.md` - Added mirrored workspace file README.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/evaluations/status-meeting-prep.json` - Added mirrored workspace file status-meeting-prep.json.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/examples/customer-meeting.md` - Added mirrored workspace file customer-meeting.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/examples/executive-review.md` - Added mirrored workspace file executive-review.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/examples/project-decision.md` - Added mirrored workspace file project-decision.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/examples/sprint-planning.md` - Added mirrored workspace file sprint-planning.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/reference/brainstorming-template.md` - Added mirrored workspace file brainstorming-template.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/reference/decision-meeting-template.md` - Added mirrored workspace file decision-meeting-template.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/reference/one-on-one-template.md` - Added mirrored workspace file one-on-one-template.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/reference/retrospective-template.md` - Added mirrored workspace file retrospective-template.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/reference/sprint-planning-template.md` - Added mirrored workspace file sprint-planning-template.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/reference/status-update-template.md` - Added mirrored workspace file status-update-template.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/reference/template-selection-guide.md` - Added mirrored workspace file template-selection-guide.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/SKILL.md` - Added mirrored skill definition for notion-meeting-intelligence.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/agents/openai.yaml` - Added mirrored agent manifest for notion-research-documentation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/assets/notion-small.svg` - Added mirrored asset notion-small.svg for notion-research-documentation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/assets/notion.png` - Added mirrored asset notion.png for notion-research-documentation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/evaluations/basic-research.json` - Added mirrored workspace file basic-research.json.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/evaluations/README.md` - Added mirrored workspace file README.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/evaluations/research-to-database.json` - Added mirrored workspace file research-to-database.json.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/examples/competitor-analysis.md` - Added mirrored workspace file competitor-analysis.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/examples/market-research.md` - Added mirrored workspace file market-research.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/examples/technical-investigation.md` - Added mirrored workspace file technical-investigation.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/examples/trip-planning.md` - Added mirrored workspace file trip-planning.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/advanced-search.md` - Added mirrored workspace file advanced-search.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/citations.md` - Added mirrored workspace file citations.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/comparison-format.md` - Added mirrored workspace file comparison-format.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/comparison-template.md` - Added mirrored workspace file comparison-template.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/comprehensive-report-format.md` - Added mirrored workspace file comprehensive-report-format.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/comprehensive-report-template.md` - Added mirrored workspace file comprehensive-report-template.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/format-selection-guide.md` - Added mirrored workspace file format-selection-guide.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/quick-brief-format.md` - Added mirrored workspace file quick-brief-format.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/quick-brief-template.md` - Added mirrored workspace file quick-brief-template.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/research-summary-format.md` - Added mirrored workspace file research-summary-format.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/research-summary-template.md` - Added mirrored workspace file research-summary-template.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/SKILL.md` - Added mirrored skill definition for notion-research-documentation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/agents/openai.yaml` - Added mirrored agent manifest for notion-spec-to-implementation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/assets/notion-small.svg` - Added mirrored asset notion-small.svg for notion-spec-to-implementation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/assets/notion.png` - Added mirrored asset notion.png for notion-spec-to-implementation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/evaluations/basic-spec-implementation.json` - Added mirrored workspace file basic-spec-implementation.json.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/evaluations/README.md` - Added mirrored workspace file README.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/evaluations/spec-to-tasks.json` - Added mirrored workspace file spec-to-tasks.json.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/examples/api-feature.md` - Added mirrored workspace file api-feature.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/examples/database-migration.md` - Added mirrored workspace file database-migration.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/examples/ui-component.md` - Added mirrored workspace file ui-component.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/reference/milestone-summary-template.md` - Added mirrored workspace file milestone-summary-template.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/reference/progress-tracking.md` - Added mirrored workspace file progress-tracking.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/reference/progress-update-template.md` - Added mirrored workspace file progress-update-template.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/reference/quick-implementation-plan.md` - Added mirrored workspace file quick-implementation-plan.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/reference/spec-parsing.md` - Added mirrored workspace file spec-parsing.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/reference/standard-implementation-plan.md` - Added mirrored workspace file standard-implementation-plan.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/reference/task-creation-template.md` - Added mirrored workspace file task-creation-template.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/reference/task-creation.md` - Added mirrored workspace file task-creation.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/SKILL.md` - Added mirrored skill definition for notion-spec-to-implementation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/pdf/agents/openai.yaml` - Added mirrored agent manifest for pdf.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/pdf/assets/pdf.png` - Added mirrored asset pdf.png for pdf.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/pdf/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/pdf/SKILL.md` - Added mirrored skill definition for pdf.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/agents/openai.yaml` - Added mirrored agent manifest for platform-cover-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/references/cover-playbook.md` - Added mirrored reference cover-playbook.md for platform-cover-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/references/cover-prompt-kit.md` - Added mirrored reference cover-prompt-kit.md for platform-cover-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/references/cover-template-matrix.md` - Added mirrored reference cover-template-matrix.md for platform-cover-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/references/platform-notes.md` - Added mirrored reference platform-notes.md for platform-cover-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/scripts/preflight_cover_briefs.rb` - Added mirrored helper script preflight_cover_briefs.rb for platform-cover-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/scripts/validate_cover_skill.rb` - Added mirrored helper script validate_cover_skill.rb for platform-cover-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/SKILL.md` - Added mirrored skill definition for platform-cover-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-ops-hub/agents/openai.yaml` - Added mirrored agent manifest for platform-ops-hub.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-ops-hub/SKILL.md` - Added mirrored skill definition for platform-ops-hub.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright-interactive/agents/openai.yaml` - Added mirrored agent manifest for playwright-interactive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright-interactive/assets/playwright-small.svg` - Added mirrored asset playwright-small.svg for playwright-interactive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright-interactive/assets/playwright.png` - Added mirrored asset playwright.png for playwright-interactive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright-interactive/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright-interactive/NOTICE.txt` - Added mirrored workspace file NOTICE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright-interactive/SKILL.md` - Added mirrored skill definition for playwright-interactive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/agents/openai.yaml` - Added mirrored agent manifest for playwright.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/assets/playwright-small.svg` - Added mirrored asset playwright-small.svg for playwright.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/assets/playwright.png` - Added mirrored asset playwright.png for playwright.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/NOTICE.txt` - Added mirrored workspace file NOTICE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/references/cli.md` - Added mirrored reference cli.md for playwright.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/references/workflows.md` - Added mirrored reference workflows.md for playwright.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/scripts/playwright_cli.sh` - Added mirrored helper script playwright_cli.sh for playwright.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/SKILL.md` - Added mirrored skill definition for playwright.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/agents/openai.yaml` - Added mirrored agent manifest for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/docker.yaml` - Added mirrored asset docker.yaml for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/go-api.yaml` - Added mirrored asset go-api.yaml for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/nextjs-postgres.yaml` - Added mirrored asset nextjs-postgres.yaml for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/node-express.yaml` - Added mirrored asset node-express.yaml for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/python-django.yaml` - Added mirrored asset python-django.yaml for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/render-small.svg` - Added mirrored asset render-small.svg for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/render.png` - Added mirrored asset render.png for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/static-site.yaml` - Added mirrored asset static-site.yaml for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/blueprint-spec.md` - Added mirrored reference blueprint-spec.md for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/codebase-analysis.md` - Added mirrored reference codebase-analysis.md for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/configuration-guide.md` - Added mirrored reference configuration-guide.md for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/deployment-details.md` - Added mirrored reference deployment-details.md for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/direct-creation.md` - Added mirrored reference direct-creation.md for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/error-patterns.md` - Added mirrored reference error-patterns.md for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/post-deploy-checks.md` - Added mirrored reference post-deploy-checks.md for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/runtimes.md` - Added mirrored reference runtimes.md for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/service-types.md` - Added mirrored reference service-types.md for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/troubleshooting-basics.md` - Added mirrored reference troubleshooting-basics.md for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/SKILL.md` - Added mirrored skill definition for render-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/agents/openai.yaml` - Added mirrored agent manifest for screenshot.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/assets/screenshot-small.svg` - Added mirrored asset screenshot-small.svg for screenshot.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/assets/screenshot.png` - Added mirrored asset screenshot.png for screenshot.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/scripts/ensure_macos_permissions.sh` - Added mirrored helper script ensure_macos_permissions.sh for screenshot.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/scripts/macos_display_info.swift` - Added mirrored helper script macos_display_info.swift for screenshot.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/scripts/macos_permissions.swift` - Added mirrored helper script macos_permissions.swift for screenshot.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/scripts/macos_window_info.swift` - Added mirrored helper script macos_window_info.swift for screenshot.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/scripts/take_screenshot.ps1` - Added mirrored helper script take_screenshot.ps1 for screenshot.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/scripts/take_screenshot.py` - Added mirrored helper script take_screenshot.py for screenshot.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/SKILL.md` - Added mirrored skill definition for screenshot.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/agents/openai.yaml` - Added mirrored agent manifest for security-best-practices.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/golang-general-backend-security.md` - Added mirrored reference golang-general-backend-security.md for security-best-practices.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/javascript-express-web-server-security.md` - Added mirrored reference javascript-express-web-server-security.md for security-best-practices.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/javascript-general-web-frontend-security.md` - Added mirrored reference javascript-general-web-frontend-security.md for security-best-practices.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/javascript-jquery-web-frontend-security.md` - Added mirrored reference javascript-jquery-web-frontend-security.md for security-best-practices.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/javascript-typescript-nextjs-web-server-security.md` - Added mirrored reference javascript-typescript-nextjs-web-server-security.md for security-best-practices.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/javascript-typescript-react-web-frontend-security.md` - Added mirrored reference javascript-typescript-react-web-frontend-security.md for security-best-practices.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/javascript-typescript-vue-web-frontend-security.md` - Added mirrored reference javascript-typescript-vue-web-frontend-security.md for security-best-practices.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/python-django-web-server-security.md` - Added mirrored reference python-django-web-server-security.md for security-best-practices.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/python-fastapi-web-server-security.md` - Added mirrored reference python-fastapi-web-server-security.md for security-best-practices.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/python-flask-web-server-security.md` - Added mirrored reference python-flask-web-server-security.md for security-best-practices.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/SKILL.md` - Added mirrored skill definition for security-best-practices.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/agents/openai.yaml` - Added mirrored agent manifest for security-ownership-map.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/references/neo4j-import.md` - Added mirrored reference neo4j-import.md for security-ownership-map.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/scripts/build_ownership_map.py` - Added mirrored helper script build_ownership_map.py for security-ownership-map.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/scripts/community_maintainers.py` - Added mirrored helper script community_maintainers.py for security-ownership-map.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/scripts/query_ownership.py` - Added mirrored helper script query_ownership.py for security-ownership-map.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/scripts/run_ownership_map.py` - Added mirrored helper script run_ownership_map.py for security-ownership-map.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/SKILL.md` - Added mirrored skill definition for security-ownership-map.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-threat-model/agents/openai.yaml` - Added mirrored agent manifest for security-threat-model.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-threat-model/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-threat-model/references/prompt-template.md` - Added mirrored reference prompt-template.md for security-threat-model.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-threat-model/references/security-controls-and-assets.md` - Added mirrored reference security-controls-and-assets.md for security-threat-model.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-threat-model/SKILL.md` - Added mirrored skill definition for security-threat-model.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/agents/openai.yaml` - Added mirrored agent manifest for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0_fast.json` - Added mirrored asset asset_reference_identity_lock_seedance_2_0_fast.json for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0.json` - Added mirrored asset asset_reference_identity_lock_seedance_2_0.json for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/extend_bridge_seedance_2_0.json` - Added mirrored asset extend_bridge_seedance_2_0.json for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/extend_single_seedance_2_0.json` - Added mirrored asset extend_single_seedance_2_0.json for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/i2v_first_frame_seedance_2_0.json` - Added mirrored asset i2v_first_frame_seedance_2_0.json for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/multimodal_reference_seedance_2_0.json` - Added mirrored asset multimodal_reference_seedance_2_0.json for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/t2v_seedance_2_0_fast.json` - Added mirrored asset t2v_seedance_2_0_fast.json for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/t2v_seedance_2_0.json` - Added mirrored asset t2v_seedance_2_0.json for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/api-basics.md` - Added mirrored reference api-basics.md for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/cover-execution.md` - Added mirrored reference cover-execution.md for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/cover-package.md` - Added mirrored reference cover-package.md for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/customer-trial-intake-and-production-sop.md` - Added mirrored reference customer-trial-intake-and-production-sop.md for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/prompt-rule-09-subtitle-whitelist.md` - Added mirrored reference prompt-rule-09-subtitle-whitelist.md for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/prompt-rule-10-dialogue-subtitle-hard-requirements.md` - Added mirrored reference prompt-rule-10-dialogue-subtitle-hard-requirements.md for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/prompt-template.md` - Added mirrored reference prompt-template.md for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/real-person-consistency.md` - Added mirrored reference real-person-consistency.md for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/workflows.md` - Added mirrored reference workflows.md for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/build_cover_package.ps1` - Added mirrored helper script build_cover_package.ps1 for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/build_cover_package.py` - Added mirrored helper script build_cover_package.py for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/extract_cover_candidates.ps1` - Added mirrored helper script extract_cover_candidates.ps1 for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/extract_cover_candidates.py` - Added mirrored helper script extract_cover_candidates.py for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/init_cover_package.ps1` - Added mirrored helper script init_cover_package.ps1 for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/init_cover_package.py` - Added mirrored helper script init_cover_package.py for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/invoke_seedance_script.ps1` - Added mirrored helper script invoke_seedance_script.ps1 for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/render_cover_package.ps1` - Added mirrored helper script render_cover_package.ps1 for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/render_cover_package.py` - Added mirrored helper script render_cover_package.py for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/seedance_cli.ps1` - Added mirrored helper script seedance_cli.ps1 for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/seedance_cli.py` - Added mirrored helper script seedance_cli.py for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/seedance_cli.sh` - Added mirrored helper script seedance_cli.sh for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/SKILL.md` - Added mirrored skill definition for seedance-video-api.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sentry/agents/openai.yaml` - Added mirrored agent manifest for sentry.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sentry/assets/sentry-small.svg` - Added mirrored asset sentry-small.svg for sentry.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sentry/assets/sentry.png` - Added mirrored asset sentry.png for sentry.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sentry/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sentry/scripts/sentry_api.py` - Added mirrored helper script sentry_api.py for sentry.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sentry/SKILL.md` - Added mirrored skill definition for sentry.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/agents/openai.yaml` - Added mirrored agent manifest for slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/code.js` - Added mirrored asset code.js for slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/image.js` - Added mirrored asset image.js for slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/index.js` - Added mirrored asset index.js for slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/latex.js` - Added mirrored asset latex.js for slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/layout_builders.js` - Added mirrored asset layout_builders.js for slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/layout.js` - Added mirrored asset layout.js for slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/svg.js` - Added mirrored asset svg.js for slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/text.js` - Added mirrored asset text.js for slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/util.js` - Added mirrored asset util.js for slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/slides-small.svg` - Added mirrored asset slides-small.svg for slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/slides.png` - Added mirrored asset slides.png for slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/references/pptxgenjs-helpers.md` - Added mirrored reference pptxgenjs-helpers.md for slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/scripts/create_montage.py` - Added mirrored helper script create_montage.py for slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/scripts/detect_font.py` - Added mirrored helper script detect_font.py for slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/scripts/ensure_raster_image.py` - Added mirrored helper script ensure_raster_image.py for slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/scripts/render_slides.py` - Added mirrored helper script render_slides.py for slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/scripts/slides_test.py` - Added mirrored helper script slides_test.py for slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/SKILL.md` - Added mirrored skill definition for slides.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/social-publish-automation/agents/openai.yaml` - Added mirrored agent manifest for social-publish-automation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/social-publish-automation/references/platform-notes.md` - Added mirrored reference platform-notes.md for social-publish-automation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/social-publish-automation/SKILL.md` - Added mirrored skill definition for social-publish-automation.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/agents/openai.yaml` - Added mirrored agent manifest for sora.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/assets/sora-small.svg` - Added mirrored asset sora-small.svg for sora.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/assets/sora.png` - Added mirrored asset sora.png for sora.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/references/cinematic-shots.md` - Added mirrored reference cinematic-shots.md for sora.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/references/cli.md` - Added mirrored reference cli.md for sora.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/references/codex-network.md` - Added mirrored reference codex-network.md for sora.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/references/prompting.md` - Added mirrored reference prompting.md for sora.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/references/sample-prompts.md` - Added mirrored reference sample-prompts.md for sora.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/references/social-ads.md` - Added mirrored reference social-ads.md for sora.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/references/troubleshooting.md` - Added mirrored reference troubleshooting.md for sora.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/references/video-api.md` - Added mirrored reference video-api.md for sora.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/scripts/sora.py` - Added mirrored helper script sora.py for sora.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/SKILL.md` - Added mirrored skill definition for sora.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/agents/openai.yaml` - Added mirrored agent manifest for speech.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/assets/speech-small.svg` - Added mirrored asset speech-small.svg for speech.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/assets/speech.png` - Added mirrored asset speech.png for speech.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/accessibility.md` - Added mirrored reference accessibility.md for speech.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/audio-api.md` - Added mirrored reference audio-api.md for speech.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/cli.md` - Added mirrored reference cli.md for speech.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/codex-network.md` - Added mirrored reference codex-network.md for speech.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/ivr.md` - Added mirrored reference ivr.md for speech.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/narration.md` - Added mirrored reference narration.md for speech.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/prompting.md` - Added mirrored reference prompting.md for speech.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/sample-prompts.md` - Added mirrored reference sample-prompts.md for speech.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/voice-directions.md` - Added mirrored reference voice-directions.md for speech.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/voiceover.md` - Added mirrored reference voiceover.md for speech.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/scripts/text_to_speech.py` - Added mirrored helper script text_to_speech.py for speech.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/SKILL.md` - Added mirrored skill definition for speech.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/agents/openai.yaml` - Added mirrored agent manifest for spreadsheet.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/assets/spreadsheet-small.svg` - Added mirrored asset spreadsheet-small.svg for spreadsheet.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/assets/spreadsheet.png` - Added mirrored asset spreadsheet.png for spreadsheet.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/references/examples/openpyxl/create_basic_spreadsheet.py` - Added mirrored reference create_basic_spreadsheet.py for spreadsheet.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/references/examples/openpyxl/create_spreadsheet_with_styling.py` - Added mirrored reference create_spreadsheet_with_styling.py for spreadsheet.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/references/examples/openpyxl/read_existing_spreadsheet.py` - Added mirrored reference read_existing_spreadsheet.py for spreadsheet.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/references/examples/openpyxl/styling_spreadsheet.py` - Added mirrored reference styling_spreadsheet.py for spreadsheet.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/SKILL.md` - Added mirrored skill definition for spreadsheet.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/toutiao-ops/agents/openai.yaml` - Added mirrored agent manifest for toutiao-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/toutiao-ops/references/platform-notes.md` - Added mirrored reference platform-notes.md for toutiao-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/toutiao-ops/SKILL.md` - Added mirrored skill definition for toutiao-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/toutiao-publish/agents/openai.yaml` - Added mirrored agent manifest for toutiao-publish.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/toutiao-publish/references/toutiao-publish-notes.md` - Added mirrored reference toutiao-publish-notes.md for toutiao-publish.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/toutiao-publish/SKILL.md` - Added mirrored skill definition for toutiao-publish.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/transcribe/agents/openai.yaml` - Added mirrored agent manifest for transcribe.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/transcribe/assets/transcribe-small.svg` - Added mirrored asset transcribe-small.svg for transcribe.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/transcribe/assets/transcribe.png` - Added mirrored asset transcribe.png for transcribe.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/transcribe/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/transcribe/references/api.md` - Added mirrored reference api.md for transcribe.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/transcribe/scripts/transcribe_diarize.py` - Added mirrored helper script transcribe_diarize.py for transcribe.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/transcribe/SKILL.md` - Added mirrored skill definition for transcribe.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/vercel-deploy/agents/openai.yaml` - Added mirrored agent manifest for vercel-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/vercel-deploy/assets/vercel-small.svg` - Added mirrored asset vercel-small.svg for vercel-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/vercel-deploy/assets/vercel.png` - Added mirrored asset vercel.png for vercel-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/vercel-deploy/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/vercel-deploy/scripts/deploy.sh` - Added mirrored helper script deploy.sh for vercel-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/vercel-deploy/SKILL.md` - Added mirrored skill definition for vercel-deploy.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-launchagent-keepalive/agents/openai.yaml` - Added mirrored agent manifest for wechat-channels-launchagent-keepalive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/register-keepalive-task.ps1` - Added mirrored helper script register-keepalive-task.ps1 for wechat-channels-launchagent-keepalive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/run-keepalive.ps1` - Added mirrored helper script run-keepalive.ps1 for wechat-channels-launchagent-keepalive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/wechat_channels_keepalive.py` - Added mirrored helper script wechat_channels_keepalive.py for wechat-channels-launchagent-keepalive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-launchagent-keepalive/SKILL.md` - Added mirrored skill definition for wechat-channels-launchagent-keepalive.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-ops/agents/openai.yaml` - Added mirrored agent manifest for wechat-channels-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-ops/references/platform-notes.md` - Added mirrored reference platform-notes.md for wechat-channels-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-ops/SKILL.md` - Added mirrored skill definition for wechat-channels-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-desktop-ops/agents/openai.yaml` - Added mirrored agent manifest for wechat-desktop-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-desktop-ops/references/local-automation-playbook.md` - Added mirrored reference local-automation-playbook.md for wechat-desktop-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-desktop-ops/references/official-notes.md` - Added mirrored reference official-notes.md for wechat-desktop-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-desktop-ops/scripts/check_wechat_runtime.py` - Added mirrored helper script check_wechat_runtime.py for wechat-desktop-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-desktop-ops/SKILL.md` - Added mirrored skill definition for wechat-desktop-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-moments-desktop-ops/agents/openai.yaml` - Added mirrored agent manifest for wechat-moments-desktop-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-moments-desktop-ops/references/desktop-posting-guide.md` - Added mirrored reference desktop-posting-guide.md for wechat-moments-desktop-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-moments-desktop-ops/references/official-notes.md` - Added mirrored reference official-notes.md for wechat-moments-desktop-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-moments-desktop-ops/scripts/check_wechat_moments_support.py` - Added mirrored helper script check_wechat_moments_support.py for wechat-moments-desktop-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-moments-desktop-ops/SKILL.md` - Added mirrored skill definition for wechat-moments-desktop-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-video-channel-share-desktop-ops/agents/openai.yaml` - Added mirrored agent manifest for wechat-video-channel-share-desktop-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-video-channel-share-desktop-ops/references/desktop-share-guide.md` - Added mirrored reference desktop-share-guide.md for wechat-video-channel-share-desktop-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-video-channel-share-desktop-ops/references/official-notes.md` - Added mirrored reference official-notes.md for wechat-video-channel-share-desktop-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-video-channel-share-desktop-ops/scripts/check_wechat_video_channel_share_support.py` - Added mirrored helper script check_wechat_video_channel_share_support.py for wechat-video-channel-share-desktop-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-video-channel-share-desktop-ops/SKILL.md` - Added mirrored skill definition for wechat-video-channel-share-desktop-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/weibo-ops/agents/openai.yaml` - Added mirrored agent manifest for weibo-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/weibo-ops/references/platform-notes.md` - Added mirrored reference platform-notes.md for weibo-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/weibo-ops/SKILL.md` - Added mirrored skill definition for weibo-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/agents/openai.yaml` - Added mirrored agent manifest for winui-app.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/assets/winui.png` - Added mirrored asset winui.png for winui-app.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/config.yaml` - Added mirrored workspace file config.yaml.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/_sections.md` - Added mirrored reference _sections.md for winui-app.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/accessibility-input-and-localization.md` - Added mirrored reference accessibility-input-and-localization.md for winui-app.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/build-run-and-launch-verification.md` - Added mirrored reference build-run-and-launch-verification.md for winui-app.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/community-toolkit-controls-and-helpers.md` - Added mirrored reference community-toolkit-controls-and-helpers.md for winui-app.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/controls-layout-and-adaptive-ui.md` - Added mirrored reference controls-layout-and-adaptive-ui.md for winui-app.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/foundation-environment-audit-and-remediation.md` - Added mirrored reference foundation-environment-audit-and-remediation.md for winui-app.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/foundation-setup-and-project-selection.md` - Added mirrored reference foundation-setup-and-project-selection.md for winui-app.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/foundation-template-first-recovery.md` - Added mirrored reference foundation-template-first-recovery.md for winui-app.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/foundation-winui-app-structure.md` - Added mirrored reference foundation-winui-app-structure.md for winui-app.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/motion-animations-and-polish.md` - Added mirrored reference motion-animations-and-polish.md for winui-app.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/performance-diagnostics-and-responsiveness.md` - Added mirrored reference performance-diagnostics-and-responsiveness.md for winui-app.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/sample-source-map.md` - Added mirrored reference sample-source-map.md for winui-app.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/shell-navigation-and-windowing.md` - Added mirrored reference shell-navigation-and-windowing.md for winui-app.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/styling-theming-materials-and-icons.md` - Added mirrored reference styling-theming-materials-and-icons.md for winui-app.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/testing-debugging-and-review-checklists.md` - Added mirrored reference testing-debugging-and-review-checklists.md for winui-app.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/windows-app-sdk-lifecycle-notifications-and-deployment.md` - Added mirrored reference windows-app-sdk-lifecycle-notifications-and-deployment.md for winui-app.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/SKILL.md` - Added mirrored skill definition for winui-app.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xiaohongshu-ops/agents/openai.yaml` - Added mirrored agent manifest for xiaohongshu-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xiaohongshu-ops/references/platform-notes.md` - Added mirrored reference platform-notes.md for xiaohongshu-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xiaohongshu-ops/SKILL.md` - Added mirrored skill definition for xiaohongshu-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xiaoyunque-source-video/agents/openai.yaml` - Added mirrored agent manifest for xiaoyunque-source-video.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xiaoyunque-source-video/references/prompt-template.md` - Added mirrored reference prompt-template.md for xiaoyunque-source-video.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xiaoyunque-source-video/references/source-video-playbook.md` - Added mirrored reference source-video-playbook.md for xiaoyunque-source-video.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xiaoyunque-source-video/SKILL.md` - Added mirrored skill definition for xiaoyunque-source-video.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/.gitignore` - Added mirrored workspace file .gitignore.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/README.md` - Added mirrored workspace file README.md.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/scripts/_common.py` - Added mirrored helper script _common.py for xyq-nest-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/scripts/download_results.py` - Added mirrored helper script download_results.py for xyq-nest-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/scripts/get_thread.py` - Added mirrored helper script get_thread.py for xyq-nest-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/scripts/submit_run.py` - Added mirrored helper script submit_run.py for xyq-nest-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/scripts/upload_file.py` - Added mirrored helper script upload_file.py for xyq-nest-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/SKILL.md` - Added mirrored skill definition for xyq-nest-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/yeet/agents/openai.yaml` - Added mirrored agent manifest for yeet.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/yeet/assets/yeet-small.svg` - Added mirrored asset yeet-small.svg for yeet.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/yeet/assets/yeet.png` - Added mirrored asset yeet.png for yeet.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/yeet/LICENSE.txt` - Added mirrored workspace file LICENSE.txt.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/yeet/SKILL.md` - Added mirrored skill definition for yeet.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/zhihu-ops/agents/openai.yaml` - Added mirrored agent manifest for zhihu-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/zhihu-ops/references/platform-notes.md` - Added mirrored reference platform-notes.md for zhihu-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/zhihu-ops/SKILL.md` - Added mirrored skill definition for zhihu-ops.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/agents/openai.yaml` - Added mirrored agent manifest for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/.bridge.env.example` - Added mirrored asset .bridge.env.example for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/launchd/com.codex.feishu-bridge.plist` - Added mirrored asset com.codex.feishu-bridge.plist for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/package.json` - Added mirrored asset package.json for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-logs.ps1` - Added mirrored helper script bridge-logs.ps1 for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-logs.sh` - Added mirrored helper script bridge-logs.sh for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.ps1` - Added mirrored helper script bridge-start.ps1 for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.sh` - Added mirrored helper script bridge-start.sh for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-status.ps1` - Added mirrored helper script bridge-status.ps1 for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-status.sh` - Added mirrored helper script bridge-status.sh for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-stop.ps1` - Added mirrored helper script bridge-stop.ps1 for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-stop.sh` - Added mirrored helper script bridge-stop.sh for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/configure_notify_target.ps1` - Added mirrored helper script configure_notify_target.ps1 for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/configure_notify_target.sh` - Added mirrored helper script configure_notify_target.sh for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.cmd` - Added mirrored helper script mirror-view.cmd for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.command` - Added mirrored helper script mirror-view.command for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.js` - Added mirrored helper script mirror-view.js for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.ps1` - Added mirrored helper script mirror-view.ps1 for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.sh` - Added mirrored helper script mirror-view.sh for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/run-bridge.ps1` - Added mirrored helper script run-bridge.ps1 for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/run-bridge.sh` - Added mirrored helper script run-bridge.sh for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/run-platform-script.js` - Added mirrored helper script run-platform-script.js for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/src/bridge.js` - Added mirrored asset bridge.js for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/references/architecture.md` - Added mirrored reference architecture.md for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/references/deployment.md` - Added mirrored reference deployment.md for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART.md` - Added mirrored reference INSTALL-QUICKSTART.md for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/references/user-guide.md` - Added mirrored reference user-guide.md for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/scripts/install_bridge_template.ps1` - Added mirrored helper script install_bridge_template.ps1 for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/scripts/install_bridge_template.sh` - Added mirrored helper script install_bridge_template.sh for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/scripts/package_skill_bundle.sh` - Added mirrored helper script package_skill_bundle.sh for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/SKILL.md` - Added mirrored skill definition for codex-feishu-bridge-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/agents/openai.yaml` - Added mirrored agent manifest for multi-platform-content-review-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/references/account-slice-analysis.md` - Added mirrored reference account-slice-analysis.md for multi-platform-content-review-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/references/dashboard-export-template.json` - Added mirrored reference dashboard-export-template.json for multi-platform-content-review-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/references/diagnosis-and-decisions.md` - Added mirrored reference diagnosis-and-decisions.md for multi-platform-content-review-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/references/docker-dashboard-contract.md` - Added mirrored reference docker-dashboard-contract.md for multi-platform-content-review-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/references/platform-metrics.md` - Added mirrored reference platform-metrics.md for multi-platform-content-review-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/references/report-template.md` - Added mirrored reference report-template.md for multi-platform-content-review-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/SKILL.md` - Added mirrored skill definition for multi-platform-content-review-skill.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/tests/dashboard-fixture/content-library/logs/review/2026-04-25-dashboard-fixture-review.md` - Added mirrored test asset 2026-04-25-dashboard-fixture-review.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/tests/dashboard-fixture/expected-export.json` - Added mirrored test asset expected-export.json in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/assets/generated/.gitkeep` - Added mirrored workflow content file .gitkeep in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/assets/shared/.gitkeep` - Added mirrored workflow content file .gitkeep in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/logs/2026-04-08-ai-labor-answer-001-log.md` - Added mirrored workflow content file 2026-04-08-ai-labor-answer-001-log.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/logs/baijiahao-2026-04-08-ai-labor-article-001-log.md` - Added mirrored workflow content file baijiahao-2026-04-08-ai-labor-article-001-log.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/logs/kuaishou-2026-04-08-ai-labor-video-post-001-log.md` - Added mirrored workflow content file kuaishou-2026-04-08-ai-labor-video-post-001-log.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/logs/toutiao-2026-04-08-ai-labor-article-001-log.md` - Added mirrored workflow content file toutiao-2026-04-08-ai-labor-article-001-log.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/logs/weibo-2026-04-08-ai-labor-video-post-001-log.md` - Added mirrored workflow content file weibo-2026-04-08-ai-labor-video-post-001-log.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/posts/2026-04-08-ai-labor-all-platform-publish-package.md` - Added mirrored workflow content file 2026-04-08-ai-labor-all-platform-publish-package.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/posts/2026-04-08-ai-labor-answer-001.md` - Added mirrored workflow content file 2026-04-08-ai-labor-answer-001.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/posts/2026-04-08-ai-labor-article-001.md` - Added mirrored workflow content file 2026-04-08-ai-labor-article-001.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/posts/2026-04-08-ai-labor-note-001.md` - Added mirrored workflow content file 2026-04-08-ai-labor-note-001.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/posts/2026-04-08-ai-labor-toutiao-article-001.md` - Added mirrored workflow content file 2026-04-08-ai-labor-toutiao-article-001.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/posts/2026-04-08-ai-labor-video-post-001.md` - Added mirrored workflow content file 2026-04-08-ai-labor-video-post-001.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/posts/2026-04-08-ai-labor-video-publish-package.md` - Added mirrored workflow content file 2026-04-08-ai-labor-video-publish-package.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/README.md` - Added mirrored workflow content file README.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-09-ai-labor-second-round-optimization-checklist.md` - Added mirrored workflow content file 2026-04-09-ai-labor-second-round-optimization-checklist.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-10-ai-work-revalued/posts/2026-04-10-ai-work-revalued-all-platform-publish-package.md` - Added mirrored workflow content file 2026-04-10-ai-work-revalued-all-platform-publish-package.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-10-ai-work-revalued/posts/2026-04-10-ai-work-revalued-answer-001-import.md` - Added mirrored workflow content file 2026-04-10-ai-work-revalued-answer-001-import.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-10-ai-work-revalued/posts/2026-04-10-ai-work-revalued-answer-001.md` - Added mirrored workflow content file 2026-04-10-ai-work-revalued-answer-001.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-10-ai-work-revalued/posts/2026-04-10-ai-work-revalued-article-001.md` - Added mirrored workflow content file 2026-04-10-ai-work-revalued-article-001.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-10-ai-work-revalued/posts/2026-04-10-ai-work-revalued-toutiao-article-001.md` - Added mirrored workflow content file 2026-04-10-ai-work-revalued-toutiao-article-001.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-10-ai-work-revalued/posts/2026-04-10-ai-work-revalued-video-publish-package.md` - Added mirrored workflow content file 2026-04-10-ai-work-revalued-video-publish-package.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-10-ai-work-revalued/README.md` - Added mirrored workflow content file README.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/README.md` - Added mirrored workflow content file README.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/README.md` - Added mirrored workflow content file README.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/all-platform-publish-package.md` - Added mirrored workflow content file all-platform-publish-package.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/baijiahao-article.md` - Added mirrored workflow content file baijiahao-article.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/campaign-brief.md` - Added mirrored workflow content file campaign-brief.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/production-pack.md` - Added mirrored workflow content file production-pack.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/publish-log.md` - Added mirrored workflow content file publish-log.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/toutiao-article.md` - Added mirrored workflow content file toutiao-article.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/toutiao-video.md` - Added mirrored workflow content file toutiao-video.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/video-publish-package.md` - Added mirrored workflow content file video-publish-package.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/weibo-video-post.md` - Added mirrored workflow content file weibo-video-post.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/xiaohongshu-note.md` - Added mirrored workflow content file xiaohongshu-note.md in the github-nightly-sync workspace.
+- 新增: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/zhihu-answer.md` - Added mirrored workflow content file zhihu-answer.md in the github-nightly-sync workspace.
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/__init__.py`；用途: Package marker for the social publisher runtime.；关联 skill: `python-platform-takeover`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/__main__.py`；用途: CLI module entrypoint for launching the social publisher package.；关联 skill: `python-platform-takeover`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/browser.py`；用途: Browser controller utilities used by automated social publishing flows.；关联 skill: `python-platform-takeover`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/cli.py`；用途: Main command-line orchestration for content package publishing and receipts.；关联 skill: `python-platform-takeover`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/content_package.py`；用途: Content package loading and validation helpers.；关联 skill: `python-platform-takeover`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/doctor.py`；用途: Environment diagnostics and readiness checks for publishers.；关联 skill: `python-platform-takeover`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/env.py`；用途: Environment-variable parsing helpers for publisher runtime.；关联 skill: `python-platform-takeover`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platform_mapping.py`；用途: Platform mapping loader for publisher account configuration.；关联 skill: `python-platform-takeover`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/__init__.py`；用途: Registry exports for supported publishing platforms.；关联 skill: `python-platform-takeover`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/baijiahao.py`；用途: Publisher implementation for the baijiahao platform.；关联 skill: `python-platform-takeover`；属性: 平台特定。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/base.py`；用途: Publisher implementation for the base platform.；关联 skill: `python-platform-takeover`；属性: 平台特定。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/douyin.py`；用途: Publisher implementation for the douyin platform.；关联 skill: `python-platform-takeover`；属性: 平台特定。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/kuaishou.py`；用途: Publisher implementation for the kuaishou platform.；关联 skill: `python-platform-takeover`；属性: 平台特定。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/toutiao.py`；用途: Publisher implementation for the toutiao platform.；关联 skill: `python-platform-takeover`；属性: 平台特定。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py`；用途: Publisher implementation for the wechat_channels platform.；关联 skill: `python-platform-takeover`；属性: 平台特定。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/weibo.py`；用途: Publisher implementation for the weibo platform.；关联 skill: `python-platform-takeover`；属性: 平台特定。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/xiaohongshu.py`；用途: Publisher implementation for the xiaohongshu platform.；关联 skill: `python-platform-takeover`；属性: 平台特定。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/zhihu.py`；用途: Publisher implementation for the zhihu platform.；关联 skill: `python-platform-takeover`；属性: 平台特定。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/publish_receipts.py`；用途: Publish receipt creation and update helpers.；关联 skill: `python-platform-takeover`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_browser_controller.py`；用途: Automated test covering browser controller behavior.；关联 skill: `python-platform-takeover`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_content_package.py`；用途: Automated test covering content package behavior.；关联 skill: `python-platform-takeover`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_doctor.py`；用途: Automated test covering doctor behavior.；关联 skill: `python-platform-takeover`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_env.py`；用途: Automated test covering env behavior.；关联 skill: `python-platform-takeover`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_platform_base.py`；用途: Automated test covering platform base behavior.；关联 skill: `python-platform-takeover`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_publish_receipts.py`；用途: Automated test covering publish receipts behavior.；关联 skill: `python-platform-takeover`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_wechat_channels.py`；用途: Automated test covering wechat channels behavior.；关联 skill: `python-platform-takeover`；属性: 平台特定。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/clash-verge-standard-env/scripts/apply_standard_env.py`；用途: Applies the standard Clash Verge environment template.；关联 skill: `clash-verge-standard-env`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/scripts/run_workflow.py`；用途: Runs the Coze sales workflow automation entrypoint.；关联 skill: `coze-seedance15pro-sales-workflow`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/doc/scripts/render_docx.py`；用途: Renders document content into a DOCX artifact.；关联 skill: `doc`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/scripts/normalize_node_id.py`；用途: Normalizes Figma node IDs for code-connect workflows.；关联 skill: `figma-code-connect-components`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-address-comments/scripts/fetch_comments.py`；用途: Fetches GitHub review comments for PR follow-up.；关联 skill: `gh-address-comments`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-fix-ci/scripts/inspect_pr_checks.py`；用途: Inspects CI check results for a pull request.；关联 skill: `gh-fix-ci`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/scripts/new_notebook.py`；用途: Creates a starter Jupyter notebook from the skill workflow.；关联 skill: `jupyter-notebook`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/scripts/take_screenshot.py`；用途: Captures screenshots for the screenshot skill workflow.；关联 skill: `screenshot`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/scripts/build_ownership_map.py`；用途: Builds a security ownership map dataset.；关联 skill: `security-ownership-map`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/scripts/community_maintainers.py`；用途: Resolves community maintainer ownership metadata.；关联 skill: `security-ownership-map`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/scripts/query_ownership.py`；用途: Queries the generated ownership map.；关联 skill: `security-ownership-map`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/scripts/run_ownership_map.py`；用途: Runs the end-to-end ownership map pipeline.；关联 skill: `security-ownership-map`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/build_cover_package.py`；用途: Builds a cover-generation package for Seedance video runs.；关联 skill: `seedance-video-api`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/extract_cover_candidates.py`；用途: Extracts candidate cover frames or assets for Seedance.；关联 skill: `seedance-video-api`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/init_cover_package.py`；用途: Initializes a new cover package scaffold for Seedance.；关联 skill: `seedance-video-api`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/render_cover_package.py`；用途: Renders the finalized Seedance cover package output.；关联 skill: `seedance-video-api`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/seedance_cli.py`；用途: Provides the Seedance video API command-line entrypoint.；关联 skill: `seedance-video-api`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sentry/scripts/sentry_api.py`；用途: Wraps Sentry API access for the sentry skill.；关联 skill: `sentry`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/scripts/create_montage.py`；用途: Builds slide image montages for preview or QA.；关联 skill: `slides`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/scripts/detect_font.py`；用途: Detects fonts used by slide assets.；关联 skill: `slides`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/scripts/ensure_raster_image.py`；用途: Converts or validates raster image inputs for slides.；关联 skill: `slides`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/scripts/render_slides.py`；用途: Renders slide decks to images for verification.；关联 skill: `slides`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/scripts/slides_test.py`；用途: Runs slide rendering checks and fixture validation.；关联 skill: `slides`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/scripts/sora.py`；用途: Provides the Sora skill command-line helper.；关联 skill: `sora`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/scripts/text_to_speech.py`；用途: Generates speech audio from text input.；关联 skill: `speech`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/references/examples/openpyxl/create_basic_spreadsheet.py`；用途: Example script that creates a basic spreadsheet with openpyxl.；关联 skill: `spreadsheet`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/references/examples/openpyxl/create_spreadsheet_with_styling.py`；用途: Example script that creates a styled spreadsheet with openpyxl.；关联 skill: `spreadsheet`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/references/examples/openpyxl/read_existing_spreadsheet.py`；用途: Example script that reads an existing spreadsheet with openpyxl.；关联 skill: `spreadsheet`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/references/examples/openpyxl/styling_spreadsheet.py`；用途: Example script that demonstrates spreadsheet styling with openpyxl.；关联 skill: `spreadsheet`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/transcribe/scripts/transcribe_diarize.py`；用途: Runs transcription plus speaker diarization.；关联 skill: `transcribe`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/wechat_channels_keepalive.py`；用途: Keeps the WeChat Channels launchagent session alive.；关联 skill: `wechat-channels-launchagent-keepalive`；属性: 平台特定。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-desktop-ops/scripts/check_wechat_runtime.py`；用途: Checks whether the desktop WeChat runtime is available.；关联 skill: `wechat-desktop-ops`；属性: 平台特定。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-moments-desktop-ops/scripts/check_wechat_moments_support.py`；用途: Checks desktop support for WeChat Moments operations.；关联 skill: `wechat-moments-desktop-ops`；属性: 平台特定。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-video-channel-share-desktop-ops/scripts/check_wechat_video_channel_share_support.py`；用途: Checks desktop support for WeChat video channel sharing.；关联 skill: `wechat-video-channel-share-desktop-ops`；属性: 平台特定。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/scripts/_common.py`；用途: Shared API helper utilities for XYQ Nest scripts.；关联 skill: `xyq-nest-skill`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/scripts/download_results.py`；用途: Downloads finished XYQ Nest job results.；关联 skill: `xyq-nest-skill`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/scripts/get_thread.py`；用途: Fetches XYQ Nest thread status and messages.；关联 skill: `xyq-nest-skill`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/scripts/submit_run.py`；用途: Submits a new XYQ Nest run request.；关联 skill: `xyq-nest-skill`；属性: 跨平台。
+- 路径: `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/scripts/upload_file.py`；用途: Uploads input files for XYQ Nest runs.；关联 skill: `xyq-nest-skill`；属性: 跨平台。
+
+### 变更摘要
+- 本轮发现新的非零变更批次：全部为 `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/` 新镜像目录带来的 `1495` 个新增文件，没有修改或删除。
+- 这批新增把一个完整的技能/自动化镜像工作区纳入受监控集合，内容覆盖 `automation/python-platform-takeover`、`skill-center/skills/**`、`skills/**`、`docs/**`、`workflow/**` 以及相关 GitHub workflow / fixture / asset 文件。
+- 其中新建 `.py` 文件共 `65` 个，主要集中在 `python-platform-takeover` 的 social publisher 实现与多项 skill 脚本 / 示例。
+- 因为检测到了新的变更批次，本轮需要同步更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，提醒后续 GitHub 同步。
+
+## 2026-05-31 03:03:33 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-30T18:00:43.475Z`（本地时区为 `2026-05-31 02:00:43.475 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-30T18:03:13Z`（本地时区为 `2026-05-31 02:03:13 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4065 -> 4065`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-30T18:03:13Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-05-30T18:03:13Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4065` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-31 04:04:05 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-30T19:02:13.771Z`（本地时区为 `2026-05-31 03:02:13.771 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-30T19:03:33Z`（本地时区为 `2026-05-31 03:03:33 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4065 -> 4065`
+- 额外按有效基线 `2026-05-30T19:03:33Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-30T19:03:33Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-05-30T19:03:33Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4065` 条快照一致。
+- `skill-center/skills/social-publish-automation/SKILL.md`、`skills/codex-feishu-bridge-skill/**`、`skill-center/skills/xyq-nest-skill/scripts/*` 与 `automation/python-platform-takeover/state/publish-locks/*` 虽然当前仍是脏工作树文件，但它们的路径、大小与 `mtimeMs` 已被上一轮快照吸收，因此不属于本轮新增变更。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-31 07:06:43 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-30T22:04:44.670Z`（本地时区为 `2026-05-31 06:04:44.670 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-30T22:06:08Z`（本地时区为 `2026-05-31 06:06:08 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4065 -> 4065`
+- 额外按有效基线 `2026-05-30T22:06:08Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-30T22:06:08Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-05-30T22:06:08Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4065` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+
+## 2026-05-31 15:19:08 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-31T06:17:20.528Z`（本地时区为 `2026-05-31 14:17:20.528 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-31T06:20:29Z`（本地时区为 `2026-05-31 14:20:29 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；结果保持 `4065 -> 4065`，发现 `1` 个文件相对上一轮快照再次发生变化
+- 额外按有效基线 `2026-05-31T06:20:29Z` 复筛受监控文件的精确 `mtimeMs`；命中的仍是同一份 publish receipt，但它在上一轮“提交卡住”记录之后再次被更新，因此本轮按 `1` 个新的修改批次记账
+- 结果汇总: 新增 `0`，修改 `1`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json` - 从上一轮记录的 `bilibili:submit_stuck_processing` 状态继续推进为 `bilibili:published_verified_manager_page`，补入新的 `BV19YVn67ENG`、`2026-05-31T15:01:28+08:00` 发布时间、`2026-05-31T15:05:00+08:00` 管理页核验时间，以及“修复声明弹窗后已成功发布、封面仍未经 OBU 上传”的核验证据与备注。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-31T06:20:29Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现一个新的技能支持自动化变更批次，仍集中在 `automation/python-platform-takeover/state/publish-receipts/`；核心是 `2026-05-30-ai-employee-no-rush-repost-before-receipt` 的 Bilibili 回执从“提交卡在处理中”进一步更新为“后台管理页已确认发布”。
+- 因为出现了新的非零批次，已同步在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 追加待后续 GitHub 同步提示。
+
+## 2026-05-31 19:26:18 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-31T10:23:50.090Z`（本地时区为 `2026-05-31 18:23:50.090 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-31T10:24:50Z`（本地时区为 `2026-05-31 18:24:50 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`；`/Users/baishangjituan/.codex/automations/skill-monitor/memory.md` 在本轮开始时不存在，因此本轮会补建
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4065 -> 4065`
+- 额外按有效基线 `2026-05-31T10:24:50Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-31T10:24:50Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-05-31T10:24:50Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4065` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-05-31 23:31:02 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-05-31T14:29:21.226Z`（本地时区为 `2026-05-31 22:29:21.226 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-05-31T14:31:02Z`（本地时区为 `2026-05-31 22:31:02 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`、`/Users/baishangjituan/.codex/automations/skill-monitor/state.json`、`/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-snapshot.json`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4065` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4065 -> 4065`
+- 额外按有效基线 `2026-05-31T14:31:02Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-05-31T14:31:02Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-05-31T14:31:02Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4065` 条快照一致。
 - 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
