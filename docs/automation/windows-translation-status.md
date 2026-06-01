@@ -3038,3 +3038,65 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-31 22:02:23 CST (+0800)`，今天新增的 mirror 批次没有带来新的待转译行为，三次 receipt 更新也都是跨平台数据留痕；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-01 22:02:04 CST (+0800)
+
+- 处理时间:
+  - `2026-06-01 22:02:04 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-31 22:02:23 CST (+0800)` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 非零批次共有 `2` 个:
+    - `2026-06-01 16:52:58 CST (+0800)`
+    - `2026-06-01 19:52:47 CST (+0800)`
+  - 其余新增批次:
+    - `2026-05-31 22:30:38 CST (+0800)`
+    - `2026-05-31 23:31:02 CST (+0800)`
+    - `2026-06-01 00:33:02 CST (+0800)`
+    - `2026-06-01 01:35:01 CST (+0800)`
+    - `2026-06-01 02:34:46 CST (+0800)`
+    - `2026-06-01 03:35:39 CST (+0800)`
+    - `2026-06-01 04:37:21 CST (+0800)`
+    - `2026-06-01 05:38:54 CST (+0800)`
+    - `2026-06-01 06:40:26 CST (+0800)`
+    - `2026-06-01 07:42:13 CST (+0800)`
+    - `2026-06-01 08:43:40 CST (+0800)`
+    - `2026-06-01 08:44:12 CST (+0800)`
+    - `2026-06-01 10:44:37 CST (+0800)`
+    - `2026-06-01 11:46:49 CST (+0800)`
+    - `2026-06-01 12:46:59 CST (+0800)`
+    - `2026-06-01 13:48:10 CST (+0800)`
+    - `2026-06-01 14:49:44 CST (+0800)`
+    - `2026-06-01 15:50:02 CST (+0800)`
+    - `2026-06-01 17:52:09 CST (+0800)`
+    - `2026-06-01 18:53:03 CST (+0800)`
+    - `2026-06-01 20:55:00 CST (+0800)`
+    - `2026-06-01 21:56:42 CST (+0800)`
+  - `2026-06-01 16:52:58 CST (+0800)` 的非零变更项:
+    - `automation/python-platform-takeover/configs/content-package.2026-06-01-ai-employee-pending-status-before-rewrite.yaml`
+    - `automation/python-platform-takeover/configs/hermes-package.2026-06-01-ai-employee-pending-status-before-rewrite.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-06-01-ai-employee-pending-status-before-rewrite.json`
+    - `automation/python-platform-takeover/state/hermes-handoff/2026-06-01-ai-employee-pending-status-before-rewrite.json`
+    - `automation/python-platform-takeover/state/hermes-handoff/latest.json`
+  - `2026-06-01 19:52:47 CST (+0800)` 的非零变更项:
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`
+- 已完成的 Windows 补全:
+  - 今天没有需要新增落库的 Windows 转译文件；已把这一结论正式记入状态文件。
+  - 已复核 `2026-06-01 16:52:58 CST (+0800)` 这批新增 / 修改只是在 `automation/python-platform-takeover` 下初始化新的 handoff-only 发布资产，不是新的 Mac-only skill 行为:
+    - 新 content package 与 Hermes package 只新增 campaign 文案、素材指纹、`lock_dir`、`latest.json` 指针和发布约束。
+    - 其中 `allow_live: false`、`do_not_publish: true`、`do_not_upload: true`、`do_not_click_submit: true` 说明这批资产本来就只允许做 handoff 校验，不要求新增 Windows 发布入口。
+  - 已复核 `2026-06-01 19:52:47 CST (+0800)` 只是给既有 receipt 补写 `toutiao:submitted_under_review` 留痕，新增的是回执状态、上传核验和管理页“审核中”证据，不是新的平台流程实现。
+  - 已确认仓库现有 Windows 说明已经覆盖今天新增语义，因此无需再补 PowerShell 启动器、Windows 路径处理、快捷键差异说明、命令包装器或仓库资源:
+    - `automation/python-platform-takeover/README.md` 已写明日期化 YAML 若包含 macOS `/Users/...` 路径，Windows 侧应复制为本地内容包并统一改成真实 `C:/...` 绝对路径。
+    - `automation/python-platform-takeover/README.md` 已写明 handoff-only 包遇到 `allow_live: false` / `do_not_publish` / `do_not_upload` / `do_not_click_submit` 时，Windows 侧只做 `validate-package`、`receipt-status`、`record-receipt --status not_published` 与 `state/hermes-handoff/latest.json` 校验，不执行 live publish。
+    - `skill-center/skills/social-publish-automation/SKILL.md` 已写明 Windows 侧要原样保留 `fingerprints` 与 `lock_dir`，并把 `state/hermes-handoff/latest.json` 视为当前 `ready_for_publish` campaign 的唯一 handoff 指针。
+  - 结论:
+    - 本轮实际转译结果为“无新增转译项”；今天两组非零批次都已被仓库现有 Windows 路径改写规则、handoff-only 流程和 receipt 命令覆盖。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-01` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未发现 `pwsh`，因此未做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核，以及现有 Windows README / skill 规则与新增 handoff / receipt 资产内容核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-01 22:02:04 CST (+0800)`，今天新增的两组非零批次都只是 handoff / receipt 运行态资产，未引入新的 Mac-only 自定义 skill 行为；Mac 与 Windows 覆盖今日均完整。

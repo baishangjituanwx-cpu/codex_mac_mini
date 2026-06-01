@@ -1,0 +1,56 @@
+{
+  "campaign_id": "2026-06-01-ai-employee-pending-status-before-rewrite",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "status": "published",
+  "receipts": {
+    "wechat_channels": {
+      "actor": "codex_cdp",
+      "actor_session_id": "019e824b-8136-72f1-a3b6-cad123316fc3",
+      "campaign_id": "2026-06-01-ai-employee-pending-status-before-rewrite",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-01-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png",
+      "cover_readability_passed": true,
+      "cover_thumbnail_present": true,
+      "current_url": "https://channels.weixin.qq.com/platform/post/list",
+      "external_id": "export/UzFfBgAAxJSjEGgsbynFjMzT4DCaoFwRI899AMUTo2KakUQiUw",
+      "feishu_message_id": "om_x100b6eeddc320ca8b2775abe9856b5d",
+      "management_url": "https://channels.weixin.qq.com/platform/post/list",
+      "notes": [
+        "User manually confirmed the 2026-06-01 publish video is the intended non-duplicate asset and requested skipping the same-description duplicate guard for this run.",
+        "Uploaded video path: /Users/baishangjituan/Documents/seedance/outputs/2026-06-01-ai-employee-pending-status-before-rewrite-publish.mp4",
+        "Uploaded video sha256: 8e77ec358d931996d1ad3d8ec6e067642d1c823e21d8aef1358cb41e32a62fb1",
+        "Uploaded cover path: /Users/baishangjituan/Documents/seedance/outputs/2026-06-01-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png",
+        "Platform required at least 6 characters for short title; final shortTitle used: 先写未核验状态.",
+        "Management list verification: newest row exact description, shortTitle=先写未核验状态, status=1, visibleType=1.",
+        "Feishu notification sent with message_id: om_x100b6eeddc320ca8b2775abe9856b5d."
+      ],
+      "platform_id": "wechat_channels",
+      "published_at": "2026-06-01T22:36:44+08:00",
+      "recorded_at": "2026-06-01T22:36:44+08:00",
+      "status": "published",
+      "submitted_at": "2026-06-01T22:30:51+08:00",
+      "title": "先写未核验状态",
+      "verified_by": "management_list_component_data",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-01-ai-employee-pending-status-before-rewrite-publish.mp4"
+    }
+  },
+  "receipt_schema": {
+    "future_platform_receipt_fields": [
+      "actor",
+      "actor_session_id",
+      "status",
+      "verified_by",
+      "lock_path",
+      "submitted_at",
+      "published_at",
+      "video_path",
+      "cover_path",
+      "cover_thumbnail_present",
+      "cover_readability_passed"
+    ]
+  },
+  "created_at": "2026-06-01T16:52:36+08:00",
+  "updated_at": "2026-06-01T22:36:44+08:00",
+  "notes": [
+    "Initialized for handoff only; no publish, upload, submit, under_review, or published records exist."
+  ]
+}

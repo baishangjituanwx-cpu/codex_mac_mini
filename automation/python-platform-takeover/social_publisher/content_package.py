@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, fields
 from pathlib import Path
 from typing import Any
 
@@ -30,14 +30,28 @@ class ContentPackage:
 
     @classmethod
     def from_mapping(cls, payload: dict[str, Any]) -> "ContentPackage":
-        assets = AssetPaths(**payload["assets"])
+        asset_field_names = {item.name for item in fields(AssetPaths)}
+        assets = AssetPaths(
+            **{
+                key: value
+                for key, value in payload["assets"].items()
+                if key in asset_field_names
+            }
+        )
+        platform_field_names = {item.name for item in fields(PlatformContent)}
         platforms = {
-            platform_id: PlatformContent(**platform_payload)
+            platform_id: PlatformContent(
+                **{
+                    key: value
+                    for key, value in platform_payload.items()
+                    if key in platform_field_names
+                }
+            )
             for platform_id, platform_payload in payload["platforms"].items()
         }
         return cls(
             campaign_id=payload["campaign_id"],
-            theme=payload["theme"],
+            theme=payload.get("theme", payload["campaign_id"]),
             assets=assets,
             platforms=platforms,
         )

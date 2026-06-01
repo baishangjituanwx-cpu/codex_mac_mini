@@ -422,7 +422,7 @@ class WeChatChannelsPublisher(PlatformPublisher):
                 try:
                     frame.locator("body").wait_for(timeout=500)
                     return frame
-                except PlaywrightTimeoutError:
+                except Exception:
                     pass
             page.wait_for_timeout(300)
         return None
