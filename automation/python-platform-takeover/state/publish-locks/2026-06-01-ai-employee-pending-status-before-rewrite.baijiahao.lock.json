@@ -1,0 +1,21 @@
+{
+  "campaign_id": "2026-06-01-ai-employee-pending-status-before-rewrite",
+  "platform_id": "baijiahao",
+  "status": "stopped_duplicate_existing_published",
+  "stage": "duplicate_guard",
+  "title": "为什么“审核中/暂无数据”不能直接写成内容失败？",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-01-ai-employee-pending-status-before-rewrite-publish.mp4",
+  "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-01-ai-employee-pending-status-before-rewrite_cover_package/cover-horizontal-4x3.png",
+  "cover_sha256": "03f82b61de0979080f5903c575347bdb30022efa8a982acac70a841afc701d73",
+  "duplicate_guard_path": "/Users/baishangjituan/Documents/push/baijiahao_duplicate_guard_20260602_pending_status_existing_strict.json",
+  "duplicate_status": "已发布音频",
+  "duplicate_management_url": "https://baijiahao.baidu.com/builder/rc/content?currentPage=1&pageSize=10&search=%E4%B8%BA%E4%BB%80%E4%B9%88%E2%80%9C%E5%AE%A1%E6%A0%B8%E4%B8%AD%2F%E6%9A%82%E6%97%A0%E6%95%B0%E6%8D%AE%E2%80%9D%E4%B8%8D%E8%83%BD%E7%9B%B4%E6%8E%A5%E5%86%99%E6%88%90%E5%86%85%E5%AE%B9%E5%A4%B1%E8%B4%A5%EF%BC%9F&type=&collection=&startDate=&endDate=",
+  "duplicate_screenshot": "/Users/baishangjituan/Documents/push/baijiahao-20260602-pending-status-existing-strict.png",
+  "upload_started": false,
+  "video_uploaded": false,
+  "cover_uploaded": false,
+  "publish_click_happened": false,
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-06-01-ai-employee-pending-status-before-rewrite.json",
+  "actor_session_id": "chrome-cdp-127.0.0.1:9222-current-thread",
+  "updated_at": "2026-06-02T11:05:10+08:00"
+}

@@ -1,0 +1,11 @@
+{
+  "campaign_id": "2026-05-30-ai-employee-no-rush-repost-before-receipt",
+  "platform": "zhihu",
+  "actor": "hermes",
+  "actor_session_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "started_at": "2026-06-02T00:50:28.623Z",
+  "expires_at": "2026-06-02T01:20:28.623Z",
+  "status": "in_progress",
+  "package_json": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-30-ai-employee-no-rush-repost-before-receipt.json",
+  "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json"
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "巨量线索同步"
+  short_description: "飞鱼线索核对并同步到飞书表格"
+  default_prompt: "Use $juliang-lead-sync to check new 巨量投放 leads and append complete records to the Feishu sheet."
+policy:
+  allow_implicit_invocation: true

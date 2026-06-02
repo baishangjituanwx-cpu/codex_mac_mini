@@ -3100,3 +3100,76 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-01 22:02:04 CST (+0800)`，今天新增的两组非零批次都只是 handoff / receipt 运行态资产，未引入新的 Mac-only 自定义 skill 行为；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-02 22:04:42 CST (+0800)
+
+- 处理时间:
+  - `2026-06-02 22:04:42 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-01 22:02:04 CST (+0800)` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 非零批次共有 `5` 个:
+    - `2026-06-02 11:18:21 CST (+0800)`
+    - `2026-06-02 13:16:25 CST (+0800)`
+    - `2026-06-02 14:18:37 CST (+0800)`
+    - `2026-06-02 16:21:03 CST (+0800)`
+    - `2026-06-02 17:22:59 CST (+0800)`
+  - 其余新增批次:
+    - `2026-06-02 18:24:06 CST (+0800)`
+    - `2026-06-02 19:25:02 CST (+0800)`
+    - `2026-06-02 20:27:26 CST (+0800)`
+    - `2026-06-02 21:28:45 CST (+0800)`
+  - `2026-06-02 11:18:21 CST (+0800)` 的非零变更项:
+    - `automation/python-platform-takeover/state/publish-locks/2026-06-01-ai-employee-pending-status-before-rewrite.bilibili.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-30-ai-employee-no-rush-repost-before-receipt.zhihu.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-06-01-ai-employee-pending-status-before-rewrite.baijiahao.lock.json`
+    - `automation/python-platform-takeover/configs/content-package.2026-06-01-ai-employee-pending-status-before-rewrite.yaml`
+    - `automation/python-platform-takeover/configs/hermes-package.2026-06-01-ai-employee-pending-status-before-rewrite.json`
+    - `automation/python-platform-takeover/state/hermes-handoff/2026-06-01-ai-employee-pending-status-before-rewrite.json`
+    - `automation/python-platform-takeover/state/hermes-handoff/latest.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-06-01-ai-employee-pending-status-before-rewrite.json`
+  - `2026-06-02 13:16:25 CST (+0800)` 的非零变更项:
+    - `automation/python-platform-takeover/configs/content-package.2026-06-02-ai-employee-asset-fingerprint-before-submit.yaml`
+    - `automation/python-platform-takeover/configs/hermes-package.2026-06-02-ai-employee-asset-fingerprint-before-submit.json`
+    - `automation/python-platform-takeover/state/hermes-handoff/2026-06-02-ai-employee-asset-fingerprint-before-submit.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-06-02-ai-employee-asset-fingerprint-before-submit.json`
+    - `automation/python-platform-takeover/state/hermes-handoff/latest.json`
+  - `2026-06-02 14:18:37 CST (+0800)` 的非零变更项:
+    - `~/.codex/skills/juliang-lead-sync/SKILL.md`
+    - `~/.codex/skills/juliang-lead-sync/agents/openai.yaml`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`
+  - `2026-06-02 16:21:03 CST (+0800)` 的非零变更项:
+    - `automation/python-platform-takeover/state/publish-locks/2026-06-02-ai-employee-asset-fingerprint-before-submit.baijiahao.lock.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-06-02-ai-employee-asset-fingerprint-before-submit.json`
+  - `2026-06-02 17:22:59 CST (+0800)` 的非零变更项:
+    - `automation/python-platform-takeover/state/publish-locks/2026-06-02-ai-employee-asset-fingerprint-before-submit.weibo.lock.json`
+    - `automation/python-platform-takeover/configs/content-package.2026-06-02-ai-employee-asset-fingerprint-before-submit.yaml`
+    - `automation/python-platform-takeover/configs/hermes-package.2026-06-02-ai-employee-asset-fingerprint-before-submit.json`
+    - `automation/python-platform-takeover/state/hermes-handoff/2026-06-02-ai-employee-asset-fingerprint-before-submit.json`
+    - `automation/python-platform-takeover/state/hermes-handoff/latest.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-06-02-ai-employee-asset-fingerprint-before-submit.json`
+- 已完成的 Windows 补全:
+  - 新增仓库 skill 镜像，给今天新出现的本地自定义 skill 提供 Windows 可用版本:
+    - `skill-center/skills/juliang-lead-sync/SKILL.md`
+    - `skill-center/skills/juliang-lead-sync/agents/openai.yaml`
+  - 上述新 skill 已补齐 Windows 侧的关键操作说明:
+    - 继续复用已登录 Chrome / Codex Chrome Extension，不读取 cookies、localStorage 或密码库
+    - 补入 PowerShell 下 `lark-cli wiki spaces get_node --params '{"token":"..."}'` 的 Windows 可执行写法
+    - 补入 `lark-cli sheets +append` 的 PowerShell 追加示例
+    - 明确 Windows 侧继续复用 `skill-center/skills/lark-sheets/SKILL.md` 与 `skill-center/skills/lark-base/SKILL.md`，不再另造一套表格写入链路
+  - 已复核 `automation/python-platform-takeover` 的 4 组新增 / 修改批次均被仓库现有 Windows 规则覆盖，无需再补新的 PowerShell 启动器、路径包装器、快捷键分叉或仓库资产:
+    - `2026-06-02 11:18:21 CST (+0800)` 的三份 publish lock、两份 receipt 与 `2026-06-01-ai-employee-pending-status-before-rewrite` 的封面指纹刷新，仍属于共享 CLI 台账、duplicate guard 和 handoff 指针更新，Windows 侧继续按现有 `receipt-status` / `record-receipt` / `validate-package` 流程处理即可。
+    - `2026-06-02 13:16:25 CST (+0800)` 新建的 `2026-06-02-ai-employee-asset-fingerprint-before-submit` content package、Hermes handoff 与空白 receipt，仍是 `allow_live: false` 的 handoff-only 资产；Windows 侧继续按现有 README 的 `C:/...` 路径改写和 `not_published` 初始化规则执行即可。
+    - `2026-06-02 14:18:37 CST (+0800)` 对 `2026-05-30-ai-employee-no-rush-repost-before-receipt.json` 的知乎实发核验、飞书通知留痕与 `package_usage` 扩写属于跨平台回执数据，不需要新增 Windows 独占流程。
+    - `2026-06-02 16:21:03 CST (+0800)` 的百家号发布锁和总 receipt 扩写，仍由现有 Windows duplicate-guard / publish receipt 命令承接。
+    - `2026-06-02 17:22:59 CST (+0800)` 的微博发布锁、`package_cover_reset` 元数据和更新后的 handoff/latest 指针，仍由现有 Windows 封面可读性复核、`fingerprints` 保留规则和 handoff-only 规则承接。
+  - 本轮实际新增落库的 Windows 转译文件只有 `juliang-lead-sync` 的仓库镜像；其余 `2026-06-02` 非零批次都已被现有 Windows 文档与共享命令入口覆盖。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-02` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未发现 `pwsh`，因此未做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、仓库文件核对，以及现有 Windows README / skill 规则与新增 skill 镜像内容核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-02 22:04:42 CST (+0800)`，今天唯一需要新增落库的 Windows 补全是 `juliang-lead-sync` 仓库镜像；其余新增批次均为现有 Windows 规则已覆盖的 handoff / lock / receipt 运行态资产，Mac 与 Windows 覆盖今日均完整。

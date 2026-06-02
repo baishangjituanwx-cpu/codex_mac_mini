@@ -1,7 +1,7 @@
 {
   "campaign_id": "2026-05-30-ai-employee-no-rush-repost-before-receipt",
   "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
-  "status": "bilibili:published_verified_manager_page,toutiao:submitted_under_review",
+  "status": "bilibili:published_verified_manager_page,toutiao:submitted_under_review,zhihu:published_with_video_verified",
   "package_status": "ready_for_publish",
   "receipts": {
     "bilibili": {
@@ -71,7 +71,37 @@
         "CDP port: 9222",
         "Session: obu-cli",
         "Publish click: OBU CDP Runtime.evaluate (not Playwright)"
-      ]
+      ],
+      "notification": {
+        "feishu": {
+          "status": "failed",
+          "non_blocking": true,
+          "reason": "lark-cli profile/token/auth 不可用，飞书 API 鉴权失败",
+          "recorded_at": "2026-06-02T07:26:10.131430+08:00"
+        }
+      }
+    },
+    "zhihu": {
+      "status": "published_with_video_verified",
+      "title": "为什么内容复盘里不能一看到无新增就补发？",
+      "article_url": "https://zhuanlan.zhihu.com/p/2045138325493876272",
+      "manager_url": "https://zhuanlan.zhihu.com/p/2045138325493876272",
+      "actor": "obu-llm-gui-operator",
+      "actor_session_id": "zhihu-real-publish-1780379292494",
+      "published_at": "2026-06-02T05:48:12.493Z",
+      "verified_at": "2026-06-02T05:48:12.493Z",
+      "verification_evidence": "zhihu page shows 发布成功 popup, article visible at article_url, title matches content package",
+      "target_url": "https://zhuanlan.zhihu.com/write",
+      "backend": "open-browser-use",
+      "model_provider": "mimo",
+      "vision_provider": "mimo-api",
+      "video_embed_supported": true,
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt-publish.mp4",
+      "video_upload_method": "obu_native_file_upload",
+      "video_upload_verified": true,
+      "video_verified_at": "2026-06-02T06:07:32.598Z",
+      "video_verification_evidence": "zhihu article detail page shows video player with thumbnail and play button (00:15 duration), vision confirmed 视频播放器 visible",
+      "updated_at": "2026-06-02T06:07:32.598Z"
     }
   },
   "receipt_schema": {
@@ -89,5 +119,38 @@
       "cover_readability_passed"
     ]
   },
-  "created_at": "2026-05-30T13:39:50+08:00"
+  "created_at": "2026-05-30T13:39:50+08:00",
+  "package_usage": {
+    "package_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-30-ai-employee-no-rush-repost-before-receipt.json",
+    "campaign_id": "2026-05-30-ai-employee-no-rush-repost-before-receipt",
+    "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+    "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt-publish.mp4",
+    "platforms_used": [
+      "bilibili",
+      "toutiao",
+      "zhihu"
+    ],
+    "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json",
+    "updated_at": "2026-06-02T06:55:05.548Z"
+  },
+  "live_authorization_override": {
+    "used": true,
+    "reason": "用户明确要求进入真实发布闭环测试",
+    "original_package_allow_live": false,
+    "original_constraints_do_not_publish": true,
+    "authorized_platforms": [
+      "bilibili",
+      "toutiao",
+      "zhihu"
+    ],
+    "authorized_at": "2026-06-02T07:26:10.131430+08:00"
+  },
+  "notification": {
+    "feishu": {
+      "status": "failed",
+      "non_blocking": true,
+      "reason": "lark-cli profile/token/auth 不可用，飞书 API 鉴权失败",
+      "recorded_at": "2026-06-02T07:26:10.131430+08:00"
+    }
+  }
 }

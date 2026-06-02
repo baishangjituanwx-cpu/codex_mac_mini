@@ -1,0 +1,97 @@
+{
+  "campaign_id": "2026-06-02-ai-employee-asset-fingerprint-before-submit",
+  "platform": "weibo",
+  "status": "published_verified",
+  "account": "智者大陈",
+  "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "started_at": "2026-06-02T16:40:54.773+08:00",
+  "actor": "Codex Chrome plugin publisher",
+  "actor_session_id": "019e8678-94f4-7191-98fb-b857a4b711a2",
+  "package_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit_content_package/platforms/weibo.md",
+  "platform_upload_map": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit_content_package/platform-upload-map.md",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit-publish.mp4",
+  "video_sha256": "4468402b6ca7d201cf68c1b989da24580d6b0ec5de634d00b54367cbd69e6845",
+  "required_cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit_cover_package/cover-vertical-3x4.png",
+  "required_cover_sha256": "6be13cb293dbd684b5586ed9542572f1d43470c9829f1bf5629aa0caf1f049d2",
+  "duplicate_guard": {
+    "search": [
+      {
+        "q": "文件名一样，不代表视频、封面、文案还是同一版",
+        "url": "https://s.weibo.com/weibo?q=%E6%96%87%E4%BB%B6%E5%90%8D%E4%B8%80%E6%A0%B7%EF%BC%8C%E4%B8%8D%E4%BB%A3%E8%A1%A8%E8%A7%86%E9%A2%91%E3%80%81%E5%B0%81%E9%9D%A2%E3%80%81%E6%96%87%E6%A1%88%E8%BF%98%E6%98%AF%E5%90%8C%E4%B8%80%E7%89%88",
+        "title": "微博搜索",
+        "containsMarker": false,
+        "containsSecondary": false,
+        "textLength": 0,
+        "excerpt": ""
+      },
+      {
+        "q": "先锁三件套指纹",
+        "url": "https://s.weibo.com/weibo?q=%E5%85%88%E9%94%81%E4%B8%89%E4%BB%B6%E5%A5%97%E6%8C%87%E7%BA%B9",
+        "title": "微博搜索",
+        "containsMarker": false,
+        "containsSecondary": false,
+        "textLength": 0,
+        "excerpt": ""
+      },
+      {
+        "q": "文件名一样，就能直接继续发布吗？",
+        "url": "https://s.weibo.com/weibo?q=%E6%96%87%E4%BB%B6%E5%90%8D%E4%B8%80%E6%A0%B7%EF%BC%8C%E5%B0%B1%E8%83%BD%E7%9B%B4%E6%8E%A5%E7%BB%A7%E7%BB%AD%E5%8F%91%E5%B8%83%E5%90%97%EF%BC%9F",
+        "title": "微博搜索",
+        "containsMarker": false,
+        "containsSecondary": false,
+        "textLength": 0,
+        "excerpt": ""
+      }
+    ],
+    "profile": {
+      "url": "https://weibo.com/u/2326772703",
+      "title": "@智者大陈 的个人主页",
+      "containsExactMarkers": false,
+      "textLength": 388,
+      "excerpt": "6\n个人主页\n我的主页\n我的关注\n我的粉丝\n我的经常访问\n我的收藏\n我的赞\n创作者中心\n返回\n智者大陈\n0粉丝\n7关注\n12转评赞\n视频累计播放量71\n专注于AI员工服务和垂直智能体应用\nIP属地：新加坡\n精选\n微博\n视频\n相册\n全部微博（41）\n智者大陈\n5-27 18:26\n来自 微博视频号\n55\n阅读\n推广\n不能。没指标、无新增、未核验，都只能说明证据没齐。先补状态、指标、同账号对照，再决定要不要改标题封面。#AI员工 #内容运营 智者大陈的微博视频 ​​​\n00:15\n3次观看\n转发\n1\n赞\n智者大陈\n5-24 12:48\n来自 微博视频号\n66\n阅读\n推广\n不能。审核中、暂无数据、未回流，都只是状态信息，不是失败证据。先写未核验，等状态、指标、同账号对照齐了，再决定是否改标题封面。#AI员工 #内容运营 智者大陈的微博视频 ​​​\n00:15\n转发\n1\n赞"
+    }
+  },
+  "upload_started": true,
+  "video_uploaded": true,
+  "cover_uploaded": false,
+  "publish_click_happened": true,
+  "notes": [
+    "Local receipt guard passed before upload.",
+    "Weibo UI/profile duplicate guard did not find the current package markers before upload."
+  ],
+  "updated_at": "2026-06-02T16:50:05.707+08:00",
+  "upload_settled_body_excerpt": "6\n首页\n全部关注\n最新微博\n好友圈\n自定义分组\n管理\n悄悄关注\n64\n请进行内容声明（必填）\n0:15\n表情\n图片\n视频\n话题\n头条文章\n更多\n公开\n发送\n全部\n原创\n视频\nV+微博\n群微博\n高级搜索\n新华社\n5-30 11:04\n来自 微博网页版\n已编辑\n关注\n#湖南衡阳发生氢氟酸罐车泄漏事件#【湖南衡阳南岳区发生一起氢氟酸罐车泄漏事件】 ​​​记者从湖南省衡阳市南岳区应急管理局获悉，5月30日7时24分，南岳区南岳镇衡山路（高速连接线高架桥红绿灯处），一辆从江西九江运往湖南衡阳的氢氟酸罐车发生追尾事故，导致危化品泄漏，暂未发现有人员伤亡。\n\n　 ​​​ ...展开\n156\n162\n932\n战甲装研菌\n5-31 12:43\n来自 微博视频号\n关注\n#秦腔版火影忍者#给我看不会了。\n\n谁想出来的把秦腔和火影剪一块的？站出来我给你磕一个。这味儿太冲了，看完感觉鸣人下一秒就要喊：\"额的忍道奏是！额说啥奏是啥！\"\n\n中华文化确实博大精深，就没有秦腔配不了的BGM。\n\n🦞\n（辛苦的员工：小龙虾） 战甲装研菌的微博视频 ​​​\n01:00\n40.1万次观看\n320\n51\n1560\n爱色的小眼睛\n小眼睛里的日常超话\n推荐\n7小时前\n来自 华为 Pura 90 Pro Max\n关注\n在万米高空上看着这么近那么远的棉花糖，晨昏线虽说很理性，但此时我却觉得如此魔幻。\n\n#撞色挑战##暖阳撞色挑战撞出了青柠夏##华为Pura90#小眼睛里的日常超话 ​\n转发\n2\n赞\n北京时间\n独家\n5-31 11:34\n来自 微博视频号\n已编辑\n关注\n#日系车溃败#【#日系车为什么在中国卖不动了#】 曾经“一车传三代”的日系车，正遭遇集体崩塌。日系三强财报集体哑火，本田迎上市近70年来首次年度亏损。它们2025年在华市场份额与2020年相比直接腰斩，不少日系车主都在担心爱车保值率大跌。有人把原因归咎于美国",
+  "pre_submit_readback": {
+    "body_matches": true,
+    "duration_visible": true,
+    "ai_declaration_visible": true,
+    "send_button": {
+      "ariaDisabled": "",
+      "cls": "woo-button-main woo-button-flat woo-button-primary woo-button-m woo-button-round",
+      "disabled": false,
+      "index": 2,
+      "rect": {
+        "h": 34,
+        "w": 68,
+        "x": 789,
+        "y": 354
+      },
+      "text": "发送"
+    },
+    "cover_mode": "weibo_quick_composer_no_custom_cover_control; used_publish_video_first_frame_per_package_rule"
+  },
+  "submitted_at": "2026-06-02T16:47:23.719+08:00",
+  "published_at": "2026-06-02 16:47 +0800",
+  "public_url": "https://weibo.com/2326772703/R2gybvRet",
+  "mobile_url": "https://m.weibo.cn/detail/5305402797592797",
+  "mblogid": "R2gybvRet",
+  "post_id": "5305402797592797",
+  "cover_mode": "weibo_quick_composer_no_custom_cover_control; used_publish_video_first_frame_per_package_rule; custom_cover_control_not_exposed",
+  "cover_thumbnail_present": true,
+  "cover_readability_passed": true,
+  "verification": {
+    "status": "verified",
+    "verified_by": "chrome_plugin_weibo_public_profile_and_public_post_readback",
+    "result_path": "/Users/baishangjituan/Documents/push/weibo_publish_result_20260602_asset_fingerprint_before_submit.json"
+  }
+}

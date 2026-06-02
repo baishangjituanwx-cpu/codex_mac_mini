@@ -1,0 +1,13 @@
+{
+  "campaign_id": "2026-06-01-ai-employee-pending-status-before-rewrite",
+  "platform": "bilibili",
+  "platform_id": "bilibili",
+  "status": "stopped_duplicate_existing_published",
+  "created_at": "2026-06-02T11:15:23+08:00",
+  "actor": "codex_chrome_extension",
+  "actor_session_id": "019e824b-8136-72f1-a3b6-cad123316fc3",
+  "reason": "B站稿件管理 already contains the exact title as an approved/published row.",
+  "existing_public_url": "https://www.bilibili.com/video/BV1s7GE6oEVy/",
+  "existing_bvid": "BV1s7GE6oEVy",
+  "result_path": "/Users/baishangjituan/Documents/push/bilibili_duplicate_guard_20260602_pending_status_existing.json"
+}

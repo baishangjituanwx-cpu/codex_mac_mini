@@ -15,6 +15,31 @@
 - 补记说明:
 - `2026-05-31 15:19:08 CST (+0800)` 的新变更批次在当时已被 monitor 检出，但没有及时追加到本仓库文档；本次先补齐该条，再记录当前新批次。
 
+## 2026-06-02 22:30:52 CST (+0800)
+- 检测到新的技能变更批次: 新增 `2`，修改 `0`，删除 `0`。
+- 这批变更集中在 `skill-center/skills/juliang-lead-sync/`；核心是仓库新增了巨量投放线索同步技能及其 OpenAI agent 入口，并在 `SKILL.md` 里补入 Windows 接管约束、PowerShell `lark-cli` 示例和飞书表追加写入指引。
+- 建议后续执行 GitHub 同步，避免这组新的巨量线索同步技能定义继续只停留在本地工作区。
+
+## 2026-06-02 11:18:21 CST (+0800)
+- 检测到新的技能变更批次: 新增 `1`，修改 `2456`，删除 `0`。
+- 这批变更一部分来自 `automation/python-platform-takeover/` 的封面指纹刷新、重复发布守卫与最新发布回执推进，另一部分来自 `.codex/skills/`、`skills/`、`skill-center/` 和 `github-nightly-sync-20260531-run2` 镜像副本的大规模重写/重同步。
+- 建议后续执行 GitHub 同步，避免这组技能镜像刷新与发布状态更新继续只停留在本地工作区。
+
+## 2026-06-02 09:11:16 CST (+0800)
+- 检测到新的技能变更批次: 新增 `1`，修改 `4`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/`；核心是 `2026-06-01-ai-employee-pending-status-before-rewrite` 的 content package / Hermes package / handoff 一起切换到新的封面指纹，同时 `2026-05-30-ai-employee-no-rush-repost-before-receipt` 新增了一个 Zhihu 发布锁，表明 Hermes 已占位该平台的真实发布流程并开始防重复发布。
+- 建议后续执行 GitHub 同步，避免这组封面资产指纹刷新和 Zhihu 发布锁新增继续只停留在本地工作区。
+
+## 2026-06-02 08:08:40 CST (+0800)
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`；核心是给既有 Bilibili 已发布 / 今日头条审核中的回执补上 `package_usage`、`live_authorization_override` 和飞书通知失败留痕，把这次真实发布闭环的授权来源、所用 package 与通知异常都写入审计记录。
+- 建议后续执行 GitHub 同步，避免这条 receipt 审计增强继续只停留在本地工作区。
+
+## 2026-06-02 01:01:16 CST (+0800)
+- 检测到新的技能变更批次: 新增 `0`，修改 `9`，删除 `11`。
+- 这批变更集中在 `~/.codex/skills/seedance-video-api`、`skills/codex-feishu-bridge-skill/`、`skill-center/skills/social-publish-automation/` 与 `skill-center/skills/xyq-nest-skill/`；核心是 Seedance 技能把封面包 / 发布包 / Hermes handoff 设为硬交付项，Feishu bridge 模板新增独立进度推送通道，而 social publish 与 XYQ nest 的多组 Windows `.cmd` / `.ps1` 包装脚本被删除并收敛到共享或直接 Python 入口。
+- 建议后续执行 GitHub 同步，避免这组 skill 规范升级、桥接模板调整和 Windows 包装层删除继续只停留在本地工作区。
+
 ## 2026-06-02 00:06:50 CST (+0800)
 - 处理时间:
   - `2026-06-02 00:06:50 CST (+0800)`
@@ -2889,3 +2914,28 @@
 - 检测到新的技能变更批次: 新增 `1495`，修改 `0`，删除 `0`。
 - 这批变更全部来自新的 `~/.codex/skills/github-nightly-sync-20260531-run2/` 镜像目录，覆盖 `automation/python-platform-takeover`、大量 `skill-center/skills/**` / `skills/**` 定义，以及配套文档、workflow、测试和资产文件。
 - 建议后续执行 GitHub 同步，避免这组新的技能镜像与支持自动化资产继续只停留在本地工作区。
+
+## 2026-06-02 12:17:49 CST (+0800)
+- 检测到新的技能变更批次: 新增 `1`，修改 `1202`，删除 `0`。
+- 这批变更一方面在 `automation/python-platform-takeover/` 新增了 `2026-06-01-ai-employee-pending-status-before-rewrite.weibo.lock.json`，并刷新多组 content package / Hermes package / publish lock / receipt / screenshot / Python 实现；另一方面 `.codex/skills/`、仓库 `skills/`、`skill-center/` 与 `github-nightly-sync-20260531-run2` 镜像副本再次大规模重同步。
+- 建议后续执行 GitHub 同步，避免这批技能镜像刷新与发布状态更新继续只停留在本地工作区。
+
+## 2026-06-02 13:16:25 CST (+0800)
+- 检测到新的技能变更批次: 新增 `4`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/`；核心是新建 `2026-06-02-ai-employee-asset-fingerprint-before-submit` 的 content package、Hermes handoff package、空白 publish receipt，并把 `state/hermes-handoff/latest.json` 切换到这条新 campaign。
+- 建议后续执行 GitHub 同步，避免这组新的发前资产指纹交接包与 receipt 骨架继续只停留在本地工作区。
+
+## 2026-06-02 14:18:37 CST (+0800)
+- 检测到新的技能变更批次: 新增 `2`，修改 `1`，删除 `0`。
+- 这批变更一方面在 `~/.codex/skills/` 新增了 `juliang-lead-sync` 巨量线索同步 skill；另一方面把 `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json` 补齐为包含知乎实发核验、头条飞书通知失败留痕和 live authorization 覆盖说明的完整 receipt。
+- 建议后续执行 GitHub 同步，避免这组新 skill 定义与更新后的发布回执继续只停留在本地工作区。
+
+## 2026-06-02 16:21:03 CST (+0800)
+- 检测到新的技能变更批次: 新增 `1`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/state/`：新增百家号 `2026-06-02-ai-employee-asset-fingerprint-before-submit` 发布锁，并把同 campaign 的总 receipt 从初始化骨架推进为包含抖音、快手、Bilibili、百家号实发核验与通知留痕的完整回执。
+- 建议后续执行 GitHub 同步，避免这组最新发布锁与扩展后的总回执继续只停留在本地工作区。
+
+## 2026-06-02 17:22:59 CST (+0800)
+- 检测到新的技能变更批次: 新增 `1`，修改 `5`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/` 的 `2026-06-02-ai-employee-asset-fingerprint-before-submit` campaign：新增微博发布锁，并同步刷新 content package、Hermes handoff 与总 receipt 到封面重置后的最新资产指纹和微博公开页核验状态。
+- 建议后续执行 GitHub 同步，避免这组最新微博发布留痕与 handoff/receipt 刷新继续只停留在本地工作区。

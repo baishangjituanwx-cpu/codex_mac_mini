@@ -1,0 +1,13 @@
+{
+  "campaign_id": "2026-06-01-ai-employee-pending-status-before-rewrite",
+  "platform": "weibo",
+  "status": "stopped_duplicate_existing_published",
+  "locked_at": "2026-06-02T11:59:25+08:00",
+  "actor": "codex_chrome_plugin",
+  "actor_session_id": "019e824b-8136-72f1-a3b6-cad123316fc3",
+  "content_package": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-01-ai-employee-pending-status-before-rewrite_content_package/platforms/weibo.md",
+  "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-01-ai-employee-pending-status-before-rewrite-publish.mp4",
+  "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-01-ai-employee-pending-status-before-rewrite_cover_package/cover-vertical-3x4.png",
+  "duplicate_public_url": "https://weibo.com/2326772703/R0S8JcR8y",
+  "reason": "Existing public Weibo post contains the exact current package title/core body; do not upload or submit a duplicate without explicit replacement approval."
+}

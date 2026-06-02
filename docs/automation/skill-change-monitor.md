@@ -15,6 +15,3013 @@
 - 补记说明:
 - `2026-05-31 15:19:08 CST (+0800)` 这一批次在当时已经被 monitor 检出并写入 `~/.codex/automations/skill-monitor/pending-skill-change-entry.md`，但未及时落盘到本仓库文档；本次先补齐该条，再记录当前新批次，保证时间线完整。
 
+## 2026-06-02 23:32:08 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-02T14:29:01.602Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-06-02T14:32:25Z`；由于它更晚，本轮继续以该时间作为有效基线
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/{memory.md,state.json,last-summary.json,last-snapshot.json}`
+- 继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4072` 条持久化快照逐项比对；结果保持 `4072 -> 4072`
+- 额外按有效基线 `2026-06-02T14:32:25Z` 复筛精确 `mtimeMs`；没有命中任何新增或被写入的技能相关文件
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无
+
+### 删除文件
+- 无
+
+### 新增 `.py` 文件
+- 无
+
+### 变更摘要
+- 本轮四个监控根目录都没有发现新的技能或配套自动化变更；上一轮新增的 `skill-center/skills/juliang-lead-sync/` 批次之后，本地技能树保持稳定，因此本次不追加 GitHub 同步提醒。
+
+## 2026-06-02 22:30:52 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-02T13:27:01.182Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-06-02T13:28:50Z`；由于它更晚，本轮以该时间作为有效基线
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/{memory.md,state.json,last-summary.json,last-snapshot.json}`
+- 继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4070` 条持久化快照逐项比对；结果更新为 `4070 -> 4072`
+- 结果汇总: 新增 `2`，修改 `0`，删除 `0`
+
+### 新增文件
+- 批次摘要: `skill-center/skills/juliang-lead-sync/` 新增 repo 内技能副本，用于把巨量投放线索同步流程纳入仓库技能中心；其中 `SKILL.md` 在基础巨量线索同步规则之外，补入了 Windows 已登录标签页/CDP 接管约束、PowerShell `lark-cli` JSON 引号规范，以及 `lark-cli sheets +append` 的 Windows 示例。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/juliang-lead-sync/SKILL.md`
+- 批次摘要: 为同一技能新增 OpenAI agent 入口，允许通过默认提示直接调用“巨量线索同步”流程检查新线索并写入飞书表格。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/juliang-lead-sync/agents/openai.yaml`
+
+### 修改文件
+- 无
+
+### 删除文件
+- 无
+
+### 新增 `.py` 文件
+- 无
+
+### 变更摘要
+- 本轮没有发现 `.py` 新文件，也没有命中 `automation/python-platform-takeover/` 或 `~/.codex/skills/` 的新增运行态文件；唯一新批次是 repo `skill-center` 新收录 `juliang-lead-sync` 技能及其 agent 声明，后续应纳入 GitHub 同步。
+
+## 2026-06-02 11:18:21 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-02T02:10:58.595Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-06-02T03:13:58Z`；由于它更晚，本轮继续以该时间作为有效基线
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/{memory.md,state.json,last-summary.json,last-snapshot.json}`
+- 继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4060` 条持久化快照逐项比对；结果更新为 `4060 -> 4061`
+- 额外按有效基线 `2026-06-02T03:13:58Z` 复筛精确 `mtimeMs`；直接命中的现有/新增文件共有 `2` 个，其余差异来自镜像/技能目录整体重写后保留旧时间戳的文件
+- 结果汇总: 新增 `1`，修改 `2456`，删除 `0`
+
+### 新增文件
+- 批次摘要: 新增 Bilibili 重复守卫锁，记录 `2026-06-01-ai-employee-pending-status-before-rewrite` 在稿件管理里已命中同标题已发布内容，因此本轮在上传前就硬停并保留现有 `BV1s7GE6oEVy` 证据。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-06-01-ai-employee-pending-status-before-rewrite.bilibili.lock.json`
+
+### 修改文件
+- 批次摘要: 更新 `fingerprints.cover_sha256`、`cover_3_4_sha256` 与 `cover_4_3_sha256`，把该 campaign 的内容包切换到新的封面资产指纹。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-06-01-ai-employee-pending-status-before-rewrite.yaml`
+- 批次摘要: 同步刷新 Hermes package 里的三组封面 SHA256，使交接包与新的封面资产版本保持一致。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-06-01-ai-employee-pending-status-before-rewrite.json`
+- 批次摘要: 交接记录同步新的封面指纹，并把 `updated_at` 推进到 `2026-06-02T08:54:05+08:00`。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/hermes-handoff/2026-06-01-ai-employee-pending-status-before-rewrite.json`
+- 批次摘要: `latest` 指针与同名 handoff 一起刷新到新的封面指纹和更新时间，后续默认读取该更新版交接包。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/hermes-handoff/latest.json`
+- 批次摘要: 新增 Hermes 的知乎发布锁，占位 `2026-05-30-ai-employee-no-rush-repost-before-receipt` 的真实发布流程并防止重复提交。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-30-ai-employee-no-rush-repost-before-receipt.zhihu.lock.json`
+- 批次摘要: 新增百家号重复守卫锁，记录该 campaign 在上传前就发现同标题已发布音频并因此硬停。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-06-01-ai-employee-pending-status-before-rewrite.baijiahao.lock.json`
+- 批次摘要: 补录 `package_usage`、`live_authorization_override` 与飞书通知失败留痕，并把该 receipt 标明已实际覆盖 Bilibili、头条和知乎三平台闭环。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`
+- 批次摘要: 把总 receipt 从仅视频号已发布推进为“视频号封面补审中 + 百家号/快手命中重复发布硬停”，并写入封面修复、重复守卫和最新平台状态。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-06-01-ai-employee-pending-status-before-rewrite.json`
+- 批次摘要: 刷新 `.codex/skills/clash-verge-standard-env` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/references/rules-enhancement.yaml`
+  - `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/references/verge.template.yaml`
+  - `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/scripts/apply_standard_env.py`
+- 批次摘要: 刷新 `.codex/skills/codex-feishu-bridge` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/.bridge.env.example`
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/launchd/com.codex.feishu-bridge.plist`
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/package.json`
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/bridge-logs.sh`
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/bridge-start.sh`
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/bridge-status.sh`
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/bridge-stop.sh`
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/configure_notify_target.sh`
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/mirror-view.command`
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/mirror-view.sh`
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/run-bridge.sh`
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/src/bridge.js`
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/references/INSTALL-QUICKSTART.md`
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/references/architecture.md`
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/references/deployment.md`
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/references/user-guide.md`
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/scripts/install_bridge_template.sh`
+  - `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/scripts/package_skill_bundle.sh`
+- 批次摘要: 刷新 `.codex/skills/coze-seedance15pro-sales-workflow` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/config.json`
+  - `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/references/exported-workflow.yaml`
+  - `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/references/manifest.yml`
+  - `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/references/runtime-config.md`
+  - `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/references/workflow-summary.md`
+  - `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/scripts/run_workflow.py`
+- 批次摘要: 刷新 `.codex/skills/dachen-founder-flywheel` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/dachen-founder-flywheel/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/dachen-founder-flywheel/references/review-scorecard.md`
+- 批次摘要: 刷新 `.codex/skills/data-review` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/data-review/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/data-review/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/data-review/references/account-slice-analysis.md`
+  - `/Users/baishangjituan/.codex/skills/data-review/references/dashboard-export-template.json`
+  - `/Users/baishangjituan/.codex/skills/data-review/references/diagnosis-and-decisions.md`
+  - `/Users/baishangjituan/.codex/skills/data-review/references/docker-dashboard-contract.md`
+  - `/Users/baishangjituan/.codex/skills/data-review/references/platform-metrics.md`
+  - `/Users/baishangjituan/.codex/skills/data-review/references/report-template.md`
+- 批次摘要: 刷新 `.codex/skills/hermes-feishu-operator` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/hermes-feishu-operator/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/hermes-feishu-operator/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.sh`
+- 批次摘要: 刷新 `.codex/skills/kuaishou-ops` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/kuaishou-ops/SKILL.md`
+- 批次摘要: 刷新 `.codex/skills/lark-approval` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-approval/SKILL.md`
+- 批次摘要: 刷新 `.codex/skills/lark-attendance` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-attendance/SKILL.md`
+- 批次摘要: 刷新 `.codex/skills/lark-base` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-base/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/dashboard-block-data-config.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/examples.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/formula-field-guide.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-advperm-disable.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-advperm-enable.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-base-copy.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-base-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-base-get.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-arrange.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-delete.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-get.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-list.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-update.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-delete.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-get.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-list.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-update.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-data-query.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-delete.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-get.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-list.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-search-options.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-update.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-delete.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-get.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-list.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-delete.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-list.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-update.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-update.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-history.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-batch-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-batch-update.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-delete.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-get.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-history-list.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-list.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-search.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-upload-attachment.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-upsert.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-delete.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-get.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-list.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-update.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-shortcut-field-properties.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-shortcut-record-value.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-delete.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-get.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-list.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-update.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-delete.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-card.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-filter.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-group.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-sort.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-timebar.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-visible-fields.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-list.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-rename.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-card.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-filter.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-group.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-sort.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-timebar.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-visible-fields.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-disable.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-enable.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-get.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-guide.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-list.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-schema.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-update.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workspace.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/lookup-field-guide.md`
+  - `/Users/baishangjituan/.codex/skills/lark-base/references/role-config.md`
+- 批次摘要: 刷新 `.codex/skills/lark-calendar` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-calendar/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-agenda.md`
+  - `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-freebusy.md`
+  - `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-room-find.md`
+  - `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-rsvp.md`
+  - `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-schedule-meeting.md`
+  - `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-suggestion.md`
+- 批次摘要: 刷新 `.codex/skills/lark-contact` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-contact/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/lark-contact/references/lark-contact-get-user.md`
+  - `/Users/baishangjituan/.codex/skills/lark-contact/references/lark-contact-search-user.md`
+- 批次摘要: 刷新 `.codex/skills/lark-doc` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-doc/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-fetch.md`
+  - `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-media-download.md`
+  - `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-media-insert.md`
+  - `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-media-preview.md`
+  - `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-search.md`
+  - `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-update.md`
+  - `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-whiteboard.md`
+- 批次摘要: 刷新 `.codex/skills/lark-drive` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-drive/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-add-comment.md`
+  - `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-create-folder.md`
+  - `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-create-shortcut.md`
+  - `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-delete.md`
+  - `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-download.md`
+  - `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-export-download.md`
+  - `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-export.md`
+  - `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-import.md`
+  - `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-move.md`
+  - `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-reactions.md`
+  - `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-task-result.md`
+  - `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-upload.md`
+- 批次摘要: 刷新 `.codex/skills/lark-event` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-event/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/lark-event/references/lark-event-subscribe.md`
+- 批次摘要: 刷新 `.codex/skills/lark-im` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-im/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-identity.md`
+  - `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-messages-list.md`
+  - `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-search.md`
+  - `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-update.md`
+  - `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-mget.md`
+  - `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-reply.md`
+  - `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-resources-download.md`
+  - `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-search.md`
+  - `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-send.md`
+  - `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-reactions.md`
+  - `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-threads-messages-list.md`
+- 批次摘要: 刷新 `.codex/skills/lark-mail` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-mail/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-draft-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-draft-edit.md`
+  - `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-forward.md`
+  - `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-message.md`
+  - `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-messages.md`
+  - `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-reply-all.md`
+  - `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-reply.md`
+  - `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-send.md`
+  - `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-signature.md`
+  - `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-thread.md`
+  - `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-triage.md`
+  - `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-watch.md`
+- 批次摘要: 刷新 `.codex/skills/lark-minutes` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-minutes/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/lark-minutes/references/lark-minutes-download.md`
+  - `/Users/baishangjituan/.codex/skills/lark-minutes/references/lark-minutes-search.md`
+- 批次摘要: 刷新 `.codex/skills/lark-okr` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-okr/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-contentblock.md`
+  - `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-cycle-detail.md`
+  - `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-cycle-list.md`
+  - `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-entities.md`
+- 批次摘要: 刷新 `.codex/skills/lark-openapi-explorer` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-openapi-explorer/SKILL.md`
+- 批次摘要: 刷新 `.codex/skills/lark-shared` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-shared/SKILL.md`
+- 批次摘要: 刷新 `.codex/skills/lark-sheets` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-add-dimension.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-append.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-batch-set-style.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-create-filter-view-condition.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-create-filter-view.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-dimension.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-dropdown.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-filter-view-condition.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-filter-view.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-export.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-find.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-formula.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-get-dropdown.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-get-filter-view-condition.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-get-filter-view.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-info.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-insert-dimension.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-list-filter-view-conditions.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-list-filter-views.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-merge-cells.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-move-dimension.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-read.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-replace.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-set-dropdown.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-set-style.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-unmerge-cells.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-dimension.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-dropdown.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-filter-view-condition.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-filter-view.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-write-image.md`
+  - `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-write.md`
+- 批次摘要: 刷新 `.codex/skills/lark-skill-maker` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-skill-maker/SKILL.md`
+- 批次摘要: 刷新 `.codex/skills/lark-slides` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-slides/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/lark-slides/references/examples.md`
+  - `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-media-upload.md`
+  - `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-xml-presentation-slide-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-xml-presentation-slide-delete.md`
+  - `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-xml-presentations-get.md`
+  - `/Users/baishangjituan/.codex/skills/lark-slides/references/slide-templates.md`
+  - `/Users/baishangjituan/.codex/skills/lark-slides/references/slides_demo.xml`
+  - `/Users/baishangjituan/.codex/skills/lark-slides/references/slides_xml_schema_definition.xml`
+  - `/Users/baishangjituan/.codex/skills/lark-slides/references/xml-format-guide.md`
+  - `/Users/baishangjituan/.codex/skills/lark-slides/references/xml-schema-quick-ref.md`
+- 批次摘要: 刷新 `.codex/skills/lark-task` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-task/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-assign.md`
+  - `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-comment.md`
+  - `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-complete.md`
+  - `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-followers.md`
+  - `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-get-my-tasks.md`
+  - `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-get-related-tasks.md`
+  - `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-reminder.md`
+  - `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-reopen.md`
+  - `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-search.md`
+  - `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-set-ancestor.md`
+  - `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-subscribe-event.md`
+  - `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-create.md`
+  - `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-members.md`
+  - `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-search.md`
+  - `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-task-add.md`
+  - `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-update.md`
+- 批次摘要: 刷新 `.codex/skills/lark-vc` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-vc/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/lark-vc/references/lark-vc-notes.md`
+  - `/Users/baishangjituan/.codex/skills/lark-vc/references/lark-vc-recording.md`
+  - `/Users/baishangjituan/.codex/skills/lark-vc/references/lark-vc-search.md`
+- 批次摘要: 刷新 `.codex/skills/lark-whiteboard` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/connectors.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/content.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/lark-whiteboard-query.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/lark-whiteboard-update.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/layout.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/schema.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/style.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/typography.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/routes/dsl.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/routes/mermaid.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/routes/svg.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/architecture.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/bar-chart.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/comparison.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/fishbone.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/flowchart.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/flywheel.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/funnel.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/line-chart.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/mermaid.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/milestone.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/organization.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/pyramid.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/swimlane.md`
+  - `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/treemap.md`
+- 批次摘要: 刷新 `.codex/skills/lark-wiki` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-wiki/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/lark-wiki/references/lark-wiki-move.md`
+  - `/Users/baishangjituan/.codex/skills/lark-wiki/references/lark-wiki-node-create.md`
+- 批次摘要: 刷新 `.codex/skills/lark-workflow-meeting-summary` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-workflow-meeting-summary/SKILL.md`
+- 批次摘要: 刷新 `.codex/skills/lark-workflow-standup-report` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/lark-workflow-standup-report/SKILL.md`
+- 批次摘要: 刷新 `.codex/skills/platform-cover-ops` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/platform-cover-ops/SKILL.md`
+- 批次摘要: 刷新 `.codex/skills/platform-ops-hub` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/platform-ops-hub/SKILL.md`
+- 批次摘要: 刷新 `.codex/skills/playwright` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/playwright/scripts/playwright_cli.sh`
+- 批次摘要: 刷新 `.codex/skills/seedance-video-api` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0.json`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0_fast.json`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/extend_bridge_seedance_2_0.json`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/extend_single_seedance_2_0.json`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/i2v_first_frame_seedance_2_0.json`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/multimodal_reference_seedance_2_0.json`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/t2v_seedance_2_0.json`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/t2v_seedance_2_0_fast.json`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/references/api-basics.md`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/references/cover-execution.md`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/references/cover-package.md`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/references/prompt-template.md`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/references/real-person-consistency.md`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/references/workflows.md`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/build_cover_package.py`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/extract_cover_candidates.py`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/init_cover_package.py`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/render_cover_package.py`
+  - `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/seedance_cli.py`
+- 批次摘要: 刷新 `.codex/skills/social-publish-automation` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/social-publish-automation/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/social-publish-automation/references/platform-notes.md`
+- 批次摘要: 刷新 `.codex/skills/toutiao-ops` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/toutiao-ops/SKILL.md`
+- 批次摘要: 刷新 `.codex/skills/wechat-channels-launchagent-keepalive` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/wechat-channels-launchagent-keepalive/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/wechat-channels-launchagent-keepalive/agents/openai.yaml`
+- 批次摘要: 刷新 `.codex/skills/wechat-channels-ops` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/wechat-channels-ops/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/wechat-channels-ops/references/platform-notes.md`
+- 批次摘要: 刷新 `.codex/skills/xiaohongshu-ops` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/xiaohongshu-ops/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/xiaohongshu-ops/references/platform-notes.md`
+- 批次摘要: 刷新 `.codex/skills/xiaoyunque-source-video` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/xiaoyunque-source-video/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/xiaoyunque-source-video/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/xiaoyunque-source-video/references/prompt-template.md`
+  - `/Users/baishangjituan/.codex/skills/xiaoyunque-source-video/references/source-video-playbook.md`
+- 批次摘要: 刷新 `.codex/skills/xyq-nest-skill` 下的技能文件，说明该本地自定义技能包在本轮被重新同步或重写。
+  - `/Users/baishangjituan/.codex/skills/xyq-nest-skill/.gitignore`
+  - `/Users/baishangjituan/.codex/skills/xyq-nest-skill/README.md`
+  - `/Users/baishangjituan/.codex/skills/xyq-nest-skill/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/xyq-nest-skill/scripts/_common.py`
+  - `/Users/baishangjituan/.codex/skills/xyq-nest-skill/scripts/download_results.py`
+  - `/Users/baishangjituan/.codex/skills/xyq-nest-skill/scripts/get_thread.py`
+  - `/Users/baishangjituan/.codex/skills/xyq-nest-skill/scripts/submit_run.py`
+  - `/Users/baishangjituan/.codex/skills/xyq-nest-skill/scripts/upload_file.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/.env.dashboard.example`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/.env.dashboard.example`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/.github/workflows/dashboard-sync-checks.yml`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/.github/workflows/dashboard-sync-checks.yml`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/.gitignore`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/.gitignore`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/CHANGELOG.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/CHANGELOG.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/CONTRIBUTING.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/CONTRIBUTING.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/LICENSE`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/LICENSE`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/README.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/README.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/automation/python-platform-takeover/.env.example`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/.env.example`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/automation/python-platform-takeover/README.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/README.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-17-ai-first-replace-three-tasks.yaml`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-17-ai-first-replace-three-tasks.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-20-ai-content-platform-execution.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-21-platform-execution-next-round.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-22-platform-execution-three-steps.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-24-platform-execution-writeback-fields.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-25-platform-execution-six-writeback-fields.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-27-platform-execution-verify-before-republish.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-28-platform-execution-early-zero-not-failure.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-29-platform-execution-lock-campaign-four-checks.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-30-repair-existing-not-republish.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-01-dachen-xiaoma-argue-fix-old-post.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-02-ai-employee-writeback-after-publish.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-03-ai-employee-data-center-review.weibo.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-03-ai-employee-data-center-review.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-04-ai-employee-three-format-comparison.kuaishou.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-04-ai-employee-three-format-comparison.weibo.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-04-ai-employee-three-format-comparison.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-audit-wait-no-republish.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-receipt-handoff.kuaishou.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-receipt-handoff.weibo.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-receipt-handoff.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-12-ai-employee-status-split-before-judgment.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-13-ai-employee-receipt-lock-before-republish.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-14-ai-employee-no-metrics-no-judgment.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-15-ai-employee-status-branch-before-rewrite.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-16-ai-employee-compare-three-before-cut.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-evidence-grid-before-verdict.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-22-ai-employee-no-new-status-not-failure.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-23-ai-employee-pending-status-before-rewrite.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-26-ai-employee-three-grid-before-verdict.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-30-ai-employee-no-rush-repost-before-receipt.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.demo.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.example.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-05-ai-employee-audit-wait-no-republish.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-12-ai-employee-status-split-before-judgment.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-13-ai-employee-receipt-lock-before-republish.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-14-ai-employee-no-metrics-no-judgment.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-15-ai-employee-status-branch-before-rewrite.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-16-ai-employee-compare-three-before-cut.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-17-ai-employee-evidence-grid-before-verdict.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-17-ai-employee-metric-window-before-rewrite.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-22-ai-employee-no-new-status-not-failure.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-23-ai-employee-pending-status-before-rewrite.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-26-ai-employee-three-grid-before-verdict.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-30-ai-employee-no-rush-repost-before-receipt.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platform-mappings/baijiahao.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platform-mappings/douyin.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platform-mappings/kuaishou.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platform-mappings/toutiao.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platform-mappings/wechat_channels.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platform-mappings/weibo.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platform-mappings/xiaohongshu.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platform-mappings/zhihu.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platforms.example.yaml`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/automation/python-platform-takeover/pyproject.toml`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/pyproject.toml`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/automation/python-platform-takeover/scripts/quickstart-mac.sh`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/scripts/quickstart-mac.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/scripts/quickstart-windows.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/scripts/social-publisher.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/scripts/social-publisher.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/scripts/start-chrome-cdp.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/scripts/start-chrome-cdp.sh`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/__init__.py`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/__init__.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/__main__.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/browser.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/cli.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/content_package.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/doctor.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/env.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platform_mapping.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/__init__.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/baijiahao.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/base.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/douyin.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/kuaishou.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/toutiao.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/weibo.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/xiaohongshu.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/zhihu.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/publish_receipts.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/hermes-handoff/latest.json`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/hermes-handoff/latest.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.baijiahao.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.bilibili.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.kuaishou.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.toutiao.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.zhihu.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.baijiahao.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.bilibili.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.douyin.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.kuaishou.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.toutiao.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.zhihu.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.baijiahao.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.bilibili.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.douyin.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.kuaishou.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.toutiao.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.wechat_channels.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.weibo.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.zhihu.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.baijiahao.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.bilibili.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.douyin.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.kuaishou.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.toutiao.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.wechat_channels.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.weibo.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.zhihu.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.baijiahao.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.bilibili.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.douyin.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.kuaishou.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.toutiao.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.wechat_channels.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.weibo.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.zhihu.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.baijiahao.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.bilibili.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.douyin.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.kuaishou.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.toutiao.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.wechat_channels.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.weibo.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.zhihu.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.baijiahao.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.bilibili.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.douyin.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.kuaishou.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.toutiao.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.wechat_channels.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.weibo.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.zhihu.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.baijiahao.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.bilibili.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.douyin.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.kuaishou.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.toutiao.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.wechat_channels.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.weibo.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.zhihu.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.baijiahao.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.bilibili.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.douyin.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.kuaishou.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.toutiao.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.wechat_channels.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.weibo.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.zhihu.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json.stale-override-1779789719`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json.stale-override-1779790507`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.kuaishou.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.wechat_channels.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.weibo.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.zhihu.lock.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-04-25-platform-execution-six-writeback-fields.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-04-27-platform-execution-verify-before-republish.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-04-28-platform-execution-early-zero-not-failure.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-04-29-platform-execution-lock-campaign-four-checks.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-04-30-repair-existing-not-republish.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-02-ai-employee-writeback-after-publish.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-03-ai-employee-data-center-review.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-04-ai-employee-three-format-comparison.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-05-ai-employee-audit-wait-no-republish.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-05-ai-employee-receipt-handoff.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-12-ai-employee-status-split-before-judgment.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-13-ai-employee-receipt-lock-before-republish.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-14-ai-employee-no-metrics-no-judgment.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-15-ai-employee-status-branch-before-rewrite.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-16-ai-employee-compare-three-before-cut.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-22-ai-employee-no-new-status-not-failure.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-23-ai-employee-pending-status-before-rewrite.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-26-ai-employee-three-grid-before-verdict.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/bilibili-management-published-20260502-1545.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-after-click-cdp-20260503.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-after-dom-publish-click-20260503.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-after-publish-click-20260523.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-before-manual-publish-cdp-20260502.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-before-publish-20260523-cover-check.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-before-publish-cdp-20260503.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-debug-after-script-stop-20260503.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-0-20260505.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-1-20260505.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-2-20260505.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-3-20260505.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-4-20260505.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-dom-inspect-0-1-20260505.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-inspect-7-20260504.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-inspect-9-20260504.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-management-published-20260502-1508.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-management-published-20260503-2107.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-management-under-review-20260502.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-management-verify-20260503.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-management-verify-20260523.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-management-verify-retry-20260523.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-publish-page-20260502-1.png`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_browser_controller.py`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_browser_controller.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_content_package.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_doctor.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_env.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_platform_base.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_publish_receipts.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_wechat_channels.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/docs/automation/README.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/automation/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/automation/github-sync-status.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/automation/skill-change-monitor.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/automation/windows-translation-status.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/browser-operation-sop.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/browser-tab-takeover-runbook.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/dashboard-sync-runbook.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/dashboard-upload-api-contract.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/github-upload-checklist.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/latest-success-flow.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/mempalace-remote-sync.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/public-release-checklist.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/python-automation-roadmap.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/system-architecture.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/package.json`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/package.json`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/scripts/dashboard-doctor.js`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/dashboard-doctor.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/dashboard-export-review.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/dashboard-fixture-smoke.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/dashboard-sync-review.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/dashboard-sync.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/dashboard-sync.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/dashboard-upload.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/douyin-packaging-guard.mjs`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/init_campaign.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/lib/load-dashboard-env.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/lib/workspace-paths.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/sync_remote_mempalace.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/validate-dashboard-export.js`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/README.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/scripts/sync-skills.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/scripts/sync-skills.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills-manifest.txt`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/assets/dotnet-logo.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/_sections.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/apis-minimal-and-controllers.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/data-state-and-services.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/program-and-pipeline.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/realtime-grpc-and-background-work.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/security-and-identity.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/source-map.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/stack-selection.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/testing-performance-and-operations.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/ui-blazor.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/ui-mvc.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/ui-razor-pages.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/versioning-and-upgrades.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/baijiahao-ops/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/baijiahao-ops/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/baijiahao-ops/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/baijiahao-ops/references/platform-notes.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/references/app-archetypes.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/references/apps-sdk-docs-workflow.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/references/interactive-state-sync-patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/references/repo-contract-and-validation.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/references/search-fetch-standard.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/references/upstream-example-workflow.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/references/window-openai-patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/scripts/scaffold_node_ext_apps.mjs`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/clash-verge-standard-env/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/clash-verge-standard-env/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/clash-verge-standard-env/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/clash-verge-standard-env/references/verge.template.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/clash-verge-standard-env/scripts/apply_standard_env.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/assets/cloudflare-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/assets/cloudflare.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/agents-sdk/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/agents-sdk/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/agents-sdk/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/agents-sdk/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/agents-sdk/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-gateway/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-gateway/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-gateway/dynamic-routing.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-gateway/features.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-gateway/sdk-integration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-gateway/troubleshooting.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-search/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-search/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-search/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-search/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-search/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/analytics-engine/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/analytics-engine/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/analytics-engine/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/analytics-engine/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/analytics-engine/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api-shield/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api-shield/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api-shield/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api-shield/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api-shield/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/argo-smart-routing/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/argo-smart-routing/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/argo-smart-routing/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/argo-smart-routing/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/argo-smart-routing/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bindings/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bindings/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bindings/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bindings/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bindings/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bot-management/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bot-management/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bot-management/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bot-management/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bot-management/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/browser-rendering/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/browser-rendering/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/browser-rendering/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/browser-rendering/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/browser-rendering/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/c3/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/c3/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/c3/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/c3/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/c3/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cache-reserve/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cache-reserve/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cache-reserve/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cache-reserve/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cache-reserve/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/containers/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/containers/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/containers/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/containers/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/containers/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cron-triggers/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cron-triggers/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cron-triggers/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cron-triggers/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cron-triggers/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/d1/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/d1/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/d1/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/d1/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/d1/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ddos/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ddos/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ddos/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ddos/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ddos/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/do-storage/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/do-storage/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/do-storage/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/do-storage/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/do-storage/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/do-storage/testing.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/durable-objects/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/durable-objects/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/durable-objects/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/durable-objects/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/durable-objects/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-routing/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-routing/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-routing/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-routing/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-routing/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-workers/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-workers/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-workers/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-workers/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-workers/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/hyperdrive/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/hyperdrive/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/hyperdrive/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/hyperdrive/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/hyperdrive/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/images/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/images/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/images/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/images/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/images/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/kv/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/kv/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/kv/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/kv/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/kv/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/miniflare/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/miniflare/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/miniflare/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/miniflare/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/miniflare/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/network-interconnect/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/network-interconnect/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/network-interconnect/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/network-interconnect/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/network-interconnect/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/observability/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/observability/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/observability/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/observability/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/observability/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages-functions/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages-functions/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages-functions/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages-functions/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages-functions/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pipelines/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pipelines/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pipelines/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pipelines/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pipelines/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pulumi/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pulumi/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pulumi/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pulumi/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pulumi/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/queues/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/queues/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/queues/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/queues/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/queues/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-data-catalog/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-data-catalog/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-data-catalog/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-data-catalog/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-data-catalog/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-sql/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-sql/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-sql/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-sql/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-sql/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtime-sfu/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtime-sfu/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtime-sfu/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtime-sfu/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtime-sfu/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtimekit/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtimekit/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtimekit/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtimekit/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtimekit/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/sandbox/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/sandbox/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/sandbox/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/sandbox/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/sandbox/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/secrets-store/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/secrets-store/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/secrets-store/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/secrets-store/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/secrets-store/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/smart-placement/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/smart-placement/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/smart-placement/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/smart-placement/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/smart-placement/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/snippets/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/snippets/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/snippets/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/snippets/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/snippets/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/spectrum/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/spectrum/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/spectrum/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/spectrum/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/spectrum/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/static-assets/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/static-assets/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/static-assets/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/static-assets/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/static-assets/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/stream/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/stream/api-live.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/stream/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/stream/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/stream/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/stream/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tail-workers/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tail-workers/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tail-workers/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tail-workers/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tail-workers/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/terraform/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/terraform/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/terraform/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/terraform/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/terraform/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tunnel/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tunnel/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tunnel/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tunnel/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tunnel/networking.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tunnel/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turn/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turn/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turn/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turn/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turn/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turnstile/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turnstile/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turnstile/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turnstile/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turnstile/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/vectorize/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/vectorize/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/vectorize/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/vectorize/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/vectorize/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/waf/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/waf/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/waf/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/waf/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/waf/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/web-analytics/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/web-analytics/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/web-analytics/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/web-analytics/integration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/web-analytics/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workerd/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workerd/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workerd/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workerd/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workerd/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-ai/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-ai/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-ai/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-ai/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-ai/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-for-platforms/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-for-platforms/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-for-platforms/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-for-platforms/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-for-platforms/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-playground/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-playground/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-playground/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-playground/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-playground/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-vpc/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-vpc/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-vpc/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-vpc/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-vpc/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers/frameworks.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workflows/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workflows/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workflows/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workflows/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workflows/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/wrangler/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/wrangler/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/wrangler/auth.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/wrangler/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/wrangler/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/wrangler/patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/zaraz/IMPLEMENTATION_SUMMARY.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/zaraz/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/zaraz/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/zaraz/configuration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/zaraz/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/zaraz/patterns.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/.bridge.env.example`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/launchd/com.codex.feishu-bridge.plist`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/package.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/scripts/bridge-logs.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/scripts/bridge-start.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/scripts/bridge-status.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/scripts/bridge-stop.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/scripts/configure_notify_target.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/scripts/mirror-view.command`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/scripts/mirror-view.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/scripts/run-bridge.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/src/bridge.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/references/INSTALL-QUICKSTART.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/references/architecture.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/references/deployment.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/references/user-guide.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/scripts/install_bridge_template.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/scripts/package_skill_bundle.sh`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/config.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/references/exported-workflow.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/references/manifest.yml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/references/runtime-config.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/references/workflow-summary.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/scripts/run_workflow.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/references/daily-automation-spec.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/references/flywheel-operating-system.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/references/review-scorecard.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/references/weekly-content-calendar.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/scripts/validate_flywheel_skill.rb`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/data-review/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/data-review/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/data-review/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/data-review/references/account-slice-analysis.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/data-review/references/dashboard-export-template.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/data-review/references/diagnosis-and-decisions.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/data-review/references/docker-dashboard-contract.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/data-review/references/platform-metrics.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/data-review/references/report-template.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/develop-web-game/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/develop-web-game/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/develop-web-game/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/develop-web-game/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/develop-web-game/assets/game-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/develop-web-game/assets/game.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/develop-web-game/references/action_payloads.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/develop-web-game/scripts/web_game_playwright_client.js`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/doc/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/doc/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/doc/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/doc/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/doc/assets/doc-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/doc/assets/doc.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/doc/scripts/render_docx.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/douyin-ops/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/douyin-ops/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/douyin-ops/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/douyin-ops/references/platform-notes.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/figma/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/assets/figma-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/assets/figma.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/assets/icon.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/references/figma-mcp-config.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/references/figma-tools-and-prompts.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/LICENSE.TXT`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/LICENSE.TXT`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/assets/figma-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/assets/figma.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/assets/icon.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/references/mapping-checklist.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/scripts/normalize_node_id.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/LICENSE.TXT`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/LICENSE.TXT`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/assets/figma-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/assets/figma.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/assets/icon.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/references/rule-template.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/scripts/check_agents_md.sh`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/LICENSE.TXT`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/LICENSE.TXT`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/assets/figma-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/assets/figma.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/assets/icon.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/maintainers.yml`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-design/LICENSE.TXT`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-design/LICENSE.TXT`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-design/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-design/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-design/assets/figma-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-design/assets/figma.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-design/assets/icon.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-design/maintainers.yml`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/LICENSE.TXT`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/LICENSE.TXT`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/assets/figma-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/assets/figma.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/assets/icon.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/maintainers.yml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/references/code-connect-setup.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/references/component-creation.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/references/discovery-phase.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/references/documentation-creation.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/references/error-recovery.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/references/naming-conventions.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/references/token-creation.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/bindVariablesToComponent.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/cleanupOrphans.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/createComponentWithVariants.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/createDocumentationPage.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/createSemanticTokens.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/createVariableCollection.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/inspectFileStructure.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/rehydrateState.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/validateCreation.js`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/figma-implement-design/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-implement-design/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-implement-design/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-implement-design/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-implement-design/assets/figma-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-implement-design/assets/figma.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-implement-design/assets/icon.svg`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/figma-use/LICENSE.TXT`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/LICENSE.TXT`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/assets/figma-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/assets/figma.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/assets/icon.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/maintainers.yml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/api-reference.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/common-patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/component-patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/effect-style-patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/gotchas.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/maintainers.yml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/plugin-api-patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/plugin-api-standalone.d.ts`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/plugin-api-standalone.index.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/text-style-patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/validation-and-recovery.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/variable-patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/maintainers.yml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-components--creating.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-components--using.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-components.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-effect-styles.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-text-styles.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-variables--creating.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-variables--using.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-variables.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/frontend-skill/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/frontend-skill/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/frontend-skill/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/frontend-skill/agents/openai.yaml`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/gh-address-comments/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-address-comments/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-address-comments/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-address-comments/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-address-comments/assets/github-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-address-comments/assets/github.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-address-comments/scripts/fetch_comments.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/gh-fix-ci/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-fix-ci/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-fix-ci/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-fix-ci/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-fix-ci/assets/github-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-fix-ci/assets/github.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-fix-ci/scripts/inspect_pr_checks.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/assets/experiment-template.ipynb`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/assets/jupyter-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/assets/jupyter.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/assets/tutorial-template.ipynb`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/references/experiment-patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/references/notebook-structure.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/references/quality-checklist.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/references/tutorial-patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/scripts/new_notebook.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/kuaishou-ops/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/kuaishou-ops/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/kuaishou-ops/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/kuaishou-ops/references/platform-notes.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-approval/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-approval/SKILL.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-attendance/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-attendance/SKILL.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-base/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/dashboard-block-data-config.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/examples.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/formula-field-guide.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-advperm-disable.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-advperm-enable.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-base-copy.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-base-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-base-get.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-arrange.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-block-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-block-delete.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-block-get.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-block-list.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-block-update.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-delete.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-get.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-list.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-update.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-data-query.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-field-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-field-delete.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-field-get.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-field-list.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-field-search-options.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-field-update.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-field.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-delete.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-get.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-list.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-questions-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-questions-delete.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-questions-list.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-questions-update.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-questions.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-update.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-history.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-batch-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-batch-update.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-delete.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-get.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-history-list.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-list.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-search.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-upload-attachment.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-upsert.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-role-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-role-delete.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-role-get.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-role-list.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-role-update.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-shortcut-field-properties.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-shortcut-record-value.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-table-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-table-delete.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-table-get.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-table-list.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-table-update.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-table.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-delete.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-get-card.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-get-filter.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-get-group.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-get-sort.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-get-timebar.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-get-visible-fields.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-get.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-list.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-rename.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-set-card.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-set-filter.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-set-group.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-set-sort.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-set-timebar.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-set-visible-fields.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-disable.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-enable.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-get.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-guide.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-list.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-schema.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-update.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workspace.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lookup-field-guide.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/role-config.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/references/lark-calendar-agenda.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/references/lark-calendar-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/references/lark-calendar-freebusy.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/references/lark-calendar-room-find.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/references/lark-calendar-rsvp.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/references/lark-calendar-schedule-meeting.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/references/lark-calendar-suggestion.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-contact/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-contact/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-contact/references/lark-contact-get-user.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-contact/references/lark-contact-search-user.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-fetch.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-media-download.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-media-insert.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-media-preview.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-search.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-update.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-whiteboard.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-add-comment.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-create-folder.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-create-shortcut.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-delete.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-download.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-export-download.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-export.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-import.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-move.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-reactions.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-task-result.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-upload.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-event/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-event/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-event/references/lark-event-subscribe.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-im/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-chat-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-chat-identity.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-chat-messages-list.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-chat-search.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-chat-update.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-messages-mget.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-messages-reply.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-messages-resources-download.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-messages-search.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-messages-send.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-reactions.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-threads-messages-list.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-draft-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-draft-edit.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-forward.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-message.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-messages.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-reply-all.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-reply.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-send.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-signature.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-thread.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-triage.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-watch.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-minutes/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-minutes/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-minutes/references/lark-minutes-download.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-minutes/references/lark-minutes-search.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-okr/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-okr/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-okr/references/lark-okr-contentblock.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-okr/references/lark-okr-cycle-detail.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-okr/references/lark-okr-cycle-list.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-okr/references/lark-okr-entities.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-openapi-explorer/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-openapi-explorer/SKILL.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-shared/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-shared/SKILL.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-add-dimension.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-append.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-batch-set-style.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-create-filter-view-condition.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-create-filter-view.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-delete-dimension.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-delete-dropdown.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-delete-filter-view-condition.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-delete-filter-view.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-export.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-find.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-formula.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-get-dropdown.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-get-filter-view-condition.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-get-filter-view.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-info.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-insert-dimension.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-list-filter-view-conditions.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-list-filter-views.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-merge-cells.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-move-dimension.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-read.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-replace.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-set-dropdown.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-set-style.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-unmerge-cells.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-update-dimension.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-update-dropdown.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-update-filter-view-condition.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-update-filter-view.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-write-image.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-write.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-skill-maker/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-skill-maker/SKILL.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/examples.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/lark-slides-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/lark-slides-media-upload.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/lark-slides-xml-presentation-slide-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/lark-slides-xml-presentation-slide-delete.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/lark-slides-xml-presentations-get.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/slide-templates.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/slides_demo.xml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/slides_xml_schema_definition.xml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/xml-format-guide.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/xml-schema-quick-ref.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-task/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-assign.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-comment.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-complete.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-followers.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-get-my-tasks.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-get-related-tasks.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-reminder.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-reopen.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-search.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-set-ancestor.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-subscribe-event.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-tasklist-create.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-tasklist-members.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-tasklist-search.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-tasklist-task-add.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-update.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-vc/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-vc/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-vc/references/lark-vc-notes.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-vc/references/lark-vc-recording.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-vc/references/lark-vc-search.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/connectors.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/content.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/lark-whiteboard-query.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/lark-whiteboard-update.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/layout.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/schema.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/style.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/typography.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/routes/dsl.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/routes/mermaid.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/routes/svg.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/architecture.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/bar-chart.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/comparison.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/fishbone.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/flowchart.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/flywheel.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/funnel.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/line-chart.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/mermaid.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/milestone.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/organization.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/pyramid.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/swimlane.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/treemap.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-wiki/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-wiki/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-wiki/references/lark-wiki-move.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-wiki/references/lark-wiki-node-create.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-workflow-meeting-summary/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-workflow-meeting-summary/SKILL.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/lark-workflow-standup-report/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-workflow-standup-report/SKILL.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/linear/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/linear/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/linear/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/linear/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/linear/assets/linear-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/linear/assets/linear.png`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/assets/netlify-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/assets/netlify.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/references/cli-commands.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/references/deployment-patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/references/netlify-toml.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/assets/notion-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/assets/notion.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/evaluations/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/evaluations/conversation-to-wiki.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/evaluations/decision-record.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/examples/conversation-to-faq.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/examples/decision-capture.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/examples/how-to-guide.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/reference/database-best-practices.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/reference/decision-log-database.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/reference/documentation-database.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/reference/faq-database.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/reference/how-to-guide-database.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/reference/learning-database.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/reference/team-wiki-database.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/assets/notion-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/assets/notion.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/evaluations/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/evaluations/decision-meeting-prep.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/evaluations/status-meeting-prep.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/examples/customer-meeting.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/examples/executive-review.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/examples/project-decision.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/examples/sprint-planning.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/reference/brainstorming-template.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/reference/decision-meeting-template.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/reference/one-on-one-template.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/reference/retrospective-template.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/reference/sprint-planning-template.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/reference/status-update-template.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/reference/template-selection-guide.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/assets/notion-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/assets/notion.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/evaluations/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/evaluations/basic-research.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/evaluations/research-to-database.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/examples/competitor-analysis.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/examples/market-research.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/examples/technical-investigation.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/examples/trip-planning.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/advanced-search.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/citations.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/comparison-format.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/comparison-template.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/comprehensive-report-format.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/comprehensive-report-template.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/format-selection-guide.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/quick-brief-format.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/quick-brief-template.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/research-summary-format.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/research-summary-template.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/assets/notion-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/assets/notion.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/evaluations/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/evaluations/basic-spec-implementation.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/evaluations/spec-to-tasks.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/examples/api-feature.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/examples/database-migration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/examples/ui-component.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/reference/milestone-summary-template.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/reference/progress-tracking.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/reference/progress-update-template.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/reference/quick-implementation-plan.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/reference/spec-parsing.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/reference/standard-implementation-plan.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/reference/task-creation-template.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/reference/task-creation.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/pdf/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/pdf/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/pdf/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/pdf/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/pdf/assets/pdf.png`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/references/cover-playbook.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/references/cover-prompt-kit.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/references/cover-template-matrix.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/references/platform-notes.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/scripts/preflight_cover_briefs.rb`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/scripts/validate_cover_skill.rb`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/platform-ops-hub/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-ops-hub/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-ops-hub/agents/openai.yaml`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/playwright/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/NOTICE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/assets/playwright-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/assets/playwright.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/references/cli.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/references/workflows.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/scripts/playwright_cli.sh`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/playwright-interactive/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright-interactive/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright-interactive/NOTICE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright-interactive/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright-interactive/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright-interactive/assets/playwright-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright-interactive/assets/playwright.png`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/docker.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/go-api.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/nextjs-postgres.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/node-express.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/python-django.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/render-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/render.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/static-site.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/blueprint-spec.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/codebase-analysis.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/configuration-guide.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/deployment-details.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/direct-creation.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/error-patterns.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/post-deploy-checks.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/runtimes.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/service-types.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/troubleshooting-basics.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/screenshot/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/assets/screenshot-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/assets/screenshot.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/scripts/ensure_macos_permissions.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/scripts/macos_display_info.swift`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/scripts/macos_permissions.swift`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/scripts/macos_window_info.swift`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/scripts/take_screenshot.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/scripts/take_screenshot.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/golang-general-backend-security.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/javascript-express-web-server-security.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/javascript-general-web-frontend-security.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/javascript-jquery-web-frontend-security.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/javascript-typescript-nextjs-web-server-security.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/javascript-typescript-react-web-frontend-security.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/javascript-typescript-vue-web-frontend-security.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/python-django-web-server-security.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/python-fastapi-web-server-security.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/python-flask-web-server-security.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/references/neo4j-import.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/scripts/build_ownership_map.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/scripts/community_maintainers.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/scripts/query_ownership.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/scripts/run_ownership_map.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/security-threat-model/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-threat-model/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-threat-model/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-threat-model/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-threat-model/references/prompt-template.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-threat-model/references/security-controls-and-assets.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0_fast.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/extend_bridge_seedance_2_0.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/extend_single_seedance_2_0.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/i2v_first_frame_seedance_2_0.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/multimodal_reference_seedance_2_0.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/t2v_seedance_2_0.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/t2v_seedance_2_0_fast.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/api-basics.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/cover-execution.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/cover-package.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/customer-trial-intake-and-production-sop.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/prompt-rule-09-subtitle-whitelist.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/prompt-rule-10-dialogue-subtitle-hard-requirements.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/prompt-template.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/real-person-consistency.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/workflows.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/build_cover_package.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/build_cover_package.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/extract_cover_candidates.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/extract_cover_candidates.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/init_cover_package.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/init_cover_package.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/invoke_seedance_script.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/render_cover_package.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/render_cover_package.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/seedance_cli.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/seedance_cli.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/seedance_cli.sh`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/sentry/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sentry/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sentry/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sentry/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sentry/assets/sentry-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sentry/assets/sentry.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sentry/scripts/sentry_api.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/slides/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/code.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/image.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/index.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/latex.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/layout.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/layout_builders.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/svg.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/text.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/util.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/slides-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/slides.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/references/pptxgenjs-helpers.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/scripts/create_montage.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/scripts/detect_font.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/scripts/ensure_raster_image.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/scripts/render_slides.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/scripts/slides_test.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/social-publish-automation/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/social-publish-automation/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/social-publish-automation/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/social-publish-automation/references/platform-notes.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/sora/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/assets/sora-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/assets/sora.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/references/cinematic-shots.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/references/cli.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/references/codex-network.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/references/prompting.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/references/sample-prompts.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/references/social-ads.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/references/troubleshooting.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/references/video-api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/scripts/sora.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/speech/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/assets/speech-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/assets/speech.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/accessibility.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/audio-api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/cli.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/codex-network.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/ivr.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/narration.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/prompting.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/sample-prompts.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/voice-directions.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/voiceover.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/scripts/text_to_speech.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/assets/spreadsheet-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/assets/spreadsheet.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/references/examples/openpyxl/create_basic_spreadsheet.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/references/examples/openpyxl/create_spreadsheet_with_styling.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/references/examples/openpyxl/read_existing_spreadsheet.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/references/examples/openpyxl/styling_spreadsheet.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/toutiao-ops/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/toutiao-ops/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/toutiao-ops/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/toutiao-ops/references/platform-notes.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/toutiao-publish/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/toutiao-publish/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/toutiao-publish/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/toutiao-publish/references/toutiao-publish-notes.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/transcribe/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/transcribe/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/transcribe/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/transcribe/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/transcribe/assets/transcribe-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/transcribe/assets/transcribe.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/transcribe/references/api.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/transcribe/scripts/transcribe_diarize.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/vercel-deploy/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/vercel-deploy/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/vercel-deploy/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/vercel-deploy/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/vercel-deploy/assets/vercel-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/vercel-deploy/assets/vercel.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/vercel-deploy/scripts/deploy.sh`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-launchagent-keepalive/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-launchagent-keepalive/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-launchagent-keepalive/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/register-keepalive-task.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/run-keepalive.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/wechat_channels_keepalive.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-ops/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-ops/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-ops/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-ops/references/platform-notes.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/wechat-desktop-ops/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-desktop-ops/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-desktop-ops/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-desktop-ops/references/local-automation-playbook.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-desktop-ops/references/official-notes.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-desktop-ops/scripts/check_wechat_runtime.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/wechat-moments-desktop-ops/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-moments-desktop-ops/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-moments-desktop-ops/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-moments-desktop-ops/references/desktop-posting-guide.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-moments-desktop-ops/references/official-notes.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-moments-desktop-ops/scripts/check_wechat_moments_support.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/wechat-video-channel-share-desktop-ops/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-video-channel-share-desktop-ops/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-video-channel-share-desktop-ops/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-video-channel-share-desktop-ops/references/desktop-share-guide.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-video-channel-share-desktop-ops/references/official-notes.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-video-channel-share-desktop-ops/scripts/check_wechat_video_channel_share_support.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/weibo-ops/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/weibo-ops/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/weibo-ops/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/weibo-ops/references/platform-notes.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/winui-app/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/assets/winui.png`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/config.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/_sections.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/accessibility-input-and-localization.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/build-run-and-launch-verification.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/community-toolkit-controls-and-helpers.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/controls-layout-and-adaptive-ui.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/foundation-environment-audit-and-remediation.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/foundation-setup-and-project-selection.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/foundation-template-first-recovery.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/foundation-winui-app-structure.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/motion-animations-and-polish.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/performance-diagnostics-and-responsiveness.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/sample-source-map.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/shell-navigation-and-windowing.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/styling-theming-materials-and-icons.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/testing-debugging-and-review-checklists.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/windows-app-sdk-lifecycle-notifications-and-deployment.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/xiaohongshu-ops/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xiaohongshu-ops/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xiaohongshu-ops/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xiaohongshu-ops/references/platform-notes.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/xiaoyunque-source-video/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xiaoyunque-source-video/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xiaoyunque-source-video/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xiaoyunque-source-video/references/prompt-template.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xiaoyunque-source-video/references/source-video-playbook.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/.gitignore`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/.gitignore`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/scripts/_common.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/scripts/download_results.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/scripts/get_thread.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/scripts/submit_run.py`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/scripts/upload_file.py`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/yeet/LICENSE.txt`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/yeet/LICENSE.txt`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/yeet/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/yeet/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/yeet/assets/yeet-small.svg`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/yeet/assets/yeet.png`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skill-center/skills/zhihu-ops/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/zhihu-ops/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/zhihu-ops/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/zhihu-ops/references/platform-notes.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/.bridge.env.example`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/launchd/com.codex.feishu-bridge.plist`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/package.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-logs.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-logs.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-status.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-status.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-stop.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-stop.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/configure_notify_target.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/configure_notify_target.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.cmd`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.command`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/run-bridge.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/run-bridge.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/run-platform-script.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/src/bridge.js`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/references/architecture.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/references/deployment.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/references/user-guide.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/scripts/install_bridge_template.ps1`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/scripts/install_bridge_template.sh`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/scripts/package_skill_bundle.sh`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/SKILL.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/references/account-slice-analysis.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/references/dashboard-export-template.json`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/references/diagnosis-and-decisions.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/references/docker-dashboard-contract.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/references/platform-metrics.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/references/report-template.md`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/tests/dashboard-fixture/content-library/logs/review/2026-04-25-dashboard-fixture-review.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/tests/dashboard-fixture/content-library/logs/review/2026-04-25-dashboard-fixture-review.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/tests/dashboard-fixture/expected-export.json`
+- 批次摘要: 夜间同步镜像刷新了 `github-nightly-sync-20260531-run2/workflow/content-library/README.md`，使该镜像副本与 2026-05-31 的仓库快照重新对齐。
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/assets/generated/.gitkeep`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/assets/shared/.gitkeep`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/logs/2026-04-08-ai-labor-answer-001-log.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/logs/baijiahao-2026-04-08-ai-labor-article-001-log.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/logs/kuaishou-2026-04-08-ai-labor-video-post-001-log.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/logs/toutiao-2026-04-08-ai-labor-article-001-log.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/logs/weibo-2026-04-08-ai-labor-video-post-001-log.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/posts/2026-04-08-ai-labor-all-platform-publish-package.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/posts/2026-04-08-ai-labor-answer-001.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/posts/2026-04-08-ai-labor-article-001.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/posts/2026-04-08-ai-labor-note-001.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/posts/2026-04-08-ai-labor-toutiao-article-001.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/posts/2026-04-08-ai-labor-video-post-001.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/posts/2026-04-08-ai-labor-video-publish-package.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-09-ai-labor-second-round-optimization-checklist.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-10-ai-work-revalued/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-10-ai-work-revalued/posts/2026-04-10-ai-work-revalued-all-platform-publish-package.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-10-ai-work-revalued/posts/2026-04-10-ai-work-revalued-answer-001-import.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-10-ai-work-revalued/posts/2026-04-10-ai-work-revalued-answer-001.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-10-ai-work-revalued/posts/2026-04-10-ai-work-revalued-article-001.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-10-ai-work-revalued/posts/2026-04-10-ai-work-revalued-toutiao-article-001.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-10-ai-work-revalued/posts/2026-04-10-ai-work-revalued-video-publish-package.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/README.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/all-platform-publish-package.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/baijiahao-article.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/campaign-brief.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/production-pack.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/publish-log.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/toutiao-article.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/toutiao-video.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/video-publish-package.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/weibo-video-post.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/xiaohongshu-note.md`
+  - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/zhihu-answer.md`
+- 批次摘要: 刷新 `automation/python-platform-takeover/.env.example`，属于本轮支持自动化链路的状态或配置更新。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/.env.example`
+- 批次摘要: 刷新 `automation/python-platform-takeover/README.md`，属于本轮支持自动化链路的状态或配置更新。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md`
+- 批次摘要: 刷新 `automation/python-platform-takeover/configs/content-package.2026-04-17-ai-first-replace-three-tasks.yaml`，属于本轮支持自动化链路的状态或配置更新。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-17-ai-first-replace-three-tasks.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-20-ai-content-platform-execution.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-21-platform-execution-next-round.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-22-platform-execution-three-steps.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-23-platform-execution-feedback-fields.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-24-platform-execution-writeback-fields.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-25-platform-execution-six-writeback-fields.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-27-platform-execution-verify-before-republish.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-28-platform-execution-early-zero-not-failure.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-29-platform-execution-lock-campaign-four-checks.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-30-repair-existing-not-republish.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-01-dachen-xiaoma-argue-fix-old-post.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-02-ai-employee-writeback-after-publish.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-03-ai-employee-data-center-review.weibo.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-03-ai-employee-data-center-review.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-04-ai-employee-three-format-comparison.kuaishou.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-04-ai-employee-three-format-comparison.weibo.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-04-ai-employee-three-format-comparison.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-audit-wait-no-republish.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-receipt-handoff.kuaishou.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-receipt-handoff.weibo.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-receipt-handoff.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-12-ai-employee-status-split-before-judgment.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-13-ai-employee-receipt-lock-before-republish.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-14-ai-employee-no-metrics-no-judgment.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-15-ai-employee-status-branch-before-rewrite.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-16-ai-employee-compare-three-before-cut.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-evidence-grid-before-verdict.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-22-ai-employee-no-new-status-not-failure.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-23-ai-employee-pending-status-before-rewrite.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-26-ai-employee-three-grid-before-verdict.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-30-ai-employee-no-rush-repost-before-receipt.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.demo.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.example.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-05-ai-employee-audit-wait-no-republish.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-12-ai-employee-status-split-before-judgment.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-13-ai-employee-receipt-lock-before-republish.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-14-ai-employee-no-metrics-no-judgment.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-15-ai-employee-status-branch-before-rewrite.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-16-ai-employee-compare-three-before-cut.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-17-ai-employee-evidence-grid-before-verdict.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-17-ai-employee-metric-window-before-rewrite.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-22-ai-employee-no-new-status-not-failure.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-23-ai-employee-pending-status-before-rewrite.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-26-ai-employee-three-grid-before-verdict.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-30-ai-employee-no-rush-repost-before-receipt.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/baijiahao.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/douyin.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/kuaishou.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/toutiao.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/wechat_channels.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/weibo.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/xiaohongshu.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/zhihu.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platforms.example.yaml`
+- 批次摘要: 刷新 `automation/python-platform-takeover/pyproject.toml`，属于本轮支持自动化链路的状态或配置更新。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/pyproject.toml`
+- 批次摘要: 刷新 `automation/python-platform-takeover/scripts/quickstart-mac.sh`，属于本轮支持自动化链路的状态或配置更新。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/quickstart-mac.sh`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/quickstart-windows.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/social-publisher.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/social-publisher.sh`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/start-chrome-cdp.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/start-chrome-cdp.sh`
+- 批次摘要: 刷新 `automation/python-platform-takeover/social_publisher/__init__.py`，属于本轮支持自动化链路的状态或配置更新。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/__init__.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/__main__.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/browser.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/cli.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/content_package.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/doctor.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/env.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platform_mapping.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/__init__.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/baijiahao.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/base.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/douyin.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/kuaishou.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/toutiao.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/weibo.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/xiaohongshu.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/zhihu.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/publish_receipts.py`
+- 批次摘要: 刷新 `automation/python-platform-takeover/social_publisher_takeover.egg-info/PKG-INFO`，属于本轮支持自动化链路的状态或配置更新。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher_takeover.egg-info/PKG-INFO`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher_takeover.egg-info/SOURCES.txt`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher_takeover.egg-info/dependency_links.txt`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher_takeover.egg-info/entry_points.txt`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher_takeover.egg-info/requires.txt`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher_takeover.egg-info/top_level.txt`
+- 批次摘要: 刷新 `automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json`，属于本轮支持自动化链路的状态或配置更新。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json.stale-1778485572`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json.stale-1778486096`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.baijiahao.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.bilibili.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.kuaishou.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.toutiao.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.zhihu.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.baijiahao.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.bilibili.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.douyin.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.kuaishou.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.toutiao.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.zhihu.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.baijiahao.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.bilibili.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.douyin.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.kuaishou.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.toutiao.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.wechat_channels.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.weibo.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.zhihu.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.baijiahao.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.bilibili.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.douyin.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.kuaishou.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.toutiao.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.wechat_channels.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.weibo.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.zhihu.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.baijiahao.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.bilibili.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.douyin.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.kuaishou.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.toutiao.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.wechat_channels.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.weibo.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.zhihu.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.baijiahao.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.bilibili.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.douyin.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.kuaishou.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.toutiao.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.wechat_channels.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.weibo.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.zhihu.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.baijiahao.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.bilibili.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.douyin.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.kuaishou.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.toutiao.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.wechat_channels.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.weibo.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.zhihu.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.baijiahao.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.bilibili.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.douyin.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.kuaishou.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.toutiao.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.wechat_channels.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.weibo.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.zhihu.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.baijiahao.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.bilibili.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.douyin.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.kuaishou.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.toutiao.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.wechat_channels.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.weibo.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.zhihu.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json.stale-override-1779789719`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json.stale-override-1779790507`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.kuaishou.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.wechat_channels.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.weibo.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.zhihu.lock.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-25-platform-execution-six-writeback-fields.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-27-platform-execution-verify-before-republish.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-28-platform-execution-early-zero-not-failure.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-29-platform-execution-lock-campaign-four-checks.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-30-repair-existing-not-republish.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-02-ai-employee-writeback-after-publish.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-03-ai-employee-data-center-review.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-04-ai-employee-three-format-comparison.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-05-ai-employee-audit-wait-no-republish.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-05-ai-employee-receipt-handoff.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-12-ai-employee-status-split-before-judgment.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-13-ai-employee-receipt-lock-before-republish.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-14-ai-employee-no-metrics-no-judgment.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-15-ai-employee-status-branch-before-rewrite.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-16-ai-employee-compare-three-before-cut.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-22-ai-employee-no-new-status-not-failure.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-23-ai-employee-pending-status-before-rewrite.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-26-ai-employee-three-grid-before-verdict.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/bilibili-management-published-20260502-1545.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-after-click-cdp-20260503.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-after-dom-publish-click-20260503.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-after-publish-click-20260523.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-before-manual-publish-cdp-20260502.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-before-publish-20260523-cover-check.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-before-publish-cdp-20260503.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-debug-after-script-stop-20260503.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-0-20260505.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-1-20260505.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-2-20260505.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-3-20260505.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-4-20260505.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-dom-inspect-0-1-20260505.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-inspect-7-20260504.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-inspect-9-20260504.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-management-published-20260502-1508.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-management-published-20260503-2107.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-management-under-review-20260502.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-management-verify-20260503.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-management-verify-20260523.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-management-verify-retry-20260523.png`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-publish-page-20260502-1.png`
+- 批次摘要: 刷新 `automation/python-platform-takeover/tests/test_browser_controller.py`，属于本轮支持自动化链路的状态或配置更新。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_browser_controller.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_content_package.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_doctor.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_env.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_platform_base.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_publish_receipts.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_wechat_channels.py`
+- 批次摘要: 刷新 `skill-center/README.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/README.md`
+- 批次摘要: 刷新 `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`
+- 批次摘要: 刷新 `skill-center/skills/dachen-founder-flywheel/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/references/review-scorecard.md`
+- 批次摘要: 刷新 `skill-center/skills/data-review/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/dashboard-export-template.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/docker-dashboard-contract.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/report-template.md`
+- 批次摘要: 刷新 `skill-center/skills/kuaishou-ops/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/kuaishou-ops/SKILL.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-approval/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-approval/SKILL.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-attendance/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-attendance/SKILL.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-base/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/dashboard-block-data-config.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/examples.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/formula-field-guide.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-advperm-disable.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-advperm-enable.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-base-copy.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-base-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-base-get.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-arrange.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-delete.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-get.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-list.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-update.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-delete.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-get.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-list.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-update.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-data-query.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-delete.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-get.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-list.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-search-options.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-update.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-delete.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-get.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-list.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-delete.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-list.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-update.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-update.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-history.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-batch-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-batch-update.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-delete.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-get.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-history-list.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-list.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-search.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-upload-attachment.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-upsert.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-delete.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-get.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-list.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-update.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-shortcut-field-properties.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-shortcut-record-value.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-delete.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-get.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-list.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-update.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-delete.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-card.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-filter.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-group.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-sort.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-timebar.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-visible-fields.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-list.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-rename.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-card.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-filter.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-group.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-sort.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-timebar.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-visible-fields.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-disable.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-enable.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-get.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-guide.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-list.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-schema.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-update.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workspace.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lookup-field-guide.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/role-config.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-calendar/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-agenda.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-freebusy.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-room-find.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-rsvp.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-schedule-meeting.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-suggestion.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-contact/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-contact/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-contact/references/lark-contact-get-user.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-contact/references/lark-contact-search-user.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-doc/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-fetch.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-media-download.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-media-insert.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-media-preview.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-search.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-update.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-whiteboard.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-drive/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-add-comment.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-create-folder.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-create-shortcut.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-delete.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-download.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-export-download.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-export.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-import.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-move.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-reactions.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-task-result.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-upload.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-event/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-event/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-event/references/lark-event-subscribe.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-im/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-identity.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-messages-list.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-search.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-update.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-mget.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-reply.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-resources-download.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-search.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-send.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-reactions.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-threads-messages-list.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-mail/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-draft-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-draft-edit.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-forward.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-message.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-messages.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-reply-all.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-reply.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-send.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-signature.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-thread.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-triage.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-watch.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-minutes/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-minutes/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-minutes/references/lark-minutes-download.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-minutes/references/lark-minutes-search.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-okr/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-contentblock.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-cycle-detail.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-cycle-list.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-entities.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-openapi-explorer/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-openapi-explorer/SKILL.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-shared/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-shared/SKILL.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-sheets/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-add-dimension.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-append.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-batch-set-style.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-create-filter-view-condition.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-create-filter-view.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-dimension.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-dropdown.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-filter-view-condition.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-delete-filter-view.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-export.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-find.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-formula.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-get-dropdown.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-get-filter-view-condition.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-get-filter-view.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-info.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-insert-dimension.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-list-filter-view-conditions.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-list-filter-views.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-merge-cells.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-move-dimension.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-read.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-replace.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-set-dropdown.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-set-style.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-unmerge-cells.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-dimension.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-dropdown.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-filter-view-condition.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-filter-view.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-write-image.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-write.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-skill-maker/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-skill-maker/SKILL.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-slides/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/examples.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-media-upload.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-xml-presentation-slide-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-xml-presentation-slide-delete.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-xml-presentations-get.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/slide-templates.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/slides_demo.xml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/slides_xml_schema_definition.xml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/xml-format-guide.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/xml-schema-quick-ref.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-task/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-assign.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-comment.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-complete.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-followers.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-get-my-tasks.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-get-related-tasks.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-reminder.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-reopen.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-search.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-set-ancestor.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-subscribe-event.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-create.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-members.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-search.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-task-add.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-update.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-vc/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/references/lark-vc-notes.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/references/lark-vc-recording.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/references/lark-vc-search.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-whiteboard/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/connectors.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/content.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/lark-whiteboard-query.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/lark-whiteboard-update.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/layout.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/schema.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/style.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/typography.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/routes/dsl.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/routes/mermaid.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/routes/svg.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/architecture.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/bar-chart.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/comparison.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/fishbone.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/flowchart.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/flywheel.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/funnel.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/line-chart.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/mermaid.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/milestone.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/organization.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/pyramid.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/swimlane.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/treemap.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-wiki/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-wiki/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-wiki/references/lark-wiki-move.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-wiki/references/lark-wiki-node-create.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-workflow-meeting-summary/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-workflow-meeting-summary/SKILL.md`
+- 批次摘要: 刷新 `skill-center/skills/lark-workflow-standup-report/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-workflow-standup-report/SKILL.md`
+- 批次摘要: 刷新 `skill-center/skills/platform-cover-ops/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/platform-cover-ops/SKILL.md`
+- 批次摘要: 刷新 `skill-center/skills/playwright/scripts/playwright_cli.sh`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh`
+- 批次摘要: 刷新 `skill-center/scripts/sync-skills.ps1`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/scripts/sync-skills.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/scripts/sync-skills.sh`
+- 批次摘要: 刷新 `skill-center/skills/seedance-video-api/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0_fast.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/extend_bridge_seedance_2_0.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/extend_single_seedance_2_0.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/i2v_first_frame_seedance_2_0.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/multimodal_reference_seedance_2_0.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/t2v_seedance_2_0.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/t2v_seedance_2_0_fast.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/api-basics.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/cover-execution.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/cover-package.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/customer-trial-intake-and-production-sop.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/prompt-rule-09-subtitle-whitelist.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/prompt-rule-10-dialogue-subtitle-hard-requirements.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/prompt-template.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/real-person-consistency.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/workflows.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/build_cover_package.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/build_cover_package.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/extract_cover_candidates.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/extract_cover_candidates.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/init_cover_package.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/init_cover_package.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/invoke_seedance_script.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/render_cover_package.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/render_cover_package.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.sh`
+- 批次摘要: 刷新 `skill-center/skills-manifest.txt`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills-manifest.txt`
+- 批次摘要: 刷新 `skill-center/skills/social-publish-automation/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/references/platform-notes.md`
+- 批次摘要: 刷新 `skill-center/skills/toutiao-ops/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/toutiao-ops/SKILL.md`
+- 批次摘要: 刷新 `skill-center/skills/wechat-channels-launchagent-keepalive/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/register-keepalive-task.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/run-keepalive.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/wechat_channels_keepalive.py`
+- 批次摘要: 刷新 `skill-center/skills/wechat-channels-ops/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/references/platform-notes.md`
+- 批次摘要: 刷新 `skill-center/skills/xiaohongshu-ops/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/references/platform-notes.md`
+- 批次摘要: 刷新 `skill-center/skills/xiaoyunque-source-video/SKILL.md`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/prompt-template.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/source-video-playbook.md`
+- 批次摘要: 刷新 `skill-center/skills/xyq-nest-skill/.gitignore`，表示该 skill-center 技能副本在本轮被重新同步。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/.gitignore`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/README.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/_common.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/download_results.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/get_thread.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/submit_run.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/upload_file.py`
+- 批次摘要: 刷新 `skills/codex-feishu-bridge-skill` 技能包内文件，和本轮桥接/评审技能资产同步保持一致。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/.bridge.env.example`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/launchd/com.codex.feishu-bridge.plist`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/package.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-logs.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-logs.sh`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.sh`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-status.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-status.sh`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-stop.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-stop.sh`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/configure_notify_target.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/configure_notify_target.sh`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.cmd`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.command`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.js`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.sh`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/run-bridge.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/run-bridge.sh`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/run-platform-script.js`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/src/bridge.js`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/architecture.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/deployment.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/user-guide.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/install_bridge_template.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/install_bridge_template.sh`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/package_skill_bundle.sh`
+- 批次摘要: 刷新 `skills/multi-platform-content-review-skill` 技能包内文件，和本轮桥接/评审技能资产同步保持一致。
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/account-slice-analysis.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/dashboard-export-template.json`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/diagnosis-and-decisions.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/docker-dashboard-contract.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/platform-metrics.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/report-template.md`
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现新的技能/支持自动化变更批次，共新增 `1`、修改 `2456`、删除 `0`。
+- 变更主体分成两部分: 一是 `automation/python-platform-takeover/` 的发布状态继续推进，二是多处自定义技能目录与 `github-nightly-sync-20260531-run2` 镜像副本被整体刷新。
+- 由于出现了新的变更批次，应在 `docs/automation/github-sync-status.md` 追加提醒，后续安排 GitHub 同步。
+
+## 2026-06-02 09:11:16 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-02T00:07:27.689Z`（本地时区为 `2026-06-02 08:07:27.689 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-06-02T00:08:40Z`（本地时区为 `2026-06-02 08:08:40 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 receipt 审计增强重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/{memory.md,state.json,last-summary.json,last-snapshot.json}`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4058` 条持久化快照逐项比对；结果更新为 `4058 -> 4059`，其中 `1` 个新文件出现、`4` 个既有文件的 `size` / `mtimeMs` 发生变化
+- 额外按有效基线 `2026-06-02T00:08:40Z` 复筛受监控文件的精确 `mtimeMs`；命中同一批 `5` 个文件，与快照差异一致
+- 结果汇总: 新增 `1`，修改 `4`，删除 `0`
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-30-ai-employee-no-rush-repost-before-receipt.zhihu.lock.json`
+  - 类型: 新增
+  - 摘要: 新增知乎发布锁，记录 Hermes 在 `2026-06-02T00:50:28.623Z` 发起 `2026-05-30-ai-employee-no-rush-repost-before-receipt` campaign 的 Zhihu 发布会话，包含 `actor_session_id`、30 分钟过期时间、关联 Hermes package 与总 receipt 路径，用于防止重复发布。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-06-01-ai-employee-pending-status-before-rewrite.yaml`
+  - 类型: 修改
+  - 摘要: 仅更新 `fingerprints` 里的 `cover_sha256`、`cover_3_4_sha256` 和 `cover_4_3_sha256`，说明这份待发布 content package 的封面资产已被替换或重导出，但视频与文案指纹保持不变。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-06-01-ai-employee-pending-status-before-rewrite.json`
+  - 类型: 修改
+  - 摘要: 同步更新 Hermes package 内的三组封面 SHA256 指纹，使发布包与 content package 指向新的封面资产版本，其他平台标题、描述、视频路径与约束未变。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/hermes-handoff/2026-06-01-ai-employee-pending-status-before-rewrite.json`
+  - 类型: 修改
+  - 摘要: handoff 记录同步新的封面指纹，并把 `updated_at` 从 `2026-06-01T16:52:36+08:00` 推进到 `2026-06-02T08:54:05+08:00`，表示该待发布交接包已按新封面重新刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/hermes-handoff/latest.json`
+  - 类型: 修改
+  - 摘要: `latest` 指针与同名 handoff 内容保持一致，同步切到新的封面 SHA256 和最新刷新时间，确保后续 Hermes 默认读取的是更新后的待发布包。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-06-02T00:08:40Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 `1` 个新的支持自动化变更批次，集中在 `automation/python-platform-takeover/`。
+- 这批变更的核心结果是：`2026-06-01-ai-employee-pending-status-before-rewrite` 的 content package、Hermes package 和 handoff 一起切换到了新封面指纹，而 `2026-05-30-ai-employee-no-rush-repost-before-receipt` 同时新增了一个 Zhihu 发布锁，说明 Hermes 已开始该平台的实际发布流程防重发占位。
+- 因为出现新的变更批次，本轮应更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，提醒后续执行 GitHub 同步。
+
+## 2026-06-02 08:08:40 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-01T23:06:57.443Z`（本地时区为 `2026-06-02 07:06:57.443 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-06-01T23:09:18Z`（本地时区为 `2026-06-02 07:09:18 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/{memory.md,state.json,last-summary.json,last-snapshot.json}`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4058` 条持久化快照逐项比对；结果保持 `4058 -> 4058`，其中 `1` 个现有文件的 `size` / `mtimeMs` 发生变化
+- 额外按有效基线 `2026-06-01T23:09:18Z` 复筛受监控文件的精确 `mtimeMs`；命中同一文件，与快照差异一致
+- 结果汇总: 新增 `0`，修改 `1`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`
+  - 类型: 修改
+  - 摘要: 在既有 `bilibili:published_verified_manager_page,toutiao:submitted_under_review` receipt 基础上，补入 `package_usage`，明确此次真实发布使用的 Hermes package、campaign、源 thread、视频路径、平台集合与 receipt 更新时间；新增 `live_authorization_override` 记录，说明原 package 禁止 live publish，但因用户明确授权而对白名单平台执行真实发布；同时在 `toutiao` 子回执和顶层都补记 `notification.feishu` 失败但 `non_blocking` 的留痕，指出 `lark-cli` 鉴权不可用导致飞书通知未发出。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-06-01T23:09:18Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 `1` 个新的支持自动化变更批次，集中在 `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`。
+- 这批变更的核心结果是：该 campaign 的发布回执从“只记录平台发布状态”推进为“同时留痕 package 使用、真实发布授权覆盖，以及飞书通知失败原因”的更完整闭环审计记录。
+- 因为出现新的变更批次，本轮应更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，提醒后续执行 GitHub 同步。
+
+## 2026-06-02 04:03:49 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-01T19:01:25.994Z`（本地时区为 `2026-06-02 03:01:25.994 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-06-01T19:04:01Z`（本地时区为 `2026-06-02 03:04:01 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/{memory.md,state.json,last-summary.json,last-snapshot.json}`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4058` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4058 -> 4058`
+- 额外按有效基线 `2026-06-01T19:04:01Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-06-01T19:04:01Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-06-01T19:04:01Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4058` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-06-02 03:04:01 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-01T17:59:56.317Z`（本地时区为 `2026-06-02 01:59:56.317 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-06-01T18:01:30Z`（本地时区为 `2026-06-02 02:01:30 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/{memory.md,state.json,last-summary.json,last-snapshot.json}`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4058` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4058 -> 4058`
+- 额外按有效基线 `2026-06-01T18:01:30Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-06-01T18:01:30Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-06-01T18:01:30Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4058` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-06-02 01:01:16 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-01T15:57:26.062Z`（本地时区为 `2026-06-01 23:57:26.062 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-06-01T16:00:40Z`（本地时区为 `2026-06-02 00:00:40 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 skill / automation 状态重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/{state.json,last-summary.json,last-snapshot.json}`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4069` 条持久化快照逐项比对；结果为 `4069 -> 4058`，其中 `9` 个现有文件的 `size` / `mtimeMs` 发生变化，另有 `11` 个旧文件路径已不存在
+- 额外按有效基线 `2026-06-01T16:00:40Z` 复筛受监控文件的精确 `mtimeMs`；命中同一组 `9` 个现有文件，与快照差异一致
+- 结果汇总: 新增 `0`，修改 `9`，删除 `11`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/SKILL.md`
+  - 类型: 修改
+  - 摘要: 把 skill 的完成标准从“直接 Ark API 出视频”扩展成“视频生成 -> 固定双封面包 -> 平台发布文案包 -> Hermes handoff / receipt”的完整交付链路，并新增女性配角 `reference_image`、迁移包同款封面风格和下游发布台账约束。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/cover-package.md`
+  - 类型: 修改
+  - 摘要: 封面规范补成固定迁移包基线，明确了大陈居中、机器人在左、女性配角在右、办公环境背景、横版模糊扩边，以及“宽会议桌镜头 / 泛化海报风”都算失败的判定口径。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/cover-execution.md`
+  - 类型: 修改
+  - 摘要: 执行脚手架升级为可直接落地的封面流程，新增 `render_cover_package.py` / `build_cover_package.py` 两段式或一键式命令示例，并说明 Pillow 渲染与迁移包脚本的优先级。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/.bridge.env.example`
+  - 类型: 修改
+  - 摘要: 模板环境变量收敛为发布通知 chat、进度通知 chat、监控线程名和扩展后的成功关键字集合，显式支持把发布成功推送和进度推送分离到不同 Feishu 会话。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/src/bridge.js`
+  - 类型: 修改
+  - 摘要: Bridge runtime 改成围绕“监控线程 + 发布完成推送 + 节流进度推送”工作，内置 `/history`、`/setprogresshere`、最近线程记忆与基于关键字的自动通知判断，模板体积也明显缩小。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART.md`
+  - 类型: 修改
+  - 摘要: 快装文档补齐 Windows PowerShell 对照步骤，并把 `configure_notify_target`、`/setnotifyhere`、`/setprogresshere`、`/status`、`/threads` 和镜像查看纳入标准安装验收。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/deployment.md`
+  - 类型: 修改
+  - 摘要: 部署文档新增 Windows 侧常驻方式、运行态文件、发布监控环境变量和推送目标复核要求，把 bridge 从“能跑”升级成“能监控发布线程并主动推送”的部署口径。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/user-guide.md`
+  - 类型: 修改
+  - 摘要: 用户指南新增 `/history`、`/setprogresshere`、发布完成自动推送、Windows `mirror-view` 启动方式与跨端会话绑定说明，补齐 Feishu 侧实际操作闭环。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/SKILL.md`
+  - 类型: 修改
+  - 摘要: 技能说明从自带脚本调用转成以共享 `automation/python-platform-takeover/scripts/social-publisher.ps1` 为 Windows 主入口，同时加强 handoff 包约束、receipt 防重发、封面可读性和视频号管理页核验规则；技能目录内原有脚本包装层已被移除。
+
+### 删除文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/scripts/send_feishu_notify.cmd`
+  - 类型: 删除
+  - 摘要: 删除 social publish skill 自带的 Windows CMD 通知启动器，不再保留按技能目录分发的 Feishu 推送包装脚本。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/scripts/send_feishu_notify.ps1`
+  - 类型: 删除
+  - 摘要: 删除 social publish skill 自带的 Windows PowerShell 通知启动器，通知职责改由共享发布链路和桥接能力承接。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/download_results.cmd`
+  - 类型: 删除
+  - 摘要: 删除 `download_results.py` 的 CMD 包装器，Windows 侧不再保留双击式下载结果入口。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/download_results.ps1`
+  - 类型: 删除
+  - 摘要: 删除 `download_results.py` 的 PowerShell 包装器，保留 Python 主脚本本体。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/get_thread.cmd`
+  - 类型: 删除
+  - 摘要: 删除 `get_thread.py` 的 CMD 包装器，线程查询入口收敛回 Python 脚本。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/get_thread.ps1`
+  - 类型: 删除
+  - 摘要: 删除 `get_thread.py` 的 PowerShell 包装器，减少 Windows 专用启动层。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/invoke_xyq_script.ps1`
+  - 类型: 删除
+  - 摘要: 删除统一的 XYQ PowerShell 调度包装器，Windows 调用不再经过额外转发脚本。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/submit_run.cmd`
+  - 类型: 删除
+  - 摘要: 删除 `submit_run.py` 的 CMD 包装器，提交运行入口收敛回 Python 脚本。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/submit_run.ps1`
+  - 类型: 删除
+  - 摘要: 删除 `submit_run.py` 的 PowerShell 包装器，去掉 Windows 双入口维护成本。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/upload_file.cmd`
+  - 类型: 删除
+  - 摘要: 删除 `upload_file.py` 的 CMD 包装器，文件上传入口改为直接运行 Python 实现。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/upload_file.ps1`
+  - 类型: 删除
+  - 摘要: 删除 `upload_file.py` 的 PowerShell 包装器，Windows 本地辅助脚本进一步精简。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-06-01T16:00:40Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现 `1` 个新的技能 / 支持自动化变更批次，集中在 `~/.codex/skills/seedance-video-api`、`skills/codex-feishu-bridge-skill/`、`skill-center/skills/social-publish-automation/` 和 `skill-center/skills/xyq-nest-skill/`。
+- 这批变更的核心方向是：Seedance 技能把“生成后必须补齐封面包与发布包”写成硬约束；Feishu bridge 模板升级为“发布成功通知 + 运行中进度推送”双通道；两个 skill 的 Windows 包装脚本则被集中裁撤，转向共享脚本或直接 Python 入口。
+- 因为出现新的变更批次，本轮应更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，提醒后续执行 GitHub 同步。
+
 ## 2026-06-01 22:56:20 CST (+0800)
 - 扫描范围:
 - `/Users/baishangjituan/.codex/skills`
@@ -53137,3 +56144,1675 @@
 ### 变更摘要
 - 本轮没有发现晚于有效基线 `2026-06-01T14:59:34.620534Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4069` 条快照一致。
 - 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-06-02 02:01:34 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-01T16:58:26.179Z`（本地时区为 `2026-06-02 00:58:26.179 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-06-01T17:02:40Z`（本地时区为 `2026-06-02 01:02:40 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 `0` 新增 / `9` 修改 / `11` 删除重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/{memory.md,state.json,last-summary.json,last-snapshot.json}`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4058` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4058 -> 4058`
+- 额外按有效基线 `2026-06-01T17:02:40Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-06-01T17:02:40Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-06-01T17:02:40Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4058` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-06-02 05:05:57 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-01T20:02:26.947Z`（本地时区为 `2026-06-02 04:02:26.947 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-06-01T20:03:42Z`（本地时区为 `2026-06-02 04:03:42 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 `0` 新增 / `0` 修改 / `0` 删除重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/{memory.md,state.json,last-summary.json,last-snapshot.json}`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 对顶层符号链接 `/Users/baishangjituan/.codex/skills/__windows_translate_repo__` 做了额外排除校验；它仍指向当前仓库根目录，属于既有镜像入口，不计为新技能文件
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4058` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4058 -> 4058`
+- 额外按有效基线 `2026-06-01T20:03:42Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-06-01T20:03:42Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-06-01T20:03:42Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4058` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-06-02 06:06:11 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-01T21:03:56.970Z`（本地时区为 `2026-06-02 05:03:56.970 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-06-01T21:05:57Z`（本地时区为 `2026-06-02 05:05:57 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 `0` 新增 / `0` 修改 / `0` 删除重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/{memory.md,state.json,last-summary.json,last-snapshot.json}`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4058` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4058 -> 4058`
+- 额外按有效基线 `2026-06-01T21:05:57Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-06-01T21:05:57Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-06-01T21:05:57Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4058` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-06-02 07:08:27 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-01T22:04:57.709Z`（本地时区为 `2026-06-02 06:04:57.709 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-06-01T22:06:11Z`（本地时区为 `2026-06-02 06:06:11 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 `0` 新增 / `0` 修改 / `0` 删除重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/{memory.md,state.json,last-summary.json,last-snapshot.json}`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4058` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4058 -> 4058`
+- 额外按有效基线 `2026-06-01T22:06:11Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-06-01T22:06:11Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-06-01T22:06:11Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4058` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-06-02 10:12:25 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-02T01:09:28.071Z`（本地时区为 `2026-06-02 09:09:28.071 CST (+0800)`）
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-06-02T01:10:59Z`（本地时区为 `2026-06-02 09:10:59 CST (+0800)`）；由于它更晚，本轮继续以该时间作为有效基线，避免把上一轮已吸收的 `1` 新增 / `4` 修改 / `0` 删除重复记账
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/{memory.md,state.json,last-summary.json,last-snapshot.json}`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4059` 条持久化快照逐项比对；路径集合、`size` 与基于原始 `mtimeMs` 的 1ms 容差比较均一致，因此结果保持 `4059 -> 4059`
+- 额外按有效基线 `2026-06-02T01:10:59Z` 复筛受监控文件的精确 `mtimeMs`；结果为空，说明上一轮完成后没有新的新增或修改
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-06-02T01:10:59Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮没有发现晚于有效基线 `2026-06-02T01:10:59Z` 的新技能或支持自动化文件变更批次；当前受监控文件树与上一轮持久化的 `4059` 条快照一致。
+- 因为没有新的变更批次，本轮不更新 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`。
+
+## 2026-06-02 12:17:49 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-02T03:18:21Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前记录的上一轮实际完成时间为 `2026-06-02T03:18:21Z`；由于它更晚，本轮继续以该时间作为有效基线
+- 判定依据:
+- 复核 `/Users/baishangjituan/.codex/automations/skill-monitor/{memory.md,state.json,last-summary.json,last-snapshot.json}`
+- 按既有监控口径重扫四个根目录，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`，避免把日志写入本身计入技能变更
+- 将当前过滤后的文件树与上一轮 `last-snapshot.json` 的 `4061` 条持久化快照逐项比对；结果更新为 `4061 -> 4062`
+- 结果汇总: 新增 `1`，修改 `1202`，删除 `0`
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-06-01-ai-employee-pending-status-before-rewrite.weibo.lock.json` | added | 新增微博 duplicate-guard 发布锁，记录该 campaign 已占位微博侧防重发状态。
+
+### 修改文件
+- `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/SKILL.md` | modified | `clash-verge-standard-env` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/.bridge.env.example` | modified | `codex-feishu-bridge` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/package.json` | modified | `codex-feishu-bridge` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/bridge-start.sh` | modified | `codex-feishu-bridge` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/bridge-status.sh` | modified | `codex-feishu-bridge` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/bridge-stop.sh` | modified | `codex-feishu-bridge` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/assets/template/scripts/mirror-view.sh` | modified | `codex-feishu-bridge` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/references/INSTALL-QUICKSTART.md` | modified | `codex-feishu-bridge` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/references/deployment.md` | modified | `codex-feishu-bridge` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/codex-feishu-bridge/references/user-guide.md` | modified | `codex-feishu-bridge` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/agents/openai.yaml` | modified | `coze-seedance15pro-sales-workflow` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/coze-seedance15pro-sales-workflow/scripts/run_workflow.py` | modified | `coze-seedance15pro-sales-workflow` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/dachen-founder-flywheel/references/review-scorecard.md` | modified | `dachen-founder-flywheel` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/data-review/agents/openai.yaml` | modified | `data-review` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/data-review/references/account-slice-analysis.md` | modified | `data-review` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/data-review/references/diagnosis-and-decisions.md` | modified | `data-review` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/data-review/references/docker-dashboard-contract.md` | modified | `data-review` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/data-review/references/platform-metrics.md` | modified | `data-review` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/.env.dashboard.example` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/.github/workflows/dashboard-sync-checks.yml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/.gitignore` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/CHANGELOG.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/.env.example` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-21-platform-execution-next-round.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-22-platform-execution-three-steps.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-24-platform-execution-writeback-fields.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-25-platform-execution-six-writeback-fields.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-29-platform-execution-lock-campaign-four-checks.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-04-30-repair-existing-not-republish.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-03-ai-employee-data-center-review.weibo.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-03-ai-employee-data-center-review.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-04-ai-employee-three-format-comparison.kuaishou.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-receipt-handoff.kuaishou.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-receipt-handoff.weibo.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-13-ai-employee-receipt-lock-before-republish.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-14-ai-employee-no-metrics-no-judgment.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-15-ai-employee-status-branch-before-rewrite.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-22-ai-employee-no-new-status-not-failure.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-23-ai-employee-pending-status-before-rewrite.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.2026-05-30-ai-employee-no-rush-repost-before-receipt.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.demo.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/content-package.example.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-05-ai-employee-audit-wait-no-republish.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-12-ai-employee-status-split-before-judgment.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-15-ai-employee-status-branch-before-rewrite.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-16-ai-employee-compare-three-before-cut.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-17-ai-employee-evidence-grid-before-verdict.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-26-ai-employee-three-grid-before-verdict.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/hermes-package.2026-05-30-ai-employee-no-rush-repost-before-receipt.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platform-mappings/baijiahao.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platform-mappings/toutiao.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platform-mappings/wechat_channels.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/configs/platforms.example.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/pyproject.toml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/scripts/social-publisher.ps1` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/scripts/social-publisher.sh` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/scripts/start-chrome-cdp.ps1` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/browser.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/cli.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/content_package.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/doctor.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/base.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/douyin.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/weibo.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/social_publisher/platforms/xiaohongshu.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.baijiahao.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.baijiahao.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.bilibili.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.toutiao.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.zhihu.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.bilibili.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.kuaishou.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.toutiao.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.wechat_channels.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.wechat_channels.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.weibo.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.zhihu.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.bilibili.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.douyin.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.kuaishou.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.weibo.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.zhihu.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.kuaishou.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.toutiao.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.wechat_channels.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.bilibili.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.kuaishou.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.toutiao.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.wechat_channels.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.zhihu.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.baijiahao.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.bilibili.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.zhihu.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.baijiahao.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.bilibili.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.douyin.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.zhihu.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json.stale-override-1779789719` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.kuaishou.lock.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-04-24-platform-execution-writeback-fields.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-04-25-platform-execution-six-writeback-fields.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-04-29-platform-execution-lock-campaign-four-checks.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-04-30-repair-existing-not-republish.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-03-ai-employee-data-center-review.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-05-ai-employee-audit-wait-no-republish.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-05-ai-employee-receipt-handoff.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-13-ai-employee-receipt-lock-before-republish.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-16-ai-employee-compare-three-before-cut.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-receipts/2026-05-22-ai-employee-no-new-status-not-failure.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/bilibili-management-published-20260502-1545.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-after-publish-click-20260523.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-before-publish-20260523-cover-check.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-0-20260505.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-1-20260505.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-2-20260505.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-inspect-9-20260504.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-management-published-20260503-2107.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-management-under-review-20260502.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/screenshots/kuaishou-publish-page-20260502-1.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_env.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_publish_receipts.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/tests/test_wechat_channels.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/automation/skill-change-monitor.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/dashboard-sync-runbook.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/dashboard-upload-api-contract.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/python-automation-roadmap.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/docs/system-architecture.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/package.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/dashboard-export-review.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/dashboard-sync-review.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/dashboard-sync.ps1` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/dashboard-upload.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/douyin-packaging-guard.mjs` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/init_campaign.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/lib/load-dashboard-env.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/lib/workspace-paths.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/scripts/validate-dashboard-export.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills-manifest.txt` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/apis-minimal-and-controllers.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/data-state-and-services.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/security-and-identity.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/testing-performance-and-operations.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/ui-blazor.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/ui-razor-pages.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/aspnet-core/references/versioning-and-upgrades.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/baijiahao-ops/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/baijiahao-ops/references/platform-notes.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/references/interactive-state-sync-patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/references/search-fetch-standard.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/references/window-openai-patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/chatgpt-apps/scripts/scaffold_node_ext_apps.mjs` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/clash-verge-standard-env/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/clash-verge-standard-env/scripts/apply_standard_env.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/agents-sdk/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/agents-sdk/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/agents-sdk/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-gateway/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-gateway/sdk-integration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-search/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-search/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ai-search/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/analytics-engine/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api-shield/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api-shield/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api-shield/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/api/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/argo-smart-routing/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/argo-smart-routing/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bindings/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bindings/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bindings/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/bot-management/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/browser-rendering/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/browser-rendering/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/c3/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/c3/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cache-reserve/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cache-reserve/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/containers/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/containers/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/containers/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/containers/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/containers/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cron-triggers/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/cron-triggers/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ddos/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ddos/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/ddos/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/do-storage/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/do-storage/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/do-storage/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/durable-objects/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/durable-objects/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/durable-objects/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/durable-objects/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-routing/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-workers/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/email-workers/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/hyperdrive/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/hyperdrive/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/hyperdrive/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/images/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/images/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/kv/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/kv/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/kv/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/miniflare/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/miniflare/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/network-interconnect/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/network-interconnect/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/observability/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages-functions/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages-functions/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages-functions/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pages/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pipelines/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pipelines/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pipelines/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pulumi/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/pulumi/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/queues/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/queues/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/queues/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-data-catalog/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-sql/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-sql/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2-sql/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/r2/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtime-sfu/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtime-sfu/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtime-sfu/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtimekit/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/realtimekit/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/sandbox/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/sandbox/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/sandbox/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/secrets-store/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/secrets-store/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/secrets-store/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/smart-placement/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/smart-placement/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/smart-placement/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/snippets/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/snippets/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/snippets/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/snippets/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/snippets/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/spectrum/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/spectrum/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/spectrum/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/static-assets/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/static-assets/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/static-assets/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/stream/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/stream/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/stream/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/stream/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/stream/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tail-workers/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tail-workers/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tail-workers/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/terraform/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/terraform/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/terraform/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/terraform/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tunnel/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/tunnel/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turnstile/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turnstile/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turnstile/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/turnstile/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/vectorize/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/waf/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/waf/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/waf/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/waf/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/waf/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/web-analytics/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workerd/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workerd/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-ai/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-ai/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-for-platforms/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-for-platforms/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-playground/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-playground/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-playground/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-vpc/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers-vpc/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers/frameworks.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workers/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workflows/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workflows/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/workflows/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/wrangler/gotchas.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/zaraz/IMPLEMENTATION_SUMMARY.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/zaraz/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/zaraz/configuration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/cloudflare-deploy/references/zaraz/patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/.bridge.env.example` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/launchd/com.codex.feishu-bridge.plist` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/assets/template/src/bridge.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/references/INSTALL-QUICKSTART.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/references/architecture.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/codex-feishu-bridge/references/deployment.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/config.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/coze-seedance15pro-sales-workflow/references/manifest.yml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/references/daily-automation-spec.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/references/weekly-content-calendar.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/dachen-founder-flywheel/scripts/validate_flywheel_skill.rb` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/data-review/references/dashboard-export-template.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/data-review/references/diagnosis-and-decisions.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/develop-web-game/LICENSE.txt` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/develop-web-game/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/develop-web-game/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/develop-web-game/scripts/web_game_playwright_client.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/doc/LICENSE.txt` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/doc/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/douyin-ops/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/douyin-ops/references/platform-notes.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/references/mapping-checklist.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-code-connect-components/scripts/normalize_node_id.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/assets/figma-small.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/assets/figma.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/assets/icon.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-design-system-rules/references/rule-template.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/assets/figma-small.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/assets/figma.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-create-new-file/assets/icon.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-design/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-design/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-design/assets/figma-small.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/assets/figma-small.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/assets/figma.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/references/error-recovery.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/cleanupOrphans.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/createComponentWithVariants.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/createDocumentationPage.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/rehydrateState.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-generate-library/scripts/validateCreation.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-implement-design/LICENSE.txt` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-implement-design/assets/figma.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-implement-design/assets/icon.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/LICENSE.TXT` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/assets/figma.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/assets/icon.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/maintainers.yml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/component-patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/maintainers.yml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/plugin-api-patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/plugin-api-standalone.d.ts` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/variable-patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/maintainers.yml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-text-styles.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-variables--creating.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-variables--using.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma-use/references/working-with-design-systems/wwds-variables.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/assets/figma-small.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/assets/figma.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/assets/icon.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/references/figma-mcp-config.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/figma/references/figma-tools-and-prompts.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/frontend-skill/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-address-comments/LICENSE.txt` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-address-comments/assets/github-small.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-fix-ci/assets/github-small.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-fix-ci/assets/github.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/gh-fix-ci/scripts/inspect_pr_checks.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/assets/jupyter-small.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/assets/tutorial-template.ipynb` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/references/experiment-patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/jupyter-notebook/references/quality-checklist.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/kuaishou-ops/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/kuaishou-ops/references/platform-notes.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-approval/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/examples.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/formula-field-guide.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-arrange.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-block-create.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-block-delete.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-block-get.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-list.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard-update.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-dashboard.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-field-list.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-field-search-options.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-field-update.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-field.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-questions-update.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-questions.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form-update.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-form.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-history-list.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-list.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-record-search.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-role-get.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-role-list.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-role-update.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-table-get.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-table-list.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-table-update.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-table.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-create.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-get-timebar.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-get-visible-fields.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-get.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-set-sort.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-set-timebar.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view-set-visible-fields.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-view.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-create.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-guide.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-list.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow-update.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workflow.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lark-base-workspace.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-base/references/lookup-field-guide.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/references/lark-calendar-create.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/references/lark-calendar-freebusy.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-calendar/references/lark-calendar-room-find.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-contact/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-contact/references/lark-contact-get-user.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-contact/references/lark-contact-search-user.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-fetch.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-media-download.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-media-insert.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-doc/references/lark-doc-media-preview.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-add-comment.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-create-folder.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-create-shortcut.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-import.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-move.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-reactions.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-drive/references/lark-drive-upload.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-event/references/lark-event-subscribe.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-chat-create.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-messages-mget.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-messages-reply.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-im/references/lark-im-threads-messages-list.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-forward.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-message.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-messages.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-reply-all.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-signature.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-thread.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-triage.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-mail/references/lark-mail-watch.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-okr/references/lark-okr-contentblock.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-okr/references/lark-okr-cycle-detail.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-okr/references/lark-okr-cycle-list.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-add-dimension.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-append.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-delete-dimension.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-delete-dropdown.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-delete-filter-view-condition.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-delete-filter-view.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-get-filter-view-condition.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-get-filter-view.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-info.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-insert-dimension.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-merge-cells.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-move-dimension.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-update-dimension.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-update-dropdown.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-update-filter-view-condition.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-sheets/references/lark-sheets-update-filter-view.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/examples.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/lark-slides-create.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/slide-templates.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/slides_demo.xml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-slides/references/xml-schema-quick-ref.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-assign.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-comment.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-reminder.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-reopen.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-search.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-set-ancestor.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-task/references/lark-task-update.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-vc/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-vc/references/lark-vc-notes.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-vc/references/lark-vc-recording.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/lark-whiteboard-query.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/lark-whiteboard-update.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/layout.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/references/style.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/architecture.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/bar-chart.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/comparison.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/line-chart.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/mermaid.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/milestone.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-whiteboard/scenes/organization.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-wiki/references/lark-wiki-move.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-wiki/references/lark-wiki-node-create.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-workflow-meeting-summary/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/lark-workflow-standup-report/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/linear/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/linear/assets/linear-small.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/assets/netlify-small.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/netlify-deploy/references/netlify-toml.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/LICENSE.txt` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/evaluations/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/examples/conversation-to-faq.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/examples/decision-capture.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/reference/decision-log-database.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/reference/documentation-database.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/reference/faq-database.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/reference/learning-database.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-knowledge-capture/reference/team-wiki-database.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/assets/notion-small.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/assets/notion.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/examples/project-decision.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/examples/sprint-planning.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/reference/one-on-one-template.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/reference/retrospective-template.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/reference/sprint-planning-template.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/reference/status-update-template.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-meeting-intelligence/reference/template-selection-guide.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/LICENSE.txt` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/assets/notion.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/evaluations/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/examples/competitor-analysis.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/citations.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/comparison-format.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/comparison-template.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/comprehensive-report-template.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/research-summary-format.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-research-documentation/reference/research-summary-template.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/evaluations/spec-to-tasks.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/examples/api-feature.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/reference/progress-tracking.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/reference/progress-update-template.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/notion-spec-to-implementation/reference/standard-implementation-plan.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/pdf/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/pdf/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/pdf/assets/pdf.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/references/cover-playbook.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/references/cover-prompt-kit.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/references/cover-template-matrix.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-cover-ops/scripts/validate_cover_skill.rb` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/platform-ops-hub/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright-interactive/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright-interactive/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright-interactive/assets/playwright-small.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright-interactive/assets/playwright.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/assets/playwright-small.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/assets/playwright.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/references/cli.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/playwright/references/workflows.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/python-django.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/render-small.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/render.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/assets/static-site.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/configuration-guide.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/error-patterns.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/post-deploy-checks.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/service-types.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/render-deploy/references/troubleshooting-basics.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/LICENSE.txt` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/scripts/macos_display_info.swift` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/scripts/macos_permissions.swift` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/scripts/macos_window_info.swift` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/screenshot/scripts/take_screenshot.ps1` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/golang-general-backend-security.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/javascript-general-web-frontend-security.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/python-django-web-server-security.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/python-fastapi-web-server-security.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-best-practices/references/python-flask-web-server-security.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/scripts/build_ownership_map.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/scripts/query_ownership.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-ownership-map/scripts/run_ownership_map.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-threat-model/LICENSE.txt` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/security-threat-model/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/extend_single_seedance_2_0.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/i2v_first_frame_seedance_2_0.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/multimodal_reference_seedance_2_0.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/assets/examples/t2v_seedance_2_0.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/api-basics.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/prompt-template.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/references/real-person-consistency.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/build_cover_package.ps1` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/build_cover_package.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/invoke_seedance_script.ps1` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/render_cover_package.ps1` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/render_cover_package.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/seedance-video-api/scripts/seedance_cli.sh` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sentry/LICENSE.txt` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sentry/assets/sentry-small.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/code.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/image.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/layout_builders.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/svg.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/assets/pptxgenjs_helpers/text.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/references/pptxgenjs-helpers.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/scripts/create_montage.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/slides/scripts/detect_font.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/social-publish-automation/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/social-publish-automation/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/assets/sora-small.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/assets/sora.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/references/cinematic-shots.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/references/video-api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/sora/scripts/sora.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/LICENSE.txt` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/ivr.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/narration.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/prompting.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/sample-prompts.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/speech/references/voice-directions.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/assets/spreadsheet-small.svg` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/assets/spreadsheet.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/references/examples/openpyxl/read_existing_spreadsheet.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/spreadsheet/references/examples/openpyxl/styling_spreadsheet.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/toutiao-ops/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/toutiao-ops/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/toutiao-publish/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/transcribe/references/api.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/vercel-deploy/LICENSE.txt` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/vercel-deploy/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/vercel-deploy/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-ops/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-channels-ops/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-moments-desktop-ops/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-moments-desktop-ops/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-moments-desktop-ops/references/desktop-posting-guide.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-moments-desktop-ops/scripts/check_wechat_moments_support.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/wechat-video-channel-share-desktop-ops/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/weibo-ops/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/weibo-ops/references/platform-notes.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/LICENSE.txt` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/assets/winui.png` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/_sections.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/accessibility-input-and-localization.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/controls-layout-and-adaptive-ui.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/foundation-setup-and-project-selection.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/foundation-template-first-recovery.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/sample-source-map.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/shell-navigation-and-windowing.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/styling-theming-materials-and-icons.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/testing-debugging-and-review-checklists.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/winui-app/references/windows-app-sdk-lifecycle-notifications-and-deployment.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xiaohongshu-ops/references/platform-notes.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xiaoyunque-source-video/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xiaoyunque-source-video/references/prompt-template.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/scripts/get_thread.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/scripts/submit_run.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/xyq-nest-skill/scripts/upload_file.py` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/yeet/LICENSE.txt` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skill-center/skills/zhihu-ops/references/platform-notes.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/agents/openai.yaml` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/package.json` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-logs.ps1` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-logs.sh` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.ps1` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/configure_notify_target.ps1` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/configure_notify_target.sh` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.cmd` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.command` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/run-bridge.ps1` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/run-bridge.sh` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/scripts/run-platform-script.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/assets/template/src/bridge.js` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/scripts/install_bridge_template.ps1` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/scripts/install_bridge_template.sh` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/codex-feishu-bridge-skill/scripts/package_skill_bundle.sh` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/SKILL.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/references/docker-dashboard-contract.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/references/platform-metrics.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/skills/multi-platform-content-review-skill/references/report-template.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/assets/generated/.gitkeep` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/assets/shared/.gitkeep` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/logs/2026-04-08-ai-labor-answer-001-log.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/posts/2026-04-08-ai-labor-note-001.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/posts/2026-04-08-ai-labor-toutiao-article-001.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/posts/2026-04-08-ai-labor-video-post-001.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/posts/2026-04-08-ai-labor-video-publish-package.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-09-ai-labor-second-round-optimization-checklist.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-10-ai-work-revalued/README.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-10-ai-work-revalued/posts/2026-04-10-ai-work-revalued-all-platform-publish-package.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/all-platform-publish-package.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/baijiahao-article.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/campaign-brief.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/weibo-video-post.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/templates/xiaohongshu-note.md` | modified | 夜间 GitHub 镜像副本重同步，带入最新技能或支持自动化内容。
+- `/Users/baishangjituan/.codex/skills/hermes-feishu-operator/agents/openai.yaml` | modified | `hermes-feishu-operator` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.sh` | modified | `hermes-feishu-operator` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-approval/SKILL.md` | modified | `lark-approval` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-attendance/SKILL.md` | modified | `lark-attendance` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/SKILL.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/formula-field-guide.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-advperm-disable.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-advperm-enable.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-base-copy.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-block-update.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-create.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard-update.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-dashboard.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-get.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-list.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field-update.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-field.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-create.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-delete.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-create.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-list.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form-questions-update.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-form.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-history.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-delete.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-list.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-upload-attachment.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-record-upsert.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-role-get.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-shortcut-record-value.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-create.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-delete.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-get.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-table-list.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-create.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-card.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-filter.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-group.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-sort.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get-timebar.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-get.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-list.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-card.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-filter.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-group.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-sort.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-view-set-visible-fields.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-enable.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-schema.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lark-base-workflow-update.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/lookup-field-guide.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-base/references/role-config.md` | modified | `lark-base` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-calendar/SKILL.md` | modified | `lark-calendar` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-agenda.md` | modified | `lark-calendar` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-create.md` | modified | `lark-calendar` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-schedule-meeting.md` | modified | `lark-calendar` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-calendar/references/lark-calendar-suggestion.md` | modified | `lark-calendar` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-contact/SKILL.md` | modified | `lark-contact` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-contact/references/lark-contact-search-user.md` | modified | `lark-contact` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-fetch.md` | modified | `lark-doc` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-media-download.md` | modified | `lark-doc` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-media-preview.md` | modified | `lark-doc` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-doc/references/lark-doc-update.md` | modified | `lark-doc` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-download.md` | modified | `lark-drive` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-export-download.md` | modified | `lark-drive` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-export.md` | modified | `lark-drive` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-reactions.md` | modified | `lark-drive` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-drive/references/lark-drive-upload.md` | modified | `lark-drive` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-event/SKILL.md` | modified | `lark-event` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-event/references/lark-event-subscribe.md` | modified | `lark-event` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-create.md` | modified | `lark-im` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-chat-messages-list.md` | modified | `lark-im` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-resources-download.md` | modified | `lark-im` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-search.md` | modified | `lark-im` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-messages-send.md` | modified | `lark-im` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-reactions.md` | modified | `lark-im` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-im/references/lark-im-threads-messages-list.md` | modified | `lark-im` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-mail/SKILL.md` | modified | `lark-mail` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-forward.md` | modified | `lark-mail` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-messages.md` | modified | `lark-mail` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-reply.md` | modified | `lark-mail` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-mail/references/lark-mail-signature.md` | modified | `lark-mail` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-minutes/SKILL.md` | modified | `lark-minutes` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-okr/SKILL.md` | modified | `lark-okr` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-contentblock.md` | modified | `lark-okr` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-cycle-detail.md` | modified | `lark-okr` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-okr/references/lark-okr-entities.md` | modified | `lark-okr` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-openapi-explorer/SKILL.md` | modified | `lark-openapi-explorer` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-add-dimension.md` | modified | `lark-sheets` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-create-filter-view.md` | modified | `lark-sheets` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-create.md` | modified | `lark-sheets` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-delete-dimension.md` | modified | `lark-sheets` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-export.md` | modified | `lark-sheets` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-find.md` | modified | `lark-sheets` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-insert-dimension.md` | modified | `lark-sheets` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-list-filter-view-conditions.md` | modified | `lark-sheets` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-merge-cells.md` | modified | `lark-sheets` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-replace.md` | modified | `lark-sheets` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-set-dropdown.md` | modified | `lark-sheets` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-dimension.md` | modified | `lark-sheets` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-dropdown.md` | modified | `lark-sheets` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-filter-view-condition.md` | modified | `lark-sheets` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-update-filter-view.md` | modified | `lark-sheets` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-sheets/references/lark-sheets-write-image.md` | modified | `lark-sheets` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-skill-maker/SKILL.md` | modified | `lark-skill-maker` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-xml-presentation-slide-create.md` | modified | `lark-slides` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/lark-slides-xml-presentation-slide-delete.md` | modified | `lark-slides` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/slides_xml_schema_definition.xml` | modified | `lark-slides` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-slides/references/xml-schema-quick-ref.md` | modified | `lark-slides` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-task/SKILL.md` | modified | `lark-task` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-followers.md` | modified | `lark-task` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-get-my-tasks.md` | modified | `lark-task` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-reminder.md` | modified | `lark-task` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-reopen.md` | modified | `lark-task` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-set-ancestor.md` | modified | `lark-task` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-create.md` | modified | `lark-task` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-search.md` | modified | `lark-task` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-task/references/lark-task-tasklist-task-add.md` | modified | `lark-task` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-vc/SKILL.md` | modified | `lark-vc` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-vc/references/lark-vc-notes.md` | modified | `lark-vc` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-vc/references/lark-vc-recording.md` | modified | `lark-vc` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-vc/references/lark-vc-search.md` | modified | `lark-vc` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/SKILL.md` | modified | `lark-whiteboard` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/content.md` | modified | `lark-whiteboard` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/lark-whiteboard-update.md` | modified | `lark-whiteboard` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/layout.md` | modified | `lark-whiteboard` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/references/typography.md` | modified | `lark-whiteboard` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/architecture.md` | modified | `lark-whiteboard` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/bar-chart.md` | modified | `lark-whiteboard` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/fishbone.md` | modified | `lark-whiteboard` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/flywheel.md` | modified | `lark-whiteboard` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/line-chart.md` | modified | `lark-whiteboard` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/pyramid.md` | modified | `lark-whiteboard` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-whiteboard/scenes/swimlane.md` | modified | `lark-whiteboard` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-wiki/SKILL.md` | modified | `lark-wiki` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-wiki/references/lark-wiki-move.md` | modified | `lark-wiki` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/lark-workflow-standup-report/SKILL.md` | modified | `lark-workflow-standup-report` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/agents/openai.yaml` | modified | `seedance-video-api` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/extend_bridge_seedance_2_0.json` | modified | `seedance-video-api` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/extend_single_seedance_2_0.json` | modified | `seedance-video-api` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/assets/examples/i2v_first_frame_seedance_2_0.json` | modified | `seedance-video-api` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/cover-package.md` | modified | `seedance-video-api` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/prompt-template.md` | modified | `seedance-video-api` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/real-person-consistency.md` | modified | `seedance-video-api` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/references/workflows.md` | modified | `seedance-video-api` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/build_cover_package.py` | modified | `seedance-video-api` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/seedance-video-api/scripts/seedance_cli.py` | modified | `seedance-video-api` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/wechat-channels-launchagent-keepalive/agents/openai.yaml` | modified | `wechat-channels-launchagent-keepalive` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/xiaohongshu-ops/references/platform-notes.md` | modified | `xiaohongshu-ops` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/xiaoyunque-source-video/agents/openai.yaml` | modified | `xiaoyunque-source-video` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/xiaoyunque-source-video/references/source-video-playbook.md` | modified | `xiaoyunque-source-video` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/xyq-nest-skill/.gitignore` | modified | `xyq-nest-skill` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/xyq-nest-skill/scripts/download_results.py` | modified | `xyq-nest-skill` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/.codex/skills/xyq-nest-skill/scripts/get_thread.py` | modified | `xyq-nest-skill` 本地 Codex 技能副本刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/.env.example` | modified | 更新发布接管自动化的示例环境变量模板。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md` | modified | 更新发布接管自动化使用说明。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-22-platform-execution-three-steps.yaml` | modified | 刷新对应 campaign 的 content package 配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-25-platform-execution-six-writeback-fields.yaml` | modified | 刷新对应 campaign 的 content package 配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-27-platform-execution-verify-before-republish.yaml` | modified | 刷新对应 campaign 的 content package 配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-04-30-repair-existing-not-republish.yaml` | modified | 刷新对应 campaign 的 content package 配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-01-dachen-xiaoma-argue-fix-old-post.yaml` | modified | 刷新对应 campaign 的 content package 配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-03-ai-employee-data-center-review.weibo.yaml` | modified | 刷新对应 campaign 的 content package 配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-04-ai-employee-three-format-comparison.kuaishou.yaml` | modified | 刷新对应 campaign 的 content package 配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-04-ai-employee-three-format-comparison.weibo.yaml` | modified | 刷新对应 campaign 的 content package 配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-audit-wait-no-republish.yaml` | modified | 刷新对应 campaign 的 content package 配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-receipt-handoff.kuaishou.yaml` | modified | 刷新对应 campaign 的 content package 配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-receipt-handoff.weibo.yaml` | modified | 刷新对应 campaign 的 content package 配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-16-ai-employee-compare-three-before-cut.yaml` | modified | 刷新对应 campaign 的 content package 配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-evidence-grid-before-verdict.yaml` | modified | 刷新对应 campaign 的 content package 配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml` | modified | 刷新对应 campaign 的 content package 配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-22-ai-employee-no-new-status-not-failure.yaml` | modified | 刷新对应 campaign 的 content package 配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-23-ai-employee-pending-status-before-rewrite.yaml` | modified | 刷新对应 campaign 的 content package 配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-05-26-ai-employee-three-grid-before-verdict.yaml` | modified | 刷新对应 campaign 的 content package 配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.example.yaml` | modified | 刷新对应 campaign 的 content package 配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-05-ai-employee-audit-wait-no-republish.json` | modified | 刷新对应 campaign 的 Hermes handoff 包配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-12-ai-employee-status-split-before-judgment.json` | modified | 刷新对应 campaign 的 Hermes handoff 包配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-13-ai-employee-receipt-lock-before-republish.json` | modified | 刷新对应 campaign 的 Hermes handoff 包配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-16-ai-employee-compare-three-before-cut.json` | modified | 刷新对应 campaign 的 Hermes handoff 包配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-17-ai-employee-evidence-grid-before-verdict.json` | modified | 刷新对应 campaign 的 Hermes handoff 包配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-17-ai-employee-metric-window-before-rewrite.json` | modified | 刷新对应 campaign 的 Hermes handoff 包配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-22-ai-employee-no-new-status-not-failure.json` | modified | 刷新对应 campaign 的 Hermes handoff 包配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-23-ai-employee-pending-status-before-rewrite.json` | modified | 刷新对应 campaign 的 Hermes handoff 包配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-26-ai-employee-three-grid-before-verdict.json` | modified | 刷新对应 campaign 的 Hermes handoff 包配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-05-30-ai-employee-no-rush-repost-before-receipt.json` | modified | 刷新对应 campaign 的 Hermes handoff 包配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/douyin.yaml` | modified | 调整 `douyin` 平台映射规则。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/kuaishou.yaml` | modified | 调整 `kuaishou` 平台映射规则。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/toutiao.yaml` | modified | 调整 `toutiao` 平台映射规则。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/wechat_channels.yaml` | modified | 调整 `wechat_channels` 平台映射规则。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/xiaohongshu.yaml` | modified | 调整 `xiaohongshu` 平台映射规则。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platforms.example.yaml` | modified | 更新多平台示例配置。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/pyproject.toml` | modified | 更新 Python 项目元数据或依赖声明。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/quickstart-mac.sh` | modified | 更新发布接管自动化启动或 quickstart 脚本。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/quickstart-windows.ps1` | modified | 更新发布接管自动化启动或 quickstart 脚本。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/social-publisher.ps1` | modified | 更新发布接管自动化启动或 quickstart 脚本。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/start-chrome-cdp.ps1` | modified | 更新发布接管自动化启动或 quickstart 脚本。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/scripts/start-chrome-cdp.sh` | modified | 更新发布接管自动化启动或 quickstart 脚本。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/__init__.py` | modified | 更新发布接管自动化 Python 模块实现。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/cli.py` | modified | 更新发布接管自动化 Python 模块实现。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/content_package.py` | modified | 更新发布接管自动化 Python 模块实现。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/env.py` | modified | 更新发布接管自动化 Python 模块实现。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/__init__.py` | modified | 更新 `__init__` 平台发布器实现。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/douyin.py` | modified | 更新 `douyin` 平台发布器实现。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/zhihu.py` | modified | 更新 `zhihu` 平台发布器实现。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/publish_receipts.py` | modified | 更新发布接管自动化 Python 模块实现。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher_takeover.egg-info/PKG-INFO` | modified | 同步 Python 打包产物元数据。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/hermes-handoff/latest.json` | modified | 刷新 latest Hermes handoff 指针。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json.stale-1778485572` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.baijiahao.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.bilibili.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.kuaishou.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.douyin.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.kuaishou.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.bilibili.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.douyin.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.weibo.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.zhihu.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.baijiahao.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.kuaishou.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.bilibili.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.kuaishou.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.toutiao.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.wechat_channels.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.zhihu.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.bilibili.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.kuaishou.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.toutiao.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.wechat_channels.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.zhihu.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.bilibili.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.douyin.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.kuaishou.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.toutiao.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.wechat_channels.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.weibo.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.zhihu.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.baijiahao.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.toutiao.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.wechat_channels.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.weibo.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.bilibili.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.kuaishou.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.toutiao.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json.stale-override-1779790507` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.wechat_channels.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.weibo.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.zhihu.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-05-30-ai-employee-no-rush-repost-before-receipt.zhihu.lock.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-28-platform-execution-early-zero-not-failure.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-04-29-platform-execution-lock-campaign-four-checks.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-02-ai-employee-writeback-after-publish.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-03-ai-employee-data-center-review.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-05-ai-employee-receipt-handoff.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-13-ai-employee-receipt-lock-before-republish.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-14-ai-employee-no-metrics-no-judgment.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-22-ai-employee-no-new-status-not-failure.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-06-01-ai-employee-pending-status-before-rewrite.json` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/bilibili-management-published-20260502-1545.png` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-after-click-cdp-20260503.png` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-after-dom-publish-click-20260503.png` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-before-publish-cdp-20260503.png` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-debug-after-script-stop-20260503.png` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-0-20260505.png` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-debug-current-0-1-20260505.png` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-inspect-9-20260504.png` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-management-published-20260503-2107.png` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-management-under-review-20260502.png` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-management-verify-20260523.png` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/screenshots/kuaishou-publish-page-20260502-1.png` | modified | 刷新发布接管支持自动化内容。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_content_package.py` | modified | 更新发布接管自动化测试用例。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/tests/test_platform_base.py` | modified | 更新发布接管自动化测试用例。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/README.md` | modified | 刷新受监控的技能或支持自动化文件。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills-manifest.txt` | modified | 刷新受监控的技能或支持自动化文件。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/references/review-scorecard.md` | modified | `dachen-founder-flywheel` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/dashboard-export-template.json` | modified | `data-review` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/kuaishou-ops/SKILL.md` | modified | `kuaishou-ops` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-attendance/SKILL.md` | modified | `lark-attendance` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/formula-field-guide.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-advperm-disable.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-advperm-enable.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-create.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-delete.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-block-get.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-list.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard-update.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-dashboard.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-data-query.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-search-options.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field-update.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-field.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-create.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-delete.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-list.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions-update.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-form-questions.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-batch-update.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-delete.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record-get.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-record.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-create.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-delete.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-role-get.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-shortcut-record-value.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-create.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-delete.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-get.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-table-list.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-card.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-filter.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-get-group.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-list.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-rename.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-card.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-view-set-filter.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-create.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-disable.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-enable.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-get.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-schema.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow-update.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workflow.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-base/references/lark-base-workspace.md` | modified | `lark-base` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/SKILL.md` | modified | `lark-calendar` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-rsvp.md` | modified | `lark-calendar` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-schedule-meeting.md` | modified | `lark-calendar` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-calendar/references/lark-calendar-suggestion.md` | modified | `lark-calendar` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-contact/SKILL.md` | modified | `lark-contact` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-create.md` | modified | `lark-doc` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-fetch.md` | modified | `lark-doc` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-update.md` | modified | `lark-doc` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-doc/references/lark-doc-whiteboard.md` | modified | `lark-doc` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/SKILL.md` | modified | `lark-drive` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-download.md` | modified | `lark-drive` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-export-download.md` | modified | `lark-drive` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-export.md` | modified | `lark-drive` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-drive/references/lark-drive-task-result.md` | modified | `lark-drive` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-event/references/lark-event-subscribe.md` | modified | `lark-event` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-messages-list.md` | modified | `lark-im` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-search.md` | modified | `lark-im` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-chat-update.md` | modified | `lark-im` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-mget.md` | modified | `lark-im` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-im/references/lark-im-messages-send.md` | modified | `lark-im` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/SKILL.md` | modified | `lark-mail` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-draft-create.md` | modified | `lark-mail` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-draft-edit.md` | modified | `lark-mail` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-send.md` | modified | `lark-mail` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-signature.md` | modified | `lark-mail` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-mail/references/lark-mail-thread.md` | modified | `lark-mail` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/SKILL.md` | modified | `lark-okr` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-contentblock.md` | modified | `lark-okr` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-cycle-detail.md` | modified | `lark-okr` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-okr/references/lark-okr-cycle-list.md` | modified | `lark-okr` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-openapi-explorer/SKILL.md` | modified | `lark-openapi-explorer` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-shared/SKILL.md` | modified | `lark-shared` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-batch-set-style.md` | modified | `lark-sheets` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-create-filter-view-condition.md` | modified | `lark-sheets` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-create-filter-view.md` | modified | `lark-sheets` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-create.md` | modified | `lark-sheets` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-export.md` | modified | `lark-sheets` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-find.md` | modified | `lark-sheets` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-formula.md` | modified | `lark-sheets` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-get-dropdown.md` | modified | `lark-sheets` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-get-filter-view-condition.md` | modified | `lark-sheets` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-list-filter-views.md` | modified | `lark-sheets` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-merge-cells.md` | modified | `lark-sheets` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-move-dimension.md` | modified | `lark-sheets` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-read.md` | modified | `lark-sheets` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-replace.md` | modified | `lark-sheets` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-set-dropdown.md` | modified | `lark-sheets` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-filter-view-condition.md` | modified | `lark-sheets` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-sheets/references/lark-sheets-update-filter-view.md` | modified | `lark-sheets` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-skill-maker/SKILL.md` | modified | `lark-skill-maker` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/examples.md` | modified | `lark-slides` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-create.md` | modified | `lark-slides` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/lark-slides-xml-presentations-get.md` | modified | `lark-slides` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/slide-templates.md` | modified | `lark-slides` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/slides_demo.xml` | modified | `lark-slides` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/slides_xml_schema_definition.xml` | modified | `lark-slides` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/xml-format-guide.md` | modified | `lark-slides` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-slides/references/xml-schema-quick-ref.md` | modified | `lark-slides` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/SKILL.md` | modified | `lark-task` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-create.md` | modified | `lark-task` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-followers.md` | modified | `lark-task` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-get-my-tasks.md` | modified | `lark-task` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-set-ancestor.md` | modified | `lark-task` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-subscribe-event.md` | modified | `lark-task` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-create.md` | modified | `lark-task` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-members.md` | modified | `lark-task` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-task/references/lark-task-tasklist-search.md` | modified | `lark-task` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/SKILL.md` | modified | `lark-vc` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/references/lark-vc-notes.md` | modified | `lark-vc` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/references/lark-vc-recording.md` | modified | `lark-vc` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-vc/references/lark-vc-search.md` | modified | `lark-vc` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/lark-whiteboard-query.md` | modified | `lark-whiteboard` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/lark-whiteboard-update.md` | modified | `lark-whiteboard` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/layout.md` | modified | `lark-whiteboard` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/style.md` | modified | `lark-whiteboard` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/references/typography.md` | modified | `lark-whiteboard` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/routes/dsl.md` | modified | `lark-whiteboard` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/routes/mermaid.md` | modified | `lark-whiteboard` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/fishbone.md` | modified | `lark-whiteboard` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/flowchart.md` | modified | `lark-whiteboard` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/flywheel.md` | modified | `lark-whiteboard` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/organization.md` | modified | `lark-whiteboard` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/pyramid.md` | modified | `lark-whiteboard` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-whiteboard/scenes/swimlane.md` | modified | `lark-whiteboard` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-workflow-meeting-summary/SKILL.md` | modified | `lark-workflow-meeting-summary` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-workflow-standup-report/SKILL.md` | modified | `lark-workflow-standup-report` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh` | modified | `playwright` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/SKILL.md` | modified | `seedance-video-api` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/agents/openai.yaml` | modified | `seedance-video-api` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/asset_reference_identity_lock_seedance_2_0_fast.json` | modified | `seedance-video-api` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/extend_bridge_seedance_2_0.json` | modified | `seedance-video-api` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/extend_single_seedance_2_0.json` | modified | `seedance-video-api` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/assets/examples/i2v_first_frame_seedance_2_0.json` | modified | `seedance-video-api` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/api-basics.md` | modified | `seedance-video-api` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/cover-execution.md` | modified | `seedance-video-api` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/prompt-rule-09-subtitle-whitelist.md` | modified | `seedance-video-api` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/prompt-rule-10-dialogue-subtitle-hard-requirements.md` | modified | `seedance-video-api` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/build_cover_package.ps1` | modified | `seedance-video-api` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/build_cover_package.py` | modified | `seedance-video-api` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/render_cover_package.py` | modified | `seedance-video-api` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/references/platform-notes.md` | modified | `social-publish-automation` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/SKILL.md` | modified | `wechat-channels-launchagent-keepalive` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/agents/openai.yaml` | modified | `wechat-channels-launchagent-keepalive` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/register-keepalive-task.ps1` | modified | `wechat-channels-launchagent-keepalive` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-launchagent-keepalive/scripts/run-keepalive.ps1` | modified | `wechat-channels-launchagent-keepalive` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/references/platform-notes.md` | modified | `wechat-channels-ops` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/SKILL.md` | modified | `xiaohongshu-ops` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/SKILL.md` | modified | `xiaoyunque-source-video` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/agents/openai.yaml` | modified | `xiaoyunque-source-video` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/source-video-playbook.md` | modified | `xiaoyunque-source-video` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/.gitignore` | modified | `xyq-nest-skill` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/SKILL.md` | modified | `xyq-nest-skill` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/download_results.py` | modified | `xyq-nest-skill` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/get_thread.py` | modified | `xyq-nest-skill` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/upload_file.py` | modified | `xyq-nest-skill` skill-center 技能内容刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/SKILL.md` | modified | `codex-feishu-bridge-skill` 仓库自定义技能模板刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-logs.ps1` | modified | `codex-feishu-bridge-skill` 仓库自定义技能模板刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-logs.sh` | modified | `codex-feishu-bridge-skill` 仓库自定义技能模板刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.ps1` | modified | `codex-feishu-bridge-skill` 仓库自定义技能模板刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.sh` | modified | `codex-feishu-bridge-skill` 仓库自定义技能模板刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-status.ps1` | modified | `codex-feishu-bridge-skill` 仓库自定义技能模板刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-status.sh` | modified | `codex-feishu-bridge-skill` 仓库自定义技能模板刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-stop.ps1` | modified | `codex-feishu-bridge-skill` 仓库自定义技能模板刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/configure_notify_target.sh` | modified | `codex-feishu-bridge-skill` 仓库自定义技能模板刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.cmd` | modified | `codex-feishu-bridge-skill` 仓库自定义技能模板刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.command` | modified | `codex-feishu-bridge-skill` 仓库自定义技能模板刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.ps1` | modified | `codex-feishu-bridge-skill` 仓库自定义技能模板刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.sh` | modified | `codex-feishu-bridge-skill` 仓库自定义技能模板刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/src/bridge.js` | modified | `codex-feishu-bridge-skill` 仓库自定义技能模板刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART.md` | modified | `codex-feishu-bridge-skill` 仓库自定义技能模板刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/install_bridge_template.sh` | modified | `codex-feishu-bridge-skill` 仓库自定义技能模板刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/agents/openai.yaml` | modified | `multi-platform-content-review-skill` 仓库自定义技能模板刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/account-slice-analysis.md` | modified | `multi-platform-content-review-skill` 仓库自定义技能模板刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/dashboard-export-template.json` | modified | `multi-platform-content-review-skill` 仓库自定义技能模板刷新。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/report-template.md` | modified | `multi-platform-content-review-skill` 仓库自定义技能模板刷新。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-06-02T03:18:21Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现新的技能/支持自动化变更批次，新增 `1`、修改 `1202`、删除 `0`。
+- 增量内容主要分成两类：`automation/python-platform-takeover/` 新增微博 duplicate-guard 锁并刷新多组配置、回执、截图与 Python 实现；同时 `.codex/skills/`、仓库 `skills/`、`skill-center/` 与 `github-nightly-sync-20260531-run2` 镜像副本再次出现大规模重同步。
+- 自有效基线 `2026-06-02T03:18:21Z` 以来没有新增 `.py` 文件。
+
+## 2026-06-02 13:16:25 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-02T04:13:58.745Z`
+- `~/.codex/automations/skill-monitor/memory.md` 与 `state.json` 记录的上一轮实际完成时间为 `2026-06-02T04:17:49Z`；本轮继续以该时间作为有效基线，避免重复记录 `12:17:49 CST` 已落盘批次
+- 判定依据:
+- 将当前过滤后的文件树与 `~/.codex/automations/skill-monitor/last-snapshot.json` 的 `4062` 条快照逐项比对，结果更新为 `4062 -> 4066`
+- 继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- 结果汇总: 新增 `4`，修改 `1`，删除 `0`
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-06-02-ai-employee-asset-fingerprint-before-submit.yaml` | added | 新建 `2026-06-02-ai-employee-asset-fingerprint-before-submit` 的全平台 content package，固定视频/封面路径、各平台标题文案与视频/封面指纹，并明确 `do_not_publish`、`do_not_upload`、`do_not_click_submit` 的人工确认约束。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-06-02-ai-employee-asset-fingerprint-before-submit.json` | added | 新建 Hermes 交接包，引用同 campaign 的 content package、receipt 路径和各平台上传计划，并把 `allow_live` 维持为 `false`，用于发前交接而非直接执行。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/hermes-handoff/2026-06-02-ai-employee-asset-fingerprint-before-submit.json` | added | 新建 handoff 状态文件，记录该 campaign 已进入 `ready_for_publish`，并把最新视频/封面 SHA256 与交接时间 `2026-06-02T12:19:21+08:00` 固化到状态层。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-06-02-ai-employee-asset-fingerprint-before-submit.json` | added | 新建全平台空白 receipt，给 `douyin`、`kuaishou`、`wechat_channels`、`weibo`、`bilibili`、`xiaohongshu`、`toutiao`、`baijiahao`、`zhihu` 统一初始化为 `not_published`，明确当前只完成 package 建档，尚未开始上传或提交。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/hermes-handoff/latest.json` | modified | `latest` 指针切换到 `2026-06-02-ai-employee-asset-fingerprint-before-submit`，同步新的 content package、receipt 路径、平台上传计划与 `updated_at=2026-06-02T12:19:21+08:00`。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-06-02T04:17:49Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现新的技能/支持自动化变更批次，新增 `4`、修改 `1`、删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/`，核心是为 `2026-06-02-ai-employee-asset-fingerprint-before-submit` 新建一整套 content package、Hermes handoff 和空白 publish receipt，并把 `latest` 交接指针切换到这条新 campaign。
+- 自有效基线 `2026-06-02T04:17:49Z` 以来没有新增 `.py` 文件。
+
+## 2026-06-02 14:18:37 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-02T05:14:29.027Z`
+- `~/.codex/automations/skill-monitor/memory.md` 与 `state.json` 记录的上一轮实际完成时间为 `2026-06-02T05:16:20Z`；本轮继续以该时间作为有效基线，避免重复记录 `2026-06-02 13:16:25 CST (+0800)` 已落盘批次
+- 判定依据:
+- 将当前过滤后的文件树与 `~/.codex/automations/skill-monitor/last-snapshot.json` 的 `4066` 条快照逐项比对，结果更新为 `4066 -> 4068`
+- 继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- 结果汇总: 新增 `2`，修改 `1`，删除 `0`
+
+### 新增文件
+- `/Users/baishangjituan/.codex/skills/juliang-lead-sync/SKILL.md` | added | 新建 `juliang-lead-sync` 本地自定义技能，固定巨量引擎投放后从飞鱼 CRM 抽取完整线索、按指定列顺序去重并写入飞书 `巨量营销-投流情况统计表`，同时约束不能代替用户拨打电话或改投放配置。
+- `/Users/baishangjituan/.codex/skills/juliang-lead-sync/agents/openai.yaml` | added | 为 `juliang-lead-sync` 新增 OpenAI agent 元数据，开启隐式调用，并把默认提示词固定为“检查新的巨量投放线索并追加到飞书表格”。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json` | modified | 将该 campaign 的 receipt 从仅含 Bilibili 和头条状态，补齐为 Bilibili/头条/知乎三平台闭环：新增知乎真实发布与视频可见核验记录，给头条补写飞书通知失败留痕，并在顶层补录 `package_usage`、`live_authorization_override` 与总通知状态。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-06-02T05:16:20Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现新的技能/支持自动化变更批次，新增 `2`、修改 `1`、删除 `0`。
+- 这批变更分成两部分：`~/.codex/skills/` 新增了巨量投放线索同步 skill；`automation/python-platform-takeover/` 则把 `2026-05-30-ai-employee-no-rush-repost-before-receipt` 的 publish receipt 推进到包含知乎实发核验和飞书通知留痕的更完整状态。
+- 自有效基线 `2026-06-02T05:16:20Z` 以来没有新增 `.py` 文件。
+
+## 2026-06-02 16:21:03 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-02T07:17:29.610Z`
+- `~/.codex/automations/skill-monitor/state.json` 记录的上一轮实际完成时间为 `2026-06-02T06:18:37Z`；由于任务里的 `Last run` 更晚，本轮以 `2026-06-02T07:17:29.610Z` 作为有效基线
+- 判定依据:
+- 将当前过滤后的文件树与 `~/.codex/automations/skill-monitor/last-snapshot.json` 的 `4068` 条快照逐项比对，结果更新为 `4068 -> 4069`
+- 继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- 结果汇总: 新增 `1`，修改 `1`，删除 `0`
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-06-02-ai-employee-asset-fingerprint-before-submit.baijiahao.lock.json` | added | 新建百家号发布锁，固定 `2026-06-02-ai-employee-asset-fingerprint-before-submit` 的标题、视频/封面 SHA256、Chrome CDP 会话、提交时间和作品管理页核验结果，表明百家号已完成实发并留痕 duplicate guard 与截图证据路径。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-06-02-ai-employee-asset-fingerprint-before-submit.json` | modified | 将该 campaign 的 receipt 从仅初始化的 `not_published` 骨架扩展为多平台实发回执：补齐抖音、快手、Bilibili 与百家号的上传/提交/管理页核验细节、消息通知状态与证据路径，其余平台继续保留未发布占位状态。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-06-02T07:17:29.610Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现新的技能/支持自动化变更批次，新增 `1`、修改 `1`、删除 `0`。
+- 这批变更全部集中在 `automation/python-platform-takeover/state/`：百家号新增一份已发布锁文件，同时 `2026-06-02-ai-employee-asset-fingerprint-before-submit` 的总 receipt 从预置骨架推进为包含多平台实发核验的完整回执。
+- 自有效基线 `2026-06-02T07:17:29.610Z` 以来没有新增 `.py` 文件。
+
+## 2026-06-02 17:22:59 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-02T08:19:29.668Z`
+- `~/.codex/automations/skill-monitor/state.json` 记录的上一轮实际完成时间为 `2026-06-02T08:21:03Z`；由于本地状态更晚，本轮以 `2026-06-02T08:21:03Z` 作为有效基线
+- 判定依据:
+- 将当前过滤后的文件树与 `~/.codex/automations/skill-monitor/last-snapshot.json` 的 `4069` 条快照逐项比对，结果更新为 `4069 -> 4070`
+- 继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- 经二次 settling pass 复核，变更集合保持不变
+- 结果汇总: 新增 `1`，修改 `5`，删除 `0`
+
+### 新增文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks/2026-06-02-ai-employee-asset-fingerprint-before-submit.weibo.lock.json` | added | 新建微博发布锁，固定 `2026-06-02-ai-employee-asset-fingerprint-before-submit` 的微博标题/正文、视频与封面 SHA256、提交与公开页核验时间、`public_url`/`mblogid`/`post_id`，并留存 duplicate guard 与封面可读性检查结果。
+
+### 修改文件
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-06-02-ai-employee-asset-fingerprint-before-submit.yaml` | modified | 刷新同 campaign 的 content package：统一改写各平台标题/文案、视频与封面指纹，并新增 `package_cover_reset` 段记录 `2026-06-02T16:58:45+08:00` 的封面重置、cover manifest 路径与视觉复核通过状态。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/hermes-package.2026-06-02-ai-employee-asset-fingerprint-before-submit.json` | modified | 同步更新 Hermes handoff 包的各平台标题/文案与视频/封面路径，刷新整套 title/body/video/cover 指纹，并补入 `package_cover_reset` 元数据，说明新的封面指纹已重新锁定且 `visual_review=passed`。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/hermes-handoff/2026-06-02-ai-employee-asset-fingerprint-before-submit.json` | modified | 将这份 campaign handoff 状态对齐到最新 package：更新 all-platform upload plan、title/body/video/cover hashes，并补充封面重置时间、manifest 路径与视觉复核结果，确保后续 Hermes 发布拿到新的资产指纹。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/hermes-handoff/latest.json` | modified | `latest` 指针继续指向同一 campaign，但内容整体刷新为最新 handoff 快照：带入新的 `current_thread_id`、各平台资源路径、完整指纹集合和 `package_cover_reset`，把后续默认交接上下文切换到这版封面重置后的资产集。
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-06-02-ai-employee-asset-fingerprint-before-submit.json` | modified | 将总 receipt 从前一轮的抖音/快手/Bilibili/百家号闭环继续扩展到 `weibo_published_verified`：新增微博公开页核验、`public_url`/`mobile_url`/`mblogid`/`post_id`、duplicate guard 与封面检查结果，同时保留其他平台既有实发/未发状态。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-06-02T08:21:03Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮发现新的技能/支持自动化变更批次，新增 `1`、修改 `5`、删除 `0`。
+- 这批变更全部集中在 `automation/python-platform-takeover/` 的 `2026-06-02-ai-employee-asset-fingerprint-before-submit` campaign：新增微博发布锁，并把 content package、Hermes handoff 与总 receipt 全部刷新到封面重置后的最新资产指纹和微博实发核验状态。
+- 自有效基线 `2026-06-02T08:21:03Z` 以来没有新增 `.py` 文件。
+
+## 2026-06-02 18:24:06 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-02T09:20:59.942Z`
+- `~/.codex/automations/skill-monitor/state.json` 记录的上一轮实际完成时间为 `2026-06-02T09:23:30Z`；由于本地状态更晚，本轮以 `2026-06-02T09:23:30Z` 作为有效基线
+- 判定依据:
+- 将当前过滤后的文件树与 `~/.codex/automations/skill-monitor/last-snapshot.json` 的 `4074` 条快照逐项比对，结果保持 `4074 -> 4074`
+- 继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- 经快照比对与 `mtime` 复核，基线之后没有新增、修改或删除的技能相关文件
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-06-02T09:23:30Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮未发现新的技能/支持自动化变更批次，新增 `0`、修改 `0`、删除 `0`。
+- 四个监控根目录在本轮有效基线之后保持不变，因此 `docs/automation/github-sync-status.md` 无需追加新的待同步说明。
+
+## 2026-06-02 21:28:45 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-02T12:25:30.737Z`
+- `~/.codex/automations/skill-monitor/state.json` 记录的上一轮实际完成时间为 `2026-06-02T12:27:26Z`；由于本地状态更晚，本轮以 `2026-06-02T12:27:26Z` 作为有效基线
+- 判定依据:
+- 复核 `~/.codex/automations/skill-monitor/{memory.md,state.json,last-summary.json,last-snapshot.json}`
+- 继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- 将上一轮 `last-snapshot.json` 与当前过滤文件树逐项比对，快照条目数保持 `4070 -> 4070`
+- 按有效基线 `2026-06-02T12:27:26Z` 复筛 `mtimeMs` 命中数为 `0`，因此没有新增、修改或删除的技能相关文件
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-06-02T12:27:26Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮未发现新的技能/支持自动化变更批次，新增 `0`、修改 `0`、删除 `0`。
+- 四个监控根目录在本轮有效基线之后保持不变，因此 `docs/automation/github-sync-status.md` 无需追加新的待同步说明。
+- 自有效基线 `2026-06-02T09:23:30Z` 以来没有新增 `.py` 文件。
+
+## 2026-06-02 19:25:02 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-02T10:23:00.310Z`
+- `~/.codex/automations/skill-monitor/state.json` 记录的上一轮实际完成时间为 `2026-06-02T10:24:37Z`；由于本地状态更晚，本轮以 `2026-06-02T10:24:37Z` 作为有效基线
+- 判定依据:
+- 继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- 复核上一轮 `last-snapshot.json` 时发现其中残留了 4 条本应排除的 `~/.codex/skills/$CODEX_HOME/**` 历史路径；本轮先按同一排除规则归一化旧快照，再与当前文件树逐项比对
+- 归一化剔除的历史路径:
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/memory.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/pending-change-batch.json`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/pending-github-sync-status-entry.md`
+- `/Users/baishangjituan/.codex/skills/$CODEX_HOME/automations/skill-monitor/pending-skill-change-entry.md`
+- 归一化后快照条目数为 `4070 -> 4070`，且按有效基线 `2026-06-02T10:24:37Z` 复筛 `mtimeMs` 命中数为 `0`
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-06-02T10:24:37Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮未发现新的技能/支持自动化变更批次，新增 `0`、修改 `0`、删除 `0`。
+- 上一轮快照里误纳入的 4 条 `$CODEX_HOME` 历史路径已在本轮归一化处理中剔除，但这不构成实际文件删除，也不需要追加 GitHub 同步说明。
+
+## 2026-06-02 20:27:26 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-06-02T11:23:30.493Z`
+- `~/.codex/automations/skill-monitor/state.json` 记录的上一轮实际完成时间为 `2026-06-02T11:25:02Z`；由于本地状态更晚，本轮以 `2026-06-02T11:25:02Z` 作为有效基线
+- 判定依据:
+- 继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、`~/.codex/skills/$CODEX_HOME/**`、`~/.codex/automations/skill-monitor/**`、`.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`
+- 将归一化后的上一轮 `last-snapshot.json` 与当前过滤文件树逐项比对，快照条目数保持 `4070 -> 4070`
+- 按有效基线 `2026-06-02T11:25:02Z` 复筛 `mtimeMs` 命中数为 `0`，因此没有新增、修改或删除的技能相关文件
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无。
+
+### 修改文件
+- 无。
+
+### 删除文件
+- 无。
+
+### 新建 Python 文件
+- 无。自有效基线 `2026-06-02T11:25:02Z` 以来没有出现新的 `.py` 文件。
+
+### 变更摘要
+- 本轮未发现新的技能/支持自动化变更批次，新增 `0`、修改 `0`、删除 `0`。
+- 四个监控根目录在本轮有效基线之后保持不变，因此 `docs/automation/github-sync-status.md` 无需追加新的待同步说明。
