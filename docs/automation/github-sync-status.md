@@ -2939,3 +2939,33 @@
 - 检测到新的技能变更批次: 新增 `1`，修改 `5`，删除 `0`。
 - 这批变更集中在 `automation/python-platform-takeover/` 的 `2026-06-02-ai-employee-asset-fingerprint-before-submit` campaign：新增微博发布锁，并同步刷新 content package、Hermes handoff 与总 receipt 到封面重置后的最新资产指纹和微博公开页核验状态。
 - 建议后续执行 GitHub 同步，避免这组最新微博发布留痕与 handoff/receipt 刷新继续只停留在本地工作区。
+
+## 2026-06-03 00:05:10 CST (+0800)
+- 处理时间:
+  - `2026-06-03 00:05:10 CST (+0800)`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的 latest dated entry 为 `2026-06-02 22:04:42 CST (+0800)`。
+  - 该条记录明确写明本轮待同步批次“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含 `automation/python-platform-takeover/` 的 `2026-06-01-ai-employee-pending-status-before-rewrite` 封面指纹刷新、`2026-06-02-ai-employee-asset-fingerprint-before-submit` content package / handoff / receipt / publish lock 台账、`docs/automation/{skill-change-monitor,windows-translation-status,github-sync-status}.md` 的 2026-06-02 记录，以及 `skill-center/skills/juliang-lead-sync/**` 的仓库镜像。
+  - `codex/windows-version-20260411`: 否。本轮工作区里没有新的 Windows bridge 或 deployment 专属文件差异；本轮只重试推送该分支现有的本地 ahead 队列。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。已新增提交 `931c48e`，提交信息为 `Sync June 2 takeover assets and monitor records`。
+  - `codex/windows-version-20260411`: 否。本轮未新增提交；待推送内容仍由该分支现有本地提交承载。
+- 是否已推送:
+  - `codex/default-python-sync`: 否。执行 `git push origin codex/default-python-sync` 返回 `ssh: connect to host github.com port 22: Operation not permitted`。
+  - `codex/windows-version-20260411`: 否。执行 `git push origin codex/windows-version-20260411` 返回 `ssh: connect to host github.com port 22: Operation not permitted`。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync June 2 takeover assets and monitor records`
+  - `codex/default-python-sync`: `Record 2026-06-02 GitHub sync execution`
+  - `codex/windows-version-20260411`: `Add Windows Feishu notify launchers`
+  - `codex/windows-version-20260411`: `Update Windows publish handoff and notify guidance`
+  - `codex/windows-version-20260411`: `Sync bridge progress thread support`
+  - `codex/windows-version-20260411`: `Refresh xyq nest Windows launchers`
+- 若跳过，说明跳过原因:
+  - 未提交 `automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json` 及其两个 `.stale-*` 文件，因为它们是旧运行态残留，不属于 `2026-06-02` 这批待同步变更。
+  - 未在 `codex/windows-version-20260411` 新增提交，因为本轮新增仓库内容不属于 Windows bridge / deployment 专属更新；`skill-center/skills/juliang-lead-sync/**` 与 Python takeover 台账按分支目的归入 `codex/default-python-sync`。
+  - 当前环境禁止访问 GitHub SSH 端口 `22`，因此两条分支都未能上传到远端 GitHub；本轮只完成了默认分支的新提交与执行日志落盘。
