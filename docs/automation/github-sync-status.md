@@ -2969,3 +2969,8 @@
   - 未提交 `automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json` 及其两个 `.stale-*` 文件，因为它们是旧运行态残留，不属于 `2026-06-02` 这批待同步变更。
   - 未在 `codex/windows-version-20260411` 新增提交，因为本轮新增仓库内容不属于 Windows bridge / deployment 专属更新；`skill-center/skills/juliang-lead-sync/**` 与 Python takeover 台账按分支目的归入 `codex/default-python-sync`。
   - 当前环境禁止访问 GitHub SSH 端口 `22`，因此两条分支都未能上传到远端 GitHub；本轮只完成了默认分支的新提交与执行日志落盘。
+
+## 2026-06-03 05:41:42 CST (+0800)
+- 检测到新的技能变更批次: 新增 `2`，修改 `0`，删除 `0`。
+- 这批变更集中在 `~/.codex/skills/github-nightly-sync-20260531-run2/docs/automation/`；核心是该自定义技能镜像目录首次纳入了 `skill-change-monitor.md` 与 `github-sync-status.md` 两份自动化日志副本，补齐镜像工作区自身的监控与 nightly sync 留痕。
+- 建议后续执行 GitHub 同步，避免这组镜像自动化文档继续只停留在本地技能树。
