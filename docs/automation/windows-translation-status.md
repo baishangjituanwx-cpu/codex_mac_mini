@@ -3229,3 +3229,62 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-03 22:02:46 CST (+0800)`，今天新增到监控文档里的自定义 skill 相关行为没有新的 Windows 缺口；`juliang-lead-sync` 仍由现有 Windows 说明完整覆盖，其余新增项只是镜像日志或零变更批次，Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-04 22:02:54 CST (+0800)
+
+- 处理时间:
+  - `2026-06-04 22:02:54 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-03 22:02:46 CST (+0800)` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 非零批次共有 `1` 个:
+    - `2026-06-04 20:28:28 CST (+0800)`
+  - 其余新增批次:
+    - `2026-06-03 23:04:36 CST (+0800)`
+    - `2026-06-04 00:06:02 CST (+0800)`
+    - `2026-06-04 01:07:27 CST (+0800)`
+    - `2026-06-04 02:09:54 CST (+0800)`
+    - `2026-06-04 03:10:08 CST (+0800)`
+    - `2026-06-04 04:10:27 CST (+0800)`
+    - `2026-06-04 05:10:56 CST (+0800)`
+    - `2026-06-04 06:12:08 CST (+0800)`
+    - `2026-06-04 07:13:43 CST (+0800)`
+    - `2026-06-04 08:14:58 CST (+0800)`
+    - `2026-06-04 09:18:07 CST (+0800)`
+    - `2026-06-04 10:17:29 CST (+0800)`
+    - `2026-06-04 11:19:37 CST (+0800)`
+    - `2026-06-04 12:19:49 CST (+0800)`
+    - `2026-06-04 13:20:41 CST (+0800)`
+    - `2026-06-04 14:21:37 CST (+0800)`
+    - `2026-06-04 15:23:14 CST (+0800)`
+    - `2026-06-04 16:24:58 CST (+0800)`
+    - `2026-06-04 17:25:18 CST (+0800)`
+    - `2026-06-04 18:26:41 CST (+0800)`
+    - `2026-06-04 19:27:29 CST (+0800)`
+    - `2026-06-04 21:29:59 CST (+0800)`
+  - `2026-06-04 20:28:28 CST (+0800)` 的非零变更项:
+    - `automation/python-platform-takeover/social_publisher_takeover.egg-info/PKG-INFO`
+    - `automation/python-platform-takeover/social_publisher_takeover.egg-info/SOURCES.txt`
+    - `automation/python-platform-takeover/social_publisher_takeover.egg-info/dependency_links.txt`
+    - `automation/python-platform-takeover/social_publisher_takeover.egg-info/entry_points.txt`
+    - `automation/python-platform-takeover/social_publisher_takeover.egg-info/requires.txt`
+    - `automation/python-platform-takeover/social_publisher_takeover.egg-info/top_level.txt`
+- 已完成的 Windows 补全:
+  - 为今天新增的 `social-publisher` setuptools / editable-install 元数据补齐 Windows 可见说明:
+    - `automation/python-platform-takeover/README.md`
+  - 上述 README 现已明确今天这批 `entry_points.txt` 对应的 Windows 控制台入口与使用边界:
+    - Windows PowerShell 下 editable install 会生成 `.\.venv\Scripts\social-publisher.exe`
+    - macOS / Linux 下对应生成 `./.venv/bin/social-publisher`
+    - 仓库默认仍建议优先走 `scripts/social-publisher.ps1` / `scripts/social-publisher.sh`，因为这两个包装器会先做 Python 版本、依赖与工作目录检查
+  - 已复核 `2026-06-04 20:28:28 CST (+0800)` 这 6 个 `social_publisher_takeover.egg-info/*` 新增文件，确认它们属于跨平台打包元数据与 CLI 入口清单，不需要新增独立的 Windows 代码分叉、快捷键分叉或路径包装资产:
+    - `PKG-INFO`、`requires.txt`、`top_level.txt`、`SOURCES.txt`、`dependency_links.txt` 仅同步包名、依赖、源码清单与空 dependency links，占位语义在 Windows 与 macOS 一致
+    - `entry_points.txt` 只是把 `pyproject.toml` 里的 `social-publisher = social_publisher.cli:main` 落成安装元数据；Windows 侧的等价可执行入口由 `pip install -e ".[dev]"` 自动生成，无需再另建新的 `.ps1` 启动器
+  - 已复核其余 `2026-06-03 23:04:36 CST (+0800)` 到 `2026-06-04 21:29:59 CST (+0800)` 批次全部为 `新增 0，修改 0，删除 0`，今天没有其他新的待转译行为进入队列。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-04` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未发现 `pwsh`，因此未做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 的增量复核、`pyproject.toml` 与 `social_publisher_takeover.egg-info/entry_points.txt` 的一致性核对，以及 README / 现有 PowerShell 包装器内容检查。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-04 22:02:54 CST (+0800)`，今天唯一的非零批次只是 `social_publisher_takeover.egg-info` 打包元数据；Windows 侧已补充控制台入口说明，其余行为都由现有跨平台实现和 PowerShell 包装器覆盖，Mac 与 Windows 覆盖今日均完整。

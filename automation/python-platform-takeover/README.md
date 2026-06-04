@@ -143,6 +143,13 @@ macOS / Linux 也有对应包装器:
 ./scripts/social-publisher.sh doctor
 ```
 
+如果你按上面的 `pip install -e '.[dev]'` / `pip install -e ".[dev]"` 做的是 editable install，这个项目现在也会注册 `social-publisher` 控制台入口:
+
+- macOS / Linux: `./.venv/bin/social-publisher`
+- Windows PowerShell: `.\.venv\Scripts\social-publisher.exe`
+
+仓库默认仍建议优先走 `scripts/social-publisher.sh` 或 `scripts/social-publisher.ps1`，因为这两个包装器会先做 Python 版本、依赖和工作目录检查。
+
 ## 直接使用的准确含义
 
 这批脚本不是 Windows 专属，`Mac` 和 `Windows` 都可以直接使用。

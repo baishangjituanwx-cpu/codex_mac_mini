@@ -15,6 +15,11 @@
 - 补记说明:
 - `2026-05-31 15:19:08 CST (+0800)` 的新变更批次在当时已被 monitor 检出，但没有及时追加到本仓库文档；本次先补齐该条，再记录当前新批次。
 
+## 2026-06-04 20:28:28 CST (+0800)
+- 检测到新的技能变更批次: 新增 `6`，修改 `0`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/social_publisher_takeover.egg-info/`；核心是为 `social-publisher-takeover` Python takeover 自动化补齐 setuptools 生成的分发元数据、控制台入口和依赖清单，让 `social_publisher` CLI 的打包边界在仓库里变成了显式文件。
+- 建议后续执行 GitHub 同步，避免这组多平台发布自动化的打包元数据继续只停留在本地工作区。
+
 ## 2026-06-02 22:30:52 CST (+0800)
 - 检测到新的技能变更批次: 新增 `2`，修改 `0`，删除 `0`。
 - 这批变更集中在 `skill-center/skills/juliang-lead-sync/`；核心是仓库新增了巨量投放线索同步技能及其 OpenAI agent 入口，并在 `SKILL.md` 里补入 Windows 接管约束、PowerShell `lark-cli` 示例和飞书表追加写入指引。
@@ -3004,3 +3009,8 @@
   - 未提交 `automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json` 及其两个 `.stale-*` 文件，因为它们是旧运行态残留，不属于 `2026-06-03` 这批待同步变更。
   - 未在 `codex/windows-version-20260411` 新增提交，因为本轮工作区只有自动化文档更新，没有新的 Windows bridge / deployment 专属文件差异。
   - 当前环境禁止访问 GitHub SSH 端口 `22`，因此 default / Windows 两条分支本轮都未能上传到远端 GitHub；本轮只完成了默认分支的新提交与执行日志落盘。
+
+## 2026-06-04 22:31:44 CST (+0800)
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `automation/python-platform-takeover/README.md`；核心是补充 editable install 后的 `social-publisher` 控制台入口路径，并继续把 `scripts/social-publisher.sh` / `scripts/social-publisher.ps1` 保持为推荐启动方式。
+- 建议后续执行 GitHub 同步，避免这条 Python takeover 使用说明更新继续只停留在本地工作区。
