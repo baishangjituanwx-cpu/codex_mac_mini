@@ -1,7 +1,7 @@
 {
   "campaign_id": "2026-05-30-ai-employee-no-rush-repost-before-receipt",
   "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
-  "status": "bilibili:published_verified_manager_page,toutiao:submitted_under_review,zhihu:published_with_video_verified",
+  "status": "bilibili:published_verified_manager_page,toutiao:submitted_under_review,zhihu:published_with_video_verified,wechat_channels:published_verified_manager_page",
   "package_status": "ready_for_publish",
   "receipts": {
     "bilibili": {
@@ -102,6 +102,36 @@
       "video_verified_at": "2026-06-02T06:07:32.598Z",
       "video_verification_evidence": "zhihu article detail page shows video player with thumbnail and play button (00:15 duration), vision confirmed 视频播放器 visible",
       "updated_at": "2026-06-02T06:07:32.598Z"
+    },
+    "wechat_channels": {
+      "actor": "workbuddy-agent-runtime",
+      "actor_session_id": "workbuddy-2026-06-06-wechat-channels",
+      "platform_id": "wechat_channels",
+      "status": "published_verified_manager_page",
+      "title": "AI员工别补发先查回执",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt-publish.mp4",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_cover_package/cover-vertical-3x4.png",
+      "video_upload_method": "user_manual_upload",
+      "video_upload_verified": true,
+      "cover_upload_method": "user_manual_upload",
+      "cover_upload_verified": true,
+      "published_at": "2026-06-06T22:48:00+08:00",
+      "verified_at": "2026-06-06T22:48:00+08:00",
+      "verification_evidence": {
+        "manager_page_status": "published",
+        "manager_page_title_match": true,
+        "title_found_in_manager": true,
+        "publish_date": "2026年06月06日 22:48"
+      },
+      "notes": [
+        "WorkBuddy Agent Runtime directly supervised the publish flow",
+        "User manually uploaded video and cover due to cross-origin iframe restrictions preventing CDP file input injection",
+        "Title and description filled by WorkBuddy via CDP Runtime.evaluate in iframe context",
+        "Publish click executed by WorkBuddy via CDP Runtime.evaluate",
+        "Manager page verification: video visible in 视频管理 list with correct title and timestamp",
+        "Chrome profile: Chrome-PPC-Publish-CDP (dedicated, non-default)",
+        "CDP port: 9222"
+      ]
     }
   },
   "receipt_schema": {
@@ -128,10 +158,11 @@
     "platforms_used": [
       "bilibili",
       "toutiao",
-      "zhihu"
+      "zhihu",
+      "wechat_channels"
     ],
     "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json",
-    "updated_at": "2026-06-02T06:55:05.548Z"
+    "updated_at": "2026-06-06T22:48:00+08:00"
   },
   "live_authorization_override": {
     "used": true,
