@@ -3104,3 +3104,29 @@
   - 未提交 `automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json` 及其两个 `.stale-*` 文件，因为它们是 `2026-05-11` 的旧运行态残留，不属于 `2026-06-06` 这批待同步记录。
   - 未在 `codex/windows-version-20260411` 新增提交，因为本轮新增仓库内容不属于 Windows bridge / deployment 专属更新。
   - 当前环境禁止访问 GitHub SSH 端口 `22`，因此 default / Windows 两条分支本轮都未能上传到远端 GitHub；本轮只完成了默认分支的新提交与执行日志落盘。
+
+## 2026-06-08 00:03:26 CST (+0800)
+- 处理时间:
+  - `2026-06-08 00:03:26 CST (+0800)`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的 latest dated entry 为 `2026-06-07 22:02:43 CST (+0800)`。
+  - 该条记录明确写明本轮待同步批次“Mac / Windows 版本都齐全”为“是”。
+  - 随后追加到 `docs/automation/skill-change-monitor.md` 的 `2026-06-07 22:55:51 CST (+0800)` 与 `2026-06-07 23:56:48 CST (+0800)` 条目均为 `新增 0，修改 0，删除 0` 的零变更扫描，因此没有新的待转译 Mac-only 行为阻塞本轮同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含 `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json` 的视频号补发回执更新、`automation/python-platform-takeover/state/publish-locks/2026-05-05-ai-employee-audit-wait-no-republish.bilibili.lock.json*` 的旧锁文件补录，以及 `docs/automation/{skill-change-monitor,windows-translation-status}.md` 的 `2026-06-07` monitor / translation no-op 记录。
+  - `codex/windows-version-20260411`: 否。当前工作区没有新的 Windows bridge / deployment 专属文件差异；本轮仅重试推送该分支现有的 `4` 个本地待上传提交。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。已新增提交 `2cad440`，提交信息为 `Sync June 7 monitor, translation, and receipt records`；本条执行记录将另以 `Record 2026-06-08 GitHub sync execution` 落盘。
+  - `codex/windows-version-20260411`: 否。本轮未新增提交；待推送内容仍由该分支现有的 `4` 个本地提交承载。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync June 7 monitor, translation, and receipt records`
+  - `codex/default-python-sync`: `Record 2026-06-08 GitHub sync execution`
+  - `codex/windows-version-20260411`: `Add Windows Feishu notify launchers`
+  - `codex/windows-version-20260411`: `Update Windows publish handoff and notify guidance`
+  - `codex/windows-version-20260411`: `Sync bridge progress thread support`
+  - `codex/windows-version-20260411`: `Refresh xyq nest Windows launchers`
+- 若跳过，说明跳过原因:
+  - 未在 `codex/windows-version-20260411` 新增提交，因为本轮新增仓库内容不属于 Windows bridge / deployment 专属更新。
