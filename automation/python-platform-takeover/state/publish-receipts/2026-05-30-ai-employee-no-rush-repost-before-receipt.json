@@ -131,6 +131,33 @@
         "Manager page verification: video visible in 视频管理 list with correct title and timestamp",
         "Chrome profile: Chrome-PPC-Publish-CDP (dedicated, non-default)",
         "CDP port: 9222"
+      ],
+      "republish_attempts": [
+        {
+          "status": "published_verified_manager_page",
+          "actor": "workbuddy-agent-runtime",
+          "actor_session_id": "workbuddy-2026-06-07-wechat-channels-republish",
+          "published_at": "2026-06-07T18:31:00+08:00",
+          "verified_at": "2026-06-07T18:39:08+08:00",
+          "title": "先查回执再说",
+          "title_original_requested": "先查回执",
+          "title_change_reason": "视频号短标题最低6字要求",
+          "description": "机器人小马想用补发救数据，大陈叫停：回执、状态、对照没核完，先别污染样本。",
+          "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt-publish.mp4",
+          "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_cover_package/cover-vertical-3x4.png",
+          "video_upload_method": "cdp_shadow_dom_set_file_input_files",
+          "video_upload_verified": true,
+          "cover_upload_method": "cdp_shadow_dom_set_file_input_files",
+          "cover_upload_verified": true,
+          "manager_page_verified": true,
+          "manager_page_evidence": "管理页第一条记录：2026年06月07日 18:31，描述完全匹配，视频总数37",
+          "title_verified": true,
+          "description_verified": true,
+          "cover_verified": true,
+          "evidence_dir": "/Users/baishangjituan/Documents/push/platform-publish-control/state/evidence",
+          "manager_screenshot": "/Users/baishangjituan/Documents/push/platform-publish-control/state/evidence/republish-step9-manage-verify-1780828748777.png",
+          "note": "user_authorized_republish"
+        }
       ]
     }
   },
