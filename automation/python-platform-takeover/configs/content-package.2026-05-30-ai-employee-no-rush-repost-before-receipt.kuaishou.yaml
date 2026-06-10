@@ -1,0 +1,21 @@
+campaign_id: "2026-05-30-ai-employee-no-rush-repost-before-receipt"
+theme: "无新增，不等于失败。先查回执、状态、对照，再决定要不要补发。"
+status: "ready_for_publish"
+package_status: "ready_for_platform_publishing"
+scope: "kuaishou_only"
+
+assets:
+  main_video: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt-publish.mp4"
+  cover_3_4: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_cover_package/cover-vertical-3x4.png"
+  cover_4_3: "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_cover_package/cover-horizontal-4x3.png"
+
+platforms:
+  kuaishou:
+    title: "先查回执"
+    description: "无新增，不等于失败。先查回执、状态、对照，再决定要不要补发。"
+
+publishing:
+  preferred_automation: "Chrome DevTools/CDP"
+  publish_url: "https://cp.kuaishou.com/article/publish/video?tabType=1"
+  management_url: "https://cp.kuaishou.com/article/manage/video"
+  final_submit_requires_user_confirmation: false

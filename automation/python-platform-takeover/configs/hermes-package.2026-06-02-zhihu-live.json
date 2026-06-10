@@ -1,0 +1,84 @@
+{
+  "campaignId": "2026-06-02-ai-employee-asset-fingerprint-before-submit",
+  "sourceThreadId": "019d9ac2-d680-7f12-bf32-14678c576aa1",
+  "currentThreadId": "019e824b-8136-72f1-a3b6-cad123316fc3",
+  "sourceCampaignId": "2026-06-02-ai-employee-asset-fingerprint-before-submit",
+  "sourceConfig": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/content-package.2026-06-02-ai-employee-asset-fingerprint-before-submit.yaml",
+  "sourceContentRoot": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit_content_package",
+  "receiptPath": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-06-02-ai-employee-asset-fingerprint-before-submit.json",
+  "scope": "all_platforms",
+  "platforms": {
+    "kuaishou": {
+      "title": "一致再发",
+      "description": "封面刚换过，别按旧路径继续发。先核视频、封面、文案三件套。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit_cover_package/cover-vertical-3x4.png"
+    },
+    "wechat_channels": {
+      "title": "一致再发",
+      "description": "小马想按文件名继续发布，大陈叫停：先锁视频、封面、文案三件套，确认一致再发。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit_cover_package/cover-vertical-3x4.png"
+    },
+    "weibo": {
+      "title": "文件名一样，就能直接继续发布吗？",
+      "description": "不能。文件名一样，不代表视频、封面、文案还是同一版。发布前先锁三件套指纹，一致再发，避免旧封面被平台任务拿走。#AI员工 #内容运营",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit_cover_package/cover-vertical-3x4.png"
+    },
+    "bilibili": {
+      "title": "文件名一样也不能直接发：AI员工先锁视频、封面、文案三件套",
+      "description": "这条讲发布前最容易漏的一步：不要只看路径和文件名。封面或文案刚改过，就要重新计算视频指纹、封面指纹和文案版本，三件套一致后再进入平台发布。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit_cover_package/cover-horizontal-4x3.png"
+    },
+    "toutiao": {
+      "title": "为什么发布前不能只看文件名，还要锁视频、封面和文案？",
+      "description": "因为文件名一样，不代表资产版本一致。封面或文案刚改过，就要重新核对视频、封面、文案三件套，避免平台任务使用旧素材。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit_cover_package/cover-vertical-3x4.png"
+    },
+    "baijiahao": {
+      "title": "发布前如何避免平台任务拿到旧封面？",
+      "description": "不要只看文件名和路径。更稳妥的做法是先锁视频指纹、封面指纹和文案版本，三件套一致后再进入发布任务。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit_cover_package/cover-horizontal-4x3.png"
+    },
+    "zhihu": {
+      "title": "为什么内容发布前要同时核对视频、封面和文案版本？",
+      "description": "因为文件名和路径可能没变，但封面或文案已经换过。发布前锁定视频指纹、封面指纹和文案版本，可以避免平台任务拿到旧封面或旧文案。",
+      "videoPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit-publish.mp4",
+      "coverPath": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit_cover_package/cover-vertical-3x4.png"
+    }
+  },
+  "fingerprints": {
+    "title_hash": "4ba42a3065a03cadae8ccef89a59db722dd84e2b1eada9cfd5ed4fb454d06f10",
+    "body_core_hash": "245a9bcce488d1d4840e9cdbb13ae94a8081561267a39d3161f637a4dec454c7",
+    "video_sha256": "ad8e66a5e2f4e9a0aa0ca15cb21fc10d25650abab2a3a2ea180a6ee36f17ba49",
+    "raw_video_sha256": "833003c806ef989d26051b732a614837e0b3a3951b6f6b4b2e51e1c77e010d43",
+    "api_raw_video_sha256": "55675ea202ffff96daf5fb53cea7f1af91930bd78f7ad4a195ee09bf645c96d5",
+    "cover_sha256": "f7dbffb7edbb266ffcb455a4055e57e1cc4564cca20d31c311bae15150efeaae",
+    "cover_3_4_sha256": "f7dbffb7edbb266ffcb455a4055e57e1cc4564cca20d31c311bae15150efeaae",
+    "cover_4_3_sha256": "f59d7dc8e2baeeeb15ccbabdbc68f0402b2d0e2ed869acb01865dac19464755f",
+    "last_frame_sha256": "e175bd61ae3669b72062012b232eeb8c67a06025820de5e223e8b48ae001d9e8",
+    "api_last_frame_sha256": "51f3f133c9a079a14687c0f12066284d2f47a584201f3c13a5ef14c4227f960a"
+  },
+  "lock_dir": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-locks",
+  "allow_live": true,
+  "unsupportedPlatforms": {
+    "douyin": "unsupported_by_current_hermes_skill",
+    "xiaohongshu": "excluded_from_current_hermes_skill"
+  },
+  "publishConstraints": {
+    "requireManagementPageVerification": true,
+    "skipDuplicateIfAlreadyPublished": true,
+    "finalSubmitRequiresUserConfirmation": true
+  },
+  "package_cover_reset": {
+    "reset_at": "2026-06-02T16:58:45+08:00",
+    "cover_3_4_sha256": "f7dbffb7edbb266ffcb455a4055e57e1cc4564cca20d31c311bae15150efeaae",
+    "cover_4_3_sha256": "f59d7dc8e2baeeeb15ccbabdbc68f0402b2d0e2ed869acb01865dac19464755f",
+    "cover_manifest_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-06-02-ai-employee-asset-fingerprint-before-submit_cover_package/cover-manifest.json",
+    "visual_review": "passed"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "campaign_id": "2026-05-30-ai-employee-no-rush-repost-before-receipt",
   "source_thread_id": "019d9ac2-d680-7f12-bf32-14678c576aa1",
-  "status": "bilibili:published_verified_manager_page,toutiao:submitted_under_review,zhihu:published_with_video_verified,wechat_channels:published_verified_manager_page",
+  "status": "bilibili:published_verified_manager_page,toutiao:submitted_under_review,zhihu:published_with_video_verified,wechat_channels:published_verified_manager_page,kuaishou:submitted_under_review",
   "package_status": "ready_for_publish",
   "receipts": {
     "bilibili": {
@@ -103,6 +103,51 @@
       "video_verification_evidence": "zhihu article detail page shows video player with thumbnail and play button (00:15 duration), vision confirmed 视频播放器 visible",
       "updated_at": "2026-06-02T06:07:32.598Z"
     },
+    "kuaishou": {
+      "actor": "workbuddy-agent-runtime",
+      "actor_session_id": "workbuddy-2026-06-08-kuaishou",
+      "platform_id": "kuaishou",
+      "status": "submitted_under_review",
+      "title": "先查回执",
+      "description": "无新增，不等于失败。先查回执、状态、对照，再决定要不要补发。",
+      "video_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt-publish.mp4",
+      "cover_path": "/Users/baishangjituan/Documents/seedance/outputs/2026-05-30-ai-employee-no-rush-repost-before-receipt_cover_package/cover-vertical-3x4.png",
+      "video_upload_method": "cdp_dom_set_file_input_files",
+      "video_upload_verified": true,
+      "cover_upload_method": "auto_generated_or_cdp_upload",
+      "cover_upload_verified": true,
+      "published_at": "2026-06-08T20:00:00+08:00",
+      "verified_at": "2026-06-08T20:00:00+08:00",
+      "verification_evidence": {
+        "manager_page_status": "审核中",
+        "manager_page_url": "https://cp.kuaishou.com/article/manage/video?status=2&from=publish",
+        "title_found_in_manager": true,
+        "description_found_in_manager": true,
+        "manager_page_total": 1,
+        "publish_redirect": true,
+        "from_publish_param": true
+      },
+      "notes": [
+        "User manually logged in to cp.kuaishou.com via passport.kuaishou.com",
+        "Video uploaded via CDP DOM.setFileInputFiles on cp.kuaishou.com/article/publish/video",
+        "Description filled via CDP Runtime.evaluate on contenteditable element",
+        "Publish button clicked via CDP Input.dispatchMouseEvent (after closing survey popup)",
+        "Page auto-redirected to management page with from=publish parameter",
+        "Video status: 审核中 (under review)",
+        "Cover upload: script reported skipped but user confirmed cover visible on management page (auto-generated or CDP upload succeeded)",
+        "Cover verified by user manual check on management page",
+        "Chrome profile: Chrome-PPC-Publish-CDP (dedicated, non-default)",
+        "CDP port: 9222"
+      ],
+      "evidence_dir": "/Users/baishangjituan/Documents/push/platform-publish-control/state/evidence",
+      "evidence_screenshots": [
+        "kuaishou-login-page-current.png",
+        "kuaishou-after-login.png",
+        "kuaishou-publish-page-loaded.png",
+        "kuaishou-before-publish.png",
+        "kuaishou-final-state.png"
+      ]
+    },
     "wechat_channels": {
       "actor": "workbuddy-agent-runtime",
       "actor_session_id": "workbuddy-2026-06-06-wechat-channels",
@@ -186,7 +231,8 @@
       "bilibili",
       "toutiao",
       "zhihu",
-      "wechat_channels"
+      "wechat_channels",
+      "kuaishou"
     ],
     "receipt_path": "/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json",
     "updated_at": "2026-06-06T22:48:00+08:00"
@@ -199,7 +245,8 @@
     "authorized_platforms": [
       "bilibili",
       "toutiao",
-      "zhihu"
+      "zhihu",
+      "kuaishou"
     ],
     "authorized_at": "2026-06-02T07:26:10.131430+08:00"
   },
