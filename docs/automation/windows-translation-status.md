@@ -1580,6 +1580,122 @@
   - 是。
   - 截至 `2026-04-30 22:05:10 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都已补齐。
 
+## 2026-05-01 22:02:50 CST
+
+- 处理时间:
+  - `2026-05-01 22:02:50 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-04-30 22:05:10 CST` 之后追加的批次:
+    - `2026-05-01 06:16:49 CST`
+    - `2026-05-01 07:18:20 CST`
+    - `2026-05-01 08:19:05 CST`
+    - `2026-05-01 10:21:32 CST`
+    - `2026-05-01 11:22:52 CST`
+    - `2026-05-01 11:23:34 CST`
+    - `2026-05-01 12:23:51 CST`
+    - `2026-05-01 16:28:46 CST`
+    - `2026-05-01 17:31:35 CST`
+  - 其中 `2026-05-01 06:16:49 CST`、`07:18:20 CST`、`08:19:05 CST`、`10:21:32 CST`、`11:22:52 CST`、`11:23:34 CST`、`12:23:51 CST`、`16:28:46 CST` 均为 `新增 0，修改 0，删除 0`。
+  - 唯一非零批次是 `2026-05-01 17:31:35 CST`，对应:
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`
+- 已完成的 Windows 补全:
+  - 无新增转译项；本轮明确记录“无需补写 Windows 专属实现”。
+  - 已复核 `automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json` 新增的 `bilibili` receipt 写回只是同一 campaign 的共享台账补写，不引入新的 Mac-only skill 行为，因此不需要新增 `.ps1`、`.cmd`、Windows 路径分叉、快捷键桥接或 repo 资产副本。
+  - 已复核现有 Windows 覆盖仍然成立，无需改仓库实现:
+    - `skill-center/skills/social-publish-automation/SKILL.md` 已覆盖 `CDP` 不可用时先走 `opencli doctor`，并在 Windows repo mirror 走 `automation/python-platform-takeover/scripts/social-publisher.ps1 doctor --check-browser --package <yaml> --platform <platform>` 评估 Browser Bridge fallback。
+    - `automation/python-platform-takeover/README.md` 已覆盖 Windows 侧共享 `receipt-status` / `record-receipt` / `clear-receipt` 用法，以及 receipt JSON 出现新增核验字段时不要手工删键的口径。
+  - 结论:
+    - `2026-05-01 17:31:35 CST` 这批新增内容是 Bilibili 发布结果与 OpenCLI Browser Bridge fallback 留痕写回，不是新的 Windows 待补功能；今天无需新增 Windows 补丁文件。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-01` 当前已记录批次里没有尚未桥接到 Windows 的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未做 Windows PowerShell 实机回归；结论基于 monitor 批次复核、现有 Windows 文档 / skill 说明，以及共享 receipt / Browser Bridge 流程核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-01 22:02:50 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天明确没有需要补写的 Windows 专属转译。
+
+## 2026-05-01 22:05:55 CST
+
+- 处理时间:
+  - `2026-05-01 22:05:55 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-04-30 22:05:10 CST` 之后追加且此前未写入本状态文件的非零批次，按行为去重后为:
+    - `2026-04-30 22:07:28 CST` / `2026-04-30 22:08:00 CST`
+    - `2026-04-30 23:09:15 CST`
+    - `2026-05-01 00:11:58 CST` / `2026-05-01 00:12:29 CST`
+    - `2026-05-01 17:31:23 CST` / `2026-05-01 17:31:35 CST`
+  - 其中 `2026-04-30 22:07:28 CST`、`22:08:00 CST` 是同一批 `blocked_account_review_pending` / receipt 扩展字段兼容补记，Windows 桥接已在 `2026-04-30 22:05:10 CST` 那轮补齐，本轮不重复新增实现。
+  - `2026-04-30 23:09:15 CST` 与 `2026-05-01 00:11:58 CST` / `00:12:29 CST` 的有效行为更新集中在:
+    - `skill-center/skills/platform-cover-ops/SKILL.md`
+    - `skill-center/skills/seedance-video-api/SKILL.md`
+    - `skill-center/skills/seedance-video-api/references/{cover-execution,cover-package}.md`
+    - `automation/python-platform-takeover/README.md`
+    - `automation/python-platform-takeover/social_publisher/publish_receipts.py`
+    - `automation/python-platform-takeover/tests/test_publish_receipts.py`
+    - `automation/python-platform-takeover/state/publish-receipts/*.json`
+    - `automation/python-platform-takeover/configs/content-package.2026-04-30-repair-existing-not-republish.yaml`
+  - `2026-05-01 17:31:23 CST` / `17:31:35 CST` 是同一批 Bilibili receipt 回写补记，目标文件为:
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`
+- 已完成的 Windows 补全:
+  - `skill-center/skills/platform-cover-ops/SKILL.md`:
+    - 补入 Windows 文件选择器桥接，明确封面上传若必须经过系统选择器，应使用真实短路径 `%TEMP%\\cover-upload.png` 或带引号的 `C:/...` 路径，不得依赖 Explorer 搜索结果、`.lnk` 快捷方式、OneDrive 占位文件或 symlink。
+    - 把头条号 `3:4` 封面优先规则补成 Windows handoff 说明，要求 Windows repo mirror 下的 upload matrix / content-package 字段优先指向真实竖版 `3:4` 封面路径，横版 `4:3` 只保留为 fallback。
+  - `skill-center/skills/seedance-video-api/{SKILL.md,references/cover-execution.md,references/cover-package.md}`:
+    - 复核后确认这批 `Seedance` 变更已经具备 Windows 等价覆盖，无需再补 PowerShell 或路径分叉:
+      - 已有 `seedance_cli.ps1`、`build_cover_package.ps1` 等 PowerShell 入口
+      - 已写明 Windows 侧 `C:/...` 路径约定
+      - 已写明逐平台 `upload matrix` 必填，以及头条号默认视频发布、竖版 `3:4` 封面优先的 Windows-ready handoff 规则
+  - `automation/python-platform-takeover/{README.md,social_publisher/publish_receipts.py,tests/test_publish_receipts.py}`:
+    - 复核后确认 receipt loader 对 `verified_fields`、`aid`、`object_nonce` 等扩展字段的兼容，以及 `blocked_account_review_pending` / `under_review` 等阻断状态，都是共享跨平台逻辑；现有 Windows 侧 `.\scripts\social-publisher.ps1 receipt-status|record-receipt|clear-receipt` 已可直接复用，无需新增 Windows 专属代码。
+  - `automation/python-platform-takeover/state/publish-receipts/*.json` 与 `configs/content-package.2026-04-30-repair-existing-not-republish.yaml`:
+    - 复核后确认它们属于共享 campaign / receipt 数据与样例内容包更新，不需要新增 `.ps1`、`.cmd`、Windows JSON/YAML 分叉文件或额外 repo 资产副本。
+  - `automation/python-platform-takeover/state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json`:
+    - 复核后确认新增的 Bilibili `under_review` receipt、`BV1FHRTB9EgW` / share link、OpenCLI Browser Bridge fallback 说明与飞书通知留痕都只是共享台账补写，不引入新的 Windows-only skill 行为。
+    - 现有 `skill-center/skills/social-publish-automation/SKILL.md` 已覆盖 Windows 侧在 `CDP` 不可用时先运行 `automation/python-platform-takeover/scripts/social-publisher.ps1 doctor --check-browser --package <yaml> --platform <platform>`，再决定是否使用 Browser Bridge fallback，因此本轮无需再补脚本。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-01` 当前已记录的非零批次里，没有仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未做 Windows PowerShell 实机回归；结论基于 monitor 批次去重复核、仓库现有 PowerShell 入口、Windows 路径文档、receipt 读取逻辑与 Browser Bridge fallback 说明核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-01 22:05:55 CST`，`skill-change-monitor.md` 里 `2026-04-30 22:05:10 CST` 之后新增且此前未入账的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都已补齐；今天剩余的新增内容只有共享 receipt 留痕，没有新的 Windows 缺口。
+
+## 2026-05-02 22:02:44 CST
+
+- 处理时间:
+  - `2026-05-02 22:02:44 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-01 22:05:55 CST` 之后追加的非零批次，按行为去重后为:
+    - `2026-05-01 22:38:55 CST`
+    - `2026-05-01 23:40:45 CST` / `2026-05-02 00:41:46 CST`
+    - `2026-05-02 15:16:03 CST` / `2026-05-02 16:18:24 CST`
+    - `2026-05-02 18:22:08 CST`
+  - `2026-05-02 19:23:34 CST`、`20:25:24 CST`、`21:26:12 CST` 均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/seedance-video-api/{SKILL.md,references/workflows.md}`:
+    - 补入 Windows handoff 说明，明确当前 `大陈 / AI员工 / 机器人小马` 视频线默认女性配角使用的 `asset://asset-20260401123823-6d4x2` 必须继续作为 Seedance payload 里的字面 `reference_image` asset URI 保留，不能因为 Windows 路径改写而误替换成 `C:/...` 本地文件路径。
+    - 在 Windows 路径规则里补明边界: 只有本地视频、封面、内容包等文件路径需要改成带引号的 `C:/...`；内置 Seedance `asset://...` 引用不做平台分叉。
+  - `skill-center/skills/platform-cover-ops/SKILL.md`:
+    - 复核后确认 `2026-05-01 22:38:55 CST` 这批变更本身已经包含 Windows 文件选择器短真实路径说明，以及 Seedance 视频在 Windows mirror 中继续优先 `3:4` 竖版封面的 handoff 规则，无需再补新文档或脚本。
+  - `automation/python-platform-takeover/{README.md,configs/content-package.2026-05-01-dachen-xiaoma-argue-fix-old-post.yaml,state/publish-receipts/2026-05-01-dachen-xiaoma-argue-fix-old-post.json}`:
+    - 复核后确认 `2026-05-01 22:38:55 CST`、`23:40:45 CST`、`2026-05-02 00:41:46 CST` 的 campaign 配置扩写与 receipt 持续补写，都是共享发布包或共享台账行为；现有 Windows README 已覆盖日期化 YAML 复制后改 `C:/...` 路径、`record-receipt` / `receipt-status` / `validate-package` 的 PowerShell 用法，以及 Browser Bridge / 管理页写回口径，因此不需要新增 `.ps1`、`.cmd` 或代码分叉。
+  - `automation/python-platform-takeover/{configs/content-package.2026-05-02-ai-employee-writeback-after-publish.yaml,state/publish-receipts/2026-05-02-ai-employee-writeback-after-publish.json,state/screenshots/*}`:
+    - 复核后确认 `2026-05-02 15:16:03 CST` 与 `16:18:24 CST` 这批新增 campaign、B 站 / 快手留痕截图与多平台 receipt 写回，仍是共享内容包、共享 screenshot 证据和共享 receipt 状态推进；Windows 侧继续走既有 `.\scripts\social-publisher.ps1`、日期化 YAML 路径改写、管理页核验与写回流程即可，无需新增 Windows 专属资源副本。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-02` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮新增补丁仅为 Windows 文档桥接，没有新增 `.ps1` / `.cmd` / Python 平台分叉文件。
+  - 本机未做 Windows PowerShell 实机回归；结论基于 monitor 批次复核、仓库现有 PowerShell 入口、Windows 路径文档、以及新增 `Seedance asset://...` handoff 说明核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-02 22:02:44 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都已补齐；今天唯一需要显式补写的 Windows 缺口是 `Seedance` 默认女性配角 `asset://...` 引用在 Windows handoff 中不得被误改成本地路径，现已记录到仓库文档。
+
 ## 2026-05-03 22:02:46 CST
 
 - 处理时间:
@@ -1647,3 +1763,1879 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-03 22:01:56 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天明确没有需要补写的 Windows 专属转译。
+
+## 2026-05-04 22:05:18 CST
+
+- 处理时间:
+  - `2026-05-04 22:05:18 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中此前未写入 `windows-translation-status.md` 的非零批次，按行为去重后为:
+    - `2026-05-03 22:01:09 CST` / `2026-05-03 22:01:31 CST`
+    - `2026-05-03 23:03:25 CST`
+    - `2026-05-04 01:05:49 CST` / `2026-05-04 01:06:14 CST`
+    - `2026-05-04 14:35:08 CST`
+    - `2026-05-04 15:29:37 CST`
+  - `2026-05-04 16:32:14 CST` 至 `2026-05-04 21:37:20 CST` 的其余追加批次均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - 无新增 Windows 专属补丁文件；本轮明确记录“已复核，无需额外转译实现”。
+  - `automation/python-platform-takeover/{state/screenshots/kuaishou-before-publish-cdp-20260503.png,state/screenshots/kuaishou-after-click-cdp-20260503.png,state/screenshots/kuaishou-after-dom-publish-click-20260503.png,state/screenshots/kuaishou-management-verify-20260503.png,state/screenshots/kuaishou-management-published-20260503-2107.png,state/publish-receipts/2026-05-03-ai-employee-data-center-review.json}`:
+    - 复核 `2026-05-03 22:01:09 CST` / `22:01:31 CST` 这批快手过程截图和同 campaign receipt 扩写后，确认它们只是共享留痕和共享台账推进，不引入新的 macOS-only 行为。
+    - Windows 侧继续直接复用现有 `.\scripts\social-publisher.ps1 receipt-status|record-receipt|clear-receipt` 与管理页复核口径，不需要补 Windows 专属图片副本、第二套 JSON 台账或额外 PowerShell 包装器。
+  - `automation/python-platform-takeover/{configs/content-package.2026-05-03-ai-employee-data-center-review.yaml,state/publish-receipts/2026-05-03-ai-employee-data-center-review.json}`:
+    - 复核 `2026-05-03 23:03:25 CST` 新增的抖音 + 视频号共享 content package 与 receipt 扩写后，确认这批变化仍属于共享 campaign 语义。
+    - 现有 Windows README 已覆盖日期化 YAML 复制后改成真实 `C:/...` 素材路径，以及 `.\scripts\social-publisher.ps1 validate-package|publish|receipt-status|record-receipt` 的 PowerShell 用法，因此无需补新的 `.ps1`、`.cmd` 或 Windows 样例分叉。
+  - `automation/python-platform-takeover/state/publish-receipts/2026-05-03-ai-employee-data-center-review.json`:
+    - 复核 `2026-05-04 01:05:49 CST` / `01:06:14 CST` 把视频号从 `not_started` 推进到 `published_verified_in_manager` 的最终核验写回后，确认这仍是共享 receipt 字段补记，不需要新的 Windows 路径处理、快捷键桥接或 repo 资产副本。
+    - 现有 Windows 流程已经允许同一 receipt 继续补 `verified_fields`、管理页对象 ID、飞书通知留痕等字段，Windows 侧不需要手工删键后再跑命令。
+  - `automation/python-platform-takeover/{configs/content-package.2026-05-04-ai-employee-three-format-comparison.yaml,configs/content-package.2026-05-04-ai-employee-three-format-comparison.kuaishou.yaml,configs/content-package.2026-05-04-ai-employee-three-format-comparison.weibo.yaml,state/publish-receipts/2026-05-04-ai-employee-three-format-comparison.json,state/screenshots/kuaishou-inspect-7-20260504.png,state/screenshots/kuaishou-inspect-9-20260504.png}`:
+    - 复核 `2026-05-04 14:35:08 CST` 新增的通用 / 快手 / 微博 content package、receipt 与快手截图后，确认它们都属于共享 campaign 资产和共享留痕，不引入新的 macOS-only 操作。
+    - 现有 Windows 覆盖已经足够承接这批新增内容，无需新增 `.ps1`、`.cmd`、文档分叉或第二套 receipt 流程:
+      - `automation/python-platform-takeover/README.md` 已要求 Windows 先复制日期化 YAML，再把写死的 macOS `/Users/...` 素材路径改成真实 `C:/...` 或其他 Windows 绝对路径
+      - `README.md` 已覆盖 `.\scripts\social-publisher.ps1 validate-package|receipt-status|record-receipt|publish` 的 PowerShell 用法
+      - `skill-center/skills/social-publish-automation/SKILL.md` 已要求 Windows 继续复用共享 CLI、共享 receipt 台账和 `%TEMP%` 短真实路径上传回退，不为新增 campaign 另造手写流程
+    - 这批 receipt 新增的管理页核验字段、截图路径和飞书通知留痕仍由共享 Python loader 消费；Windows 侧不需要手工删键或复制第二份 JSON 台账。
+  - `automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py`:
+    - 复核 `2026-05-04 14:35:08 CST` 的 `locator(\"body\").first.inner_text()` 修复，以及 `2026-05-04 15:29:37 CST` 进一步收敛到多 `body` / Wujie 容器表面文本读取的兼容逻辑后，确认这两批变化都是共享 Python 发布器行为，不需要单独 Windows 代码分叉。
+    - Windows 侧继续直接走现有 `.\scripts\social-publisher.ps1 publish wechat_channels <yaml> --execute` 即可；快捷键差异仍由共享逻辑处理，在 Windows 自动使用 `Control+A`，在 macOS 自动使用 `Meta+A`。
+    - 这批视频号文本读取兼容修复不会引入新的 Windows 路径规则、PowerShell 启动器或额外 repo 资产缺口。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-04` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮没有新增仓库级 Windows 脚本、文档或代码补丁；追加的是“无需转译”的核对结论和状态记录。
+  - 本机未做 Windows PowerShell 实机回归；结论基于 monitor 批次复核、现有 Windows README / PowerShell 入口，以及新增 content package / receipt / screenshot 资产和 `wechat_channels.py` 共享兼容逻辑核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-04 22:05:18 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天明确没有需要新增补写的 Windows 专属转译。
+
+## 2026-05-05 22:05:02 CST
+
+- 处理时间:
+  - `2026-05-05 22:05:02 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-04 22:05:18 CST` 之后追加且此前未写入本状态文件的非零批次，按行为去重后为:
+    - `2026-05-05 12:15:07 CST`
+    - `2026-05-05 13:11:45 CST`
+    - `2026-05-05 14:11:05 CST` / `2026-05-05 14:11:26 CST`
+    - `2026-05-05 19:15:40 CST` / `2026-05-05 19:16:34 CST`
+  - `2026-05-05 15:12:48 CST`、`17:14:25 CST`、`17:14:33 CST`、`18:16:36 CST`、`20:18:38 CST`、`21:18:27 CST` 的追加批次均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/seedance-video-api/SKILL.md`:
+    - 为 `2026-05-05 12:15:07 CST` 新增的 “review-to-creative translation” 规则补上 Windows handoff 等价说明，明确 Windows 侧也要把内部复盘证据保存在 `latest-review.md` 或 `brief.json`，并保持 `video-prompt.txt`、平台标题和发布文案面向观众，不能把 review 原话直接贴进 dated YAML 或平台文案字段。
+    - 复核后确认这批新规则不需要新增 PowerShell 启动器或 Windows 路径分叉；现有 `seedance_cli.ps1`、`build_cover_package.ps1`、`C:/...` 路径约定，以及 `asset://asset-20260401123823-6d4x2` 不改写成本地路径的说明，已经能承接今天的 skill 行为更新。
+  - `automation/python-platform-takeover/{configs/content-package.2026-05-05-ai-employee-receipt-handoff*.yaml,state/publish-receipts/2026-05-05-ai-employee-receipt-handoff.json,state/screenshots/kuaishou-*.png,social_publisher/platforms/wechat_channels.py}`:
+    - 复核 `2026-05-05 13:11:45 CST` 的 receipt-handoff content package、快手调试截图和视频号 frame 解析修复后，确认它们分别属于共享 campaign 资产与共享 Python 发布器逻辑，不引入新的 Windows-only 行为。
+    - 现有 Windows 覆盖已经足够，无需新增 `.ps1`、`.cmd`、快捷键补丁或 repo 资产副本:
+      - `automation/python-platform-takeover/README.md` 已要求 Windows 先复制日期化 YAML，再把 `/Users/...` 素材路径改成真实 `C:/...` 绝对路径
+      - `.\scripts\social-publisher.ps1 validate-package|publish|receipt-status|record-receipt|clear-receipt` 已覆盖 content package 校验与 receipt 台账推进
+      - `social_publisher/platforms/base.py` 既有的主快捷键桥接仍然生效，Windows 使用 `Control+A`，macOS 使用 `Meta+A`
+    - `wechat_channels.py` 本轮新增的 `_resolve_content_frame()` / `empty.html` 规避逻辑是共享浏览器接管修复，Windows 侧直接复用，不需要代码分叉。
+  - `automation/python-platform-takeover/state/publish-receipts/2026-05-05-ai-employee-receipt-handoff.json`:
+    - 复核 `2026-05-05 14:11:05 CST` / `14:11:26 CST` 的多平台 receipt 补写后，确认它只是共享发布台账推进；百家号、视频号、B 站、快手的核验字段、截图路径与飞书通知元数据继续由共享 Python loader 和现有 PowerShell 包装器消费，Windows 不需要单独第二套 receipt 流程。
+  - `automation/python-platform-takeover/{configs/content-package.2026-05-05-ai-employee-audit-wait-no-republish.yaml,state/hermes-handoff/latest.json,state/publish-receipts/2026-05-05-ai-employee-audit-wait-no-republish.json}`:
+    - 复核 `2026-05-05 19:15:40 CST` / `19:16:34 CST` 的新 campaign handoff 资产后，确认它们都是共享 content package、共享 Hermes 指针与共享初始 receipt 台账，不引入新的 Mac-only 操作。
+    - Windows 侧继续沿用现有 dated YAML 复制、`C:/...` 路径改写、`.\scripts\social-publisher.ps1 validate-package|receipt-status` 与 handoff 流程即可；不需要再补新的脚本、文档分叉或资源副本。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-05` 当前已记录的非零批次里，没有仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮只新增了 1 处 Windows 文档桥接说明，没有新增 Windows 专属脚本或代码分叉。
+  - 本机未做 Windows PowerShell 实机回归；结论基于 monitor 批次去重复核、仓库现有 PowerShell 入口、Windows 路径文档、以及新增 skill / content package / receipt / screenshot 资产和 `wechat_channels.py` 共享逻辑核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-05 22:05:02 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天唯一需要显式补写的 Windows 缺口是 `seedance-video-api` 新增证据分层规则的 Windows handoff 说明，现已补齐。
+
+## 2026-05-05 22:07:56 CST
+
+- 处理时间:
+  - `2026-05-05 22:07:56 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-04 22:05:18 CST` 之后追加的非零批次，按行为去重后为:
+    - `2026-05-05 12:15:07 CST`
+    - `2026-05-05 13:11:45 CST`
+    - `2026-05-05 14:11:26 CST`
+    - `2026-05-05 19:15:40 CST`
+  - 其余 `2026-05-04 23:45:02 CST`、`2026-05-05 00:42:13 CST`、`00:42:39 CST`、`01:44:03 CST`、`01:45:29 CST`、`04:11:48 CST`、`06:36:46 CST`、`06:37:45 CST`、`08:52:12 CST`、`09:53:35 CST`、`09:54:27 CST`、`10:54:58 CST`、`10:56:09 CST`、`15:12:48 CST`、`17:14:25 CST`、`17:14:33 CST`、`18:16:36 CST`、`20:18:38 CST`、`21:18:27 CST` 均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/seedance-video-api/SKILL.md`:
+    - 复核 `2026-05-05 12:15:07 CST` 新增的 `review-to-creative translation` 约束后，确认主技能文件本身已经补入 Windows handoff 规则：`latest-review.md` / `brief.json` 继续承载内部 review evidence，`video-prompt.txt`、平台标题和平台文案保持面向受众，不把 data-review 原话直接抄进 dated YAML 或平台字段。
+  - `skill-center/skills/seedance-video-api/references/workflows.md`:
+    - 新增同一条 Windows handoff 参考规则，避免只在主 `SKILL.md` 写明、参考工作流却漏掉。Windows 交接线程现在也会明确区分 `review evidence` 与 `creative translation`，不再把 review 原文直接灌进 prompt / 标题 / 平台文案。
+  - `automation/python-platform-takeover/README.md`:
+    - 针对 `2026-05-05 19:15:40 CST` 新增的 handoff-only content package 与 Hermes 指针，补入 Windows 专属执行口径:
+      - 当 YAML 声明 `publish_constraints.allow_live: false`
+      - 或 `no_publish_in_handoff_generation: true`
+      - 或 `no_upload_in_handoff_generation: true`
+      - 或 `no_submit_click_in_handoff_generation: true`
+      - Windows 侧只允许跑 `validate-package`、`receipt-status`、`record-receipt --status not_published`
+      - 明确禁止 `publish --execute`、原生文件选择器上传、以及任何提交点击
+      - 明确 `state/hermes-handoff/latest.json` + 当前 campaign receipt 是后续接力唯一入口
+  - `skill-center/skills/social-publish-automation/SKILL.md`:
+    - 补入同一批 handoff-only 约束的 Windows 操作说明，让发布技能在进入 UI 前就识别 `allow_live: false` / `no_*_in_handoff_generation` 这类内容包，并停在验证 + receipt 初始化阶段，不误触发 `publish --execute`。
+  - `automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py`:
+    - 复核 `2026-05-05 13:11:45 CST` 的 frame 解析修复后，确认它仍是共享 Python 逻辑，不需要单独 Windows 代码分叉。Windows 继续复用现有 `.\scripts\social-publisher.ps1 publish wechat_channels <yaml> --execute` 与共享快捷键桥接，字段清空在 Windows 自动走 `Control+A`。
+  - `automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-receipt-handoff*.yaml` 与 `state/publish-receipts/2026-05-05-ai-employee-receipt-handoff.json`:
+    - 复核 `2026-05-05 13:11:45 CST` / `14:11:26 CST` 的新 campaign 包、receipt 留痕和多平台写回后，确认它们属于共享内容包 / 台账推进。现有 Windows README 已覆盖 dated YAML 复制为本地 `C:/...` 路径、`receipt-status` / `record-receipt` / `clear-receipt`、以及 Browser Bridge fallback，因此不需要新增 `.ps1`、`.cmd` 或第二套 Windows receipt 文件。
+  - `automation/python-platform-takeover/configs/content-package.2026-05-05-ai-employee-audit-wait-no-republish.yaml`、`state/hermes-handoff/latest.json`、`state/publish-receipts/2026-05-05-ai-employee-audit-wait-no-republish.json`:
+    - 复核 `2026-05-05 19:15:40 CST` 的交接产物后，确认真正需要补的是 Windows 执行约束说明，而不是新的脚本分叉；现已补到 README 和 publish skill。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-05` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮没有新增 Windows 专属脚本或代码分叉；补齐的是 Windows handoff / handoff-only 执行说明和参考文档镜像。
+  - 本机未做 Windows PowerShell 实机回归；结论基于 monitor 批次复核、现有 PowerShell 包装器与共享 Python 逻辑核对，以及新增文档补丁自检。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-05 22:07:56 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天新增的 Windows 补齐点主要是 Seedance review-evidence 交接约束和 handoff-only package 的禁止实发口径。
+
+## 2026-05-06 22:02:23 CST
+
+- 处理时间:
+  - `2026-05-06 22:02:23 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-05 22:07:56 CST` 之后追加且此前未写入本状态文件的非零批次，按行为去重后为:
+    - `2026-05-06 11:30:00 CST`
+    - `2026-05-06 17:39:03 CST`
+    - `2026-05-06 18:39:25 CST`
+    - `2026-05-06 19:42:17 CST`
+    - `2026-05-06 20:42:33 CST`
+  - `2026-05-06 21:42:37 CST` 为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - `automation/python-platform-takeover/state/hermes-handoff/latest.json`:
+    - 复核 `2026-05-06 11:30:00 CST` 的 `scope: all_platforms` 扩展后，确认它仍是共享 Hermes latest pointer 状态推进，不引入新的 Windows-only 缺口；现有 Windows handoff / receipt 流程可直接复用。
+  - `skill-center/skills/seedance-video-api/SKILL.md` 与 `automation/python-platform-takeover/{configs/content-package.2026-05-05-ai-employee-audit-wait-no-republish.yaml,configs/hermes-package.2026-05-05-ai-employee-audit-wait-no-republish.json,state/hermes-handoff/latest.json,state/publish-receipts/2026-05-05-ai-employee-audit-wait-no-republish.json}`:
+    - 复核 `2026-05-06 17:39:03 CST` 的 `lock_dir`、`fingerprints`、`latest_pointer_policy` 与 direct handoff JSON 规则后，确认仓库里现有 Windows 说明已经覆盖这批能力:
+      - `seedance_cli.ps1`、`build_cover_package.ps1` 及相关 PowerShell 包装器已存在
+      - Windows handoff 规则已要求 dated YAML / upload matrix 使用真实 quoted `C:/...` 路径
+      - Windows 文档已说明 `asset://...` 保持原样、review evidence 与 audience-facing copy 分层、以及 dated YAML 校验流程
+    - 结论: 这批 Seedance / Hermes handoff 强化不需要新的 Windows 脚本分叉，只需要状态留痕。
+  - `skill-center/skills/hermes-feishu-operator/**`:
+    - 将 `2026-05-06 18:39:25 CST` 新增、并在 `19:42:17 CST` / `20:42:33 CST` 持续微调的 live `hermes-feishu-operator` 正式镜像进仓库，避免该技能继续只停留在 `~/.codex/skills/`。
+    - 新增仓库镜像文件:
+      - `skill-center/skills/hermes-feishu-operator/SKILL.md`
+      - `skill-center/skills/hermes-feishu-operator/agents/openai.yaml`
+      - `skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.sh`
+      - `skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.ps1`
+      - `skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.cmd`
+    - 在 `skill-center/skills-manifest.txt` 补入 `hermes-feishu-operator`，确保 Windows / Mac 同步脚本会把该技能镜像到本地 `~/.codex/skills/`。
+    - Windows 等价实现已补齐:
+      - PowerShell 发送器支持 `--validate-only`、`--paste-only`、`--clear-only`、`--send`、`--visual-confirmed`、`--activate-lark`
+      - Windows 路径说明明确使用 quoted `C:/...` message file 路径与 `%USERPROFILE%/.codex/skills/...` 安装位置
+      - Windows 键盘差异已写明并固化到脚本: `Ctrl+A` 全选、`Backspace` 清空、`Ctrl+V` 粘贴、`Enter` 发送
+      - `.cmd` 包装器已补齐，便于 `cmd.exe` 或双击触发 PowerShell 版本
+    - `19:42:17 CST` / `20:42:33 CST` 的 live follow-up 重点是 `--activate-lark`、更明确的验证 / 发送路径与 GUI 可靠性微调；本轮 PowerShell 版本已一并纳入这些模式，不再遗留 Windows 功能缺口。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-06` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未做 Windows Feishu / Lark 实机回归；当前验证基于仓库文件核对、`bash -n` 对新增 `.sh` 脚本的静态检查，以及 live skill 行为与 repo 镜像逐项对照。由于当前机器未提供 `pwsh` / `powershell`，本轮没有执行 PowerShell 语法解析。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-06 22:02:23 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天新增的 Windows 补齐点是 `hermes-feishu-operator` 的仓库镜像、PowerShell / `.cmd` 发送入口，以及对应的 Windows 验证与快捷键说明。
+
+## 2026-05-06 22:08:37 CST
+
+- 处理时间:
+  - `2026-05-06 22:08:37 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-05 22:07:56 CST` 之后追加且此前仍需要本轮复核的非零批次:
+    - `2026-05-06 11:30:00 CST`
+    - `2026-05-06 17:39:03 CST`
+    - `2026-05-06 18:39:25 CST`
+    - `2026-05-06 19:42:17 CST`
+    - `2026-05-06 20:42:33 CST`
+  - `2026-05-06 00:24:37 CST` 至 `09:27:18 CST`、`12:31:32 CST` / `12:31:40 CST`、`13:33:22 CST`、`14:34:54 CST`、`15:36:08 CST`、`16:37:44 CST` / `16:38:09 CST`、`21:42:37 CST` 的其余追加批次均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+  - 本条以当前仓库实际文件为准，补充更正今天稍早草稿里未落地的 `.cmd` / manifest 假设。
+- 已完成的 Windows 补全:
+  - `automation/python-platform-takeover/state/hermes-handoff/latest.json`:
+    - 复核 `2026-05-06 11:30:00 CST` 的 `scope` 扩展为 `all_platforms` 后，确认它仍是共享 Hermes handoff 状态推进，不需要新的 Windows 脚本分叉。
+    - 为避免 Windows 线程误跟旧指针，本轮把 latest pointer 的校验要求补到了:
+      - `automation/python-platform-takeover/README.md`
+      - `skill-center/skills/seedance-video-api/SKILL.md`
+      - `skill-center/skills/seedance-video-api/references/workflows.md`
+      - `skill-center/skills/social-publish-automation/SKILL.md`
+  - `skill-center/skills/seedance-video-api/{SKILL.md,references/workflows.md}` 与 `automation/python-platform-takeover/README.md`:
+    - 针对 `2026-05-06 17:39:03 CST` 新增的 `fingerprints`、`lock_dir`、`latest_pointer_policy`、publish-lock smoke-test 留痕与 receipt schema 约束，补齐了 Windows handoff 规则:
+      - Windows 不得删改 `fingerprints.title_hash`、`fingerprints.body_core_hash`、`fingerprints.video_sha256`、`fingerprints.cover_sha256`、`lock_dir`
+      - Windows 必须把 `state/hermes-handoff/latest.json` 继续锁在真实 `ready_for_publish` campaign，不能指向 smoke-test 包、`/tmp` scratch 包或只做校验的占位包
+      - Windows 发布线程在接力前要对同一份 YAML 先跑 `.\scripts\social-publisher.ps1 validate-package <yaml>` 与 `receipt-status <yaml>`，一旦 receipt 已经进入已提交 / 审核中 / 已发布等状态就停止复用 handoff
+    - 结论: 这批 Seedance / Hermes handoff 强化以共享 YAML / JSON / receipt 结构为主，不需要新的 Windows 专属代码分叉，但需要把 Windows 文档口径补齐；现已补齐。
+  - `skill-center/skills/social-publish-automation/SKILL.md`:
+    - 补入 Windows 侧对 Hermes handoff 元数据的执行约束:
+      - `fingerprints` 与 `lock_dir` 是防重发契约，不是可选字段
+      - `state/hermes-handoff/latest.json` 只有在仍指向真实 `ready_for_publish` campaign 时才可继续发布
+    - 这样 `2026-05-06 17:39:03 CST` 那批 handoff 去重规则在 Windows 发布技能入口也有明确落点，不会只停留在 Seedance 侧说明。
+  - `skill-center/skills/hermes-feishu-operator/**`:
+    - 将 `2026-05-06 18:39:25 CST` 新增、并在 `19:42:17 CST` / `20:42:33 CST` 持续微调的 live `hermes-feishu-operator` 补进仓库镜像，避免该技能继续只存在于 `~/.codex/skills/`。
+    - 本轮实际新增的仓库镜像文件是:
+      - `skill-center/skills/hermes-feishu-operator/SKILL.md`
+      - `skill-center/skills/hermes-feishu-operator/agents/openai.yaml`
+      - `skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.sh`
+      - `skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.ps1`
+    - Windows 等价能力已落到 PowerShell 发送器和技能文档里:
+      - 支持 `-ValidateOnly`、`-PasteOnly`、`-ClearOnly`、`-Send`、`-VisualConfirmed`、`-ActivateLark`
+      - 用前台 `Lark` / `Feishu` 进程 +窗口标题校验 `hermes_agent_mac_mini`
+      - 用底部输入区点击 + `Ctrl+A` / `Backspace` / `Ctrl+V` 执行清空与粘贴
+      - 用窗口右下角点击执行发送，和最新 macOS shell 版本的 GUI 发送路径保持等价
+    - `2026-05-06 19:42:17 CST` / `20:42:33 CST` 里提到的 `--activate-lark` 与 GUI 可靠性增强，本轮已一并体现在 repo mirror 的 `.sh` / `.ps1` 双入口中。
+  - 结论:
+    - 今天真正需要新增实现的 Windows 缺口是 `hermes-feishu-operator` 的仓库镜像与 PowerShell launcher；其余 `2026-05-06` 非零批次主要是共享 handoff 规则收紧，补 Windows 文档和执行约束即可，不需要第二套代码分叉。
+- 未完成的补全:
+  - 无仓库级缺口。
+  - 截至本轮，`2026-05-06` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机可做的静态校验仅覆盖 `bash -n skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.sh`；当前环境未安装 `pwsh` / `powershell`，因此没有执行新的 `.ps1` 语法解析或 Windows 实机回归。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-06 22:08:37 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天新增的 Windows 补齐点是 `hermes-feishu-operator` 的仓库镜像、PowerShell 发送入口，以及 handoff fingerprint / lock / latest-pointer 规则的 Windows 文档落点。
+
+## 2026-05-07 22:02:42 CST
+
+- 处理时间:
+  - `2026-05-07 22:02:42 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-06 22:08:37 CST` 之后追加且此前未写入本状态文件的非零批次:
+    - `2026-05-07 00:55:55 CST`
+    - `2026-05-07 15:15:59 CST`
+  - 同期追加的 `2026-05-07 06:03:07 CST`、`07:03:18 CST`、`09:05:41 CST`、`10:07:35 CST`、`10:09:20 CST`、`11:09:02 CST`、`12:14:29 CST`、`12:15:12 CST`、`13:12:29 CST`、`14:13:18 CST`、`16:15:45 CST`、`17:17:28 CST`、`18:23:12 CST`、`19:25:32 CST`、`20:27:16 CST`、`21:30:50 CST`、`21:31:28 CST` 批次均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - `automation/python-platform-takeover/configs/hermes-package.2026-05-05-ai-employee-audit-wait-no-republish.json`:
+    - 复核 `2026-05-07 00:55:55 CST` 的 payload 改写后，确认这次只是把同一份 Hermes handoff 的末尾平台从 `baijiahao` 切到 `zhihu`，仍属于共享内容包 / handoff 元数据调整。
+    - 现有 Windows handoff 规则已经覆盖这类变更: quoted `C:/...` 路径写法、`asset://...` 保持原样、`validate-package` / `receipt-status` 先行校验、以及 `fingerprints` / `lock_dir` 不得被 Windows 线程改写；因此不需要新增 `.ps1`、`.cmd` 或第二套 Windows 内容包。
+  - `skill-center/skills/hermes-feishu-operator/**`:
+    - 复核 `2026-05-07 00:55:55 CST` 的整组删除后，确认这是仓库镜像整体移除，而不是只删 Windows 入口或只删 macOS 入口。
+    - 因为 `SKILL.md`、`send-hermes-feishu-prompt.sh`、`send-hermes-feishu-prompt.ps1`、`send-hermes-feishu-prompt.cmd` 是一起从 repo mirror 消失，当前状态是 Mac / Windows 都不再由仓库 `skill-center` 暴露这项能力；这不是新的 Windows-only 缺口，所以本轮不恢复 Windows 专属脚本副本。
+  - `skill-center/skills/{dachen-founder-flywheel,data-review,seedance-video-api,xiaoyunque-source-video}` 与 `skills/multi-platform-content-review-skill/**`:
+    - 复核 `2026-05-07 15:15:59 CST` 的 `16` 个文档 / 模板改动后，确认本轮新增行为集中在“把旧 `下一批小云雀视频高占比倾向` 区块升级为所有视频生成链路共用 brief”，以及 `*-no-new-batch` / `无新执行` 时的 Docker 看板写法约束。
+    - 这批改动是生成器无关的创意交接和复盘模板升级，不引入新的 shell、路径、快捷键或平台执行入口差异；现有 Windows 覆盖已经足够:
+      - `skill-center/skills/data-review/SKILL.md` 与 `skills/multi-platform-content-review-skill/SKILL.md` 仍保留 `.\scripts\dashboard-sync.ps1 --review-date YYYY-MM-DD` 的 Windows wrapper 说明。
+      - `skill-center/skills/seedance-video-api/SKILL.md` 既有的 PowerShell `ARK_API_KEY` 设置方式、Windows 启动器清单和 handoff 规则继续适用于新的“先通用 brief、后 Seedance 适配”约束。
+      - `skill-center/skills/xiaoyunque-source-video/**` 早先已经补齐的 Windows 侧启动 / 路径 / 交接说明仍然有效；本次新增的 `核心冲突句`、`核心场景 / 动作` 和 `小云雀执行补充` 仅改变 prompt 结构，不需要新增 Windows 分叉资产。
+  - 结论:
+    - 本轮没有新增需要落库的 Windows 专属脚本、PowerShell launcher、路径桥接、快捷键补丁、命令包装器或 repo 资源副本。
+    - 本轮对仓库的实际修改仅为补写本状态记录，明确 `2026-05-07` 的两组非零批次已经完成 Windows 复核。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-07` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未执行 Windows PowerShell 实机回归；本轮判断基于 monitor 批次复核、仓库 diff 核对，以及既有 Windows 文档 / wrapper / handoff 规则与新行为的逐项比对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-07 22:02:42 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天没有需要新增实现的 Windows 专属补丁。
+
+## 2026-05-07 22:04:55 CST
+
+- 处理时间:
+  - `2026-05-07 22:04:55 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-06 22:08:37 CST` 之后追加且与仓库 Windows 镜像仍相关的非零批次:
+    - `2026-05-07 15:15:59 CST`
+  - 同日晚些时候的 `2026-05-07 16:15:45 CST`、`17:17:28 CST`、`18:23:12 CST` 以及其余追加批次均为 `新增 0，修改 0，删除 0`，没有新的待转译项。
+  - 本条用于更正同日晚些较早草稿里“`xiaoyunque-source-video` 无需补仓库镜像”的漏判。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/xiaoyunque-source-video/SKILL.md`:
+    - 把今天新增的 prompt-package 行为同步到仓库镜像，明确 Windows 侧也要输出 `建议口播内容`，并在首次生成失败时复用同一套返工矩阵，而不是临时改写另一版 Windows prompt 流程。
+    - 新增 Windows-ready prompt handoff 规则，明确这批“先通用视频生成 brief、后小云雀适配”的结构在 Windows 也保持一致；只有本地素材路径和文件选择器说明改成 quoted `C:/...` 绝对路径。
+  - `skill-center/skills/xiaoyunque-source-video/references/prompt-template.md`:
+    - 将仓库镜像模板补到 `2026-04-25` 版，补齐今天 live skill 已要求但 repo mirror 仍缺的内容:
+      - `建议口播内容` 输出项
+      - “先通用视频生成、后小云雀适配”的继承顺序
+      - 首次生成失败后的返工矩阵
+      - 带 `建议口播内容` 的示例和检查清单
+    - 补入 Windows repo mirror 等价说明，要求参考图、导出物和 handoff 文档统一使用 quoted `C:/...` 绝对路径，不把 `/Users/...` 或 `%USERPROFILE%` 占位串直接留给 Windows 执行人。
+  - `skill-center/skills/{dachen-founder-flywheel,data-review,seedance-video-api}` 与 `skills/multi-platform-content-review-skill/**`:
+    - 复核后确认今天这些改动属于生成器无关的 brief / 复盘模板升级，或已经有现成的 Windows wrapper / handoff 说明承接；本轮不需要再新增 PowerShell launcher、`.cmd` 包装器、快捷键桥接或额外 repo 资产副本。
+  - 结论:
+    - 今天真正需要补的 Windows 缺口是 `xiaoyunque-source-video` 仓库镜像对新 prompt 结构和路径约束的跟进，现已补齐。
+    - 本轮没有新增 Windows-only 可执行脚本；新增内容是 Windows 可用文档镜像和路径 / handoff 规则。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-07` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未执行 Windows PowerShell 实机回归；本轮验证基于 monitor 批次复核、仓库镜像与 live skill 对照、以及 Windows 路径 / handoff 规则静态检查。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-07 22:04:55 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天补齐的 Windows 落点是 `xiaoyunque-source-video` 的仓库镜像提示词结构、返工矩阵和 `C:/...` 路径说明。
+
+## 2026-05-08 22:05:19 CST
+
+- 处理时间:
+  - `2026-05-08 22:05:19 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-07 22:04:55 CST` 之后追加且此前未写入本状态文件的非零批次:
+    - `2026-05-08 19:06:47 CST`
+  - 同日晚些 `2026-05-08 20:08:06 CST`、`21:11:30 CST`、`21:14:02 CST` 批次均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/xyq-nest-skill/scripts/**`:
+    - 新增共享 PowerShell 运行器 `scripts/invoke_xyq_script.ps1`，统一为 Windows 侧自动探测仓库 `.venv\Scripts\python.exe`、激活中的虚拟环境，以及系统 `py` / `python` / `python3`，避免把新 API skill 写死为仅能在 macOS `python3` 下运行。
+    - 新增 4 个 Windows PowerShell 命令包装器:
+      - `scripts/submit_run.ps1`
+      - `scripts/get_thread.ps1`
+      - `scripts/upload_file.ps1`
+      - `scripts/download_results.ps1`
+    - 这些包装器直接复用同一套 cross-platform Python API 脚本，因此 `submit_run.py`、`get_thread.py`、`upload_file.py`、`download_results.py` 本身未做 Windows 分叉。
+  - `skill-center/skills/xyq-nest-skill/{README.md,SKILL.md}`:
+    - 补齐 `XYQ_ACCESS_KEY` 的 PowerShell 设置方式。
+    - 为提交、轮询、上传、下载四类操作增加 Windows PowerShell 等价示例。
+    - 明确 Windows 路径规则：本地素材和 `--output-dir` 统一使用带引号的 `C:/...` 绝对路径，不再把 `/Users/...` 示例直接留给 Windows 执行人。
+  - `skill-center/skills/xiaoyunque-source-video/{SKILL.md,references/source-video-playbook.md,references/prompt-template.md}`:
+    - 把 API-only 小云雀源视频工作流补齐到 Windows 文档镜像，明确 repo mirror 下应走 `skill-center/skills/xyq-nest-skill/scripts/*.ps1`，而不是旧网页路径。
+    - 为 API 手册补入 Windows PowerShell 等价命令。
+    - 为 founder 参考图和 handoff 文档补回 Windows 等价路径示例 `C:/Users/<name>/...`，修复 `2026-05-08 19:06:47 CST` 这轮 API 化改写里把旧 Windows 路径说明删掉后的仓库缺口。
+  - 结论:
+    - 今天真正需要补的 Windows 缺口是 `xyq-nest-skill` 的仓库 PowerShell 入口，以及 `xiaoyunque-source-video` API 化后缺失的 Windows 命令与路径文档。
+    - 现已补齐；没有新增需要单独分叉的 Windows Python 逻辑、快捷键桥接或额外资产格式。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-08` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机执行了 `git diff --check` 静态检查，未发现本轮新增 `.ps1` / 文档更新的空白或冲突问题。
+  - 本机未安装 `pwsh` / `powershell`，因此没有执行新的 PowerShell 语法解析或 Windows 实机回归；当前判断基于仓库 diff 复核、脚本落点检查和文档引用核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-08 22:05:19 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天补齐的 Windows 落点是 `xyq-nest-skill` 的 PowerShell 运行入口，以及 `xiaoyunque-source-video` API-only 文档里的 Windows 命令和 `C:/...` 路径说明。
+
+## 2026-05-08 22:06:55 CST
+
+- 处理时间:
+  - `2026-05-08 22:06:55 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-07 22:04:55 CST` 之后追加且与仓库 Windows 镜像仍相关的非零批次:
+    - `2026-05-08 17:05:03 CST`
+    - `2026-05-08 19:06:47 CST`
+  - 同日晚些 `2026-05-08 20:08:06 CST`、`21:11:30 CST`、`21:14:02 CST` 批次均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+  - 本条用于补记同日晚些较早记录里漏掉的 `2026-05-08 17:05:03 CST` Seedance 客户试用批次，以及 `xyq-nest-skill` 仓库同步资产。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/seedance-video-api/references/{customer-trial-intake-and-production-sop.md,workflows.md}`:
+    - 针对 `2026-05-08 17:05:03 CST` 新增的客户试用 SOP / 字幕硬规则批次，补入 Windows handoff 口径：
+      - 继续沿用同一套 `brief.json`、`spoken-script.lock.md`、`dialogue-timeline.json`、`script-fingerprint.json`、`video-prompt.txt`、`seedance_payload.json` 文件名
+      - Windows 侧本地视频、封面、检查记录路径统一使用带引号的 `C:/...` 绝对路径
+      - Windows 提交和后续检查明确继续走仓库既有 `seedance_cli.ps1`，不把 `/Users/...` 示例路径留在可执行命令里
+  - `skill-center/skills/xyq-nest-skill/scripts/**`:
+    - 针对 `2026-05-08 19:06:47 CST` 新增的小云雀 API skill，补齐 Windows 可执行入口：
+      - 共享 PowerShell 运行器 `scripts/invoke_xyq_script.ps1`
+      - 4 个 PowerShell launcher:
+        - `scripts/submit_run.ps1`
+        - `scripts/get_thread.ps1`
+        - `scripts/upload_file.ps1`
+        - `scripts/download_results.ps1`
+      - 4 个 `.cmd` 包装器，便于 `cmd.exe` 或双击触发同名 PowerShell launcher
+    - 将 PowerShell 运行器的 Python 版本探测收紧为 `3.9+`，与这套脚本实际使用的内置泛型语法保持一致，不再错误宣称 `3.6+` 足够。
+  - `skill-center/skills/xyq-nest-skill/{README.md,SKILL.md}`:
+    - 补齐 `XYQ_ACCESS_KEY` 的 PowerShell 设置方式。
+    - 为提交、轮询、上传、下载四类 API 操作补入 Windows PowerShell 等价示例。
+    - 明确 Windows 路径规则与 `.cmd` / `.ps1` 入口，避免新 API-only skill 仍默认写成 Unix `python3` / `/Users/...`。
+  - `skill-center/skills/xiaoyunque-source-video/{SKILL.md,references/source-video-playbook.md,references/prompt-template.md}`:
+    - 把 API-only 小云雀源视频工作流对应的 Windows repo mirror 说明补齐到文档里，明确 Windows 侧改走 `skill-center/skills/xyq-nest-skill/scripts/*.ps1`，不再沿用旧网页生成路径。
+    - 为 founder 参考图、导出目录和 handoff 备注补回 quoted `C:/...` 路径说明，修复本轮 API 化改写删除旧 Windows 文件路径提示后的仓库缺口。
+  - `skill-center/skills-manifest.txt`:
+    - 补入 `xyq-nest-skill`，确保后续仓库同步脚本会把这套新 skill 及其 Windows launcher 一并镜像出去，而不是只停留在当前工作树。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-08` 当前已记录的非零批次里，未发现仍缺少 Windows PowerShell 入口、Windows 路径处理、Windows 文档、快捷键桥接、命令包装器或 repo 资产同步的自定义 skill / supporting automation 行为。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机执行了 `python3 -m py_compile skill-center/skills/xyq-nest-skill/scripts/{_common.py,submit_run.py,get_thread.py,upload_file.py,download_results.py}` 与 `git diff --check`，结果通过。
+  - 本机未安装 `pwsh` / `powershell`，因此没有执行新的 PowerShell 语法解析或 Windows 实机回归；当前判断基于仓库 diff 复核、脚本落点检查和文档引用核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-08 22:06:55 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天补齐的 Windows 落点包括 Seedance 客户试用 SOP 的 Windows handoff 规则、`xyq-nest-skill` 的 PowerShell / `.cmd` 入口，以及 API-only `xiaoyunque-source-video` 的 Windows 路径与命令说明。
+
+## 2026-05-09 22:03:27 CST
+
+- 处理时间:
+  - `2026-05-09 22:03:27 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-08 22:06:55 CST` 之后追加且此前未写入本状态文件的非零批次:
+    - `2026-05-08 22:11:21 CST`
+    - `2026-05-09 00:15:39 CST`
+  - 后续 `2026-05-09 03:14:12 CST` 至 `2026-05-09 21:38:44 CST` 的追加批次均为 `新增 0，修改 0，删除 0`，没有新的待转译项。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/xyq-nest-skill/scripts/**`:
+    - 重新补回共享 PowerShell 运行器 `scripts/invoke_xyq_script.ps1`，恢复 Windows 侧对仓库 `.venv\\Scripts\\python.exe`、激活中的虚拟环境，以及系统 `py` / `python` / `python3` 的自动探测，并继续把最低 Python 版本约束保持在 `3.9+`。
+    - 重新补回 4 个 PowerShell launcher:
+      - `scripts/submit_run.ps1`
+      - `scripts/get_thread.ps1`
+      - `scripts/upload_file.ps1`
+      - `scripts/download_results.ps1`
+    - 重新补回 4 个 `.cmd` wrapper，确保 `cmd.exe`、双击触发和 PowerShell 文档入口再次落到真实仓库文件，而不是只停留在说明文字里。
+    - 这些恢复的 Windows 入口继续直接复用现有 cross-platform Python 脚本：
+      - `submit_run.py`
+      - `get_thread.py`
+      - `upload_file.py`
+      - `download_results.py`
+      - 本轮没有对 Mac 或通用 Python 实现做分叉或覆盖。
+  - `skill-center/skills/xyq-nest-skill/{README.md,SKILL.md}` 与 `skill-center/skills/xiaoyunque-source-video/{SKILL.md,references/source-video-playbook.md}`:
+    - 本轮不需要再改文档内容；现有 Windows PowerShell 命令、`C:/...` 路径规则和 API-only 小云雀流程说明在 launcher 恢复后重新与仓库文件树一致。
+  - 结论:
+    - `2026-05-08 22:11:21 CST` 这批新增 / 修改项原本已经把 Windows repo mirror 补齐，但 `2026-05-09 00:15:39 CST` 随后的删除批次把这些 Windows 入口全部移除，造成文档与资产失配。
+    - 本轮已把缺失的 Windows launcher 全部补回，恢复仓库镜像的可执行闭环。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-08 22:11:21 CST` 与 `2026-05-09 00:15:39 CST` 这两批 monitor 非零变更涉及的 Windows 缺口已补齐；之后的 `2026-05-09` 批次未发现新的 Mac-only skill 行为需要转译。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机执行了 `git diff --check` 静态检查，结果通过。
+  - 本机未安装 `pwsh` / `powershell`，因此没有执行 PowerShell 语法解析或 Windows 实机回归；当前判断基于仓库文件恢复、launcher 落点检查和文档引用核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-09 22:03:27 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天补齐的 Windows 落点是 `xyq-nest-skill` 仓库镜像被删除后缺失的 PowerShell / `.cmd` launcher 资产。
+
+## 2026-05-12 22:03:49 CST
+
+- 处理时间:
+  - `2026-05-12 22:03:49 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-09 22:03:27 CST` 之后追加且此前未写入本状态文件的批次:
+    - `2026-05-12 10:53:31 CST`
+    - `2026-05-12 18:04:52 CST`
+    - `2026-05-12 19:06:48 CST`
+  - 其中 `2026-05-12 10:53:31 CST` 为 `新增 0，修改 0，删除 0`；后两批非零变更仅涉及 `automation/python-platform-takeover/state/**` 发布锁文件、receipt 台账，以及同一 campaign 的 handoff 配置产物落库。
+- 已完成的 Windows 补全:
+  - 无新增 Windows 专属代码、脚本、文档或 repo 资产需要补写；本轮已明确记录“无需转译”。
+  - 已复核以下新增 / 修改项都属于共享运行态数据或同一发布流程的配置写回，不引入新的 Mac-only 自定义 skill 行为，因此无需新增 `.ps1`、`.cmd`、Windows 路径分叉、快捷键桥接或命令包装器:
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-12-ai-employee-status-split-before-judgment.{toutiao,baijiahao,bilibili,zhihu}.lock.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-12-ai-employee-status-split-before-judgment.json`
+    - `automation/python-platform-takeover/configs/content-package.2026-05-12-ai-employee-status-split-before-judgment.yaml`
+    - `automation/python-platform-takeover/configs/hermes-package.2026-05-12-ai-employee-status-split-before-judgment.json`
+  - 已确认现有 Windows 覆盖仍然适用:
+    - `automation/python-platform-takeover/scripts/social-publisher.ps1` 继续直接消费共享 receipt / lock 读写逻辑。
+    - `automation/python-platform-takeover/README.md` 已覆盖 `receipt-status`、`record-receipt`、`under_review` 等共享状态在 Windows 下的使用方式，不需要因为这次 campaign 状态推进再做分叉说明。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-12` 当前已记录的非零批次没有新增需要转译的 PowerShell launcher、Windows 路径处理、Windows 文档、快捷键差异、命令包装器或 repo 资产。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机执行的是仓库 diff / 文件核对，没有进行 Windows PowerShell 实机回归；本轮未新增任何需要单独做 PowerShell 语法验证的 Windows 文件。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-12 22:03:49 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天需要记录的是“无新增转译项”，不是新增 Windows 补丁文件。
+
+## 2026-05-13 22:02:41 CST
+
+- 处理时间:
+  - `2026-05-13 22:02:41 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-12 22:03:49 CST` 之后追加且此前未写入本状态文件的非零批次:
+    - `2026-05-13 09:23:20 CST`
+    - `2026-05-13 16:32:58 CST`
+    - `2026-05-13 17:32:41 CST`
+  - 同一时间段内其余追加批次，包括 `2026-05-12 23:11:13 CST` 至 `2026-05-13 21:39:31 CST` 的其余记录，结果均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - 无新增 Windows 专属补丁文件、PowerShell launcher、`.cmd` wrapper、路径分叉、快捷键桥接或文档分叉需要补写；本轮已明确记录“无需转译”。
+  - 已复核上述 3 个非零批次的新增 / 修改项都只落在 `automation/python-platform-takeover/` 的共享运行态数据与 handoff 台账：
+    - `configs/content-package.2026-05-13-ai-employee-receipt-lock-before-republish.yaml`
+    - `configs/hermes-package.2026-05-13-ai-employee-receipt-lock-before-republish.json`
+    - `state/hermes-handoff/latest.json`
+    - `state/publish-locks/*.lock.json`
+    - `state/publish-receipts/*.json`
+  - 这些文件只是在现有跨平台发布流程上追加 campaign 配置、publish lock 和 receipt 证据，不引入新的 Mac-only skill 行为；现有 Windows 覆盖保持适用：
+    - `automation/python-platform-takeover/scripts/social-publisher.ps1` 继续消费同一套 content package、publish lock 和 receipt 台账。
+    - `automation/python-platform-takeover/README.md` 已覆盖 Windows 下的 receipt / lock 工作流说明，不需要因为这批 YAML / JSON 留痕再新增分叉说明。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-13` 当前已记录的非零批次没有新增需要转译的 PowerShell launcher、Windows 路径处理、Windows 文档、快捷键差异、命令包装器或 repo 资产。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮只做 monitor 批次复核与状态记录，没有新增任何需要单独做 PowerShell 语法验证的 Windows 文件；判断基于 `skill-change-monitor.md` 条目核对和仓库文件类型检查。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-13 22:02:41 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天需要明确记录的是“新增的是共享发布留痕数据，不是新的 Windows 转译工作”。
+
+## 2026-05-14 22:03:15 CST
+
+- 处理时间:
+  - `2026-05-14 22:03:15 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-13 22:02:41 CST` 之后追加且此前未写入本状态文件的非零批次:
+    - `2026-05-14 11:55:18 CST`
+    - `2026-05-14 12:57:03 CST`
+    - `2026-05-14 13:59:46 CST`
+    - `2026-05-14 14:59:25 CST`
+  - 同一时间段内其余追加批次，包括 `2026-05-13 22:42:28 CST` 至 `2026-05-14 21:04:16 CST` 的其余记录，结果均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - 无新增 Windows 专属补丁文件、PowerShell launcher、`.cmd` wrapper、路径分叉、快捷键桥接或文档分叉需要补写；本轮明确记录“无需转译”。
+  - 已复核上述 4 个非零批次的新增 / 修改项都只落在 `automation/python-platform-takeover/` 的共享 campaign 配置与运行态台账：
+    - `configs/content-package.2026-05-14-ai-employee-no-metrics-no-judgment.yaml`
+    - `configs/hermes-package.2026-05-14-ai-employee-no-metrics-no-judgment.json`
+    - `state/hermes-handoff/latest.json`
+    - `state/publish-locks/2026-05-13-ai-employee-receipt-lock-before-republish.*.lock.json`
+    - `state/publish-locks/2026-05-14-ai-employee-no-metrics-no-judgment.*.lock.json`
+    - `state/publish-receipts/2026-05-13-ai-employee-receipt-lock-before-republish.json`
+    - `state/publish-receipts/2026-05-14-ai-employee-no-metrics-no-judgment.json`
+  - 这些变更只是推进既有跨平台发布流程里的 content package、Hermes handoff、publish lock 和 receipt 留痕，不引入新的 Mac-only 自定义 skill 行为；现有 Windows 覆盖继续适用：
+    - `automation/python-platform-takeover/scripts/social-publisher.ps1` 继续直接消费共享 Python CLI，对 receipt / lock / validate-package / publish 工作流无需新增 Windows 包装层。
+    - `automation/python-platform-takeover/README.md` 已覆盖 Windows 下日期化 content package 的路径改写、`receipt-status` / `record-receipt` / `validate-package`、以及 `state/hermes-handoff/latest.json` 作为接力入口的用法，不需要因为这批 YAML / JSON / lock / receipt 落库再新增分叉说明。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-14` 当前已记录的非零批次没有新增需要转译的 PowerShell launcher、Windows 路径处理、Windows 文档、快捷键差异、命令包装器或 repo 资产。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮只做 monitor 批次复核与状态记录，没有新增任何需要单独做 PowerShell 语法验证的 Windows 文件；判断基于 `skill-change-monitor.md` 条目核对，以及 `automation/python-platform-takeover` 现有 Windows 入口与 README 覆盖范围复核。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-14 22:03:15 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天需要记录的是“新增的是共享 campaign 配置与发布台账，不是新的 Windows 转译工作”。
+
+## 2026-05-15 22:02:05 CST
+
+- 处理时间:
+  - `2026-05-15 22:02:05 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-14 22:03:15 CST` 之后追加且此前未写入本状态文件的非零批次:
+    - `2026-05-15 11:23:25 CST`
+    - `2026-05-15 12:23:23 CST`
+    - `2026-05-15 13:25:09 CST`
+  - 同一时间段内其余追加批次，包括 `2026-05-15 00:11:13 CST` 至 `09:20:02 CST`、以及 `2026-05-15 14:26:08 CST` 至 `21:33:22 CST` 的其余记录，结果均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - 无新增 Windows 专属补丁文件、PowerShell launcher、`.cmd` wrapper、路径分叉、快捷键桥接或文档分叉需要补写；本轮明确记录“无需转译”。
+  - 已复核上述 3 个非零批次的新增 / 修改项都只落在 `automation/python-platform-takeover/` 的共享 campaign 配置与运行态台账:
+    - `configs/content-package.2026-05-15-ai-employee-status-branch-before-rewrite.yaml`
+    - `configs/hermes-package.2026-05-15-ai-employee-status-branch-before-rewrite.json`
+    - `state/hermes-handoff/latest.json`
+    - `state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.*.lock.json`
+    - `state/publish-receipts/2026-05-15-ai-employee-status-branch-before-rewrite.json`
+  - 这些变更只是推进既有跨平台发布流程里的 content package、Hermes handoff、publish lock 和 receipt 留痕，不引入新的 Mac-only 自定义 skill 行为；现有 Windows 覆盖继续适用:
+    - `automation/python-platform-takeover/scripts/social-publisher.ps1` 继续直接消费共享 Python CLI，对 `validate-package`、`receipt-status`、`record-receipt`、`publish` 和 receipt / lock 读写工作流无需新增 Windows 包装层。
+    - `automation/python-platform-takeover/README.md` 已覆盖 Windows 下日期化 content package 的路径改写、`state/hermes-handoff/latest.json` 作为当前接力入口的用法，以及 `under_review` / `published` / `verified` 等共享 receipt 状态，不需要因为这批 YAML / JSON / lock / receipt 落库再新增分叉说明。
+  - 明确结论:
+    - 今天没有新的 Windows 转译工作；本轮只追加状态记录。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-15` 当前已记录的非零批次没有新增需要转译的 PowerShell launcher、Windows 路径处理、Windows 文档、快捷键差异、命令包装器或 repo 资产。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮只做 monitor 批次复核与状态记录，没有新增任何需要单独做 PowerShell 语法验证的 Windows 文件；判断基于 `skill-change-monitor.md` 条目核对，以及 `automation/python-platform-takeover` 现有 Windows 入口与 README 覆盖范围复核。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-15 22:02:05 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天需要明确记录的是“新增的是共享 campaign 配置与发布台账，不是新的 Windows 转译工作”。
+
+## 2026-05-16 22:02:52 CST
+
+- 处理时间:
+  - `2026-05-16 22:02:52 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-15 22:02:05 CST` 之后追加且此前未写入本状态文件的非零批次:
+    - `2026-05-16 01:37:34 CST`
+    - `2026-05-16 11:47:45 CST`
+    - `2026-05-16 12:49:36 CST`
+    - `2026-05-16 13:49:40 CST`
+  - 同一时间段内其余追加批次，包括 `2026-05-15 22:35:11 CST` 至 `2026-05-16 21:00:49 CST` 的其余记录，结果均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - 无新增 Windows 专属补丁文件、PowerShell launcher、`.cmd` wrapper、路径分叉、快捷键桥接或文档分叉需要补写；本轮明确记录“无需转译”。
+  - 已复核上述 4 个非零批次的新增 / 修改项都只落在 `automation/python-platform-takeover/` 的共享 campaign 配置与运行态台账:
+    - `configs/content-package.2026-05-16-ai-employee-compare-three-before-cut.yaml`
+    - `configs/hermes-package.2026-05-16-ai-employee-compare-three-before-cut.json`
+    - `state/hermes-handoff/latest.json`
+    - `state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.{baijiahao,bilibili,douyin,kuaishou,toutiao,wechat_channels,weibo,zhihu}.lock.json`
+    - `state/publish-receipts/2026-05-16-ai-employee-compare-three-before-cut.json`
+  - 这些变更只是推进既有跨平台发布流程里的 content package、Hermes handoff、publish lock 和 receipt 留痕，不引入新的 Mac-only 自定义 skill 行为；现有 Windows 覆盖继续适用:
+    - `automation/python-platform-takeover/scripts/social-publisher.ps1` 继续直接消费共享 Python CLI，对 `validate-package`、`receipt-status`、`record-receipt`、`publish` 和 receipt / lock 读写工作流无需新增 Windows 包装层。
+    - `automation/python-platform-takeover/README.md` 已覆盖 Windows 下日期化 content package 的路径改写、`state/hermes-handoff/latest.json` 作为接力入口的用法，以及 `ready_for_final_confirmation`、`published_verified`、`under_review`、`verified` 等共享状态留痕，不需要因为这批 YAML / JSON / lock / receipt 落库再新增分叉说明。
+  - 明确结论:
+    - 今天没有新的 Windows 转译工作；本轮只追加状态记录，并明确记录这些新增项无需转译。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-16` 当前已记录的非零批次没有新增需要转译的 PowerShell launcher、Windows 路径处理、Windows 文档、快捷键差异、命令包装器或 repo 资产。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮只做 monitor 批次复核与状态记录，没有新增任何需要单独做 PowerShell 语法验证的 Windows 文件；判断基于 `skill-change-monitor.md` 条目核对，以及 `automation/python-platform-takeover` 现有 Windows 入口与 README 覆盖范围复核。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-16 22:02:52 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天需要明确记录的是“新增的是共享 campaign 配置与发布台账，不是新的 Windows 转译工作”。
+
+## 2026-05-17 22:03:11 CST
+
+- 处理时间:
+  - `2026-05-17 22:03:11 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-16 22:02:52 CST` 之后追加且此前未写入本状态文件的非零批次:
+    - `2026-05-17 10:14:49 CST`
+    - `2026-05-17 11:16:34 CST`
+    - `2026-05-17 13:19:23 CST`
+    - `2026-05-17 15:21:09 CST`
+    - `2026-05-17 20:28:29 CST`
+  - 同一时间段内其余追加批次，包括 `2026-05-17 02:05:18 CST` 至 `2026-05-17 20:27:44 CST` 的其余记录，结果均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - 无新增转译项；本轮明确记录“无需转译”。
+  - 已复核上述 5 个非零批次都只落在 `automation/python-platform-takeover/` 的共享 campaign 配置、Hermes handoff 指针、publish receipt / publish lock 台账，以及旧 campaign 台账清理:
+    - `2026-05-17-ai-employee-evidence-grid-before-verdict` 的 `state/publish-locks/*.lock.json` 与 `state/publish-receipts/*.json` 进度推进
+    - `2026-05-17-ai-employee-metric-window-before-rewrite` 的 `configs/content-package.*.yaml`、`configs/hermes-package.*.json`、`state/publish-receipts/*.json`
+    - `state/hermes-handoff/latest.json` 指向新 campaign
+    - `2026-05-15`、`2026-05-16`、`2026-05-17` 若干旧 campaign 的 config / lock / receipt 删除
+  - 这些变更没有引入新的 Mac-only 自定义 skill 行为；现有 Windows 覆盖继续适用，无需新增 PowerShell launcher、`.cmd` wrapper、Windows 路径分叉、快捷键桥接、Windows 专属文档或 repo 资产:
+    - `automation/python-platform-takeover/scripts/social-publisher.ps1` 继续消费共享 Python CLI，现有 receipt / lock / handoff 工作流无需新增 Windows 包装层。
+    - `automation/python-platform-takeover/README.md` 现有 Windows 说明已覆盖日期化 content package、Hermes handoff、receipt / lock 台账与发布状态推进语义，无需因本轮 YAML / JSON / lock / receipt 变化再做分叉。
+  - 明确结论:
+    - 今天没有新的 Windows 转译工作；本轮只追加状态记录，并明确记录这些新增、修改与删除项都属于共享自动化状态和配置演进。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-17` 当前已记录的非零批次没有新增需要转译的 PowerShell launcher、Windows 路径处理、Windows 文档、快捷键差异、命令包装器或 repo 资产。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮只做 monitor 批次复核与状态记录，没有新增任何需要单独做 PowerShell 语法验证的 Windows 文件；判断基于 `skill-change-monitor.md` 条目核对，以及 `automation/python-platform-takeover` 现有 Windows 入口与 README 覆盖范围复核。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-17 22:03:11 CST`，今天 monitor 中新增、修改或删除且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天需要明确记录的是“新增的是共享 campaign 配置与发布台账推进，删除的是旧台账清理，不是新的 Windows 转译工作”。
+
+## 2026-05-18 22:01:32 CST
+
+- 处理时间:
+  - `2026-05-18 22:01:32 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-17 22:03:11 CST` 之后追加且此前未写入本状态文件的非零批次:
+    - `2026-05-17 22:31:14 CST`
+  - 同一时间段内其余追加批次，包括 `2026-05-17 23:32:24 CST` 至 `2026-05-18 22:00:24 CST` 的记录，结果均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - 无新增 Windows 专属补丁文件、PowerShell launcher、`.cmd` wrapper、路径分叉、快捷键桥接或文档分叉需要补写；本轮明确记录“无需转译”。
+  - 已复核 `2026-05-17 22:31:14 CST` 的 `36` 个新增文件都只落在 `automation/python-platform-takeover/` 的共享 campaign 配置与运行态台账:
+    - `configs/content-package.2026-05-15-ai-employee-status-branch-before-rewrite.yaml`
+    - `configs/content-package.2026-05-16-ai-employee-compare-three-before-cut.yaml`
+    - `configs/content-package.2026-05-17-ai-employee-evidence-grid-before-verdict.yaml`
+    - `configs/content-package.2026-05-17-ai-employee-metric-window-before-rewrite.yaml`
+    - `configs/hermes-package.2026-05-15-ai-employee-status-branch-before-rewrite.json`
+    - `configs/hermes-package.2026-05-16-ai-employee-compare-three-before-cut.json`
+    - `configs/hermes-package.2026-05-17-ai-employee-evidence-grid-before-verdict.json`
+    - `configs/hermes-package.2026-05-17-ai-employee-metric-window-before-rewrite.json`
+    - `state/publish-locks/2026-05-15-ai-employee-status-branch-before-rewrite.*.lock.json`
+    - `state/publish-locks/2026-05-16-ai-employee-compare-three-before-cut.*.lock.json`
+    - `state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.*.lock.json`
+    - `state/publish-receipts/2026-05-15-ai-employee-status-branch-before-rewrite.json`
+    - `state/publish-receipts/2026-05-16-ai-employee-compare-three-before-cut.json`
+    - `state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json`
+    - `state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json`
+  - 这些变更只是推进既有跨平台发布流程里的 content package、Hermes handoff、publish lock 和 receipt 留痕，不引入新的 Mac-only 自定义 skill 行为；现有 Windows 覆盖继续适用:
+    - `automation/python-platform-takeover/scripts/social-publisher.ps1` 继续直接消费共享 Python CLI，对 `validate-package`、`receipt-status`、`record-receipt`、`publish` 和 receipt / lock 读写工作流无需新增 Windows 包装层。
+    - `automation/python-platform-takeover/README.md` 已覆盖 Windows 下日期化 content package 的路径改写、`state/hermes-handoff/latest.json` 作为接力入口的用法，以及新 campaign 先初始化 receipt / lock、旧 campaign 只留历史留痕的共享规则，不需要因为这批 YAML / JSON 台账落库再新增分叉说明。
+  - 明确结论:
+    - 今天没有新的 Windows 转译工作；本轮只追加状态记录，并明确记录这些新增项都属于共享自动化配置和台账演进。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-18` 当前已记录的非零批次没有新增需要转译的 PowerShell launcher、Windows 路径处理、Windows 文档、快捷键差异、命令包装器或 repo 资产。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮只做 monitor 批次复核与状态记录，没有新增任何需要单独做 PowerShell 语法验证的 Windows 文件；判断基于 `skill-change-monitor.md` 条目核对，以及 `automation/python-platform-takeover` 现有 Windows 入口与 README 覆盖范围复核。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-18 22:01:32 CST`，今天 monitor 中新增、修改或删除且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天需要明确记录的是“新增的是共享 campaign 配置与发布台账推进，不是新的 Windows 转译工作”。
+
+## 2026-05-19 22:02:44 CST
+
+- 处理时间:
+  - `2026-05-19 22:02:44 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-18 22:01:32 CST` 之后追加且此前未写入本状态文件的 `2026-05-19` 批次:
+    - `2026-05-19 00:03:21 CST`
+    - `2026-05-19 01:03:58 CST`
+    - `2026-05-19 02:04:32 CST`
+    - `2026-05-19 03:05:25 CST`
+    - `2026-05-19 04:07:35 CST`
+    - `2026-05-19 05:08:16 CST`
+    - `2026-05-19 06:09:07 CST`
+    - `2026-05-19 07:09:24 CST`
+    - `2026-05-19 07:10:43 CST`
+    - `2026-05-19 09:12:41 CST`
+    - `2026-05-19 10:14:43 CST`
+    - `2026-05-19 11:14:58 CST`
+    - `2026-05-19 12:17:13 CST`
+    - `2026-05-19 13:18:51 CST`
+    - `2026-05-19 14:20:24 CST`
+    - `2026-05-19 15:20:21 CST`
+    - `2026-05-19 16:21:35 CST`
+    - `2026-05-19 17:22:22 CST`
+    - `2026-05-19 18:24:47 CST`
+    - `2026-05-19 19:25:55 CST`
+    - `2026-05-19 21:27:41 CST`
+  - 上述批次结果均为 `新增 0，修改 0，删除 0`，没有新的自定义 skill 或 supporting automation 变更进入待转译队列。
+- 已完成的 Windows 补全:
+  - 无新增转译项。
+  - 已复核今天 monitor 追加批次没有新增、修改或删除任何需要落地到 Windows 的内容，因此无需补写新的 PowerShell launcher、`.cmd` wrapper、Windows 路径处理、快捷键差异桥接、Windows 文档或 repo 资产。
+  - 明确记录:
+    - 今天没有需要转换的 Mac-only 自定义 skill 行为；本轮仅追加状态记录，显式说明“无事可转”。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-19` 当前已记录批次没有遗漏的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮只做 `skill-change-monitor.md` 增量复核与状态记录，没有产生新的 Windows 文件，因此未执行额外的 PowerShell 语法或实机验证。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-19 22:02:44 CST`，今天 monitor 中新增、修改或删除且落到当前仓库的自定义 skill / supporting automation 变更为零；Mac 与 Windows 覆盖今日均完整，并已明确记录“今天没有需要补做的 Windows 转译”。
+
+## 2026-05-20 22:03:51 CST
+
+- 处理时间:
+  - `2026-05-20 22:03:51 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-19 22:02:44 CST` 之后追加且此前未写入本状态文件的 `2026-05-20` 批次已全部复核。
+  - 非零批次:
+    - `2026-05-20 16:50:54 CST`
+    - `2026-05-20 17:52:21 CST`
+  - 其余当前已记录批次，包括 `2026-05-20 00:31:50 CST` 至 `2026-05-20 15:49:34 CST` 的零变更批次，以及 `2026-05-20 18:52:16 CST`、`2026-05-20 19:53:36 CST`、`2026-05-20 20:55:22 CST`、`2026-05-20 21:56:02 CST`，结果均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - 无新增 Windows 专属补丁文件、PowerShell launcher、`.cmd` wrapper、路径分叉、快捷键桥接或文档分叉需要补写；本轮明确记录“无需转译”。
+  - 已复核上述 2 个非零批次的新增 / 修改项都只落在 `automation/python-platform-takeover/state/` 的共享运行态台账:
+    - `state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.{kuaishou,wechat_channels,zhihu,toutiao,douyin,bilibili,baijiahao,weibo}.lock.json`
+    - `state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json`
+  - 这些变化只是推进既有跨平台发布流程里的 publish lock / publish receipt 证据，不引入新的 Mac-only 自定义 skill 行为；现有 Windows 覆盖继续适用:
+    - `automation/python-platform-takeover/scripts/social-publisher.ps1` 继续直接消费共享 Python CLI，对 content package、publish lock、publish receipt 与状态推进工作流无需新增 Windows 包装层。
+    - `automation/python-platform-takeover/scripts/start-chrome-cdp.ps1` 与 `automation/python-platform-takeover/README.md` 已覆盖 Windows 下的浏览器接管、路径写法与发布台账使用方式，不需要因为这批 JSON 留痕再新增分叉说明。
+  - 明确结论:
+    - 今天没有新的 Windows 转译工作；本轮只追加状态记录，并明确记录这些新增 / 修改项都属于共享自动化状态台账推进。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-20` 当前已记录的非零批次没有新增需要转译的 PowerShell launcher、Windows 路径处理、Windows 文档、快捷键差异、命令包装器或 repo 资产。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮只做 monitor 批次复核与状态记录，没有新增任何需要单独做 PowerShell 语法验证的 Windows 文件；判断基于 `skill-change-monitor.md` 条目核对，以及 `automation/python-platform-takeover` 现有 Windows 入口与 README 覆盖范围复核。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-20 22:03:51 CST`，今天 monitor 中新增或修改且落到当前仓库的内容都是共享 publish lock / receipt 台账推进；Mac 与 Windows 覆盖都完整，并已明确记录“今天没有需要补做的 Windows 转译”。
+
+## 2026-05-21 22:01:16 CST
+
+- 处理时间:
+  - `2026-05-21 22:01:16 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-20 22:03:51 CST` 之后追加且此前未写入本状态文件的 `2026-05-21` 批次已全部复核。
+  - 本轮纳入复核的批次:
+    - `2026-05-21 00:59:08 CST`
+    - `2026-05-21 02:01:03 CST`
+    - `2026-05-21 03:02:13 CST`
+    - `2026-05-21 04:03:00 CST`
+    - `2026-05-21 05:05:06 CST`
+    - `2026-05-21 06:06:22 CST`
+    - `2026-05-21 07:08:37 CST`
+    - `2026-05-21 08:09:21 CST`
+    - `2026-05-21 09:10:52 CST`
+    - `2026-05-21 10:13:13 CST`
+    - `2026-05-21 11:13:13 CST`
+    - `2026-05-21 13:16:36 CST`
+    - `2026-05-21 14:17:19 CST`
+    - `2026-05-21 15:18:53 CST`
+    - `2026-05-21 16:22:29 CST`
+    - `2026-05-21 17:22:11 CST`
+    - `2026-05-21 18:23:22 CST`
+    - `2026-05-21 19:25:40 CST`
+    - `2026-05-21 20:25:50 CST`
+    - `2026-05-21 21:26:55 CST`
+  - 上述批次结果均为 `新增 0，修改 0，删除 0`，没有新的自定义 skill 或 supporting automation 变更进入待转译队列。
+- 已完成的 Windows 补全:
+  - 无新增转译项。
+  - 已明确记录今天 `skill-change-monitor.md` 追加的所有批次都为零变更，因此无需补写新的 PowerShell launcher、Windows 路径处理、Windows 文档、快捷键差异桥接、命令包装器或 repo 资产。
+  - 明确记录:
+    - 今天没有需要转换的 Mac-only 自定义 skill 行为；本轮仅追加状态记录，显式说明“无事可转”。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-21` 当前已记录批次没有遗漏的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮只做 `skill-change-monitor.md` 增量复核与状态记录，没有产生新的 Windows 文件，因此未执行额外的 PowerShell 语法或 Windows 实机验证。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-21 22:01:16 CST`，今天 monitor 中新增、修改或删除且落到当前仓库的自定义 skill / supporting automation 变更为零；Mac 与 Windows 覆盖今日均完整，并已明确记录“今天没有需要补做的 Windows 转译”。
+
+## 2026-05-22 22:03:25 CST
+
+- 处理时间:
+  - `2026-05-22 22:03:25 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-21 22:01:16 CST` 之后追加且此前未写入本状态文件的 `2026-05-22` 批次已全部复核。
+  - 本轮纳入复核的批次:
+    - `2026-05-22 07:38:15 CST`
+    - `2026-05-22 08:38:41 CST`
+    - `2026-05-22 09:39:53 CST`
+    - `2026-05-22 11:43:03 CST`
+    - `2026-05-22 14:47:37 CST`
+    - `2026-05-22 17:51:36 CST`
+    - `2026-05-22 19:53:16 CST`
+  - 其中仅 `2026-05-22 17:51:36 CST` 为非零变更批次；其余批次结果均为 `新增 0，修改 0，删除 0`。
+  - `2026-05-22 17:51:36 CST` 的非零变更项:
+    - `~/.codex/skills/codex-feishu-bridge/assets/template/src/bridge.js`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.baijiahao.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.wechat_channels.lock.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-22-ai-employee-no-new-status-not-failure.json`
+- 已完成的 Windows 补全:
+  - `skills/codex-feishu-bridge-skill`:
+    - 将仓库内模板运行时 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/src/bridge.js`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/src/bridge.js) 同步到最新监控到的 bridge 行为，补齐以下跨平台能力，Windows 可直接复用:
+      - `.bridge.env` 自动加载，保证直接从 PowerShell 启动 `node src/bridge.js` 时也会读取本地配置
+      - `LARK_CLI_PROFILE` 参数透传，支持 Windows 机器上的多 profile `lark-cli`
+      - 显式 `CODEX_BRIDGE_PROGRESS_THREAD_IDS` 与本地 progress 游标持久化，支持未先经 Feishu 绑定的本地桌面线程在 Windows 上继续推送里程碑进度
+      - Bot 被移出群聊或 chat push 失败时，按 `senderOpenId` 回退发信
+    - 更新 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/.bridge.env.example`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/.bridge.env.example)，补入:
+      - `LARK_CLI_PROFILE`
+      - `CODEX_BRIDGE_PROGRESS_THREAD_IDS`
+    - 更新 Windows / 双平台文档，明确新的配置入口和 PowerShell 可用方式:
+      - [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART.md)
+      - [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/deployment.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/deployment.md)
+      - [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/user-guide.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/user-guide.md)
+  - `automation/python-platform-takeover/state/*`:
+    - 本批次仅为发布锁和 receipt 台账补录，不是新的自定义 skill / launcher / doc 行为。
+    - 确认这些 JSON 状态文件不需要单独的 Windows 包装脚本、路径说明、快捷键映射或命令分发改写。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-22` 已记录批次没有遗漏的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机执行了 `node --check skills/codex-feishu-bridge-skill/assets/template/src/bridge.js`，通过。
+  - 本机未执行 Windows PowerShell 实机回归；当前判断基于仓库文件同步、文档核对与 Node 语法检查。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-22 22:03:25 CST`，今天 monitor 中唯一需要转译的自定义 skill 变更已同步到仓库并补齐 Windows 可用说明；同日其余非零项仅为 automation 状态台账，不存在额外 Windows 缺口。
+
+## 2026-05-23 22:03:21 CST
+
+- 处理时间:
+  - `2026-05-23 22:03:21 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-22 22:03:25 CST` 之后追加且此前未写入本状态文件的 `2026-05-23` 批次已全部复核。
+  - 本轮纳入复核的批次:
+    - `2026-05-23 10:07:38 CST`
+    - `2026-05-23 11:09:49 CST`
+    - `2026-05-23 12:11:50 CST`
+    - `2026-05-23 13:12:04 CST`
+    - `2026-05-23 14:13:25 CST`
+    - `2026-05-23 15:13:42 CST`
+    - `2026-05-23 16:16:13 CST`
+    - `2026-05-23 17:17:58 CST`
+    - `2026-05-23 18:19:34 CST`
+    - `2026-05-23 19:21:19 CST`
+    - `2026-05-23 20:20:37 CST`
+    - `2026-05-23 21:21:48 CST`
+  - 其中仅 `2026-05-23 19:21:19 CST` 为非零变更批次；其余批次结果均为 `新增 0，修改 0，删除 0`。
+  - `2026-05-23 19:21:19 CST` 的非零变更项:
+    - `automation/python-platform-takeover/configs/content-package.2026-05-23-ai-employee-pending-status-before-rewrite.yaml`
+    - `automation/python-platform-takeover/configs/hermes-package.2026-05-23-ai-employee-pending-status-before-rewrite.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-23-ai-employee-pending-status-before-rewrite.json`
+    - `automation/python-platform-takeover/state/hermes-handoff/latest.json`
+- 已完成的 Windows 补全:
+  - 无新增转译项。
+  - 已复核 `2026-05-23 19:21:19 CST` 的新增 / 修改内容仅为 `automation/python-platform-takeover` 的新 campaign content package、Hermes handoff package、receipt 骨架和 latest handoff 指针切换，不包含新的自定义 skill 运行时代码、PowerShell launcher、`.cmd` wrapper、快捷键差异、Windows 路径文档或命令分发逻辑。
+  - 已确认这些文件仍沿用现有共享 schema，Windows 侧继续复用既有入口即可，无需新增仓库资产:
+    - `automation/python-platform-takeover/scripts/social-publisher.ps1`
+    - `automation/python-platform-takeover/scripts/start-chrome-cdp.ps1`
+    - `automation/python-platform-takeover/README.md`
+  - 已明确记录:
+    - 今天没有新的 Mac-only 自定义 skill 行为进入待转译队列；本轮只追加状态记录，显式说明“无新增 Windows 转译”。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-23` 已记录批次没有遗漏的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未新增或改写 Windows 专属文件；判断基于 `skill-change-monitor.md` 增量复核、现有 Windows 入口覆盖范围核对，以及 `skills/codex-feishu-bridge-skill/assets/template/src/bridge.js` 与 live `~/.codex/skills/codex-feishu-bridge/assets/template/src/bridge.js` 一致、`node --check skills/codex-feishu-bridge-skill/assets/template/src/bridge.js` 通过。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-23 22:03:21 CST`，今天 monitor 中唯一的非零批次只是共享 campaign 配置与台账推进，不需要新增 Windows 分叉；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-05-24 22:03:25 CST
+
+- 处理时间:
+  - `2026-05-24 22:03:25 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-23 22:03:21 CST` 之后追加且此前未写入本状态文件的 `2026-05-23` / `2026-05-24` 批次已全部复核。
+  - 其中仅以下 3 个批次为非零变更；其余自 `2026-05-23 22:22:25 CST` 到 `2026-05-24 21:47:33 CST` 的追加批次结果均为 `新增 0，修改 0，删除 0`:
+    - `2026-05-23 23:24:29 CST`
+    - `2026-05-24 00:26:20 CST`
+    - `2026-05-24 13:39:26 CST`
+  - `2026-05-23 23:24:29 CST` 的非零变更项:
+    - `automation/python-platform-takeover/social_publisher_takeover.egg-info/*` 删除 `6` 个打包元数据文件
+  - `2026-05-24 00:26:20 CST` 的非零变更项:
+    - `automation/python-platform-takeover/social_publisher_takeover.egg-info/*` 回补 `6` 个打包元数据文件
+  - `2026-05-24 13:39:26 CST` 的非零变更项:
+    - `~/.codex/skills/social-publish-automation/SKILL.md`
+    - `skill-center/skills/social-publish-automation/SKILL.md`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-evidence-grid-before-verdict.zhihu.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-17-ai-employee-metric-window-before-rewrite.zhihu.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-22-ai-employee-no-new-status-not-failure.zhihu.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.{bilibili,wechat_channels}.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-23-ai-employee-pending-status-before-rewrite.{kuaishou,weibo,zhihu}.lock.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-evidence-grid-before-verdict.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-17-ai-employee-metric-window-before-rewrite.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-22-ai-employee-no-new-status-not-failure.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-23-ai-employee-pending-status-before-rewrite.json`
+- 已完成的 Windows 补全:
+  - `skill-center/skills/social-publish-automation`:
+    - 新增 Windows PowerShell 通知包装脚本:
+      - `skill-center/skills/social-publish-automation/scripts/send_feishu_notify.ps1`
+    - 新增 Windows `cmd` 入口:
+      - `skill-center/skills/social-publish-automation/scripts/send_feishu_notify.cmd`
+    - 更新 `skill-center/skills/social-publish-automation/SKILL.md`，把最新飞书通知规则改成 Mac / Windows 双说明，明确:
+      - macOS 继续优先使用本机 `/Users/baishangjituan/Documents/New project/node_modules/@larksuite/cli/bin/lark-cli`
+      - Windows 镜像优先使用 `.\scripts\send_feishu_notify.cmd` 或 `.\scripts\send_feishu_notify.ps1`
+      - Windows wrapper 会优先解析仓库内 `node_modules\.bin\lark-cli.cmd` / `node_modules\@larksuite\cli\bin\lark-cli.exe`
+      - 固定 chat 继续默认绑定 `legacy-a958` profile 和 `idempotency-key`
+      - 若遇到 `230002` / `need_user_authorization`，仍按最新 skill 规则先用本地 binary + `legacy-a958` 重试
+  - `automation/python-platform-takeover/social_publisher_takeover.egg-info/*`:
+    - 已确认 `2026-05-23 23:24:29 CST` 的删除和 `2026-05-24 00:26:20 CST` 的回补都只是共享打包产物波动，不是新的 Mac-only skill 行为，不需要单独补 PowerShell launcher、Windows 路径文档、快捷键桥接或命令包装器。
+  - `automation/python-platform-takeover/state/*`:
+    - 已确认 `2026-05-24 13:39:26 CST` 中其余新增 / 修改项都是共享 publish lock、publish receipt 和飞书通知台账补录。
+    - 这些 JSON 状态文件继续复用现有 Windows 入口，不需要单独的新脚本或文档分叉:
+      - `automation/python-platform-takeover/scripts/social-publisher.ps1`
+      - `automation/python-platform-takeover/scripts/start-chrome-cdp.ps1`
+      - `automation/python-platform-takeover/README.md`
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-24` 当前已记录批次没有遗漏的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未发现 `pwsh`，因此未执行 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、仓库文件改写与静态路径/参数核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-24 22:03:25 CST`，今天 monitor 中唯一需要补 Windows 落点的是 `social-publish-automation` 的飞书通知入口；现已补入 PowerShell / `.cmd` wrapper 并更新文档，其余非零项均为共享台账或打包产物，不存在额外 Windows 缺口。
+
+## 2026-05-25 22:01:13 CST
+
+- 处理时间:
+  - `2026-05-25 22:01:13 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-24 22:03:25 CST` 之后追加且此前未写入本状态文件的最新批次已全部复核。
+  - 非零批次只有 2 个:
+    - `2026-05-24 22:48:15 CST`
+    - `2026-05-25 00:49:33 CST`
+  - 其余新增批次:
+    - `2026-05-24 23:48:45 CST`
+    - `2026-05-25 01:51:41 CST`
+    - `2026-05-25 02:53:30 CST`
+    - `2026-05-25 03:55:19 CST`
+    - `2026-05-25 04:57:08 CST`
+    - `2026-05-25 05:59:35 CST`
+    - `2026-05-25 07:00:08 CST`
+    - `2026-05-25 08:01:23 CST`
+    - `2026-05-25 10:04:22 CST`
+    - `2026-05-25 18:12:46 CST`
+    - `2026-05-25 21:17:09 CST`
+  - `2026-05-24 22:48:15 CST` 的非零变更项:
+    - `skill-center/skills/social-publish-automation/SKILL.md`
+    - `skill-center/skills/social-publish-automation/scripts/send_feishu_notify.ps1`
+    - `skill-center/skills/social-publish-automation/scripts/send_feishu_notify.cmd`
+  - `2026-05-25 00:49:33 CST` 的非零变更项:
+    - `~/.codex/skills/social-publish-automation/SKILL.md`
+- 已完成的 Windows 补全:
+  - `skill-center/skills/social-publish-automation`:
+    - 已复核 `send_feishu_notify.ps1` 与 `send_feishu_notify.cmd` 仍在仓库中，且 PowerShell wrapper 已覆盖 repo-local `lark-cli` 解析、固定 `legacy-a958` profile、固定 chat、`--idempotency-key` 与 `bot/user` 发送模式。
+    - 已复核仓库版 `SKILL.md` 仍保留并明确了 Windows 等价行为，无需再补新脚本或文档分叉:
+      - CDP 可用性优先用 `Invoke-WebRequest http://127.0.0.1:9222/json/version` 验证
+      - 首选 `automation/python-platform-takeover/scripts/social-publisher.ps1` 做 `doctor`、`validate-package`、`receipt-status` 与 `record-receipt`
+      - Windows 原生上传 fallback 继续要求 `%TEMP%` 短路径，而不是 `.lnk` / symlink / 搜索结果
+      - Feishu 通知继续优先走 `.\scripts\send_feishu_notify.cmd` 或 `.\scripts\send_feishu_notify.ps1`
+      - `blocked_account_review_pending` 与扩展 receipt 字段仍按 Windows 镜像规则视为共享 CLI 可处理状态，不需要手工删字段
+  - `~/.codex/skills/social-publish-automation/SKILL.md`:
+    - 已对比 live skill 与 repo mirror；`2026-05-25 00:49:33 CST` 这次修改只是把 live 副本收窄为更通用的说明。
+    - 仓库镜像当前仍保留更完整的 Windows 专用落点，因此没有新的 Windows 缺口需要回填到 repo。
+  - 结论:
+    - 今天没有新增需要我再实现的 Windows 代码或资产；本轮只追加状态记录，明确最新批次已被 Windows 镜像覆盖。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-25` 当前已记录批次没有遗漏的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未发现 `pwsh`，因此未做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、仓库 / live skill 文档 diff，以及已存在 Windows wrapper 脚本内容核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-25 22:01:13 CST`，最新 monitor 批次里的 Windows 落点已经由仓库现有 `social-publish-automation` 文档和 `send_feishu_notify.{ps1,cmd}` 覆盖；今天无需新增 Windows 补丁文件。
+
+## 2026-05-26 22:03:51 CST
+
+- 处理时间:
+  - `2026-05-26 22:03:51 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-25 22:01:13 CST` 之后追加且此前未写入本状态文件的最新批次已全部复核。
+  - 非零批次只有 3 个:
+    - `2026-05-26 14:42:23 CST`
+    - `2026-05-26 16:46:38 CST`
+    - `2026-05-26 18:49:34 CST`
+  - 其余新增批次:
+    - `2026-05-25 22:18:08 CST`
+    - `2026-05-25 23:18:39 CST`
+    - `2026-05-26 09:33:02 CST`
+    - `2026-05-26 10:34:00 CST`
+    - `2026-05-26 10:37:49 CST`
+    - `2026-05-26 13:40:46 CST`
+    - `2026-05-26 15:44:11 CST`
+    - `2026-05-26 17:47:21 CST`
+    - `2026-05-26 19:50:55 CST`
+    - `2026-05-26 20:52:22 CST`
+    - `2026-05-26 21:50:55 CST`
+  - `2026-05-26 14:42:23 CST` 的非零变更项:
+    - `automation/python-platform-takeover/configs/content-package.2026-05-26-ai-employee-three-grid-before-verdict.yaml`
+    - `automation/python-platform-takeover/configs/hermes-package.2026-05-26-ai-employee-three-grid-before-verdict.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-26-ai-employee-three-grid-before-verdict.json`
+    - `automation/python-platform-takeover/state/hermes-handoff/latest.json`
+  - `2026-05-26 16:46:38 CST` 的非零变更项:
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json`
+  - `2026-05-26 18:49:34 CST` 的非零变更项:
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json.stale-override-1779789719`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json.stale-override-1779790507`
+- 已完成的 Windows 补全:
+  - 无新增转译文件。
+  - 已明确复核这 3 个非零批次都只是 `python-platform-takeover` 的 handoff / receipt / publish-lock 运行态与配置资产，不是新的 Mac-only 自定义 skill 行为。
+  - 已确认仓库现有 Windows 入口已经覆盖这些新增语义，无需再补 PowerShell 启动器、路径处理或命令包装:
+    - `automation/python-platform-takeover/README.md` 已写明 Windows 侧如何对 `ready_for_publish` / handoff-only 包执行 `.\scripts\social-publisher.ps1 validate-package`
+    - `automation/python-platform-takeover/README.md` 已写明 `receipt-status`、`record-receipt --status not_published`、以及 `state/hermes-handoff/latest.json` 的 Windows 校验规则
+    - `skill-center/skills/social-publish-automation/SKILL.md` 已写明 Windows 侧遇到 `publish_constraints.allow_live: false`、`no_publish_in_handoff_generation`、额外 receipt 字段、以及 handoff `latest.json` 时应停止 live publish 并仅做 receipt 初始化
+  - 结论:
+    - 今天没有需要新增到仓库的 Windows 专属脚本、文档分叉、快捷键说明或资源文件；本轮只追加状态记录，明确最新 monitor 批次已被现有 Windows 覆盖。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-26` 最新 monitor 批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未发现 `pwsh`，因此未做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核，以及现有 Windows README / skill / wrapper 内容核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-26 22:03:51 CST`，今天新增的 handoff、receipt、publish-lock 批次都已被仓库现有 Windows 流程覆盖；今天明确没有需要补做的新 Windows 转译。
+
+## 2026-05-27 22:04:11 CST
+
+- 处理时间:
+  - `2026-05-27 22:04:11 CST`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-26 22:03:51 CST` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 非零批次只有 3 个:
+    - `2026-05-27 17:20:37 CST`
+    - `2026-05-27 18:22:37 CST`
+    - `2026-05-27 19:23:43 CST`
+  - 其余新增批次:
+    - `2026-05-26 22:53:21 CST`
+    - `2026-05-27 00:55:06 CST`
+    - `2026-05-27 05:01:29 CST`
+    - `2026-05-27 08:05:14 CST`
+    - `2026-05-27 09:06:17 CST`
+    - `2026-05-27 10:07:38 CST`
+    - `2026-05-27 14:15:12 CST`
+    - `2026-05-27 14:17:51 CST`
+    - `2026-05-27 15:19:31 CST`
+    - `2026-05-27 16:19:48 CST`
+    - `2026-05-27 20:24:57 CST`
+    - `2026-05-27 21:25:54 CST`
+  - `2026-05-27 17:20:37 CST` 的非零变更项:
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.zhihu.lock.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-26-ai-employee-three-grid-before-verdict.json`
+  - `2026-05-27 18:22:37 CST` 的非零变更项:
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.wechat_channels.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.zhihu.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.bilibili.lock.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-26-ai-employee-three-grid-before-verdict.json`
+  - `2026-05-27 19:23:43 CST` 的非零变更项:
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.kuaishou.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-26-ai-employee-three-grid-before-verdict.weibo.lock.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-26-ai-employee-three-grid-before-verdict.json`
+- 已完成的 Windows 补全:
+  - 无新增 Windows 专属脚本、文档分叉或命令包装器需要落库；今天未新增需要翻译的 Mac-only 自定义 skill 行为。
+  - 已明确复核上述 3 个非零批次都只是 `automation/python-platform-takeover/state` 下的 publish lock / receipt 运行态落库，不是新的平台操作流程实现。
+  - 已确认仓库现有 Windows 入口已经覆盖这些新增语义，无需再补 PowerShell 启动器、路径规则、快捷键说明或额外资源:
+    - `automation/python-platform-takeover/README.md` 已写明 Windows PowerShell 对 `validate-package`、`receipt-status`、`record-receipt --status not_published`、`state/hermes-handoff/latest.json` 与 handoff-only 包的处理规则。
+    - `skill-center/skills/social-publish-automation/SKILL.md` 已写明 Windows 侧 CDP / Browser Bridge 入口、`allow_live: false` 与 `no_publish_in_handoff_generation` 等约束、`%TEMP%` 短路径回退、以及微信视频号 / 知乎 / Bilibili / 微博 / 快手的共享防重发与验证要求。
+    - `skill-center/skills/social-publish-automation/scripts/send_feishu_notify.ps1`
+    - `skill-center/skills/social-publish-automation/scripts/send_feishu_notify.cmd`
+      现有 Windows 通知包装器已覆盖今天新增 receipt / lock 中继续沿用的飞书成功通知语义，不需要再补新的 Windows 发送入口。
+  - 结论:
+    - 今天实际转译结果为“无新增转译项”；已把 `2026-05-27` 尚未落盘到本文件的 monitor 批次正式记账，明确它们已经被现有 Windows 版本覆盖。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-27` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未发现 `pwsh`，因此未做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核，以及现有 Windows README / skill / wrapper 内容核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-27 22:04:11 CST`，今天新增的 Zhihu / Bilibili / 微信视频号 / 微博 / 快手 publish lock 与 receipt 状态批次都已被仓库现有 Windows 流程覆盖；今天明确没有需要补做的新 Windows 转译。
+
+## 2026-05-28 22:01:41 CST (+0800)
+
+- 处理时间:
+  - `2026-05-28 22:01:41 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-27 22:04:11 CST` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 新增批次如下:
+    - `2026-05-27 22:27:02 CST`
+    - `2026-05-28 00:30:32 CST`
+    - `2026-05-28 01:30:46 CST`
+    - `2026-05-28 02:33:06 CST`
+    - `2026-05-28 03:33:57 CST`
+    - `2026-05-28 05:36:18 CST`
+    - `2026-05-28 06:36:25 CST`
+    - `2026-05-28 10:41:20 CST`
+    - `2026-05-28 12:43:26 CST (+0800)`
+    - `2026-05-28 14:46:03 CST (+0800)`
+    - `2026-05-28 15:46:32 CST (+0800)`
+    - `2026-05-28 17:48:59 CST (+0800)`
+    - `2026-05-28 18:49:04 CST (+0800)`
+    - `2026-05-28 21:54:48 CST (+0800)`
+  - 上述批次结果均为 `新增 0，修改 0，删除 0`，未出现新的自定义 skill 或支撑自动化文件变更。
+- 已完成的 Windows 补全:
+  - 无新增转译文件。
+  - 已明确记录今天没有需要翻译成 Windows 的新增或修改 custom-skill 行为，因此无需补写 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或其他仓库资源。
+  - 已确认当前仓库中的既有 Windows 覆盖足以对应今天 monitor 记录，因为今天追加的批次全部为零变更批次。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-28` 当前已记录批次没有任何待补的 Windows 转译项。
+- 阻塞原因:
+  - 无阻塞。
+  - 本轮未修改任何 skill 或 automation 实现文件；仅追加状态记录。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-28 22:01:41 CST (+0800)`，今天 monitor 新增批次全部为零变更，Mac 与 Windows 覆盖今日均完整；今天明确没有需要补做的新 Windows 转译。
+
+## 2026-05-29 22:02:48 CST (+0800)
+
+- 处理时间:
+  - `2026-05-29 22:02:48 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-28 22:01:41 CST (+0800)` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 新增批次如下:
+    - `2026-05-28 22:56:12 CST (+0800)`
+    - `2026-05-28 23:57:02 CST (+0800)`
+    - `2026-05-29 00:58:36 CST (+0800)`
+    - `2026-05-29 02:00:09 CST (+0800)`
+    - `2026-05-29 03:01:16 CST (+0800)`
+    - `2026-05-29 04:02:17 CST (+0800)`
+    - `2026-05-29 05:02:58 CST (+0800)`
+    - `2026-05-29 06:03:44 CST (+0800)`
+    - `2026-05-29 07:05:38 CST (+0800)`
+    - `2026-05-29 08:06:03 CST (+0800)`
+    - `2026-05-29 09:06:14 CST (+0800)`
+    - `2026-05-29 10:08:00 CST (+0800)`
+    - `2026-05-29 11:09:31 CST (+0800)`
+    - `2026-05-29 13:11:47 CST (+0800)`
+    - `2026-05-29 14:14:50 CST (+0800)`
+    - `2026-05-29 15:15:41 CST (+0800)`
+    - `2026-05-29 20:22:51 CST (+0800)`
+    - `2026-05-29 21:24:32 CST (+0800)`
+  - 上述批次结果均为 `新增 0，修改 0，删除 0`，未出现新的自定义 skill 或支撑自动化文件变更。
+- 已完成的 Windows 补全:
+  - 无新增转译文件。
+  - 已明确记录今天没有需要翻译成 Windows 的新增或修改 custom-skill 行为，因此无需补写 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或其他仓库资源。
+  - 已确认当前仓库中的既有 Windows 覆盖足以对应今天 monitor 记录，因为今天追加的批次全部为零变更批次。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-29` 当前已记录批次没有任何待补的 Windows 转译项。
+- 阻塞原因:
+  - 无阻塞。
+  - 本轮未修改任何 skill 或 automation 实现文件；仅追加状态记录并初始化自动化记忆文件。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-29 22:02:48 CST (+0800)`，今天 monitor 新增批次全部为零变更，Mac 与 Windows 覆盖今日均完整；今天明确没有需要补做的新 Windows 转译。
+
+## 2026-05-30 22:02:19 CST (+0800)
+
+- 处理时间:
+  - `2026-05-30 22:02:19 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-29 22:02:48 CST (+0800)` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 非零批次只有 `1` 个:
+    - `2026-05-30 13:44:57 CST (+0800)`
+  - 其余新增批次:
+    - `2026-05-29 22:25:25 CST (+0800)`
+    - `2026-05-29 23:26:52 CST (+0800)`
+    - `2026-05-30 00:28:19 CST (+0800)`
+    - `2026-05-30 01:28:31 CST (+0800)`
+    - `2026-05-30 02:30:14 CST (+0800)`
+    - `2026-05-30 03:32:12 CST (+0800)`
+    - `2026-05-30 04:32:23 CST (+0800)`
+    - `2026-05-30 07:36:25 CST (+0800)`
+    - `2026-05-30 08:37:18 CST (+0800)`
+    - `2026-05-30 09:39:23 CST (+0800)`
+    - `2026-05-30 12:43:47 CST (+0800)`
+    - `2026-05-30 14:47:21 CST (+0800)`
+    - `2026-05-30 15:48:24 CST (+0800)`
+    - `2026-05-30 16:49:56 CST (+0800)`
+    - `2026-05-30 18:51:18 CST (+0800)`
+    - `2026-05-30 19:52:13 CST (+0800)`
+    - `2026-05-30 20:56:10 CST (+0800)`
+    - `2026-05-30 21:56:18 CST (+0800)`
+  - `2026-05-30 13:44:57 CST (+0800)` 的非零变更项:
+    - `automation/python-platform-takeover/configs/content-package.2026-05-30-ai-employee-no-rush-repost-before-receipt.yaml`
+    - `automation/python-platform-takeover/configs/hermes-package.2026-05-30-ai-employee-no-rush-repost-before-receipt.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`
+    - `automation/python-platform-takeover/state/hermes-handoff/latest.json`
+- 已完成的 Windows 补全:
+  - 今天明确没有需要新增落库的 Windows 转译文件；已把这一结论写入状态记录。
+  - 已复核 `2026-05-30 13:44:57 CST (+0800)` 这批新增 / 修改只涉及新的内容包、Hermes handoff 包、空白 receipt 骨架与 `latest.json` 指针切换，不是新的 Mac-only 自定义 skill 实现。
+  - 已确认现有 Windows 说明已经覆盖这批行为，无需再补新的 PowerShell 启动器、路径包装器、快捷键分叉或仓库资产:
+    - `automation/python-platform-takeover/README.md` 已写明日期化内容包若写死 macOS `/Users/...` 路径，Windows 侧应先复制到本地 YAML，再统一改成真实 `C:/...` 绝对路径后使用。
+    - `automation/python-platform-takeover/README.md` 已写明 handoff-only 包遇到 `publish_constraints.allow_live: false` 等约束时，Windows 侧只做 `validate-package`、`receipt-status`、`record-receipt --status not_published` 与 `state/hermes-handoff/latest.json` 校验，不执行 live publish。
+    - `skill-center/skills/social-publish-automation/SKILL.md` 已写明 Windows 侧需原样保留 `fingerprints` / `lock_dir`，并把 `state/hermes-handoff/latest.json` 视作当前 `ready_for_publish` campaign 的唯一 handoff 指针。
+  - 结论:
+    - 本轮实际转译结果为“无新增转译项”；今天唯一的非零批次已被仓库现有 Windows 文档和共享命令入口覆盖。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-30` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未发现 `pwsh`，因此未做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核，以及现有 Windows README / skill 规则与新 handoff 资产内容核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-30 22:02:19 CST (+0800)`，今天 monitor 新增批次里只有一组 handoff / receipt 配置资产变更，且它已经被仓库现有 Windows 路径改写规则和 handoff-only 处理流程覆盖；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-05-31 22:02:23 CST (+0800)
+
+- 处理时间:
+  - `2026-05-31 22:02:23 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-30 22:02:19 CST (+0800)` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 非零批次共有 `4` 个:
+    - `2026-05-31 01:00:22 CST (+0800)`
+    - `2026-05-31 14:18:45 CST (+0800)`
+    - `2026-05-31 15:19:08 CST (+0800)`
+    - `2026-05-31 16:21:45 CST (+0800)`
+  - 其余新增批次:
+    - `2026-05-31 02:02:18 CST (+0800)`
+    - `2026-05-31 03:03:33 CST (+0800)`
+    - `2026-05-31 04:04:05 CST (+0800)`
+    - `2026-05-31 05:05:06 CST (+0800)`
+    - `2026-05-31 06:05:42 CST (+0800)`
+    - `2026-05-31 07:06:43 CST (+0800)`
+    - `2026-05-31 08:07:48 CST (+0800)`
+    - `2026-05-31 09:09:22 CST (+0800)`
+    - `2026-05-31 10:11:37 CST (+0800)`
+    - `2026-05-31 11:16:47 CST (+0800)`
+    - `2026-05-31 12:15:52 CST (+0800)`
+    - `2026-05-31 13:17:25 CST (+0800)`
+    - `2026-05-31 17:23:06 CST (+0800)`
+    - `2026-05-31 18:24:53 CST (+0800)`
+    - `2026-05-31 20:27:48 CST (+0800)`
+    - `2026-05-31 21:29:02 CST (+0800)`
+  - `2026-05-31 01:00:22 CST (+0800)` 的非零变更项:
+    - `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/**`
+  - `2026-05-31 14:18:45 CST (+0800)`、`2026-05-31 15:19:08 CST (+0800)`、`2026-05-31 16:21:45 CST (+0800)` 的非零变更项:
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`
+- 已完成的 Windows 补全:
+  - 今天没有新增落库的 Windows 转译文件；已明确记录“本轮无新增 Windows 补丁”这一结论。
+  - 已复核 `2026-05-31 01:00:22 CST (+0800)` 这批 `1495` 个新增文件只是把现有仓库镜像到 `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/`，没有向工作仓库引入新的 Mac-only 自定义 skill 行为。
+  - 已对 mirror 与工作仓库做差异复核，确认工作仓库在 Windows 支持上反而比 mirror 更完整，因此无需把 mirror 内容再回填一轮 Windows 补丁:
+    - `skill-center/skills/social-publish-automation/SKILL.md` 已写明 Windows 下使用 `scripts/send_feishu_notify.cmd` / `scripts/send_feishu_notify.ps1`、固定 `legacy-a958` profile，以及失败后重试策略。
+    - `skill-center/skills/social-publish-automation/scripts/send_feishu_notify.cmd`
+    - `skill-center/skills/social-publish-automation/scripts/send_feishu_notify.ps1`
+    - `skill-center/skills/xyq-nest-skill/scripts/{download_results,get_thread,submit_run,upload_file}.cmd`
+    - `skill-center/skills/xyq-nest-skill/scripts/{download_results,get_thread,submit_run,upload_file}.ps1`
+    - `skill-center/skills/xyq-nest-skill/scripts/invoke_xyq_script.ps1`
+    - `skills/codex-feishu-bridge-skill/assets/template/scripts/{bridge-start,bridge-stop,bridge-status,bridge-logs,configure_notify_target,run-bridge}.ps1`
+    - `skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.cmd`
+    - `skills/codex-feishu-bridge-skill/assets/template/scripts/mirror-view.ps1`
+    - `skills/codex-feishu-bridge-skill/references/{INSTALL-QUICKSTART,deployment,user-guide}.md` 已包含 Windows `.ps1` / `.cmd` 启动、`.bridge.env`、`LARK_CLI_PROFILE` 与路径说明。
+  - 已复核 `2026-05-31 14:18:45 CST (+0800)`、`2026-05-31 15:19:08 CST (+0800)`、`2026-05-31 16:21:45 CST (+0800)` 只是在同一份 Bilibili publish receipt 上连续补写状态:
+    - 从空白 / `not_published` 留痕补成 `submit_stuck_processing`
+    - 再推进为 `published_verified_manager_page`
+    - 最后补写封面修复成功与二次核验留痕
+  - 上述 receipt 变更均为跨平台数据状态更新，不需要新增 Windows 启动器、路径包装器、快捷键分叉或文档分支；现有 Windows 覆盖已由以下文件承接:
+    - `automation/python-platform-takeover/README.md`
+    - `skill-center/skills/social-publish-automation/SKILL.md`
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-05-31` 当前已记录的非零批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未执行 Windows PowerShell 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、mirror-vs-workspace 差异检查，以及现有 Windows 包装脚本 / 文档文件核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-05-31 22:02:23 CST (+0800)`，今天新增的 mirror 批次没有带来新的待转译行为，三次 receipt 更新也都是跨平台数据留痕；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-01 22:02:04 CST (+0800)
+
+- 处理时间:
+  - `2026-06-01 22:02:04 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-05-31 22:02:23 CST (+0800)` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 非零批次共有 `2` 个:
+    - `2026-06-01 16:52:58 CST (+0800)`
+    - `2026-06-01 19:52:47 CST (+0800)`
+  - 其余新增批次:
+    - `2026-05-31 22:30:38 CST (+0800)`
+    - `2026-05-31 23:31:02 CST (+0800)`
+    - `2026-06-01 00:33:02 CST (+0800)`
+    - `2026-06-01 01:35:01 CST (+0800)`
+    - `2026-06-01 02:34:46 CST (+0800)`
+    - `2026-06-01 03:35:39 CST (+0800)`
+    - `2026-06-01 04:37:21 CST (+0800)`
+    - `2026-06-01 05:38:54 CST (+0800)`
+    - `2026-06-01 06:40:26 CST (+0800)`
+    - `2026-06-01 07:42:13 CST (+0800)`
+    - `2026-06-01 08:43:40 CST (+0800)`
+    - `2026-06-01 08:44:12 CST (+0800)`
+    - `2026-06-01 10:44:37 CST (+0800)`
+    - `2026-06-01 11:46:49 CST (+0800)`
+    - `2026-06-01 12:46:59 CST (+0800)`
+    - `2026-06-01 13:48:10 CST (+0800)`
+    - `2026-06-01 14:49:44 CST (+0800)`
+    - `2026-06-01 15:50:02 CST (+0800)`
+    - `2026-06-01 17:52:09 CST (+0800)`
+    - `2026-06-01 18:53:03 CST (+0800)`
+    - `2026-06-01 20:55:00 CST (+0800)`
+    - `2026-06-01 21:56:42 CST (+0800)`
+  - `2026-06-01 16:52:58 CST (+0800)` 的非零变更项:
+    - `automation/python-platform-takeover/configs/content-package.2026-06-01-ai-employee-pending-status-before-rewrite.yaml`
+    - `automation/python-platform-takeover/configs/hermes-package.2026-06-01-ai-employee-pending-status-before-rewrite.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-06-01-ai-employee-pending-status-before-rewrite.json`
+    - `automation/python-platform-takeover/state/hermes-handoff/2026-06-01-ai-employee-pending-status-before-rewrite.json`
+    - `automation/python-platform-takeover/state/hermes-handoff/latest.json`
+  - `2026-06-01 19:52:47 CST (+0800)` 的非零变更项:
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`
+- 已完成的 Windows 补全:
+  - 今天没有需要新增落库的 Windows 转译文件；已把这一结论正式记入状态文件。
+  - 已复核 `2026-06-01 16:52:58 CST (+0800)` 这批新增 / 修改只是在 `automation/python-platform-takeover` 下初始化新的 handoff-only 发布资产，不是新的 Mac-only skill 行为:
+    - 新 content package 与 Hermes package 只新增 campaign 文案、素材指纹、`lock_dir`、`latest.json` 指针和发布约束。
+    - 其中 `allow_live: false`、`do_not_publish: true`、`do_not_upload: true`、`do_not_click_submit: true` 说明这批资产本来就只允许做 handoff 校验，不要求新增 Windows 发布入口。
+  - 已复核 `2026-06-01 19:52:47 CST (+0800)` 只是给既有 receipt 补写 `toutiao:submitted_under_review` 留痕，新增的是回执状态、上传核验和管理页“审核中”证据，不是新的平台流程实现。
+  - 已确认仓库现有 Windows 说明已经覆盖今天新增语义，因此无需再补 PowerShell 启动器、Windows 路径处理、快捷键差异说明、命令包装器或仓库资源:
+    - `automation/python-platform-takeover/README.md` 已写明日期化 YAML 若包含 macOS `/Users/...` 路径，Windows 侧应复制为本地内容包并统一改成真实 `C:/...` 绝对路径。
+    - `automation/python-platform-takeover/README.md` 已写明 handoff-only 包遇到 `allow_live: false` / `do_not_publish` / `do_not_upload` / `do_not_click_submit` 时，Windows 侧只做 `validate-package`、`receipt-status`、`record-receipt --status not_published` 与 `state/hermes-handoff/latest.json` 校验，不执行 live publish。
+    - `skill-center/skills/social-publish-automation/SKILL.md` 已写明 Windows 侧要原样保留 `fingerprints` 与 `lock_dir`，并把 `state/hermes-handoff/latest.json` 视为当前 `ready_for_publish` campaign 的唯一 handoff 指针。
+  - 结论:
+    - 本轮实际转译结果为“无新增转译项”；今天两组非零批次都已被仓库现有 Windows 路径改写规则、handoff-only 流程和 receipt 命令覆盖。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-01` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未发现 `pwsh`，因此未做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核，以及现有 Windows README / skill 规则与新增 handoff / receipt 资产内容核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-01 22:02:04 CST (+0800)`，今天新增的两组非零批次都只是 handoff / receipt 运行态资产，未引入新的 Mac-only 自定义 skill 行为；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-02 22:04:42 CST (+0800)
+
+- 处理时间:
+  - `2026-06-02 22:04:42 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-01 22:02:04 CST (+0800)` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 非零批次共有 `5` 个:
+    - `2026-06-02 11:18:21 CST (+0800)`
+    - `2026-06-02 13:16:25 CST (+0800)`
+    - `2026-06-02 14:18:37 CST (+0800)`
+    - `2026-06-02 16:21:03 CST (+0800)`
+    - `2026-06-02 17:22:59 CST (+0800)`
+  - 其余新增批次:
+    - `2026-06-02 18:24:06 CST (+0800)`
+    - `2026-06-02 19:25:02 CST (+0800)`
+    - `2026-06-02 20:27:26 CST (+0800)`
+    - `2026-06-02 21:28:45 CST (+0800)`
+  - `2026-06-02 11:18:21 CST (+0800)` 的非零变更项:
+    - `automation/python-platform-takeover/state/publish-locks/2026-06-01-ai-employee-pending-status-before-rewrite.bilibili.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-05-30-ai-employee-no-rush-repost-before-receipt.zhihu.lock.json`
+    - `automation/python-platform-takeover/state/publish-locks/2026-06-01-ai-employee-pending-status-before-rewrite.baijiahao.lock.json`
+    - `automation/python-platform-takeover/configs/content-package.2026-06-01-ai-employee-pending-status-before-rewrite.yaml`
+    - `automation/python-platform-takeover/configs/hermes-package.2026-06-01-ai-employee-pending-status-before-rewrite.json`
+    - `automation/python-platform-takeover/state/hermes-handoff/2026-06-01-ai-employee-pending-status-before-rewrite.json`
+    - `automation/python-platform-takeover/state/hermes-handoff/latest.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-06-01-ai-employee-pending-status-before-rewrite.json`
+  - `2026-06-02 13:16:25 CST (+0800)` 的非零变更项:
+    - `automation/python-platform-takeover/configs/content-package.2026-06-02-ai-employee-asset-fingerprint-before-submit.yaml`
+    - `automation/python-platform-takeover/configs/hermes-package.2026-06-02-ai-employee-asset-fingerprint-before-submit.json`
+    - `automation/python-platform-takeover/state/hermes-handoff/2026-06-02-ai-employee-asset-fingerprint-before-submit.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-06-02-ai-employee-asset-fingerprint-before-submit.json`
+    - `automation/python-platform-takeover/state/hermes-handoff/latest.json`
+  - `2026-06-02 14:18:37 CST (+0800)` 的非零变更项:
+    - `~/.codex/skills/juliang-lead-sync/SKILL.md`
+    - `~/.codex/skills/juliang-lead-sync/agents/openai.yaml`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`
+  - `2026-06-02 16:21:03 CST (+0800)` 的非零变更项:
+    - `automation/python-platform-takeover/state/publish-locks/2026-06-02-ai-employee-asset-fingerprint-before-submit.baijiahao.lock.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-06-02-ai-employee-asset-fingerprint-before-submit.json`
+  - `2026-06-02 17:22:59 CST (+0800)` 的非零变更项:
+    - `automation/python-platform-takeover/state/publish-locks/2026-06-02-ai-employee-asset-fingerprint-before-submit.weibo.lock.json`
+    - `automation/python-platform-takeover/configs/content-package.2026-06-02-ai-employee-asset-fingerprint-before-submit.yaml`
+    - `automation/python-platform-takeover/configs/hermes-package.2026-06-02-ai-employee-asset-fingerprint-before-submit.json`
+    - `automation/python-platform-takeover/state/hermes-handoff/2026-06-02-ai-employee-asset-fingerprint-before-submit.json`
+    - `automation/python-platform-takeover/state/hermes-handoff/latest.json`
+    - `automation/python-platform-takeover/state/publish-receipts/2026-06-02-ai-employee-asset-fingerprint-before-submit.json`
+- 已完成的 Windows 补全:
+  - 新增仓库 skill 镜像，给今天新出现的本地自定义 skill 提供 Windows 可用版本:
+    - `skill-center/skills/juliang-lead-sync/SKILL.md`
+    - `skill-center/skills/juliang-lead-sync/agents/openai.yaml`
+  - 上述新 skill 已补齐 Windows 侧的关键操作说明:
+    - 继续复用已登录 Chrome / Codex Chrome Extension，不读取 cookies、localStorage 或密码库
+    - 补入 PowerShell 下 `lark-cli wiki spaces get_node --params '{"token":"..."}'` 的 Windows 可执行写法
+    - 补入 `lark-cli sheets +append` 的 PowerShell 追加示例
+    - 明确 Windows 侧继续复用 `skill-center/skills/lark-sheets/SKILL.md` 与 `skill-center/skills/lark-base/SKILL.md`，不再另造一套表格写入链路
+  - 已复核 `automation/python-platform-takeover` 的 4 组新增 / 修改批次均被仓库现有 Windows 规则覆盖，无需再补新的 PowerShell 启动器、路径包装器、快捷键分叉或仓库资产:
+    - `2026-06-02 11:18:21 CST (+0800)` 的三份 publish lock、两份 receipt 与 `2026-06-01-ai-employee-pending-status-before-rewrite` 的封面指纹刷新，仍属于共享 CLI 台账、duplicate guard 和 handoff 指针更新，Windows 侧继续按现有 `receipt-status` / `record-receipt` / `validate-package` 流程处理即可。
+    - `2026-06-02 13:16:25 CST (+0800)` 新建的 `2026-06-02-ai-employee-asset-fingerprint-before-submit` content package、Hermes handoff 与空白 receipt，仍是 `allow_live: false` 的 handoff-only 资产；Windows 侧继续按现有 README 的 `C:/...` 路径改写和 `not_published` 初始化规则执行即可。
+    - `2026-06-02 14:18:37 CST (+0800)` 对 `2026-05-30-ai-employee-no-rush-repost-before-receipt.json` 的知乎实发核验、飞书通知留痕与 `package_usage` 扩写属于跨平台回执数据，不需要新增 Windows 独占流程。
+    - `2026-06-02 16:21:03 CST (+0800)` 的百家号发布锁和总 receipt 扩写，仍由现有 Windows duplicate-guard / publish receipt 命令承接。
+    - `2026-06-02 17:22:59 CST (+0800)` 的微博发布锁、`package_cover_reset` 元数据和更新后的 handoff/latest 指针，仍由现有 Windows 封面可读性复核、`fingerprints` 保留规则和 handoff-only 规则承接。
+  - 本轮实际新增落库的 Windows 转译文件只有 `juliang-lead-sync` 的仓库镜像；其余 `2026-06-02` 非零批次都已被现有 Windows 文档与共享命令入口覆盖。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-02` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未发现 `pwsh`，因此未做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、仓库文件核对，以及现有 Windows README / skill 规则与新增 skill 镜像内容核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-02 22:04:42 CST (+0800)`，今天唯一需要新增落库的 Windows 补全是 `juliang-lead-sync` 仓库镜像；其余新增批次均为现有 Windows 规则已覆盖的 handoff / lock / receipt 运行态资产，Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-03 22:02:46 CST (+0800)
+
+- 处理时间:
+  - `2026-06-03 22:02:46 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-02 22:04:42 CST (+0800)` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 非零批次共有 `2` 个:
+    - `2026-06-02 22:30:52 CST (+0800)`
+    - `2026-06-03 05:41:42 CST (+0800)`
+  - 其余新增批次:
+    - `2026-06-02 23:32:08 CST (+0800)`
+    - `2026-06-03 00:32:55 CST (+0800)`
+    - `2026-06-03 00:34:12 CST (+0800)`
+    - `2026-06-03 01:36:11 CST (+0800)`
+    - `2026-06-03 02:35:58 CST (+0800)`
+    - `2026-06-03 03:38:01 CST (+0800)`
+    - `2026-06-03 06:42:39 CST (+0800)`
+    - `2026-06-03 07:43:05 CST (+0800)`
+    - `2026-06-03 08:44:10 CST (+0800)`
+    - `2026-06-03 09:45:47 CST (+0800)`
+    - `2026-06-03 10:46:37 CST (+0800)`
+    - `2026-06-03 11:47:37 CST (+0800)`
+    - `2026-06-03 12:51:13 CST (+0800)`
+    - `2026-06-03 13:51:19 CST (+0800)`
+    - `2026-06-03 15:55:16 CST (+0800)`
+    - `2026-06-03 16:54:31 CST (+0800)`
+    - `2026-06-03 17:56:16 CST (+0800)`
+    - `2026-06-03 18:58:21 CST (+0800)`
+    - `2026-06-03 20:00:01 CST (+0800)`
+    - `2026-06-03 21:01:23 CST (+0800)`
+    - `2026-06-03 22:02:39 CST (+0800)`
+  - `2026-06-02 22:30:52 CST (+0800)` 的非零变更项:
+    - `skill-center/skills/juliang-lead-sync/SKILL.md`
+    - `skill-center/skills/juliang-lead-sync/agents/openai.yaml`
+  - `2026-06-03 05:41:42 CST (+0800)` 的非零变更项:
+    - `~/.codex/skills/github-nightly-sync-20260531-run2/docs/automation/github-sync-status.md`
+    - `~/.codex/skills/github-nightly-sync-20260531-run2/docs/automation/skill-change-monitor.md`
+- 已完成的 Windows 补全:
+  - 今天没有新增落库的 Windows 转译文件；已把这一显式 no-op 结论写入状态文档。
+  - 已复核 `2026-06-02 22:30:52 CST (+0800)` 这批 `juliang-lead-sync` 仓库镜像记录，确认它没有引入新的 Mac-only 行为；仓库中的 `skill-center/skills/juliang-lead-sync/SKILL.md` 已经包含 Windows 侧必需说明，无需重复补丁:
+    - PowerShell 下 `lark-cli` 的 JSON 单引号写法
+    - `lark-cli sheets +append` 的 Windows 追加示例
+    - 复用已登录 Chrome / Codex Chrome Extension 接管，而不是重走账号密码登录
+    - 继续复用 `skill-center/skills/lark-sheets/SKILL.md` 与 `skill-center/skills/lark-base/SKILL.md`
+  - 已复核 `2026-06-03 05:41:42 CST (+0800)` 的两份新增文件只是 `github-nightly-sync-20260531-run2` 镜像目录下的监控 / 同步日志，不是新的自定义 skill 行为、PowerShell 入口或平台专属实现，因此不需要新增 Windows 路径包装、快捷键分叉、命令封装或仓库资产。
+  - 已复核其余 `2026-06-02 23:32:08 CST (+0800)` 到 `2026-06-03 22:02:39 CST (+0800)` 批次全部为 `新增 0，修改 0，删除 0`，今天没有新的待转译行为进入队列。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-03` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未修改任何 Windows 实现文件；当前判断基于 `skill-change-monitor.md` 的增量复核、`juliang-lead-sync` 仓库文件核对，以及 `github-nightly-sync-20260531-run2` 新增项仅为日志文档的性质确认。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-03 22:02:46 CST (+0800)`，今天新增到监控文档里的自定义 skill 相关行为没有新的 Windows 缺口；`juliang-lead-sync` 仍由现有 Windows 说明完整覆盖，其余新增项只是镜像日志或零变更批次，Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-04 22:02:54 CST (+0800)
+
+- 处理时间:
+  - `2026-06-04 22:02:54 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-03 22:02:46 CST (+0800)` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 非零批次共有 `1` 个:
+    - `2026-06-04 20:28:28 CST (+0800)`
+  - 其余新增批次:
+    - `2026-06-03 23:04:36 CST (+0800)`
+    - `2026-06-04 00:06:02 CST (+0800)`
+    - `2026-06-04 01:07:27 CST (+0800)`
+    - `2026-06-04 02:09:54 CST (+0800)`
+    - `2026-06-04 03:10:08 CST (+0800)`
+    - `2026-06-04 04:10:27 CST (+0800)`
+    - `2026-06-04 05:10:56 CST (+0800)`
+    - `2026-06-04 06:12:08 CST (+0800)`
+    - `2026-06-04 07:13:43 CST (+0800)`
+    - `2026-06-04 08:14:58 CST (+0800)`
+    - `2026-06-04 09:18:07 CST (+0800)`
+    - `2026-06-04 10:17:29 CST (+0800)`
+    - `2026-06-04 11:19:37 CST (+0800)`
+    - `2026-06-04 12:19:49 CST (+0800)`
+    - `2026-06-04 13:20:41 CST (+0800)`
+    - `2026-06-04 14:21:37 CST (+0800)`
+    - `2026-06-04 15:23:14 CST (+0800)`
+    - `2026-06-04 16:24:58 CST (+0800)`
+    - `2026-06-04 17:25:18 CST (+0800)`
+    - `2026-06-04 18:26:41 CST (+0800)`
+    - `2026-06-04 19:27:29 CST (+0800)`
+    - `2026-06-04 21:29:59 CST (+0800)`
+  - `2026-06-04 20:28:28 CST (+0800)` 的非零变更项:
+    - `automation/python-platform-takeover/social_publisher_takeover.egg-info/PKG-INFO`
+    - `automation/python-platform-takeover/social_publisher_takeover.egg-info/SOURCES.txt`
+    - `automation/python-platform-takeover/social_publisher_takeover.egg-info/dependency_links.txt`
+    - `automation/python-platform-takeover/social_publisher_takeover.egg-info/entry_points.txt`
+    - `automation/python-platform-takeover/social_publisher_takeover.egg-info/requires.txt`
+    - `automation/python-platform-takeover/social_publisher_takeover.egg-info/top_level.txt`
+- 已完成的 Windows 补全:
+  - 为今天新增的 `social-publisher` setuptools / editable-install 元数据补齐 Windows 可见说明:
+    - `automation/python-platform-takeover/README.md`
+  - 上述 README 现已明确今天这批 `entry_points.txt` 对应的 Windows 控制台入口与使用边界:
+    - Windows PowerShell 下 editable install 会生成 `.\.venv\Scripts\social-publisher.exe`
+    - macOS / Linux 下对应生成 `./.venv/bin/social-publisher`
+    - 仓库默认仍建议优先走 `scripts/social-publisher.ps1` / `scripts/social-publisher.sh`，因为这两个包装器会先做 Python 版本、依赖与工作目录检查
+  - 已复核 `2026-06-04 20:28:28 CST (+0800)` 这 6 个 `social_publisher_takeover.egg-info/*` 新增文件，确认它们属于跨平台打包元数据与 CLI 入口清单，不需要新增独立的 Windows 代码分叉、快捷键分叉或路径包装资产:
+    - `PKG-INFO`、`requires.txt`、`top_level.txt`、`SOURCES.txt`、`dependency_links.txt` 仅同步包名、依赖、源码清单与空 dependency links，占位语义在 Windows 与 macOS 一致
+    - `entry_points.txt` 只是把 `pyproject.toml` 里的 `social-publisher = social_publisher.cli:main` 落成安装元数据；Windows 侧的等价可执行入口由 `pip install -e ".[dev]"` 自动生成，无需再另建新的 `.ps1` 启动器
+  - 已复核其余 `2026-06-03 23:04:36 CST (+0800)` 到 `2026-06-04 21:29:59 CST (+0800)` 批次全部为 `新增 0，修改 0，删除 0`，今天没有其他新的待转译行为进入队列。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-04` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未发现 `pwsh`，因此未做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 的增量复核、`pyproject.toml` 与 `social_publisher_takeover.egg-info/entry_points.txt` 的一致性核对，以及 README / 现有 PowerShell 包装器内容检查。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-04 22:02:54 CST (+0800)`，今天唯一的非零批次只是 `social_publisher_takeover.egg-info` 打包元数据；Windows 侧已补充控制台入口说明，其余行为都由现有跨平台实现和 PowerShell 包装器覆盖，Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-05 22:01:18 CST (+0800)
+
+- 处理时间:
+  - `2026-06-05 22:01:18 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-04 22:02:54 CST (+0800)` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 今天追加的唯一未转译窗口为 `2026-06-05` 各批次，复核到的唯一时间戳如下:
+    - `2026-06-05 00:32:19 CST (+0800)`
+    - `2026-06-05 01:34:20 CST (+0800)`
+    - `2026-06-05 02:34:28 CST (+0800)`
+    - `2026-06-05 03:36:05 CST (+0800)`
+    - `2026-06-05 04:36:38 CST (+0800)`
+    - `2026-06-05 05:39:54 CST (+0800)`
+    - `2026-06-05 06:40:14 CST (+0800)`
+    - `2026-06-05 07:41:27 CST (+0800)`
+    - `2026-06-05 08:42:41 CST (+0800)`
+    - `2026-06-05 09:44:40 CST (+0800)`
+    - `2026-06-05 10:47:09 CST (+0800)`
+    - `2026-06-05 11:46:49 CST (+0800)`
+    - `2026-06-05 12:48:00 CST (+0800)`
+    - `2026-06-05 13:49:21 CST (+0800)`
+    - `2026-06-05 14:50:14 CST (+0800)`
+    - `2026-06-05 15:51:09 CST (+0800)`
+    - `2026-06-05 16:51:49 CST (+0800)`
+    - `2026-06-05 17:52:46 CST (+0800)`
+    - `2026-06-05 18:55:31 CST (+0800)`
+    - `2026-06-05 19:55:10 CST (+0800)`
+    - `2026-06-05 20:56:03 CST (+0800)`
+    - `2026-06-05 21:57:55 CST (+0800)`
+    - `2026-06-05 22:00:41 CST (+0800)`
+  - 上述批次结果均为 `新增 0，修改 0，删除 0`，其中 `2026-06-05 20:56:03`、`21:57:55` 与 `22:00:41` 仅涉及监控快照归一化 / 对账写回，没有新的自定义 skill 行为进入队列。
+- 已完成的 Windows 补全:
+  - 无新增转译项。
+  - 已明确记录今天为 no-op：复核的所有 `2026-06-05` 批次都没有新增或修改任何需要 Windows 专属补齐的 PowerShell 启动器、路径处理、命令包装器、快捷键差异说明、Windows 文档或配套仓库资产。
+  - 已复核 `social_publisher_takeover.egg-info/**` 在今天仅被作为旧快照归一化对象处理，不构成新的 Mac-only 功能变化；昨天为 `social-publisher.exe` 补入的 README 说明仍然覆盖 Windows 入口。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-05` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机仍未发现 `pwsh`，因此本轮没有执行 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、现有 Windows 文档 / 启动器检查，以及今天所有批次均为零变更这一事实。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-05 22:01:18 CST (+0800)`，今天新增到监控文档里的条目全部为零变更或快照归一化记录，没有新的待转译行为；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-06 22:03:10 CST (+0800)
+
+- 处理时间:
+  - `2026-06-06 22:03:10 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-05 22:01:18 CST (+0800)` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 今日复核到的唯一 `2026-06-06` 批次时间戳如下:
+    - `2026-06-06 00:00:13 CST (+0800)`
+    - `2026-06-06 01:02:04 CST (+0800)`
+    - `2026-06-06 02:03:12 CST (+0800)`
+    - `2026-06-06 03:05:40 CST (+0800)`
+    - `2026-06-06 04:05:02 CST (+0800)`
+    - `2026-06-06 05:05:47 CST (+0800)`
+    - `2026-06-06 06:07:45 CST (+0800)`
+    - `2026-06-06 07:10:37 CST (+0800)`
+    - `2026-06-06 08:08:46 CST (+0800)`
+    - `2026-06-06 09:10:25 CST (+0800)`
+    - `2026-06-06 10:13:48 CST (+0800)`
+    - `2026-06-06 11:14:05 CST (+0800)`
+    - `2026-06-06 11:15:06 CST (+0800)`
+    - `2026-06-06 11:17:00 CST (+0800)`
+    - `2026-06-06 12:17:20 CST (+0800)`
+    - `2026-06-06 13:17:03 CST (+0800)`
+    - `2026-06-06 14:17:09 CST (+0800)`
+    - `2026-06-06 15:17:41 CST (+0800)`
+    - `2026-06-06 16:18:30 CST (+0800)`
+    - `2026-06-06 18:21:08 CST (+0800)`
+    - `2026-06-06 19:23:08 CST (+0800)`
+    - `2026-06-06 20:25:37 CST (+0800)`
+    - `2026-06-06 21:25:11 CST (+0800)`
+  - 上述批次结果均为 `新增 0，修改 0，删除 0`。
+  - 其中 `2026-06-06 10:13:48 CST (+0800)`、`11:14:05 CST (+0800)`、`11:15:06 CST (+0800)`、`11:17:00 CST (+0800)` 与 `12:17:20 CST (+0800)` 仅涉及旧快照归一化或 blocked-write sibling closeout；对应对象都是早于基线的镜像文档 `~/.codex/skills/github-nightly-sync-20260531-run2/docs/automation/{github-sync-status.md,skill-change-monitor.md}`，不是新的 custom-skill 行为。
+- 已完成的 Windows 补全:
+  - 无新增转译项。
+  - 已明确记录今天为 no-op：复核的所有 `2026-06-06` 批次都没有新增或修改任何需要 Windows 专属补齐的 PowerShell 启动器、路径处理、命令包装器、快捷键差异说明、Windows 文档或配套仓库资产。
+  - 已复核今天出现的旧快照归一化 / closeout 条目，确认它们只是在结算早于基线的镜像日志文档，不构成新的 Mac-only 功能变化；现有 Windows 说明与启动器仍然足够。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-06` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机仍未发现 `pwsh`，因此本轮没有执行 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、现有 Windows 文档 / 启动器检查，以及今天所有批次均为零变更这一事实。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-06 22:03:10 CST (+0800)`，今天新增到监控文档里的条目全部为零变更或旧快照归一化 / closeout 记录，没有新的待转译行为；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-07 22:02:43 CST (+0800)
+
+- 处理时间:
+  - `2026-06-07 22:02:43 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-06 22:03:10 CST (+0800)` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 本轮复核到的唯一新增时间戳如下:
+    - `2026-06-06 22:26:05 CST (+0800)`
+    - `2026-06-06 23:27:55 CST (+0800)`
+    - `2026-06-07 00:28:53 CST (+0800)`
+    - `2026-06-07 01:31:08 CST (+0800)`
+    - `2026-06-07 02:30:58 CST (+0800)`
+    - `2026-06-07 03:31:46 CST (+0800)`
+    - `2026-06-07 04:33:59 CST (+0800)`
+    - `2026-06-07 05:34:55 CST (+0800)`
+    - `2026-06-07 06:36:58 CST (+0800)`
+    - `2026-06-07 07:37:01 CST (+0800)`
+    - `2026-06-07 08:38:03 CST (+0800)`
+    - `2026-06-07 09:39:43 CST (+0800)`
+    - `2026-06-07 10:40:54 CST (+0800)`
+    - `2026-06-07 11:43:42 CST (+0800)`
+    - `2026-06-07 12:44:34 CST (+0800)`
+    - `2026-06-07 13:45:48 CST (+0800)`
+    - `2026-06-07 14:47:12 CST (+0800)`
+    - `2026-06-07 14:48:59 CST (+0800)`
+    - `2026-06-07 15:47:40 CST (+0800)`
+    - `2026-06-07 16:49:39 CST (+0800)`
+    - `2026-06-07 17:51:10 CST (+0800)`
+    - `2026-06-07 18:51:37 CST (+0800)`
+    - `2026-06-07 19:53:14 CST (+0800)`
+    - `2026-06-07 19:55:08 CST (+0800)`
+    - `2026-06-07 20:53:44 CST (+0800)`
+    - `2026-06-07 21:55:53 CST (+0800)`
+  - 其中除 `2026-06-07 14:48:59 CST (+0800)` 是 repo-writable closeout / pending 清理说明外，其余批次结果均为 `新增 0，修改 0，删除 0`。
+  - `2026-06-07 14:48:59 CST (+0800)` 只是在写回前再次确认并发 blocked-write sibling 已把本地缓存推进到 `2026-06-07T06:47:17Z`，正式仓库记录仍以 `2026-06-07 14:47:12 CST (+0800)` 的 zero-change entry 为准，不对应新的 custom-skill 行为。
+- 已完成的 Windows 补全:
+  - 无新增转译项。
+  - 已明确记录今天为 no-op：自上次 Windows 状态以来，没有新的 custom-skill 行为、PowerShell 启动器、Windows 路径处理、命令包装器、快捷键差异说明、Windows 文档或配套仓库资产进入队列。
+  - 已复核所有新批次都只是 zero-change 扫描或 closeout 对账；它们不引入新的 Mac-only 行为，现有 Windows 说明、PowerShell 包装器和仓库资产继续足够。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-07` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机仍未发现 `pwsh`，因此本轮没有执行 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核，以及今天所有新增批次均为零变更 / closeout 对账这一事实。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-07 21:55:53 CST (+0800)`，今天新增到监控文档里的条目全部为零变更或 closeout 对账记录，没有新的待转译行为；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-10 22:02:00 CST (+0800)
+
+- 处理时间:
+  - `2026-06-10 22:02:00 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-07 22:02:43 CST (+0800)` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 本轮复核到的新增时间戳如下:
+    - `2026-06-07 22:55:51 CST (+0800)`
+    - `2026-06-08 00:58:20 CST (+0800)`
+    - `2026-06-10 19:19:13 CST (+0800)`
+    - `2026-06-10 20:22:48 CST (+0800)`
+    - `2026-06-10 21:21:01 CST (+0800)`
+  - 上述批次结果均为 `新增 0，修改 0，删除 0`。
+  - 其中 `2026-06-10 19:19:13 CST (+0800)` 只是在补吸收 3 个早于有效基线 `2026-06-10T10:17:38.253Z` 的旧快照遗漏文件:
+    - `automation/python-platform-takeover/configs/content-package.2026-05-30-ai-employee-no-rush-repost-before-receipt.kuaishou.yaml`
+    - `automation/python-platform-takeover/configs/hermes-package.2026-06-02-zhihu-live.json`
+    - `automation/python-platform-takeover/run_kuaishou_live.py`
+  - `2026-06-10 20:22:48 CST (+0800)` 只是在补吸收早于有效基线 `2026-06-10T11:22:46Z` 的旧快照遗漏目录:
+    - `.codex/skills/github-nightly-sync-20260531-run2/automation/python-platform-takeover/state/publish-locks/**`
+    - `automation/python-platform-takeover/state/publish-locks/**`
+    - `automation/python-platform-takeover/state/publish-receipts/**`
+    - `automation/python-platform-takeover/social_publisher_takeover.egg-info/**`
+- 已完成的 Windows 补全:
+  - 无新增转译项。
+  - 已明确记录本轮为 no-op：自上次 Windows 状态以来，没有新的 custom-skill 行为进入待转译队列，因此无需新增 PowerShell 启动器、Windows 路径处理、键盘快捷键分叉、命令包装器、Windows 文档或仓库配套资源。
+  - 已复核 `2026-06-07 22:55:51 CST (+0800)` 与 `2026-06-08 00:58:20 CST (+0800)` 两批均为纯 `0 added / 0 modified / 0 deleted` 扫描，不引入新的 Mac-only 行为。
+  - 已复核 `2026-06-10 19:19:13 CST (+0800)` 与 `2026-06-10 20:22:48 CST (+0800)` 仅涉及早于各自有效基线的旧快照遗漏吸收，不代表新的 skill 行为变更，因此不需要补写新的 Windows 入口或说明。
+  - 已复核 `2026-06-10 21:21:01 CST (+0800)` 继续保持实时快照与持久化快照一致，没有新的待转译行为。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-10` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机仍未发现 `pwsh`，因此本轮没有执行 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核，以及本轮新增条目全部为零变更或旧快照归一化这一事实。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-10 21:21:01 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-11 22:00:52 CST (+0800)
+
+- 处理时间:
+  - `2026-06-11 22:00:52 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-10 22:02:00 CST (+0800)` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 本轮复核到的新增时间戳如下:
+    - `2026-06-10 22:19:45 CST (+0800)`
+    - `2026-06-10 23:21:49 CST (+0800)`
+    - `2026-06-11 02:24:36 CST (+0800)`
+    - `2026-06-11 03:23:13 CST (+0800)`
+    - `2026-06-11 04:24:01 CST (+0800)`
+    - `2026-06-11 06:24:24 CST (+0800)`
+    - `2026-06-11 07:24:54 CST (+0800)`
+    - `2026-06-11 08:26:04 CST (+0800)`
+    - `2026-06-11 09:25:23 CST (+0800)`
+    - `2026-06-11 10:26:33 CST (+0800)`
+    - `2026-06-11 11:26:36 CST (+0800)`
+    - `2026-06-11 12:26:20 CST (+0800)`
+    - `2026-06-11 13:26:58 CST (+0800)`
+    - `2026-06-11 16:30:05 CST (+0800)`
+    - `2026-06-11 20:35:30 CST (+0800)`
+    - `2026-06-11 21:36:57 CST (+0800)`
+  - 上述批次结果均为 `新增 0，修改 0，删除 0`。
+  - 其中 `2026-06-11 16:30:05 CST (+0800)` 与 `2026-06-11 21:36:57 CST (+0800)` 只额外记录了 `2471` 项 `mtimeMs <= 1ms` 的时间戳舍入噪音归一化；归一化后正式结果仍为零变更。
+- 已完成的 Windows 补全:
+  - 无新增转译项。
+  - 已明确记录今天为 no-op：自上次 Windows 状态以来，没有新的 custom-skill 行为、PowerShell 启动器、Windows 路径处理、命令包装器、快捷键差异说明、Windows 文档或配套仓库资产进入待补齐队列。
+  - 已复核 `2026-06-10 23:21:49 CST (+0800)` 提到的旧工作树差异仍全部早于有效基线，只是未同步旧批次，不构成新的 Mac-only 行为。
+  - 已复核 `2026-06-11 16:30:05 CST (+0800)` 与 `2026-06-11 21:36:57 CST (+0800)` 的时间戳噪音说明，确认它们仅涉及快照归一化，不需要新增 Windows 入口、文档或仓库资源。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-11` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未修改任何 skill / automation 实现文件；因为 monitor 新增条目全部为零变更或时间戳噪音归一化，所以只追加状态记录。
+  - 本机仍未发现 `pwsh`，因此本轮没有执行 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核，以及所有新增批次都没有新的自定义 skill 行为这一事实。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-11 21:36:57 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-12 22:01:39 CST (+0800)
+
+- 处理时间:
+  - `2026-06-12 22:01:39 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-11 22:00:52 CST (+0800)` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 本轮复核到的新增时间戳如下:
+    - `2026-06-12 00:38:18 CST (+0800)`
+    - `2026-06-12 01:38:32 CST (+0800)`
+    - `2026-06-12 02:37:53 CST (+0800)`
+    - `2026-06-12 03:38:12 CST (+0800)`
+    - `2026-06-12 04:39:05 CST (+0800)`
+    - `2026-06-12 05:38:48 CST (+0800)`
+    - `2026-06-12 06:41:23 CST (+0800)`
+    - `2026-06-12 07:41:34 CST (+0800)`
+    - `2026-06-12 08:42:05 CST (+0800)`
+    - `2026-06-12 09:43:45 CST (+0800)`
+    - `2026-06-12 10:43:55 CST (+0800)`
+    - `2026-06-12 11:45:46 CST (+0800)`
+    - `2026-06-12 12:44:05 CST (+0800)`
+    - `2026-06-12 13:46:17 CST (+0800)`
+    - `2026-06-12 14:47:45 CST (+0800)`
+    - `2026-06-12 14:48:31 CST (+0800)`
+    - `2026-06-12 15:49:22 CST (+0800)`
+    - `2026-06-12 15:50:25 CST (+0800)`
+    - `2026-06-12 16:51:01 CST (+0800)`
+    - `2026-06-12 17:51:46 CST (+0800)`
+    - `2026-06-12 17:53:30 CST (+0800)`
+    - `2026-06-12 18:51:39 CST (+0800)`
+    - `2026-06-12 19:53:36 CST (+0800)`
+    - `2026-06-12 19:54:10 CST (+0800)`
+    - `2026-06-12 20:54:53 CST (+0800)`
+    - `2026-06-12 21:54:40 CST (+0800)`
+  - 上述批次结果均为 `新增 0，修改 0，删除 0`。
+  - 其中 `2026-06-12 15:49:22 CST (+0800)`、`17:53:30 CST (+0800)` 与 `18:51:39 CST (+0800)` 复核到的 `2471` 项 `mtimeMs <= 1ms` 时间戳漂移，`2026-06-12 16:51:01 CST (+0800)` 复核到的同类 `2471` 项噪音，以及 `2026-06-12 19:53:36 CST (+0800)` 复核到的 `634` 项同类噪音，归一化后正式结果仍为零变更。
+- 已完成的 Windows 补全:
+  - 无新增转译项。
+  - 已明确记录今天为 no-op：自上次 Windows 状态以来，没有新的 custom-skill 行为、PowerShell 启动器、Windows 路径处理、命令包装器、快捷键差异说明、Windows 文档或配套仓库资产进入待补齐队列。
+  - 已复核 `2026-06-12` 全部新增 monitor 批次，确认它们仅包含零变更扫描与时间戳噪音归一化，不构成新的 Mac-only 行为，因此无需修改仓库内任何 Windows 脚本、说明或资源。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-12` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未修改任何 skill / automation 实现文件；因为 monitor 新增条目全部为零变更或时间戳噪音归一化，所以只追加状态记录。
+  - 本机仍未发现 `pwsh`，因此本轮没有执行 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核，以及所有新增批次都没有新的自定义 skill 行为这一事实。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-12 21:54:40 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-12 22:02:02 CST (+0800)
+
+- 处理时间:
+  - `2026-06-12 22:02:02 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-11 22:00:52 CST (+0800)` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 本轮复核到的新增时间戳如下:
+    - `2026-06-12 04:39:05 CST (+0800)`
+    - `2026-06-12 09:43:45 CST (+0800)`
+    - `2026-06-12 15:50:25 CST (+0800)`
+    - `2026-06-12 16:51:01 CST (+0800)`
+    - `2026-06-12 17:53:30 CST (+0800)`
+    - `2026-06-12 18:51:39 CST (+0800)`
+    - `2026-06-12 21:54:40 CST (+0800)`
+  - 上述批次结果均为 `新增 0，修改 0，删除 0`。
+  - 其中 `2026-06-12 04:39:05 CST (+0800)` 只额外记录了 `596` 项 `mtimeMs <= 1ms` 的时间戳漂移归一化；`2026-06-12 15:50:25 CST (+0800)`、`2026-06-12 16:51:01 CST (+0800)`、`2026-06-12 17:53:30 CST (+0800)` 与 `2026-06-12 18:51:39 CST (+0800)` 只额外记录了 `2471` 项同类时间戳舍入噪音；归一化后正式结果仍为零变更。
+- 已完成的 Windows 补全:
+  - 无新增转译项。
+  - 已明确记录今天为 no-op：自上次 Windows 状态以来，没有新的 custom-skill 行为、PowerShell 启动器、Windows 路径处理、命令包装器、快捷键差异说明、Windows 文档或配套仓库资产进入待补齐队列。
+  - 已复核今天所有新增 monitor 批次都只是零变更扫描或时间戳噪音归一化，不引入新的 Mac-only 行为，因此无需修改仓库中的 skill / automation 实现、PowerShell 包装脚本或 Windows 文档。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-12` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未修改任何 skill / automation 实现文件；因为 monitor 新增条目全部为零变更或时间戳噪音归一化，所以只追加状态记录。
+  - 本机仍未发现 `pwsh`，因此本轮没有执行 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核，以及所有新增批次都没有新的自定义 skill 行为这一事实。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-12 21:54:40 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-13 22:02:06 CST (+0800)
+
+- 处理时间:
+  - `2026-06-13 22:02:06 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-12 22:02:02 CST (+0800)` 之后追加且此前未写入本状态文件的批次已全部复核。
+  - 本轮复核到的新增时间戳如下:
+    - `2026-06-12 22:55:14 CST (+0800)`
+    - `2026-06-12 23:55:58 CST (+0800)`
+    - `2026-06-13 00:57:03 CST (+0800)`
+    - `2026-06-13 01:58:00 CST (+0800)`
+    - `2026-06-13 02:58:30 CST (+0800)`
+    - `2026-06-13 02:58:41 CST (+0800)`
+    - `2026-06-13 03:59:43 CST (+0800)`
+    - `2026-06-13 05:01:23 CST (+0800)`
+    - `2026-06-13 06:02:22 CST (+0800)`
+    - `2026-06-13 06:03:31 CST (+0800)`
+    - `2026-06-13 07:04:56 CST (+0800)`
+    - `2026-06-13 08:06:26 CST (+0800)`
+    - `2026-06-13 09:06:13 CST (+0800)`
+    - `2026-06-13 09:06:45 CST (+0800)`
+    - `2026-06-13 10:07:27 CST (+0800)`
+    - `2026-06-13 11:09:24 CST (+0800)`
+    - `2026-06-13 12:12:31 CST (+0800)`
+    - `2026-06-13 13:13:34 CST (+0800)`
+    - `2026-06-13 14:14:07 CST (+0800)`
+    - `2026-06-13 14:14:50 CST (+0800)`
+    - `2026-06-13 15:15:15 CST (+0800)`
+    - `2026-06-13 16:16:51 CST (+0800)`
+    - `2026-06-13 17:17:30 CST (+0800)`
+    - `2026-06-13 18:18:55 CST (+0800)`
+    - `2026-06-13 19:20:45 CST (+0800)`
+    - `2026-06-13 20:20:50 CST (+0800)`
+    - `2026-06-13 21:21:58 CST (+0800)`
+  - 上述批次结果均为 `新增 0，修改 0，删除 0`。
+  - 其中若干批次只额外记录了 `mtimeMs <= 1ms` 的时间戳噪音归一化、旧快照遗漏吸收复核或 closeout 对账；归一化后正式结果仍为零变更，不构成新的 custom-skill 行为。
+- 已完成的 Windows 补全:
+  - 无新增转译项。
+  - 已明确记录今天为 no-op：自上次 Windows 状态以来，没有新的 custom-skill 行为、PowerShell 启动器、Windows 路径处理、命令包装器、快捷键差异说明、Windows 文档或配套仓库资产进入待补齐队列。
+  - 已复核 `2026-06-12 22:55:14 CST (+0800)` 至 `2026-06-13 21:21:58 CST (+0800)` 的全部新增 monitor 批次，确认它们仅包含零变更扫描及其附带说明，因此无需修改仓库内任何 Windows 脚本、文档或资源。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-13` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未修改任何 skill / automation 实现文件；因为 monitor 新增条目全部为零变更或附带的归一化 / 对账说明，所以只追加状态记录。
+  - 本机仍未发现 `pwsh`，因此本轮没有执行 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核，以及所有新增批次都没有新的自定义 skill 行为这一事实。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-13 21:21:58 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
