@@ -3321,8 +3321,8 @@
   - `codex/default-python-sync`: 是。已新增提交 `Record June 14 monitor no-op batches`，并将本条执行记录提交为 `Record 2026-06-15 GitHub sync execution`。
   - `codex/windows-version-20260411`: 是。已新增提交 `Record June 14 Windows translation no-op`，并将本条执行记录提交为 `Record 2026-06-15 GitHub sync execution`。
 - 是否已推送:
-  - `codex/default-python-sync`: 是。执行 `git push origin codex/default-python-sync` 后，远端从 `bb4c1ce` 更新到 `5b4be09`。
-  - `codex/windows-version-20260411`: 是。执行 `git push origin codex/windows-version-20260411` 后，远端从 `00a9b4d` 更新到 `87b5f35`。
+  - `codex/default-python-sync`: 是。已推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 是。已推送到 `origin/codex/windows-version-20260411`。
 - 提交信息:
   - `codex/default-python-sync`: `Record June 14 monitor no-op batches`
   - `codex/default-python-sync`: `Record 2026-06-15 GitHub sync execution`
