@@ -1654,12 +1654,13 @@
   - `codex/windows-version-20260411`: 是。包含 `docs/automation/windows-translation-status.md` 追加的 `2026-06-15 22:02:04 CST (+0800)` Windows no-op 完整性结论，以及本条执行记录。
 - 是否已提交:
   - `codex/default-python-sync`: 是。已提交 `Record June 15 monitor no-op sync status`。
-  - `codex/windows-version-20260411`: 是。已提交 `Record June 15 Windows translation sync status`。
+  - `codex/windows-version-20260411`: 是。已提交 `Record June 15 Windows translation no-op` 与 `Record June 15 Windows translation sync status`。
 - 是否已推送:
   - `codex/default-python-sync`: 是。
   - `codex/windows-version-20260411`: 是。
 - 提交信息:
   - `codex/default-python-sync`: `Record June 15 monitor no-op sync status`
+  - `codex/windows-version-20260411`: `Record June 15 Windows translation no-op`
   - `codex/windows-version-20260411`: `Record June 15 Windows translation sync status`
 - 若跳过，说明跳过原因:
   - 未在 `codex/default-python-sync` 混入 `docs/automation/windows-translation-status.md`，因为该文件属于 Windows 转译状态记录，已单独提交到 `codex/windows-version-20260411`。
