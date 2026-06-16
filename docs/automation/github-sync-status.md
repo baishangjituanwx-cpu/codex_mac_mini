@@ -12,6 +12,11 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-06-16 01:00:02 CST (+0800)
+- 检测到新的技能变更批次: 新增 `1`，修改 `2`，删除 `0`。
+- 这批变更集中在 `~/.codex/skills/`；核心是本地 `clash-verge-standard-env` 技能与规则模板新增了微信主程序及其辅助进程直连规则，同时本地 `github-nightly-sync-20260531-run2` 镜像补入了 `dashboard-sync-checks.yml` 工作流。
+- 建议后续执行 GitHub 同步，避免这组本地技能规则扩展和 nightly-sync 镜像工作流新增继续只停留在本地工作区。
+
 - 补记说明:
 - `2026-05-31 15:19:08 CST (+0800)` 的新变更批次在当时已被 monitor 检出，但没有及时追加到本仓库文档；本次先补齐该条，再记录当前新批次。
 
@@ -3304,6 +3309,32 @@
   - 未在 `codex/default-python-sync` 混入 `docs/automation/windows-translation-status.md`，因为该文件属于 Windows 转译状态记录，已单独提交到 `codex/windows-version-20260411`。
   - 未在 `codex/windows-version-20260411` 混入 `docs/automation/skill-change-monitor.md`，因为该文件属于 generic 技能监控日志，已单独提交到 `codex/default-python-sync`。
   - 本轮未发现新的 `automation/python-platform-takeover/**` 功能文件或新的 Windows bridge / deployment 专属实现；实际同步内容仅为自动化状态文档更新。
+
+## 2026-06-17 00:04:23 CST (+0800)
+- 处理时间:
+  - `2026-06-17 00:04:23 CST (+0800)`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的 latest dated entry 为 `2026-06-16 22:01:34 CST (+0800)`。
+  - 该条记录明确写明本轮待同步批次“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含 `docs/automation/skill-change-monitor.md` 新增的 `2026-06-16` 多个零变更监控批次记录、`docs/automation/github-sync-status.md` 顶部新增的 `2026-06-16 01:00:02 CST (+0800)` 同步提示，以及本条执行记录。
+  - `codex/windows-version-20260411`: 是。包含 `docs/automation/windows-translation-status.md` 追加的 `2026-06-16 22:01:34 CST (+0800)` Windows no-op 完整性结论，以及本条执行记录。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。计划提交信息为 `Record June 16 monitor no-op batches`。
+  - `codex/windows-version-20260411`: 是。计划提交信息为 `Record June 16 Windows translation no-op`。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。已推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 是。已推送到 `origin/codex/windows-version-20260411`。
+- 提交信息:
+  - `codex/default-python-sync`: `Record June 16 monitor no-op batches`
+  - `codex/windows-version-20260411`: `Record June 16 Windows translation no-op`
+- 若跳过，说明跳过原因:
+  - 未在 `codex/default-python-sync` 混入 `docs/automation/windows-translation-status.md`，因为该文件属于 Windows 转译状态记录，已单独提交到 `codex/windows-version-20260411`。
+  - 未在 `codex/windows-version-20260411` 混入 `docs/automation/skill-change-monitor.md`，因为该文件属于 generic 技能监控日志，已单独提交到 `codex/default-python-sync`。
+  - 本轮未发现新的 `automation/python-platform-takeover/**` 功能文件，也没有新的 Windows bridge / deployment 专属实现；实际同步内容仅为自动化状态文档更新。
 
 ## 2026-06-16 00:08:33 CST (+0800)
 - 处理时间:
