@@ -12,6 +12,36 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-06-21 00:05:50 CST (+0800)
+- 处理时间:
+  - `2026-06-21 00:05:50 CST (+0800)`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的 latest valid dated entry 为 `2026-06-20 22:01:47 CST (+0800)`。
+  - 文件末尾另保留一条 `2026-06-20 22:01:42 CST (+0800)` 更正文案，但该条已明确声明应以上一条 `2026-06-20 22:01:47 CST (+0800)` 记录为准。
+  - `2026-06-20 22:01:47 CST (+0800)` 记录明确写明本轮待同步批次“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含新的 `skill-center/skills/bysl-image-generation/**` 技能镜像，以及 `docs/automation/{skill-change-monitor,github-sync-status}.md` 的 `2026-06-20` BYSL 监控记录与本条执行记录。
+  - `codex/windows-version-20260411`: 是。包含 `docs/automation/windows-translation-status.md` 新增的 `2026-06-20 22:01:47 CST (+0800)` BYSL Windows 完整性结论、随后保留的 `2026-06-20 22:01:42 CST (+0800)` 更正文案，以及本条执行记录。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。已新增提交 `beaa97c`，提交信息 `Add BYSL image generation skill mirror`；本条执行记录将提交为 `Record 2026-06-21 GitHub sync execution`。
+  - `codex/windows-version-20260411`: 是。已新增提交 `2fd55de`，提交信息 `Record June 20 BYSL Windows translation status`；本条执行记录将提交为 `Record 2026-06-21 GitHub sync execution`。
+- 是否已推送:
+  - `codex/default-python-sync`: 待本条执行记录提交后推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 待本条执行记录提交后推送到 `origin/codex/windows-version-20260411`。
+- 提交信息:
+  - `codex/default-python-sync`: `Add BYSL image generation skill mirror`
+  - `codex/default-python-sync`: `Record 2026-06-21 GitHub sync execution`
+  - `codex/windows-version-20260411`: `Record June 20 BYSL Windows translation status`
+  - `codex/windows-version-20260411`: `Record 2026-06-21 GitHub sync execution`
+- 若跳过，说明跳过原因:
+  - 未在 `codex/default-python-sync` 混入 `docs/automation/windows-translation-status.md`，因为该文件属于 Windows 转译状态记录，已单独提交到 `codex/windows-version-20260411`。
+  - 未在 `codex/windows-version-20260411` 混入 `docs/automation/skill-change-monitor.md`，因为该文件属于 generic 技能监控日志，已单独提交到 `codex/default-python-sync`。
+  - 未把 `skill-center/skills/bysl-image-generation/**` 复制到 `codex/windows-version-20260411`，因为本轮将其视为一组需要保持目录完整性的 generic skill-center 镜像，而不是独立的 Windows bridge / deployment 分支资产。
+  - 本轮未发现新的 `automation/python-platform-takeover/**` 功能文件，也未发现独立于该 skill 镜像之外的 Windows bridge / deployment 专属实现。
+
 ## 2026-06-20 22:27:38 CST (+0800)
 - 检测到新的技能变更批次: 新增 `6`，修改 `0`，删除 `0`。
 - 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/`；核心是仓库新增了 BYSL / 白蚁算力图片生成技能镜像，补齐了 API 参考、签名客户端、Node CLI，以及 Windows `cmd` / PowerShell 启动包装器与镜像版使用说明。
