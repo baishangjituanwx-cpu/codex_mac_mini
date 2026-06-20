@@ -12,6 +12,16 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-06-20 22:27:38 CST (+0800)
+- 检测到新的技能变更批次: 新增 `6`，修改 `0`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/`；核心是仓库新增了 BYSL / 白蚁算力图片生成技能镜像，补齐了 API 参考、签名客户端、Node CLI，以及 Windows `cmd` / PowerShell 启动包装器与镜像版使用说明。
+- 建议后续执行 GitHub 同步，避免这组新的 BYSL 生图 skill-center 镜像资产继续只停留在本地工作区。
+
+## 2026-06-20 13:20:29 CST (+0800)
+- 检测到新的技能变更批次: 新增 `4`，修改 `0`，删除 `0`。
+- 这批变更集中在 `~/.codex/skills/bysl-image-generation/`；核心是本地新增了一个面向 BYSL / 白蚁算力图片生成的完整技能包，包含技能说明、API 参考、Node CLI 和签名客户端实现。
+- 建议后续执行 GitHub 同步，避免这组新的 BYSL 生图技能资产继续只停留在本地工作区。
+
 ## 2026-06-19 00:02:48 CST (+0800)
 - 处理时间:
   - `2026-06-19 00:02:48 CST (+0800)`
@@ -217,6 +227,10 @@
 - 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
 - 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-05-30-ai-employee-no-rush-repost-before-receipt.json`；核心是把上一轮的 Bilibili `submit_stuck_processing` 失败回执推进为 `published_verified_manager_page`，补入 `BV19YVn67ENG`、`published_at` / `verified_at`、声明弹窗修复说明和管理页已发布的核验证据。
 - 建议后续执行 GitHub 同步，避免这条新的发布成功回执与管理页核验结论继续只停留在本地工作区。
+
+## 2026-06-20 13:20:46 CST (+0800)
+- 检测到新的技能变更批次: 新增 `4`，修改 `0`，删除 `0`。
+- 这批变更集中在 `~/.codex/skills/bysl-image-generation/`；核心是本地新增了一个 BYSL 白蚁算力生图技能包，包含技能说明、接口参考、Node CLI 入口和底层客户端，后续应同步到 GitHub 以免这组 BYSL 自动化能力只停留在本地环境。
 
 ## 2026-05-31 14:18:45 CST (+0800)
 - 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
