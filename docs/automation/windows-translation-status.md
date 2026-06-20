@@ -3770,3 +3770,66 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-19 21:14:39 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-20 22:01:47 CST (+0800)
+
+- 处理时间:
+  - `2026-06-20 22:01:47 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-19 22:02:16 CST (+0800)` 状态记录之后追加且此前未写入本状态文件的批次已全部复核。
+  - 本轮覆盖 `2026-06-19 22:13:43 CST (+0800)` 至 `2026-06-20 21:25:45 CST (+0800)` 的 `35` 个唯一 monitor 批次。
+  - 其中仅 `2026-06-20 13:20:29 CST (+0800)` 与 `2026-06-20 13:20:46 CST (+0800)` 为非零变更批次，且两条都指向同一组新增本地 skill `~/.codex/skills/bysl-image-generation/`；其余批次结果均为 `新增 0，修改 0，删除 0`，附带说明仅涉及有效基线推进、持久化快照刷新与 `mtime` 噪声吸收，不构成新的 custom-skill 行为。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/bysl-image-generation`:
+    - 已将 `~/.codex/skills/bysl-image-generation/` 的新增技能镜像补入仓库:
+      - `skill-center/skills/bysl-image-generation/SKILL.md`
+      - `skill-center/skills/bysl-image-generation/references/api.md`
+      - `skill-center/skills/bysl-image-generation/scripts/bysl-api.js`
+      - `skill-center/skills/bysl-image-generation/src/bysl-client.js`
+    - 已补齐 Windows 等价入口:
+      - `skill-center/skills/bysl-image-generation/scripts/bysl-api.ps1`
+      - `skill-center/skills/bysl-image-generation/scripts/bysl-api.cmd`
+    - 已把技能说明扩成 Mac / Windows 双方案，明确:
+      - PowerShell 启动方式和 `ExecutionPolicy Bypass` 示例
+      - Windows 下用 `Set-Content -Encoding utf8` 写 `prompt.md`，避免中文 prompt 经 PowerShell stdin 变成 `?`
+      - Windows 路径建议使用带引号的绝对路径与 `C:/...` 正斜杠写法
+      - 现有 `bysl-api.js` / `bysl-client.js` 逻辑保持 cross-platform，无需额外 Windows 代码分叉
+  - 结论:
+    - 今天新增的 BYSL 生图 skill 现在已经在仓库里具备 Windows 可用文档、PowerShell / CMD 启动器和跨平台 CLI 镜像；其余 `33` 个零变更批次无需额外补丁。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-20` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮已执行 `node --check skill-center/skills/bysl-image-generation/scripts/bysl-api.js` 与 `node --check skill-center/skills/bysl-image-generation/src/bysl-client.js`，均通过。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 PowerShell 语法解析或 Windows 实机回归；当前判断基于仓库脚本、文档路径策略和 monitor 增量复核。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-20 21:25:45 CST (+0800)`，今天 monitor 中新增的 custom-skill 行为已在仓库里补齐 Windows 等价入口与说明；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-20 22:01:42 CST (+0800)
+
+- 更正:
+  - 该条预写入记录遗漏了 `2026-06-20 13:20:29 CST (+0800)` 与 `2026-06-20 13:20:46 CST (+0800)` 的 BYSL skill 非零批次。
+  - 今天的准确 Windows 转译结果以上一条 `2026-06-20 22:01:47 CST (+0800)` 记录为准；下方原始 no-op 文本保留仅用于对账。
+
+- 处理时间:
+  - `2026-06-20 22:01:42 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-19 22:02:16 CST (+0800)` 状态记录之后追加且此前未写入本状态文件的批次已全部复核。
+  - 本轮覆盖 `2026-06-20 00:14:28 CST (+0800)` 至 `2026-06-20 21:25:45 CST (+0800)` 的 `32` 个唯一 monitor 批次；其中 `2026-06-20 14:20:56 CST (+0800)` 在日志中重复出现一次，因此原始记录共 `33` 条。
+  - 上述批次结果均为 `新增 0，修改 0，删除 0`；附带说明仅涉及有效基线推进、整数毫秒 / 子毫秒 `mtime` 噪音归一化、持久化快照刷新与 closeout 对账，不构成新的 custom-skill 行为。
+- 已完成的 Windows 补全:
+  - 无新增转译项。
+  - 已明确记录今天为 no-op：这 `32` 个唯一新增 monitor 批次都没有新的 custom-skill 行为进入待转译队列，因此无需补写新的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或仓库配套资源。
+  - 已复核 `2026-06-20` 当前全部新增 monitor 批次，确认它们均未引入新的 Mac-only skill / automation 行为；Windows 分支今天无需代码、脚本、文档或资源补丁。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-20` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未修改任何 skill / automation 实现文件；因为 monitor 新增条目全部为零变更或附带的时间戳噪音归一化 / 快照对账说明，所以只追加状态记录。
+  - 本机仍未发现 `pwsh`，因此本轮没有执行 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 的增量复核，以及所有新增批次都没有新的自定义 skill 行为这一事实。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-20 21:25:45 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
