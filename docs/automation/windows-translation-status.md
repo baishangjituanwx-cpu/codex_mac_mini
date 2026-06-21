@@ -3833,3 +3833,50 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-20 21:25:45 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-21 22:02:33 CST (+0800)
+
+- 处理时间:
+  - `2026-06-21 22:02:33 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-20 22:01:47 CST (+0800)` 状态记录之后追加且此前未写入本状态文件的批次已全部复核。
+  - 本轮去重后覆盖 `2026-06-20 22:27:38 CST (+0800)` 至 `2026-06-21 21:42:05 CST (+0800)` 的 `36` 个唯一 monitor 批次。
+  - 其中仅 `2026-06-20 22:27:38 CST (+0800)` 为非零变更批次，对应 `skill-center/skills/bysl-image-generation/` 新增 `6` 个镜像文件；其余 `35` 个批次结果均为 `新增 0，修改 0，删除 0`，附带说明只涉及有效基线推进、持久化快照刷新与 `mtime` / `mtimeMs` 噪声吸收，不构成新的 custom-skill 行为。
+- 已完成的 Windows 补全:
+  - 无新增 Windows 补丁文件。
+  - 已复核 `2026-06-20 22:27:38 CST (+0800)` 的 BYSL skill-center 镜像批次，确认该批次落库时已经同时包含 Windows 等价入口与说明，无需额外转译:
+    - `skill-center/skills/bysl-image-generation/scripts/bysl-api.ps1`
+    - `skill-center/skills/bysl-image-generation/scripts/bysl-api.cmd`
+    - `skill-center/skills/bysl-image-generation/SKILL.md` 中的 PowerShell 启动、UTF-8 prompt 写法与 Windows 路径规范
+  - 已复核其余 `35` 个新增 monitor 批次，确认它们均未引入新的 Mac-only skill / automation 行为；今天无需补写新的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或仓库资源。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-20 22:27:38 CST (+0800)` 至 `2026-06-21 21:42:05 CST (+0800)` 之间新增的 monitor 批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未修改任何 skill / automation 实现文件；新增 monitor 条目里唯一的非零批次已经自带 Windows 包装器与文档，其余批次均为零变更，因此只追加状态记录。
+  - 本轮执行了 `node --check skill-center/skills/bysl-image-generation/scripts/bysl-api.js` 与 `node --check skill-center/skills/bysl-image-generation/src/bysl-client.js`，均通过。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 PowerShell 语法解析或 Windows 实机回归；当前判断基于仓库文件核对与 `skill-change-monitor.md` 增量复核。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-21 21:42:05 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-21 22:03:05 CST (+0800)
+
+- 处理时间:
+  - `2026-06-21 22:03:05 CST (+0800)`
+- 输入来源:
+  - 复核 `skill-change-monitor.md` 与 `windows-translation-status.md` 的最新状态，确认上一条 `2026-06-21 22:02:33 CST (+0800)` closeout 已覆盖当前全部未转译批次。
+  - 本轮未发现晚于该 closeout 的新 monitor 批次，也未发现此前漏记的非零 custom-skill 行为。
+- 已完成的 Windows 补全:
+  - 无新增转译项。
+  - 已明确记录今天为 no-op：当前仓库里不需要再补 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或仓库配套资源。
+- 未完成的补全:
+  - 无。
+  - 截至本轮复核，今天没有新增的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此本轮仍未做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 monitor / status 增量复核与现有仓库文件核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-21 22:03:05 CST (+0800)`，今天最新 monitor 记录已全部完成 Windows 对账；Mac 与 Windows 覆盖保持完整。
