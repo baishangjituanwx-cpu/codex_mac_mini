@@ -3981,3 +3981,33 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-24 21:23:44 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-25 22:02:55 CST (+0800)
+
+- 处理时间:
+  - `2026-06-25 22:02:55 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-24 22:02:30 CST (+0800)` 状态记录之后追加且此前未写入本状态文件的批次已全部复核。
+  - 本轮按时间过滤后覆盖 `2026-06-24 22:24:32 CST (+0800)` 至 `2026-06-25 21:49:02 CST (+0800)` 的 `41` 条新增 monitor 记录，去重后为 `39` 个唯一批次。
+  - 其中仅存在重复记录:
+    - `2026-06-25 10:38:16 CST (+0800)` 出现 `3` 次
+  - 上述批次中仅 `2026-06-25 11:38:22 CST (+0800)` 与 `2026-06-25 12:39:18 CST (+0800)` 为同一组 `bysl-image-generation` 新增项的非零记账；其余新增记录结果均为 `新增 0，修改 0，删除 0`，附带说明只涉及有效基线推进、持久化快照刷新与 `mtime` / `mtimeMs` 噪声对账，不构成新的 custom-skill 行为。
+- 已完成的 Windows 补全:
+  - 本轮无需新增转译补丁；`skill-center/skills/bysl-image-generation/` 这组新增文件落仓时已经包含 Windows 可用入口与说明。
+  - 已复核以下新增项，确认它们已经是 Mac / Windows 双覆盖，无需再补 PowerShell、路径处理或文档分叉:
+    - `skill-center/skills/bysl-image-generation/SKILL.md` 已写明 PowerShell 启动方式、UTF-8 中文提示词写法、`C:/...` 路径习惯与 Win/macOS 快速用法。
+    - `skill-center/skills/bysl-image-generation/scripts/bysl-api.ps1` 已提供 PowerShell 启动器，并自动解析 `node` / `node.exe`。
+    - `skill-center/skills/bysl-image-generation/scripts/bysl-api.cmd` 已提供 Windows `cmd` 包装器。
+    - `skill-center/skills/bysl-image-generation/scripts/bysl-api.js` 继续作为共享 CLI，被 `.ps1` / `.cmd` 包装器复用，无需 Windows 分叉实现。
+    - `skill-center/skills/bysl-image-generation/src/bysl-client.js` 与 `references/api.md` 保持跨平台逻辑和接口说明，无需单独 Windows 改写。
+  - 其余 `37` 个唯一 monitor 批次均为零变更，因此没有额外的 Windows 专属文件、快捷键差异说明、命令包装器或仓库资源需要补做。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-24 22:24:32 CST (+0800)` 至 `2026-06-25 21:49:02 CST (+0800)` 之间新增的 monitor 批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未修改任何 skill / automation 实现文件；只追加状态记录，因为唯一的非零批次在落仓时就已自带 Windows 等价入口。
+  - 本机执行了 `node --check skill-center/skills/bysl-image-generation/scripts/bysl-api.js`，结果通过；仍未发现 `pwsh` 或 `powershell`，因此没有做 PowerShell 语法解析或 Windows 实机回归。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-25 21:49:02 CST (+0800)`，唯一新增的 `bysl-image-generation` 批次已经包含 Windows 可用包装器与文档，其余批次均为零变更；Mac 与 Windows 覆盖今日均完整。
