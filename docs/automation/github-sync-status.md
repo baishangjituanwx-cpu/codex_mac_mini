@@ -12,6 +12,33 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-06-26 00:11:37 CST (+0800)
+- 处理时间:
+  - `2026-06-26 00:11:37 CST (+0800)`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的 latest dated entry 为 `2026-06-25 22:02:55 CST (+0800)`。
+  - 该条记录明确写明本轮待同步批次“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。补记当前工作区 `docs/automation/github-sync-status.md` 里尚未进入远端的两条 generic 提醒记录：`2026-06-25 11:38:22 CST (+0800)` 与 `2026-06-25 12:39:18 CST (+0800)`；除此之外，未发现新的 generic 功能文件需要本轮补推。
+  - `codex/windows-version-20260411`: 否。当前工作区的 `docs/automation/windows-translation-status.md` 没有晚于 `origin/codex/windows-version-20260411` 的新条目，本轮仅追加执行记录说明 closeout 结果。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。将提交 `Record BYSL sync reminders and June 26 sync follow-up`。
+  - `codex/windows-version-20260411`: 是。将提交 `Record June 26 Windows sync follow-up`。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。将推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 是。将推送到 `origin/codex/windows-version-20260411`。
+- 提交信息:
+  - `codex/default-python-sync`: `Record BYSL sync reminders and June 26 sync follow-up`
+  - `codex/windows-version-20260411`: `Record June 26 Windows sync follow-up`
+- 若跳过，说明跳过原因:
+  - 未在 `codex/default-python-sync` 重复提交 `skill-center/skills/bysl-image-generation/**`，因为该组 `6` 个文件与 `origin/codex/default-python-sync` 字节级一致。
+  - 未在 `codex/default-python-sync` 覆盖当前工作区里的 `docs/automation/skill-change-monitor.md`，因为目标远端分支已经包含更新的 `2026-06-25` monitor 记录；本轮避免把较旧的本地分支视图回写到远端。
+  - 未在 `codex/windows-version-20260411` 混入 `docs/automation/skill-change-monitor.md`，因为该文件属于 generic 技能监控日志，仍由 `codex/default-python-sync` 维护。
+  - 未在 `codex/windows-version-20260411` 追加新的 Windows bridge / deployment 专属实现或转译状态条目，因为本轮没有晚于远端的 Windows 专属 payload。
+
 ## 2026-06-25 00:02:23 CST (+0800)
 - 处理时间:
   - `2026-06-25 00:02:23 CST (+0800)`
@@ -2029,4 +2056,3 @@
   - 未在 `codex/windows-version-20260411` 混入 `docs/automation/skill-change-monitor.md`，因为该文件属于 generic 技能监控日志，已单独提交到 `codex/default-python-sync`。
   - 本轮未发现新的 `automation/python-platform-takeover/**` 功能文件；default 分支实际同步内容为 generic monitor 文档更新。
   - 本轮未发现新的 Windows bridge / deployment 专属实现文件；Windows 分支实际同步内容为 Windows 转译状态文档更新。
-
