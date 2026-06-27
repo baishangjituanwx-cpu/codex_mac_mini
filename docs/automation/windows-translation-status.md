@@ -3723,7 +3723,6 @@
   - 是。
   - 截至 `2026-06-17 21:31:51 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
 
-
 ## 2026-06-18 22:04:44 CST (+0800)
 
 - 处理时间:
@@ -3929,7 +3928,6 @@
   - 是。
   - 截至 `2026-06-22 21:57:40 CST (+0800)`，最新 monitor 记录没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
 
-
 ## 2026-06-23 22:02:13 CST (+0800)
 
 - 处理时间:
@@ -4034,3 +4032,38 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-26 21:08:34 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-27 22:03:15 CST (+0800)
+
+- 处理时间:
+  - `2026-06-27 22:03:15 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-26 22:02:48 CST (+0800)` 状态记录之后追加且此前未写入本状态文件的批次已全部复核。
+  - 本轮按时间过滤后覆盖 `2026-06-26 22:09:29 CST (+0800)` 至 `2026-06-27 21:31:29 CST (+0800)` 的 `42` 个新增 monitor 批次。
+  - 其中仅 `2026-06-27 17:28:50 CST (+0800)` 与 `2026-06-27 17:29:52 CST (+0800)` 为同一组 `clash-verge-standard-env` 规则模板修改的非零记账；其余 `40` 个批次结果均为 `新增 0，修改 0，删除 0`，附带说明只涉及有效基线推进、持久化快照刷新与 `mtime` / `mtimeMs` 噪声吸收，不构成新的 custom-skill 行为。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`:
+    - 已把 live skill 中新增的 `6` 条 WeChat 相关进程直连规则同步到仓库镜像:
+      - `WeChat`
+      - `WeChatAppEx`
+      - `WeApp`
+      - `wxocr`
+      - `wxplayer`
+      - `wxutility`
+    - 已同步新增的 `2` 条直连域名规则:
+      - `chengzijianzhan.cn`
+      - `huice.com`
+    - 已确认现有 Bilibili、AnyViewer 与 `远程看看` 规则保持不变。
+  - Windows 完整性判断:
+    - 这批新增行为本身就是面向 Windows 微信客户端进程的直连规则补强；Windows 侧直接复用同一份 Clash 规则模板即可，不需要新增 `.ps1`、`.cmd`、路径分叉、快捷键说明或额外 repo 资产。
+    - `skill-center/skills/clash-verge-standard-env/scripts/apply_standard_env.py` 继续消费这份共享 YAML；因此本轮只需要同步规则镜像，不需要改动 Mac 现有实现。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-27` 当前已记录批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 已执行 `diff -u skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml ~/.codex/skills/clash-verge-standard-env/references/rules-enhancement.yaml`，结果为空，说明仓库镜像与 live skill 已对齐。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 PowerShell 语法解析或 Windows 实机回归；当前判断基于规则文件同步结果与 skill-change-monitor 增量复核。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-27 21:31:29 CST (+0800)`，今天唯一新增的 custom-skill 行为已经同步到仓库且可直接覆盖 Windows 场景；Mac 与 Windows 覆盖今日均完整。

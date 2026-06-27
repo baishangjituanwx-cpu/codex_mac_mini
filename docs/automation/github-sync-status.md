@@ -12,6 +12,33 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-06-28 00:06:26 CST (+0800)
+- 处理时间:
+  - `2026-06-28 00:06:26 CST (+0800)`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的 latest dated entry 为 `2026-06-27 22:03:15 CST (+0800)`。
+  - 该条记录明确写明本轮待同步批次“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含 `docs/automation/skill-change-monitor.md` 新增的 `2026-06-25` 至 `2026-06-27` monitor 批次记录、`docs/automation/github-sync-status.md` 新增的 `2026-06-27` 待同步提醒，以及 `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml` 的微信进程 / 域名直连规则镜像更新。
+  - `codex/windows-version-20260411`: 是。包含 `docs/automation/windows-translation-status.md` 新增的 `2026-06-27 22:03:15 CST (+0800)` Windows 完整性结论，以及本条执行记录。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。已提交 `Sync June 27 monitor batches and Clash Verge rule mirror`。
+  - `codex/windows-version-20260411`: 是。已提交 `Record June 27 Windows translation status and June 28 sync execution`。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。已推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 是。已推送到 `origin/codex/windows-version-20260411`。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync June 27 monitor batches and Clash Verge rule mirror`
+  - `codex/windows-version-20260411`: `Record June 27 Windows translation status and June 28 sync execution`
+- 若跳过，说明跳过原因:
+  - 未在 `codex/default-python-sync` 重复提交 `skill-center/skills/bysl-image-generation/**`，因为该组 `6` 个文件已存在于 `origin/codex/default-python-sync` 且当前工作区内容与远端一致。
+  - 未在 `codex/default-python-sync` 混入 `docs/automation/windows-translation-status.md`，因为该文件属于 Windows 转译状态记录，已单独提交到 `codex/windows-version-20260411`。
+  - 未在 `codex/windows-version-20260411` 混入 `docs/automation/skill-change-monitor.md` 或 `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`，因为这些内容属于 generic monitor / skill-center 镜像更新，已单独提交到 `codex/default-python-sync`。
+  - 本轮未发现新的 `automation/python-platform-takeover/**` 功能文件，也未发现新的 Windows bridge / deployment 专属实现文件；Windows 分支实际同步内容为 Windows 转译状态与执行记录更新。
+
 ## 2026-06-27 00:04:38 CST (+0800)
 - 处理时间:
   - `2026-06-27 00:04:38 CST (+0800)`
@@ -1323,6 +1350,7 @@
 - 检测到新的技能变更批次: 新增 10，修改 8，删除 0。
 - 这批变更覆盖 `data-review` / `multi-platform-content-review-skill` 的 Docker 看板导出与账号切片复盘规则、`skill-center/skills/seedance-video-api` 的提示词与真人锁定资料，以及 live `~/.codex/skills/seedance-video-api` 的两份继续演进文档。
 - 仓库内提交批次已存在，但 live Seedance 文档仍有未完全回写镜像的增量；建议后续补一次镜像同步，避免 `~/.codex/skills` 与仓库版本继续漂移。
+
 ## 2026-04-22 12:10:26 CST
 - 检测到新的技能变更批次: 新增 0，修改 749，删除 0。
 - 这批变更主要集中在 `lark-base` 188 files, `lark-sheets` 68 files, `lark-whiteboard` 52 files, `seedance-video-api` 49 files, `python-platform-takeover` 45 files, `lark-task` 36 files, `codex-feishu-bridge-skill` 31 files, `lark-drive` 26 files。
@@ -1590,7 +1618,6 @@
   - 未跳过同步前置检查。
   - 跳过了 `codex/windows-version-20260411` 的新提交与推送，因为当前仓库没有新的 Windows 专属 bridge / deployment payload 需要上传。
 
-
 ## 2026-04-29 11:23:53 CST
 - 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
 - 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-28-platform-execution-early-zero-not-failure.json`；核心是为同一 `04-28 early-zero-not-failure` campaign 追加多平台管理页扫描结论，明确近似旧条不能算当前包成功，并把视频号推进到 `published`、微博推进到 `published`、快手推进到 `under_review`。
@@ -1600,7 +1627,6 @@
 - 检测到新的技能变更批次: 新增 1，修改 0，删除 0。
 - 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-27-platform-execution-verify-before-republish.json`；核心是为“先核验发布状态，再决定修旧条还是重发”campaign 新增一份多平台执行回执，记录微博 / 头条已发布、快手 / 小红书审核中、视频号权限阻断，以及其余平台待处理状态。
 - 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的最新 campaign 执行留痕继续只停留在本地工作区。
-
 
 ## 2026-04-27 15:47:05 CST
 - 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
@@ -1757,7 +1783,6 @@
 - 检测到新的技能变更批次: 新增 `0`，修改 `323`，删除 `0`。
 - 这批变更以批量 mirror refresh 为主：`skills/` 与 `skill-center/skills/` 同步刷新了大量自定义 skill 文档 / reference / asset，同时 `automation/python-platform-takeover` 刷新了 README、campaign 配置、publish receipt 台账，以及 `publish_receipts.py` 的 receipt 兼容与阻断逻辑测试。
 - 建议后续执行 GitHub 同步，并优先评估是否把 `skill-center` 批量镜像刷新与 `python-platform-takeover` 行为性变更拆成独立提交，降低后续 review 成本。
-
 
 ## 2026-05-01 23:41:36 CST
 - 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
