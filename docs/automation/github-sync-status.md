@@ -12,6 +12,55 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-06-28 00:06:26 CST (+0800)
+- 处理时间:
+  - `2026-06-28 00:06:26 CST (+0800)`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的 latest dated entry 为 `2026-06-27 22:03:15 CST (+0800)`。
+  - 该条记录明确写明本轮待同步批次“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含 `docs/automation/skill-change-monitor.md` 新增的 `2026-06-25` 至 `2026-06-27` monitor 批次记录、`docs/automation/github-sync-status.md` 新增的 `2026-06-27` 待同步提醒，以及 `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml` 的微信进程 / 域名直连规则镜像更新。
+  - `codex/windows-version-20260411`: 是。包含 `docs/automation/windows-translation-status.md` 新增的 `2026-06-27 22:03:15 CST (+0800)` Windows 完整性结论，以及本条执行记录。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。已提交 `Sync June 27 monitor batches and Clash Verge rule mirror`。
+  - `codex/windows-version-20260411`: 是。已提交 `Record June 27 Windows translation status and June 28 sync execution`。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。已推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 是。已推送到 `origin/codex/windows-version-20260411`。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync June 27 monitor batches and Clash Verge rule mirror`
+  - `codex/windows-version-20260411`: `Record June 27 Windows translation status and June 28 sync execution`
+- 若跳过，说明跳过原因:
+  - 未在 `codex/default-python-sync` 重复提交 `skill-center/skills/bysl-image-generation/**`，因为该组 `6` 个文件已存在于 `origin/codex/default-python-sync` 且当前工作区内容与远端一致。
+  - 未在 `codex/default-python-sync` 混入 `docs/automation/windows-translation-status.md`，因为该文件属于 Windows 转译状态记录，已单独提交到 `codex/windows-version-20260411`。
+  - 未在 `codex/windows-version-20260411` 混入 `docs/automation/skill-change-monitor.md` 或 `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`，因为这些内容属于 generic monitor / skill-center 镜像更新，已单独提交到 `codex/default-python-sync`。
+  - 本轮未发现新的 `automation/python-platform-takeover/**` 功能文件，也未发现新的 Windows bridge / deployment 专属实现文件；Windows 分支实际同步内容为 Windows 转译状态与执行记录更新。
+
+## 2026-06-27 22:33:12 CST (+0800)
+- 发现新的技能变更批次，后续应同步到 GitHub。
+- 变更来源: `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`
+- 变更性质: `modified`
+- 同步提示: `clash-verge-standard-env` 的 skill-center 镜像规则模板新增 6 条 WeChat 进程直连规则和 2 条域名直连规则，后续同步时应连同镜像副本一起推送。
+
+## 2026-06-27 22:33:00 CST (+0800)
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`；核心是仓库 `skill-center` 镜像补齐了微信主程序及辅助进程直连规则，并新增 `chengzijianzhan.cn`、`huice.com` 直连域名，使其与本地 `~/.codex/skills` 当前模板重新对齐。
+- 建议后续执行 GitHub 同步，避免这次 `clash-verge-standard-env` 规则镜像更新继续只停留在本地工作区。
+
+## 2026-06-27 17:29:52 CST (+0800)
+- 发现新的技能变更批次，后续应同步到 GitHub。
+- 变更来源: `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/references/rules-enhancement.yaml`
+- 变更性质: `modified`
+- 同步提示: `clash-verge-standard-env` 的 Clash Verge 规则增强模板新增 6 条 WeChat 进程直连规则和 2 条域名直连规则，镜像副本尚未同步，后续推送时应一并带上。
+
+## 2026-06-27 17:28:50 CST (+0800)
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/references/rules-enhancement.yaml`；核心是本地 `clash-verge-standard-env` 规则模板新增了微信主程序及辅助进程的直连规则，并补入 `chengzijianzhan.cn`、`huice.com` 直连域名。
+- 建议后续执行 GitHub 同步，避免这组本地 Clash Verge 技能规则扩展继续只停留在 `~/.codex/skills`。
+
 ## 2026-06-27 00:04:38 CST (+0800)
 - 处理时间:
   - `2026-06-27 00:04:38 CST (+0800)`
@@ -2124,6 +2173,7 @@
 - 检测到新的技能变更批次: 新增 10，修改 8，删除 0。
 - 这批变更覆盖 `data-review` / `multi-platform-content-review-skill` 的 Docker 看板导出与账号切片复盘规则、`skill-center/skills/seedance-video-api` 的提示词与真人锁定资料，以及 live `~/.codex/skills/seedance-video-api` 的两份继续演进文档。
 - 仓库内提交批次已存在，但 live Seedance 文档仍有未完全回写镜像的增量；建议后续补一次镜像同步，避免 `~/.codex/skills` 与仓库版本继续漂移。
+
 ## 2026-04-22 12:10:26 CST
 - 检测到新的技能变更批次: 新增 0，修改 749，删除 0。
 - 这批变更主要集中在 `lark-base` 188 files, `lark-sheets` 68 files, `lark-whiteboard` 52 files, `seedance-video-api` 49 files, `python-platform-takeover` 45 files, `lark-task` 36 files, `codex-feishu-bridge-skill` 31 files, `lark-drive` 26 files。
@@ -2391,7 +2441,6 @@
   - 未跳过同步前置检查。
   - 跳过了 `codex/windows-version-20260411` 的新提交与推送，因为当前仓库没有新的 Windows 专属 bridge / deployment payload 需要上传。
 
-
 ## 2026-04-29 11:23:53 CST
 - 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
 - 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-28-platform-execution-early-zero-not-failure.json`；核心是为同一 `04-28 early-zero-not-failure` campaign 追加多平台管理页扫描结论，明确近似旧条不能算当前包成功，并把视频号推进到 `published`、微博推进到 `published`、快手推进到 `under_review`。
@@ -2401,7 +2450,6 @@
 - 检测到新的技能变更批次: 新增 1，修改 0，删除 0。
 - 这批变更集中在 `automation/python-platform-takeover/state/publish-receipts/2026-04-27-platform-execution-verify-before-republish.json`；核心是为“先核验发布状态，再决定修旧条还是重发”campaign 新增一份多平台执行回执，记录微博 / 头条已发布、快手 / 小红书审核中、视频号权限阻断，以及其余平台待处理状态。
 - 建议后续执行 GitHub 同步，避免 `python-platform-takeover` 的最新 campaign 执行留痕继续只停留在本地工作区。
-
 
 ## 2026-04-27 15:47:05 CST
 - 检测到新的技能变更批次: 新增 0，修改 1，删除 0。
@@ -2558,7 +2606,6 @@
 - 检测到新的技能变更批次: 新增 `0`，修改 `323`，删除 `0`。
 - 这批变更以批量 mirror refresh 为主：`skills/` 与 `skill-center/skills/` 同步刷新了大量自定义 skill 文档 / reference / asset，同时 `automation/python-platform-takeover` 刷新了 README、campaign 配置、publish receipt 台账，以及 `publish_receipts.py` 的 receipt 兼容与阻断逻辑测试。
 - 建议后续执行 GitHub 同步，并优先评估是否把 `skill-center` 批量镜像刷新与 `python-platform-takeover` 行为性变更拆成独立提交，降低后续 review 成本。
-
 
 ## 2026-05-01 23:41:36 CST
 - 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
@@ -2729,7 +2776,6 @@
 - 这批变更集中在 `seedance-video-api`、`social-publish-automation` 与 `automation/python-platform-takeover/README.md`；核心是把 handoff-only 包明确收紧为“只校验和建 receipt、不进入实发”，并要求把 `data-review` 证据与最终观众可见的 prompt / 对白 / 标题 / 发布文案分层保存，避免内部复盘措辞直接进入下游发布内容。
 - 建议后续执行 GitHub 同步，避免这组最新的 handoff 约束和 Seedance 创意分层规范继续只停留在本地工作区。
 
-
 ## 2026-05-06 11:30:38 CST
 - 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
 - 这批变更集中在 `automation/python-platform-takeover/state/hermes-handoff/latest.json`；核心是把 `2026-05-05-ai-employee-audit-wait-no-republish` 的 handoff `scope` 从 `video_focused` 扩成 `all_platforms`，让同一 campaign 的 latest 指针从视频优先切换到全平台发布范围。
@@ -2759,7 +2805,6 @@
 - 检测到新的技能变更批次: 新增 `9`，修改 `0`，删除 `0`。
 - 这批变更仍集中在 `skill-center/skills/xyq-nest-skill/scripts/`；核心是仓库镜像新增共享 `invoke_xyq_script.ps1`、四个 `.ps1` Python 包装器和四个 `.cmd` 转调入口，重新补齐 `xyq-nest-skill` 的 Windows Shell 启动链路。
 - 建议后续执行 GitHub 同步，避免这组刚恢复的 `xyq-nest-skill` Windows launcher 继续只停留在本地工作区。
-
 
 ## 2026-05-13 09:23:20 CST
 - 检测到新的技能变更批次: 新增 `4`，修改 `2`，删除 `0`。
@@ -2815,6 +2860,7 @@
 - 检测到新的技能变更批次: 新增 `3`，修改 `1`，删除 `0`。
 - 这批变更集中在 `automation/python-platform-takeover/`；核心是为 `2026-05-14-ai-employee-no-metrics-no-judgment` 新建全平台 content package、Hermes handoff JSON 和初始 receipt 台账，并把 `state/hermes-handoff/latest.json` 切到这条“先补作品行、数据、对照，再判断内容差”的新 campaign。
 - 建议后续执行 GitHub 同步，避免这批新的 `python-platform-takeover` handoff / receipt 初始化记录继续只停留在本地工作区。
+
 ## 2026-05-14 13:59:46 CST
 - 检测到新的技能变更批次: 新增 `8`，修改 `1`，删除 `0`。
 - 这批变更继续集中在 `automation/python-platform-takeover`；核心是为 campaign `2026-05-14-ai-employee-no-metrics-no-judgment` 新增了知乎、抖音、快手、百家号、Bilibili、头条、视频号与微博 8 个平台锁文件，其中视频号与 Bilibili 已写成管理后台核验发布，微博则只落了 pre-publish 锁，同时把同名 receipt 从初始化骨架扩成含 7 个平台发布/审核结果、素材指纹、管理页核验与飞书通知元数据的完整台账。

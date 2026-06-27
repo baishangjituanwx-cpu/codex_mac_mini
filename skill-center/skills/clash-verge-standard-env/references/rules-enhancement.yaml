@@ -1,9 +1,17 @@
 # Profile Enhancement Rules Template for Clash Verge
 
 prepend:
+  - PROCESS-NAME,WeChat,🎯 全球直连
+  - PROCESS-NAME,WeChatAppEx,🎯 全球直连
+  - PROCESS-NAME,WeApp,🎯 全球直连
+  - PROCESS-NAME,wxocr,🎯 全球直连
+  - PROCESS-NAME,wxplayer,🎯 全球直连
+  - PROCESS-NAME,wxutility,🎯 全球直连
   - PROCESS-NAME,远程看看,🎯 全球直连
   - DOMAIN-SUFFIX,aomeisoftware.com,🎯 全球直连
   - DOMAIN-SUFFIX,anyviewer.com,🎯 全球直连
+  - DOMAIN-SUFFIX,chengzijianzhan.cn,🎯 全球直连
+  - DOMAIN-SUFFIX,huice.com,🎯 全球直连
   - DOMAIN-SUFFIX,bilibili.com,🎯 全球直连
   - DOMAIN-SUFFIX,b23.tv,🎯 全球直连
   - DOMAIN-SUFFIX,hdslb.com,🎯 全球直连
