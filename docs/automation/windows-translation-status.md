@@ -4067,3 +4067,41 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-27 21:31:29 CST (+0800)`，今天唯一新增的 custom-skill 行为已经同步到仓库且可直接覆盖 Windows 场景；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-06-28 22:02:39 CST (+0800)
+
+- 处理时间:
+  - `2026-06-28 22:02:39 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-27 22:03:15 CST (+0800)` 状态记录之后追加且此前未写入本状态文件的批次已全部复核。
+  - 本轮按时间过滤后覆盖 `2026-06-27 22:33:00 CST (+0800)` 至 `2026-06-28 21:48:53 CST (+0800)` 的 `45` 条新增 monitor 记录，去重后为 `43` 个唯一批次。
+  - 其中存在重复记录:
+    - `2026-06-27 23:34:32 CST (+0800)` 出现 `2` 次
+    - `2026-06-28 07:39:27 CST (+0800)` 出现 `2` 次
+  - 其中仅 `2026-06-27 22:33:00 CST (+0800)` 与 `2026-06-27 22:33:12 CST (+0800)` 为同一组 `clash-verge-standard-env` 规则模板镜像同步的非零记账；其余 `41` 个唯一批次结果均为 `新增 0，修改 0，删除 0`，附带说明只涉及有效基线推进、持久化快照刷新，以及 `mtime` / `mtimeMs` 噪声吸收或 no-op 复核，不构成新的 custom-skill 行为。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`:
+    - 已复核 `2026-06-27 22:33` 这一组新增同步项，确认仓库镜像已经包含面向 Windows 微信客户端的 `6` 条直连进程规则:
+      - `WeChat`
+      - `WeChatAppEx`
+      - `WeApp`
+      - `wxocr`
+      - `wxplayer`
+      - `wxutility`
+    - 已确认同批次新增的 `2` 条直连域名规则已在仓库镜像中落地:
+      - `chengzijianzhan.cn`
+      - `huice.com`
+    - 已执行 `diff -u skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml ~/.codex/skills/clash-verge-standard-env/references/rules-enhancement.yaml`，结果为空，说明仓库镜像与 live skill 保持对齐。
+  - Windows 完整性判断:
+    - 这批新增行为本身就是 Windows 场景的 Clash 规则增强；Windows 侧直接复用同一份共享 YAML 即可，不需要额外新增 `.ps1`、`.cmd`、路径分叉、快捷键说明或其他 repo 资产。
+    - `2026-06-28` 的全部新增 monitor 批次都是零变更或重复 / 基线推进记录，因此今天无需补写新的 PowerShell 启动器、Windows 文档、命令包装器或资源文件。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-27 22:33:00 CST (+0800)` 至 `2026-06-28 21:48:53 CST (+0800)` 之间新增的 monitor 批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未修改任何 skill / automation 实现文件；唯一的非零批次在仓库中已经具备 Windows 可用结果，因此只追加状态记录。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 的增量复核、规则文件内容核对与镜像对齐检查。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-28 21:48:53 CST (+0800)`，最新 monitor 条目里唯一的非零 custom-skill 批次已经在仓库镜像中完成 Windows 可用同步，其余批次均为 no-op；Mac 与 Windows 覆盖今日均完整。
