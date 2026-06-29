@@ -12,6 +12,50 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-06-30 00:06:45 CST (+0800)
+- 处理时间:
+  - `2026-06-30 00:06:45 CST (+0800)`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的 latest dated entry 为 `2026-06-29 22:02:05 CST (+0800)`。
+  - 该条记录明确写明本轮待同步批次“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含 `docs/automation/skill-change-monitor.md` 新增的 `2026-06-28` 至 `2026-06-29` monitor 批次记录、`docs/automation/github-sync-status.md` 新增的 `2026-06-29` 待同步提醒与本条执行记录，以及 `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml` 新增的 `pinduoduo.com` 直连规则镜像更新。
+  - `codex/windows-version-20260411`: 是。包含 `docs/automation/windows-translation-status.md` 新增的 `2026-06-29 22:02:05 CST (+0800)` Windows 完整性结论。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。已提交 `Sync June 29 monitor history and Clash Verge rule mirror`。
+  - `codex/windows-version-20260411`: 是。已提交 `Record June 29 Windows translation status`。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。已推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 是。已推送到 `origin/codex/windows-version-20260411`。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync June 29 monitor history and Clash Verge rule mirror`
+  - `codex/windows-version-20260411`: `Record June 29 Windows translation status`
+- 若跳过，说明跳过原因:
+  - 未提交 `.codex-tmp-skill-monitor-20260626-blocks.md`，因为它是本地临时分析文件，不属于需要同步的仓库资产。
+  - 未在 `codex/default-python-sync` 重复提交 `skill-center/skills/bysl-image-generation/**`，因为该组 `6` 个文件已存在于 `origin/codex/default-python-sync` 且当前工作区内容与远端一致。
+  - 未把当前工作区里较旧的 `docs/automation/skill-change-monitor.md` 或 `docs/automation/github-sync-status.md` 整体覆盖到默认分支；本轮只把本地缺失于远端的新增日期记录合并到远端最新历史上，避免回退远端文档。
+  - 未在 `codex/default-python-sync` 混入 `docs/automation/windows-translation-status.md`，因为该文件属于 Windows 转译状态记录，已单独提交到 `codex/windows-version-20260411`。
+  - 未在 `codex/windows-version-20260411` 混入 `docs/automation/skill-change-monitor.md`、`docs/automation/github-sync-status.md` 或 `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`，因为这些内容属于 generic monitor / sync ledger / skill-center 镜像更新，继续由 `codex/default-python-sync` 维护。
+  - 本轮未发现新的 `automation/python-platform-takeover/**` 功能文件，也未发现新的 Windows bridge / deployment 专属实现文件；实际同步内容是 generic 监控历史、Clash Verge 规则镜像补丁，以及 Windows 转译状态更新。
+
+## 2026-06-29 22:23:59 CST (+0800)
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`；核心是仓库 `skill-center` 镜像补齐了微信主程序及辅助进程直连规则，并新增 `chengzijianzhan.cn`、`huice.com`、`pinduoduo.com` 直连域名。
+- 建议后续执行 GitHub 同步，避免这次 `clash-verge-standard-env` 规则镜像更新继续只停留在本地工作区。
+
+## 2026-06-29 13:02:44 CST (+0800)
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/references/rules-enhancement.yaml`；核心是本地 `clash-verge-standard-env` 规则模板继续扩展直连域名白名单，新增了 `pinduoduo.com` 直连规则。
+- 建议后续执行 GitHub 同步，避免这次 `clash-verge-standard-env` 本地规则扩展继续只停留在 `~/.codex/skills`。
+
+## 2026-06-29 22:24:33 CST (+0800)
+- 检测到新的技能变更批次: 新增 `0`，修改 `1`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`；核心是仓库镜像版 `clash-verge-standard-env` 规则模板新增了微信桌面端相关进程直连规则，并补入 `chengzijianzhan.cn`、`huice.com`、`pinduoduo.com` 三个直连域名。
+- 建议后续执行 GitHub 同步，避免这次 `clash-verge-standard-env` 仓库镜像规则扩展继续只停留在本地工作区。
+
 ## 2026-06-29 00:03:06 CST (+0800)
 - 处理时间:
   - `2026-06-29 00:03:06 CST (+0800)`
