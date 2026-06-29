@@ -12,6 +12,34 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-06-30 00:07:32 CST (+0800)
+- 处理时间:
+  - `2026-06-30 00:07:32 CST (+0800)`
+- 前置检查:
+  - `docs/automation/windows-translation-status.md` 的 latest dated entry 为 `2026-06-29 22:02:05 CST (+0800)`。
+  - 该条记录明确写明本轮待同步批次“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。`origin/codex/default-python-sync` 已在本轮复核期间先行包含 `Sync June 29 monitor history and Clash Verge rule mirror` 与 `2026-06-30 00:06:45 CST (+0800)` 执行记录，因此本轮不重复创建新的 generic 提交。
+  - `codex/windows-version-20260411`: 是。包含 `docs/automation/windows-translation-status.md` 新增的 `2026-06-29 22:02:05 CST (+0800)` Windows 完整性结论，以及本条执行记录。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。远端已提交 `Sync June 29 monitor history and Clash Verge rule mirror`。
+  - `codex/windows-version-20260411`: 是。已提交 `Record June 29 Windows translation status and June 30 sync execution`。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。`origin/codex/default-python-sync` 已包含上述 generic 提交与 `2026-06-30 00:06:45 CST (+0800)` 执行记录。
+  - `codex/windows-version-20260411`: 是。已推送到 `origin/codex/windows-version-20260411`。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync June 29 monitor history and Clash Verge rule mirror`
+  - `codex/windows-version-20260411`: `Record June 29 Windows translation status and June 30 sync execution`
+- 若跳过，说明跳过原因:
+  - 未在 `codex/default-python-sync` 重复提交 `skill-center/skills/bysl-image-generation/**`，因为该组 `6` 个文件与远端字节级一致。
+  - 未在 `codex/default-python-sync` 回写当前工作区的 `docs/automation/skill-change-monitor.md` 或 `docs/automation/github-sync-status.md`，因为远端默认分支已经先落下更完整的 generic 历史与执行记录，本轮避免重复或回退远端账本。
+  - 未提交 `.codex-tmp-skill-monitor-20260626-blocks.md`，因为它是本地临时分析文件，不属于需要同步的仓库资产。
+  - 未在 `codex/windows-version-20260411` 混入 `docs/automation/skill-change-monitor.md`、`docs/automation/github-sync-status.md` 的 generic 提醒块或 `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`，因为这些内容继续由 `codex/default-python-sync` 维护。
+  - 本轮未发现新的 `automation/python-platform-takeover/**` 功能文件，也未发现新的 Windows bridge / deployment 专属实现文件；Windows 分支实际同步内容为 Windows 转译状态与执行记录更新。
+
 ## 2026-06-29 00:04:32 CST (+0800)
 - 处理时间:
   - `2026-06-29 00:04:32 CST (+0800)`

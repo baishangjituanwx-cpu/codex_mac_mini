@@ -4132,3 +4132,28 @@
   - 是。
   - 截至 `2026-06-28 21:48:53 CST (+0800)`，最新 monitor 条目里唯一的非零 custom-skill 批次已经在仓库镜像中完成 Windows 可用同步，其余批次均为 no-op；Mac 与 Windows 覆盖今日均完整。
 
+## 2026-06-29 22:02:05 CST (+0800)
+
+- 处理时间:
+  - `2026-06-29 22:02:05 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-28 22:02:39 CST (+0800)` 状态记录之后追加且此前未写入本状态文件的批次已全部复核。
+  - 本轮按时间过滤后覆盖 `2026-06-29 00:49:51 CST (+0800)` 至 `2026-06-29 21:23:12 CST (+0800)` 的 `31` 条新增 monitor 批次。
+  - 其中仅 `2026-06-29 13:01:27 CST (+0800)` / `2026-06-29 13:02:44 CST (+0800)` 这一组 `clash-verge-standard-env` 规则模板修改为非零记账；其余 `29` 条批次结果均为 `新增 0，修改 0，删除 0`，附带说明只涉及有效基线推进、持久化快照刷新，以及 `mtime` / `mtimeMs` 漂移吸收，不构成新的 custom-skill 行为。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`:
+    - 已把 live skill 中新增的 `DOMAIN-SUFFIX,pinduoduo.com,🎯 全球直连` 同步到仓库镜像。
+    - 已保留此前同步的 WeChat 相关进程直连规则、AnyViewer、橙子建站、灰测与 Bilibili 规则，不改动 Mac / 通用实现。
+  - Windows 完整性判断:
+    - 这批新增行为仍是共享的 Clash 规则模板增强；Windows 侧直接复用同一份 YAML 即可，不需要新增 `.ps1`、`.cmd`、路径分叉、快捷键说明或其他 repo 资产。
+    - `skill-center/skills/clash-verge-standard-env/scripts/apply_standard_env.py` 继续消费这份共享规则模板，因此本轮只需要同步规则镜像。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-29` 当前已记录批次没有遗留的 Windows 转译缺口；今天唯一新增的 custom-skill 行为已经补齐到仓库镜像。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 已执行 `diff -u skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml ~/.codex/skills/clash-verge-standard-env/references/rules-enhancement.yaml`；补丁前仅缺少 `pinduoduo.com` 规则，补丁后应恢复对齐。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 的增量复核与规则文件内容核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-29 21:23:12 CST (+0800)`，今天唯一新增的 custom-skill 行为已经同步到仓库且可直接覆盖 Windows 场景，其余批次均为 no-op；Mac 与 Windows 覆盖今日均完整。
