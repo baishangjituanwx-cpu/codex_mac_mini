@@ -11,6 +11,111 @@
 - 阻塞原因
 - 是否达到“Mac / Windows 版本都齐全”
 
+## 2026-06-30 22:04:10 CST (+0800)
+
+- 处理时间:
+  - `2026-06-30 22:04:10 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-29 22:02:05 CST (+0800)` 状态记录之后追加且此前未写入本状态文件的批次已全部复核。
+  - 本轮按时间过滤后覆盖 `2026-06-29 22:23:59 CST (+0800)` 至 `2026-06-30 21:40:23 CST (+0800)` 的 `40` 条新增 monitor 记录。
+  - 其中仅 `2026-06-29 22:23:59 CST (+0800)` 与 `2026-06-29 22:24:33 CST (+0800)` 为同一组 `clash-verge-standard-env` 规则模板镜像同步的非零记账；其余 `38` 条记录没有新的待转译项，其中 `37` 条明确为 `新增 0，修改 0，删除 0`，`1` 条 `2026-06-30 07:29:11 CST (+0800)` 为缺少 `结果汇总` 段落的残缺 no-op 记录。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`:
+    - 已复核仓库镜像当前包含这组新增的 `6` 条 Windows 微信相关进程直连规则:
+      - `WeChat`
+      - `WeChatAppEx`
+      - `WeApp`
+      - `wxocr`
+      - `wxplayer`
+      - `wxutility`
+    - 已复核同批次补入的 `3` 条直连域名规则已经在仓库镜像中落地:
+      - `chengzijianzhan.cn`
+      - `huice.com`
+      - `pinduoduo.com`
+    - 已执行 `diff -u skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml ~/.codex/skills/clash-verge-standard-env/references/rules-enhancement.yaml`，结果为空，说明仓库镜像与 live skill 保持对齐。
+  - Windows 完整性判断:
+    - 这组新增行为本身就是面向 Windows 微信客户端进程和共享域名白名单的 Clash 规则增强；Windows 侧直接复用同一份共享 YAML 即可，不需要额外新增 `.ps1`、`.cmd`、路径分叉、快捷键说明或其他 repo 资产。
+    - `skill-center/skills/clash-verge-standard-env/scripts/apply_standard_env.py` 继续消费这份共享规则模板，因此本轮无需新增 Windows 补丁文件。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-29 22:23:59 CST (+0800)` 至 `2026-06-30 21:40:23 CST (+0800)` 之间新增的 monitor 批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未修改任何 skill / automation 实现文件；唯一的非零批次在仓库中已经具备 Windows 可用结果，因此只追加状态记录。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 的增量复核、规则文件内容核对与仓库镜像对齐检查。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-30 21:40:23 CST (+0800)`，上次状态之后唯一新增的 custom-skill 行为已经在仓库镜像中具备 Windows 可直接复用的共享实现，其余批次均为 no-op；Mac 与 Windows 覆盖今日均完整。
+## 2026-06-30 22:03:34 CST (+0800)
+
+- 处理时间:
+  - `2026-06-30 22:03:34 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-29 22:02:05 CST (+0800)` 状态记录之后追加且此前未写入本状态文件的批次已全部复核。
+  - 本轮按时间过滤后覆盖 `2026-06-29 22:24:33 CST (+0800)` 至 `2026-06-30 21:39:55 CST (+0800)` 的 `23` 个新增 monitor 批次。
+  - 其中仅 `2026-06-29 22:24:33 CST (+0800)` 为非零变更批次；其余 `22` 个批次结果均为 `新增 0，修改 0，删除 0`，附带说明只涉及有效基线推进、持久化快照刷新，以及 `mtime` / `mtimeMs` 漂移吸收，不构成新的 custom-skill 行为。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`:
+    - 已复核 `2026-06-29 22:24:33 CST (+0800)` 记录的仓库镜像规则扩展，确认当前文件已包含 Windows 微信客户端相关的 `6` 条直连进程规则:
+      - `WeChat`
+      - `WeChatAppEx`
+      - `WeApp`
+      - `wxocr`
+      - `wxplayer`
+      - `wxutility`
+    - 已确认同批次涉及的 `3` 条直连域名规则都已在仓库镜像中落地:
+      - `chengzijianzhan.cn`
+      - `huice.com`
+      - `pinduoduo.com`
+    - 已执行 `diff -u skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml ~/.codex/skills/clash-verge-standard-env/references/rules-enhancement.yaml`，结果为空，说明仓库镜像与 live skill 保持对齐；本轮无需再新增 `.ps1`、`.cmd`、路径分叉、快捷键说明或其他 Windows 专属资源。
+  - Windows 完整性判断:
+    - 这批新增行为本身就是 Windows 场景的 Clash 规则增强；Windows 侧继续直接复用同一份共享 YAML 即可，不需要改动 Mac 或通用实现。
+    - `2026-06-30` 的其余 `22` 个新增 monitor 批次均为 no-op，因此今天没有额外的 PowerShell 启动器、Windows 文档、命令包装器或仓库资产需要补做。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-29 22:24:33 CST (+0800)` 至 `2026-06-30 21:39:55 CST (+0800)` 之间新增的 monitor 批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未修改任何 skill / automation 实现文件；唯一的非零批次在仓库中已经具备 Windows 可用结果，因此只追加状态记录。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 的增量复核与规则文件内容核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-30 21:39:55 CST (+0800)`，唯一的非零 custom-skill 批次已经在仓库镜像中具备可直接覆盖 Windows 的共享规则结果，其余批次均为 no-op；Mac 与 Windows 覆盖今日均完整。
+## 2026-06-30 22:03:34 CST (+0800)
+
+- 处理时间:
+  - `2026-06-30 22:03:34 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-06-29 22:02:05 CST (+0800)` 状态记录之后追加且此前未写入本状态文件的批次已全部复核。
+  - 本轮按时间过滤后覆盖 `2026-06-29 22:24:33 CST (+0800)` 至 `2026-06-30 21:39:55 CST (+0800)` 的 `23` 个新增 monitor 批次。
+  - 其中仅 `2026-06-29 22:24:33 CST (+0800)` 为非零变更批次；其余 `22` 个批次结果均为 `新增 0，修改 0，删除 0`，附带说明只涉及有效基线推进、持久化快照刷新，以及 `mtime` / `mtimeMs` 漂移吸收，不构成新的 custom-skill 行为。
+- 已完成的 Windows 补全:
+  - `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`:
+    - 已复核 `2026-06-29 22:24:33 CST (+0800)` 记录的仓库镜像规则扩展，确认当前文件已包含 Windows 微信客户端相关的 `6` 条直连进程规则:
+      - `WeChat`
+      - `WeChatAppEx`
+      - `WeApp`
+      - `wxocr`
+      - `wxplayer`
+      - `wxutility`
+    - 已确认同批次涉及的 `3` 条直连域名规则都已在仓库镜像中落地:
+      - `chengzijianzhan.cn`
+      - `huice.com`
+      - `pinduoduo.com`
+    - 已执行 `diff -u skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml ~/.codex/skills/clash-verge-standard-env/references/rules-enhancement.yaml`，结果为空，说明仓库镜像与 live skill 保持对齐；本轮无需再新增 `.ps1`、`.cmd`、路径分叉、快捷键说明或其他 Windows 专属资源。
+  - Windows 完整性判断:
+    - 这批新增行为本身就是 Windows 场景的 Clash 规则增强；Windows 侧继续直接复用同一份共享 YAML 即可，不需要改动 Mac 或通用实现。
+    - `2026-06-30` 的其余 `22` 个新增 monitor 批次均为 no-op，因此今天没有额外的 PowerShell 启动器、Windows 文档、命令包装器或仓库资产需要补做。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-06-29 22:24:33 CST (+0800)` 至 `2026-06-30 21:39:55 CST (+0800)` 之间新增的 monitor 批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未修改任何 skill / automation 实现文件；唯一的非零批次在仓库中已经具备 Windows 可用结果，因此只追加状态记录。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 的增量复核与规则文件内容核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-06-30 21:39:55 CST (+0800)`，唯一的非零 custom-skill 批次已经在仓库镜像中具备可直接覆盖 Windows 的共享规则结果，其余批次均为 no-op；Mac 与 Windows 覆盖今日均完整。
 ## 2026-06-29 22:02:05 CST (+0800)
 
 - 处理时间:
@@ -36,7 +141,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-29 21:23:12 CST (+0800)`，今天唯一新增的 custom-skill 行为已经同步到仓库且可直接覆盖 Windows 场景，其余批次均为 no-op；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-04-12 22:11:51 CST
 
 - 处理时间:
@@ -95,7 +199,6 @@
   - 本机未执行 Windows PowerShell 实机运行；当前验证仅覆盖仓库内静态检查和 Node 语法检查。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。基于 `2026-04-12` 目前已记录的仓库自定义 skill / automation 变更，Mac 与 Windows 覆盖已补齐。
-
 ## 2026-04-13 22:02:44 CST
 
 - 处理时间:
@@ -164,7 +267,6 @@
   - 本机未执行 Windows PowerShell 实机回归；本轮验证基于仓库文件核对，以及 `automation/python-platform-takeover/.venv/bin/python -m pytest tests/test_browser_controller.py tests/test_platform_base.py tests/test_env.py tests/test_doctor.py -q`，结果 `11 passed`。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。基于 `2026-04-13` 当前已记录的仓库自定义 skill / automation 变更，Mac 与 Windows 覆盖已补齐；今天无需新增 Windows 补丁文件。
-
 ## 2026-04-14 22:01:35 CST
 
 - 处理时间:
@@ -214,7 +316,6 @@
   - 本机未发现 `pwsh`，因此未做 PowerShell 语法解析或 Windows 实机回归；当前判断基于仓库文件核对与 JS 静态检查。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。基于 `2026-04-14` 当前已记录的仓库自定义 skill / automation 变更，Mac 与 Windows 覆盖已补齐；今天无需新增 Windows 专属补丁。
-
 ## 2026-04-15 22:03:43 CST
 
 - 处理时间:
@@ -246,7 +347,6 @@
   - 本轮未修改任何 skill 或 automation 实现文件；仅追加状态记录并创建自动化记忆文件。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。基于 `2026-04-15` 当前已记录的 skill-change-monitor 批次，Mac 与 Windows 覆盖今日均完整；今天明确没有需要补做的 Windows 转译。
-
 ## 2026-04-16 22:01:50 CST
 
 - 处理时间:
@@ -307,7 +407,6 @@
   - 本机未发现 `pwsh` 或 `powershell`，因此未做 PowerShell 语法解析或 Windows 实机回归；本轮判断基于仓库文件核对与 Node 静态检查。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。基于 `2026-04-16` 当前已记录的 skill-change-monitor 批次，Mac 与 Windows 覆盖已补齐；今天除状态登记外不需要新增 Windows 代码或文档补丁。
-
 ## 2026-04-17 22:06:25 CST
 
 - 处理时间:
@@ -394,7 +493,6 @@
   - 本机仍未发现 `pwsh` 或 `powershell` 可用于本地语法解析，因此本轮没有做 Windows PowerShell 实机运行；Windows 判断基于仓库脚本、路径策略和 Python 静态校验。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。基于 `2026-04-17` 当前已记录的 skill-change-monitor 批次，Mac 与 Windows 覆盖已补齐；今天新增的 skill 行为已经在仓库中具备 Windows 可用入口或明确的跨平台结论。
-
 ## 2026-04-18 22:16:43 CST
 
 - 处理时间:
@@ -482,7 +580,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 否。
   - `seedance-video-api` 与 `playwright` 的本轮 Windows 补全已完成，但 `2026-04-18 20:23:49 CST` 的 23 个新增 Lark skill 镜像仍未进入仓库，所以今天的仓库级 Mac / Windows 覆盖还没有全部齐平。
-
 ## 2026-04-19 22:04:23 CST
 
 - 处理时间:
@@ -542,7 +639,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-19 22:04:23 CST`，今天 monitor 中新增或修改的自定义 skill 行为已在仓库中补齐；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-04-20 22:02:21 CST
 
 - 处理时间:
@@ -585,7 +681,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-20 22:02:21 CST`，今天 monitor 中新增或修改的自定义 skill / automation 行为已完成 Windows 可用性复核；需要同步的仓库镜像已补齐，其余新增项无需额外 Windows 分叉。
-
 ## 2026-04-20 22:03:47 CST
 
 - 处理时间:
@@ -612,7 +707,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-20 22:03:47 CST`，今天 monitor 中新增或修改的自定义 skill / automation 行为已全部完成 Windows 可用性复核；本次运行没有发现新的待补 Windows 缺口。
-
 ## 2026-04-21 22:03:34 CST
 
 - 处理时间:
@@ -663,7 +757,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-21 22:03:34 CST`，今天 monitor 中新增或修改的自定义 skill / automation 行为已完成 Windows 可用性复核；需要同步的仓库镜像已补齐，其余新增项无需额外 Windows 分叉。
-
 ## 2026-04-21 22:18:06 CST
 
 - 处理时间:
@@ -729,7 +822,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-21 22:18:06 CST`，今天 monitor 中新增或修改的自定义 skill / automation 行为已全部补齐到仓库；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-04-22 22:02:51 CST
 
 - 处理时间:
@@ -790,7 +882,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-22 22:02:51 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧复核；Mac 与 Windows 覆盖今日均完整，且今天明确没有需要新增的 Windows 专属补丁。
-
 ## 2026-04-23 22:02:33 CST
 
 - 处理时间:
@@ -833,7 +924,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-23 22:02:33 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧复核；Windows 入口说明已补齐，本轮没有需要新增的 Windows 专属脚本。
-
 ## 2026-04-23 22:03:49 CST
 
 - 处理时间:
@@ -885,7 +975,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-23 22:03:49 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已经完成 Windows 侧补齐或复核；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-04-24 22:05:25 CST
 
 - 处理时间:
@@ -927,7 +1016,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-24 22:05:25 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧补齐；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-04-24 22:04:37 CST
 
 - 处理时间:
@@ -991,7 +1079,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-24 22:04:37 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧补齐或复核；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-04-25 22:03:06 CST
 
 - 处理时间:
@@ -1050,7 +1137,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-25 22:03:06 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧补齐或复核；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-04-25 22:05:00 CST
 
 - 处理时间:
@@ -1092,7 +1178,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-25 22:05:00 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为仍已完成 Windows 侧补齐或复核；本次运行没有发现新的待补 Windows 缺口。
-
 ## 2026-04-26 22:04:26 CST
 
 - 处理时间:
@@ -1145,7 +1230,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-26 22:04:26 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧补齐或复核；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-04-26 22:03:33 CST
 
 - 处理时间:
@@ -1202,7 +1286,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-26 22:03:33 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧补齐或复核；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-04-27 22:01:59 CST
 
 - 处理时间:
@@ -1238,7 +1321,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-27 22:01:59 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧补齐或复核；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-04-27 22:00:00 CST
 
 - 处理时间:
@@ -1278,7 +1360,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-27 22:00:00 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为都已具备现成的 Windows 等价覆盖；今天明确没有新的 Windows 缺口需要补写。
-
 ## 2026-04-28 22:05:38 CST
 
 - 处理时间:
@@ -1330,7 +1411,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-28 22:05:38 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧补齐或复核；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-04-28 22:04:52 CST
 
 - 处理时间:
@@ -1376,7 +1456,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-28 22:04:52 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为都已具备现成的 Windows 等价覆盖；今天明确没有新的 Windows 缺口需要补写。
-
 ## 2026-04-29 22:05:00 CST
 
 - 处理时间:
@@ -1432,7 +1511,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-29 22:05:00 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧补齐或复核；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-04-29 22:06:48 CST
 
 - 处理时间:
@@ -1485,7 +1563,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-29 22:06:48 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧补齐或复核；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-04-30 21:33:00 CST
 
 - 处理时间:
@@ -1530,7 +1607,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-30 21:33:00 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为已完成 Windows 侧补齐或复核；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-04-30 22:03:01 CST
 
 - 处理时间:
@@ -1569,7 +1645,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-30 22:03:01 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为都已具备现成的 Windows 等价覆盖；今天明确没有新的 Windows 缺口需要补写。
-
 ## 2026-04-30 22:05:10 CST
 
 - 处理时间:
@@ -1605,7 +1680,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-04-30 22:05:10 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都已补齐。
-
 ## 2026-05-01 22:02:50 CST
 
 - 处理时间:
@@ -1641,7 +1715,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-01 22:02:50 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天明确没有需要补写的 Windows 专属转译。
-
 ## 2026-05-01 22:05:55 CST
 
 - 处理时间:
@@ -1689,7 +1762,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-01 22:05:55 CST`，`skill-change-monitor.md` 里 `2026-04-30 22:05:10 CST` 之后新增且此前未入账的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都已补齐；今天剩余的新增内容只有共享 receipt 留痕，没有新的 Windows 缺口。
-
 ## 2026-05-02 22:02:44 CST
 
 - 处理时间:
@@ -1721,7 +1793,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-02 22:02:44 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都已补齐；今天唯一需要显式补写的 Windows 缺口是 `Seedance` 默认女性配角 `asset://...` 引用在 Windows handoff 中不得被误改成本地路径，现已记录到仓库文档。
-
 ## 2026-05-03 22:02:46 CST
 
 - 处理时间:
@@ -1755,7 +1826,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-03 22:02:46 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天明确没有需要新增补写的 Windows 专属转译。
-
 ## 2026-05-03 22:01:56 CST
 
 - 处理时间:
@@ -1789,7 +1859,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-03 22:01:56 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天明确没有需要补写的 Windows 专属转译。
-
 ## 2026-05-04 22:05:18 CST
 
 - 处理时间:
@@ -1834,7 +1903,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-04 22:05:18 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天明确没有需要新增补写的 Windows 专属转译。
-
 ## 2026-05-05 22:05:02 CST
 
 - 处理时间:
@@ -1872,7 +1940,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-05 22:05:02 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天唯一需要显式补写的 Windows 缺口是 `seedance-video-api` 新增证据分层规则的 Windows handoff 说明，现已补齐。
-
 ## 2026-05-05 22:07:56 CST
 
 - 处理时间:
@@ -1916,7 +1983,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-05 22:07:56 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天新增的 Windows 补齐点主要是 Seedance review-evidence 交接约束和 handoff-only package 的禁止实发口径。
-
 ## 2026-05-06 22:02:23 CST
 
 - 处理时间:
@@ -1962,7 +2028,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-06 22:02:23 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天新增的 Windows 补齐点是 `hermes-feishu-operator` 的仓库镜像、PowerShell / `.cmd` 发送入口，以及对应的 Windows 验证与快捷键说明。
-
 ## 2026-05-06 22:08:37 CST
 
 - 处理时间:
@@ -2019,7 +2084,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-06 22:08:37 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天新增的 Windows 补齐点是 `hermes-feishu-operator` 的仓库镜像、PowerShell 发送入口，以及 handoff fingerprint / lock / latest-pointer 规则的 Windows 文档落点。
-
 ## 2026-05-07 22:02:42 CST
 
 - 处理时间:
@@ -2054,7 +2118,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-07 22:02:42 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天没有需要新增实现的 Windows 专属补丁。
-
 ## 2026-05-07 22:04:55 CST
 
 - 处理时间:
@@ -2089,7 +2152,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-07 22:04:55 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天补齐的 Windows 落点是 `xiaoyunque-source-video` 的仓库镜像提示词结构、返工矩阵和 `C:/...` 路径说明。
-
 ## 2026-05-08 22:05:19 CST
 
 - 处理时间:
@@ -2128,7 +2190,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-08 22:05:19 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天补齐的 Windows 落点是 `xyq-nest-skill` 的 PowerShell 运行入口，以及 `xiaoyunque-source-video` API-only 文档里的 Windows 命令和 `C:/...` 路径说明。
-
 ## 2026-05-08 22:06:55 CST
 
 - 处理时间:
@@ -2174,7 +2235,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-08 22:06:55 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天补齐的 Windows 落点包括 Seedance 客户试用 SOP 的 Windows handoff 规则、`xyq-nest-skill` 的 PowerShell / `.cmd` 入口，以及 API-only `xiaoyunque-source-video` 的 Windows 路径与命令说明。
-
 ## 2026-05-09 22:03:27 CST
 
 - 处理时间:
@@ -2214,7 +2274,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-09 22:03:27 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天补齐的 Windows 落点是 `xyq-nest-skill` 仓库镜像被删除后缺失的 PowerShell / `.cmd` launcher 资产。
-
 ## 2026-05-12 22:03:49 CST
 
 - 处理时间:
@@ -2244,7 +2303,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-12 22:03:49 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天需要记录的是“无新增转译项”，不是新增 Windows 补丁文件。
-
 ## 2026-05-13 22:02:41 CST
 
 - 处理时间:
@@ -2275,7 +2333,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-13 22:02:41 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天需要明确记录的是“新增的是共享发布留痕数据，不是新的 Windows 转译工作”。
-
 ## 2026-05-14 22:03:15 CST
 
 - 处理时间:
@@ -2309,7 +2366,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-14 22:03:15 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天需要记录的是“新增的是共享 campaign 配置与发布台账，不是新的 Windows 转译工作”。
-
 ## 2026-05-15 22:02:05 CST
 
 - 处理时间:
@@ -2342,7 +2398,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-15 22:02:05 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天需要明确记录的是“新增的是共享 campaign 配置与发布台账，不是新的 Windows 转译工作”。
-
 ## 2026-05-16 22:02:52 CST
 
 - 处理时间:
@@ -2376,7 +2431,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-16 22:02:52 CST`，今天 monitor 中新增或修改且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天需要明确记录的是“新增的是共享 campaign 配置与发布台账，不是新的 Windows 转译工作”。
-
 ## 2026-05-17 22:03:11 CST
 
 - 处理时间:
@@ -2410,7 +2464,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-17 22:03:11 CST`，今天 monitor 中新增、修改或删除且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天需要明确记录的是“新增的是共享 campaign 配置与发布台账推进，删除的是旧台账清理，不是新的 Windows 转译工作”。
-
 ## 2026-05-18 22:01:32 CST
 
 - 处理时间:
@@ -2451,7 +2504,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-18 22:01:32 CST`，今天 monitor 中新增、修改或删除且落到当前仓库的自定义 skill / supporting automation 行为，Mac 与 Windows 覆盖都完整；今天需要明确记录的是“新增的是共享 campaign 配置与发布台账推进，不是新的 Windows 转译工作”。
-
 ## 2026-05-19 22:02:44 CST
 
 - 处理时间:
@@ -2494,7 +2546,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-19 22:02:44 CST`，今天 monitor 中新增、修改或删除且落到当前仓库的自定义 skill / supporting automation 变更为零；Mac 与 Windows 覆盖今日均完整，并已明确记录“今天没有需要补做的 Windows 转译”。
-
 ## 2026-05-20 22:03:51 CST
 
 - 处理时间:
@@ -2524,7 +2575,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-20 22:03:51 CST`，今天 monitor 中新增或修改且落到当前仓库的内容都是共享 publish lock / receipt 台账推进；Mac 与 Windows 覆盖都完整，并已明确记录“今天没有需要补做的 Windows 转译”。
-
 ## 2026-05-21 22:01:16 CST
 
 - 处理时间:
@@ -2567,7 +2617,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-21 22:01:16 CST`，今天 monitor 中新增、修改或删除且落到当前仓库的自定义 skill / supporting automation 变更为零；Mac 与 Windows 覆盖今日均完整，并已明确记录“今天没有需要补做的 Windows 转译”。
-
 ## 2026-05-22 22:03:25 CST
 
 - 处理时间:
@@ -2615,7 +2664,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-22 22:03:25 CST`，今天 monitor 中唯一需要转译的自定义 skill 变更已同步到仓库并补齐 Windows 可用说明；同日其余非零项仅为 automation 状态台账，不存在额外 Windows 缺口。
-
 ## 2026-05-23 22:03:21 CST
 
 - 处理时间:
@@ -2659,7 +2707,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-23 22:03:21 CST`，今天 monitor 中唯一的非零批次只是共享 campaign 配置与台账推进，不需要新增 Windows 分叉；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-05-24 22:03:25 CST
 
 - 处理时间:
@@ -2715,7 +2762,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-24 22:03:25 CST`，今天 monitor 中唯一需要补 Windows 落点的是 `social-publish-automation` 的飞书通知入口；现已补入 PowerShell / `.cmd` wrapper 并更新文档，其余非零项均为共享台账或打包产物，不存在额外 Windows 缺口。
-
 ## 2026-05-25 22:01:13 CST
 
 - 处理时间:
@@ -2766,7 +2812,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-25 22:01:13 CST`，最新 monitor 批次里的 Windows 落点已经由仓库现有 `social-publish-automation` 文档和 `send_feishu_notify.{ps1,cmd}` 覆盖；今天无需新增 Windows 补丁文件。
-
 ## 2026-05-26 22:03:51 CST
 
 - 处理时间:
@@ -2818,7 +2863,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-26 22:03:51 CST`，今天新增的 handoff、receipt、publish-lock 批次都已被仓库现有 Windows 流程覆盖；今天明确没有需要补做的新 Windows 转译。
-
 ## 2026-05-27 22:04:11 CST
 
 - 处理时间:
@@ -2874,7 +2918,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-27 22:04:11 CST`，今天新增的 Zhihu / Bilibili / 微信视频号 / 微博 / 快手 publish lock 与 receipt 状态批次都已被仓库现有 Windows 流程覆盖；今天明确没有需要补做的新 Windows 转译。
-
 ## 2026-05-28 22:01:41 CST (+0800)
 
 - 处理时间:
@@ -2910,7 +2953,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-28 22:01:41 CST (+0800)`，今天 monitor 新增批次全部为零变更，Mac 与 Windows 覆盖今日均完整；今天明确没有需要补做的新 Windows 转译。
-
 ## 2026-05-29 22:02:48 CST (+0800)
 
 - 处理时间:
@@ -2950,7 +2992,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-29 22:02:48 CST (+0800)`，今天 monitor 新增批次全部为零变更，Mac 与 Windows 覆盖今日均完整；今天明确没有需要补做的新 Windows 转译。
-
 ## 2026-05-30 22:02:19 CST (+0800)
 
 - 处理时间:
@@ -3001,7 +3042,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-30 22:02:19 CST (+0800)`，今天 monitor 新增批次里只有一组 handoff / receipt 配置资产变更，且它已经被仓库现有 Windows 路径改写规则和 handoff-only 处理流程覆盖；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-05-31 22:02:23 CST (+0800)
 
 - 处理时间:
@@ -3064,7 +3104,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-05-31 22:02:23 CST (+0800)`，今天新增的 mirror 批次没有带来新的待转译行为，三次 receipt 更新也都是跨平台数据留痕；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-01 22:02:04 CST (+0800)
 
 - 处理时间:
@@ -3126,7 +3165,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-01 22:02:04 CST (+0800)`，今天新增的两组非零批次都只是 handoff / receipt 运行态资产，未引入新的 Mac-only 自定义 skill 行为；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-02 22:04:42 CST (+0800)
 
 - 处理时间:
@@ -3199,7 +3237,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-02 22:04:42 CST (+0800)`，今天唯一需要新增落库的 Windows 补全是 `juliang-lead-sync` 仓库镜像；其余新增批次均为现有 Windows 规则已覆盖的 handoff / lock / receipt 运行态资产，Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-03 22:02:46 CST (+0800)
 
 - 处理时间:
@@ -3255,7 +3292,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-03 22:02:46 CST (+0800)`，今天新增到监控文档里的自定义 skill 相关行为没有新的 Windows 缺口；`juliang-lead-sync` 仍由现有 Windows 说明完整覆盖，其余新增项只是镜像日志或零变更批次，Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-04 22:02:54 CST (+0800)
 
 - 处理时间:
@@ -3314,7 +3350,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-04 22:02:54 CST (+0800)`，今天唯一的非零批次只是 `social_publisher_takeover.egg-info` 打包元数据；Windows 侧已补充控制台入口说明，其余行为都由现有跨平台实现和 PowerShell 包装器覆盖，Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-05 22:01:18 CST (+0800)
 
 - 处理时间:
@@ -3359,7 +3394,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-05 22:01:18 CST (+0800)`，今天新增到监控文档里的条目全部为零变更或快照归一化记录，没有新的待转译行为；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-06 22:03:10 CST (+0800)
 
 - 处理时间:
@@ -3405,7 +3439,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-06 22:03:10 CST (+0800)`，今天新增到监控文档里的条目全部为零变更或旧快照归一化 / closeout 记录，没有新的待转译行为；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-07 22:02:43 CST (+0800)
 
 - 处理时间:
@@ -3454,7 +3487,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-07 21:55:53 CST (+0800)`，今天新增到监控文档里的条目全部为零变更或 closeout 对账记录，没有新的待转译行为；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-10 22:02:00 CST (+0800)
 
 - 处理时间:
@@ -3492,7 +3524,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-10 21:21:01 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-11 22:00:52 CST (+0800)
 
 - 处理时间:
@@ -3533,7 +3564,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-11 21:36:57 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-12 22:01:39 CST (+0800)
 
 - 处理时间:
@@ -3583,7 +3613,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-12 21:54:40 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-12 22:02:02 CST (+0800)
 
 - 处理时间:
@@ -3614,7 +3643,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-12 21:54:40 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-13 22:02:06 CST (+0800)
 
 - 处理时间:
@@ -3665,7 +3693,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-13 21:21:58 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-15 22:02:04 CST (+0800)
 
 - 处理时间:
@@ -3688,7 +3715,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-15 21:56:24 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-16 22:01:34 CST (+0800)
 
 - 处理时间:
@@ -3711,7 +3737,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-16 21:10:52 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-17 22:02:38 CST (+0800)
 
 - 处理时间:
@@ -3748,7 +3773,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-17 21:31:51 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-18 22:04:44 CST (+0800)
 
 - 处理时间:
@@ -3772,7 +3796,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-18 21:51:41 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-19 22:02:16 CST (+0800)
 
 - 处理时间:
@@ -3795,7 +3818,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-19 21:14:39 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-20 22:01:47 CST (+0800)
 
 - 处理时间:
@@ -3831,7 +3853,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-20 21:25:45 CST (+0800)`，今天 monitor 中新增的 custom-skill 行为已在仓库里补齐 Windows 等价入口与说明；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-20 22:01:42 CST (+0800)
 
 - 更正:
@@ -3858,7 +3879,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-20 21:25:45 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-21 22:02:33 CST (+0800)
 
 - 处理时间:
@@ -3885,7 +3905,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-21 21:42:05 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-21 22:03:05 CST (+0800)
 
 - 处理时间:
@@ -3905,7 +3924,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-21 22:03:05 CST (+0800)`，今天最新 monitor 记录已全部完成 Windows 对账；Mac 与 Windows 覆盖保持完整。
-
 ## 2026-06-22 22:03:13 CST (+0800)
 
 - 处理时间:
@@ -3931,7 +3949,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-22 21:57:40 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-22 22:01:38 CST (+0800)
 
 - 处理时间:
@@ -3953,7 +3970,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-22 21:57:40 CST (+0800)`，最新 monitor 记录没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-23 22:02:13 CST (+0800)
 
 - 处理时间:
@@ -3979,7 +3995,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-23 21:09:46 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-24 22:02:30 CST (+0800)
 
 - 处理时间:
@@ -4005,7 +4020,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-24 21:23:44 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-25 22:02:55 CST (+0800)
 
 - 处理时间:
@@ -4035,7 +4049,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-25 21:49:02 CST (+0800)`，唯一新增的 `bysl-image-generation` 批次已经包含 Windows 可用包装器与文档，其余批次均为零变更；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-26 22:02:48 CST (+0800)
 
 - 处理时间:
@@ -4058,7 +4071,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-26 21:08:34 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-27 22:03:15 CST (+0800)
 
 - 处理时间:
@@ -4093,7 +4105,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-27 21:31:29 CST (+0800)`，今天唯一新增的 custom-skill 行为已经同步到仓库且可直接覆盖 Windows 场景；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-28 22:02:39 CST (+0800)
 
 - 处理时间:
@@ -4131,7 +4142,6 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-28 21:48:53 CST (+0800)`，最新 monitor 条目里唯一的非零 custom-skill 批次已经在仓库镜像中完成 Windows 可用同步，其余批次均为 no-op；Mac 与 Windows 覆盖今日均完整。
-
 ## 2026-06-29 22:02:05 CST (+0800)
 
 - 处理时间:
