@@ -12,6 +12,908 @@
 - 变更摘要
 - 如果有新建 `.py` 文件，单独列出路径、用途、以及与哪个 skill 相关
 
+## 2026-07-02 22:09:51 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-02T13:07:53.677Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 在本轮扫描前已持有 `runUtc = 2026-07-02T13:12:22Z`；它晚于任务消息里的 `Last run`，因此本轮继续沿用这份更晚的持久化内容级快照作为有效基线，避免把上一轮已落盘的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 以 `last-summary.json` 中 `currentFiles` 的持久化内容级快照为基线，重建四个监控根目录的当前完整文件树，并逐文件核对 `path + size + sha256 + mtimeMs`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`，且没有新的纯 `mtimeMs` 元数据漂移
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。相对 `runUtc = 2026-07-02T13:12:22Z` 的有效内容级基线，没有新的 custom skill 或 supporting automation 内容变更。
+
+### 删除文件
+- 无。相对有效基线没有新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 虽然工作区当前仍可见较早批次留下的 `bysl-image-generation` 未跟踪文件和 `clash-verge-standard-env` 规则文件修改，但它们已经存在于 `last-summary.json` 的持久化快照里，因此不属于本轮“自上次运行以来”的新增变更。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 19:08:41 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-02T10:06:52.916Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 在本轮扫描前已持有 `runUtc = 2026-07-02T10:08:36Z`；它晚于任务消息里的 `Last run`，因此本轮继续沿用这份更晚的持久化内容级快照作为有效基线，避免把上一轮已落盘的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 以 `last-summary.json` 中 `4085` 条过滤后记录为基线，重建四个监控根目录的当前完整文件树，并逐文件核对 `path + size + sha256`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`，且没有新的纯 `mtimeMs` 元数据漂移
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更，也没有新的纯 `mtimeMs` 漂移需要单独说明。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `runUtc = 2026-07-02T10:08:36Z` 的有效内容级基线相比，本轮没有新增、修改、删除，当前也没有新的纯 `mtime` 元数据漂移。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 18:08:36 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-02T09:05:53.070Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前已持有 `runUtc = 2026-07-02T09:07:44Z`；它晚于任务消息里的 `Last run`，因此本轮继续沿用这份更晚的持久化内容级快照作为有效基线，避免把上一轮已落盘的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 以 `last-summary.json` 中 `4085` 条过滤后记录为基线，重建四个监控根目录的当前完整文件树，并逐文件核对 `path + size + sha256`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`；另检测到 `2` 条仅 `mtimeMs` 变化但 `size + sha256` 不变的元数据漂移，其中 `~/.codex/skills` 占 `1` 条，`skill-center` 占 `1` 条
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更；当前差异只有 `2` 条纯 `mtimeMs` 元数据漂移，因此不计入正式 modified 列表。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `runUtc = 2026-07-02T09:07:44Z` 的有效内容级基线相比，本轮没有新增、修改、删除；当前仅检测到 `2` 条纯 `mtime` 元数据漂移，不构成新的技能变更批次。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 16:07:14 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-02T07:04:22.840Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前已持有 `runUtc = 2026-07-02T07:05:35Z`；它晚于任务消息里的 `Last run`，因此本轮沿用这份持久化内容级快照作为有效基线，避免把上一轮已落盘的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 以持久化快照中的 `4085` 条过滤后记录为基线，重建四个监控根目录的当前完整文件树并逐文件核对 `path + size + sha256`；结果继续保持 `4085 -> 4085`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`；另检测到 `1218` 条仅 `mtimeMs` 变化但 `size + sha256` 不变的元数据漂移，其中 `~/.codex/skills` 占 `901` 条，repo `skills` 占 `20` 条，`skill-center` 占 `173` 条，`automation` 占 `124` 条
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更；当前差异只有 `1218` 条纯 `mtimeMs` 元数据漂移，因此不计入正式 modified 列表。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `runUtc = 2026-07-02T07:05:35Z` 的有效内容级基线相比，本轮没有新增、修改、删除；当前仅检测到 `1218` 条纯 `mtime` 元数据漂移，不构成新的技能变更批次。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 14:05:56 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-02T05:02:23.975Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 当前都已持有 `runUtc = 2026-07-02T05:03:32Z` 的结果；它晚于任务消息里的 `Last run`，因此本轮沿用这份持久化内容级快照作为有效基线，避免把上一轮已经落盘的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 以 `last-summary.json` 中 `4085` 条过滤后记录为基线，重建四个监控根目录的当前完整文件树并逐文件核对 `path + size + sha256`；结果继续保持 `4085 -> 4085`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`，且没有新的纯 `mtimeMs` 元数据漂移
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更，也没有新的纯 `mtimeMs` 漂移需要单独说明。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `runUtc = 2026-07-02T05:03:32Z` 的持久化内容级快照相比，本轮没有新增、修改、删除，当前也没有新的元数据漂移。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 13:03:32 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-02T05:02:23.975Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `state.json` 在本轮开始前已持有 `runUtc = 2026-07-02T05:03:32Z`；它晚于任务消息里的 `Last run`，因此本轮沿用这份持久化内容级快照作为有效基线，避免把上一轮已经落盘的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 基于持久化快照中的 `4085` 条过滤后记录重建四个监控根目录的当前完整文件树，并逐文件核对 `path + size + sha256`；结果继续保持 `4085 -> 4085`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`，且没有新的纯 `mtimeMs` 元数据漂移
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更；当前也没有新的纯 `mtimeMs` 元数据漂移。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `runUtc = 2026-07-02T05:03:32Z` 的有效内容级基线相比，本轮没有新增、修改、删除，也没有新的纯 `mtime` 元数据漂移。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 12:03:35 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-02T03:01:24.369Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `state.json` 在本轮开始前已持有 `runUtc = 2026-07-02T03:02:46Z`；它晚于任务消息里的 `Last run`，因此本轮沿用这份持久化内容级快照作为有效基线，避免把上一轮已经落盘的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 基于持久化快照中的 `4085` 条过滤后记录重建四个监控根目录的当前完整文件树，并逐文件核对 `path + size + sha256`；结果继续保持 `4085 -> 4085`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`；另检测到 `1216` 条仅 `mtimeMs` 变化但 `size + sha256` 不变的元数据漂移，其中 `~/.codex/skills` 占 `900` 条，repo `skills` 占 `20` 条，`skill-center` 占 `172` 条，`automation` 占 `124` 条
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更；当前差异只有 `1216` 条纯 `mtimeMs` 元数据漂移，因此不计入正式 modified 列表。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `runUtc = 2026-07-02T03:02:46Z` 的有效内容级基线相比，本轮没有新增、修改、删除；当前仅检测到 `1216` 条纯 `mtime` 元数据漂移，不构成新的技能变更批次。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 18:08:34 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-02T09:05:53.070Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前已持有 `runUtc = 2026-07-02T09:07:44Z`；它晚于任务消息里的 `Last run`，因此本轮沿用这份持久化内容级快照作为有效基线，避免把上一轮已经落盘的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 以 `last-summary.json` 中 `4085` 条过滤后记录为基线，重建四个监控根目录的当前完整文件树，并逐文件核对 `path + size + sha256`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`；另检测到 `1216` 条仅 `mtimeMs` 变化但 `size + sha256` 不变的元数据漂移，其中 `~/.codex/skills` 占 `900` 条，repo `skills` 占 `20` 条，`skill-center` 占 `172` 条，`automation` 占 `124` 条
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更；当前差异只有 `1216` 条纯 `mtimeMs` 元数据漂移，因此不计入正式 modified 列表。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `runUtc = 2026-07-02T09:07:44Z` 的有效内容级基线相比，本轮没有新增、修改、删除；当前仅检测到 `1216` 条纯 `mtime` 元数据漂移，不构成新的技能变更批次。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 05:57:45 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-01T20:56:22.545Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 在本轮扫描前持有 `runUtc = 2026-07-01T15:55:08Z` 的内容级快照；它早于任务消息里的 `Last run`，因此本轮继续以任务消息时间窗为主，并同步重建完整文件树做内容级复核
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 以 `last-summary.json` 的 `4085` 条过滤后记录为旧基线，重建四个监控根目录的当前完整文件树并逐文件核对 `path + size + sha256`；结果继续保持 `4085 -> 4085`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`；另检测到 `1218` 条仅 `mtimeMs` 变化但 `size + sha256` 不变的元数据漂移，其中 `~/.codex/skills` 占 `901` 条，repo `skills` 占 `20` 条，`skill-center` 占 `173` 条，`automation` 占 `124` 条
+- 额外按任务 `Last run` 时间窗口复筛，没有发现任何新的 skill 或 supporting automation 内容变更；也没有新的 `.py` 文件出现
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自 `2026-07-01T20:56:22.545Z` 之后没有发现新的 custom skill 或 supporting automation 内容变更；当前差异仍然只有 `1218` 条纯 `mtimeMs` 元数据漂移，因此不计入正式 modified 列表。
+
+### 删除文件
+- 无。自 `2026-07-01T20:56:22.545Z` 之后没有发现被删除的 skill 或 supporting automation 文件。
+
+### 新增 `.py` 文件
+- 无。自 `2026-07-01T20:56:22.545Z` 之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 过滤后文件树总数继续保持 `4085`；与上一份持久化内容级快照相比，没有新增、修改、删除，但当前仍可见 `1218` 条纯 `mtime` 元数据漂移。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 05:58:26 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-01T20:56:22.545Z`
+- 本轮开始时持久化内容快照曾短暂缺失，因此先按任务消息里的 `Last run` 时间窗口复筛四个监控根目录，再重建新的内容级快照，避免漏记删除或把历史脏状态重复计入本批次
+- 本轮结束前已重建 `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json`，其中记录了 `runUtc = 2026-07-01T21:58:26Z` 的 `4085` 条过滤后文件，供后续轮次直接做 `path + size + sha256` 对比
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 额外复核了仓库中当前仍存在的历史差异：`skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml` 的 `mtime` 为 `2026-06-29 22:03:04 +0800`，`skill-center/skills/bysl-image-generation/**` 的 `mtime` 为 `2026-06-20 22:06-22:07 +0800`；它们都早于本轮 `Last run`，因此不属于本批次新变更
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自 `2026-07-01T20:56:22.545Z` 之后没有发现新的 custom skill 或 supporting automation 内容变更。
+
+### 删除文件
+- 无。自 `2026-07-01T20:56:22.545Z` 之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自 `2026-07-01T20:56:22.545Z` 之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 这次没有可确认的新变更批次；当前工作区里可见的 `clash-verge-standard-env` 和 `bysl-image-generation` 差异都早于本轮 `Last run`，因此不重复记账。
+- 本轮已重建内容级快照 `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json`，过滤后文件树总数为 `4085`，供后续轮次做精确的新增 / 修改 / 删除比对。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 06:58:36 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-01T21:56:23.047Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 在本轮扫描前已持有 `runUtc = 2026-07-01T21:57:45Z` 的内容级快照；它晚于任务消息里的 `Last run`，因此本轮沿用该快照作为有效基线，避免把上一轮已经吸收的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 以 `last-summary.json` 的 `4085` 条过滤后记录为旧基线，重建四个监控根目录的当前完整文件树并逐文件核对 `path + size + sha256`；结果继续保持 `4085 -> 4085`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`；另检测到 `1216` 条仅 `mtimeMs` 变化但 `size + sha256` 不变的元数据漂移，其中 `~/.codex/skills` 占 `900` 条，repo `skills` 占 `20` 条，`skill-center` 占 `172` 条，`automation` 占 `124` 条
+- 额外按任务 `Last run` 时间窗口复筛，没有发现任何新的 skill 或 supporting automation 内容变更，也没有发现被删除的 in-scope 文件；当前仓库里仍可见的历史差异 `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml` 与 `skill-center/skills/bysl-image-generation/**` 的修改时间分别停留在 `2026-06-29 22:03:04 +0800` 和 `2026-06-20 22:06-22:07 +0800`，均早于本轮窗口
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自 `2026-07-01T21:56:23.047Z` 之后没有发现新的 custom skill 或 supporting automation 内容变更；当前差异仍然只有 `1216` 条纯 `mtimeMs` 元数据漂移，因此不计入正式 modified 列表。
+
+### 删除文件
+- 无。自 `2026-07-01T21:56:23.047Z` 之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自 `2026-07-01T21:56:23.047Z` 之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 当前工作区里可见的 `clash-verge-standard-env` 和 `bysl-image-generation` 差异都早于本轮 `Last run`，因此不重复记账。
+- 过滤后文件树总数继续保持 `4085`；与 `runUtc = 2026-07-01T21:57:45Z` 的现有持久化内容级快照相比，没有新增、修改、删除，但当前仍可见 `1216` 条纯 `mtime` 元数据漂移。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 06:58:45 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-01T21:56:23.047Z`
+- 本轮开始时 `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 已持有 `runUtc = 2026-07-01T21:57:45Z` 的内容级快照；它晚于任务消息里的 `Last run`，因此本轮沿用该快照作为有效基线，避免把上一轮已经吸收的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 基于该持久化快照重建四个监控根目录的当前完整文件树并逐文件核对 `path + size + sha256`；结果继续保持 `4085 -> 4085`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`，且没有新的纯 `mtimeMs` 元数据漂移
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 过滤后文件树总数继续保持 `4085`；与 `runUtc = 2026-07-01T21:57:45Z` 的现有持久化内容级快照相比，没有新增、修改、删除，也没有新的纯 `mtime` 元数据漂移。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 07:59:48 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-01T22:57:23.216Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 在本轮扫描前持有 `runUtc = 2026-07-01T21:57:45Z` 的内容级快照；它早于任务消息里的 `Last run`，因此本轮继续沿用该快照做全量内容比对，并额外按任务时间窗口复核，避免漏记或重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 基于持久化快照的 `4085` 条过滤后记录，重建四个监控根目录的当前完整文件树并逐文件核对 `path + size + sha256`；结果继续保持 `4085 -> 4085`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`，且没有新的纯 `mtimeMs` 元数据漂移
+- 再按任务 `Last run: 2026-07-01T22:57:23.216Z` 做时间窗口复筛，也没有任何 in-scope 文件的 `mtimeMs` 晚于该时间点，因此当前可见差异都不是这批新变更
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自 `2026-07-01T22:57:23.216Z` 之后没有发现新的 custom skill 或 supporting automation 内容变更。
+
+### 删除文件
+- 无。自 `2026-07-01T22:57:23.216Z` 之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自 `2026-07-01T22:57:23.216Z` 之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `runUtc = 2026-07-01T21:57:45Z` 的现有持久化内容级快照相比，本轮没有新增、修改、删除，也没有新的纯 `mtime` 元数据漂移。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 09:01:44 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-01T23:58:23.532Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始时已持有 `runUtc = 2026-07-01T23:59:48Z`，它晚于任务消息里的 `Last run`，因此本轮沿用该状态文件及 `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 的内容级快照作为有效基线，避免把上一轮已经落盘的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 基于持久化快照中的 `4085` 条过滤后记录重建四个监控根目录的当前完整文件树，并逐文件核对 `path + size + sha256`；结果继续保持 `4085 -> 4085`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`，且没有新的纯 `mtimeMs` 元数据漂移
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 当前工作区里可见的 `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`、`skill-center/skills/bysl-image-generation/**` 以及监控文档自身改动都已被上一轮基线吸收，本轮不重复记账。
+- 与 `runUtc = 2026-07-01T23:59:48Z` 的现有持久化内容级快照相比，本轮没有新增、修改、删除，也没有新的纯 `mtime` 元数据漂移。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 09:02:20 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-01T23:58:23.532Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始时已持有 `runUtc = 2026-07-01T23:59:48Z`，它晚于任务消息里的 `Last run`，因此本轮沿用该状态文件及 `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 的内容级快照作为有效基线，避免把上一轮已经落盘的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 基于持久化快照中的 `4085` 条过滤后记录重建四个监控根目录的当前完整文件树，并逐文件核对 `path + size + sha256`；结果继续保持 `4085 -> 4085`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`；另检测到 `1216` 条仅 `mtimeMs` 变化但 `size + sha256` 不变的元数据漂移，其中 `~/.codex/skills` 占 `900` 条，repo `skills` 占 `20` 条，`skill-center` 占 `172` 条，`automation` 占 `124` 条
+- 再按任务 `Last run: 2026-07-01T23:58:23.532Z` 做时间窗口复筛，也没有任何 in-scope 文件的 `mtimeMs` 晚于该时间点，因此这些漂移都不属于这批新变更
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更；当前差异只有 `1216` 条纯 `mtimeMs` 元数据漂移，因此不计入正式 modified 列表。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `runUtc = 2026-07-01T23:59:48Z` 的现有持久化内容级快照相比，本轮没有新增、修改、删除，但当前可见 `1216` 条纯 `mtime` 元数据漂移。
+- 因为没有任何 in-scope 文件的 `mtimeMs` 晚于任务 `Last run: 2026-07-01T23:58:23.532Z`，所以这批漂移不属于本轮需要补记的技能变更。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 10:02:08 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-02T00:59:53.886Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮开始前已持有 `runUtc = 2026-07-02T01:02:20Z`；它晚于任务消息里的 `Last run`，因此本轮沿用该状态文件与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 的内容级快照作为有效基线，避免把上一轮已经落盘的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 基于持久化快照中的 `4085` 条过滤后记录重建四个监控根目录的当前完整文件树，并逐文件核对 `path + size + sha256`；结果继续保持 `4085 -> 4085`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`，且没有新的纯 `mtimeMs` 元数据漂移
+- 再按有效基线 `runUtc = 2026-07-02T01:02:20Z` 做时间窗口复筛，也没有任何 in-scope 文件的 `mtimeMs` 晚于该时间点
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `runUtc = 2026-07-02T01:02:20Z` 的有效基线相比，本轮没有新增、修改、删除，也没有新的纯 `mtime` 元数据漂移。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 11:03:42 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-02T02:00:24.039Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 当前持有 `baselineRunUtc = 2026-07-02T02:02:08Z` 的有效内容级基线；它晚于任务消息里的 `Last run`，因此本轮继续沿用该基线，避免把上一轮已经吸收的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 基于持久化快照中的 `4085` 条过滤后记录重建四个监控根目录的当前完整文件树，并逐文件核对 `path + size + sha256`；结果继续保持 `4085 -> 4085`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`；另检测到 `1216` 条仅 `mtimeMs` 变化但 `size + sha256` 不变的元数据漂移，其中 `~/.codex/skills` 占 `900` 条，repo `skills` 占 `20` 条，`skill-center` 占 `172` 条，`automation` 占 `124` 条
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更；当前差异只有 `1216` 条纯 `mtimeMs` 元数据漂移，因此不计入正式 modified 列表。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `baselineRunUtc = 2026-07-02T02:02:08Z` 的有效内容级基线相比，本轮没有新增、修改、删除；当前仅剩 `1216` 条纯 `mtime` 元数据漂移，不构成新的技能变更。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 11:02:46 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-02T02:00:24.039Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `state.json` 在本轮开始前已持有 `runUtc = 2026-07-02T02:02:08Z`；它晚于任务消息里的 `Last run`，因此本轮沿用这份持久化内容级快照作为有效基线，避免把上一轮已经落盘的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 基于持久化快照中的 `4085` 条过滤后记录重建四个监控根目录的当前完整文件树，并逐文件核对 `path + size + sha256`；结果继续保持 `4085 -> 4085`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`，且没有新的纯 `mtimeMs` 元数据漂移
+- 再按有效基线 `runUtc = 2026-07-02T02:02:08Z` 做时间窗口复筛，也没有任何 in-scope 文件的 `mtimeMs` 晚于该时间点
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `runUtc = 2026-07-02T02:02:08Z` 的有效基线相比，本轮没有新增、修改、删除，也没有新的纯 `mtime` 元数据漂移。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 12:02:44 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-02T03:01:24.369Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 与 `state.json` 在本轮开始前已持有 `runUtc = 2026-07-02T03:02:46Z`；它晚于任务消息里的 `Last run` 约 `81.631` 秒，因此本轮沿用这份持久化内容级快照作为有效基线，避免把上一轮已经落盘的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 基于持久化快照中的 `4085` 条过滤后记录重建四个监控根目录的当前完整文件树，并逐文件核对 `path + size + sha256`；结果继续保持 `4085 -> 4085`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`，且没有新的纯 `mtimeMs` 元数据漂移
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `runUtc = 2026-07-02T03:02:46Z` 的有效基线相比，本轮没有新增、修改、删除，也没有新的纯 `mtime` 元数据漂移。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 10:02:02 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-02T00:59:53.886Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 与 `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 当前都已持有 `runUtc = 2026-07-02T01:02:20Z` 的结果；它晚于任务消息里的 `Last run`，因此本轮沿用该状态文件与内容级快照作为有效基线，避免把上一轮已经落盘的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 基于持久化快照中的 `4085` 条过滤后记录重建四个监控根目录的当前完整文件树，并逐文件核对 `path + size + sha256`；结果继续保持 `4085 -> 4085`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`；当前仓库里可见的 `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml` 修改与 `skill-center/skills/bysl-image-generation/**` 未跟踪文件已被更早批次吸收，不属于本轮新变更
+- 额外复核这些历史脏文件的实际时间戳：`rules-enhancement.yaml` 为 `2026-06-29T14:03:04Z`，`skill-center/skills/bysl-image-generation/**` 都停留在 `2026-06-20T14:06:39Z` 到 `2026-06-20T14:07:27Z`，均早于本轮时间窗口
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `runUtc = 2026-07-02T01:02:20Z` 的现有持久化内容级快照相比，本轮没有新增、修改、删除，也没有任何需要单独补记的新 `.py` 文件。
+- 当前工作区里可见的 skill 脏文件都早于任务 `Last run: 2026-07-02T00:59:53.886Z`，因此不属于本轮新发现的变更批次。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 15:05:35 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-02T06:03:52.279Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 在本轮扫描前已经持有 `baselineRunUtc = 2026-07-02T06:05:44Z` 的内容级快照；它晚于任务消息里的 `Last run`，因此本轮沿用该快照作为有效基线，避免把上一轮已经吸收的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 以持久化快照中的 `4085` 条过滤后记录为基线，重建四个监控根目录的当前完整文件树并逐文件核对 `path + size + sha256`；结果继续保持 `4085 -> 4085`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`，且没有新的纯 `mtimeMs` 元数据漂移
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更，也没有新的纯 `mtimeMs` 元数据漂移需要单独说明。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `baselineRunUtc = 2026-07-02T06:05:44Z` 的持久化内容级快照相比，本轮没有新增、修改、删除，也没有新的纯 `mtime` 元数据漂移。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 17:07:44 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-02T08:05:22.878Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前已持有 `runUtc = 2026-07-02T08:07:14Z`；它晚于任务消息里的 `Last run`，因此本轮沿用这份持久化内容级快照作为有效基线，避免把上一轮已落盘的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 以持久化快照中的 `4085` 条过滤后记录为基线，重建四个监控根目录的当前完整文件树并逐文件核对 `path + size + sha256`；结果继续保持 `4085 -> 4085`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`；另检测到 `2` 条仅 `mtimeMs` 变化但 `size + sha256` 不变的元数据漂移，分别是 `/Users/baishangjituan/.codex/skills/github-nightly-sync-20260531-run2/workflow/content-library/examples/2026-04-08-ai-labor/posts/2026-04-08-ai-labor-article-001.md` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/lark-minutes/references/lark-minutes-search.md`，且两者都只是 `1ms` 级别回退
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更；当前只有 `2` 条 `1ms` 级别的纯 `mtimeMs` 元数据漂移，因此不计入正式 modified 列表。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `runUtc = 2026-07-02T08:07:14Z` 的有效内容级基线相比，本轮没有新增、修改、删除；当前仅剩 `2` 条 `1ms` 级别的纯 `mtime` 元数据漂移，不构成新的技能变更批次。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 19:07:54 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-02T10:06:52.916Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/state.json` 在本轮扫描前已持有 `runUtc = 2026-07-02T10:08:36Z`；它晚于任务消息里的 `Last run`，因此本轮继续沿用这份更晚的持久化内容级快照作为有效基线，避免把上一轮已落盘的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 以 `last-summary.json` 中 `4085` 条过滤后记录为基线，重建四个监控根目录的当前完整文件树，并逐文件核对 `path + size + sha256`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`，且没有新的纯 `mtimeMs` 元数据漂移
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更，也没有新的纯 `mtimeMs` 漂移需要单独说明。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `runUtc = 2026-07-02T10:08:36Z` 的有效内容级基线相比，本轮没有新增、修改、删除，也没有新的纯 `mtime` 元数据漂移。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 20:08:14 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-02T11:06:53.401Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 在本轮扫描前已持有 `runUtc = 2026-07-02T11:08:41Z`；它晚于任务消息里的 `Last run`，因此本轮继续沿用这份更晚的持久化内容级快照作为有效基线，避免把上一轮已落盘的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 以 `last-summary.json` 中 `4085` 条过滤后记录为基线，重建四个监控根目录的当前完整文件树，并逐文件核对 `path + size + sha256`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`，且没有新的纯 `mtimeMs` 元数据漂移
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更，也没有新的纯 `mtimeMs` 漂移需要单独说明。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `runUtc = 2026-07-02T11:08:41Z` 的有效内容级基线相比，本轮没有新增、修改、删除，也没有新的纯 `mtime` 元数据漂移。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 21:09:33 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-02T12:06:53.664Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 在本轮扫描前已持有 `runUtc = 2026-07-02T12:08:14Z`；它晚于任务消息里的 `Last run`，因此本轮继续沿用这份更晚的持久化内容级快照作为有效基线，避免把上一轮已落盘的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 以 `last-summary.json` 中 `4085` 条过滤后记录为基线，重建四个监控根目录的当前完整文件树，并逐文件核对 `path + size + sha256`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`；另检测到 `1216` 条仅 `mtimeMs` 变化但 `size + sha256` 不变的元数据漂移，其中 `~/.codex/skills` 占 `900` 条，repo `skills` 占 `20` 条，`skill-center` 占 `172` 条，`automation` 占 `124` 条
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更；当前差异只有 `1216` 条纯 `mtimeMs` 元数据漂移，因此不计入正式 modified 列表。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `runUtc = 2026-07-02T12:08:14Z` 的有效内容级基线相比，本轮没有新增、修改、删除；当前仅检测到 `1216` 条纯 `mtime` 元数据漂移，不构成新的技能变更批次。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 21:09:12 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 任务消息里的 `Last run: 2026-07-02T12:06:53.664Z`
+- `/Users/baishangjituan/.codex/automations/skill-monitor/last-summary.json` 在本轮扫描前已持有 `runUtc = 2026-07-02T12:08:14Z`；它晚于任务消息里的 `Last run`，因此本轮继续沿用这份更晚的持久化内容级快照作为有效基线，避免把上一轮已落盘的 no-op 结果重复记账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`，避免把监控写入本身计入技能变更
+- 以 `last-summary.json` 中 `4085` 条过滤后记录为基线，重建四个监控根目录的当前完整文件树，并逐文件核对 `path + size + sha256`
+- 按内容级快照复核，结果为新增 `0`、修改 `0`、删除 `0`，且没有新的纯 `mtimeMs` 元数据漂移
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。自有效基线之后没有发现新的 custom skill 或 supporting automation 内容变更，也没有新的纯 `mtimeMs` 漂移需要单独说明。
+
+### 删除文件
+- 无。自有效基线之后没有发现新的 skill 或 supporting automation 删除。
+
+### 新增 `.py` 文件
+- 无。自有效基线之后没有新的 `.py` 文件出现，因此无需单独列出用途、关联 skill 或平台属性。
+
+### 变更摘要
+- 本轮四个监控根目录没有发现新的技能或配套自动化内容变更，正式计数为 `0 added / 0 modified / 0 deleted`。
+- 与 `runUtc = 2026-07-02T12:08:14Z` 的有效内容级基线相比，本轮没有新增、修改、删除，也没有新的纯 `mtime` 元数据漂移。
+- 因为没有发现新的非零变更批次，`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 本轮保持不变。
+
+## 2026-07-02 21:12:22 CST (+0800)
+- 扫描范围:
+- `/Users/baishangjituan/.codex/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation`
+- 对比基线:
+- 本轮内本地持久化快照已在前一次写入后推进到 `runUtc = 2026-07-02T13:09:33Z`
+- 因此这里补做一次最终复扫，用来吸收本轮过程中出现的并发 no-op 写入，避免把同一批本地基线刷新留到下轮再次对账
+- 判定依据:
+- 延续既有监控口径，继续排除 `~/.codex/skills/.system/**`、`~/.codex/skills/__windows_translate_repo__/**`、本地监控目录 `~/.codex/automations/skill-monitor/**`、任意层级 `.git/**`、`.venv/**`、`node_modules/**`、`site-packages/**`、`__pycache__/**`、`.pytest_cache/**` 与 `*.pyc`
+- 继续忽略监控日志文件 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`、`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` 以及本地记忆文件 `/Users/baishangjituan/.codex/automations/skill-monitor/memory.md`
+- 以刚刷新后的 `last-summary.json` 为基线重建四个监控根目录的当前完整文件树，并逐文件复核 `path + size + sha256 + mtimeMs`
+- 按最终复扫结果，本轮新增 `0`、修改 `0`、删除 `0`，同时也没有新的纯 `mtimeMs` 元数据漂移
+- 结果汇总: 新增 `0`，修改 `0`，删除 `0`
+
+### 新增文件
+- 无
+
+### 修改文件
+- 无。最终复扫确认本轮所有受监控技能与配套自动化文件都已被本地基线吸收，没有遗留新的内容差异或元数据漂移。
+
+### 删除文件
+- 无
+
+### 新增 `.py` 文件
+- 无
+
+### 变更摘要
+- 本轮最终落盘结果仍然是 `0 added / 0 modified / 0 deleted`，且没有新的 `.py` 文件需要单列。
+- 由于最终复扫已经把本轮过程中的并发 no-op 写入吸收到 `runUtc = 2026-07-02T13:12:22Z` 的新基线，下轮不会重复对账这一批本地状态刷新。
+- `docs/automation/github-sync-status.md` 本轮继续保持不变，因为没有发现新的非零技能变更批次。
 ## 2026-07-01 07:47:56 CST (+0800)
 - 扫描范围:
 - `/Users/baishangjituan/.codex/skills`
