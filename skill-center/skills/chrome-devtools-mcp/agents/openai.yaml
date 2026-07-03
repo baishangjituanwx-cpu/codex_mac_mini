@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chrome DevTools MCP"
+  short_description: "Use Chrome DevTools MCP for browser automation"
+  default_prompt: "Use $chrome-devtools-mcp to inspect a web page with Chrome DevTools MCP on macOS or Windows."
