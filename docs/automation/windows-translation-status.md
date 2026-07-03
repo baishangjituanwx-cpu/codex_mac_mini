@@ -11,6 +11,82 @@
 - 阻塞原因
 - 是否达到“Mac / Windows 版本都齐全”
 
+## 2026-07-03 22:03:31 CST (+0800)
+
+- 处理时间:
+  - `2026-07-03 22:03:31 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-07-02 22:03:07 CST (+0800)` 状态记录之后追加且此前未写入本状态文件的批次已全部复核。
+  - 本轮覆盖 `2026-07-03 00:11:19 CST (+0800)` 至 `2026-07-03 21:22:55 CST (+0800)` 的新增 monitor 批次。
+  - 其中只有 `2026-07-03 18:21:15 CST (+0800)` 为非零变更批次，新增项为:
+    - `~/.codex/skills/chrome-devtools-mcp/SKILL.md`
+    - `~/.codex/skills/chrome-devtools-mcp/agents/openai.yaml`
+  - 其余同日批次均为 `新增 0，修改 0，删除 0`，没有额外待转译项。
+- 已完成的 Windows 补全:
+  - 新增仓库镜像:
+    - `skill-center/skills/chrome-devtools-mcp/SKILL.md`
+    - `skill-center/skills/chrome-devtools-mcp/agents/openai.yaml`
+  - `skill-center/skills/chrome-devtools-mcp/SKILL.md` 已把 live skill 的行为同步到仓库，并补齐 Windows 可用说明:
+    - 明确这个 skill 以 `mcp__chrome_devtools` 作为统一入口，Windows 不需要额外 `.ps1` 或 `.cmd` 启动器
+    - 补入 Windows 键盘快捷键等价关系:
+      - `Control+L`
+      - `Control+R`
+      - `Control+Shift+R`
+      - `Control+A`
+    - 补入 Windows 路径口径:
+      - 本地路径示例优先使用 `C:/Users/<name>/...`
+      - 用户目录使用 `%USERPROFILE%`
+      - 临时目录使用 `%TEMP%`
+      - 明确不要把 macOS 专属 `~/Library/...` 或 `/tmp/...` 当成 Windows 示例
+    - 保留现有通用行为和 macOS 说明，没有删除原有跨平台 / Mac 内容。
+  - `skill-center/skills/chrome-devtools-mcp/agents/openai.yaml` 已同步 live skill 的 agent 元数据，保证仓库镜像可直接暴露同名入口。
+- 未完成的补全:
+  - 无。
+  - 本轮 `chrome-devtools-mcp` 新增行为没有遗留的 Windows 专属缺口；其余同日 monitor 批次都是 no-op。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮没有新增 PowerShell 包装脚本，因为这个 skill 的执行面完全在 `mcp__chrome_devtools` 工具层，Windows 等价入口就是同一套 MCP 工作流。
+  - 本机未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；当前判断基于 live skill 与仓库镜像内容对账。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-03 21:22:55 CST (+0800)`，今天唯一的非零 custom-skill 批次已经补入仓库镜像并带上 Windows 使用口径；Mac 与 Windows 覆盖今日均完整。
+
+
+## 2026-07-03 22:04:03 CST (+0800)
+
+- 处理时间:
+  - `2026-07-03 22:04:03 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自 `2026-07-02 22:03:07 CST (+0800)` 状态记录之后追加且此前未写入本状态文件的批次已全部复核。
+  - 本轮按时间过滤后覆盖 `2026-07-03 00:11:16 CST (+0800)` 至 `2026-07-03 21:22:55 CST (+0800)` 的 `36` 条新增 monitor 记录；按标题时间戳去重后为 `35` 个 monitor 批次。
+  - 其中存在重复记录:
+    - `2026-07-03 01:12:28 CST (+0800)` 出现 `2` 次
+  - 其中仅 `2026-07-03 18:21:15 CST (+0800)` 为非零变更批次；其余 `35` 条记录结果均为 `新增 0，修改 0，删除 0`，附带说明只涉及内容级快照复核、有效基线推进、仓库历史脏差异排除，以及 `mtime` / `mtimeMs` 元数据漂移吸收，不构成新的 custom-skill 行为。
+- 已完成的 Windows 补全:
+  - `chrome-devtools-mcp`:
+    - 已为本轮唯一的非零批次补入仓库镜像:
+      - `skill-center/skills/chrome-devtools-mcp/SKILL.md`
+      - `skill-center/skills/chrome-devtools-mcp/agents/openai.yaml`
+    - 已将 live skill 的核心行为同步到仓库镜像，覆盖:
+      - 强制优先使用 `mcp__chrome_devtools`
+      - 基于 `list_pages`、`take_snapshot`、`take_screenshot`、`evaluate_script`、`list_console_messages`、`list_network_requests` 的标准排障流程
+      - `mms.pinduoduo.com` 静态资源域名回退 `initScript`
+    - 已补充 Windows 可用说明，但没有人为拆出额外脚本分支:
+      - 明确 Windows 侧直接复用同一套 `mcp__chrome_devtools` MCP 工作流，不需要再新增 PowerShell 或 `.cmd` 启动器
+      - 明确 `press_key` 常见快捷键在 Windows 下应使用 `Control+R`、`Control+L`、`Control+A`、`Alt+Left`、`Alt+Right`
+      - 明确 Windows 用户镜像路径可落在 `%USERPROFILE%\\.codex\\skills\\chrome-devtools-mcp\\`
+  - Windows 完整性判断:
+    - 这批新增行为本质上是 Codex 内的 MCP 操作规范和网页排障流程，不依赖 macOS shell 或 LaunchAgent，因此 Windows 侧以共享文档镜像加快捷键说明即可完整覆盖。
+    - 今天其余 `35` 条 monitor 记录均为 no-op，因此无需补写额外的 PowerShell 启动器、路径包装器、仓库脚本或文档分叉。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-07-03 00:11:16 CST (+0800)` 至 `2026-07-03 21:22:55 CST (+0800)` 之间新增的 `36` 条 monitor 记录及其对应 `35` 个批次没有遗留的 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 的增量复核、live skill 内容核对与仓库镜像补齐。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-03 21:22:55 CST (+0800)`，今天唯一新增的 custom-skill 批次已经在仓库镜像中补齐 Windows 可用说明，其余批次均为 no-op；Mac 与 Windows 覆盖今日均完整。
 ## 2026-07-02 22:03:07 CST (+0800)
 
 - 处理时间:
