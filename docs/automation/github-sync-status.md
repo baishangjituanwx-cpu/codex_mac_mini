@@ -4307,17 +4307,18 @@
   - `codex/windows-version-20260411`: 是。包含 `docs/automation/windows-translation-status.md` 中新增的 `2026-07-08 22:04:53 CST (+0800)` 与 `2026-07-08 22:04:55 CST (+0800)` Windows 完整性记录。
 - 是否已提交:
   - `codex/default-python-sync`: 是。已提交 `Sync weixin-shop-add-category mirror and July 8 monitor updates`。
-  - `codex/windows-version-20260411`: 是。已提交 `Record July 8 Windows translation status`。
+  - `codex/windows-version-20260411`: 是。远端在本轮推送前并发产生了等价提交 `86ff1f9 Record July 8 Windows translation status`；本地等价提交 `0489543` 未重复推送。
 - 是否已推送:
   - `codex/default-python-sync`: 是。已推送到 `origin/codex/default-python-sync`。
-  - `codex/windows-version-20260411`: 是。已推送到 `origin/codex/windows-version-20260411`。
+  - `codex/windows-version-20260411`: 否。本轮主动推送遭遇 non-fast-forward；重新抓取后确认 `origin/codex/windows-version-20260411` 已并发到达 `86ff1f9`，且内容与本地 `0489543` 树对象一致，因此未重复推送。
 - 提交信息:
   - `codex/default-python-sync`: `Sync weixin-shop-add-category mirror and July 8 monitor updates`
-  - `codex/windows-version-20260411`: `Record July 8 Windows translation status`
+  - `codex/windows-version-20260411`: `Record July 8 Windows translation status`（并发远端提交 `86ff1f9`；本地等价提交 `0489543` 未重复推送）
 - 若跳过，说明跳过原因:
   - 未提交 `.codex-tmp-skill-monitor-20260626-blocks.md`，因为它是本地临时分析文件，不属于需要同步的仓库资产。
   - 未在 `codex/default-python-sync` 重复提交 `skill-center/skills/bysl-image-generation/**`，因为该组文件与 `origin/codex/default-python-sync` 字节级一致。
   - 未在 `codex/default-python-sync` 重复提交 `skill-center/skills/chrome-devtools-mcp/**`，因为该组文件与 `origin/codex/default-python-sync` 字节级一致。
   - 未在 `codex/default-python-sync` 混入 `docs/automation/windows-translation-status.md`，因为该文件继续单独保留在 `codex/windows-version-20260411`。
   - 未在 `codex/windows-version-20260411` 混入 `docs/automation/skill-change-monitor.md`、`docs/automation/github-sync-status.md`、`skill-center/skills/weixin-shop-add-category/**` 或共享 `clash-verge` 规则镜像，因为这些内容属于 generic / cross-platform 资产。
+  - 未重复推送本地 `0489543` 到 `codex/windows-version-20260411`，因为重新抓取后确认远端并发提交 `86ff1f9` 已包含与之字节级一致的 `docs/automation/windows-translation-status.md` 更新。
   - 本轮未发现新的 `automation/python-platform-takeover/**` 功能文件，也未发现新的 Windows bridge / deployment 专属实现；实际代码同步内容为仓库 skill-center 镜像、共享规则模板与自动化状态文档更新。
