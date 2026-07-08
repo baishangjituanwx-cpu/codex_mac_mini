@@ -11,6 +11,44 @@
 - 阻塞原因
 - 是否达到“Mac / Windows 版本都齐全”
 
+## 2026-07-08 22:04:53 CST (+0800)
+
+- 处理时间:
+  - `2026-07-08 22:04:53 CST (+0800)`
+- 输入来源:
+  - 已复核 `skill-change-monitor.md` 中上一条 Windows 状态记录覆盖上限 `2026-07-07 21:45:51 CST (+0800)` 之后、截至当前最新 monitor 标题 `2026-07-08 22:01:45 CST (+0800)` 的全部追加内容。
+  - 这一时间窗内原始 monitor 标题记录共 `44` 条，按标题时间戳去重后为 `38` 个批次。
+  - 其中只有 `2026-07-08 17:58:02 CST (+0800)`、`2026-07-08 17:58:29 CST (+0800)` 与 `2026-07-08 18:58:58 CST (+0800)` 为非零批次；它们对应的是同一组新增 / 复核结果：`weixin-shop-add-category` 技能三件套新增，以及 `clash-verge-standard-env` 规则模板增量同步。其余批次均为 `新增 0，修改 0，删除 0`。
+- 已完成的 Windows 补全:
+  - 新增仓库镜像:
+    - `skill-center/skills/weixin-shop-add-category/SKILL.md`
+    - `skill-center/skills/weixin-shop-add-category/agents/openai.yaml`
+    - `skill-center/skills/weixin-shop-add-category/references/category-application-flow.md`
+  - `skill-center/skills/weixin-shop-add-category/SKILL.md` 已将 live skill 核心行为落仓，并补齐 Windows 可用说明:
+    - 明确 Windows 侧直接复用 `mcp__chrome_devtools`，不新增 `.ps1` 或 `.cmd` 启动器
+    - 补入 Windows 快捷键口径:
+      - `Control+R` / `F5`
+      - `Control+L`
+      - `Alt+Left`
+      - `Alt+Right`
+    - 补入 Windows 镜像路径口径:
+      - `%USERPROFILE%\\.codex\\skills\\weixin-shop-add-category\\`
+  - `skill-center/skills/weixin-shop-add-category/references/category-application-flow.md` 已补充 Windows 操作注记，明确仍走同一套 MCP 工作流，并在手动刷新 / 地址栏恢复时使用 Windows 键位。
+  - `skill-center/skills/weixin-shop-add-category/agents/openai.yaml` 已同步 live skill agent 元数据，保证仓库镜像具备同名入口。
+  - `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml` 已继续对齐 live skill，补齐此前工作树里仍缺失的:
+    - `DOMAIN-SUFFIX,weixin.qq.com,🎯 全球直连`
+  - 该规则文件中更早批次已存在的 WeChat 进程名、`chengzijianzhan.cn`、`huice.com` 与 `pinduoduo.com` 直连项保持不变；本轮未删除任何 Mac / 通用实现。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-08 22:01:45 CST (+0800)`，本轮 monitor 中涉及的新增 skill 行为和规则更新都已在仓库内具备 Windows 可用等价结果，没有遗留的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮新增的 `weixin-shop-add-category` 是浏览器 MCP 工作流，不需要额外 PowerShell 包装器；`clash-verge-standard-env` 本轮只需继续复用共享 YAML 规则模板。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、live skill 对账和仓库镜像补齐结果。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-08 22:01:45 CST (+0800)`，今天新增的 `weixin-shop-add-category` 与 `clash-verge-standard-env` 更新都已完成仓库侧 Windows 转译，Mac 与 Windows 覆盖今日均完整。
+
 ## 2026-07-07 22:02:49 CST (+0800)
 
 - 处理时间:
@@ -39,6 +77,38 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-07-07 21:45:51 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-07-08 22:04:55 CST (+0800)
+
+- 处理时间:
+  - `2026-07-08 22:04:55 CST (+0800)`
+- 输入来源:
+  - 复核 `skill-change-monitor.md` 中自 `2026-07-07 22:02:49 CST (+0800)` 状态记录覆盖上限 `2026-07-07 21:45:51 CST (+0800)` 之后追加且此前未写入本状态文件的批次。
+  - 本轮实际覆盖 `2026-07-07 22:46:10 CST (+0800)` 至 `2026-07-08 21:00:03 CST (+0800)` 的未转译 monitor 批次。
+  - 其中只有 `2026-07-08 17:58:29 CST (+0800)` 与 `2026-07-08 18:58:58 CST (+0800)` 为非零变更批次；其余新增 monitor 记录均为 `新增 0，修改 0，删除 0`，没有引入新的 custom-skill 行为。
+- 已完成的 Windows 补全:
+  - 新增仓库镜像:
+    - `skill-center/skills/weixin-shop-add-category/SKILL.md`
+    - `skill-center/skills/weixin-shop-add-category/agents/openai.yaml`
+    - `skill-center/skills/weixin-shop-add-category/references/category-application-flow.md`
+  - `weixin-shop-add-category`:
+    - 已同步 live skill 的微信小店类目申请流程、agent 元数据与 `micro-app` shadow DOM 参考。
+    - 已补入 Windows 口径:
+      - 继续统一使用 `mcp__chrome_devtools`，不新增 `.ps1` 或 `.cmd` 启动器
+      - 补充 `Control+R` / `F5`、`Control+L`、`Alt+Left` / `Alt+Right` 快捷键映射
+      - 补充 `%USERPROFILE%\\.codex\\skills\\weixin-shop-add-category\\` 镜像路径与 quoted `C:/Users/<name>/...` 本地路径写法
+  - `clash-verge-standard-env`:
+    - 已将 `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml` 补齐到当前 live 规则集，覆盖新增的 WeChat 相关 `PROCESS-NAME` 直连项，以及 `chengzijianzhan.cn`、`huice.com`、`pinduoduo.com`、`weixin.qq.com` 等域名直连规则。
+    - 该规则模板本身为跨平台 YAML 资源，不需要额外拆分 Windows / macOS 实现。
+- 未完成的补全:
+  - 无。
+  - 截至本轮，`2026-07-07 22:46:10 CST (+0800)` 至 `2026-07-08 21:00:03 CST (+0800)` 之间新增且未转译的 custom-skill 批次已全部补齐。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 monitor 增量复核、live skill 内容对账与仓库镜像补齐。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 今天新增的 `weixin-shop-add-category` 技能与 `clash-verge-standard-env` 规则更新都已在仓库镜像中补齐 Windows 可用说明或共享资源；Mac 与 Windows 覆盖今日均完整。
 
 ## 2026-07-06 22:02:21 CST (+0800)
 
