@@ -1,0 +1,4 @@
+interface:
+  display_name: "微信小店添加类目"
+  short_description: "用 Chrome 接管微信小店，新增类目并提交资质审核"
+  default_prompt: "Use $weixin-shop-add-category to 申请微信小店新类目、复用资质并提交审核。"

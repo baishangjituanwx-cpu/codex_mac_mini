@@ -216,6 +216,16 @@
 - 这批变更集中在 `/Users/baishangjituan/.codex/skills/chrome-devtools-mcp/`；核心是新增了 `chrome-devtools-mcp` 自定义 skill 和 agent 配置，要求优先走 `mcp__chrome_devtools` 浏览器链路，并补齐 DevTools 排障与 Pinduoduo MMS 回退说明。
 - 建议后续执行 GitHub 同步，避免这组新的 Chrome DevTools MCP skill 资产继续只停留在本地 `~/.codex/skills`。
 
+## 2026-07-08 23:01:48 CST (+0800)
+- 检测到新的技能变更批次: 新增 `3`，修改 `1`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-add-category/` 与 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`；核心是新增微信小店类目申请 skill-center 镜像，并补充微信桌面端/Pinduoduo/橙子建站相关的 Clash Verge 直连规则。
+- 建议后续执行 GitHub 同步，避免这组新的 `skill-center` 资产和规则模板更新继续只停留在本地工作区。
+
+## 2026-07-08 17:58:02 CST (+0800)
+- 检测到新的技能变更批次: 新增 `3`，修改 `1`，删除 `0`。
+- 这批变更集中在 `/Users/baishangjituan/.codex/skills/weixin-shop-add-category/` 与 `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/references/rules-enhancement.yaml`；核心是新增微信小店类目申请 skill，并扩充 Clash Verge 直连规则模板中的微信桌面端和业务域名规则。
+- 建议后续执行 GitHub 同步，避免这组新的 skill 资产和规则模板更新继续只停留在本地工作区。
+
 ## 2026-07-03 00:04:08 CST (+0800)
 - 处理时间:
   - `2026-07-03 00:04:08 CST (+0800)`
@@ -4254,3 +4264,60 @@
   - 未在 `codex/windows-version-20260411` 混入 `docs/automation/skill-change-monitor.md`，因为该文件属于 generic 技能监控日志，已单独提交到 `codex/default-python-sync`。
   - 未在 `codex/windows-version-20260411` 重复提交 `docs/automation/windows-translation-status.md`，因为远端目标分支在本轮开始前已经包含 `2026-07-07 22:02:49 CST (+0800)` 的最新 Windows 完整性记录。
   - 本轮未发现新的 `automation/python-platform-takeover/**` 功能文件，也未发现新的 Windows bridge / deployment 专属实现；实际同步内容仅为自动化状态文档更新。
+
+## 2026-07-08 17:58:29 CST (+0800)
+- 技能变更监控发现新的非零批次，后续 GitHub sync 需要带上监控账本更新。
+- 待同步重点:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-add-category/{SKILL.md,agents/openai.yaml,references/category-application-flow.md}`
+  - `/Users/baishangjituan/.codex/skills/clash-verge-standard-env/references/rules-enhancement.yaml`
+- 说明:
+  - 本批次对应 `docs/automation/skill-change-monitor.md` 新增的 `2026-07-08 17:58:29 CST (+0800)` 记录，当前状态应视为“发现新技能变更，待后续同步”。
+
+## 2026-07-08 18:58:58 CST (+0800)
+- 技能变更监控发现新的非零批次，后续 GitHub sync 需要带上最新监控账本更新。
+- 待同步重点:
+- `/Users/baishangjituan/.codex/skills/weixin-shop-add-category/SKILL.md`
+- `/Users/baishangjituan/.codex/skills/weixin-shop-add-category/references/category-application-flow.md`
+- 说明:
+- 本批次严格对应 `docs/automation/skill-change-monitor.md` 新增的 `2026-07-08 18:58:58 CST (+0800)` 记录，只覆盖当前 `Last run: 2026-07-08T09:56:57.527Z` 之后出现的 `2` 个新增文件。
+- 同目录的 `/Users/baishangjituan/.codex/skills/weixin-shop-add-category/agents/openai.yaml` 时间戳为 `2026-07-08 17:56:17 CST (+0800)`，早于本轮基线，因此不在这批待同步列表里重复记账。
+
+## 2026-07-08 23:01:41 CST (+0800)
+- 技能变更监控发现新的非零批次，后续 GitHub sync 需要带上最新监控账本更新。
+- 待同步重点:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-add-category/SKILL.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-add-category/agents/openai.yaml`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-add-category/references/category-application-flow.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`
+- 说明:
+- 本批次对应 `docs/automation/skill-change-monitor.md` 新增的 `2026-07-08 23:01:41 CST (+0800)` 记录，覆盖当前 `Last run: 2026-07-08T13:59:58.765Z` 之后发现的 `3` 个新增文件和 `1` 个修改文件。
+- 变更核心是把 `weixin-shop-add-category` 正式镜像到仓库 `skill-center`，并同步扩充 `clash-verge-standard-env` 的微信桌面端和业务域名直连规则，当前状态应视为“发现新技能变更，待后续同步”。
+
+## 2026-07-09 00:04:08 CST (+0800)
+- 处理时间:
+  - `2026-07-09 00:04:08 CST (+0800)`
+- 前置检查:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/windows-translation-status.md` 的 latest dated entry 以时间戳计为 `2026-07-08 22:04:55 CST (+0800)`。
+  - 该条记录明确写明本轮待同步批次“Mac / Windows 版本都齐全”为“是”，因此本轮允许继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。包含 `docs/automation/skill-change-monitor.md` 中新增的 `2026-07-08` monitor 记录、`docs/automation/github-sync-status.md` 的待同步提醒与本条执行记录、`skill-center/skills/weixin-shop-add-category/**` 新增镜像，以及 `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml` 的规则补齐。
+  - `codex/windows-version-20260411`: 是。包含 `docs/automation/windows-translation-status.md` 中新增的 `2026-07-08 22:04:53 CST (+0800)` 与 `2026-07-08 22:04:55 CST (+0800)` Windows 完整性记录。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。已提交 `Sync weixin-shop-add-category mirror and July 8 monitor updates`。
+  - `codex/windows-version-20260411`: 是。已提交 `Record July 8 Windows translation status`。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。已推送到 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 是。已推送到 `origin/codex/windows-version-20260411`。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync weixin-shop-add-category mirror and July 8 monitor updates`
+  - `codex/windows-version-20260411`: `Record July 8 Windows translation status`
+- 若跳过，说明跳过原因:
+  - 未提交 `.codex-tmp-skill-monitor-20260626-blocks.md`，因为它是本地临时分析文件，不属于需要同步的仓库资产。
+  - 未在 `codex/default-python-sync` 重复提交 `skill-center/skills/bysl-image-generation/**`，因为该组文件与 `origin/codex/default-python-sync` 字节级一致。
+  - 未在 `codex/default-python-sync` 重复提交 `skill-center/skills/chrome-devtools-mcp/**`，因为该组文件与 `origin/codex/default-python-sync` 字节级一致。
+  - 未在 `codex/default-python-sync` 混入 `docs/automation/windows-translation-status.md`，因为该文件继续单独保留在 `codex/windows-version-20260411`。
+  - 未在 `codex/windows-version-20260411` 混入 `docs/automation/skill-change-monitor.md`、`docs/automation/github-sync-status.md`、`skill-center/skills/weixin-shop-add-category/**` 或共享 `clash-verge` 规则镜像，因为这些内容属于 generic / cross-platform 资产。
+  - 本轮未发现新的 `automation/python-platform-takeover/**` 功能文件，也未发现新的 Windows bridge / deployment 专属实现；实际代码同步内容为仓库 skill-center 镜像、共享规则模板与自动化状态文档更新。
