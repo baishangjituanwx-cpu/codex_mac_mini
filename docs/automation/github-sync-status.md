@@ -26,18 +26,19 @@
   - `codex/windows-version-20260411`: 是。包含 `docs/automation/windows-translation-status.md` 中新增的 `2026-07-09 22:02:55 CST (+0800)` 状态记录。
 - 是否已提交:
   - `codex/default-python-sync`: 是。已提交 `Sync pinduoduo-add-category mirror and July 9 monitor updates`。
-  - `codex/windows-version-20260411`: 是。已提交 `Record July 9 Windows translation status`。
+  - `codex/windows-version-20260411`: 是。远端在本轮推送期间并发产生了等价提交 `479d217 Record July 9 Windows translation status`；本地等价提交 `8f8b3f4` 未重复推送。
 - 是否已推送:
   - `codex/default-python-sync`: 是。已推送到 `origin/codex/default-python-sync`。
-  - `codex/windows-version-20260411`: 是。已推送到 `origin/codex/windows-version-20260411`。
+  - `codex/windows-version-20260411`: 否。本轮主动推送遭遇 non-fast-forward；重新抓取后确认 `origin/codex/windows-version-20260411` 已并发到达 `479d217`，且内容满足本轮需求，因此未重复推送。
 - 提交信息:
   - `codex/default-python-sync`: `Sync pinduoduo-add-category mirror and July 9 monitor updates`
-  - `codex/windows-version-20260411`: `Record July 9 Windows translation status`
+  - `codex/windows-version-20260411`: `Record July 9 Windows translation status`（并发远端提交 `479d217`；本地等价提交 `8f8b3f4` 未重复推送）
 - 若跳过，说明跳过原因:
   - 未提交 `.codex-tmp-skill-monitor-20260626-blocks.md`，因为它是本地临时分析文件，不属于需要同步的仓库资产。
   - 未在 `codex/default-python-sync` 重复提交 `skill-center/skills/bysl-image-generation/**`、`skill-center/skills/chrome-devtools-mcp/**`、`skill-center/skills/weixin-shop-add-category/**` 与 `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`，因为这些内容与 `origin/codex/default-python-sync` 已字节级一致。
   - 未在 `codex/default-python-sync` 混入 `docs/automation/windows-translation-status.md`，因为该文件继续单独保留在 `codex/windows-version-20260411`。
   - 未在 `codex/windows-version-20260411` 混入 `docs/automation/skill-change-monitor.md`、`docs/automation/github-sync-status.md`、`skill-center/skills/pinduoduo-add-category/**` 或共享 `clash-verge` 规则镜像，因为这些内容属于 generic / cross-platform 资产，继续由 `codex/default-python-sync` 维护。
+  - 未重复推送本地 `8f8b3f4` 到 `codex/windows-version-20260411`，因为重新抓取后确认远端并发提交 `479d217` 已包含本轮所需的 `docs/automation/windows-translation-status.md` 更新。
   - 本轮未发现新的 `automation/python-platform-takeover/**` 功能文件，也未发现新的 Windows bridge / deployment 专属实现；Windows 分支实际同步内容仅为 Windows 转译状态文档更新。
 
 ## 2026-07-09 22:26:02 CST (+0800)
