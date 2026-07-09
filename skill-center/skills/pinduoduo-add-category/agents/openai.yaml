@@ -1,0 +1,4 @@
+interface:
+  display_name: "拼多多添加类目"
+  short_description: "用 Chrome 接管拼多多商家后台，新增类目并提交资质审核"
+  default_prompt: "Use $pinduoduo-add-category to 为拼多多店铺申请新类目、上传资质并提交审核。"
