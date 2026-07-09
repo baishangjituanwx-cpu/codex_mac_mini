@@ -11,6 +11,48 @@
 - 阻塞原因
 - 是否达到“Mac / Windows 版本都齐全”
 
+## 2026-07-09 22:02:55 CST (+0800)
+
+- 处理时间:
+  - `2026-07-09 22:02:55 CST (+0800)`
+- 输入来源:
+  - 已复核 `skill-change-monitor.md` 中上一条 Windows 状态记录覆盖上限 `2026-07-08 22:01:45 CST (+0800)` 之后、截至当前最新 monitor 标题 `2026-07-09 21:25:11 CST (+0800)` 的全部追加内容。
+  - 这一时间窗内原始 monitor 标题记录共 `38` 条，按标题时间戳去重后为 `35` 个批次。
+  - 其中只有 `2026-07-08 23:01:41 CST (+0800)`、`2026-07-08 23:01:48 CST (+0800)`、`2026-07-09 16:19:05 CST (+0800)` 与 `2026-07-09 16:19:32 CST (+0800)` 为非零批次；前两条对应同一组 `weixin-shop-add-category` / `clash-verge-standard-env` 仓库变更复核，后两条对应同一组 `pinduoduo-add-category` live skill 新增。其余 `31` 个去重批次均为 `新增 0，修改 0，删除 0`。
+- 已完成的 Windows 补全:
+  - 已复核 `2026-07-08 23:01:41/48 CST (+0800)` 批次，确认仓库中既有的以下文件已经完整覆盖该批次所需 Windows 口径，因此本轮无需再改:
+    - `skill-center/skills/weixin-shop-add-category/SKILL.md`
+    - `skill-center/skills/weixin-shop-add-category/references/category-application-flow.md`
+    - `skill-center/skills/weixin-shop-add-category/agents/openai.yaml`
+    - `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`
+  - 新增仓库镜像:
+    - `skill-center/skills/pinduoduo-add-category/SKILL.md`
+    - `skill-center/skills/pinduoduo-add-category/agents/openai.yaml`
+    - `skill-center/skills/pinduoduo-add-category/references/category-application-flow.md`
+  - `pinduoduo-add-category` 已把 live skill 的拼多多类目/食品备案流程落仓，并补齐 Windows 可用说明:
+    - 明确 Windows 侧继续统一使用 `mcp__chrome_devtools`，不新增 `.ps1` 或 `.cmd` 启动器
+    - 在仓库镜像正文中补入 Windows 快捷键映射:
+      - `Control+R` / `F5`
+      - `Control+L`
+      - `Control+A`
+      - `Alt+Left` / `Alt+Right`
+    - 补入 Windows 镜像路径口径:
+      - `%USERPROFILE%\\.codex\\skills\\pinduoduo-add-category\\`
+    - 补入本地证据/附件路径说明:
+      - 使用带引号的 `C:/Users/<name>/...` 绝对路径，不把浏览器 MCP 流程改写成 shell 自动化
+  - `skill-center/skills/pinduoduo-add-category/references/category-application-flow.md` 已补充 Windows 操作注记，明确在刷新、地址栏恢复、本地截图/附件落地时沿用 Windows 键位和 `C:/...` 路径写法。
+  - `skill-center/skills/pinduoduo-add-category/agents/openai.yaml` 已同步 live skill agent 元数据，保证仓库镜像具备同名入口。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-09 21:25:11 CST (+0800)`，本轮 monitor 中涉及的新增或修改 custom-skill 行为都已在仓库内具备 Windows 可用等价结果，没有遗留的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - `weixin-shop-add-category` 与 `pinduoduo-add-category` 都是浏览器 MCP 工作流，本轮继续复用共享文档和 repo mirror，而不是新增 Windows 专属脚本分叉；`clash-verge-standard-env` 仍是跨平台共享 YAML 规则模板。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、live skill 对账和仓库镜像补齐结果。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-09 21:25:11 CST (+0800)`，今天新增的 `pinduoduo-add-category` 技能与此前晚间追加复核到的 `weixin-shop-add-category` / `clash-verge-standard-env` 批次都已完成仓库侧 Windows 转译或复核，Mac 与 Windows 覆盖今日均完整。
+
 ## 2026-07-08 22:04:53 CST (+0800)
 
 - 处理时间:
@@ -498,6 +540,7 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-29 21:23:12 CST (+0800)`，今天唯一新增的 custom-skill 行为已经同步到仓库且可直接覆盖 Windows 场景，其余批次均为 no-op；Mac 与 Windows 覆盖今日均完整。
+
 ## 2026-04-12 22:11:51 CST
 
 - 处理时间:
@@ -4524,3 +4567,47 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-06-29 21:23:12 CST (+0800)`，今天唯一新增的 custom-skill 行为已经同步到仓库且可直接覆盖 Windows 场景，其余批次均为 no-op；Mac 与 Windows 覆盖今日均完整。
+## 2026-07-09 22:01:40 CST (+0800)
+
+- 处理时间:
+  - `2026-07-09 22:01:40 CST (+0800)`
+- 输入来源:
+  - 已复核上一条已覆盖上限 `2026-07-08 22:01:45 CST (+0800)` 之后、截至当前最新 monitor 标题 `2026-07-09 21:25:11 CST (+0800)` 的全部追加内容。
+  - 这一时间窗内按标题时间戳去重后共有 `35` 个 monitor 批次。
+  - 其中 `2026-07-08 23:01:41 CST (+0800)` 与 `2026-07-08 23:01:48 CST (+0800)` 是对 `weixin-shop-add-category` / `clash-verge-standard-env` 旧批次的重复命中；对应 Windows 转译已在 `2026-07-08 22:04:53 CST (+0800)` 记录完成。
+  - `2026-07-09 16:19:05 CST (+0800)` 与 `2026-07-09 16:19:32 CST (+0800)` 是同一组新的非零批次，内容为 live skill `pinduoduo-add-category` 三件套新增。
+  - 其余 `31` 个唯一批次结果均为 `新增 0，修改 0，删除 0`，没有引入新的 custom-skill 行为。
+- 已完成的 Windows 补全:
+  - 新增仓库镜像:
+    - `skill-center/skills/pinduoduo-add-category/SKILL.md`
+    - `skill-center/skills/pinduoduo-add-category/agents/openai.yaml`
+    - `skill-center/skills/pinduoduo-add-category/references/category-application-flow.md`
+  - `skill-center/skills/pinduoduo-add-category/SKILL.md` 已同步 live skill 的拼多多类目 / 食品备案流程，并补齐 Windows 可用说明:
+    - 明确 Windows 侧继续复用 `mcp__chrome_devtools`，不新增 `.ps1` 或 `.cmd` 启动器
+    - 补入 Windows 快捷键口径:
+      - `Control+R` / `F5`
+      - `Control+L`
+      - `Control+A`
+      - `Alt+Left`
+      - `Alt+Right`
+    - 补入 Windows 镜像路径口径:
+      - `%USERPROFILE%\\.codex\\skills\\pinduoduo-add-category\\`
+    - 补入本地证据 / 上传路径口径:
+      - 使用带引号的 `C:/Users/<name>/...` 绝对路径
+  - `skill-center/skills/pinduoduo-add-category/references/category-application-flow.md` 已补充 Windows 操作注记，明确:
+    - 仍走同一套 Chrome DevTools MCP 浏览器工作流
+    - 手动刷新、地址栏恢复、全选和前进/后退时使用 Windows 键位
+    - 本地截图、证据和待上传文件路径采用带引号的 `C:/...` 形式
+  - `skill-center/skills/pinduoduo-add-category/agents/openai.yaml` 已同步 live skill agent 元数据，保证仓库镜像具备同名入口。
+  - 对 `2026-07-08 23:01:41` / `23:01:48` 这两条重复 monitor 命中已再次复核:
+    - 它们对应的 `weixin-shop-add-category` 镜像与 `clash-verge-standard-env` 规则补强并非新的待转译项
+    - 仓库中现有 Windows 说明和共享 YAML 规则已足以覆盖该批次，因此本轮未重复修改这些文件
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-09 21:25:11 CST (+0800)`，本轮新增且未转译的 custom-skill 行为已全部补齐，没有遗留的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、live skill 对账和仓库镜像补齐结果。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-09 21:25:11 CST (+0800)`，今天唯一新的 `pinduoduo-add-category` skill 批次已经在仓库内完成 Windows 转译；其余新增 monitor 记录均为 no-op 或旧批次重复命中，Mac 与 Windows 覆盖今日均完整。
