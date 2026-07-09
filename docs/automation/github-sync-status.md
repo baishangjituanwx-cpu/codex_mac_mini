@@ -25,8 +25,8 @@
   - `codex/default-python-sync`: 是。包含 `docs/automation/skill-change-monitor.md` 中新增的 `2026-07-09` monitor 记录、`docs/automation/github-sync-status.md` 的 `2026-07-09 22:26:02 CST (+0800)` 待同步提醒与本条执行记录，以及 `skill-center/skills/pinduoduo-add-category/**` 新增镜像。
   - `codex/windows-version-20260411`: 是。包含 `docs/automation/windows-translation-status.md` 中新增的 `2026-07-09 22:02:55 CST (+0800)` 状态记录。
 - 是否已提交:
-  - `codex/default-python-sync`: 是。计划提交 `Sync pinduoduo-add-category mirror and July 9 monitor updates`。
-  - `codex/windows-version-20260411`: 是。计划提交 `Record July 9 Windows translation status`。
+  - `codex/default-python-sync`: 是。已提交 `Sync pinduoduo-add-category mirror and July 9 monitor updates`。
+  - `codex/windows-version-20260411`: 是。已提交 `Record July 9 Windows translation status`。
 - 是否已推送:
   - `codex/default-python-sync`: 是。已推送到 `origin/codex/default-python-sync`。
   - `codex/windows-version-20260411`: 是。已推送到 `origin/codex/windows-version-20260411`。
