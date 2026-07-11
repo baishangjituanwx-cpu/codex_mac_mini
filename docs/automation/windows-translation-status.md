@@ -11,6 +11,61 @@
 - 阻塞原因
 - 是否达到“Mac / Windows 版本都齐全”
 
+## 2026-07-10 22:02:16 CST (+0800)
+
+- 处理时间:
+  - `2026-07-10 22:02:16 CST (+0800)`
+- 输入来源:
+  - 已复核上一条 Windows 状态记录覆盖上限 `2026-07-09 21:25:11 CST (+0800)` 之后的 `skill-change-monitor.md` 条目，截至最新标题 `2026-07-10 15:43:05 CST (+0800)`。
+  - 新增 monitor 条目中仅 `2026-07-09 22:26:02 CST (+0800)` 为非零批次：新增 `skill-center/skills/pinduoduo-add-category/` 下的 3 个仓库镜像文件；其余新增批次均为 `新增 0，修改 0，删除 0`。
+- 已完成的 Windows 补全:
+  - 已核对新增的 `pinduoduo-add-category` 镜像，确认其已包含 Windows 可用等价行为，无需额外改动。
+  - `SKILL.md` 明确复用 `mcp__chrome_devtools`，不新增 PowerShell 或 `.cmd` 启动器；同时覆盖 `Control+R` / `F5`、`Control+L`、`Control+A`、`Alt+Left` / `Alt+Right` 键位，以及 `%USERPROFILE%\\.codex\\skills\\pinduoduo-add-category\\` 与带引号的 `C:/Users/<name>/...` 路径口径。
+  - `references/category-application-flow.md` 同步说明 Windows 继续使用同一 MCP 工作流，并覆盖刷新、地址栏恢复及本地证据/附件路径写法。
+  - 已与 live skill 对账：仓库镜像仅增加 Windows 适配说明和 MCP 操作参考，保留原有 Mac / 通用实现不变。
+- 未完成的补全:
+  - 无。本轮没有待补的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异、命令包装器或仓库资产。
+- 阻塞原因:
+  - 无功能性阻塞。该 skill 是浏览器 MCP 工作流，单一跨平台实现比重复的 OS 专属脚本更合适。
+  - 本机未安装 `pwsh` 或 `powershell`，因此未进行 Windows 实机回归；结论基于镜像内容、live skill 对账和 monitor 增量记录。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。截至 `2026-07-10 15:43:05 CST (+0800)`，当天新增或修改的 custom-skill 行为均已具备 Windows 可用等价结果，Mac 与 Windows 覆盖完整。
+
+## 2026-07-11 22:02:46 CST (+0800)
+
+- 处理时间:
+  - `2026-07-11 22:02:46 CST (+0800)`
+- 输入来源:
+  - 已复核上一条 Windows 状态记录覆盖上限 `2026-07-10 15:43:05 CST (+0800)` 之后的 `skill-change-monitor.md` 条目，截至当前最新标题 `2026-07-11 21:06:01 CST (+0800)`。
+  - 新增 monitor 条目中仅 `2026-07-11 18:00:36 CST (+0800)` 与 `2026-07-11 18:04:59 CST (+0800)` 为非零批次，且两条都指向同一组 `weixin-shop-goods-inspection` live skill 新增；其余新增批次均为 `新增 0，修改 0，删除 0`。
+- 已完成的 Windows 补全:
+  - 新增仓库镜像:
+    - `skill-center/skills/weixin-shop-goods-inspection/SKILL.md`
+    - `skill-center/skills/weixin-shop-goods-inspection/agents/openai.yaml`
+    - `skill-center/skills/weixin-shop-goods-inspection/references/goods-list-flow.md`
+  - `weixin-shop-goods-inspection` 已把 live skill 的商品列表巡检流程、agent 元数据与明细 SOP 落仓，并补齐 Windows 可用说明:
+    - 明确 Windows 侧继续统一使用 `mcp__chrome_devtools`，不新增 `.ps1` 或 `.cmd` 启动器
+    - 在仓库镜像正文中补入 Windows 快捷键映射:
+      - `Control+R` / `F5`
+      - `Control+L`
+      - `Control+A`
+      - `Alt+Left` / `Alt+Right`
+    - 补入 Windows 镜像路径口径:
+      - `%USERPROFILE%\\.codex\\skills\\weixin-shop-goods-inspection\\`
+    - 补入本地证据、导出结果和附件路径说明:
+      - 使用带引号的 `C:/Users/<name>/...` 绝对路径，不把浏览器 MCP 流程改写成 shell 自动化
+  - `skill-center/skills/weixin-shop-goods-inspection/references/goods-list-flow.md` 已补充 Windows 操作注记，明确在刷新、地址栏恢复、全选和前进/后退时沿用 Windows 键位，并保持本地文件路径为 quoted `C:/...` 写法。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-11 21:06:01 CST (+0800)`，本轮 monitor 中涉及的新增或修改 custom-skill 行为都已在仓库内具备 Windows 可用等价结果，没有遗留的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 该 skill 是浏览器 MCP 工作流，单一跨平台实现比重复的 OS 专属脚本更合适。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、live skill 对账和仓库镜像补齐结果。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-11 21:06:01 CST (+0800)`，今天新增的 `weixin-shop-goods-inspection` 技能及同窗口内其余零变更批次都已完成仓库侧 Windows 转译或复核，Mac 与 Windows 覆盖今日均完整。
+
 ## 2026-07-09 22:02:55 CST (+0800)
 
 - 处理时间:
@@ -4611,3 +4666,61 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-07-09 21:25:11 CST (+0800)`，今天唯一新的 `pinduoduo-add-category` skill 批次已经在仓库内完成 Windows 转译；其余新增 monitor 记录均为 no-op 或旧批次重复命中，Mac 与 Windows 覆盖今日均完整。
+## 2026-07-10 22:04:10 CST (+0800)
+
+- 处理时间:
+  - `2026-07-10 22:04:10 CST (+0800)`
+- 输入来源:
+  - 已复核 `skill-change-monitor.md` 中上一条状态记录覆盖上限 `2026-07-09 21:25:11 CST (+0800)` 之后的新增批次。
+  - `2026-07-10 16:40:12 CST (+0800)` 与 `16:45:15 CST (+0800)` 是同一组非零新增，包含 live skill `weixin-shop-league-ops` 的 skill 定义、agent 元数据与操作参考；之后截至 `2026-07-10 19:48:24 CST (+0800)` 的新增记录均为零变更复核。
+- 已完成的 Windows 补全:
+  - 新增仓库镜像:
+    - `skill-center/skills/weixin-shop-league-ops/SKILL.md`
+    - `skill-center/skills/weixin-shop-league-ops/agents/openai.yaml`
+    - `skill-center/skills/weixin-shop-league-ops/references/shopleague-flow.md`
+  - 已保留 live skill 的通用 / Mac 可用 Chrome DevTools MCP 工作流、只读与变更确认边界、优选联盟 SOP 和安全约束。
+  - 在仓库镜像的 `SKILL.md` 与操作参考中加入 Windows 可用等价说明:
+    - 继续使用 `mcp__chrome_devtools`，无需新增 PowerShell 或 `.cmd` 启动器。
+    - 手动恢复使用 `Control+R` / `F5`、`Control+L`、`Control+A`、`Alt+Left` 和 `Alt+Right`。
+    - 本地导出或证据路径使用带引号的绝对路径，例如 `"C:/Users/<name>/Downloads/alliance-audit.csv"`。
+    - 记录 Windows 镜像安装路径 `%USERPROFILE%\\.codex\\skills\\weixin-shop-league-ops\\`。
+- 未完成的补全:
+  - 无。该技能为浏览器 MCP 驱动的跨平台工作流，不需要额外的路径分叉、命令包装器或 Windows 专属资产。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未发现 `pwsh` 或 `powershell`，但本批次不含 PowerShell 脚本；已通过仓库文件核对验证镜像和 Windows 文档补充。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-10 19:48:24 CST (+0800)`，当天唯一未转译的 custom-skill 批次已完成仓库镜像与 Windows 使用说明；Mac 与 Windows 覆盖均完整。
+
+## 2026-07-11 22:04:31 CST (+0800)
+
+- 处理时间:
+  - `2026-07-11 22:04:31 CST (+0800)`
+- 输入来源:
+  - 已复核上一条 Windows 状态记录覆盖上限 `2026-07-10 19:48:24 CST (+0800)` 之后、截至当前最新 monitor 标题 `2026-07-11 21:06:01 CST (+0800)` 的全部追加内容。
+  - 这一时间窗内新增 monitor 标题包含 `2026-07-11 13:02:02`、`14:01:55`、`15:02:11`、`16:03:06`、`17:00:20`、`17:04:58`、`18:00:36`、`18:04:59`、`19:01:11`、`20:02:59`、`20:05:48`、`21:01:52` 与 `21:06:01 CST (+0800)`；其中只有 `2026-07-11 18:00:36` 与 `18:04:59 CST (+0800)` 为同一组非零新增批次，其余均为 `新增 0，修改 0，删除 0` 的复核记录。
+  - 该非零批次对应新的 live skill `weixin-shop-goods-inspection` 三件套；仓库 `skill-center` 在本轮开始前还没有对应镜像。
+- 已完成的 Windows 补全:
+  - 新增仓库镜像:
+    - `skill-center/skills/weixin-shop-goods-inspection/SKILL.md`
+    - `skill-center/skills/weixin-shop-goods-inspection/agents/openai.yaml`
+    - `skill-center/skills/weixin-shop-goods-inspection/references/goods-list-flow.md`
+  - `weixin-shop-goods-inspection/SKILL.md` 已把 live skill 的微信小店商品列表巡检流程落仓，并补齐 Windows 可用说明:
+    - 继续统一使用 `mcp__chrome_devtools`，不新增 PowerShell 或 `.cmd` 启动器
+    - 补入 Windows 快捷键映射 `Control+R` / `F5`、`Control+L`、`Control+A`、`Alt+Left` / `Alt+Right`
+    - 补入 Windows 镜像路径 `%USERPROFILE%\\.codex\\skills\\weixin-shop-goods-inspection\\`
+    - 补入本地证据、导出和附件路径的带引号 `C:/Users/<name>/...` 写法
+  - `weixin-shop-goods-inspection/references/goods-list-flow.md` 已同步商品列表检查 SOP，并补充 Windows 操作注记，明确在刷新、地址栏恢复、全选替换、历史导航和本地导出场景继续沿用同一 MCP 工作流与 `C:/...` 路径口径。
+  - `weixin-shop-goods-inspection/agents/openai.yaml` 已同步 live skill agent 元数据，保证仓库镜像具备同名入口。
+  - 额外修正仓库漂移:
+    - `skill-center/skills/weixin-shop-league-ops/SKILL.md` 已补回与 `2026-07-10 22:04:10 CST (+0800)` 状态记录一致的 `Windows Compatibility` 段，和已存在的 `references/shopleague-flow.md` Windows 注记重新对齐；这不是新的 monitor 批次，但属于仓库侧遗漏的 Windows 文档补漏。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-11 21:06:01 CST (+0800)`，本轮新增且未转译的 custom-skill 行为已全部补齐，没有遗留的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、live skill 对账和仓库镜像补齐结果。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-11 21:06:01 CST (+0800)`，今天新增的 `weixin-shop-goods-inspection` skill 批次已经完成仓库镜像与 Windows 等价说明补齐；其余追加 monitor 记录均为零变更复核，Mac 与 Windows 覆盖今日均完整。
