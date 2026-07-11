@@ -1,0 +1,4 @@
+interface:
+  display_name: "微信小店商品状态检查"
+  short_description: "接管微信小店商品列表，检查销售、审核、库存及商品健康状态"
+  default_prompt: "Use $weixin-shop-goods-inspection to 检查微信小店商品列表与销售、审核和库存状态。"

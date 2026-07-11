@@ -1,0 +1,4 @@
+interface:
+  display_name: "微信小店优选联盟运营"
+  short_description: "接管微信小店优选联盟，规划并执行带货者、机构及活动推广合作"
+  default_prompt: "Use $weixin-shop-league-ops to 检查微信小店优选联盟状态，并规划或执行带货者、机构与活动推广。"
