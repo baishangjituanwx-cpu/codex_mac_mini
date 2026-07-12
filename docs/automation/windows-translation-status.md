@@ -258,6 +258,37 @@
     - `skill-center/skills/bysl-image-generation/**`
     - `skill-center/skills/chrome-devtools-mcp/**`
   - 上述差异都早于本轮时间窗，且已在更早的 Windows 状态记录中完成记账或判定为无需新增 Windows 补丁，因此今天没有新的待转译项。
+
+## 2026-07-12 22:02:38 CST (+0800)
+
+- 处理时间:
+  - `2026-07-12 22:02:38 CST (+0800)`
+- 输入来源:
+  - 已复核上一条 Windows 状态记录覆盖上限 `2026-07-11 21:06:01 CST (+0800)` 之后的 `skill-change-monitor.md` 条目，截至当前最新标题 `2026-07-12 21:17:37 CST (+0800)`。
+  - 该时间窗内共命中 `48` 个 monitor 批次；其中只有 `2026-07-11 22:07:13 CST (+0800)` 为非零批次，计数为 `新增 3，修改 0，删除 0`。
+  - `2026-07-11 22:07:13 CST (+0800)` 记录的新增文件仍然是 `weixin-shop-goods-inspection` 的 3 个仓库镜像文件，与上一条 Windows 状态中已完成转译的同一 skill 保持一致；其余批次均为 `新增 0，修改 0，删除 0`。
+- 已完成的 Windows 补全:
+  - 无新增转译文件，也无需新增 PowerShell 启动器、`.cmd` 包装器或额外的 Windows repo 资产。
+  - 已重新核对 `weixin-shop-goods-inspection` 现有仓库镜像，确认上一条状态记录提到的 Windows 可用说明已经落仓，无需再补:
+    - `skill-center/skills/weixin-shop-goods-inspection/SKILL.md`
+    - `skill-center/skills/weixin-shop-goods-inspection/references/goods-list-flow.md`
+    - `skill-center/skills/weixin-shop-goods-inspection/agents/openai.yaml`
+  - 复核结果确认该 skill 已完整覆盖本轮要求的 Windows 等价行为:
+    - 继续统一使用 `mcp__chrome_devtools`，不新增 Windows 专属 shell 启动器
+    - 已包含 `Control+R` / `F5`、`Control+L`、`Control+A`、`Alt+Left` / `Alt+Right` 键位说明
+    - 已包含 `%USERPROFILE%\\.codex\\skills\\weixin-shop-goods-inspection\\` 镜像路径口径
+    - 已包含 quoted `C:/Users/<name>/...` 本地证据、导出与附件路径写法
+  - 因此，本轮新增 monitor 条目里没有任何尚未落仓的 Windows 缺口；本次只追加状态账本，显式记录“无需新增转译”。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-12 21:17:37 CST (+0800)`，上一条状态覆盖之后新增的 monitor 批次没有遗留的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - `2026-07-11 22:07:13 CST (+0800)` 属于已转译 skill 的重复/补记监控批次，本轮没有发现新的 custom-skill 行为需要 Windows 侧新增实现。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有进行 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核与仓库镜像内容核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-12 21:17:37 CST (+0800)`，今天 monitor 新增内容没有引入新的 Windows 转译缺口；Mac 与 Windows 覆盖今日均完整。
 - 未完成的补全:
   - 无。
   - 截至本轮，`2026-07-04 23:37:10 CST (+0800)` 至 `2026-07-05 21:02:27 CST (+0800)` 之间新增的 `41` 条 monitor 记录及其对应 `34` 个批次没有遗留的 Windows 转译缺口。
@@ -268,6 +299,35 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-07-05 21:02:27 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-07-12 22:02:31 CST (+0800)
+
+- 处理时间:
+  - `2026-07-12 22:02:31 CST (+0800)`
+- 输入来源:
+  - 已复核上一条 Windows 状态记录覆盖上限 `2026-07-11 21:06:01 CST (+0800)` 之后、截至当前最新 monitor 标题 `2026-07-12 20:16:40 CST (+0800)` 的全部追加内容。
+  - 这一时间窗内唯一的非零 monitor 批次是 `2026-07-11 22:07:13 CST (+0800)`，计数为 `新增 3，修改 0，删除 0`；其余 `2026-07-11 23:02:57 CST (+0800)` 至 `2026-07-12 20:16:40 CST (+0800)` 的新增标题均为 `新增 0，修改 0，删除 0` 复核记录。
+  - 该非零批次仍对应 `weixin-shop-goods-inspection` 三件套，属于上一轮 `2026-07-11 18:00:36` / `18:04:59 CST (+0800)` 同一 skill 的更晚入账记录。
+- 已完成的 Windows 补全:
+  - 已复核 `skill-center/skills/weixin-shop-goods-inspection/` 仓库镜像与 live skill 差异，确认仓库侧已包含本批次需要的 Windows 等价说明，无需再新增或改写 skill 文件：
+    - `skill-center/skills/weixin-shop-goods-inspection/SKILL.md`
+    - `skill-center/skills/weixin-shop-goods-inspection/agents/openai.yaml`
+    - `skill-center/skills/weixin-shop-goods-inspection/references/goods-list-flow.md`
+  - 已确认仓库镜像保留 Mac / 通用 Chrome DevTools MCP 实现，并已覆盖 Windows 侧补全点：
+    - 不新增 PowerShell 或 `.cmd` 启动器，继续复用共享 `mcp__chrome_devtools` 工作流
+    - `Control+R` / `F5`、`Control+L`、`Control+A`、`Alt+Left` / `Alt+Right` 键位映射
+    - `%USERPROFILE%\\.codex\\skills\\weixin-shop-goods-inspection\\` 镜像路径口径
+    - 带引号的 `C:/Users/<name>/...` 本地证据、导出和附件路径写法
+  - 本轮对仓库的实际改动仅为追加这条状态记录；skill 镜像本身不需要再次补丁。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-12 20:16:40 CST (+0800)`，自上一条状态记录之后新增或修改的 custom-skill 行为没有遗留的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、live skill 与仓库镜像 diff，以及现有 Windows 注记核对结果。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-12 20:16:40 CST (+0800)`，唯一未记账的非零批次 `weixin-shop-goods-inspection` 已确认在仓库内具备 Windows 可用等价结果，其余新增 monitor 记录均为零变更复核；Mac 与 Windows 覆盖今日均完整。
 
 ## 2026-07-04 22:02:19 CST (+0800)
 
