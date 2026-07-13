@@ -13,6 +13,10 @@ prepend:
   - DOMAIN-SUFFIX,chengzijianzhan.cn,🎯 全球直连
   - DOMAIN-SUFFIX,huice.com,🎯 全球直连
   - DOMAIN-SUFFIX,pinduoduo.com,🎯 全球直连
+  - DOMAIN-SUFFIX,pinduoduo.net,🎯 全球直连
+  - DOMAIN-SUFFIX,yangkeduo.com,🎯 全球直连
+  - DOMAIN-SUFFIX,pddpic.com,🎯 全球直连
+  - DOMAIN-SUFFIX,pddugc.com,🎯 全球直连
   - DOMAIN-SUFFIX,weixin.qq.com,🎯 全球直连
   - DOMAIN-SUFFIX,bilibili.com,🎯 全球直连
   - DOMAIN-SUFFIX,b23.tv,🎯 全球直连

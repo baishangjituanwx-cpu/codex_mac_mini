@@ -1,0 +1,4 @@
+interface:
+  display_name: "拼多多商品管理"
+  short_description: "用 Chrome 接管拼多多商家后台，查询在售商品并安全管理商品信息"
+  default_prompt: "Use $pinduoduo-product-management to 查看拼多多店铺的在售商品、核验参数，并在确认后安全执行商品管理操作。"
