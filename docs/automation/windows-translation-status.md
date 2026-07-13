@@ -11,6 +11,42 @@
 - 阻塞原因
 - 是否达到“Mac / Windows 版本都齐全”
 
+## 2026-07-13 22:02:11 CST (+0800)
+
+- 处理时间:
+  - `2026-07-13 22:02:11 CST (+0800)`
+- 输入来源:
+  - 已复核上一条 Windows 状态记录覆盖上限 `2026-07-12 21:17:37 CST (+0800)` 之后、截至当前最新 monitor 标题 `2026-07-13 21:39:21 CST (+0800)` 的全部追加内容。
+  - 这一时间窗内新增 monitor 标题大多为 `新增 0，修改 0，删除 0` 的复核记录；只有 `2026-07-13 16:34:58 CST (+0800)`、`2026-07-13 16:35:56 CST (+0800)` 与 `2026-07-13 18:36:34 CST (+0800)` 为非零批次。
+  - 上述 3 条非零记录都指向同一组新增 / 修改内容:
+    - 新增 live skill `pinduoduo-product-management` 三件套
+    - 同窗口补充 `clash-verge-standard-env/references/rules-enhancement.yaml` 的拼多多相关直连域名
+- 已完成的 Windows 补全:
+  - 新增仓库镜像:
+    - `skill-center/skills/pinduoduo-product-management/SKILL.md`
+    - `skill-center/skills/pinduoduo-product-management/agents/openai.yaml`
+    - `skill-center/skills/pinduoduo-product-management/references/product-management-flow.md`
+  - `pinduoduo-product-management/SKILL.md` 已把 live skill 的拼多多商品管理流程落仓，并补齐 Windows 可用说明:
+    - 继续统一使用 `mcp__chrome_devtools`，不新增 PowerShell 或 `.cmd` 启动器
+    - 补入 Windows 快捷键映射 `Control+R` / `F5`、`Control+L`、`Control+A`、`Alt+Left` / `Alt+Right`
+    - 补入 Windows 镜像路径 `%USERPROFILE%\\.codex\\skills\\pinduoduo-product-management\\`
+    - 补入本地证据、导出与附件路径的带引号 `C:/Users/<name>/...` 写法
+  - `pinduoduo-product-management/references/product-management-flow.md` 已同步列表筛选、详情页读取、字段映射、实测样例与提交前后核验清单，并补充 Windows 下继续复用同一 MCP 工作流与 `C:/...` 路径口径的说明。
+  - `pinduoduo-product-management/agents/openai.yaml` 已同步 live skill agent 元数据，保证仓库镜像具备同名入口。
+  - 已对齐共享规则资产:
+    - `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`
+  - 上述规则模板已补齐 `pinduoduo.net`、`yangkeduo.com`、`pddpic.com` 与 `pddugc.com` 直连项，并保留已有的 `pinduoduo.com`、`weixin.qq.com` 与 WeChat 进程规则；该 YAML 为跨平台共享资源，不需要额外拆分 Windows / Mac 实现。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-13 21:39:21 CST (+0800)`，本轮新增或修改的 custom-skill 行为没有遗留的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - `pinduoduo-product-management` 属于浏览器 MCP 工作流，Windows 可用等价物是共享文档和键位 / 路径说明，而不是额外 shell 包装器。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、live skill 对账和仓库镜像补齐结果。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-13 21:39:21 CST (+0800)`，今天新增的 `pinduoduo-product-management` 技能与相关 `clash-verge-standard-env` 规则补丁已完成仓库镜像和 Windows 等价说明补齐；Mac 与 Windows 覆盖今日均完整。
+
 ## 2026-07-10 22:02:16 CST (+0800)
 
 - 处理时间:
@@ -328,6 +364,47 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-07-12 20:16:40 CST (+0800)`，唯一未记账的非零批次 `weixin-shop-goods-inspection` 已确认在仓库内具备 Windows 可用等价结果，其余新增 monitor 记录均为零变更复核；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-07-13 22:02:00 CST (+0800)
+
+- 处理时间:
+  - `2026-07-13 22:02:00 CST (+0800)`
+- 输入来源:
+  - 已复核上一条 Windows 状态记录已覆盖的 `2026-07-12 21:17:37 CST (+0800)` 之后、截至当前最新 monitor 标题 `2026-07-13 21:39:21 CST (+0800)` 的全部追加内容。
+  - 这一时间窗内只有 `2026-07-13 16:34:58 CST (+0800)` 为非零批次，计数为 `新增 3，修改 1，删除 0`；其余 `2026-07-12 22:15:33 CST (+0800)` 至 `2026-07-13 21:39:21 CST (+0800)` 的新增标题均为 `新增 0，修改 0，删除 0` 复核记录。
+  - 该非零批次包含新的 live skill `pinduoduo-product-management` 三件套，以及 `clash-verge-standard-env/references/rules-enhancement.yaml` 中新增的 4 条拼多多相关直连域名规则。
+- 已完成的 Windows 补全:
+  - 新增仓库镜像:
+    - `skill-center/skills/pinduoduo-product-management/SKILL.md`
+    - `skill-center/skills/pinduoduo-product-management/agents/openai.yaml`
+    - `skill-center/skills/pinduoduo-product-management/references/product-management-flow.md`
+  - `pinduoduo-product-management` 已把 live skill 的拼多多商品列表巡检、详情读取与安全编辑流程落仓，并补齐 Windows 可用说明:
+    - 明确 Windows 侧继续统一使用 `mcp__chrome_devtools`，不新增 `.ps1` 或 `.cmd` 启动器
+    - 在仓库镜像正文与参考文档中补入 Windows 快捷键映射:
+      - `Control+R` / `F5`
+      - `Control+L`
+      - `Control+A`
+      - `Alt+Left` / `Alt+Right`
+    - 补入 Windows 镜像路径口径:
+      - `%USERPROFILE%\\.codex\\skills\\pinduoduo-product-management\\`
+    - 补入本地证据、导出结果和附件路径说明:
+      - 使用带引号的 `C:/Users/<name>/...` 绝对路径，不把浏览器 MCP 流程改写成 shell 自动化
+  - 已同步 `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`，补齐本轮新增的拼多多直连域名:
+    - `pinduoduo.net`
+    - `yangkeduo.com`
+    - `pddpic.com`
+    - `pddugc.com`
+  - 其余 7 月 12 日晚至 7 月 13 日晚的新增 monitor 批次均为零变更复核，本轮不需要额外新增 PowerShell 启动器、Windows 文档分叉、命令包装器或 repo 资产。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-13 21:39:21 CST (+0800)`，自上一条状态记录之后新增或修改的 custom-skill 行为已经在仓库内具备 Windows 可用等价结果，没有遗留的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - `pinduoduo-product-management` 属于浏览器 MCP 工作流，本轮继续复用共享 skill 镜像与文档，而不是新增 Windows 专属脚本分叉；`clash-verge-standard-env` 本轮只需继续复用跨平台 YAML 规则模板。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、live skill 对账与仓库镜像补齐结果。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-13 21:39:21 CST (+0800)`，今天新增的 `pinduoduo-product-management` 技能与 `clash-verge-standard-env` 规则更新都已完成仓库侧 Windows 转译或复核，其余新增 monitor 记录均为零变更；Mac 与 Windows 覆盖今日均完整。
 
 ## 2026-07-04 22:02:19 CST (+0800)
 
