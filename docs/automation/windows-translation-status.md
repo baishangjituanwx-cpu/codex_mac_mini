@@ -11,6 +11,29 @@
 - 阻塞原因
 - 是否达到“Mac / Windows 版本都齐全”
 
+## 2026-07-15 22:03:04 CST (+0800)
+
+- 处理时间:
+  - `2026-07-15 22:03:04 CST (+0800)`
+- 输入来源:
+  - 已复核上一条 Windows 状态记录覆盖上限 `2026-07-14 22:00:19 CST (+0800)` 之后、截至当前最新 monitor 标题 `2026-07-15 21:28:51 CST (+0800)` 的全部追加内容。
+  - 这一增量窗口内共发现 `46` 个去重后的新增 monitor 批次；所有批次的结果汇总都仍为 `新增 0，修改 0，删除 0`。
+  - 因此本轮没有新的 custom-skill 行为、supporting automation 变更或共享 repo 资产增量需要转成 Windows 等价实现。
+- 已完成的 Windows 补全:
+  - 无新增转译项。
+  - 已明确记录本轮无需补写新的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或仓库资源。
+  - 已复核本轮 monitor 追加内容仅为重复确认四个监控根目录继续保持 `0 added / 0 modified / 0 deleted` 的状态，因此保留现有 Mac / 通用实现和既有 Windows 说明不变即可。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-15 21:28:51 CST (+0800)`，今天新增的 monitor 条目没有引入任何尚未转译的 custom-skill 行为或 Windows 缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未发现需要新增或修改的 Windows 专属资产，因此只追加状态记录。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核与仓库现状核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-15 21:28:51 CST (+0800)`，今天没有新的 custom-skill 增量需要转译；Mac 与 Windows 覆盖今日均完整。
+
 ## 2026-07-14 22:03:11 CST (+0800)
 
 - 处理时间:
@@ -4907,3 +4930,38 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-07-11 21:06:01 CST (+0800)`，今天新增的 `weixin-shop-goods-inspection` skill 批次已经完成仓库镜像与 Windows 等价说明补齐；其余追加 monitor 记录均为零变更复核，Mac 与 Windows 覆盖今日均完整。
+
+## 2026-07-15 22:02:22 CST (+0800)
+
+- 处理时间:
+  - `2026-07-15 22:02:22 CST (+0800)`
+- 输入来源:
+  - 已复核上一条 Windows 状态记录之后、当前 `skill-change-monitor.md` 中所有尚未写入本状态文件的新增内容。
+  - 该增量既包括后来补记进 monitor 的 `2026-07-14 18:56:50 CST (+0800)` 非零批次，也包括此后直到当前最新标题 `2026-07-15 21:28:51 CST (+0800)` 的全部追加复核记录。
+  - `2026-07-14 18:56:50 CST (+0800)` 记录的是 `23 added / 1 modified / 0 deleted` 的仓库镜像批次；其后新增 monitor 记录均为 `0 added / 0 modified / 0 deleted`，没有新的 custom-skill 行为增量。
+- 已完成的 Windows 补全:
+  - 本轮没有新增仓库代码或文档修改；已把这批迟到记账的 monitor 内容逐项对账到现有仓库文件，确认 Windows 等价实现已经存在。
+  - 已确认 `skill-center/skills/bysl-image-generation/SKILL.md` 已覆盖 Windows 使用说明，包括:
+    - PowerShell 调用入口 `scripts/bysl-api.ps1`
+    - `cmd` 包装器 `scripts/bysl-api.cmd`
+    - `%USERPROFILE%\\.codex\\skills\\bysl-image-generation\\` 镜像路径
+    - PowerShell UTF-8 prompt 文件写法与带引号 `C:/...` 路径口径
+  - 已确认 `skill-center/skills/bysl-image-generation/scripts/bysl-api.ps1` 与 `scripts/bysl-api.cmd` 已提供 Windows 可用命令包装，不需要额外补写启动器。
+  - 已确认 `skill-center/skills/chrome-devtools-mcp/SKILL.md` 已补齐 Windows 键位与路径说明，包括 `Control+R` / `F5`、`Control+L`、`Control+A`、`Alt+Left` / `Alt+Right`，且明确该 skill 不需要额外 PowerShell 或 `.cmd` 分叉。
+  - 已复核 `2026-07-14 18:56:50 CST (+0800)` 同批次中其余 skill-center 镜像:
+    - `pinduoduo-add-category`
+    - `pinduoduo-product-management`
+    - `weixin-shop-add-category`
+    - `weixin-shop-goods-inspection`
+    - `weixin-shop-league-ops`
+  - 上述镜像对应的 Windows 转译已在更早状态记录中完成，当前仓库内容仍保持完整，无需重复改写。
+  - 已确认 `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml` 仍是跨平台共享规则模板，本轮没有新增 Windows 专属差异需要拆分。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-15 21:28:51 CST (+0800)`，当前 monitor 中尚未写入本状态文件的 custom-skill 变更已经全部复核完毕，没有遗留的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机当前仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；本轮判断基于 `skill-change-monitor.md` 增量复核和仓库现有文件对账。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-15 21:28:51 CST (+0800)`，本轮新增纳入复核范围的 non-zero monitor 批次已确认具备 Windows 等价实现，其余新增 monitor 记录均为 no-op；Mac 与 Windows 覆盖今日均完整。
