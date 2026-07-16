@@ -4965,3 +4965,30 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-07-15 21:28:51 CST (+0800)`，本轮新增纳入复核范围的 non-zero monitor 批次已确认具备 Windows 等价实现，其余新增 monitor 记录均为 no-op；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-07-16 22:03:09 CST (+0800)
+
+- 处理时间:
+  - `2026-07-16 22:03:09 CST (+0800)`
+- 输入来源:
+  - 已复核上一条 Windows 状态记录覆盖上限 `2026-07-15 21:28:51 CST (+0800)` 之后、截至当前最新 monitor 标题 `2026-07-16 21:45:19 CST (+0800)` 的全部追加内容。
+  - 这一增量窗口内共有 `48` 个去重后的 monitor 批次；其中 `47` 个批次结果为 `新增 0，修改 0，删除 0`。
+  - 唯一的非零批次为 `2026-07-16 08:36:32 CST (+0800)`，结果是 `新增 23，修改 1，删除 0`，对应 `bysl-image-generation`、`chrome-devtools-mcp`、`pinduoduo-add-category`、`pinduoduo-product-management`、`weixin-shop-add-category`、`weixin-shop-goods-inspection`、`weixin-shop-league-ops` 的仓库镜像落地，以及 `clash-verge-standard-env/references/rules-enhancement.yaml` 的共享规则补强。
+- 已完成的 Windows 补全:
+  - 本轮没有新增仓库代码或文档补丁；已对唯一非零批次逐项复核，确认仓库里的 Windows 等价实现已经齐全，因此无需重复改写 skill 文件。
+  - 已确认 `skill-center/skills/bysl-image-generation/` 已包含 Windows 可用资产与说明:
+    - `scripts/bysl-api.ps1`
+    - `scripts/bysl-api.cmd`
+    - PowerShell UTF-8 prompt 写法、`NANO_TOKEN` 环境变量用法，以及带引号 `C:/...` 路径口径
+  - 已确认 `skill-center/skills/chrome-devtools-mcp/SKILL.md` 与本批次新增的拼多多 / 微信小店浏览器技能镜像都已覆盖 Windows 键位与路径说明，包括 `Control+R` / `F5`、`Control+L`、`Control+A`、`Alt+Left` / `Alt+Right`、`%USERPROFILE%\\.codex\\skills\\...\\` 与 quoted `C:/Users/<name>/...` 路径写法。
+  - 已确认 `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml` 已包含本批次需要的共享直连规则，包括 WeChat / WeApp 进程规则，以及 `pinduoduo.com`、`pddpic.com`、`yangkeduo.com`、`weixin.qq.com`、`chengzijianzhan.cn`、`huice.com` 等域名；该 YAML 为跨平台共享资产，不需要额外拆分 Windows / Mac 版本。
+  - 结论是: `2026-07-16 08:36:32 CST (+0800)` 这组新增 / 修改内容在进入仓库时就已经带齐 Windows 可用等价物，本轮只需要追加状态记录并明确“无需新增转译”。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-16 21:45:19 CST (+0800)`，本轮 monitor 新增内容没有遗留的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核与仓库现有 Windows 资产对账。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-16 21:45:19 CST (+0800)`，今天唯一的 non-zero monitor 批次已经具备完整的 Windows 等价实现，其余新增 monitor 记录均为 no-op；Mac 与 Windows 覆盖今日均完整。
