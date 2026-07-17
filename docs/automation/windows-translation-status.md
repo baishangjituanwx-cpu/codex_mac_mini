@@ -11,6 +11,43 @@
 - 阻塞原因
 - 是否达到“Mac / Windows 版本都齐全”
 
+## 2026-07-17 22:01:54 CST (+0800)
+
+- 处理时间:
+  - `2026-07-17 22:01:54 CST (+0800)`
+- 输入来源:
+  - 已复核上一条 Windows 状态记录覆盖上限 `2026-07-15 21:28:51 CST (+0800)` 之后、截至当前最新 monitor 标题 `2026-07-17 21:59:00 CST (+0800)` 的全部追加内容。
+  - 这段增量窗口里只有 `2026-07-16 08:36:32 CST (+0800)` 为非零批次，结果是 `新增 23，修改 1，删除 0`；其后新增 monitor 标题均为 `新增 0，修改 0，删除 0`。
+  - 对该非零批次去重后，`pinduoduo-add-category`、`pinduoduo-product-management`、`weixin-shop-add-category`、`weixin-shop-goods-inspection` 与 `clash-verge-standard-env` 的拼多多/微信基础直连补丁已经分别在 `2026-07-09`、`2026-07-11`、`2026-07-13` 的 Windows 状态记录里覆盖，本轮不重复记为新增待转译项。
+  - 本轮真正新增复核的 Windows 相关增量集中在 `bysl-image-generation`、`chrome-devtools-mcp` 与 `weixin-shop-league-ops`，另对 `clash-verge-standard-env/references/rules-enhancement.yaml` 里新增的 WeChat/WeApp 进程与 `chengzijianzhan.cn`、`huice.com` 域名直连项做了共享资产复核。
+- 已完成的 Windows 补全:
+  - 已确认 `skill-center/skills/bysl-image-generation/SKILL.md`、`references/api.md`、`scripts/bysl-api.ps1`、`scripts/bysl-api.cmd`、`scripts/bysl-api.js` 与 `src/bysl-client.js` 已具备 Windows 可用等价实现，无需再补新文件:
+    - 提供 PowerShell 启动器 `bysl-api.ps1`，会优先解析 `node` / `node.exe`
+    - 提供 `.cmd` 包装器 `bysl-api.cmd`，可直接把参数转发给同一套 Node CLI
+    - 文档已明确 Windows 侧必须用 UTF-8 prompt 文件，不通过 PowerShell stdin 传中文 JSON/JS
+    - 文档和示例已统一到 quoted `C:/...` 路径、`Set-Content -Encoding utf8` / `Out-File -Encoding utf8`，以及 `%USERPROFILE%` 下的镜像路径口径
+  - 已确认 `skill-center/skills/chrome-devtools-mcp/SKILL.md` 与 `agents/openai.yaml` 已补齐 Windows repo mirror 说明:
+    - 明确 Windows 侧继续复用 `mcp__chrome_devtools`，不新增 PowerShell 或 `.cmd` 包装器
+    - 明确 `Control+R` / `F5`、`Control+L`、`Control+A`、`Alt+Left` / `Alt+Right` 的键位映射
+    - 明确 Windows 镜像路径 `%USERPROFILE%\\.codex\\skills\\chrome-devtools-mcp\\`
+  - 已确认 `skill-center/skills/weixin-shop-league-ops/SKILL.md`、`references/shopleague-flow.md` 与 `agents/openai.yaml` 已补齐 Windows 可用说明:
+    - 明确该技能在 Windows 上继续走同一套 Chrome DevTools MCP 工作流，不拆分额外 shell 启动器
+    - 明确浏览器恢复键位、quoted `C:/Users/<name>/...` 导出/证据路径，以及 `%USERPROFILE%\\.codex\\skills\\weixin-shop-league-ops\\` 安装口径
+    - 参考文档已同步 Windows 下的路径与按键说明，不把浏览器操作改写成本地脚本自动化
+  - 已复核共享规则资产 `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`:
+    - 本轮新增的 WeChat/WeApp 进程直连，以及 `chengzijianzhan.cn`、`huice.com` 等域名规则属于跨平台共享网络配置
+    - 该 YAML 不需要额外拆分 Windows / Mac 版本；Windows 侧直接复用同一份规则模板即可
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-17 21:59:00 CST (+0800)`，新增 monitor 条目里没有遗留的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮主要工作是对 `2026-07-16 08:36:32 CST (+0800)` 非零批次做去重复核并补记 Windows 覆盖结果；仓库里的 Windows 等价实现已经存在，因此无需再新增实现分支。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、仓库文件内容核对和脚本入口检查。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-17 21:59:00 CST (+0800)`，本轮新增且此前未补记的 custom-skill 行为已经完成 Windows 覆盖复核，后续 monitor 追加内容也均为零变更；Mac 与 Windows 覆盖今日均完整。
+
 ## 2026-07-15 22:03:04 CST (+0800)
 
 - 处理时间:
@@ -4992,3 +5029,26 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-07-16 21:45:19 CST (+0800)`，今天唯一的 non-zero monitor 批次已经具备完整的 Windows 等价实现，其余新增 monitor 记录均为 no-op；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-07-17 22:01:51 CST (+0800)
+
+- 处理时间:
+  - `2026-07-17 22:01:51 CST (+0800)`
+- 输入来源:
+  - 已复核上一条 Windows 状态记录覆盖上限 `2026-07-16 21:45:19 CST (+0800)` 之后、截至当前最新 monitor 标题 `2026-07-17 13:59:00 UTC (+0000)`（对应本地时间 `2026-07-17 21:59:00 CST (+0800)`）的全部追加内容。
+  - 这一增量窗口内共有 `48` 个去重后的 monitor 批次，结果全部为 `新增 0，修改 0，删除 0`。
+  - 因此本轮没有新的 custom-skill 行为、supporting automation 变更或共享 repo 资产增量需要转成 Windows 等价实现。
+- 已完成的 Windows 补全:
+  - 无新增转译项。
+  - 已明确记录本轮无需补写新的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或仓库资源。
+  - 已复核本轮 monitor 追加内容仅为重复确认四个监控根目录继续保持 `0 added / 0 modified / 0 deleted` 的状态，因此保留现有 Mac / 通用实现和既有 Windows 说明不变即可。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-17 21:59:00 CST (+0800)`，今天新增的 monitor 条目没有引入任何尚未转译的 custom-skill 行为或 Windows 缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未发现需要新增或修改的 Windows 专属资产，因此只追加状态记录。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核与仓库现状核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-17 21:59:00 CST (+0800)`，今天没有新的 custom-skill 增量需要转译；Mac 与 Windows 覆盖今日均完整。
