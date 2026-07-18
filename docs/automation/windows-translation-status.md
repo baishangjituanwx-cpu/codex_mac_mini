@@ -11,6 +11,35 @@
 - 阻塞原因
 - 是否达到“Mac / Windows 版本都齐全”
 
+## 2026-07-18 22:02:40 CST (+0800)
+
+- 处理时间:
+  - `2026-07-18 22:02:40 CST (+0800)`
+- 输入来源:
+  - 已复核上一条 Windows 状态记录覆盖上限 `2026-07-17 21:59:00 CST (+0800)` 之后、截至当前最新 monitor 标题 `2026-07-18 21:14:30 CST (+0800)` 的全部追加内容。
+  - 这段增量窗口里共新增 `46` 个 monitor 批次；其中只有 `2026-07-18 05:02:34 CST (+0800)` 为非零批次，结果是 `新增 23，修改 1，删除 0`，其余批次均为 `新增 0，修改 0，删除 0`。
+  - 该非零批次列出的新增项集中在 `bysl-image-generation`、`chrome-devtools-mcp`、`pinduoduo-add-category`、`pinduoduo-product-management`、`weixin-shop-add-category`、`weixin-shop-goods-inspection`、`weixin-shop-league-ops`，并包含共享规则资产 `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml` 的 1 处修改。
+- 已完成的 Windows 补全:
+  - 本轮没有新增需要补写的 Windows 实现；已对上述非零批次逐项复核并确认仓库现状已经具备 Windows 可用等价物。
+  - `skill-center/skills/bysl-image-generation/` 已具备完整 Windows 专属入口与文档，无需再补:
+    - `scripts/bysl-api.ps1` 与 `scripts/bysl-api.cmd` 已提供 PowerShell / `.cmd` 启动器
+    - `SKILL.md` 与 `references/api.md` 已覆盖 UTF-8 中文提示词、quoted `C:/...` 路径、`Set-Content -Encoding utf8` / `Out-File -Encoding utf8`，以及避免通过 PowerShell stdin 传中文 JSON/JS 的约束
+  - `skill-center/skills/chrome-devtools-mcp/`、`pinduoduo-add-category/`、`pinduoduo-product-management/`、`weixin-shop-add-category/`、`weixin-shop-goods-inspection/` 与 `weixin-shop-league-ops/` 已具备 Windows 文档补全，无需新增命令包装器:
+    - 均明确继续复用同一套 `mcp__chrome_devtools` 浏览器工作流，不拆分额外 PowerShell 或 `.cmd` 启动器
+    - 均已写明 `Control+R` / `F5`、`Control+L`、`Control+A`、`Alt+Left` / `Alt+Right` 等 Windows 键位映射
+    - 均已写明 `%USERPROFILE%\\.codex\\skills\\...\\` 安装路径与 quoted `C:/Users/<name>/...` 本地证据 / 导出路径口径
+  - `skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml` 的新增 WeChat/WeApp 进程、`weixin.qq.com`、拼多多、`chengzijianzhan.cn` 与 `huice.com` 直连规则属于跨平台共享网络配置；Windows 侧直接复用同一份 YAML，无需拆分额外版本。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-18 21:14:30 CST (+0800)`，本轮 monitor 追加内容里没有遗留的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮实际修改仅为补记状态文档；对非零批次复核后确认仓库里的 Windows 等价实现与说明已经存在，因此不需要再新增实现分支。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、仓库文件内容核对和脚本入口检查。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-18 21:14:30 CST (+0800)`，今天新增 monitor 批次涉及的 custom-skill 行为都已具备 Windows 可用等价结果；Mac 与 Windows 覆盖今日均完整。
+
 ## 2026-07-17 22:01:54 CST (+0800)
 
 - 处理时间:
