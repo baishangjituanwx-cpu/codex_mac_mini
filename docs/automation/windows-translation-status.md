@@ -11,6 +11,62 @@
 - 阻塞原因
 - 是否达到“Mac / Windows 版本都齐全”
 
+## 2026-07-22 22:03:29 CST (+0800)
+
+- 处理时间:
+  - `2026-07-22 22:03:29 CST (+0800)`
+- 输入来源:
+  - 已复核上一条 Windows 状态记录覆盖上限 `2026-07-21 21:47:06 CST (+0800)` 之后、截至当前最新 monitor 标题 `2026-07-22 21:08:14 CST (+0800)` 的全部追加内容。
+  - 这一增量窗口内去重后包含 `2026-07-22 08:52:55 CST (+0800)`、`09:59:30 CST (+0800)`、`09:59:55 CST (+0800)`、`11:08:03 CST (+0800)`、`11:12:35 CST (+0800)`、`12:01:58 CST (+0800)`、`13:01:33 CST (+0800)`、`14:01:47 CST (+0800)`、`14:09:41 CST (+0800)`、`15:05:51 CST (+0800)`、`16:06:53 CST (+0800)`、`16:11:33 CST (+0800)`、`17:06:53 CST (+0800)`、`17:09:16 CST (+0800)`、`19:14:55 CST (+0800)`、`19:18:51 CST (+0800)`、`20:11:22 CST (+0800)`、`20:13:36 CST (+0800)`、`21:07:43 CST (+0800)` 与 `21:08:14 CST (+0800)` 等 monitor 批次。
+  - 其中只有 `2026-07-22 19:14:55 CST (+0800)` 与 `2026-07-22 19:18:51 CST (+0800)` 为非零批次，均记录同一组新增内容: `wechat-shop-return-address` 的 `SKILL.md` 与 `agents/openai.yaml`；其余新增 monitor 记录均为 `新增 0，修改 0，删除 0`。
+- 已完成的 Windows 补全:
+  - 新增仓库镜像:
+    - `skill-center/skills/wechat-shop-return-address/SKILL.md`
+    - `skill-center/skills/wechat-shop-return-address/agents/openai.yaml`
+  - 已将 live custom skill `wechat-shop-return-address` 镜像到仓库，并补齐 Windows 可用说明而不移除 Mac / 通用实现:
+    - 明确继续复用 `mcp__chrome_devtools` 浏览器工作流，不新增 PowerShell 或 `.cmd` 启动器
+    - 补入 Windows 键位映射 `Control+R` / `F5`、`Control+L`、`Control+A`、`Alt+Left` / `Alt+Right`
+    - 补入 Windows 镜像路径 `%USERPROFILE%\\.codex\\skills\\wechat-shop-return-address\\`
+    - 补入本地证据、导出和附件路径应使用带引号 `C:/Users/<name>/...` 的说明
+  - 已把 live skill 的售后地址行为完整落仓，包括:
+    - 地址池查重与按地址 ID 复用
+    - 新增地址时的字段核对与默认地址影响提示
+    - 编辑地址时按地址 ID 定位，不仅凭联系人名称判断
+    - 铺货发布前按地址 ID 复核售后地址
+    - `默认退货地址` 作为全店设置的确认边界
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-22 21:08:14 CST (+0800)`，今天新增 monitor 条目里的自定义 skill 行为已经完成 Windows 转译，没有遗留的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核、live skill 内容核对和仓库镜像补全。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-22 21:08:14 CST (+0800)`，今天 monitor 新增的 `wechat-shop-return-address` 已具备 Windows 可用等价镜像，其余新增 monitor 记录均为 no-op；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-07-22 22:01:23 CST (+0800)
+
+- 处理时间:
+  - `2026-07-22 22:01:23 CST (+0800)`
+- 输入来源:
+  - 已复核上一条 Windows 状态记录覆盖上限 `2026-07-21 21:47:06 CST (+0800)` 之后、截至当前最新 monitor 标题 `2026-07-22 20:13:36 CST (+0800)` 的全部追加内容。
+  - 这一增量窗口内共有 `2` 个新增 monitor 批次：`2026-07-22 08:57:13 CST (+0800)` 与 `2026-07-22 20:13:36 CST (+0800)`。
+  - 上述 `2` 个批次的结果汇总全部为 `新增 0，修改 0，删除 0`，没有新的 custom-skill 行为、supporting automation 变更或共享 repo 资产增量进入 Windows 转译范围。
+- 已完成的 Windows 补全:
+  - 无新增转译项。
+  - 已明确记录本轮无需补写新的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或仓库资源。
+  - 已复核今天新增的 monitor 条目都只是重复确认四个监控根目录继续保持 `0 added / 0 modified / 0 deleted`，因此保留现有 Mac / 通用实现和既有 Windows 说明不变。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-22 20:13:36 CST (+0800)`，今天新增的 monitor 条目没有引入任何尚未转译的 custom-skill 行为或 Windows 缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本轮未发现需要新增或修改的 Windows 专属资产，因此只追加状态记录。
+  - 本机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核与仓库现状核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-22 20:13:36 CST (+0800)`，今天没有新的 custom-skill 增量需要转译；Mac 与 Windows 覆盖今日均完整。
+
 ## 2026-07-21 22:02:42 CST (+0800)
 
 - 处理时间:
