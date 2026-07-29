@@ -1,0 +1,4 @@
+interface:
+  display_name: "更新 Cloudflare EdgeTunnel"
+  short_description: "跨浏览器验证账号并安全更新 Cloudflare EdgeTunnel"
+  default_prompt: "使用 $update-edgetunnel-pages 在正确的 Cloudflare 账号中更新指定 EdgeTunnel，并验证线上版本。"
