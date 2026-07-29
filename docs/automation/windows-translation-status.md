@@ -11,6 +11,51 @@
 - 阻塞原因
 - 是否达到“Mac / Windows 版本都齐全”
 
+## 2026-07-29 22:20:30 CST (+0800)
+
+- 处理时间:
+  - `2026-07-29 22:20:30 CST (+0800)`
+- 输入来源:
+  - 已对照上一条 Windows 状态记录覆盖上限 `2026-07-29 13:24:54 UTC (+0000)`，继续复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 中随后新增、尚未单独记入 Windows 状态文档的 monitor 批次。
+  - 本轮新增 monitor 批次为 `2026-07-29 14:09:52 UTC (+0000)`（对应本地时间 `2026-07-29 22:09:52 CST (+0800)`）。
+  - 该批次记录的是仓库镜像 `skill-center/skills/update-edgetunnel-pages/{SKILL.md,agents/openai.yaml}` 进入监控范围的新增 `2` 条路径；对应的 custom-skill 行为和 Windows 可用等价内容已在上一条 `2026-07-29 22:03:52 CST (+0800)` 记录中完成转译并落仓。
+- 已完成的 Windows 补全:
+  - 无新增仓库补丁；本轮只补状态记录。
+  - 已复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/SKILL.md) 仍包含完整 Windows 说明，包括不新增独立 PowerShell 启动器、Windows 键位差异、`%USERPROFILE%\\.codex\\skills\\update-edgetunnel-pages\\` 路径规则，以及 ZIP 预检的 PowerShell 等价示例。
+  - 已复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/agents/openai.yaml`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/agents/openai.yaml) 入口元数据已在仓库镜像中齐备，不需要额外的 Windows 命令包装器或分叉资产。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-29 22:09:52 CST (+0800)`，`update-edgetunnel-pages` 这批新增 monitor 条目没有遗留任何尚未转译的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 当前主机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；本轮判断基于 monitor 增量复核和仓库镜像内容核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-29 22:09:52 CST (+0800)`，今天 monitor 新增的 `update-edgetunnel-pages` 已完成 Mac / Windows 双端覆盖；本轮新增 monitor 只是在文档上补齐该批次的独立状态闭环。
+
+## 2026-07-29 22:03:52 CST (+0800)
+
+- 处理时间:
+  - `2026-07-29 22:03:52 CST (+0800)`
+- 输入来源:
+  - 已按用户提供的 `Last run: 2026-07-28T14:02:02.974Z` 复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 中尚未转译的新增条目，覆盖到当前最新 monitor 标题 `2026-07-29 13:24:54 UTC (+0000)`（对应本地时间 `2026-07-29 21:24:54 CST (+0800)`）。
+  - 这一窗口内只有 `2026-07-29 12:24:31 UTC (+0000)` 是新的非零批次；其内容是本地 `.codex` 新增 skill `update-edgetunnel-pages` 的 `SKILL.md` 与 `agents/openai.yaml`。其后新增的 monitor 条目继续只是 `0 added / 0 modified / 0 deleted` 的复核记录。
+- 已完成的 Windows 补全:
+  - 新增仓库镜像 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/SKILL.md) 与 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/agents/openai.yaml`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/agents/openai.yaml)，把 live custom skill 的 Cloudflare EdgeTunnel 更新流程完整落仓。
+  - 在仓库镜像里补入 `Windows Repo Mirror Notes`，明确该 skill 不需要额外的 Windows PowerShell 或 `.cmd` 启动器，Windows 等价实现仍然是同一套受控浏览器工作流。
+  - 补入 Windows 键位差异说明：`Control+R` / `F5`、`Control+L`、`Control+A`、`Alt+Left` / `Alt+Right`。
+  - 补入 Windows 路径规则：镜像安装目录使用 `%USERPROFILE%\\.codex\\skills\\update-edgetunnel-pages\\`，下载 ZIP、截图和证据路径使用带引号的 `C:/Users/<name>/...` 绝对路径。
+  - 为 Pages Direct Upload 的 ZIP 预检补入 Windows PowerShell 等价示例，覆盖 `_worker.js` 存在性检查、危险路径条目检查和前 8 行内容抽样读取，避免仓库镜像只留下 macOS `unzip`/`sed` 示例。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-29 21:24:54 CST (+0800)`，本轮新增 monitor 条目涉及的 custom-skill 行为已经完成 Windows 转译，没有遗留的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 当前主机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；本轮判断基于 monitor 增量复核、live skill 内容对照和仓库镜像补全。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-29 21:24:54 CST (+0800)`，今天新增的 `update-edgetunnel-pages` 已具备仓库内的 Windows 可用等价镜像，其余新增 monitor 条目均为 zero-diff 复核；Mac 与 Windows 覆盖今日均完整。
+
 ## 2026-07-28 22:02:54 CST (+0800)
 
 - 处理时间:
