@@ -57,3 +57,5 @@ Label the extraction date and source page. Treat all product data as a point-in-
 ## Required Reference
 
 Read `references/goods-list-flow.md` in full before operating. It contains the route behavior, state-verification rules, pagination procedure, bounded DOM extractor, failure-reason workflow, and report format.
+
+When the request involves supplier `controlMinPrice`, price-floor violations, cost or freight changes, margin recalculation, stopped supply, inventory zeroing, or remediation across Huice and WeChat, also use `weixin-shop-price-floor-audit`. This inspection skill proves the official product state; it does not replace the Huice-side SKU mapping and cost audit.
