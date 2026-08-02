@@ -11,6 +11,29 @@
 - 阻塞原因
 - 是否达到“Mac / Windows 版本都齐全”
 
+## 2026-07-30 22:04:37 CST (+0800)
+
+- 处理时间:
+  - `2026-07-30 22:04:37 CST (+0800)`
+- 输入来源:
+  - 已对照上一条 Windows 状态记录实际已覆盖的最新非零 monitor 批次 `2026-07-29 14:09:52 UTC (+0000)`，继续复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 中随后新增、此前尚未单独记入本状态文件的 monitor 批次。
+  - 本轮新增 monitor 窗口覆盖 `2026-07-29 14:25:53 UTC (+0000)` 到当前最新标题 `2026-07-30 13:47:08 UTC (+0000)`，共 `44` 个新增批次。
+  - 上述 `44` 个批次里，`43` 个批次结果为 `新增 0，修改 0，删除 0`；唯一的非零批次是 `2026-07-30 09:09:47 UTC (+0000)`，结果为 `新增 0，修改 0，删除 2`。
+  - 该删除批次只涉及本地技能安装树 `~/.codex/skills/update-edgetunnel-pages/{SKILL.md,agents/openai.yaml}`；仓库镜像 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/SKILL.md) 与 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/agents/openai.yaml`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/agents/openai.yaml) 仍保留在仓库中。
+- 已完成的 Windows 补全:
+  - 无新增转译项；本轮没有新的 custom-skill 新增行为或修改行为进入待转译范围。
+  - 已复核 `update-edgetunnel-pages` 的仓库镜像仍然完整保留此前补齐的 Windows 可用内容，包括不新增独立 PowerShell 启动器、Windows 键位差异、`%USERPROFILE%\\.codex\\skills\\update-edgetunnel-pages\\` 路径规则，以及 Pages ZIP 预检的 PowerShell 等价示例。
+  - 已明确确认 `2026-07-30 09:09:47 UTC (+0000)` 的删除只发生在本地 `.codex` 安装副本，不影响仓库内 Mac / 通用实现，也没有移除任何 Windows 文档、命令包装器或 repo 资产。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-07-30 13:47:08 UTC (+0000)`，当前 monitor 里尚未写入本状态文件的批次没有遗留任何尚未转译的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 当前主机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；本轮判断基于 monitor 增量复核和仓库镜像内容核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-07-30 13:47:08 UTC (+0000)`，今天新增写入 monitor 的内容只有一个本地安装副本删除批次，其余均为 zero-diff 复核；仓库内 Mac 与 Windows 覆盖今日均完整。
+
 ## 2026-07-29 22:20:30 CST (+0800)
 
 - 处理时间:
@@ -5437,3 +5460,68 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-07-30 21:47:08 CST (+0800)`，今天新增写入 monitor 的内容没有新的跨平台行为差异需要补齐；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-08-01 22:06:20 CST (+0800)
+
+- 处理时间:
+  - `2026-08-01 22:06:20 CST (+0800)`
+- 输入来源:
+  - 已对照上一条 Windows 状态记录覆盖上限 `2026-07-30 13:47:08 UTC (+0000)`（对应本地时间 `2026-07-30 21:47:08 CST (+0800)`），继续复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 中随后新增、尚未写入本状态文件的 monitor 批次。
+  - 本轮覆盖到当前最新 monitor 标题 `2026-08-01 13:33:39 UTC (+0000)`（对应本地时间 `2026-08-01 21:33:39 CST (+0800)`）。
+  - 这一窗口里真正新增的 non-zero monitor 批次只有两条，分别是 `2026-08-01 10:05:45 UTC (+0000)` 的 `3 added / 0 modified / 0 deleted`，以及 `2026-08-01 10:29:53 UTC (+0000)` 的 `1 added / 2 modified / 0 deleted`；两条都只涉及本地 `.codex` 自定义技能 `update-edgetunnel-pages`。其余随后批次一直到 `2026-08-01 13:33:39 UTC (+0000)` 都是 `0 added / 0 modified / 0 deleted` 的去重复核。
+- 已完成的 Windows 补全:
+  - 已将仓库镜像 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/SKILL.md) 升级为新的“先审计再部署”流程，补齐四份完整代码快照前置条件、强制下游兼容性审计门禁、Step 4 审计流程、`PASSED` / `BLOCKED` 生产门禁、部署后最小验证要求，以及 `update-edgetunnel-pages` 现在要求的下游 Worker / NAS 兼容性结论输出。
+  - 已保留并并入现有 Windows 可用说明，而没有删除 Mac / 通用实现，包括 `Control+R` / `F5`、`Control+L`、`Control+A`、`Alt+Left` / `Alt+Right` 键位差异，`%USERPROFILE%\\.codex\\skills\\update-edgetunnel-pages\\` 安装路径，以及带引号 `C:/Users/<name>/...` 本地路径口径。
+  - 已在同一 skill 文档里保留 Windows PowerShell ZIP 预检等价示例，明确这次新增的审计版工作流仍然不需要额外的 `.ps1` 或 `.cmd` 启动器；Windows 等价实现仍然是同一套受控浏览器流程加审计门禁。
+  - 已新增仓库参考文档 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/references/downstream-compatibility-audit.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/references/downstream-compatibility-audit.md)，把本地 skill 新增的上下游完整代码比对矩阵、下游 Worker / NAS 决策规则、最小验证清单和 `PASSED` / `BLOCKED` 审计报告模板落仓，并补入 Windows handoff 说明:
+    - quoted `C:/Users/<name>/...` 证据路径
+    - `%USERPROFILE%\\.codex\\skills\\update-edgetunnel-pages\\` 路径口径
+    - `git diff --no-index` / `rg` 优先
+    - PowerShell `Compare-Object` 或 `fc.exe /n` 作为 shell fallback
+    - 不把审计流程改写成独立 Windows 包装脚本
+  - 已同步更新 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/agents/openai.yaml`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/agents/openai.yaml)，把 agent 展示名、简述和默认提示词改成“审计并更新”定位，和本地 `.codex` 新版 skill 行为保持一致。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-08-01 21:33:39 CST (+0800)`，本轮 monitor 新增的 `update-edgetunnel-pages` 审计版行为已经完成仓库内 Windows 转译，没有遗留的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机当前仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；本轮判断基于 monitor 增量复核、本地 `.codex` skill 对照和仓库镜像补丁核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-08-01 21:33:39 CST (+0800)`，今天 monitor 中新增的 `update-edgetunnel-pages` 审计版内容已完成 Mac / Windows 双端覆盖；其后新增批次均为 zero-diff 复核，今日两端覆盖完整。
+
+## 2026-08-02 22:06:42 CST (+0800)
+
+- 处理时间:
+  - `2026-08-02 22:06:42 CST (+0800)`
+- 输入来源:
+  - 已对照上一条 Windows 状态记录覆盖上限 `2026-08-01 13:33:39 UTC (+0000)`（对应本地时间 `2026-08-01 21:33:39 CST (+0800)`），继续复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 中随后新增、尚未写入本状态文件的 monitor 批次。
+  - 本轮覆盖到当前最新 monitor 标题 `2026-08-02 13:55:05 UTC (+0000)`（对应本地时间 `2026-08-02 21:55:05 CST (+0800)`）。
+  - 这一窗口里的非零批次共有 `3` 条：`2026-08-02 10:51:47 UTC (+0000)` 的 `0 added / 2 modified / 0 deleted`，`2026-08-02 13:12:57 UTC (+0000)` 的 `2 added / 1 modified / 0 deleted`，以及 `2026-08-02 13:55:05 UTC (+0000)` 的 `2 added / 1 modified / 0 deleted`。
+  - 其中 `2026-08-02 13:55:05 UTC (+0000)` 是对 `weixin-shop-price-floor-audit` 新增和 `weixin-shop-goods-inspection` 联动边界的复核重记，路径集合与 `2026-08-02 13:12:57 UTC (+0000)` 相同，因此本轮按一组仓库补丁闭环，不重复拆分第二套 Windows 资产。
+- 已完成的 Windows 补全:
+  - 已新增仓库镜像 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/SKILL.md)、[`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/agents/openai.yaml`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/agents/openai.yaml)、[`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/references/api-and-attribution.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/references/api-and-attribution.md)、[`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/scripts/huice-push-distribution-order.js`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/scripts/huice-push-distribution-order.js) 与 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/scripts/test-huice-push-distribution-order.js`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/scripts/test-huice-push-distribution-order.js)，把 `2026-08-02 10:51:47 UTC (+0000)` 这批慧策推单 skill 的增量完整落仓。
+  - 已为同一 skill 新增 Windows PowerShell wrapper [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/scripts/huice-push-distribution-order.ps1`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/scripts/huice-push-distribution-order.ps1)，避免 Windows 侧继续依赖 bash 风格的内联环境变量调用。
+  - 已在 `huice-distribution-order-push` 的仓库镜像说明里补齐 Windows 可用等价内容:
+    - `$env:HUICE_MAIN_COOKIE` 的会话级用法
+    - `.\scripts\huice-push-distribution-order.ps1` 的只读巡检、余额恢复后 watch、故障修复后单次 guarded execute 示例
+    - `Control+R` / `F5`、`Control+L`、`Control+A`、`Alt+Left` / `Alt+Right` 键位差异
+    - `%USERPROFILE%\\.codex\\skills\\huice-distribution-order-push\\` 安装路径
+    - quoted `C:/Users/<name>/...` 证据路径与“不把 cookie 持久化到 PowerShell 历史 / 注册表 / 脚本文件”的约束
+  - 已新增仓库镜像 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md) 与 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/agents/openai.yaml`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/agents/openai.yaml)，把 `2026-08-02 13:12:57 UTC (+0000)` / `2026-08-02 13:55:05 UTC (+0000)` 这组新 skill 落仓。
+  - 已在 `weixin-shop-price-floor-audit` 镜像里补齐 Windows 说明而不删除 Mac / 通用实现:
+    - 明确该 skill 仍复用 Huice shared HTTP tooling、`chrome-devtools-mcp`、`weixin-shop-goods-inspection`、`huice-distribution-order-push` 与 `lark-cli`，不拆分独立 `.ps1` 业务脚本
+    - 补入浏览器键位差异 `Control+R` / `F5`、`Control+L`、`Control+A`、`Alt+Left` / `Alt+Right`
+    - 补入 `%USERPROFILE%\\.codex\\skills\\weixin-shop-price-floor-audit\\` 与 quoted `C:/Users/<name>/...` 路径口径
+    - 把 live skill 里的 macOS 共享盘路径 `/Volumes/BSJT 共享给我/.../huice-goods-analysis` 补成 Windows 可用的 quoted UNC 等价路径 `//BSJT168/BSJT 共享给我/AI专用/[Codex]Mac部署/旺店通/huice-goods-analysis`
+  - 已更新 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-goods-inspection/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-goods-inspection/SKILL.md)，同步本地 skill 新增的职责边界：凡是涉及 `controlMinPrice`、价格下限、成本/运费变化、停供、库存归零或跨 Huice / 微信联动整改的请求，必须联动 `weixin-shop-price-floor-audit`，当前检查 skill 只负责官方商品状态取证。
+  - 已运行仓库镜像测试 `node skill-center/skills/huice-distribution-order-push/scripts/test-huice-push-distribution-order.js`，结果通过，确认新增 PowerShell wrapper 没有改变现有 Node CLI 行为。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-08-02 21:55:05 CST (+0800)`，本轮 monitor 新增的 `huice-distribution-order-push`、`weixin-shop-price-floor-audit` 与 `weixin-shop-goods-inspection` 联动边界已经完成仓库内 Windows 转译，没有遗留的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机当前仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；本轮判断基于 monitor 增量复核、本地 `.codex` skill 对照、仓库镜像补丁与 Node 测试结果。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-08-02 21:55:05 CST (+0800)`，今天进入 monitor 的 non-zero custom-skill 增量已经全部补齐到仓库镜像；Mac 与 Windows 覆盖今日均完整。
