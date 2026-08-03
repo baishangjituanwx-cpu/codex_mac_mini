@@ -11,6 +11,29 @@
 - 阻塞原因
 - 是否达到“Mac / Windows 版本都齐全”
 
+## 2026-08-03 22:04:23 CST (+0800)
+
+- 处理时间:
+  - `2026-08-03 22:04:23 CST (+0800)`
+- 输入来源:
+  - 已对照上一条 Windows 状态记录覆盖上限 `2026-07-30 13:47:08 UTC (+0000)`，继续复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 中此后新增、此前尚未单独记入本状态文件的 monitor 批次。
+  - 本轮实际覆盖窗口为 `2026-07-30 14:33:42 UTC (+0000)` 到当前最新标题 `2026-08-03 13:16:33 UTC (+0000)`；期间大多数批次为 `新增 0，修改 0，删除 0`，与 Windows 转译直接相关的非零仓库镜像批次主要集中在 `2026-08-01 14:08:03 UTC (+0000)`、`2026-08-02 14:18:06 UTC (+0000)`、`2026-08-02 14:56:19 UTC (+0000)`、`2026-08-02 19:30:09 UTC (+0000)`、`2026-08-03 05:34:27 UTC (+0000)`、`2026-08-03 08:44:47 UTC (+0000)`、`2026-08-03 09:12:06 UTC (+0000)`、`2026-08-03 10:47:13 UTC (+0000)` 与 `2026-08-03 12:15:10 UTC (+0000)`。
+  - 这些批次涉及的仓库内 custom-skill 行为包括: `update-edgetunnel-pages` 的下游兼容性审计门禁、`huice-distribution-order-push` 的 Node CLI + PowerShell 启动器、`weixin-shop-price-floor-audit` 的 Windows repo mirror 说明/UNC 路径/原刊登 SKU 恢复 gate/`scanProductPreview` 三层库存语义、`weixin-shop-goods-inspection` 的审计联动边界与空表只读取证回退，以及 `wechat-shop-return-address` 的仓库镜像落地。
+- 已完成的 Windows 补全:
+  - 已复核 `huice-distribution-order-push` 仓库镜像已经自带 Windows 可用等价实现：保留同一份 Node CLI，不分叉业务逻辑，并提供 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/scripts/huice-push-distribution-order.ps1`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/scripts/huice-push-distribution-order.ps1) 作为 PowerShell 启动器，同时在技能文档中补齐 Windows 键位、`%USERPROFILE%\\.codex\\skills\\huice-distribution-order-push\\` 路径与 `C:/Users/<name>/...` 证据路径规则。
+  - 已复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/SKILL.md)、[`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-shop-return-address/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-shop-return-address/SKILL.md) 与 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md) 当前都已保留 Windows 可用说明，包括不新增独立业务分叉、Windows 键位差异、`%USERPROFILE%` 安装路径、`C:/Users/<name>/...` 绝对路径，以及 `weixin-shop-price-floor-audit` 对应的 Windows UNC/映射盘共享路径示例。
+  - 已补充 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-goods-inspection/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-goods-inspection/SKILL.md) 的 Windows 用法说明，明确 `scripts/validate-weixin-selling-scan.js` 是仓库根目录脚本而不是 skill 子目录副本，并新增 PowerShell 等价调用示例，保证 `scanProductPreview` 同轮 selling-only 校验在 Windows 上可直接用 `node` + 带引号 `C:/...` JSON 路径执行，而无需再补 `.cmd` 或额外 PowerShell 包装器。
+  - 已复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-goods-inspection/references/goods-list-flow.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-goods-inspection/references/goods-list-flow.md) 新增的空表只读取证回退仍然是同一套 `mcp__chrome_devtools` 浏览器流程；这条新行为不需要额外 Windows 启动器，现有 Windows 键位与本地路径约束已经足以覆盖。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-08-03 13:16:33 UTC (+0000)`，本轮新增 monitor 条目没有遗留尚未转译的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 当前主机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；本轮判断基于 monitor 增量复核、仓库镜像内容核对，以及新增 Windows 调用示例对 repo-root validator 的路径澄清。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-08-03 13:16:33 UTC (+0000)`，`skill-change-monitor.md` 中自上一条状态记录之后新增的仓库镜像行为已经完成或保持 Windows 可用等价覆盖；今天的 Mac / Windows 覆盖均完整。
+
 ## 2026-07-30 22:04:37 CST (+0800)
 
 - 处理时间:
@@ -5525,3 +5548,37 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-08-02 21:55:05 CST (+0800)`，今天进入 monitor 的 non-zero custom-skill 增量已经全部补齐到仓库镜像；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-08-03 22:14:07 CST (+0800)
+
+- 处理时间:
+  - `2026-08-03 22:14:07 CST (+0800)`
+- 输入来源:
+  - 已对照上一条 Windows 状态记录覆盖上限 `2026-08-02 13:55:05 UTC (+0000)`（对应本地时间 `2026-08-02 21:55:05 CST (+0800)`），继续复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 中随后新增、尚未写入本状态文件的 monitor 批次。
+  - 本轮增量窗口覆盖到当前最新 non-zero monitor 标题 `2026-08-03 14:00:55 UTC (+0000)`（对应本地时间 `2026-08-03 22:00:55 CST (+0800)`）；窗口内共有 `20` 个 non-zero 批次，范围从 `2026-08-02 14:18:06 UTC (+0000)` 到 `2026-08-03 14:00:55 UTC (+0000)`。
+  - 这 `20` 个批次里，真正需要新增 Windows 补全动作的增量集中在三组:
+    - `2026-08-03 07:34:06 UTC (+0000)` 的本地新 skill `codex-proxy-setup`
+    - `2026-08-03 14:00:55 UTC (+0000)` 的 `weixin-shop-ledger-sync` 与 `weixin-shop-publish-recovery` 仓库镜像
+    - 其余 `weixin-shop-price-floor-audit`、`weixin-shop-goods-inspection`、`goods-list-flow`、`huice-distribution-order-push`、`update-edgetunnel-pages` 与 `wechat-shop-return-address` 相关批次均为规则继续收紧、仓库 mirror 刷新或前序已转译内容的重复落账，本轮只需复核现有 Windows 覆盖仍然成立。
+- 已完成的 Windows 补全:
+  - 已新增仓库镜像 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-proxy-setup/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-proxy-setup/SKILL.md)、[`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-proxy-setup/agents/openai.yaml`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-proxy-setup/agents/openai.yaml) 与 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-proxy-setup/scripts/configure_proxy.py`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-proxy-setup/scripts/configure_proxy.py)，把本地 `codex-proxy-setup` 的跨平台代理探测与 `.env` 写回逻辑完整落仓。
+  - `codex-proxy-setup` 的仓库镜像已保留并明确 Windows 可用等价实现:
+    - Windows 启动方式使用 `py -3 <skill-dir>\\scripts\\configure_proxy.py`
+    - `.env` 目标路径口径使用 `%USERPROFILE%\\.codex\\.env`
+    - 探测链路包含 Windows user proxy 与 WinHTTP proxy
+    - 不新增独立 `.ps1` 包装器，也不猜测代理端口
+  - 已为 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-ledger-sync/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-ledger-sync/SKILL.md) 补入 `Windows Repo Mirror Notes`，明确该 skill 在 Windows 上继续复用同一套 `lark-cli sheets/docs` 工作流，不新增 PowerShell 或 `.cmd` 分叉；同时补入 `%USERPROFILE%\\.codex\\skills\\weixin-shop-ledger-sync\\` 安装路径、quoted `C:/Users/<name>/...` 本地备份路径，以及 PowerShell 下对 sheet 名称、关键词、ID、range 保持带引号文本传递的要求。
+  - 已为 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-publish-recovery/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-publish-recovery/SKILL.md) 补入 `Windows Repo Mirror Notes`，明确该 skill 在 Windows 上仍沿用 Huice shared HTTP + 官方微信只读校验工作流，不分叉浏览器、`curl` 或 PowerShell 业务脚本；同时补入浏览器键位差异 `Control+R` / `F5`、`Control+L`、`Control+A`、`Alt+Left` / `Alt+Right`，quoted `C:/Users/<name>/...` 证据路径，以及在 PowerShell 下运行 `node scripts/validate-weixin-selling-scan.js "C:/.../live-raw.json" --target ...` 的路径引号示例。
+  - 已复核 `weixin-shop-price-floor-audit` 当前仓库镜像仍保留今日 monitor 提到的 Windows 覆盖要点，包括不为浏览器/Huice 工作流分叉 `.ps1`、`%USERPROFILE%\\.codex\\skills\\weixin-shop-price-floor-audit\\` 路径口径、quoted UNC 共享路径、existing-listing SKU recovery gate，以及官方 zero-stock / republish gate 的 Windows 可读说明；本轮无需再新增 Windows 资产。
+  - 已复核 `weixin-shop-goods-inspection` 与 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-goods-inspection/references/goods-list-flow.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-goods-inspection/references/goods-list-flow.md) 的新增协作边界和空表回退流程已经具备 Windows 可用等价说明：继续复用 `chrome-devtools-mcp`，使用 Windows 键位映射，并要求本地证据路径保持 quoted `C:/...` 形式；因此无需额外 PowerShell wrapper。
+  - 已复核 `huice-distribution-order-push`、`update-edgetunnel-pages` 与 `wechat-shop-return-address` 在 `2026-08-03 12:15:10 UTC (+0000)` 被重复记入 monitor 的仓库镜像，均仍保留此前已补齐的 Windows 路径、键位、PowerShell 或“不新增 wrapper”说明，本轮无新增补丁需求。
+  - 已运行 `python3 -m py_compile skill-center/skills/codex-proxy-setup/scripts/configure_proxy.py`，并执行 `python3 skill-center/skills/codex-proxy-setup/scripts/configure_proxy.py --dry-run`；当前主机上脚本能够完成代理探测与 dry-run 输出，说明新增仓库镜像脚本在现有环境下可正常加载。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-08-03 22:00:55 CST (+0800)`，本轮 monitor 增量没有遗留任何尚未转译的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 当前主机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；本轮判断基于 monitor 增量复核、本地 `.codex` skill 对照、仓库镜像补丁，以及 `codex-proxy-setup` 的 Python 编译 / dry-run 验证结果。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-08-03 22:00:55 CST (+0800)`，今天进入 monitor 的 `codex-proxy-setup`、`weixin-shop-ledger-sync`、`weixin-shop-publish-recovery` 与其余继续收紧的仓库镜像规则都已具备可用的 Windows 等价说明或实现；Mac 与 Windows 覆盖今日均完整。
