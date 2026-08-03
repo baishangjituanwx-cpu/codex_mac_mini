@@ -59,3 +59,25 @@ Label the extraction date and source page. Treat all product data as a point-in-
 Read `references/goods-list-flow.md` in full before operating. It contains the route behavior, state-verification rules, pagination procedure, bounded DOM extractor, failure-reason workflow, and report format.
 
 When the request involves supplier `controlMinPrice`, price-floor violations, cost or freight changes, margin recalculation, stopped supply, inventory zeroing, or remediation across Huice and WeChat, also use `weixin-shop-price-floor-audit`. This inspection skill proves the official product state; it does not replace the Huice-side SKU mapping and cost audit.
+
+## Dynamic Evidence Validator
+
+After every same-run official selling-only capture, run the repository-root validator `scripts/validate-weixin-selling-scan.js` and derive the expected total from the live response. Assert official displayed total = page-row sum = returned rows = unique exact platform product IDs. Never hard-code a prior total such as `73`; a blank table is not an empty store until the read-only `scanProductPreview` requests have been triggered page by page in the same session.
+
+Run the validator from the repository root, not from inside the mirrored skill directory:
+
+```bash
+node scripts/validate-weixin-selling-scan.js \
+  --raw outputs/weixin-selling-scan-live.json \
+  --target <platformGoodsId>
+```
+
+On Windows, use the same Node entry point with quoted `C:/...` paths instead of adding a separate PowerShell wrapper:
+
+```powershell
+node .\scripts\validate-weixin-selling-scan.js `
+  --raw "C:/Users/<name>/Downloads/weixin-selling-scan-live.json" `
+  --target <platformGoodsId>
+```
+
+For malformed, review-blocked, duplicate, or stock-restoration cases, hand off after read-only evidence capture to `weixin-shop-publish-recovery`; hand cloud rows and exact readback to `weixin-shop-ledger-sync`.

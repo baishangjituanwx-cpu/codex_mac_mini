@@ -1,4 +1,4 @@
 interface:
-  display_name: "更新 Cloudflare EdgeTunnel"
-  short_description: "跨浏览器验证账号并安全更新 Cloudflare EdgeTunnel"
-  default_prompt: "使用 $update-edgetunnel-pages 在正确的 Cloudflare 账号中更新指定 EdgeTunnel，并验证线上版本。"
+  display_name: "审计并更新 Cloudflare EdgeTunnel"
+  short_description: "升级前审计下游 Worker 与 NAS 兼容性并安全部署"
+  default_prompt: "使用 $update-edgetunnel-pages 对比完整新旧源头代码，审计下游 Worker 与 NAS 兼容性，通过门禁后再更新 EdgeTunnel。"
