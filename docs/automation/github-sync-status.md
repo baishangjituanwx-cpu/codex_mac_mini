@@ -12,37 +12,289 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
-## 2026-08-01 16:04:23 UTC (+0000)
+## 2026-08-03 14:34:28 UTC (+0000)
 - 处理时间:
-  - `2026-08-01 16:04:23 UTC (+0000)`
-- 前置检查:
-  - 同日稍早的 skip ledger `2026-08-01 16:04:04 UTC (+0000)` 已先推送到 `origin/codex/default-python-sync`。
-  - 进一步深读本地 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/windows-translation-status.md` 后，确认 latest valid dated entry 实际是 `2026-08-01 22:06:20 CST (+0800)`。
-  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，但它只显式覆盖到 `docs/automation/skill-change-monitor.md` 的最新标题 `2026-08-01 13:33:39 UTC (+0000)`。
-  - 当前 `docs/automation/skill-change-monitor.md` 已继续追加更晚的 `2026-08-01 14:08:03 UTC (+0000)`、`2026-08-01 14:42:28 UTC (+0000)`、`2026-08-01 15:07:59 UTC (+0000)` 与 `2026-08-01 15:44:26 UTC (+0000)` 四个 monitor 批次；其中 `2026-08-01 14:08:03 UTC (+0000)` 记录了仓库内 `skill-center/skills/update-edgetunnel-pages/**` 的 `1 added / 2 modified / 0 deleted`，其余三批次是对同一 carryover 的 no-op 复核。
-  - 按本任务 gate，只有当 latest dated Windows 状态记录明确覆盖当前 pending change batch 时才允许继续执行 GitHub 同步；因此本轮必须跳过内容同步，只补记执行结果。
+  - `2026-08-03 22:34:28 CST (+0800)`
 - 本次检查的分支:
   - `codex/default-python-sync`
   - `codex/windows-version-20260411`
 - 是否检测到新增或修改:
-  - `codex/default-python-sync`: 是。当前仓库存在尚未被最新 Windows 完成记录显式覆盖的 `2026-08-01 14:08:03 UTC (+0000)` 到 `2026-08-01 15:44:26 UTC (+0000)` monitor 批次、待同步的 `skill-center/skills/update-edgetunnel-pages/{SKILL.md,agents/openai.yaml,references/downstream-compatibility-audit.md}`，以及本条 GitHub sync follow-up ledger。
-  - `codex/windows-version-20260411`: 是。当前工作区的 `docs/automation/windows-translation-status.md` 新增了 `2026-08-01 22:06:20 CST (+0800)` 完成记录，但它还没有显式 close out `2026-08-01 14:08:03 UTC (+0000)` 之后的 monitor 批次。
+  - 是。`codex/default-python-sync` 这一侧包含 `docs/automation/skill-change-monitor.md`、`scripts/validate-weixin-selling-scan.js`、`skill-center/skills/codex-proxy-setup/**`、`skill-center/skills/update-edgetunnel-pages/**`、`skill-center/skills/weixin-shop-goods-inspection/**`、`skill-center/skills/weixin-shop-ledger-sync/**`、`skill-center/skills/weixin-shop-price-floor-audit/**` 与 `skill-center/skills/weixin-shop-publish-recovery/**` 的新增或修改；`codex/windows-version-20260411` 这一侧包含 `docs/automation/windows-translation-status.md` 的最新补记。
 - 是否已提交:
-  - `codex/default-python-sync`: 是。本轮只提交这条 follow-up ledger，提交信息为 `Record August 1 sync follow-up after deeper Windows audit`。
-  - `codex/windows-version-20260411`: 否。latest dated Windows 完成记录还没有显式覆盖当前 pending change batch，因此没有创建 Windows 分支提交。
+  - `codex/default-python-sync`: 是。生成 `590cfe2 Sync August 3 skill mirrors and monitor updates`。
+  - `codex/windows-version-20260411`: 是。先生成本地提交 `72ee3d2 Record August 3 Windows translation status`，随后在抓取远端并 rebase 到 `26badbf Record August 3 Windows translation status and EdgeTunnel audit mirror` 时因补丁内容已上游而被自动丢弃。
 - 是否已推送:
-  - `codex/default-python-sync`: 是。已推送 follow-up ledger 到 `origin/codex/default-python-sync`。
-  - `codex/windows-version-20260411`: 否。本轮未推送。
+  - `codex/default-python-sync`: 是。通过 `ssh.github.com:443` 成功将远端从 `1a205b4` 推进到 `590cfe2`。
+  - `codex/windows-version-20260411`: 远端已齐。首次 push 被远端拒绝，原因是目标分支已先前进到 `26badbf45f6d110776513740d1d8824208645aae`；抓取并 rebase 后确认 `docs/automation/windows-translation-status.md` 的本轮补丁已经包含在上游 commit 中。随后一次校验性 push 因 `Connection timed out during banner exchange` 失败，但没有遗留未上游的 Windows 状态内容。
 - 提交信息:
-  - `codex/default-python-sync`: `Record August 1 sync follow-up after deeper Windows audit`
-  - `codex/windows-version-20260411`: 无新增提交。
+  - `590cfe2 Sync August 3 skill mirrors and monitor updates`
+  - `26badbf Record August 3 Windows translation status and EdgeTunnel audit mirror`
 - 若跳过，说明跳过原因:
-  - 跳过同步 `docs/automation/skill-change-monitor.md` 中 `2026-08-01 14:08:03 UTC (+0000)`、`2026-08-01 14:42:28 UTC (+0000)`、`2026-08-01 15:07:59 UTC (+0000)` 与 `2026-08-01 15:44:26 UTC (+0000)` 的追加 monitor 批次，因为 latest dated Windows 完成记录仍只显式覆盖到 `2026-08-01 13:33:39 UTC (+0000)`。
-  - 跳过同步 `skill-center/skills/update-edgetunnel-pages/SKILL.md`、`skill-center/skills/update-edgetunnel-pages/agents/openai.yaml` 与 `skill-center/skills/update-edgetunnel-pages/references/downstream-compatibility-audit.md`，因为它们对应的仓库内非零批次 `2026-08-01 14:08:03 UTC (+0000)` 尚未被 latest dated Windows 完成记录显式 close out。
-  - 跳过同步 `docs/automation/windows-translation-status.md` 中 `2026-08-01 22:06:20 CST (+0800)` 这条新记录，因为它本身还没有显式 close out `2026-08-01 14:08:03 UTC (+0000)` 之后的四个更晚 monitor 批次；先推送它也不能满足当前 gate。
-  - 同日稍早的 `2026-08-01 16:04:04 UTC (+0000)` skip ledger 已经先推送；本条 follow-up 只纠正更深一层的 gate 依据，不改变本轮仍然跳过同步的结论。
-  - 未发布 `.codex-skill-monitor-ref-20260729220620` 与 `.codex-tmp-skill-monitor-20260626-blocks.md`，因为它们是本地 monitor / 分析临时文件，不属于需要同步的仓库资产。
-  - 未发布 `skill-center/skills/wechat-shop-return-address/**`，因为它们与目标远端分支上的已跟踪版本相比没有新的内容变更，当前主工作区中的未跟踪状态仍只是 branch drift 造成的表象。
+  - 未纳入同步: `.codex-skill-monitor-ref-20260729220620`、`.codex-tmp-skill-monitor-20260626-blocks.md` 与 `skill-center/skills/codex-proxy-setup/scripts/__pycache__/configure_proxy.cpython-314.pyc`；这些分别是监控临时文件和 Python 缓存产物，不属于应推送仓库内容。
+  - 未重复提交: `skill-center/skills/huice-distribution-order-push/**` 与 `skill-center/skills/wechat-shop-return-address/**` 在 default 分支基线 `31e9a80` 中已存在相同内容，因此本轮不再制造重复 commit。
+
+## 2026-08-03 15:01:27 UTC (+0000)
+- 处理时间:
+  - `2026-08-03 15:01:27 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-proxy-setup/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-proxy-setup/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-proxy-setup/scripts/configure_proxy.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-goods-inspection/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-ledger-sync/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-publish-recovery/SKILL.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以基线 `2026-08-03T13:57:02.276Z` 复核到一个新的仓库镜像 skill 非零变更批次，内容是 `codex-proxy-setup` 的 `3 added`，以及 `weixin-shop-goods-inspection`、`weixin-shop-ledger-sync`、`weixin-shop-publish-recovery` 的 `3 modified`，合计 `3 added / 3 modified / 0 deleted`。
+  - 这批变化把 `codex-proxy-setup` 的技能文档、agent 元数据和跨平台代理脚本正式镜像进仓库，并继续刷新微信小店技能的职责拆分；后续 GitHub 同步时应连同 `skill-change-monitor.md` 在 `2026-08-03 15:01:27 UTC (+0000)` 的对应记录一起处理。
+
+## 2026-08-03 14:16:51 UTC (+0000)
+- 处理时间:
+  - `2026-08-03 14:16:51 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-proxy-setup/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-proxy-setup/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-proxy-setup/scripts/configure_proxy.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-ledger-sync/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-publish-recovery/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-goods-inspection/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`
+- 同步提示:
+  - `skill-monitor` 以基线 `2026-08-03T13:14:31.902Z` 复核到一个新的 skill 非零变更批次，内容是本地 `.codex` 的 `2 added / 2 modified`，以及仓库镜像 `skill-center/skills/**` 的 `5 added / 2 modified`，合计 `7 added / 4 modified / 0 deleted`。
+  - 这批变化把 `weixin-shop-publish-recovery` 与 `weixin-shop-ledger-sync` 正式拆进本地/仓库技能体系，并新增了 `codex-proxy-setup` 的仓库镜像、agent 元数据和跨平台代理脚本；后续 GitHub 同步时应连同 `skill-change-monitor.md` 在 `2026-08-03 14:16:51 UTC (+0000)` 的对应记录一起处理。
+
+## 2026-08-03 14:00:55 UTC (+0000)
+- 处理时间:
+  - `2026-08-03 14:00:55 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-ledger-sync/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-publish-recovery/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-goods-inspection/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以基线 `2026-08-03T12:56:01.673Z` 复核到一个新的 skill 非零变更批次，内容是本地 `.codex` 的 `2 added / 2 modified`，以及仓库镜像 `skill-center/skills/**` 的 `2 added / 2 modified`，合计 `4 added / 4 modified / 0 deleted`。
+  - 这批变化新增了 `weixin-shop-ledger-sync` 和 `weixin-shop-publish-recovery` 两个微信小店配套技能，并同步收紧 `weixin-shop-goods-inspection` 与 `weixin-shop-price-floor-audit` 的边界、validator 和 orphan publication 修复规则；后续 GitHub 同步时应连同 `skill-change-monitor.md` 在 `2026-08-03 14:00:55 UTC (+0000)` 的对应记录一起处理。
+
+## 2026-08-03 12:15:10 UTC (+0000)
+- 处理时间:
+  - `2026-08-03 12:15:10 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/references/api-and-attribution.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/scripts/huice-push-distribution-order.js`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/scripts/huice-push-distribution-order.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/scripts/test-huice-push-distribution-order.js`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/references/downstream-compatibility-audit.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-shop-return-address/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-shop-return-address/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-goods-inspection/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-goods-inspection/references/goods-list-flow.md`
+- 同步提示:
+  - `skill-monitor` 以基线 `2026-08-03T11:13:01.498Z` 复核到一个新的仓库内 skill 非零变更批次，内容是 `11 added / 2 modified / 0 deleted`，全部位于 `skill-center/skills/**`。
+  - 该批次新增了 `huice-distribution-order-push`、`update-edgetunnel-pages`、`wechat-shop-return-address` 三组技能文件，并补齐 `weixin-shop-price-floor-audit` 的仓库镜像 agent 元数据；同时 `weixin-shop-goods-inspection` 新增了与限价审计技能的协作边界和空表场景下的官方只读 API 取证流程。后续 GitHub 同步时应连同 `skill-change-monitor.md` 在 `2026-08-03 12:15:10 UTC (+0000)` 的对应记录一起处理。
+
+## 2026-08-03 10:47:13 UTC (+0000)
+- 处理时间:
+  - `2026-08-03 10:47:13 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以基线 `2026-08-03T09:43:31.239Z` 复核到一个新的仓库内 skill 非零变更批次，内容是 `skill-center/skills/weixin-shop-price-floor-audit/SKILL.md` 的 `1 modified`，合计 `0 added / 1 modified / 0 deleted`。
+  - 这次刷新继续收紧仓库镜像中的 Windows mirror 使用说明、original-listing SKU 回读恢复，以及官方在售 `scanProductPreview` 与三层库存语义下的 readback/republish gate；后续 GitHub 同步时应连同 `skill-change-monitor.md` 在 `2026-08-03 10:47:13 UTC (+0000)` 的对应记录一起处理。
+
+## 2026-08-03 09:12:06 UTC (+0000)
+- 处理时间:
+  - `2026-08-03 09:12:06 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`
+- 同步提示:
+  - `skill-monitor` 以基线 `2026-08-03T08:03:31.043Z` 复核到一个新的仓库内 skill 非零变更批次，内容是 `skill-center/skills/weixin-shop-price-floor-audit/SKILL.md` 的 `1 modified`，合计 `0 added / 1 modified / 0 deleted`。
+  - 这次刷新继续收紧仓库镜像中的 existing-listing SKU 恢复、官方在售 `scanProductPreview` 精确回读，以及三层库存语义下的零库存 republish gate；后续 GitHub 同步时应连同 `skill-change-monitor.md` 在 `2026-08-03 09:12:06 UTC (+0000)` 的对应记录一起处理。
+
+## 2026-08-03 08:44:47 UTC (+0000)
+- 处理时间:
+  - `2026-08-03 08:44:47 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以基线 `2026-08-03T07:32:30.981Z` 复核到一个新的仓库内 skill 非零变更批次，内容是 `skill-center/skills/weixin-shop-price-floor-audit/SKILL.md` 的 `1 modified`，合计 `0 added / 1 modified / 0 deleted`。
+  - 这次刷新把仓库镜像补充了 Windows mirror 使用说明、原刊登 SKU 恢复 gate，以及更严格的官方在售 readback/库存语义约束；后续 GitHub 同步时应连同 `skill-change-monitor.md` 在 `2026-08-03 08:44:47 UTC (+0000)` 的对应记录一起处理。
+
+## 2026-08-03 07:34:06 UTC (+0000)
+- 处理时间:
+  - `2026-08-03 07:34:06 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/codex-proxy-setup/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/codex-proxy-setup/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/codex-proxy-setup/scripts/configure_proxy.py`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以基线 `2026-08-03T06:32:41.674Z` 复核到一个新的本地 skill 非零变更批次，内容是 `.codex` 自定义技能 `codex-proxy-setup` 的 `3 added`，合计 `3 added / 0 modified / 0 deleted`。
+  - 该批次当前仍只存在于本地技能安装树，不在仓库跟踪路径内；如果后续要进入 GitHub 同步流程，应先决定是否为 `codex-proxy-setup` 建立或刷新 `skill-center/skills/` 下的仓库镜像，再连同 `skill-change-monitor.md` 在 `2026-08-03 07:34:06 UTC (+0000)` 的对应记录一并处理。
+
+## 2026-08-03 04:31:23 UTC (+0000)
+- 处理时间:
+  - `2026-08-03 04:31:23 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-price-floor-audit/SKILL.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以基线 `2026-08-03T03:28:10.628Z` 复核到一个新的本地 skill 非零变更批次，内容是 `.codex` 自定义技能 `weixin-shop-price-floor-audit/SKILL.md` 的 `1 modified`，合计 `0 added / 1 modified / 0 deleted`。
+  - 这次刷新新增了“官方在售证据必须来自同轮完整分页抓取并校验总数一致”和“停供前必须按精确 `distributorGoodsId` + `itemId` 回读确认”的硬门槛，同时把 `BELOW_CONTROL_MIN_PRICE` 的默认整改保持为优先在现有在售链接上安全提价；该批次当前仍只存在于本地技能安装树，不在仓库跟踪路径内。若后续要进入 GitHub 同步流程，应先决定是否刷新 `skill-center/skills/weixin-shop-price-floor-audit/SKILL.md` 的仓库镜像，再连同 `skill-change-monitor.md` 在 `2026-08-03 04:31:23 UTC (+0000)` 的对应记录一并处理。
+
+## 2026-08-03 04:04:29 UTC (+0000)
+- 处理时间:
+  - `2026-08-03 04:04:29 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-price-floor-audit/SKILL.md`
+- 同步提示:
+  - `skill-monitor` 以基线 `2026-08-03T02:56:40.433Z` 复核到一个新的本地 skill 非零变更批次，内容是 `.codex` 自定义技能 `weixin-shop-price-floor-audit/SKILL.md` 的 `1 modified`，合计 `0 added / 1 modified / 0 deleted`。
+  - 这次刷新新增了“当前官方在售证据必须同轮抓取完整分页并校验总数一致”和“停供前必须按精确 `distributorGoodsId` + `itemId` 回读确认”的硬门槛，同时把价格风险默认整改保持为优先在原在售链接上安全提价；该批次当前仍只存在于本地技能安装树，不在仓库跟踪路径内。若后续要进入 GitHub 同步流程，应先决定是否刷新 `skill-center/skills/weixin-shop-price-floor-audit/SKILL.md` 的仓库镜像，再连同 `skill-change-monitor.md` 在 `2026-08-03 04:04:29 UTC (+0000)` 的对应记录一并处理。
+
+## 2026-08-02 19:30:09 UTC (+0000)
+- 处理时间:
+  - `2026-08-02 19:30:09 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-price-floor-audit/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`
+- 同步提示:
+  - `skill-monitor` 以基线 `2026-08-02T18:25:37.593Z` 复核到一个新的 skill 非零变更批次，内容是 `weixin-shop-price-floor-audit` 的 `2 modified`，合计 `0 added / 2 modified / 0 deleted`。
+  - 该批次同时覆盖本地 `.codex` 技能安装树与仓库镜像：新增了“微信官方在售证据必须同轮抓取完整分页并校验总数一致”的硬门槛，并把价格风险默认整改改为优先对现有在售链接执行合规提价；后续 GitHub 同步时应连同 `skill-change-monitor.md` 在 `2026-08-02 19:30:09 UTC (+0000)` 的对应记录一起处理，并确认是否继续让仓库镜像保持与 `.codex` 本地版本同步收敛。
+
+## 2026-08-02 17:27:25 UTC (+0000)
+- 处理时间:
+  - `2026-08-02 17:27:25 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-price-floor-audit/SKILL.md`
+- 同步提示:
+  - `skill-monitor` 以基线 `2026-08-02T16:22:06.959Z` 复核到一个新的本地 skill 非零变更批次，内容是 `.codex` 自定义技能 `weixin-shop-price-floor-audit/SKILL.md` 的 `1 modified`，合计 `0 added / 1 modified / 0 deleted`。
+  - 这次刷新新增了“官方在售证据必须同轮抓全量分页并校验总数一致”的硬门槛，并把价格风险默认整改改为优先对现有在售链接执行合规提价；该批次当前仍只存在于本地技能安装树，不在仓库跟踪路径内。若后续要进入 GitHub 同步流程，应先决定是否刷新 `skill-center/skills/weixin-shop-price-floor-audit/SKILL.md` 的仓库镜像，再连同 `skill-change-monitor.md` 在 `2026-08-02 17:27:25 UTC (+0000)` 的对应记录一并处理。
+
+## 2026-08-02 17:01:37 UTC (+0000)
+- 处理时间:
+  - `2026-08-02 17:01:37 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-price-floor-audit/SKILL.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以基线 `2026-08-02T15:55:36.825Z` 复核到一个新的本地 skill 非零变更批次，内容是 `.codex` 自定义技能 `weixin-shop-price-floor-audit/SKILL.md` 的 `1 modified`，合计 `0 added / 1 modified / 0 deleted`。
+  - 这次刷新进一步收紧了官方在售证据采集要求，并强调价格风险默认先在原在售链接上执行合规提价；该批次当前仍只存在于本地技能安装树，不在仓库跟踪路径内。若后续要进入 GitHub 同步流程，应先决定是否刷新 `skill-center/skills/weixin-shop-price-floor-audit/SKILL.md` 的仓库镜像，再连同 `skill-change-monitor.md` 在 `2026-08-02 17:01:37 UTC (+0000)` 的对应记录一并处理。
+
+## 2026-08-02 15:58:13 UTC (+0000)
+- 处理时间:
+  - `2026-08-02 15:58:13 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-price-floor-audit/SKILL.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以基线 `2026-08-02T14:54:36.540Z` 复核到一个新的本地 skill 非零变更批次，内容是 `.codex` 自定义技能 `weixin-shop-price-floor-audit/SKILL.md` 的 `1 modified`，合计 `0 added / 1 modified / 0 deleted`。
+  - 该批次当前仍只存在于本地技能安装树，不在仓库跟踪路径内；如果后续要进入 GitHub 同步流程，应先决定是否刷新 `skill-center/skills/weixin-shop-price-floor-audit/SKILL.md` 的仓库镜像，再连同 `skill-change-monitor.md` 在 `2026-08-02 15:58:13 UTC (+0000)` 的对应记录一并处理。
+
+## 2026-08-02 14:56:19 UTC (+0000)
+- 处理时间:
+  - `2026-08-02 14:56:19 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/references/api-and-attribution.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/scripts/huice-push-distribution-order.js`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/scripts/huice-push-distribution-order.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/scripts/test-huice-push-distribution-order.js`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-goods-inspection/SKILL.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以基线 `2026-08-02T13:53:06.234Z` 发现一个新的仓库内 skill 非零变更批次，内容是 `huice-distribution-order-push` 的 `6 added`、`weixin-shop-price-floor-audit` 镜像的 `2 added`，以及 `weixin-shop-goods-inspection/SKILL.md` 的 `1 modified`，合计 `8 added / 1 modified / 0 deleted`。
+  - 该批次已经位于仓库跟踪路径 `skill-center/skills/**`；后续 GitHub 同步时应连同 `skill-change-monitor.md` 在 `2026-08-02 14:56:19 UTC (+0000)` 的对应记录一起处理，并确认 `windows-translation-status.md` 是否需要覆盖这组新镜像与脚本说明。
+
+## 2026-08-02 14:18:06 UTC (+0000)
+- 处理时间:
+  - `2026-08-02 14:18:06 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/references/api-and-attribution.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/scripts/huice-push-distribution-order.js`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/scripts/huice-push-distribution-order.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/scripts/test-huice-push-distribution-order.js`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-goods-inspection/SKILL.md`
+- 同步提示:
+  - `skill-monitor` 以基线 `2026-08-02T13:11:05.926Z` 发现一个新的仓库内 skill 非零变更批次，内容是 `huice-distribution-order-push` 的 `6 added`、`weixin-shop-price-floor-audit` 镜像的 `2 added`，以及 `weixin-shop-goods-inspection/SKILL.md` 的 `1 modified`，合计 `8 added / 1 modified / 0 deleted`。
+  - 该批次已经位于仓库跟踪路径 `skill-center/skills/**`；后续 GitHub 同步时应连同 `skill-change-monitor.md` 在 `2026-08-02 14:18:06 UTC (+0000)` 的对应记录一起处理，并确认 `windows-translation-status.md` 是否需要覆盖这组新镜像与脚本说明。
+
+## 2026-08-02 13:55:05 UTC (+0000)
+- 处理时间:
+  - `2026-08-02 13:55:05 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-price-floor-audit/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-price-floor-audit/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-goods-inspection/SKILL.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以基线 `2026-08-02T12:51:35.857Z` 复核到一个新的本地 skill 非零变更批次，内容是 `.codex` 自定义技能 `weixin-shop-price-floor-audit` 的 `2 added`，以及 `weixin-shop-goods-inspection/SKILL.md` 的 `1 modified`，合计 `2 added / 1 modified / 0 deleted`。
+  - 该批次当前仍只存在于本地技能安装树，不在仓库跟踪路径内；如果后续要进入 GitHub 同步流程，应先决定是否补齐 `skill-center/skills/weixin-shop-price-floor-audit/**` 的仓库镜像，并确认 `weixin-shop-goods-inspection` 的仓库镜像是否也要同步这次说明刷新，再连同 `skill-change-monitor.md` 在 `2026-08-02 13:55:05 UTC (+0000)` 的对应记录一并处理。
+
+## 2026-08-02 13:12:57 UTC (+0000)
+- 处理时间:
+  - `2026-08-02 13:12:57 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-price-floor-audit/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-price-floor-audit/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-goods-inspection/SKILL.md`
+- 同步提示:
+  - skill monitor 以基线 `2026-08-02T12:09:35.648Z` 发现一个新的本地 skill 非零变更批次，内容是 `.codex` 自定义技能 `weixin-shop-price-floor-audit` 的 `2 added`，以及 `weixin-shop-goods-inspection/SKILL.md` 的 `1 modified`，合计 `2 added / 1 modified / 0 deleted`。
+  - 该批次目前仍只存在于本地技能安装树，不在仓库跟踪路径内；如果后续要进入 GitHub 同步流程，应先决定是否补齐 `skill-center/skills/weixin-shop-price-floor-audit/**` 的仓库镜像，并确认 `weixin-shop-goods-inspection` 的仓库镜像是否也要同步这次说明刷新，再连同 `skill-change-monitor.md` 在 `2026-08-02 13:12:57 UTC (+0000)` 的对应记录一并处理。
+
+## 2026-08-02 10:51:47 UTC (+0000)
+- 处理时间:
+  - `2026-08-02 10:51:47 UTC (+0000)`
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - 是。发现一个新的待同步技能文档修改批次：`/Users/baishangjituan/.codex/skills/huice-distribution-order-push/{SKILL.md,references/api-and-attribution.md}`，共 `0 added / 2 modified / 0 deleted`。
+- 是否已提交:
+  - 否。本轮只补记监控结果，尚未把 `.codex` 本地技能文档镜像到仓库。
+- 是否已推送:
+  - 否。本轮没有执行同步推送。
+- 提交信息:
+  - 无。
+- 若跳过，说明跳过原因:
+  - 该变更批次当前仍只存在于本地 `.codex` 自定义技能目录；若后续决定同步，应先确定仓库镜像位置，再连同 `docs/automation/skill-change-monitor.md` 在 `2026-08-02 10:51:47 UTC (+0000)` 的对应记录一起处理。
+
+## 2026-08-02 10:09:23 UTC (+0000)
+- 处理时间:
+  - `2026-08-02 10:09:23 UTC (+0000)`
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - 是。发现一个新的待同步技能文档修改批次：`/Users/baishangjituan/.codex/skills/huice-distribution-order-push/{SKILL.md,references/api-and-attribution.md}`，共 `0 added / 2 modified / 0 deleted`。
+- 是否已提交:
+  - 否。本轮只补记监控结果，尚未把 `.codex` 本地技能文档镜像到仓库。
+- 是否已推送:
+  - 否。本轮没有执行同步推送。
+- 提交信息:
+  - 无。
+- 若跳过，说明跳过原因:
+  - 该变更批次当前仍只存在于本地 `.codex` 自定义技能目录；若后续决定同步，应先确定仓库镜像位置，再连同 `docs/automation/skill-change-monitor.md` 的对应记录一起处理。
+
+## 2026-08-02 09:06:03 UTC (+0000)
+- 处理时间:
+  - `2026-08-02 09:06:03 UTC (+0000)`
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - 是。发现一个新的待同步技能批次：`/Users/baishangjituan/.codex/skills/huice-distribution-order-push/**` 共 `5 added / 0 modified / 0 deleted`。
+- 是否已提交:
+  - 否。本轮只补记监控结果，后续是否需要把 `.codex` 本地技能镜像进仓库仍待决定。
+- 是否已推送:
+  - 否。本轮没有执行同步推送。
+- 提交信息:
+  - 无。
+- 若跳过，说明跳过原因:
+  - 该变更批次当前仅存在于本地 `.codex` 自定义技能目录，还没有明确的仓库内镜像路径；后续若决定同步，应连同 `docs/automation/skill-change-monitor.md` 的对应记录一起处理。
 
 ## 2026-08-01 16:04:04 UTC (+0000)
 - 处理时间:
@@ -72,35 +324,6 @@
   - 跳过同步 `docs/automation/windows-translation-status.md`，因为最新 dated entry 虽然写明“Mac / Windows 版本都齐全”为“是”，但它尚未显式 close out 上述 `84` 个更晚的 monitor 批次；在此之前继续发布 generic / Mac-compatible 内容不符合 gate。
   - 跳过同步 `skill-center/skills/update-edgetunnel-pages/SKILL.md`、`skill-center/skills/update-edgetunnel-pages/agents/openai.yaml` 与新增 `skill-center/skills/update-edgetunnel-pages/references/downstream-compatibility-audit.md`，因为它们属于 generic / Mac-compatible payload，但当前仍被 Windows completion gate 阻塞。
   - 未发布 `.codex-skill-monitor-ref-20260729220620` 与 `.codex-tmp-skill-monitor-20260626-blocks.md`，因为它们是本地 monitor / 分析临时文件，不属于需要同步的仓库资产。
-
-## 2026-07-31 16:16:19 UTC (+0000)
-- 处理时间:
-  - `2026-07-31 16:16:19 UTC (+0000)`
-- 前置检查:
-  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/windows-translation-status.md` 的 latest valid dated entry 以时间戳计为 `2026-07-30 22:05:10 CST (+0800)`。
-  - 该条记录明确写明“Mac / Windows 版本都齐全”为“是”，但它只显式覆盖到 `docs/automation/skill-change-monitor.md` 的最新标题 `2026-07-30 13:47:08 UTC (+0000)`。
-  - 当前 `docs/automation/skill-change-monitor.md` 已包含其后 `42` 个新增 monitor 批次，范围从 `2026-07-30 14:33:42 UTC (+0000)` 到 `2026-07-31 15:30:24 UTC (+0000)`；latest dated Windows 完成记录尚未显式覆盖这批 pending change batches。
-  - 按本任务 gate，只有当 latest dated Windows 状态记录明确覆盖当前 pending change batch 时才允许继续执行 GitHub 同步；因此本轮必须跳过内容同步，只补记执行结果。
-- 本次检查的分支:
-  - `codex/default-python-sync`
-  - `codex/windows-version-20260411`
-- 是否检测到新增或修改:
-  - `codex/default-python-sync`: 是。当前仓库存在 `docs/automation/skill-change-monitor.md` 中尚未被最新 Windows 完成记录覆盖的 `42` 个 monitor 批次，以及本条 GitHub sync skip ledger。
-  - `codex/windows-version-20260411`: 否。目标分支上最新的 `docs/automation/windows-translation-status.md` 记录仍停在 `2026-07-30 22:05:10 CST (+0800)`，本轮没有新的 eligible Windows 状态补记可以在未满足 gate 的前提下发布。
-- 是否已提交:
-  - `codex/default-python-sync`: 是。本轮只提交这条 skip ledger，提交信息为 `Record July 31 sync skip pending Windows translation coverage`。
-  - `codex/windows-version-20260411`: 否。latest dated Windows 完成记录还没有显式覆盖当前 pending change batch，因此没有创建 Windows 分支提交。
-- 是否已推送:
-  - `codex/default-python-sync`: 是。已推送 skip ledger 到 `origin/codex/default-python-sync`。
-  - `codex/windows-version-20260411`: 否。本轮未推送。
-- 提交信息:
-  - `codex/default-python-sync`: `Record July 31 sync skip pending Windows translation coverage`
-  - `codex/windows-version-20260411`: 无新增提交。
-- 若跳过，说明跳过原因:
-  - 跳过同步 `docs/automation/skill-change-monitor.md` 中 `2026-07-30 14:33:42 UTC (+0000)` 到 `2026-07-31 15:30:24 UTC (+0000)` 的 `42` 个追加 monitor 批次，因为 latest dated Windows 完成记录仍只覆盖到 `2026-07-30 13:47:08 UTC (+0000)`。
-  - 跳过同步 `docs/automation/windows-translation-status.md`，因为目标 Windows 分支上的最新 dated entry 虽然写明“Mac / Windows 版本都齐全”为“是”，但它尚未显式 close out 上述 `42` 个更晚的 monitor 批次；在此之前继续发布 generic / Mac-compatible 内容不符合 gate。
-  - 未发布 `.codex-skill-monitor-ref-20260729220620` 与 `.codex-tmp-skill-monitor-20260626-blocks.md`，因为它们是本地 monitor / 分析临时文件，不属于需要同步的仓库资产。
-  - 未对 `skill-center/skills/update-edgetunnel-pages/**`、`skill-center/skills/wechat-shop-return-address/**` 或其他 branch-purpose payload 做本轮发布分类，因为前置 gate 未通过。
 
 ## 2026-07-30 16:09:50 UTC (+0000)
 - 处理时间:
@@ -5598,6 +5821,16 @@
   - skill monitor 以任务基线 `2026-07-29T07:51:08.159Z` 发现一个新的非零变更批次，内容仍是本地 `.codex` 自定义技能 `update-edgetunnel-pages` 的技能定义与 agent 元数据。
   - 该批次目前仍是本地 skill 树变更，不在仓库跟踪路径内；如果后续要进入 GitHub 同步流程，应先补齐对应的仓库镜像位置或明确同步目标，再连同 `skill-change-monitor.md` 在 `2026-07-29 08:56:25 UTC (+0000)` 的对应记录一并处理。
 
+## 2026-07-30 09:09:47 UTC (+0000)
+- 处理时间:
+  - `2026-07-30 09:09:47 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/update-edgetunnel-pages/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/update-edgetunnel-pages/agents/openai.yaml`
+- 同步提示:
+  - skill monitor 以基线 `2026-07-30T08:06:55.335Z` 发现一个新的本地 skill 删除批次，内容是 `.codex` 自定义技能 `update-edgetunnel-pages` 的 `0 added / 0 modified / 2 deleted`。
+  - 该批次当前只发生在本地技能安装树，仓库镜像 `skill-center/skills/update-edgetunnel-pages/{SKILL.md,agents/openai.yaml}` 仍存在且内容未变；后续 GitHub 同步前需要决定是否同步删除仓库镜像，或仅保留 `skill-change-monitor.md` 的删除记录。
+
 ## 2026-07-29 14:09:52 UTC (+0000)
 - 处理时间:
   - `2026-07-29 14:09:52 UTC (+0000)`
@@ -5607,6 +5840,28 @@
 - 同步提示:
   - skill monitor 以基线 `2026-07-29T13:05:20.393Z` 发现一个新的仓库内非零变更批次，内容是 `skill-center/skills/update-edgetunnel-pages/**` 的 `2 added / 0 modified / 0 deleted`。
   - 该批次尚未进入 GitHub 同步提交流程；后续同步时应至少包含这两个新增仓库文件，并保留 `skill-change-monitor.md` 在 `2026-07-29 14:09:52 UTC (+0000)` 的对应记录。
+
+## 2026-08-01 10:05:45 UTC (+0000)
+- 处理时间:
+  - `2026-08-01 10:05:45 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/update-edgetunnel-pages/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/update-edgetunnel-pages/references/downstream-compatibility-audit.md`
+  - `/Users/baishangjituan/.codex/skills/update-edgetunnel-pages/agents/openai.yaml`
+- 同步提示:
+  - skill monitor 以基线 `2026-08-01T09:01:58.945Z` 发现一个新的本地 skill 非零变更批次，内容是 `.codex` 自定义技能 `update-edgetunnel-pages` 的 `3 added / 0 modified / 0 deleted`。
+  - 该批次目前仍只存在于本地技能安装树，不在仓库跟踪路径内；如果后续要进入 GitHub 同步流程，应先决定是否补齐 `skill-center/skills/update-edgetunnel-pages/**` 的镜像更新，再连同 `skill-change-monitor.md` 在 `2026-08-01 10:05:45 UTC (+0000)` 的对应记录一并处理。
+
+## 2026-08-01 10:29:53 UTC (+0000)
+- 处理时间:
+  - `2026-08-01 10:29:53 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/update-edgetunnel-pages/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/update-edgetunnel-pages/references/downstream-compatibility-audit.md`
+  - `/Users/baishangjituan/.codex/skills/update-edgetunnel-pages/agents/openai.yaml`
+- 同步提示:
+  - skill monitor 以基线 `2026-08-01T09:18:59.084Z` 发现一个新的本地 skill 非零变更批次，内容是 `.codex` 自定义技能 `update-edgetunnel-pages` 的 `1 added / 2 modified / 0 deleted`。
+  - 该批次目前仍只存在于本地技能安装树，不在仓库跟踪路径内；如果后续要进入 GitHub 同步流程，应先补齐对应的仓库镜像更新，再连同 `skill-change-monitor.md` 在 `2026-08-01 10:29:53 UTC (+0000)` 的对应记录一并处理。
 
 ## 2026-07-17 16:04:36 UTC (+0000)
 - 处理时间:
@@ -5635,3 +5890,85 @@
   - 未在 `codex/default-python-sync` 混入 `docs/automation/windows-translation-status.md`，因为该文件继续单独保留在 `codex/windows-version-20260411`。
   - 未在 `codex/windows-version-20260411` 混入 `docs/automation/skill-change-monitor.md`、`docs/automation/github-sync-status.md` 或共享 skill-center 镜像，因为这些内容继续由 `codex/default-python-sync` 维护。
   - 未发现新的 `automation/python-platform-takeover/**` 功能文件，也未发现新的 Windows bridge / deployment 专属实现；Windows 分支本轮实际同步内容仅为 Windows 转译状态文档更新。
+
+## 2026-08-01 14:08:03 UTC (+0000)
+- 处理时间:
+  - `2026-08-01 14:08:03 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/update-edgetunnel-pages/references/downstream-compatibility-audit.md`
+- 同步提示:
+  - skill monitor 以基线 `2026-08-01T13:03:29.887Z` 发现一个新的仓库内非零变更批次，内容是 `skill-center/skills/update-edgetunnel-pages/**` 的 `1 added / 2 modified / 0 deleted`。
+  - 后续 GitHub 同步时应至少包含这三个仓库文件，以及 `skill-change-monitor.md` 在 `2026-08-01 14:08:03 UTC (+0000)` 的对应记录。
+
+## 2026-08-02 08:44:12 UTC (+0000)
+- 处理时间:
+  - `2026-08-02 08:44:12 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/huice-distribution-order-push/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/huice-distribution-order-push/references/api-and-attribution.md`
+  - `/Users/baishangjituan/.codex/skills/huice-distribution-order-push/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/huice-distribution-order-push/scripts/huice-push-distribution-order.js`
+  - `/Users/baishangjituan/.codex/skills/huice-distribution-order-push/scripts/test-huice-push-distribution-order.js`
+- 同步提示:
+  - skill monitor 以基线 `2026-08-02T07:36:04.671Z` 发现一个新的本地 skill 非零变更批次，内容是 `.codex` 自定义技能 `huice-distribution-order-push` 的 `5 added / 0 modified / 0 deleted`。
+  - 该批次目前仍只存在于本地技能安装树，不在仓库跟踪路径内；如果后续要进入 GitHub 同步流程，应先决定是否补齐 `skill-center/skills/huice-distribution-order-push/**` 的仓库镜像，再连同 `skill-change-monitor.md` 在 `2026-08-02 08:44:12 UTC (+0000)` 的对应记录一并处理。
+
+## 2026-08-02 20:08:18 UTC (+0000)
+- 处理时间:
+  - `2026-08-02 20:08:18 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-price-floor-audit/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`
+- 同步提示:
+  - skill monitor 以基线 `2026-08-02T19:05:37.802Z` 发现一个新的 mixed skill 变更批次，内容是 `weixin-shop-price-floor-audit` 的 `0 added / 2 modified / 0 deleted`。
+  - 后续同步时应先把仓库镜像 `skill-center/skills/weixin-shop-price-floor-audit/SKILL.md` 补齐到与 `.codex` 本地 skill 同步的规则集，再连同 `skill-change-monitor.md` 在 `2026-08-02 20:08:18 UTC (+0000)` 的对应记录一并处理。
+
+## 2026-08-03 05:34:27 UTC (+0000)
+- 处理时间:
+  - `2026-08-03 05:34:27 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-goods-inspection/references/goods-list-flow.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-goods-inspection/references/goods-list-flow.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以基线 `2026-08-03T04:29:10.932Z` 发现一个新的 mixed skill 非零变更批次，内容是 `weixin-shop-goods-inspection/references/goods-list-flow.md` 的 `0 added / 2 modified / 0 deleted`。
+  - 该批次把“空表但官方商品列表 API 仍正常返回”时的只读取证流程写入本地 skill 与仓库镜像：要求按当前会话逐页观察官方 `scanProductPreview` 响应、校验 `displayed total = sum(page row counts) = unique platformGoodsId count`，并且不落盘请求头、cookie、token、签名等敏感字段；后续 GitHub 同步时应连同 `skill-change-monitor.md` 在 `2026-08-03 05:34:27 UTC (+0000)` 的对应记录一起处理。
+
+## 2026-08-03 09:45:59 UTC (+0000)
+- 处理时间:
+  - `2026-08-03 09:45:59 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以基线 `2026-08-03T08:42:01.139Z` 复核到一个新的仓库内 skill 非零变更批次，内容是 `skill-center/skills/weixin-shop-price-floor-audit/SKILL.md` 的 `1 modified`，合计 `0 added / 1 modified / 0 deleted`。
+  - 这次刷新把仓库镜像补充了 Windows mirror 使用说明、原刊登 SKU 恢复 gate，以及更严格的官方在售 readback/库存语义约束；后续 GitHub 同步时应连同 `skill-change-monitor.md` 在 `2026-08-03 09:45:59 UTC (+0000)` 的对应记录一起处理。
+
+## 2026-08-03 10:12:51 UTC (+0000)
+- 处理时间:
+  - `2026-08-03 10:12:51 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`
+- 同步提示:
+  - `skill-monitor` 读取自身 memory 后，按 `2026-08-03 09:12:06 UTC (+0000)` 的上一轮完成时间复核到一个新的仓库内 skill 非零变更批次，内容仍是 `skill-center/skills/weixin-shop-price-floor-audit/SKILL.md` 的 `1 modified`，合计 `0 added / 1 modified / 0 deleted`。
+  - 该批次把仓库镜像继续向本地 `.codex` skill 收敛：补入 Windows mirror 使用说明、现有刊登 SKU 恢复 gate、selling-only `scanProductPreview` 精确过滤，以及 `officialWeChatStock / huicePublishSkuStock / distributorSourceStock` 三层库存与零库存 republish gate；后续 GitHub 同步时应连同 `skill-change-monitor.md` 在 `2026-08-03 10:12:51 UTC (+0000)` 的对应记录一起处理。
+
+## 2026-08-03 11:14:49 UTC (+0000)
+- 处理时间:
+  - `2026-08-03 11:14:49 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-price-floor-audit/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`
+- 同步提示:
+  - `skill-monitor` 由于自身 memory 缺失，按任务提示的基线 `2026-08-03T10:10:01.344Z` 复核到一个新的 mixed skill 非零变更批次，内容是 `weixin-shop-price-floor-audit` 的本地 skill 与仓库镜像各 `1 modified`，合计 `0 added / 2 modified / 0 deleted`。
+  - 这次刷新把本地 `.codex` skill 进一步收紧到“官方在售证据必须同轮全量抓取、停供必须精确 `distributorGoodsId + itemId` 回读、价格风险先修原刊登并保留 selling”，同时仓库镜像也在继续收敛；后续 GitHub 同步时应先决定仓库镜像是否完整吸收本地新增的 rollback/isolation gate，再连同 `skill-change-monitor.md` 在 `2026-08-03 11:14:49 UTC (+0000)` 的对应记录一起处理。
+
+## 2026-08-03 11:48:07 UTC (+0000)
+- 处理时间:
+  - `2026-08-03 11:48:07 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-price-floor-audit/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以基线 `2026-08-03T10:44:31.420Z` 复核到一个新的 mixed skill 非零变更批次，内容是 `weixin-shop-price-floor-audit` 的本地 skill 与仓库镜像各 `1 modified`，合计 `0 added / 2 modified / 0 deleted`。
+  - 这次刷新把两份 skill 继续收紧到“官方在售证据必须同轮全量抓取、停供必须精确 live 回读、价格风险默认先修原刊登”，并把审核中 `10020047` 的 rollback 隔离顺序明确写入；后续 GitHub 同步时应连同 `skill-change-monitor.md` 在 `2026-08-03 11:48:07 UTC (+0000)` 的对应记录一起处理。
