@@ -11,6 +11,30 @@
 - 阻塞原因
 - 是否达到“Mac / Windows 版本都齐全”
 
+## 2026-08-04 22:03:50 CST (+0800)
+
+- 处理时间:
+  - `2026-08-04 22:03:50 CST (+0800)`
+- 输入来源:
+  - 已对照上一条 Windows 状态记录覆盖上限 `2026-08-03 13:16:33 UTC (+0000)`，继续复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 中此后新增、此前尚未单独记入本状态文件的 monitor 批次。
+  - 本轮实际覆盖窗口为 `2026-08-03 14:00:55 UTC (+0000)` 到当前最新标题 `2026-08-04 13:41:29 UTC (+0000)`；其中大多数批次为 `新增 0，修改 0，删除 0`。
+  - 与 Windows 转译直接相关的非零批次为 `2026-08-03 14:00:55 UTC (+0000)`、`2026-08-03 14:16:51 UTC (+0000)`、`2026-08-03 15:01:27 UTC (+0000)`、`2026-08-03 18:07:17 UTC (+0000)`、`2026-08-03 18:24:16 UTC (+0000)`、`2026-08-04 08:38:34 UTC (+0000)`、`2026-08-04 10:25:47 UTC (+0000)` 与 `2026-08-04 10:46:13 UTC (+0000)`。
+  - 这些批次涉及的 custom-skill 行为包括: `weixin-shop-ledger-sync` 的云台账只负责 mechanics 边界与 Windows mirror 说明、`weixin-shop-publish-recovery` 的原刊登恢复与 Windows validator 调用方式、`codex-proxy-setup` 的跨平台代理探测脚本、`weixin-shop-goods-inspection` 与 `weixin-shop-price-floor-audit` 的职责拆分和 Windows mirror 约束，以及新建本地 skill `weixin-shop-yaboshi-publish` 的品牌地址强约束、官方在售核验、10% 推广与 live acceptance gate。
+- 已完成的 Windows 补全:
+  - 已复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-ledger-sync/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-ledger-sync/SKILL.md)、[`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-publish-recovery/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-publish-recovery/SKILL.md)、[`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-goods-inspection/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-goods-inspection/SKILL.md)、[`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md) 与 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-proxy-setup/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-proxy-setup/SKILL.md) 已经包含 Windows 可用等价说明或跨平台实现，不需要再分叉新的 Windows 包装器。
+  - 已新增仓库镜像 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-yaboshi-publish/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-yaboshi-publish/SKILL.md) 与 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-yaboshi-publish/agents/openai.yaml`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-yaboshi-publish/agents/openai.yaml)，把本地 `weixin-shop-yaboshi-publish` 的品牌地址 override、选品/铺货/官方回查/推广闭环和 `PROVISIONAL_NOT_END_TO_END_VALIDATED` live acceptance gate 正式落仓。
+  - 已在新的 `weixin-shop-yaboshi-publish` 仓库镜像中补入 Windows Repo Mirror Notes，明确该 skill 不新增独立 PowerShell 或 `.cmd` 业务启动器；Windows 端继续沿用同一套 Huice shared HTTP + WeChat read-only + repo-root Node helper 流程。
+  - 已为 `weixin-shop-yaboshi-publish` 补入 Windows 键位差异、`%USERPROFILE%\\.codex\\skills\\weixin-shop-yaboshi-publish\\` 安装路径、`C:/Users/<name>/...` 证据路径规则，以及 `scripts/dual-platform-promotion-candidates.js` 的 PowerShell 等价调用示例，避免仓库镜像只保留 macOS/bash 示例。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-08-04 13:41:29 UTC (+0000)`，本轮新增 monitor 条目没有遗留尚未转译的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 当前主机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；本轮判断基于 monitor 增量复核、仓库镜像内容核对，以及新镜像中的 Windows 调用示例与路径规则补全。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-08-04 13:41:29 UTC (+0000)`，`skill-change-monitor.md` 中自上一条状态记录之后新增的 custom-skill 行为已经完成或保持 Windows 可用等价覆盖；今天的 Mac / Windows 覆盖均完整。
+
 ## 2026-08-03 22:04:23 CST (+0800)
 
 - 处理时间:
