@@ -11,6 +11,7 @@ Cloud-record mechanics only. Product safety and publication decisions stay with 
 
 - Use `lark-cli sheets` and `lark-cli docs`; write the smallest exact range and read it back.
 - Preserve all IDs as text. A missing required field, EOF, or failed readback keeps the event pending.
+- Every review must distinguish the review cutoff from the latest live official capture; heartbeats are not live-state evidence.
 - Keep `COMPLIANT`, `BELOW_CONTROL_MIN_PRICE`, `MARGIN_FAIL`, `SUPPLIER_STOPPED_LIVE`, `ADDRESS_INCOMPLETE_NO_WRITE`, `MAPPING_INCOMPLETE_NO_WRITE`, `REVIEWING_NOT_HARD_SUCCESS`, `ISOLATED_DUPLICATE_CONTAINED`, and `RECOVERED_HARD_SUCCESS` distinct.
 - Do not append a duplicate order row when the exact order/trade row already exists.
 - Never write or output tokens, cookies, signatures, login credentials, or buyer privacy.

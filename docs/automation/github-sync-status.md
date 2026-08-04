@@ -12,26 +12,94 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
-## 2026-08-03 16:13:46 UTC (+0000)
+## 2026-08-04 16:04:59 UTC (+0000)
 - 处理时间:
-  - `2026-08-03 16:13:46 UTC (+0000)`
+  - `2026-08-04 16:04:59 UTC (+0000)`
 - 本次检查的分支:
   - `codex/default-python-sync`
   - `codex/windows-version-20260411`
 - 是否检测到新增或修改:
-  - 否。相对 `ee27c7480ed3d57ecd74242945b5330336b54dfe`，本次 follow-up 不再追加新的 skill 或 automation source payload，只补记并发 GitHub 更新后的实际落地结果。
+  - `codex/default-python-sync`: 是。需要同步 `docs/automation/skill-change-monitor.md` 中 `2026-08-04` 的新 monitor 记录、`docs/automation/github-sync-status.md` 的本条执行记录、`skill-center/skills/weixin-shop-ledger-sync/SKILL.md` 的 live-capture 约束补充，以及新的 `skill-center/skills/weixin-shop-yaboshi-publish/**` 仓库镜像。
+  - `codex/windows-version-20260411`: 是。需要同步 `docs/automation/windows-translation-status.md` 中 `2026-08-04 22:03:50 CST (+0800)` 的 Windows 转译完成记录。
 - 是否已提交:
-  - `codex/default-python-sync`: 是。已创建 follow-up ledger 提交 `Record August 3 GitHub sync follow-up after concurrent remote updates`。
-  - `codex/windows-version-20260411`: 否。`26badbf Record August 3 Windows translation status and EdgeTunnel audit mirror` 已在本轮稍早成功推送，无需再补新提交。
+  - `codex/default-python-sync`: 是。提交信息为 `Sync August 4 Yaboshi mirror and ledger updates`。
+  - `codex/windows-version-20260411`: 是。提交信息为 `Record August 4 Windows translation status for Yaboshi mirror`。
 - 是否已推送:
-  - `codex/default-python-sync`: 是。已推送本条 follow-up ledger 到 `origin/codex/default-python-sync`。
-  - `codex/windows-version-20260411`: 是。维持 `26badbf` 已上游的状态，无新增 push。
+  - `codex/default-python-sync`: 是。推送目标为 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 是。推送目标为 `origin/codex/windows-version-20260411`。
 - 提交信息:
-  - `codex/default-python-sync`: `Record August 3 GitHub sync follow-up after concurrent remote updates`
-  - `codex/windows-version-20260411`: `26badbf Record August 3 Windows translation status and EdgeTunnel audit mirror`（沿用本轮稍早已上游的提交）
+  - `codex/default-python-sync`: `Sync August 4 Yaboshi mirror and ledger updates`
+  - `codex/windows-version-20260411`: `Record August 4 Windows translation status for Yaboshi mirror`
 - 若跳过，说明跳过原因:
-  - 未再推送本地 ledger 提交 `9c2a7b0 Record August 3 GitHub sync execution`，因为 `origin/codex/default-python-sync` 在本轮等待 push 结果期间已被并发自动化推进到 `ee27c7480ed3d57ecd74242945b5330336b54dfe Record August 3 GitHub sync execution`；本条 follow-up 只补充更准确的并发结果，不重复重放旧 ledger。
-  - 更正说明: `codex/windows-version-20260411` 的 `26badbf` 实际由本会话成功 push 到远端；它不是“远端已先存在且本地补丁被 rebase 丢弃”的场景。
+  - 未提交 `.codex-skill-monitor-ref-20260729220620` 与 `.codex-tmp-skill-monitor-20260626-blocks.md`，因为它们是本地监控临时文件，不属于需要同步的仓库资产。
+  - 未在 `codex/default-python-sync` 重复提交 `scripts/validate-weixin-selling-scan.js`、`skill-center/skills/codex-proxy-setup/**`、`skill-center/skills/huice-distribution-order-push/**`、`skill-center/skills/update-edgetunnel-pages/**`、`skill-center/skills/wechat-shop-return-address/**`、`skill-center/skills/weixin-shop-goods-inspection/**`、`skill-center/skills/weixin-shop-price-floor-audit/**` 与 `skill-center/skills/weixin-shop-publish-recovery/**`，因为用干净 worktree 对照 `origin/codex/default-python-sync` 后确认这些路径已经上游，无需重复制造提交。
+  - 未在 `codex/windows-version-20260411` 混入 `docs/automation/skill-change-monitor.md`、`docs/automation/github-sync-status.md`、`skill-center/skills/weixin-shop-ledger-sync/SKILL.md` 或 `skill-center/skills/weixin-shop-yaboshi-publish/**`，因为本轮没有新的 Windows 专属 bridge / deployment 代码差异，Windows 分支只保留转译状态文档更新。
+
+## 2026-08-04 14:44:15 UTC (+0000)
+- 处理时间:
+  - `2026-08-04 14:44:15 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-yaboshi-publish/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-yaboshi-publish/agents/openai.yaml`
+- 同步提示:
+  - `skill-monitor` 以基线 `2026-08-04T13:40:07.806Z` 复核到一个新的仓库镜像 skill 非零变更批次，内容是 `weixin-shop-yaboshi-publish` 的 `2 added`，合计 `2 added / 0 modified / 0 deleted`。
+  - 后续 GitHub 同步时应至少带上 `skill-center/skills/weixin-shop-yaboshi-publish/**` 与 `skill-change-monitor.md` 在 `2026-08-04 14:44:15 UTC (+0000)` 的对应记录一起处理；本轮没有新的 `.py` 文件进入同步范围。
+
+## 2026-08-04 14:26:12 UTC (+0000)
+- 处理时间:
+  - `2026-08-04 14:26:12 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-yaboshi-publish/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-yaboshi-publish/agents/openai.yaml`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以基线 `2026-08-04T13:23:37.725Z` 复核到一个新的仓库镜像 skill 非零变更批次，内容是 `weixin-shop-yaboshi-publish` 的 `2 added`，合计 `2 added / 0 modified / 0 deleted`。
+  - 这批变化把 牙博士 微信小店铺货技能正式补进 `skill-center/skills/weixin-shop-yaboshi-publish/` 仓库镜像；后续 GitHub 同步时应至少带上这两个新增文件以及 `skill-change-monitor.md` 在 `2026-08-04 14:26:12 UTC (+0000)` 的对应记录。
+
+## 2026-08-04 10:46:13 UTC (+0000)
+- 处理时间:
+  - `2026-08-04 10:46:13 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-yaboshi-publish/SKILL.md`
+- 同步提示:
+  - `skill-monitor` 以基线 `2026-08-04T09:36:36.874Z` 复核到一个新的本地 skill 非零变更批次，内容是 `.codex` 自定义技能 `weixin-shop-yaboshi-publish/SKILL.md` 的 `1 modified`，合计 `0 added / 1 modified / 0 deleted`。
+  - 这次刷新把 牙博士 微信小店铺货技能补上了更严格的 live acceptance / 端到端验证门槛，但当前仍只存在于本地技能安装树，不在仓库跟踪路径内；如果后续要进入 GitHub 同步流程，应先决定是否建立或刷新 `skill-center/skills/weixin-shop-yaboshi-publish/` 的仓库镜像，再连同 `skill-change-monitor.md` 在 `2026-08-04 10:46:13 UTC (+0000)` 的对应记录一并处理。
+
+## 2026-08-04 10:25:47 UTC (+0000)
+- 处理时间:
+  - `2026-08-04 10:25:47 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-yaboshi-publish/SKILL.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以基线 `2026-08-04T09:22:36.820Z` 复核到一个新的本地 skill 非零变更批次，内容是 `.codex` 自定义技能 `weixin-shop-yaboshi-publish/SKILL.md` 的 `1 added`，合计 `1 added / 0 modified / 0 deleted`。
+  - 该批次把 牙博士 微信小店铺货闭环独立成新技能，但当前仍只存在于本地技能安装树，不在仓库跟踪路径内；如果后续要进入 GitHub 同步流程，应先决定是否建立 `skill-center/skills/weixin-shop-yaboshi-publish/` 的仓库镜像，再连同 `skill-change-monitor.md` 在 `2026-08-04 10:25:47 UTC (+0000)` 的对应记录一并处理。
+
+## 2026-08-04 08:38:34 UTC (+0000)
+- 处理时间:
+  - `2026-08-04 08:38:34 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-yaboshi-publish/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-yaboshi-publish/agents/openai.yaml`
+- 同步提示:
+  - `skill-monitor` 以基线 `2026-08-04T07:36:06.553Z` 复核到一个新的本地 skill 非零变更批次，内容是 `.codex` 自定义技能 `weixin-shop-yaboshi-publish` 的 `2 added`，合计 `2 added / 0 modified / 0 deleted`。
+  - 该批次把 牙博士 微信小店铺货闭环独立成新技能，但当前仍只存在于本地技能安装树，不在仓库跟踪路径内；如果后续要进入 GitHub 同步流程，应先决定是否建立 `skill-center/skills/weixin-shop-yaboshi-publish/` 的仓库镜像，再连同 `skill-change-monitor.md` 在 `2026-08-04 08:38:34 UTC (+0000)` 的对应记录一并处理。
+
+## 2026-08-03 18:24:16 UTC (+0000)
+- 处理时间:
+  - `2026-08-03 18:24:16 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-ledger-sync/SKILL.md`
+- 同步提示:
+  - `skill-monitor` 以基线 `2026-08-03T17:20:03.211Z` 复核到一个新的非零变更批次，内容是 `weixin-shop-ledger-sync` 的 `2 modified`，其中本地 `.codex` 与仓库镜像各 1 个文档刷新，合计 `0 added / 2 modified / 0 deleted`。
+  - 后续 GitHub 同步时应至少带上 `skill-center/skills/weixin-shop-ledger-sync/SKILL.md` 与 `skill-change-monitor.md` 在 `2026-08-03 18:24:16 UTC (+0000)` 的对应记录；本轮没有新的 `.py` 脚本进入同步范围。
+
+## 2026-08-03 18:07:17 UTC (+0000)
+- 处理时间:
+  - `2026-08-03 18:07:17 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-ledger-sync/SKILL.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以基线 `2026-08-03T17:01:03.113Z` 复核到一个新的非零变更批次，内容是 `weixin-shop-ledger-sync` 的 `2 modified`，其中本地 `.codex` 与仓库镜像各 1 个文档刷新，合计 `0 added / 2 modified / 0 deleted`。
+  - 后续 GitHub 同步时应至少带上 `skill-center/skills/weixin-shop-ledger-sync/SKILL.md` 与 `skill-change-monitor.md` 在 `2026-08-03 18:07:17 UTC (+0000)` 的对应记录；本轮没有新的 `.py` 脚本进入同步范围。
 
 ## 2026-08-03 14:34:28 UTC (+0000)
 - 处理时间:
@@ -5993,3 +6061,22 @@
 - 同步提示:
   - `skill-monitor-95dbcba9cef8` 以基线 `2026-08-03T10:44:31.420Z` 复核到一个新的 mixed skill 非零变更批次，内容是 `weixin-shop-price-floor-audit` 的本地 skill 与仓库镜像各 `1 modified`，合计 `0 added / 2 modified / 0 deleted`。
   - 这次刷新把两份 skill 继续收紧到“官方在售证据必须同轮全量抓取、停供必须精确 live 回读、价格风险默认先修原刊登”，并把审核中 `10020047` 的 rollback 隔离顺序明确写入；后续 GitHub 同步时应连同 `skill-change-monitor.md` 在 `2026-08-03 11:48:07 UTC (+0000)` 的对应记录一起处理。
+
+## 2026-08-04 08:23:57 UTC (+0000)
+- 处理时间:
+  - `2026-08-04 08:23:57 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-yaboshi-publish/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-yaboshi-publish/agents/openai.yaml`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以基线 `2026-08-04T07:22:06.488Z` 发现一个新的本地 `.codex` skill 非零变更批次，内容是 `weixin-shop-yaboshi-publish` 的 `2 added`，合计 `2 added / 0 modified / 0 deleted`。
+  - 该批次新增了牙博士微信小店铺货技能及其 agent 元数据，但仓库镜像 `skill-center/skills/` 下尚无对应目录；后续 GitHub 同步前应先决定是否补齐该技能的仓库镜像，再连同 `skill-change-monitor.md` 在 `2026-08-04 08:23:57 UTC (+0000)` 的对应记录一起处理。
+
+## 2026-08-04 09:25:08 UTC (+0000)
+- 处理时间:
+  - `2026-08-04 09:25:08 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-yaboshi-publish/agents/openai.yaml`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以基线 `2026-08-04T08:22:36.727Z` 复核到一个新的本地 `.codex` skill 非零变更批次，内容是 `weixin-shop-yaboshi-publish/agents/openai.yaml` 的 `1 added`，合计 `1 added / 0 modified / 0 deleted`。
+  - 该批次是在已存在本地 skill `weixin-shop-yaboshi-publish` 上补充 agent 元数据；如果后续需要进入 GitHub 同步流程，应先决定是否为该技能补齐 `skill-center/skills/weixin-shop-yaboshi-publish/` 仓库镜像，再连同 `skill-change-monitor.md` 在 `2026-08-04 09:25:08 UTC (+0000)` 的对应记录一起处理。
