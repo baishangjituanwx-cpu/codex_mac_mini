@@ -11,6 +11,31 @@
 - 阻塞原因
 - 是否达到“Mac / Windows 版本都齐全”
 
+## 2026-08-07 22:03:29 CST (+0800)
+
+- 处理时间:
+  - `2026-08-07 22:03:29 CST (+0800)`
+- 输入来源:
+  - 已对照上一条 Windows 状态记录覆盖上限 `2026-08-06 14:00:15 UTC (+0000)`，继续复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 中此后新增、此前尚未写入本状态文件的 monitor 批次。
+  - 本轮实际覆盖窗口为 `2026-08-06 14:17:58 UTC (+0000)` 到当前最新标题 `2026-08-07 13:30:53 UTC (+0000)`，共 `44` 个新增 monitor 批次；其中大多数批次为 `新增 0，修改 0，删除 0`。
+  - 与 Windows 转译直接相关的非零批次有三类：`2026-08-06 17:20:30 UTC (+0000)` 的 future-baseline carryover 识别批次、`2026-08-07 07:21:10 UTC (+0000)` 的本地 nightly-sync 镜像文档删除批次，以及 `2026-08-07 09:16:09 UTC (+0000)` / `2026-08-07 09:28:54 UTC (+0000)` 这组重复记录的新增技能批次。
+  - 其中真正引入新的 custom-skill 仓库镜像行为的是 `2026-08-07 09:16:09 UTC (+0000)` / `2026-08-07 09:28:54 UTC (+0000)`：新增 `weixin-shop-paid-traffic-ops` 与 `huice-product-media-export`，并同步刷新 `weixin-shop-ledger-sync` 与 `weixin-shop-yaboshi-publish`。`2026-08-06 17:20:30 UTC (+0000)` 复现的是已存在仓库镜像路径的 carryover 识别，`2026-08-07 07:21:10 UTC (+0000)` 只删除了 `.codex` 本地 nightly-sync 副本，不是新的仓库 Windows 缺口。
+- 已完成的 Windows 补全:
+  - 已补齐 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-paid-traffic-ops/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-paid-traffic-ops/SKILL.md) 的 `Windows Repo Mirror Notes`，明确该 skill 不新增独立 Windows 业务包装器，继续共用官方微信小店读回 + `lark-cli` 云写回流程。
+  - 已在 `weixin-shop-paid-traffic-ops` 仓库镜像中补入 Windows 键位差异、`%USERPROFILE%\\.codex\\skills\\weixin-shop-paid-traffic-ops\\` 安装路径、带引号 `C:/Users/<name>/...` 证据路径，以及 PowerShell 调用 `lark-cli sheets write-range` 的等价示例，确保 paid-traffic checkpoint 写回在 Windows 上可直接执行。
+  - 已复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-product-media-export/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-product-media-export/SKILL.md) 与 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-product-media-export/scripts/download-huice-detail-images.ps1`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-product-media-export/scripts/download-huice-detail-images.ps1) 当前已经提供 Windows 可用等价实现：保留同一份 Node 导出逻辑，并附带 PowerShell 启动器、Windows 键位差异、`%USERPROFILE%` 安装路径和 `C:/Users/<name>/...` 输出路径约束，因此不需要再分叉第二套导出脚本。
+  - 已复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-ledger-sync/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-ledger-sync/SKILL.md) 与 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-yaboshi-publish/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-yaboshi-publish/SKILL.md) 在这轮规则刷新后仍保留完整 Windows 镜像说明，不需要额外补写 PowerShell 包装器、路径转换或快捷键差异文档。
+  - 已明确记录 `2026-08-06 17:20:30 UTC (+0000)` 与 `2026-08-07 07:21:10 UTC (+0000)` 都不需要新增 Windows 转译：前者是已存在仓库镜像的 carryover 识别，后者只影响 `.codex` 本地 nightly-sync 文档副本删除，不影响仓库正式 `docs/automation/` 或 `skill-center/skills/` 覆盖。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-08-07 13:30:53 UTC (+0000)`，本轮新增 monitor 条目没有遗留尚未转译的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 当前主机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；本轮判断基于 monitor 增量复核、仓库镜像内容核对，以及 repo 内现有 PowerShell 启动器和 Windows 调用示例检查。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-08-07 13:30:53 UTC (+0000)`，`skill-change-monitor.md` 中自上一条状态记录之后新增的 custom-skill 行为已经完成或保持 Windows 可用等价覆盖；今天的 Mac / Windows 覆盖均完整。
+
 ## 2026-08-06 22:03:32 CST (+0800)
 
 - 处理时间:
