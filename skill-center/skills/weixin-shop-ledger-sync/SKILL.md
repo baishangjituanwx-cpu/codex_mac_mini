@@ -16,6 +16,12 @@ Cloud-record mechanics only. Product safety and publication decisions stay with 
 - Do not append a duplicate order row when the exact order/trade row already exists.
 - Never write or output tokens, cookies, signatures, login credentials, or buyer privacy.
 
+For paid traffic, append one row per exact task, product, date, and checkpoint. Keep
+material status, task switch, target ROI, total budget, balance, modification time,
+cold-start stage, actual成交ROI, and成交成本 as explicit raw fields rather than
+burying them in notes. Derived fields remain formulas; a later checkpoint must not
+overwrite earlier evidence.
+
 ## Windows Repo Mirror Notes
 
 This skill does not need a separate Windows PowerShell or `.cmd` wrapper. The same `lark-cli sheets` and `lark-cli docs` flow remains the Windows-usable equivalent, so the repo mirror should stay shared rather than fork cloud-write scripts by platform.

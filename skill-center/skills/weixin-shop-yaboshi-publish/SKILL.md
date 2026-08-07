@@ -29,6 +29,14 @@ If any product is reviewing, rejected, missing a link, or missing cloud readback
 the skill provisional and record the exact failed stage. Do not describe the skill as
 validated, reliable, complete, or production-ready.
 
+## Review-period hardening
+
+During every 牙博士 run, re-read the exact cloud row in `【退货售后地址】` and the
+official address ID before candidate selection, join, save, submit, and promotion.
+The address ID is publication evidence, not a reason to bypass SKU, price, stock,
+mapping, or hard-success gates. The 2026-08-05 to 2026-08-07 review does not upgrade
+this skill because no three-product end-to-end acceptance batch was verified.
+
 ## Tool boundaries
 
 - Use the Huice shared HTTP toolkit for candidate detail, joining distribution, distribution readback, fast-publish create/query/save/submit, task logs, price, stock, and publish records.
