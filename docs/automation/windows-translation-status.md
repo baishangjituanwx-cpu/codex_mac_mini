@@ -11,6 +11,29 @@
 - 阻塞原因
 - 是否达到“Mac / Windows 版本都齐全”
 
+## 2026-08-09 22:04:44 CST (+0800)
+
+- 处理时间:
+  - `2026-08-09 22:04:44 CST (+0800)`
+- 输入来源:
+  - 已对照上一条 Windows 状态记录覆盖上限 `2026-08-08 13:09:57 UTC (+0000)`，继续复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 中此后新增、此前尚未写入本状态文件的 monitor 批次。
+  - 这段增量窗口里的非零 custom-skill 批次都集中在 `bysl-image-generation`：`2026-08-09 07:27:53 UTC (+0000)` 首次把技能扩展为图片+视频双栈并补入视频参考与 Windows 启动器，`2026-08-09 08:28:17 UTC (+0000)` 继续把鉴权流程收束到 macOS Keychain + `token-store-clipboard`，`2026-08-09 13:33:31 UTC (+0000)` 是同一批 BYSL 图片/视频能力在另一条 monitor 轨道上的重复落账。
+  - 同一窗口内其余新增 monitor 条目都是 `新增 0，修改 0，删除 0` 的 no-op 复核；唯一额外的非零项是 `skill-center/skills-manifest.txt` 删除，这属于平台无关的静态清单移除，不构成新的 Windows skill 行为缺口。
+- 已完成的 Windows 补全:
+  - 已复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/scripts/bysl-api.ps1`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/scripts/bysl-api.ps1) 与 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/scripts/bysl-api.cmd`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/scripts/bysl-api.cmd) 已在仓库镜像中可用；PowerShell 入口会解析 `node` / `node.exe`，`cmd` 入口可在执行策略受限时直接转调同一份 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/scripts/bysl-api.js`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/scripts/bysl-api.js)，不分叉业务逻辑。
+  - 已更新 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/SKILL.md)，把这轮新增的视频与鉴权行为补成 Windows 可直接执行的等价说明：新增 `cmd` fallback、带引号 `C:/Users/<name>/...` 路径约束、Windows Chrome DevTools 快捷键 `Control+Shift+J` / `F12`、PowerShell 里 `Get-Clipboard` 到 `$env:NANO_TOKEN` 的刷新流程，以及 Windows 版 `video-create` 示例。
+  - 已明确把 `token-store-clipboard` 标注为 macOS-only 行为，并在同一份技能文档中补入 Windows 等价做法：继续使用 `NANO_TOKEN` 环境变量，不要求新增 Windows Keychain/凭据管理器封装，也不删除现有 Mac / 通用实现。
+  - 已复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/references/video.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/references/video.md)、[`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/references/api.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/references/api.md) 与 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/src/bysl-client.js`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/src/bysl-client.js) 的这轮图片+视频扩展都不需要额外 Windows 分叉；现有 PowerShell / `cmd` 启动器和新补的 Windows 文档已足以覆盖视频模型查询、创建、轮询和下载路径用法。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-08-09 13:33:31 UTC (+0000)`，本轮新增 monitor 条目没有遗留尚未转译的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 当前主机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；本轮判断基于 monitor 增量复核、仓库镜像内容核对，以及 repo 内现有 `ps1` / `cmd` 包装器和新增 Windows 调用说明检查。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-08-09 13:33:31 UTC (+0000)`，`skill-change-monitor.md` 中自上一条状态记录之后新增的 custom-skill 行为已经完成或保持 Windows 可用等价覆盖；今天的 Mac / Windows 覆盖均完整。
+
 ## 2026-08-08 22:02:13 CST (+0800)
 
 - 处理时间:
