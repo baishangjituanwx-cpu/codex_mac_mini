@@ -168,6 +168,51 @@ function buildNanoPayload({
   return payload;
 }
 
+function buildVideoCreatePayload({
+  modelId,
+  prompt,
+  ratio,
+  duration,
+  resolution,
+  images = "",
+  modelType,
+  firstFrame,
+  lastFrame,
+  promptExtend,
+}) {
+  const parsedModelId = Number(modelId);
+  if (!Number.isInteger(parsedModelId) || parsedModelId <= 0) {
+    throw new Error("modelId must be a positive integer.");
+  }
+
+  const payload = {
+    model_id: parsedModelId,
+    prompt: requirePrompt(prompt),
+  };
+
+  if (ratio) payload.ratio = String(ratio);
+  if (duration !== undefined) payload.duration = parsePositiveInteger(duration, "duration");
+  if (resolution !== undefined) payload.resolution = parsePositiveInteger(resolution, "resolution");
+
+  const normalizedImages = normalizeImageRefs(images);
+  if (normalizedImages) payload.image = normalizedImages;
+
+  if (modelType !== undefined) payload.model_type = parsePositiveInteger(modelType, "modelType");
+  if (firstFrame) payload.first_frame = String(firstFrame);
+  if (lastFrame) payload.last_frame = String(lastFrame);
+  if (promptExtend !== undefined) payload.prompt_extend = Boolean(promptExtend);
+
+  return payload;
+}
+
+function parsePositiveInteger(value, fieldName) {
+  const parsed = Number(value);
+  if (!Number.isInteger(parsed) || parsed <= 0) {
+    throw new Error(`${fieldName} must be a positive integer.`);
+  }
+  return parsed;
+}
+
 function guessMimeType(filePath) {
   const ext = path.extname(filePath).toLowerCase();
   if (ext === ".png") return "image/png";
@@ -301,6 +346,11 @@ function createClient({
     imageModels: (payload) => callApi("/api/ai_video/video_model", payload),
     imageCreate: (payload) => callApi("/api/ai_image/image_create", payload),
     nanoCreate: (payload) => callApi("/api/ai_image/nano_banana", payload),
+    videoModelGroups: () => callApi("/api/ai_video/video_model_type", {}),
+    videoModels: (payload = {}) => callApi("/api/ai_video/video_model", payload),
+    videoCreate: (payload) => callApi("/api/ai_video/video_create", payload),
+    videoList: (payload = {}) => callApi("/api/ai_video/list", payload),
+    videoCategory: () => callApi("/api/ai_video/category", {}),
   };
 }
 
@@ -308,6 +358,7 @@ module.exports = {
   DEFAULT_BASE_URL,
   buildImageCreatePayload,
   buildNanoPayload,
+  buildVideoCreatePayload,
   buildSignedHeaders,
   countQuestionMarks,
   createClient,

@@ -1,0 +1,4 @@
+interface:
+  display_name: "BYSL 图片与视频生成"
+  short_description: "通过固定 CLI 调用 BYSL 图片与 AI 视频生成 API"
+  default_prompt: "Use $bysl-image-generation to create an image or video through the bundled BYSL CLI from a UTF-8 prompt file."
