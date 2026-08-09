@@ -13,6 +13,17 @@
 - 若跳过，说明跳过原因
 
 
+## 2026-08-09 14:34:34 UTC (+0000)
+- 处理时间:
+  - `2026-08-09 14:34:34 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/SKILL.md`
+- 同步提示:
+  - `skill-monitor` 以基线 `2026-08-09T13:30:40.379Z` 复核到一个新的仓库镜像 skill 非零变更批次，内容为 `0 added / 1 modified / 0 deleted`。
+  - 这批变化把 `bysl-image-generation` 的技能镜像升级为覆盖 BYSL 图片和视频生成，并补入 Keychain / clipboard 鉴权、Windows `cmd` 包装器、引用图上传要求和视频模型/任务命令。
+  - 本轮没有新的 `.py` 文件进入同步范围；后续 GitHub 同步应至少带上上述路径以及 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 在 `2026-08-09 14:34:34 UTC (+0000)` 的对应记录。
+
+
 ## 2026-08-08 03:00:40 UTC (+0000)
 - 处理时间:
   - `2026-08-08 03:00:40 UTC (+0000)`
@@ -6335,4 +6346,66 @@
   - 未提交 `skill-center/skills/codex-proxy-setup/scripts/__pycache__/`，因为它是 Python 缓存产物，不属于应推送内容。
   - 未在 `codex/default-python-sync` 重复提交 `docs/weixin-shop-paid-traffic-runbook.md`、`scripts/validate-weixin-selling-scan.js`、`skill-center/skills/weixin-shop-paid-traffic-ops/**`、`skill-center/skills/huice-product-media-export/**`、`skill-center/skills/codex-proxy-setup/**`、`skill-center/skills/huice-distribution-order-push/**`、`skill-center/skills/update-edgetunnel-pages/**`、`skill-center/skills/wechat-shop-return-address/**`、`skill-center/skills/weixin-shop-goods-inspection/**`、`skill-center/skills/weixin-shop-ledger-sync/**`、`skill-center/skills/weixin-shop-price-floor-audit/**`、`skill-center/skills/weixin-shop-publish-recovery/**` 与 `skill-center/skills/weixin-shop-yaboshi-publish/**`，因为用干净 worktree 对照 `origin/codex/default-python-sync` 后确认这些路径已经上游，无需重复制造提交。
   - 未在 `codex/windows-version-20260411` 重复提交 `docs/automation/windows-translation-status.md` 的本轮 `2026-08-08 22:02:13 CST (+0800)` 补记，也未重复提交 `skill-center/skills/weixin-shop-paid-traffic-ops/**`、`skill-center/skills/huice-product-media-export/**`、`skill-center/skills/update-edgetunnel-pages/**`、`skill-center/skills/huice-distribution-order-push/**`、`skill-center/skills/codex-proxy-setup/**` 或 `skill-center/skills/wechat-shop-return-address/**`，因为抓取后确认 `origin/codex/windows-version-20260411` 已包含等价的 `6cd32eb Record August 8 Windows translation completion status` 与既有 Windows 侧资产。
+  - 未在 `codex/windows-version-20260411` 混入 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 或 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md)，因为它们属于通用监控与同步台账，继续保留在默认分支同步。
+
+## 2026-08-09 07:27:53 UTC (+0000)
+- 处理时间:
+  - `2026-08-09 07:27:53 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/references/video.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/references/api.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/scripts/bysl-api.js`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/src/bysl-client.js`
+- 同步提示:
+  - `skill-monitor` 以基线 `2026-08-09T06:24:08.302Z` 复核到一个新的仓库镜像 skill 非零变更批次，内容是 `2 added / 4 modified / 0 deleted`，全部位于 `skill-center/skills/bysl-image-generation/`。
+  - 这批变化把 `bysl-image-generation` 从图片生成技能扩展为图片加 AI 视频双栈技能，新增 agent 元数据和视频模型参考，并把 CLI / client 扩展到 `/api/ai_video/*`；后续 GitHub 同步时应至少连同上述 6 个仓库路径以及 `skill-change-monitor.md` 在 `2026-08-09 07:27:53 UTC (+0000)` 的对应记录一起处理。
+
+## 2026-08-09 08:28:17 UTC (+0000)
+- 处理时间:
+- `2026-08-09 08:28:17 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/scripts/bysl-api.js`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills-manifest.txt`
+- 同步提示:
+- `skill-monitor` 在 `2026-08-09 07:27:53 UTC (+0000)` 记录首个 `bysl-image-generation` 仓库镜像批次之后，又相对保存快照识别到一个新的跟进子批次，内容为 `0 added / 2 modified / 1 deleted`，全部位于 `skill-center/skills/bysl-image-generation/` 与 `skill-center/skills-manifest.txt`。
+- 这批变化把 BYSL 镜像说明和 CLI 进一步收束到 macOS Keychain 鉴权与 `token-store-clipboard` 流程，同时移除了 `skill-center/skills-manifest.txt` 静态清单；后续 GitHub 同步应至少带上上述 3 个仓库路径以及 `skill-change-monitor.md` 在 `2026-08-09 08:28:17 UTC (+0000)` 的对应记录。
+
+## 2026-08-09 13:33:31 UTC (+0000)
+- 处理时间:
+- `2026-08-09 13:33:31 UTC (+0000)`
+- 新发现的待同步批次:
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/agents/openai.yaml`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/references/video.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/SKILL.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/references/api.md`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/scripts/bysl-api.js`
+- `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/src/bysl-client.js`
+- 同步提示:
+- `skill-monitor-95dbcba9cef8` 相对基线 `2026-08-09T12:30:10.115Z` 识别到一个新的仓库镜像 skill 非零变更批次，内容为 `2 added / 4 modified / 0 deleted`，全部位于 `skill-center/skills/bysl-image-generation/`。
+- 这批变化新增了图片+视频 agent 元数据与视频参数参考，并继续重写 BYSL 技能说明、CLI 与 client，使视频生成、Keychain 鉴权和无水印下载路径在仓库镜像侧完整落地；后续 GitHub 同步应至少连同上述 6 个仓库路径以及 `skill-change-monitor.md` 在 `2026-08-09 13:33:31 UTC (+0000)` 的对应记录一起处理。
+
+## 2026-08-09 16:05:01 UTC (+0000)
+- 处理时间:
+  - `2026-08-09 16:05:01 UTC (+0000)`
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。干净 worktree 对照 `origin/codex/default-python-sync` 后，实际待同步内容收敛为 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 中 `2026-08-09 07:27:53 UTC (+0000)`、`2026-08-09 08:28:17 UTC (+0000)` 与 `2026-08-09 13:33:31 UTC (+0000)` 的 `bysl-image-generation` 监控批次，以及同目录下的 GitHub 同步执行记录和 `skill-center/skills/bysl-image-generation/{SKILL.md,references/api.md,references/video.md,agents/openai.yaml,scripts/bysl-api.js,src/bysl-client.js}` 仓库镜像增量。
+  - `codex/windows-version-20260411`: 是。当前工作树里的 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/windows-translation-status.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/windows-translation-status.md) 已包含 `2026-08-09 22:04:44 CST (+0800)` 的“Mac / Windows 版本都齐全”闭环记录；对照 `origin/codex/windows-version-20260411` 后，仍需补齐 `skill-center/skills/bysl-image-generation/` 的首个 Windows mirror 批次，包括 `SKILL.md`、agent 元数据、`references/{api,video}.md`、`scripts/bysl-api.{cmd,js,ps1}` 与 `src/bysl-client.js`。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。提交信息为 `Sync August 9 BYSL mirror updates and monitor log`。
+  - `codex/windows-version-20260411`: 是。提交信息为 `Sync August 9 BYSL Windows bridge mirror`。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。推送目标为 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 是。推送目标为 `origin/codex/windows-version-20260411`。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync August 9 BYSL mirror updates and monitor log`
+  - `codex/windows-version-20260411`: `Sync August 9 BYSL Windows bridge mirror`
+- 若跳过，说明跳过原因:
+  - 未在 `codex/default-python-sync` 重复提交 `docs/weixin-shop-paid-traffic-runbook.md`、`scripts/validate-weixin-selling-scan.js`、`skill-center/skills/codex-proxy-setup/**`、`skill-center/skills/huice-distribution-order-push/**`、`skill-center/skills/huice-product-media-export/**`、`skill-center/skills/update-edgetunnel-pages/**`、`skill-center/skills/wechat-shop-return-address/**`、`skill-center/skills/weixin-shop-goods-inspection/**`、`skill-center/skills/weixin-shop-ledger-sync/**`、`skill-center/skills/weixin-shop-paid-traffic-ops/**`、`skill-center/skills/weixin-shop-price-floor-audit/**`、`skill-center/skills/weixin-shop-publish-recovery/**` 与 `skill-center/skills/weixin-shop-yaboshi-publish/**`，因为干净 worktree 对照 `origin/codex/default-python-sync` 后确认这些路径已经上游，无需重复制造提交。
+  - 未提交 `.codex-skill-monitor-ref-20260729220620`、`.codex-tmp-skill-monitor-20260626-blocks.md`、`.skill-monitor-baseline-20260808T171034Z`、`.skill-monitor-baseline-utc-ref`、`.skill-monitor-last-run-ref` 与 `.skill-monitor-scan-ref`，因为它们属于本地监控参考或临时文件，不进入 GitHub 同步。
   - 未在 `codex/windows-version-20260411` 混入 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 或 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md)，因为它们属于通用监控与同步台账，继续保留在默认分支同步。
