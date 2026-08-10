@@ -1,4 +1,5 @@
 const crypto = require("node:crypto");
+const { execFile } = require("node:child_process");
 const fs = require("node:fs");
 const path = require("node:path");
 
@@ -205,6 +206,40 @@ function buildVideoCreatePayload({
   return payload;
 }
 
+function parseNumberInRange(value, fieldName, min, max) {
+  const parsed = Number(value);
+  if (!Number.isFinite(parsed) || parsed < min || parsed > max) {
+    throw new Error(`${fieldName} must be a number between ${min} and ${max}.`);
+  }
+  return parsed;
+}
+
+function buildTtsCreatePayload({
+  voiceId,
+  text,
+  volume = 1,
+  pitch = 1,
+  rate = 1,
+}) {
+  const parsedVoiceId = Number(voiceId);
+  if (!Number.isInteger(parsedVoiceId) || parsedVoiceId <= 0) {
+    throw new Error("voiceId must be a positive integer.");
+  }
+
+  const normalizedText = String(text || "").trim();
+  if (!normalizedText) {
+    throw new Error("TTS text is required. Prefer --text-file for Chinese text.");
+  }
+
+  return {
+    voice_id: parsedVoiceId,
+    text: normalizedText,
+    volume: parseNumberInRange(volume, "volume", 0, 1),
+    pitch: parseNumberInRange(pitch, "pitch", 0.5, 2),
+    rate: parseNumberInRange(rate, "rate", 0.5, 2),
+  };
+}
+
 function parsePositiveInteger(value, fieldName) {
   const parsed = Number(value);
   if (!Number.isInteger(parsed) || parsed <= 0) {
@@ -219,6 +254,34 @@ function guessMimeType(filePath) {
   if (ext === ".jpg" || ext === ".jpeg") return "image/jpeg";
   if (ext === ".webp") return "image/webp";
   return "application/octet-stream";
+}
+
+function downloadWithSystemCurl(url, outPath) {
+  const curl = process.platform === "darwin"
+    ? "/usr/bin/curl"
+    : process.platform === "win32"
+      ? "curl.exe"
+      : "curl";
+
+  return new Promise((resolve, reject) => {
+    execFile(
+      curl,
+      ["--fail", "--location", "--silent", "--show-error", "--output", outPath, url],
+      { windowsHide: true },
+      (error) => {
+        if (!error) {
+          resolve(outPath);
+          return;
+        }
+        try {
+          if (fs.existsSync(outPath)) fs.unlinkSync(outPath);
+        } catch {
+          // Preserve the original download failure.
+        }
+        reject(new Error("Download failed with the system certificate store."));
+      },
+    );
+  });
 }
 
 function createClient({
@@ -322,12 +385,27 @@ function createClient({
   }
 
   async function downloadUrl(url, outPath) {
-    const response = await fetchImpl(url);
+    fs.mkdirSync(path.dirname(outPath), { recursive: true });
+    let response;
+    try {
+      response = await fetchImpl(url);
+    } catch (error) {
+      const cause = error?.cause;
+      if ([
+        "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+        "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+        "SELF_SIGNED_CERT_IN_CHAIN",
+      ].includes(cause?.code)) {
+        await downloadWithSystemCurl(url, outPath);
+        return outPath;
+      }
+      const detail = [cause?.code, cause?.message].filter(Boolean).join(": ");
+      throw new Error(`Download request failed${detail ? ` (${detail})` : ""}.`);
+    }
     if (!response.ok) {
       throw new Error(`Download failed with HTTP ${response.status}: ${url}`);
     }
 
-    fs.mkdirSync(path.dirname(outPath), { recursive: true });
     fs.writeFileSync(outPath, Buffer.from(await response.arrayBuffer()));
     return outPath;
   }
@@ -351,6 +429,10 @@ function createClient({
     videoCreate: (payload) => callApi("/api/ai_video/video_create", payload),
     videoList: (payload = {}) => callApi("/api/ai_video/list", payload),
     videoCategory: () => callApi("/api/ai_video/category", {}),
+    ttsVoiceCategories: () => callApi("/api/audio/voice_cate", {}),
+    ttsVoices: (payload = {}) => callApi("/api/audio/voice_list", payload),
+    ttsCreate: (payload) => callApi("/api/audio/synthesis", payload),
+    ttsHistory: (payload = {}) => callApi("/api/audio/history_list", payload),
   };
 }
 
@@ -358,6 +440,7 @@ module.exports = {
   DEFAULT_BASE_URL,
   buildImageCreatePayload,
   buildNanoPayload,
+  buildTtsCreatePayload,
   buildVideoCreatePayload,
   buildSignedHeaders,
   countQuestionMarks,

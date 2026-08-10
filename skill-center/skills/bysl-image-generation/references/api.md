@@ -36,6 +36,15 @@ POST /api/ai_video/video_model_type
 POST /api/ai_video/category
 ```
 
+Audio/TTS endpoints:
+
+```text
+POST /api/audio/voice_cate
+POST /api/audio/voice_list
+POST /api/audio/synthesis
+POST /api/audio/history_list
+```
+
 ## Payloads
 
 Image-2:
@@ -75,6 +84,20 @@ Video:
 ```
 
 Seedance first/last-frame mode can additionally send `model_type`, `first_frame`, and `last_frame`. Wan models can send `prompt_extend`.
+
+TTS:
+
+```json
+{
+  "voice_id": 128,
+  "text": "UTF-8 narration text",
+  "volume": 1,
+  "pitch": 1,
+  "rate": 1
+}
+```
+
+The observed web client returns `data.audio_url` synchronously from `/api/audio/synthesis`. The bundled CLI downloads it directly and does not print the URL. Voice categories use an empty payload. Official voices use `type: 0`, `page`, `pagesize`, `status: 3`, and optionally `cate_id`; user voices use `type: 1` without a category requirement.
 
 ## Task states
 

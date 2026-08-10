@@ -1,9 +1,9 @@
 ---
 name: bysl-image-generation
-description: Generate and manage images and videos through the BYSL (白蚁算力/百亿算力) signed HTTP APIs with the bundled CLI. Use for BYSL setup and diagnostics, Nano or Image-2 generation, AI video generation, 文生视频, 图生视频, Seedance, Wan, Vidu, Veo, Grok or HappyHorse jobs, UTF-8 Chinese prompts, reference-image uploads, model discovery, task polling, result downloads, and NANO_TOKEN-based cross-device deployment.
+description: Generate and manage images, videos, and text-to-speech audio through the BYSL (白蚁算力/百亿算力) signed HTTP APIs with the bundled CLI. Use for BYSL setup and diagnostics, Nano or Image-2 generation, AI video generation, 文生视频, 图生视频, Seedance, Wan, Vidu, Veo, Grok or HappyHorse jobs, TTS/语音合成/音色选择, UTF-8 Chinese prompts or narration, reference-image uploads, live model or voice discovery, task polling, result downloads, and NANO_TOKEN-based cross-device deployment.
 ---
 
-# BYSL Image and Video Generation
+# BYSL Image, Video, and Audio Generation
 
 ## Non-negotiable rules
 
@@ -11,6 +11,7 @@ description: Generate and manage images and videos through the BYSL (白蚁算�
 - Do not reimplement signing or manually craft BYSL HTTP requests.
 - Never print, paste, write, commit, summarize, or screenshot `NANO_TOKEN`.
 - Put Chinese prompts in a UTF-8 file and pass `--prompt-file`.
+- Put Chinese TTS text in a UTF-8 file and pass `--text-file`.
 - Do not pipe Chinese JavaScript or JSON through Windows PowerShell stdin.
 - Require Node.js 20 or newer.
 
@@ -193,11 +194,49 @@ Windows PowerShell example with quoted local paths:
 
 Read [references/video.md](references/video.md) when selecting a video model or validating model-specific parameters.
 
+### Product-advertising preservation
+
+- Query the live model ID, supported parameters, and account credit before every paid-advertising generation batch.
+- For packaging, labels, fixed quantities, colors, or fine product structures, generate only a product-free, brand-free, text-free background. Composite verified real product pixels locally and deterministically after video generation.
+- Never approve a result where the model redraws packaging text, changes quantity/color, or deforms the product. Check every second, every scene cut, and the tail frame.
+- Before upload, also verify container/codecs, DAR/SAR, full decode, black/frozen frames, A/V timing, subtitles, loudness, clipping, and a full human listening pass when audio is present.
+- Distinguish machine QA from user listening acceptance; do not silently convert `HUMAN_AUDIO_REVIEW_REQUIRED` into a machine pass.
+
+## Generate text-to-speech audio
+
+Query live voice data before selecting a voice ID:
+
+```bash
+node scripts/bysl-api.js tts-voice-categories
+node scripts/bysl-api.js tts-voices --type 0 --cate-id 48 --page 1 --pagesize 20 --status 3
+node scripts/bysl-api.js tts-history --page 1 --pagesize 10
+```
+
+Write the narration as UTF-8 and download the generated audio directly:
+
+```bash
+node scripts/bysl-api.js tts-create --voice-id 128 --text-file narration.txt --volume 1 --rate 1 --pitch 1 --out outputs/narration.wav
+```
+
+Windows PowerShell example with quoted UTF-8 paths:
+
+```powershell
+Set-Content -Path "C:/Users/name/Documents/bysl/narration.txt" -Value "这里写中文旁白" -Encoding utf8
+.\scripts\bysl-api.ps1 tts-create --voice-id 128 --text-file "C:/Users/name/Documents/bysl/narration.txt" --volume 1 --rate 1 --pitch 1 --out "C:/Users/name/Documents/bysl/narration.wav"
+```
+
+Use a `voice_id` from the live list; do not assume a documented ID is still available. The web UI exposes volume `0–1`, rate `0.5–2`, and pitch `0.5–2`, all with defaults of `1`. The synthesis response is synchronous. The CLI downloads the returned audio URL when `--out` is supplied and omits that URL from stdout.
+
+After generation, decode-probe and listen to the complete file. Record the detected codec/container, duration, sample rate, channels, and bitrate. Do not infer the actual format only from the chosen filename extension.
+
+Read [references/audio.md](references/audio.md) for TTS endpoints, flags, validation, and safety details.
+
 ## Verify every generation
 
 - Confirm `diagnostics.questionMarkCount` is `0` unless the prompt intentionally contains `?`.
 - Confirm the task reached status `5`; treat status `6` as failed.
 - Confirm the output file exists and has non-zero bytes.
+- For TTS, confirm the audio decodes and manually review the full spoken content before publishing.
 - Prefer `video_url_clean` for video downloads when the API provides it.
 - Treat long pending or processing states as upstream queueing; retry with longer polling instead of rewriting the API call.
 - Report the output path and task status without exposing credentials.

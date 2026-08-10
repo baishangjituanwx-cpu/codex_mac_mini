@@ -11,6 +11,30 @@
 - 阻塞原因
 - 是否达到“Mac / Windows 版本都齐全”
 
+## 2026-08-10 22:02:55 CST (+0800)
+
+- 处理时间:
+  - `2026-08-10 22:02:55 CST (+0800)`
+- 输入来源:
+  - 已对照上一条 Windows 状态记录覆盖上限 `2026-08-09 13:33:31 UTC (+0000)`，继续复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 中此后新增、此前尚未写入本状态文件的 monitor 批次。
+  - 本轮实际覆盖窗口为 `2026-08-10 09:42:43 UTC (+0000)` 到当前最新标题 `2026-08-10 13:43:51 UTC (+0000)`，共 `6` 个新增 monitor 批次。
+  - 与 Windows 转译直接相关的非零批次有 `2026-08-10 09:42:43 UTC (+0000)` 和 `2026-08-10 10:43:23 UTC (+0000)`：前者把 `weixin-shop-paid-traffic-ops` 与 `bysl-image-generation` 的仓库镜像扩展到新的投流/视频规则；后者继续把 `bysl-image-generation` 扩展到图片、视频、TTS 一体化，并新增 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/references/audio.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/references/audio.md)。
+  - 同一窗口内其余 `2026-08-10 11:41:42 UTC (+0000)`、`2026-08-10 12:42:57 UTC (+0000)`、`2026-08-10 12:44:40 UTC (+0000)`、`2026-08-10 13:43:51 UTC (+0000)` 都是 `新增 0，修改 0，删除 0` 的 no-op 复核，没有再引入新的 Windows 缺口。
+- 已完成的 Windows 补全:
+  - 已补充 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/SKILL.md) 的 TTS 段落，新增 Windows PowerShell 等价示例：用 `Set-Content -Encoding utf8` 写中文旁白文件，再通过 `.\scripts\bysl-api.ps1 tts-create ...` 和带引号 `C:/Users/<name>/...` 路径直接生成音频。
+  - 已补充 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/references/audio.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/references/audio.md) 的 Windows 等价用法，增加同一组 PowerShell TTS 示例，并明确执行策略受限时可退回 `scripts\\bysl-api.cmd`，避免新加的音频参考只保留 bash/macOS 口径。
+  - 已复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/scripts/bysl-api.ps1`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/scripts/bysl-api.ps1)、[`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/scripts/bysl-api.cmd`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/scripts/bysl-api.cmd) 与共享 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/scripts/bysl-api.js`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/scripts/bysl-api.js) 已能覆盖图片、视频、TTS 全部 CLI 行为，不需要再分叉新的 Windows 业务实现。
+  - 已复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-paid-traffic-ops/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-paid-traffic-ops/SKILL.md) 及其 `references/data-contract.md`、`references/paid-traffic-material-qa.md` 已与 latest monitor 行为保持一致；这轮新增规则仍复用共享浏览器 + `lark-cli` 流程，不需要新增 PowerShell 包装器或单独 Windows 资产。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-08-10 13:43:51 UTC (+0000)`，本轮新增 monitor 条目没有遗留尚未转译的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 当前主机仍未发现 `pwsh` 或 `powershell`，因此没有做 Windows 实机回归；本轮判断基于 monitor 增量复核、仓库镜像内容核对，以及新增 PowerShell / `cmd` 调用说明检查。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-08-10 13:43:51 UTC (+0000)`，`skill-change-monitor.md` 中自上一条状态记录之后新增的 custom-skill 行为已经完成或保持 Windows 可用等价覆盖；今天的 Mac / Windows 覆盖均完整。
+
 ## 2026-08-09 22:04:44 CST (+0800)
 
 - 处理时间:
@@ -5726,3 +5750,27 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
   - 截至 `2026-08-03 22:00:55 CST (+0800)`，今天进入 monitor 的 `codex-proxy-setup`、`weixin-shop-ledger-sync`、`weixin-shop-publish-recovery` 与其余继续收紧的仓库镜像规则都已具备可用的 Windows 等价说明或实现；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-08-10 22:03:51 CST (+0800)
+
+- 处理时间:
+  - `2026-08-10 22:03:51 CST (+0800)`
+- 输入来源:
+  - 已对照上一条 Windows 状态记录覆盖上限 `2026-08-09 13:33:31 UTC (+0000)`，继续复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 中随后新增、此前尚未写入本状态文件的 monitor 批次。
+  - 本轮实际覆盖窗口为 `2026-08-10 09:42:43 UTC (+0000)` 到当前最新标题 `2026-08-10 13:43:51 UTC (+0000)`；其中真正有 custom-skill 非零增量的批次只有 `2026-08-10 09:42:43 UTC (+0000)` 与 `2026-08-10 10:43:23 UTC (+0000)`。
+  - `2026-08-10 09:42:43 UTC (+0000)` 涉及 `weixin-shop-paid-traffic-ops` 新增、`weixin-shop-ledger-sync` / `weixin-shop-yaboshi-publish` 规则刷新，以及仓库镜像 `bysl-image-generation` 的视频流补强；`2026-08-10 10:43:23 UTC (+0000)` 继续把 `bysl-image-generation` 扩展到图片、视频、TTS 三合一，并新增 `references/audio.md`。
+  - 同一窗口内后续 `2026-08-10 11:41:42 UTC (+0000)`、`2026-08-10 12:42:57 UTC (+0000)`、`2026-08-10 12:44:40 UTC (+0000)` 与 `2026-08-10 13:43:51 UTC (+0000)` 都是 `新增 0，修改 0，删除 0` 的 no-op 复核记录，没有新的 Windows 转译目标继续出现。
+- 已完成的 Windows 补全:
+  - 本轮没有新增仓库补丁；核对结果是 no-op，但已确认这两批 monitor 增量需要的 Windows 等价内容已经在仓库镜像里齐备。
+  - 已复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/SKILL.md) 已覆盖这轮新增的图片、视频、TTS 行为对应的 Windows 用法：保留 `scripts/bysl-api.ps1` 和 `scripts/bysl-api.cmd` 双入口、quoted `C:/Users/<name>/...` 路径规则、`Control+Shift+J` / `F12` DevTools 快捷键、`Get-Clipboard` 刷新 `$env:NANO_TOKEN` 流程，以及 `video-create` / `tts-create` 的 PowerShell 示例。
+  - 已复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/references/audio.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/references/audio.md)、[`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/references/api.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/references/api.md) 与 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/references/video.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/references/video.md) 已补入或保留 Windows 可直接执行的等价说明；这轮新增的 TTS 与视频 API/参数变化不需要再分叉 Windows 专属业务实现。
+  - 已复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-paid-traffic-ops/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-paid-traffic-ops/SKILL.md)、[`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-ledger-sync/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-ledger-sync/SKILL.md) 与 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-yaboshi-publish/SKILL.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-yaboshi-publish/SKILL.md) 仍保留完整 Windows mirror 说明，包括不新增独立 PowerShell 业务分叉、浏览器键位差异、`%USERPROFILE%\\.codex\\skills\\...` 安装路径，以及 quoted `C:/Users/<name>/...` 本地证据/导出路径规则；因此 `2026-08-10 09:42:43 UTC (+0000)` 这批规则刷新不需要额外 repo 资产。
+- 未完成的补全:
+  - 无。
+  - 截至 `2026-08-10 13:43:51 UTC (+0000)`，本轮新增 monitor 条目没有遗留尚未转译的 PowerShell 启动器、Windows 路径处理、Windows 文档、快捷键差异说明、命令包装器或 repo 资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 当前主机上 `pwsh` 与 `powershell` 均未发现，因此没有做 Windows 实机回归；本轮判断基于 monitor 增量复核，以及仓库镜像中现有 `ps1` / `cmd` 包装器和 Windows 调用说明检查。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。
+  - 截至 `2026-08-10 13:43:51 UTC (+0000)`，`skill-change-monitor.md` 中自上一条状态记录之后新增的 custom-skill 行为已经完成或保持 Windows 可用等价覆盖；今天的 Mac / Windows 覆盖均完整。
