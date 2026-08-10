@@ -6591,14 +6591,14 @@
   - `codex/default-python-sync`: 是。对照 `origin/codex/default-python-sync` 的干净 worktree 后，待同步内容收敛为通用监控与镜像更新：`docs/automation/skill-change-monitor.md` 的 `2026-08-10 07:42:02 UTC (+0000)`、`2026-08-10 10:41:49 UTC (+0000)`、`2026-08-10 14:44:56 UTC (+0000)` 与 `2026-08-10 14:44:58 UTC (+0000)` 批次，`skill-center/skills/bysl-image-generation/` 的图片/视频/TTS 三栈镜像增量，`skill-center/skills/weixin-shop-paid-traffic-ops/` 的资料与 QA 规则回写，`skill-center/skills/weixin-shop-ledger-sync/SKILL.md`、`skill-center/skills/weixin-shop-yaboshi-publish/SKILL.md` 的镜像刷新，以及 paid-traffic 运行文档。
   - `codex/windows-version-20260411`: 是。对照 `origin/codex/windows-version-20260411` 的干净 worktree 后，待同步内容收敛为 Windows 覆盖闭环所需的共享镜像文件：`docs/automation/windows-translation-status.md` 的 `2026-08-10 22:02:55 CST (+0800)` 记录，`skill-center/skills/bysl-image-generation/` 的 TTS mirror 增量，`skill-center/skills/weixin-shop-paid-traffic-ops/` 的 Windows 共享镜像刷新，以及此前尚未进入该分支的 Windows repo mirror skill 目录 `wechat-shop-return-address`、`weixin-shop-goods-inspection`、`weixin-shop-ledger-sync`、`weixin-shop-price-floor-audit`、`weixin-shop-publish-recovery`、`weixin-shop-yaboshi-publish`，外加它们依赖的仓库根校验脚本 `scripts/validate-weixin-selling-scan.js`。
 - 是否已提交:
-  - `codex/default-python-sync`: 是。提交信息为 `Sync August 10 BYSL TTS and paid-traffic mirror updates`。
-  - `codex/windows-version-20260411`: 是。提交信息为 `Sync August 10 Windows mirror coverage bundle`。
+  - `codex/default-python-sync`: 是。先在旧远端基线上生成本地提交 `Sync August 10 BYSL TTS and paid-traffic mirror updates`，随后发现远端已并发前进到 `dfe8dc0` 与 `6478102`，因此改为在最新远端 tip 上追加 `Record August 10 GitHub sync execution follow-up`。
+  - `codex/windows-version-20260411`: 是。先在旧远端基线上生成本地提交 `Sync August 10 Windows mirror coverage bundle`，随后发现远端已并发前进到 `f27feec`，因此改为在最新远端 tip 上追加 `Sync August 10 Windows shared mirror bundle`。
 - 是否已推送:
   - `codex/default-python-sync`: 是。推送目标为 `origin/codex/default-python-sync`。
   - `codex/windows-version-20260411`: 是。推送目标为 `origin/codex/windows-version-20260411`。
 - 提交信息:
-  - `codex/default-python-sync`: `Sync August 10 BYSL TTS and paid-traffic mirror updates`
-  - `codex/windows-version-20260411`: `Sync August 10 Windows mirror coverage bundle`
+  - `codex/default-python-sync`: 远端已包含并发提交 `dfe8dc0 Sync August 10 BYSL and paid-traffic mirror batch`、`6478102 Record August 10 GitHub sync execution`，本轮最终补推 `48cb6f3 Record August 10 GitHub sync execution follow-up`。
+  - `codex/windows-version-20260411`: 远端先并发写入 `f27feec Sync August 10 BYSL Windows TTS bridge mirror`，本轮随后补推 `311a4ef Sync August 10 Windows shared mirror bundle`。
 - 若跳过，说明跳过原因:
   - 未提交 `.codex-skill-monitor-ref-20260729220620`、`.codex-tmp-skill-monitor-20260626-blocks.md`、`.skill-monitor-baseline-20260808T171034Z`、`.skill-monitor-baseline-20260810094243`、`.skill-monitor-baseline-utc-ref`、`.skill-monitor-last-run-ref` 与 `.skill-monitor-scan-ref`，因为它们属于本地监控基线或临时参考文件，不进入 GitHub 同步。
   - 未在 `codex/default-python-sync` 混入 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/windows-translation-status.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/windows-translation-status.md)，因为它属于 Windows 覆盖台账，继续保留在 Windows 分支同步。
