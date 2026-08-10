@@ -6577,3 +6577,29 @@
   - `skill-monitor` 以 canonical baseline `2026-08-10 13:45:05 UTC (+0000)` 识别到一个新的 custom skill 非零变更批次，内容为 `1 added / 1 modified / 0 deleted`。
   - 这批变化继续扩写 `skill-center/skills/bysl-image-generation/` 仓库镜像：`SKILL.md` 补齐图片、视频、TTS 三栈工作流与校验规则，`references/audio.md` 新增独立的 BYSL TTS 参考文档。
   - 本轮没有新的 `.py` 文件进入同步范围；后续 GitHub 同步应至少连同 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 在 `2026-08-10 14:44:56 UTC (+0000)` 的对应记录一起处理。
+
+## 2026-08-10 16:05:52 UTC (+0000)
+- 处理时间:
+  - `2026-08-10 16:05:52 UTC (+0000)`
+- 前置门槛:
+  - 已先复核 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/windows-translation-status.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/windows-translation-status.md) 最新条目 `2026-08-10 22:02:55 CST (+0800)`。
+  - 该条目明确写明截至 `2026-08-10 13:43:51 UTC (+0000)`，待同步批次的 Mac / Windows 版本都齐全，因此本轮继续执行 GitHub 同步。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是。对照 `origin/codex/default-python-sync` 的干净 worktree 后，待同步内容收敛为通用监控与镜像更新：`docs/automation/skill-change-monitor.md` 的 `2026-08-10 07:42:02 UTC (+0000)`、`2026-08-10 10:41:49 UTC (+0000)`、`2026-08-10 14:44:56 UTC (+0000)` 与 `2026-08-10 14:44:58 UTC (+0000)` 批次，`skill-center/skills/bysl-image-generation/` 的图片/视频/TTS 三栈镜像增量，`skill-center/skills/weixin-shop-paid-traffic-ops/` 的资料与 QA 规则回写，`skill-center/skills/weixin-shop-ledger-sync/SKILL.md`、`skill-center/skills/weixin-shop-yaboshi-publish/SKILL.md` 的镜像刷新，以及 paid-traffic 运行文档。
+  - `codex/windows-version-20260411`: 是。对照 `origin/codex/windows-version-20260411` 的干净 worktree 后，待同步内容收敛为 Windows 覆盖闭环所需的共享镜像文件：`docs/automation/windows-translation-status.md` 的 `2026-08-10 22:02:55 CST (+0800)` 记录，`skill-center/skills/bysl-image-generation/` 的 TTS mirror 增量，`skill-center/skills/weixin-shop-paid-traffic-ops/` 的 Windows 共享镜像刷新，以及此前尚未进入该分支的 Windows repo mirror skill 目录 `wechat-shop-return-address`、`weixin-shop-goods-inspection`、`weixin-shop-ledger-sync`、`weixin-shop-price-floor-audit`、`weixin-shop-publish-recovery`、`weixin-shop-yaboshi-publish`，外加它们依赖的仓库根校验脚本 `scripts/validate-weixin-selling-scan.js`。
+- 是否已提交:
+  - `codex/default-python-sync`: 是。提交信息为 `Sync August 10 BYSL TTS and paid-traffic mirror updates`。
+  - `codex/windows-version-20260411`: 是。提交信息为 `Sync August 10 Windows mirror coverage bundle`。
+- 是否已推送:
+  - `codex/default-python-sync`: 是。推送目标为 `origin/codex/default-python-sync`。
+  - `codex/windows-version-20260411`: 是。推送目标为 `origin/codex/windows-version-20260411`。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync August 10 BYSL TTS and paid-traffic mirror updates`
+  - `codex/windows-version-20260411`: `Sync August 10 Windows mirror coverage bundle`
+- 若跳过，说明跳过原因:
+  - 未提交 `.codex-skill-monitor-ref-20260729220620`、`.codex-tmp-skill-monitor-20260626-blocks.md`、`.skill-monitor-baseline-20260808T171034Z`、`.skill-monitor-baseline-20260810094243`、`.skill-monitor-baseline-utc-ref`、`.skill-monitor-last-run-ref` 与 `.skill-monitor-scan-ref`，因为它们属于本地监控基线或临时参考文件，不进入 GitHub 同步。
+  - 未在 `codex/default-python-sync` 混入 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/windows-translation-status.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/windows-translation-status.md)，因为它属于 Windows 覆盖台账，继续保留在 Windows 分支同步。
+  - 未在 `codex/windows-version-20260411` 混入 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md)、[`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md)、[`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/weixin-shop-paid-traffic-runbook.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/weixin-shop-paid-traffic-runbook.md) 与 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/weixin-shop-paid-traffic-20260808-0810-evidence.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/weixin-shop-paid-traffic-20260808-0810-evidence.md)，因为它们属于通用监控或业务运行文档，不属于 Windows bridge / deployment mirror 专属提交。
