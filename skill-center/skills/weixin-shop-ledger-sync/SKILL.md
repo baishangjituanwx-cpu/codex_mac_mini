@@ -22,6 +22,17 @@ cold-start stage, actual成交ROI, and成交成本 as explicit raw fields rather
 burying them in notes. Derived fields remain formulas; a later checkpoint must not
 overwrite earlier evidence.
 
+Paid-traffic rows must also record `costChannelMode`, whether CPS commission is
+included, exact material IDs, configured copy, copy operation-log time, prior/current
+ROI and budget, effective mode, and mutation evidence. Default paid-traffic economics
+to `PAID_TRAFFIC_ONLY`; do not count the independent 10% ordinary-promotion CPS
+commission unless the same attributed order is proven to be `STACKED_VERIFIED`.
+
+Historical product reconciliation is not a new hard success. Only append an old
+product as `HISTORICAL_RECONCILIATION_<date>_NOT_NEW_SUCCESS` after immutable IDs and
+current official state are both proven. Otherwise record the missing mapping and do
+not backfill a success row.
+
 ## Windows Repo Mirror Notes
 
 This skill does not need a separate Windows PowerShell or `.cmd` wrapper. The same `lark-cli sheets` and `lark-cli docs` flow remains the Windows-usable equivalent, so the repo mirror should stay shared rather than fork cloud-write scripts by platform.

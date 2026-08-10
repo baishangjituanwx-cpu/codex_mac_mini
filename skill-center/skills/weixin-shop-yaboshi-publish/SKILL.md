@@ -36,6 +36,8 @@ official address ID before candidate selection, join, save, submit, and promotio
 The address ID is publication evidence, not a reason to bypass SKU, price, stock,
 mapping, or hard-success gates. The 2026-08-05 to 2026-08-07 review does not upgrade
 this skill because no three-product end-to-end acceptance batch was verified.
+The 2026-08-08 to 2026-08-10 traffic and material work used an existing product and
+also does not satisfy the three-new-product validation gate.
 
 ## Tool boundaries
 

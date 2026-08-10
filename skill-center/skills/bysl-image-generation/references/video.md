@@ -2,6 +2,13 @@
 
 Use this reference only for video jobs. Query `video-models` before a live job because server-side availability can change.
 
+For commercial product footage, do not send label-sensitive product pixels to a
+generative video model when exact packaging, quantity, color, or structure must stay
+unchanged. Prefer a generated empty background plus deterministic local foreground
+composition, then inspect every second, all cuts, and the final frame. Use only
+durations and resolutions returned by the live model schema; never fix them from an
+old example.
+
 ## Parameters
 
 | CLI flag | Required | Meaning |

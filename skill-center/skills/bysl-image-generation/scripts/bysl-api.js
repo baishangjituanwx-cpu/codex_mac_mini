@@ -10,6 +10,7 @@ const DEFAULT_KEYCHAIN_SERVICE = "com.bysl.nano-token";
 const {
   buildImageCreatePayload,
   buildNanoPayload,
+  buildTtsCreatePayload,
   buildVideoCreatePayload,
   countQuestionMarks,
   createClient,
@@ -30,6 +31,11 @@ function printHelp() {
     "  bysl-api image-models [--type 15 --source 2]",
     "  bysl-api image-create --model-id 63 --ratio 9:16 --prompt-file prompt.md [--images url1,url2] [--out out.png]",
     "  bysl-api nano-create --ratio 1:1 --prompt-file prompt.md [--images url1,url2] [--is-pro true --resolution 1K] [--out out.png]",
+    "",
+    "  bysl-api tts-voice-categories",
+    "  bysl-api tts-voices [--type 0 --cate-id 48 --page 1 --pagesize 20 --status 3]",
+    "  bysl-api tts-history [--page 1 --pagesize 10]",
+    "  bysl-api tts-create --voice-id 128 --text-file narration.txt [--volume 1 --rate 1 --pitch 1] --out out.wav",
     "",
     "  bysl-api video-model-groups",
     "  bysl-api video-models",
@@ -163,10 +169,21 @@ function promptDiagnostics(prompt) {
   };
 }
 
+function textFromFlags(flags) {
+  if (flags["text-file"]) {
+    return readPromptFile(flags["text-file"]);
+  }
+  if (flags.text) {
+    return flags.text;
+  }
+  throw new Error("Use --text-file for TTS text. --text is only suitable for ASCII smoke tests.");
+}
+
 function firstResultUrl(task) {
   if (!task || typeof task !== "object") return "";
   if (typeof task.video_url_clean === "string" && task.video_url_clean) return task.video_url_clean;
   if (typeof task.video_url === "string" && task.video_url) return task.video_url;
+  if (typeof task.audio_url === "string" && task.audio_url) return task.audio_url;
   if (typeof task.url === "string" && task.url) return task.url;
   if (Array.isArray(task.url) && task.url[0]) return task.url[0];
   if (typeof task.result === "string" && task.result.startsWith("http")) return task.result;
@@ -289,10 +306,15 @@ async function main() {
     if (token) {
       await client.userInfo();
       const list = await client.listTasks({ page: 1, pagesize: 1 });
+      const ttsCategories = await client.ttsVoiceCategories();
       result.api = "ok";
       result.latestTaskVisible = Boolean(
         (Array.isArray(list?.data) && list.data.length) ||
         (Array.isArray(list?.list) && list.list.length),
+      );
+      result.ttsVoiceCategoriesVisible = Boolean(
+        (Array.isArray(ttsCategories?.data) && ttsCategories.data.length) ||
+        (Array.isArray(ttsCategories?.list) && ttsCategories.list.length),
       );
     } else {
       result.api = "skipped: NANO_TOKEN is not set";
@@ -393,6 +415,68 @@ async function main() {
         diagnostics: promptDiagnostics(prompt),
       },
     });
+    return;
+  }
+
+  if (command === "tts-voice-categories") {
+    printJson(await client.ttsVoiceCategories());
+    return;
+  }
+
+  if (command === "tts-voices") {
+    const payload = {
+      type: parseInteger(flags.type, 0),
+      page: parseInteger(flags.page, 1),
+      pagesize: parseInteger(flags.pagesize, 20),
+      status: parseInteger(flags.status, 3),
+    };
+    if (flags["cate-id"] !== undefined) {
+      payload.cate_id = parseInteger(flags["cate-id"]);
+    }
+    printJson(await client.ttsVoices(payload));
+    return;
+  }
+
+  if (command === "tts-history") {
+    printJson(await client.ttsHistory({
+      page: parseInteger(flags.page, 1),
+      pagesize: parseInteger(flags.pagesize, 10),
+    }));
+    return;
+  }
+
+  if (command === "tts-create") {
+    const text = textFromFlags(flags);
+    const payload = buildTtsCreatePayload({
+      voiceId: flags["voice-id"],
+      text,
+      volume: flags.volume === undefined ? 1 : flags.volume,
+      pitch: flags.pitch === undefined ? 1 : flags.pitch,
+      rate: flags.rate === undefined ? 1 : flags.rate,
+    });
+    const result = await client.ttsCreate(payload);
+    const audioUrl = firstResultUrl(result);
+    if (!audioUrl) {
+      throw new Error(`TTS response did not include audio_url: ${JSON.stringify(result)}`);
+    }
+
+    const output = {
+      voiceId: payload.voice_id,
+      textLength: payload.text.length,
+      volume: payload.volume,
+      pitch: payload.pitch,
+      rate: payload.rate,
+      hasAudioUrl: true,
+    };
+    if (flags.out) {
+      const outPath = path.resolve(flags.out);
+      await client.downloadUrl(audioUrl, outPath);
+      output.out = outPath;
+      output.bytes = fs.statSync(outPath).size;
+    } else {
+      output.note = "Generation completed. Re-run with --out to download without printing the result URL.";
+    }
+    printJson(output);
     return;
   }
 
