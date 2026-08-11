@@ -27,7 +27,7 @@
   - `codex/default-python-sync`: `4e87d19`，`Record August 12 GitHub sync execution`。
   - `codex/windows-version-20260411`: `18b921b`，`Sync August 11 Windows translation status records`；本条 Windows 分支台账随后追加。
 - 是否已推送:
-  - 待本轮完成 Windows 分支推送后确认。
+  - 是。`codex/default-python-sync` 已推送至 `4e87d19`，`codex/windows-version-20260411` 已推送至 `c2a2212`。
 - 若跳过，说明跳过原因:
   - 临时监控基线、引用和扫描标记文件属于本地运行态，未同步；业务技能内容与远端目标分支一致，未重复提交。
 
