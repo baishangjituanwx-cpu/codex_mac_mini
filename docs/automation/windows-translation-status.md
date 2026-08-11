@@ -35,6 +35,23 @@
   - 是。
   - 截至 `2026-08-10 13:43:51 UTC (+0000)`，`skill-change-monitor.md` 中自上一条状态记录之后新增的 custom-skill 行为已经完成或保持 Windows 可用等价覆盖；今天的 Mac / Windows 覆盖均完整。
 
+## 2026-08-11 22:02:12 CST (+0800)
+
+- 处理时间:
+  - `2026-08-11 22:02:12 CST (+0800)`
+- 输入来源:
+  - 复核 `skill-change-monitor.md` 中自 `2026-08-10 13:45:05 UTC (+0000)` 至 `2026-08-11 14:00:44 UTC (+0000)` 的后续批次。
+  - 唯一 non-zero 批次继续涉及 `bysl-image-generation` 图片、视频、TTS 三栈；其余批次均为 no-op。
+- 已完成的 Windows 补全:
+  - 本轮没有新增仓库补丁；现有 `bysl-api.ps1` / `bysl-api.cmd`、Windows 文档、路径和快捷键说明已覆盖该批次。
+  - 已复核 TTS、视频及鉴权流程的 Windows 等价入口，无需新增 PowerShell 或 `cmd` 业务实现。
+- 未完成的补全:
+  - 无。截至 `2026-08-11 14:00:44 UTC (+0000)` 没有遗留 Windows 转译缺口。
+- 阻塞原因:
+  - 无功能性阻塞；主机未发现 `pwsh` 或 `powershell`，因此未做 Windows 实机回归。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。该批次的 Mac / Windows 覆盖均完整。
+
 ## 2026-08-09 22:04:44 CST (+0800)
 
 - 处理时间:
