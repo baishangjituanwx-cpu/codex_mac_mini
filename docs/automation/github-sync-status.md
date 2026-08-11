@@ -12,6 +12,25 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-08-12 00:15:00 CST (+0800)
+- 处理时间:
+  - `2026-08-12 00:15:00 CST (+0800)`
+- 前置检查:
+  - 最新 Windows 转译状态为 `2026-08-10 22:02:55 CST (+0800)`，明确写明 Mac / Windows 覆盖完整。
+- 本次检查的分支:
+  - `codex/default-python-sync`
+  - `codex/windows-version-20260411`
+- 是否检测到新增或修改:
+  - `codex/default-python-sync`: 是，已同步 monitor 记录并完成默认分支台账。
+  - `codex/windows-version-20260411`: 是，已同步 `2026-08-11` Windows 完整性记录。
+- 是否已提交:
+  - `codex/default-python-sync`: `4e87d19`，`Record August 12 GitHub sync execution`。
+  - `codex/windows-version-20260411`: `18b921b`，`Sync August 11 Windows translation status records`；本条 Windows 分支台账随后追加。
+- 是否已推送:
+  - 待本轮完成 Windows 分支推送后确认。
+- 若跳过，说明跳过原因:
+  - 临时监控基线、引用和扫描标记文件属于本地运行态，未同步；业务技能内容与远端目标分支一致，未重复提交。
+
 ## 2026-07-05 00:04:43 CST (+0800)
 - 处理时间:
   - `2026-07-05 00:04:43 CST (+0800)`
