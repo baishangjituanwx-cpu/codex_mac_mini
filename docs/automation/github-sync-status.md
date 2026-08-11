@@ -27,7 +27,7 @@
   - `codex/default-python-sync`: 是，`a80edce` `Sync August 11 skill monitor records`；本次台账另提交为 `Record August 12 GitHub sync execution`。
   - `codex/windows-version-20260411`: 是，`Sync August 11 Windows translation status records`。
 - 是否已推送:
-  - 待本轮完成远端分支整理后确认。
+  - 是。`codex/default-python-sync` 已推送至 `4e87d19`，`codex/windows-version-20260411` 已推送至 `c2a2212`。
 - 提交信息:
   - `Sync August 11 skill monitor records`
   - `Record August 12 GitHub sync execution`
@@ -6627,3 +6627,23 @@
   - 未提交 `.codex-skill-monitor-ref-20260729220620`、`.codex-tmp-skill-monitor-20260626-blocks.md`、`.skill-monitor-baseline-20260808T171034Z`、`.skill-monitor-baseline-20260810094243`、`.skill-monitor-baseline-utc-ref`、`.skill-monitor-last-run-ref` 与 `.skill-monitor-scan-ref`，因为它们属于本地监控基线或临时参考文件，不进入 GitHub 同步。
   - 未在 `codex/default-python-sync` 混入 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/windows-translation-status.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/windows-translation-status.md)，因为它属于 Windows 覆盖台账，继续保留在 Windows 分支同步。
   - 未在 `codex/windows-version-20260411` 混入 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md)、[`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md)、[`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/weixin-shop-paid-traffic-runbook.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/weixin-shop-paid-traffic-runbook.md) 与 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/weixin-shop-paid-traffic-20260808-0810-evidence.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/weixin-shop-paid-traffic-20260808-0810-evidence.md)，因为它们属于通用监控或业务运行文档，不属于 Windows bridge / deployment mirror 专属提交。
+
+## 2026-08-11 16:10:17 UTC (+0000)
+- 处理时间:
+  - `2026-08-11 16:10:17 UTC (+0000)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/bysl-image-generation/**`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-proxy-setup/**`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-distribution-order-push/**`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-product-media-export/**`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-goods-inspection/**`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-ledger-sync/**`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-paid-traffic-ops/**`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/**`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-publish-recovery/**`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-yaboshi-publish/**`
+- 同步提示:
+  - `skill-monitor` 以窗口起点 `2026-08-11T15:00:26.577Z` 识别到一个新的仓库镜像 custom skill 非零变更批次，统计为 `24 added / 11 modified / 0 deleted`。
+  - 这批变化的主体是 BYSL skill 扩展到图片/视频/TTS、`codex-proxy-setup` 及其跨平台 `configure_proxy.py` helper 新增、慧策推单与素材导出 skill 成组加入，以及微信小店投流/限价/恢复/铺货链路补齐。
+  - 同一批次里还有 `update-edgetunnel-pages/**` 与 `wechat-shop-return-address/**` 的 future-dated mirror 时间戳刷新；当前内容与旧 snapshot 一致，但既然文件系统在窗口内重写过，后续同步时仍应一起复核。
+  - 本轮新 `.py` 文件只有 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/codex-proxy-setup/scripts/configure_proxy.py`；建议后续 GitHub 同步至少连同 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New%20project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 在 `2026-08-11 16:10:17 UTC (+0000)` 的对应记录一起处理。
