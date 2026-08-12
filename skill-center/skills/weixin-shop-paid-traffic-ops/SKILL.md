@@ -84,4 +84,13 @@ See `references/data-contract.md` for the cloud field contract.
 
 ## Windows Repo Mirror Notes
 
-Keep this workflow shared across platforms. On Windows use quoted paths and `Control+R`, `Control+L`, `Control+A`, `Alt+Left`, and `Alt+Right` for browser keyboard actions. Do not fork the business rules into a separate PowerShell implementation.
+Keep this workflow shared across platforms. It does not need a separate PowerShell or `.cmd` business wrapper: use the same Codex browser and cloud-ledger workflow on Windows.
+
+When a browser interaction needs keyboard input through `press_key`, prefer Windows-friendly equivalents:
+
+- use `Control+R` or `F5` instead of `Meta+R`
+- use `Control+L` instead of `Meta+L`
+- use `Control+A` instead of `Meta+A`
+- use `Alt+Left` and `Alt+Right` for browser back and forward
+
+If this mirror is synced onto a Windows machine, the user-scoped install path is typically `%USERPROFILE%\\.codex\\skills\\weixin-shop-paid-traffic-ops\\`. Keep local checkpoints, screenshots, evidence, and exports quoted and in `C:/Users/<name>/...` form instead of `/Users/...`.
