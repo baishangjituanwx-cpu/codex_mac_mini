@@ -12,6 +12,20 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-08-13 00:04:02 CST (+0800)
+- 处理时间:
+  - `2026-08-13 00:04:02 CST (+0800)`
+- 前置门槛:
+  - 已复核 `windows-translation-status.md` 最新 dated entry `2026-08-10 22:02:55 CST (+0800)`，确认 Mac / Windows 版本均完成；本轮 Windows 分支同步后追加了 `2026-08-13 00:04:02 CST (+0800)` 执行记录。
+- 分支与提交:
+  - `codex/default-python-sync`: `aa8aa13 Sync August 12 material copy mirror updates`，已推送。
+  - `codex/windows-version-20260411`: `2750f8a Sync August 13 Windows mirror coverage`，已推送。
+- 本轮同步内容:
+  - 通用/Mac 分支包含 `weixin-shop-material-copy` 镜像、agent 元数据、paid-traffic Windows 共享说明，以及对应 monitor/同步记录。
+  - Windows 分支包含上述共享 skill 内容和 Windows 翻译完成记录。
+- 若跳过，说明跳过原因:
+  - 跳过 `.codex-skill-monitor-ref-20260729220620`、`.codex-tmp-skill-monitor-20260626-blocks.md`、`.skill-monitor-baseline-20260808T171034Z`、`.skill-monitor-baseline-20260810094243`、`.skill-monitor-baseline-utc-ref`、`.skill-monitor-current-ref`、`.skill-monitor-last-run-marker`、`.skill-monitor-last-run-ref`、`.skill-monitor-scan-ref`；它们是本地监控基线、标记或临时参考文件，不进入 GitHub 同步。
+
 ## 2026-08-12 14:23:11 UTC (+0000)
 - 处理时间:
   - `2026-08-12 14:23:11 UTC (+0000)`
