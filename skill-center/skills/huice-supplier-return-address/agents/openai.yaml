@@ -1,0 +1,6 @@
+interface:
+  display_name: "慧策供应商售后地址"
+  short_description: "按供应商精确匹配备用售后退货地址，避免误判可用商品"
+  default_prompt: "使用 $huice-supplier-return-address 按商品对应供应商匹配备用售后退货地址，并在匹配不唯一时阻止发布。"
+policy:
+  allow_implicit_invocation: true
