@@ -38,8 +38,8 @@
   - `.codex-tmp-skill-monitor-20260626-blocks.md`
   - `.skill-monitor-*` 本地基线、引用和运行标记文件；均为监控临时产物，不属于仓库内容。
 - 推送状态:
-  - `codex/default-python-sync` 已提交并推送：`55cdc95 Sync August 14 Huice supplier return-address skill mirror`。
-  - `codex/windows-version-20260411` 本次提交待完成后填写实际 commit SHA 与 push 结果。
+  - `codex/default-python-sync` 已提交并推送：`55cdc95 Sync August 14 Huice supplier return-address skill mirror`；台账提交为 `128f5ea Record August 14 GitHub sync execution`。
+  - `codex/windows-version-20260411` 已提交并推送：`32c21b3 Sync August 14 Windows mirror coverage`；本台账记录提交将在本轮最后单独提交并推送。
 
 ## 2026-08-13 22:36:31 CST (+0800)
 - 新发现的待同步批次:
