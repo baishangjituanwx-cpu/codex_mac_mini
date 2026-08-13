@@ -16,7 +16,7 @@ description: Audit and remediate WeChat Store product price floors, margins, sup
 - Use `lark-cli sheets` and `lark-cli docs` for cloud records. Write, then read the exact range or section back.
 - Use `huice-distribution-order-push` for outsourced-order push work; do not mix order states into product publication states.
 - Use `weixin-shop-publish-recovery` for review-blocked listings, exact SKU remapping, duplicate-listing isolation, and stock restoration after a successful republish.
-- Use `weixin-shop-ledger-sync` for cross-sheet audit trails, process-review rows, and exact cloud readback.
+- Use `weixin-shop-ledger-sync` for the cross-sheet audit trail, process-review rows, and exact cloud readback. Do not make this skill the owner of cloud write mechanics.
 - Never save or output cookies, tokens, request signatures, passwords, buyer privacy, or plaintext phone numbers.
 
 The shared HTTP reference is:
@@ -30,7 +30,7 @@ Read `docs/weixin-price-floor-and-supplier-change-audit-20260802.md` when an end
 ## Non-Negotiable Gates
 
 1. Treat supplier SKU `controlMinPrice` as P0. Never substitute `suggestedPrice`.
-2. Accept an after-sale address only from live `goods_detail`, with complete recipient, phone, province/city/district, and detail.
+2. Resolve after-sale addresses by the shared priority rule: complete live `goods_detail` for ordinary goods; the Feishu `退货售后地址` override for 牙博士; otherwise the exact supplier's complete `saleReturnPlaces` from Huice “供销商售后退货地址”. Supplier fallback requires unique supplier identity and must be recorded as `慧策供销商售后退货地址`; incomplete or ambiguous data still blocks.
 3. Establish the exact chain before any action:
 
 ```text
@@ -95,7 +95,7 @@ After rounding, recompute both margins. The promotion threshold is strict: exact
 2. Read both current tabs: price changes and supplier-status changes.
 3. Deduplicate by supplier product and preserve all affected `itemId` values.
 4. Report event-row counts separately from current affected-product counts.
-5. Treat a full-list `isSale=false`, `deletedStatus=1`, missing SKU, or missing distribution cost only as a stopped-supply candidate. Before any stock or sale-status mutation, re-read the exact `distributorGoodsId` and match the exact `itemId` again. If that readback fails, record `SOURCE_STATE_RECHECK_FAILED_NO_WRITE`.
+5. Treat a full-list `isSale=false`, `deletedStatus=1`, missing SKU, or missing distribution cost only as a stopped-supply candidate. Before any stock or sale-status mutation, re-read the exact `distributorGoodsId` through the Huice distribution-goods detail/list API and match the exact `itemId` again. Only a successful exact readback that still shows the product or SKU stopped, deleted, unavailable, or without a current cost confirms stopped supply. If the exact readback fails, record `SOURCE_STATE_RECHECK_FAILED_NO_WRITE`.
 
 Never say that 58 event rows mean 58 currently stopped products. Re-read current state.
 
@@ -119,7 +119,7 @@ For every affected SKU, read:
 - seller-paid freight and any fixed costs
 - `controlMinPrice`
 - current stock
-- complete `goods_detail` address
+- complete after-sale address and its source (`商品详情地址`, `牙博士专用地址`, or `慧策供销商售后退货地址`)
 - distributor product and SKU IDs
 - publication ID, merchant code, platform product ID and platform SKU ID
 - current WeChat selling state, actual price and actual stock
@@ -142,13 +142,26 @@ Run the floor and margin checks at all of these checkpoints:
 
 ### 4. Classify and act
 
+Price repair is the default first action. When supply is active, the live
+`goods_detail` address is complete, and the mapping chain is complete, a price
+floor or margin failure must be repaired by raising the existing listing price
+to `targetPrice`. Keep the product selling while the safe price update is being
+published. Do not zero stock or delist merely because the current price is too
+low.
+
+Only isolate the product when the price publication fails and the unsafe old
+price remains exposed, or when the issue is not a price issue at all (stopped
+supply, incomplete live after-sale address, or an unrepairable mapping). After
+a temporary price-risk isolation, repair the existing listing and restore the
+intended stock after exact official price readback passes every gate.
+
 | Classification | Required behavior |
 | --- | --- |
 | `COMPLIANT` | Record and leave unchanged |
-| `SUPPLIER_STOPPED_LIVE` | Only after exact distributor/item recheck reconfirms stopped supply, set Huice publication SKU stock to 0 and exact-read both systems |
+| `SUPPLIER_STOPPED_LIVE` | Only after exact `distributorGoodsId` + `itemId` readback reconfirms stopped supply, set Huice publication SKU stock to 0 and exact-read both systems; delist only if stock zero does not prevent sale or an active listing strategy can restore availability |
 | `BELOW_CONTROL_MIN_PRICE` | Raise the existing listing to `targetPrice` first and keep it selling after exact official readback; isolate only if the unsafe old price remains exposed after a failed update |
 | `MARGIN_FAIL` | Raise to the calculated target; if the allowed price band cannot pass, set stock to 0 and delist |
-| `ADDRESS_INCOMPLETE` | Delist or keep unpublished; do not republish until live `goods_detail` is complete |
+| `ADDRESS_INCOMPLETE` | Delist or keep unpublished; do not republish until a prioritized address source is complete and the source is recorded |
 | `MAPPING_INCOMPLETE` | Record only; repair the mapping without creating a duplicate product |
 | `REPAIRABLE_PUBLISH_FAILURE` | Repair the exact platform failure field, re-read every gate, then resubmit once |
 | `SUPPLY_RECOVERED` | Record and review; never auto-list or auto-lower price |
@@ -156,7 +169,7 @@ Run the floor and margin checks at all of these checkpoints:
 
 ## Windows Repo Mirror Notes
 
-This skill does not need a separate Windows PowerShell or `.cmd` launcher for its browser-controlled work. The Windows-usable equivalent is the same Codex workflow: keep Chrome DevTools MCP for WeChat readback and use the shared Huice HTTP client/scripts rather than forking wrapper scripts in this repo.
+This skill does not need a separate Windows PowerShell or `.cmd` launcher for its browser-controlled work. The Windows-usable equivalent is the same Codex workflow: keep Chrome DevTools MCP for WeChat readback and use the shared Huice HTTP client/scripts rather than forking wrapper scripts in this repo. For supplier-address fallback, use the shared `huice-supplier-return-address` contract and record the source as `慧策供销商售后退货地址`.
 
 When a browser interaction needs keyboard input through `press_key`, prefer Windows-friendly equivalents:
 
@@ -167,7 +180,7 @@ When a browser interaction needs keyboard input through `press_key`, prefer Wind
 
 If this mirror is synced onto a Windows machine, the user-scoped install path is typically `%USERPROFILE%\\.codex\\skills\\weixin-shop-price-floor-audit\\`. Any local evidence path, exported audit path, or copied attachment path should use quoted `C:/Users/<name>/...` absolute paths instead of `/Users/...`.
 
-When the Huice shared client is accessed from Windows, replace the macOS mount path with the corresponding quoted UNC or mapped-drive path, for example:
+When the Huice shared client or supplier-address contract is accessed from Windows, replace the macOS mount path with the corresponding quoted UNC or mapped-drive path, for example:
 
 ```text
 \\\\BSJT168\\BSJT 共享给我\\AI专用\\[Codex]Mac部署\\旺店通\\huice-goods-analysis
@@ -197,6 +210,13 @@ Perform one exact product at a time:
 7. Recompute with the actual official price.
 
 Never let an old Huice price overwrite a newer official price during a stock-only update.
+
+## Handoffs
+
+- Hand a blocked or malformed publication to `weixin-shop-publish-recovery` only after the current price-floor and margin facts are captured.
+- Hand cloud writes and process-review updates to `weixin-shop-ledger-sync`; the product decision remains owned by this audit skill.
+- Hand supplier-address resolution to `huice-supplier-return-address` when the prioritized address sources require the exact supplier fallback.
+- Hand distribution-order state to `huice-distribution-order-push`, and hand platform-activity submission to `weixin-shop-platform-activity-ops`. Ordinary promotion and alliance promotion are separate workflows.
 
 ### Legacy or orphan publication price repair
 

@@ -3638,4 +3638,55 @@
   - 本机仍未发现 `pwsh`，因此本轮没有执行 PowerShell 语法解析或 Windows 实机回归；当前判断基于 `skill-change-monitor.md` 增量复核，以及所有新增批次都没有新的自定义 skill 行为这一事实。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。
-  - 截至 `2026-06-13 21:21:58 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
+- 截至 `2026-06-13 21:21:58 CST (+0800)`，最新 monitor 条目没有引入新的自定义 skill 行为或 Windows 缺口；Mac 与 Windows 覆盖今日均完整。
+
+## 2026-08-13 22:05:50 CST (+0800)
+
+- 处理时间:
+  - `2026-08-13 22:05:50 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中自上一轮 Windows 转译记录对应的 `2026-08-12 21:22:11 CST (+0800)` canonical cutoff 之后的非零批次:
+    - `2026-08-12 22:23:11 CST (+0800)`: 新增 `skill-center/skills/weixin-shop-material-copy/SKILL.md`、`agents/openai.yaml`，修改 `skill-center/skills/weixin-shop-paid-traffic-ops/SKILL.md`。
+    - `2026-08-13 15:30:47 CST (+0800)`: 新增本地 `huice-supplier-return-address/SKILL.md`、`agents/openai.yaml`。
+  - 截至最新 `2026-08-13 21:42:26 CST (+0800)` 的其余新增 monitor 批次均为 `新增 0，修改 0，删除 0`，无额外 custom-skill 行为。
+- 已完成的 Windows 补全:
+  - `weixin-shop-material-copy` 与 `weixin-shop-paid-traffic-ops`:
+    - 复核已有仓库镜像的共享 Chrome DevTools 工作流、Windows 键位映射、`%USERPROFILE%\\.codex\\skills\\...` 安装路径和带引号的 `C:/...` 证据路径说明。
+    - 确认该浏览器工作流没有新增本地命令、PowerShell 启动器或 `.cmd` 业务包装器需求；继续复用共享实现。
+  - `huice-supplier-return-address`:
+    - 新增仓库镜像 [`skill-center/skills/huice-supplier-return-address/SKILL.md`](/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-supplier-return-address/SKILL.md)，保留精确供应商匹配、地址完整性、脱敏和发布门禁，并加入 Windows Repo Mirror Notes。
+    - 新增 [`skill-center/skills/huice-supplier-return-address/agents/openai.yaml`](/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-supplier-return-address/agents/openai.yaml)。
+    - 关联并核对配套参考 [`skill-center/skills/huice-supplier-return-address/references/source-contract.md`](/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-supplier-return-address/references/source-contract.md)，其中保留了 Windows 共享客户端、`C:/...` / UNC 路径和会话凭据约束。
+    - Windows 说明覆盖共享 HTTP/浏览器流程、无需单独 `.ps1` / `.cmd` 分叉、`%USERPROFILE%` 安装路径、`C:/Users/<name>/...` 路径格式、`Control`/`Alt` 键位替换和 PowerShell 历史脱敏约束。
+- 未完成的补全:
+  - 无。上述非零批次没有遗留的 Windows 专属行为缺口；没有删除项需要迁移。
+- 阻塞原因:
+  - 无功能性阻塞。
+  - 本机未安装 `pwsh` 或 `powershell`，因此未执行 PowerShell 语法解析或 Windows 实机回归；本轮完成了仓库镜像、元数据一致性、Windows 文档约束和静态文本核对。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。基于截至 `2026-08-13 21:42:26 CST (+0800)` 的最新 monitor 记录，Mac 与 Windows 覆盖今日均完整。
+
+## 2026-08-13 22:08:46 CST (+0800)
+
+- 处理时间:
+  - `2026-08-13 22:08:46 CST (+0800)`
+- 输入来源:
+  - 读取 automation memory，并复核 `skill-change-monitor.md` 中自上一轮已记录窗口后的非零批次与其后的 no-op 批次。
+  - 本轮重点处理的非零批次:
+    - `2026-08-13 15:37:05 CST (+0800)`：新增 `huice-supplier-return-address/SKILL.md` 与 `agents/openai.yaml`，修改 `weixin-shop-price-floor-audit/SKILL.md`。
+    - `2026-08-13 16:32:40 CST (+0800)`：新增 `huice-supplier-return-address/references/source-contract.md`，再次修改 `weixin-shop-price-floor-audit/SKILL.md`。
+  - `2026-08-13 16:40:05` 至 `19:39:23 CST` 的后续 monitor 批次均为 `0 added / 0 modified / 0 deleted`，不引入新的待转译行为。
+- 已完成的 Windows 补全:
+  - 在 `skill-center/skills/huice-supplier-return-address/` 新增仓库镜像 `SKILL.md`、`agents/openai.yaml` 和 `references/source-contract.md`。
+  - 将供应商售后地址的 Windows 等价行为写入镜像：共享 HTTP 客户端复用、无临时业务 `.ps1`/`.cmd`、当前会话认证、不使用 `setx`、UNC/映射盘路径、`%USERPROFILE%\\.codex\\skills\\...` 安装路径、`C:/Users/<name>/...` 证据路径，以及 `Control`/`F5`/`Alt` 键位映射。
+  - 更新 `skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`：同步商品详情/牙博士/慧策供应商地址优先级、`saleReturnPlaces` 精确供应商回读、地址来源记录、停供前 `distributorGoodsId + itemId` 复核，并增加到供应商地址技能的交接说明；保留原有 Mac 与通用实现。
+  - 未新增不必要的 PowerShell 或 `.cmd` 业务包装器，因为该行为通过共享 HTTP/MCP 工作流完成；Windows 文档已明确这一点。
+- 未完成的补全:
+  - 无新的 Windows 翻译缺口。
+  - 本机没有 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析或实机回归；这属于验证环境限制，不是仓库内容缺失。
+- 验证:
+  - 新增供应商技能目录、agent 元数据和接口契约文件已落盘；供应商技能镜像与 live 技能内容一致，并额外包含 Windows 说明。
+  - 已检查限价审计镜像中的 Windows 路径、键位、供应商技能交接和地址来源字段。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是，就本日已记录的 skill 行为、Windows 文档、路径处理和命令入口覆盖而言，Mac 与 Windows 均完整。
+  - Windows 原生运行验证仍待有 PowerShell 的 Windows 环境执行。

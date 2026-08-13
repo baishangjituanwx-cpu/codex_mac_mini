@@ -12,6 +12,45 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-08-14 00:04:16 CST (+0800)
+- 处理时间:
+  - `2026-08-14 00:04:16 CST (+0800)`
+- 前置检查:
+  - `windows-translation-status.md` 最新 dated entry 为 `2026-08-13 22:08:46 CST (+0800)`，明确 Mac / Windows 均已完整。
+- 同步内容:
+  - 通用 / Mac 兼容分支 `codex/default-python-sync`:
+    - `skill-center/skills/huice-supplier-return-address/**`
+    - `skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`
+    - `docs/automation/skill-change-monitor.md`
+    - `docs/automation/windows-translation-status.md`
+    - 本执行台账
+  - Windows 分支 `codex/windows-version-20260411`:
+    - 同步上述共享技能镜像、Windows 说明和自动化台账，未发现需单独新增的 Windows bridge / deployment 代码。
+- 提交信息:
+  - `Sync August 14 Huice supplier return-address skill mirror` — `codex/default-python-sync`
+  - `Sync August 14 Windows mirror coverage` — `codex/windows-version-20260411`
+  - `Record August 14 GitHub sync execution` — 两条目标分支
+- 验证:
+  - 已核对最新 Windows 翻译状态与待同步文件；本轮无新增 `.py` 文件。
+  - 未执行 Windows 原生 PowerShell 回归：本机未安装 `pwsh` / `powershell`。
+- 跳过项:
+  - `.codex-skill-monitor-ref-20260729220620`
+  - `.codex-tmp-skill-monitor-20260626-blocks.md`
+  - `.skill-monitor-*` 本地基线、引用和运行标记文件；均为监控临时产物，不属于仓库内容。
+- 推送状态:
+  - 待本轮提交完成后填写实际 commit SHA 与 push 结果。
+
+## 2026-08-13 22:36:31 CST (+0800)
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-supplier-return-address/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-supplier-return-address/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-supplier-return-address/references/source-contract.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以 canonical baseline `2026-08-13 21:42:26 CST (+0800)` 发现新的仓库镜像 custom skill 批次，内容为 `3 added / 1 modified / 0 deleted`。
+  - 新增慧策供应商售后退货地址技能、agent 元数据和接口契约；同时强化微信小店限价审计的地址来源优先级、停供精确回读、价格修复和技能交接规则。
+  - 本轮没有新的 `.py` 文件进入同步范围；后续 GitHub 同步应评估上述 4 个路径，并连同本轮监控记录一起处理。
+
 ## 2026-08-13 00:04:02 CST (+0800)
 - 处理时间:
   - `2026-08-13 00:04:02 CST (+0800)`
@@ -6690,4 +6729,52 @@
 - 同步提示:
   - `skill-monitor-95dbcba9cef8` 以 canonical baseline `2026-08-12 20:13:29 CST (+0800)` 发现一个新的仓库镜像 custom skill 批次，内容为 `2 added / 1 modified / 0 deleted`。
   - 新增微信小店素材投放文案配置与回读核验 skill 及 agent 元数据；付费流量 skill 同步补充 Windows 共享流程、键盘映射、安装路径和证据路径规范。
-  - 本轮没有新的 `.py` 文件进入同步范围；后续 GitHub 同步应评估上述 3 个路径。
+- 本轮没有新的 `.py` 文件进入同步范围；后续 GitHub 同步应评估上述 3 个路径。
+
+## 2026-08-13 00:15:34 CST (+0800)
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-material-copy/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-material-copy/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-paid-traffic-ops/SKILL.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以 canonical baseline `2026-08-12 23:25:09 CST (+0800)` 发现一个新的仓库镜像 custom skill 批次，内容为 `2 added / 1 modified / 0 deleted`。
+  - 新增微信小店素材投放文案配置与回读核验 skill 及 agent 元数据；付费流量 skill 同步补充 Windows 共享流程、键盘映射、安装路径和证据路径规范。
+  - 本轮没有新的 `.py` 文件进入同步范围；后续 GitHub 同步应评估上述 3 个路径及对应监控记录。
+
+## 2026-08-12 16:27:58 UTC (+0000)
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-material-copy/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-material-copy/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-paid-traffic-ops/SKILL.md`
+- 同步提示:
+  - `skill-monitor` 以 automation 基线 `2026-08-12T15:24:02.800Z` 识别到一个新的仓库镜像 custom skill 批次，内容为 `2 added / 1 modified / 0 deleted`。
+  - 新增微信小店素材投放文案配置与回读核验 skill 及其 agent 元数据，并为付费流量 skill 补充更明确的 Windows 共用流程、键盘映射、安装路径和证据导出路径规范。
+  - 本轮没有新的 `.py` 文件进入同步范围；后续 GitHub 同步应至少带上上述 3 个路径，以及 [/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md](/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 在 `2026-08-12 16:27:58 UTC (+0000)` 的对应记录。
+
+## 2026-08-13 15:30:47 CST (+0800)
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/huice-supplier-return-address/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/huice-supplier-return-address/agents/openai.yaml`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以 canonical baseline `2026-08-13T06:29:14.419Z` 发现一个新的本地 custom skill 批次，内容为 `2 added / 0 modified / 0 deleted`。
+  - 该批次新增慧策供应商售后退货地址技能及其 agent 元数据，覆盖供应商精确匹配、地址完整性和发布前门禁；当前仓库 `skills/`、`skill-center/`、`automation/` 未发现对应镜像，后续 GitHub 同步应评估上述 2 个本地路径是否需要镜像。
+  - 本轮没有新的 `.py` 文件进入同步范围；同步时应连同 `docs/automation/skill-change-monitor.md` 的本轮记录一起处理。
+
+## 2026-08-13 15:37:05 CST (+0800)
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/huice-supplier-return-address/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/huice-supplier-return-address/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-price-floor-audit/SKILL.md`
+- 同步提示:
+  - `skill-monitor` 以 automation 基线 `2026-08-13T06:35:14.427Z` 识别到一个新的本地 custom skill 批次，内容为 `2 added / 1 modified / 0 deleted`。
+  - 该批次新增慧策供应商售后退货地址技能及其 agent 元数据，并同步强化微信小店限价审计技能的售后地址优先级、停供应复核和审核中 `rollback` 隔离流程。
+  - 本轮没有新的 `.py` 文件进入同步范围；后续 GitHub 同步应至少复核上述 3 个本地路径，并连同 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 在 `2026-08-13 15:37:05 CST (+0800)` 的对应记录一起处理。
+
+## 2026-08-13 16:32:40 CST (+0800)
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/huice-supplier-return-address/references/source-contract.md`
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-price-floor-audit/SKILL.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以 canonical baseline `2026-08-13T07:29:44.575Z` 发现新的本地 custom skill 批次，内容为 `1 added / 1 modified / 0 deleted`。
+  - 当前仓库 `skills/`、`skill-center/`、`automation/` 未发现对应镜像；后续 GitHub 同步应评估上述 2 个本地路径，并连同本轮监控记录一起处理。
+  - 本轮没有新的 `.py` 文件进入同步范围。
