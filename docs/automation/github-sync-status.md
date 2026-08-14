@@ -6781,3 +6781,17 @@
   - `skill-monitor-95dbcba9cef8` 以 canonical baseline `2026-08-13T07:29:44.575Z` 发现新的本地 custom skill 批次，内容为 `1 added / 1 modified / 0 deleted`。
   - 当前仓库 `skills/`、`skill-center/`、`automation/` 未发现对应镜像；后续 GitHub 同步应评估上述 2 个本地路径，并连同本轮监控记录一起处理。
   - 本轮没有新的 `.py` 文件进入同步范围。
+
+## 2026-08-15 00:00:00 CST (+0800)
+- 处理时间:
+  - `2026-08-15 00:00:00 CST (+0800)`
+- Windows 转译门禁:
+  - 通过。`windows-translation-status.md` 最新 dated entry 为 `2026-08-14 22:03:09 CST (+0800)`，明确记录 Mac / Windows 版本均完整。
+- 分支与提交:
+  - `codex/default-python-sync`: `6ef2b74 Record August 14 monitor no-op batches`，同步 `docs/automation/skill-change-monitor.md`。
+  - `codex/windows-version-20260411`: 待提交本轮新增的 `docs/automation/windows-translation-status.md` 状态记录。
+- 推送与验证:
+  - 本轮将分别推送两个目标分支，并用远端 ref 验证最终提交。
+- 跳过项:
+  - 跳过 `.codex-skill-monitor-ref-20260729220620`、`.codex-tmp-skill-monitor-20260626-blocks.md`、`.skill-monitor-baseline-20260808T171034Z`、`.skill-monitor-baseline-20260810094243`、`.skill-monitor-baseline-utc-ref`、`.skill-monitor-current-ref`、`.skill-monitor-last-run-marker`、`.skill-monitor-last-run-ref`、`.skill-monitor-ref-20260814095719` 与 `.skill-monitor-scan-ref`；它们是本地监控基线、标记或临时参考文件，不进入 GitHub。
+  - 未将 Windows 状态台账放入默认分支，未将通用监控台账或本同步台账放入 Windows 分支；按分支用途分别保留。
