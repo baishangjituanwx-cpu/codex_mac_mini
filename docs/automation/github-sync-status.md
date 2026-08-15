@@ -6874,4 +6874,5 @@
   - `.codex-*`、`.skill-monitor-*` 基线、标记和临时参考文件均未提交；它们不属于仓库内容。
   - 本轮没有新的 Python takeover、Mac-only Python、Windows bridge 或 deployment 文件；新增技能与慧策导出变更均为共享/跨平台内容，Windows 差异已由文档和现有入口覆盖。
 - 提交与推送:
-  - 待本轮分支提交完成后补录 commit SHA、push 结果与远端验证结果。
+  - `codex/default-python-sync`: `2b15581 Sync August 15 skill mirror updates`，已推送并由 `git ls-remote` 验证远端 tip 为 `2b15581d5cce2e3d9d23459513950b286f8ea129`。
+  - `codex/windows-version-20260411`: `bf5fb39 Sync August 15 Windows-compatible media export updates`、`8251be2 Record August 15 Windows translation completion`，已推送并由 `git ls-remote` 验证远端 tip 为 `8251be27cbc538eadd2454398bc1fbef3c0679f3`；其间保留并包含并发提交 `8246ef2 Record August 16 Windows translation sync`。
