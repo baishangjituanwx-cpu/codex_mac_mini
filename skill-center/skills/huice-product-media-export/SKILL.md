@@ -44,6 +44,22 @@ This skill keeps the same Node helper on Windows; it does not fork a second busi
   "C:/Users/<name>/Downloads/huice-media-export"
 ```
 
+The launcher inherits the current PowerShell environment. Only when the documented Huice certificate error occurs, opt into the HTTPS fallback for the current session and clear it after the export:
+
+```powershell
+$env:HUICE_TLS_INSECURE = "1"
+try {
+  .\scripts\download-huice-detail-images.ps1 `
+    "C:/Users/<name>/Downloads/huice-detail.json" `
+    "C:/Users/<name>/Downloads/huice-media-export"
+}
+finally {
+  Remove-Item Env:HUICE_TLS_INSECURE -ErrorAction SilentlyContinue
+}
+```
+
+Do not use `setx`, persist the variable in the Windows profile, or replace the shared Node helper with an ad-hoc `.cmd`, `curl`, or one-off PowerShell request wrapper.
+
 When a browser or file picker step needs keyboard recovery through `press_key`, prefer Windows-friendly equivalents:
 
 - use `Control+R` or `F5` instead of `Meta+R`
