@@ -3747,3 +3747,15 @@
   - `node --check skill-center/skills/huice-product-media-export/scripts/download-huice-detail-images.js` 通过；共享 helper 与 PowerShell launcher 路径一致。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。以截至 `2026-08-15 21:19:00 CST (+0800)` 的非零 monitor 批次为准，Mac 与 Windows 覆盖均完整；Windows 原生回归待 Windows 环境执行。
+
+## 2026-08-15 22:07:00 CST (+0800)
+
+- 校正结果:
+  - 以本条为本轮最终记录，补正前一条 no-op 记录未覆盖的 `2026-08-15 17:16:34`、`18:06:04` 和 `18:17:38 CST` 非零批次。
+- 已完成的 Windows 补全:
+  - 微信小店收藏券 skill 与 agent 元数据已补齐 Windows 共享流程、键位、路径和当前 PowerShell 会话变量清理规则。
+  - 慧策媒体导出 helper 与 SKILL 文档已补齐 `HUICE_TLS_INSECURE=1` HTTPS fallback，并通过既有 PowerShell 入口暴露。
+- 未完成的补全:
+  - 无内容缺口；唯一未执行的是本机无 `pwsh`/`powershell` 时的 Windows 原生回归。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。以截至 `2026-08-15 21:19:00 CST (+0800)` 的非零 monitor 批次为准，Mac 与 Windows 内容覆盖均完整。
