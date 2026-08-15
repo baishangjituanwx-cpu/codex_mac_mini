@@ -12,6 +12,38 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-08-15 18:17:38 CST (+0800)
+- 处理时间:
+  - `2026-08-15 18:17:38 CST (+0800)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-favorite-coupon-ops/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-favorite-coupon-ops/agents/openai.yaml`
+- 同步提示:
+  - `skill-monitor` 以 canonical baseline `2026-08-15 17:14:55.767 CST (+0800)` 复核到一个新的 custom skill 非零变更批次，内容为 `2 added / 0 modified / 0 deleted`。
+  - 该批次新增微信小店“店铺收藏券” skill 与 agent 元数据，重点是实时读取营销规则和商品/成本映射，计算极端亏损后再进入确认与创建流程。
+  - 本轮没有新的 `.py` 文件进入同步范围；后续 GitHub 同步应至少评估上述两个路径，以及 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 在 `2026-08-15 18:17:38 CST (+0800)` 的对应记录。
+
+## 2026-08-15 18:06:04 CST (+0800)
+- 处理时间:
+  - `2026-08-15 18:06:04 CST (+0800)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-favorite-coupon-ops/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-favorite-coupon-ops/agents/openai.yaml`
+- 同步提示:
+  - `skill-monitor` 复核到一个新的 custom skill 非零变更批次，内容为 `2 added / 0 modified / 0 deleted`。
+  - 新增 skill 用于微信小店店铺收藏券：读取实时规则和商品成本，测算极端亏损，在精确确认后创建并回读验证。
+  - 本轮没有新的 `.py` 文件进入同步范围；后续 GitHub 同步应至少评估上述两个路径，以及 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 在 `2026-08-15 18:06:04 CST (+0800)` 的对应记录。
+
+## 2026-08-15 17:16:34 CST (+0800)
+- 处理时间:
+  - `2026-08-15 17:16:34 CST (+0800)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/huice-product-media-export/scripts/download-huice-detail-images.js`
+- 同步提示:
+  - `skill-monitor` 以 canonical baseline `2026-08-15 16:14:25.434 CST (+0800)` 复核到一个新的 custom skill 非零变更批次，内容为 `0 added / 1 modified / 0 deleted`。
+  - 这批变化只涉及 `huice-product-media-export` 的本地辅助下载脚本：新增 `HUICE_TLS_INSECURE=1` 时的 HTTPS 宽松抓取分支，用于处理证书校验失败的详情图下载场景。
+  - 本轮没有新的 `.py` 文件进入同步范围；后续 GitHub 同步应至少评估上述路径，以及 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md` 在 `2026-08-15 17:16:34 CST (+0800)` 的对应记录。
+
 ## 2026-08-14 00:04:16 CST (+0800)
 - 处理时间:
   - `2026-08-14 00:04:16 CST (+0800)`
@@ -6821,3 +6853,25 @@
 - 跳过项:
   - 跳过 `.codex-skill-monitor-ref-20260729220620`、`.codex-tmp-skill-monitor-20260626-blocks.md`、`.skill-monitor-baseline-20260808T171034Z`、`.skill-monitor-baseline-20260810094243`、`.skill-monitor-baseline-utc-ref`、`.skill-monitor-current-ref`、`.skill-monitor-last-run-marker`、`.skill-monitor-last-run-ref`、`.skill-monitor-ref-20260814095719` 与 `.skill-monitor-scan-ref`；它们是本地监控基线、标记或临时参考文件，不进入 GitHub。
   - 未将 Windows 状态台账放入默认分支，未将通用监控台账或本同步台账放入 Windows 分支；按分支用途分别保留。
+## 2026-08-15 22:07:43 CST (+0800)
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-product-media-export/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-product-media-export/scripts/download-huice-detail-images.js`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-favorite-coupon-ops/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-favorite-coupon-ops/agents/openai.yaml`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以 `2026-08-15 21:06:17 CST (+0800)` 为基线发现 `2 added / 2 modified / 0 deleted` 的新仓库镜像 custom skill 批次。
+  - 新增微信小店店铺收藏券读取、风险测算、确认后创建与回读验证流程及 agent 元数据；同时增强慧策媒体导出脚本的显式 HTTPS 证书回退和 Windows 临时环境变量安全规范。
+- 本轮没有新的 `.py` 文件；后续 GitHub 同步应至少复核上述 4 个路径，并连同本轮 `skill-change-monitor.md` 记录一起处理。
+
+## 2026-08-16 00:02:42 CST (+0800)
+- Windows 转译门禁:
+  - 通过。`windows-translation-status.md` 最新 dated entry 为 `2026-08-15 22:07:00 CST (+0800)`，明确记录 Mac / Windows 版本均完整。
+- 分支与同步内容:
+  - `codex/default-python-sync`: 同步 `skill-center/skills/weixin-shop-favorite-coupon-ops/**`、慧策媒体导出共享 Node helper 与文档，以及 `docs/automation/skill-change-monitor.md` 和本台账。
+  - `codex/windows-version-20260411`: 同步慧策媒体导出共享 helper、Windows 入口/说明与 `docs/automation/windows-translation-status.md`。
+- 跳过项:
+  - `.codex-*`、`.skill-monitor-*` 基线、标记和临时参考文件均未提交；它们不属于仓库内容。
+  - 本轮没有新的 Python takeover、Mac-only Python、Windows bridge 或 deployment 文件；新增技能与慧策导出变更均为共享/跨平台内容，Windows 差异已由文档和现有入口覆盖。
+- 提交与推送:
+  - 待本轮分支提交完成后补录 commit SHA、push 结果与远端验证结果。
