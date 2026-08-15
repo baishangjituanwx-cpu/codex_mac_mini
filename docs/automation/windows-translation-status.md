@@ -3729,3 +3729,21 @@
   - 无功能性阻塞。当前主机仍未安装 `pwsh` 或 `powershell`，因此无法执行 Windows 原生 PowerShell 语法解析或实机回归；这是验证环境限制，不是内容缺失。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。就截至 `2026-08-14 22:01:24 CST (+0800)` 的 monitor 内容覆盖而言，Mac 与 Windows 版本均完整；仅 Windows 原生运行验证待在 Windows 环境执行。
+
+## 2026-08-15 22:05:24 CST (+0800)
+
+- 处理时间:
+  - `2026-08-15 22:05:24 CST (+0800)`
+- 输入来源:
+  - 复核上一轮 cutoff `2026-08-14T14:00:50.326Z` 之后的非零批次：`2026-08-15 17:16:34 CST` 修改慧策详情图下载 helper；`2026-08-15 18:06:04 CST` 与 `18:17:38 CST` 记录微信小店收藏券 skill 新增。
+- 已完成的 Windows 补全:
+  - 确认 `weixin-shop-favorite-coupon-ops` 复用共享 Chrome DevTools MCP 流程，不新增 PowerShell 或 `.cmd` 业务 launcher；镜像中的 `Control`/`F5`/`Alt` 键位、`%USERPROFILE%` 安装路径、`C:/Users/<name>/...` 证据路径、UNC/映射盘路径和当前 PowerShell 会话变量约束均已覆盖。
+  - 确认 `download-huice-detail-images.js` 的 `HUICE_TLS_INSECURE=1` HTTPS fallback、响应 MIME/状态处理和去重逻辑已同步；Windows 继续通过既有 `download-huice-detail-images.ps1` 入口使用共享 Node helper。
+  - 确认 `huice-product-media-export/SKILL.md` 已说明证书错误时仅在当前 PowerShell 会话设置并清理变量，不使用 `setx`、`.cmd`、`curl` 或一次性请求包装器。
+- 未完成的补全:
+  - 无内容缺口；没有删除项需要迁移。微信小店收藏券流程不需要 Windows 专属 shell 分叉。
+  - 本机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生回归；这是验证环境限制，不是仓库内容缺失。
+- 验证:
+  - `node --check skill-center/skills/huice-product-media-export/scripts/download-huice-detail-images.js` 通过；共享 helper 与 PowerShell launcher 路径一致。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。以截至 `2026-08-15 21:19:00 CST (+0800)` 的非零 monitor 批次为准，Mac 与 Windows 覆盖均完整；Windows 原生回归待 Windows 环境执行。
