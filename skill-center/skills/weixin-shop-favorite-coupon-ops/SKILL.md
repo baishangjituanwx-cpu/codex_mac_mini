@@ -55,9 +55,21 @@ description: 通过 chrome-devtools-mcp 读取并安全规划微信小店“店�
 - 生成脱敏风险报告，至少包含读取时间、店铺、商品总数校验、候选配置、逐 SKU 风险分类、最大名义支出、最大额外亏损、未纳入原因和是否需要用户确认。
 - 未得到精确确认时，明确写“仅完成读取和模拟，未创建或发布优惠券”。
 
+## 日更创建规则
+
+- 用户明确授权每日创建店铺收藏券后，按中国标准时间每天 `00:00` 执行一次日更创建；不得因为旧券过期而直接沿用旧券，也不得在同一自然日重复创建同类生效券。
+- 每次零点执行先刷新官方优惠券列表，确认同类券没有处于“生效中”或可领取状态；若同类券仍生效，只记录并跳过创建，禁止重复发券。
+- 无同类生效券且官方提供可验证的“作废/结束/删除”入口时，按用户确认参数创建：直减5元、100张、每人限领1张、全店商品、领取后2天有效；创建后必须在同一次官方会话回读新券ID、状态、券量、有效期、领取/使用数量和停止入口。
+- 每日创建不是风险豁免：创建前仍需执行风险值门禁；官方列表、订单、费用或停止入口无法完整回读时不创建，并按保守值记录风险阻断。
+- 创建后的券继续按至少每小时巡检，直到结束且已领取未使用暴露归零或被订单结算覆盖；新券日更记录写入云表格并按精确行列回读。
+
 ## Windows Repo Mirror Notes
 
-This skill does not need a separate Windows PowerShell or `.cmd` launcher for its browser-controlled work. The Windows-usable equivalent is the same Codex `chrome-devtools-mcp` workflow, so keep the browser behavior shared instead of forking shell wrappers.
+This skill does not need a separate Windows PowerShell or `.cmd` launcher for its browser-controlled work. The Windows-usable equivalent is the same Codex `chrome-devtools-mcp` and cloud-ledger workflow, so keep the browser behavior shared instead of forking shell wrappers.
+
+The daily rule is keyed to China Standard Time (`Asia/Shanghai`), not whatever timezone the Windows host happens to use. Prefer the Codex automation trigger when available. If Windows Task Scheduler is used only to wake or surface the check, configure and verify it for `00:00` China Standard Time and do not make the scheduled command submit a coupon directly. The authenticated browser session must still be freshly read, risk-gated, confirmed where required, and read back after any write. Do not pass cookies, tokens, or request signatures in task arguments, environment variables, or saved task files.
+
+The hourly inspection uses the same shared browser and cloud-ledger workflow. It does not justify a second business launcher or a background `.cmd`/PowerShell mutation wrapper; if the required authenticated session or cloud-table readback is unavailable, record the check as blocked and do not create or modify a coupon.
 
 When a browser interaction needs keyboard input through `press_key`, prefer Windows-friendly equivalents:
 
