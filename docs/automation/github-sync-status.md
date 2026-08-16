@@ -6904,7 +6904,29 @@
 - 同步提示:
   - `skill-monitor-95dbcba9cef8` 以 `2026-08-16 21:30:06 CST (+0800)` 为基线发现 `2 added / 1 modified / 0 deleted` 的新仓库 custom skill 批次。
   - 新增微信小店人群倾向优化技能及 agent 元数据；同时增强店铺收藏券技能的零点日更创建、小时巡检、云台账回读和 Windows 安全约束。
-- 本轮没有新的 `.py` 文件；后续 GitHub 同步应至少复核上述 3 个路径，并连同本轮 skill-change-monitor 记录一起处理。
+  - 本轮没有新的 `.py` 文件；后续 GitHub 同步应至少复核上述 3 个路径，并连同本轮 skill-change-monitor 记录一起处理。
+
+## 2026-08-17 00:05:00 CST (+0800)
+
+- Windows 转译门禁:
+  - 通过。最新 dated entry `2026-08-16 22:04:08 CST (+0800)` 明确记录 Mac / Windows 版本均完整。
+- 分支与提交:
+  - `codex/default-python-sync`:
+    - `36ec63c Sync August 16 Weixin Shop skill updates`
+    - `42ad2a4 Record August 16 skill monitor batches`
+    - 待追加本次台账收尾提交。
+  - `codex/windows-version-20260411`:
+    - `6810f33 Sync August 16 Weixin Shop skill updates`
+    - `308b212 Record August 17 Windows translation sync`
+- 同步内容:
+  - 微信小店人群倾向技能及 agent 元数据。
+  - 微信小店店铺收藏券日更创建、小时巡检、云台账回读和 Windows 安全约束。
+  - 默认分支同步监控总账；Windows 分支同步 Windows 翻译状态。
+- 跳过项:
+  - `.codex-*`、`.skill-monitor-*` 基线、标记和临时参考文件：本地监控产物，不属于仓库内容。
+  - 没有新的 Python takeover、Mac-only Python、Windows bridge 或 deployment implementation 文件。
+- 推送与验证:
+  - 台账收尾提交后分别推送两个目标分支，并用 `git ls-remote` 验证远端 tip。
 
 ## 2026-08-17 00:03:26 CST (+0800)
 - 处理时间:
