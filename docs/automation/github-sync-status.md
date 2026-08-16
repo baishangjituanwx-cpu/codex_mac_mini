@@ -12,6 +12,16 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-08-16 18:36:28 CST (+0800)
+- 处理时间:
+  - `2026-08-16 18:36:28 CST (+0800)`
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-favorite-coupon-ops/SKILL.md`
+- 同步提示:
+  - `skill-monitor` 以 `2026-08-16 17:34:47.245 CST (+0800)` 为基线发现 `0 added / 1 modified / 0 deleted` 的新本地 custom skill 批次。
+  - 该批次把 `weixin-shop-favorite-coupon-ops` 的本地技能说明从 Windows 镜像兼容约束改为每日零点收藏券创建、同类生效券阻断、固定发券参数、小时级巡检和云表格留痕规则。
+  - 本轮没有新的 `.py` 文件进入同步范围；后续 GitHub 同步应至少复核上述本地路径，并判断是否需要把相同规则同步到 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-favorite-coupon-ops/SKILL.md`](/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-favorite-coupon-ops/SKILL.md) 与本轮监控记录。
+
 ## 2026-08-15 18:17:38 CST (+0800)
 - 处理时间:
   - `2026-08-15 18:17:38 CST (+0800)`
@@ -6876,3 +6886,37 @@
 - 提交与推送:
   - `codex/default-python-sync`: `2b15581 Sync August 15 skill mirror updates`，已推送并由 `git ls-remote` 验证远端 tip 为 `2b15581d5cce2e3d9d23459513950b286f8ea129`。
   - `codex/windows-version-20260411`: `bf5fb39 Sync August 15 Windows-compatible media export updates`、`8251be2 Record August 15 Windows translation completion`，已推送并由 `git ls-remote` 验证远端 tip 为 `8251be27cbc538eadd2454398bc1fbef3c0679f3`；其间保留并包含并发提交 `8246ef2 Record August 16 Windows translation sync`。
+
+## 2026-08-16 17:36:11 CST (+0800)
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-audience-targeting/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/weixin-shop-audience-targeting/agents/openai.yaml`
+- 同步提示:
+  - `skill-monitor` 以 `2026-08-16 16:34:47 CST (+0800)` 为基线发现 `2 added / 0 modified / 0 deleted` 的新本地 custom skill 批次。
+  - 该批次新增微信小店人群倾向优化技能及其 agent 元数据，重点覆盖按累计曝光排名选品、受控收窄性别/年龄/城市、保存后官方逐字段回读，以及依据曝光、点击、加购和成交执行回扩或回滚。
+  - 本轮没有新的 `.py` 文件进入同步范围；后续 GitHub 同步应至少复核上述 2 个本地路径，并连同本轮 [`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md`](/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 记录一起处理。
+
+## 2026-08-16 22:30:40 CST (+0800)
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-audience-targeting/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-audience-targeting/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-favorite-coupon-ops/SKILL.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以 `2026-08-16 21:30:06 CST (+0800)` 为基线发现 `2 added / 1 modified / 0 deleted` 的新仓库 custom skill 批次。
+  - 新增微信小店人群倾向优化技能及 agent 元数据；同时增强店铺收藏券技能的零点日更创建、小时巡检、云台账回读和 Windows 安全约束。
+- 本轮没有新的 `.py` 文件；后续 GitHub 同步应至少复核上述 3 个路径，并连同本轮 skill-change-monitor 记录一起处理。
+
+## 2026-08-17 00:03:26 CST (+0800)
+- 处理时间:
+  - `2026-08-17 00:03:26 CST (+0800)`
+- Windows 转译门禁:
+  - 通过。`windows-translation-status.md` 最新 dated entry 为 `2026-08-16 22:04:08 CST (+0800)`，明确记录 Mac / Windows 版本均完整。
+- 分支与同步内容:
+  - `codex/default-python-sync`: 同步新增 `weixin-shop-audience-targeting` 技能镜像、更新 `weixin-shop-favorite-coupon-ops` 技能镜像、`skill-change-monitor.md`，以及本同步台账。
+  - `codex/windows-version-20260411`: 同步本轮 Windows 状态台账与本同步台账；本轮没有新的 Windows bridge 或 deployment 实现文件。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync August 16 skill mirror updates`
+  - `codex/windows-version-20260411`: `Record August 17 Windows sync execution`
+- 跳过项:
+  - `.codex-*`、`.skill-monitor-*` 基线、标记和临时参考文件未提交；它们不属于仓库内容。
+  - 没有新的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment implementation 文件；本轮新增 / 修改内容均为共享技能镜像或自动化台账。
