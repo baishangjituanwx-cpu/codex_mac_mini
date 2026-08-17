@@ -3773,3 +3773,19 @@
   - 无内容性 Windows 转译缺口；本机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生回归。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。共享浏览器流程继续复用 Windows 可用的 `chrome-devtools-mcp`、键位和路径约束，无需新增 PowerShell / `.cmd` 业务启动器。
+
+## 2026-08-17 22:04:01 CST (+0800)
+
+- 处理时间: `2026-08-17 22:04:01 CST (+0800)`
+- 输入来源: 复核上次自动化运行后的 `skill-change-monitor.md` 条目；唯一非零批次为店铺收藏券日更规则更新，后续扫描均为 `0 added / 0 modified / 0 deleted`。
+- 已完成的 Windows 补全: 仓库镜像保留中国标准时间日更、Task Scheduler 唤醒提示、风险门禁、创建后回读、小时巡检、Windows 键位/路径和会话级 TLS 清理说明；无需新增 `.ps1`、`.cmd` 或后台业务包装器。
+- 未完成的补全: 无内容性缺口；本机未安装 `pwsh` 或 `powershell`，未执行 Windows 原生回归。
+- 是否达到“Mac / Windows 版本都齐全”: 是。
+
+## 2026-08-17 22:04:37 CST (+0800)
+
+- 处理时间: `2026-08-17 22:04:37 CST (+0800)`
+- 输入来源: 复核 `2026-08-16 22:30:40 CST` 的人群倾向技能及店铺收藏券技能批次，以及其后至 `2026-08-17 13:01:59 UTC` 的零变更扫描。
+- 已完成的 Windows 补全: 两个技能镜像均已覆盖共享浏览器流程、Windows 键位、`%USERPROFILE%` / `C:/...` / UNC 路径、PowerShell 会话变量与凭据安全约束；无需新增 Windows 专属实现。
+- 未完成的补全: 无；本机未安装 `pwsh` 或 `powershell`，未执行 Windows 原生回归。
+- 是否达到“Mac / Windows 版本都齐全”: 是。
