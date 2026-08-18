@@ -6969,7 +6969,7 @@
   - `codex/default-python-sync`: 同步 `docs/automation/skill-change-monitor.md` 的新增 no-op 监控台账，并追加本次执行记录。
   - `codex/windows-version-20260411`: 同步 `docs/automation/windows-translation-status.md` 的 2026-08-17 至 2026-08-18 完成记录，并追加本次执行记录。
 - 提交信息:
-  - `codex/default-python-sync`: `Sync August 18 monitor ledger`; `Record August 19 GitHub sync execution`。
+  - `codex/default-python-sync`: `Sync August 18 monitor ledger`。
   - `codex/windows-version-20260411`: `Record August 18 Windows translation status`; `Record August 19 Windows sync execution`。
 - 推送与验证:
   - 两个目标分支均将推送，并以 `git ls-remote` 验证远端 tip。
