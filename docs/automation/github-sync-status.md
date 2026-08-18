@@ -6976,3 +6976,16 @@
 - 跳过项:
   - 没有新的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment implementation 文件。
   - `.codex-*`、`.skill-monitor-*` 基线、标记和临时参考文件均未提交；它们是本地监控产物，不属于 GitHub 同步内容。
+
+## 2026-08-19 00:08:00 CST (+0800)
+
+- Windows 转译门禁:
+  - 通过。`windows-translation-status.md` 最新 dated entry 为 `2026-08-18 22:02:35 CST (+0800)`，明确记录 Mac / Windows 版本均完整。
+- 分支处理:
+  - `codex/default-python-sync`: 未发现新的 generic Python takeover、Mac-compatible Python 或共享实现文件；仅追加本次执行记录。
+  - `codex/windows-version-20260411`: 未发现新的 Windows bridge 或 deployment implementation 文件；远端已包含截至 `2026-08-18 22:02:35 CST (+0800)` 的 Windows 状态记录，仅追加本次执行记录。
+- 提交与推送:
+  - 将分别创建清晰的执行台账提交并推送两个目标分支，随后用 `git ls-remote` 验证远端 tip。
+- 跳过项:
+  - `.codex-*`、`.skill-monitor-*` 基线、标记和临时参考文件：本地监控产物，不属于仓库同步内容。
+  - 工作树中一份重排 Windows 状态台账的未提交改写未采用；其新增日期内容已在 Windows 远端存在，直接覆盖会丢失该分支既有 2026-08-14 至 2026-08-15 历史记录，故保留在本地待后续人工合并。
