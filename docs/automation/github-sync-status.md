@@ -6887,4 +6887,18 @@
   - 本分支将追加本次执行台账提交并推送，随后用远端 tip 验证。
 - 跳过项:
   - 没有新的 Windows bridge 或 deployment implementation 文件。
+
+## 2026-08-21 00:03:21 CST (+0800)
+
+- Windows 转译门禁:
+  - 通过。`windows-translation-status.md` 最新 dated entry 为 `2026-08-20 22:03:08 CST (+0800)`，明确记录 Mac / Windows 版本均完整。
+- 分支处理:
+  - `codex/windows-version-20260411`: 未发现新的 Windows bridge、deployment 或其他 Windows-specific implementation；分支已与远端一致，仅追加本次执行记录。
+  - `codex/default-python-sync`: 未发现新的 generic Python takeover、Mac-compatible Python 或共享实现文件；默认分支已单独记录本次执行。
+- 提交与推送:
+  - Windows 分支创建并推送 `Record August 21 Windows sync execution`。
+  - 默认分支创建并推送 `Record August 21 GitHub sync execution`。
+  - 两个目标分支均以 `git ls-remote` 验证远端 tip。
+- 跳过项:
+  - 没有新的实现内容可按分支用途同步。
   - `.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均未提交；它们是本地监控运行产物，不属于 GitHub 同步内容。
