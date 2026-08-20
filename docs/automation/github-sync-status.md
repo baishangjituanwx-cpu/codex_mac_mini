@@ -6875,3 +6875,16 @@
 - 跳过项:
   - `.codex-*`、`.skill-monitor-*` 基线、标记和临时参考文件：本地监控产物，不属于仓库内容。
   - 没有新的 Windows bridge 或 deployment implementation 文件。
+
+## 2026-08-21 00:02:20 CST (+0800)
+
+- Windows 转译门禁:
+  - 通过。`windows-translation-status.md` 最新 dated entry 为 `2026-08-20 22:03:08 CST (+0800)`，明确记录 Mac / Windows 版本均完整。
+- 分支处理:
+  - `codex/windows-version-20260411`: 已同步 2026-08-20 Windows 完成记录，提交 `e973a20 Record August 20 Windows translation completion`；未发现新的 Windows bridge、deployment 或其他 Windows-specific implementation。
+  - `codex/default-python-sync`: 默认分支已单独同步共享自动化台账。
+- 提交与推送:
+  - 本分支将追加本次执行台账提交并推送，随后用远端 tip 验证。
+- 跳过项:
+  - 没有新的 Windows bridge 或 deployment implementation 文件。
+  - `.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均未提交；它们是本地监控运行产物，不属于 GitHub 同步内容。
