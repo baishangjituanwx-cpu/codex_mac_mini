@@ -6969,9 +6969,10 @@
   - `codex/default-python-sync`: 同步 `docs/automation/skill-change-monitor.md` 的 2026-08-20 no-op 监控台账、共享 `docs/automation/windows-translation-status.md` 更新，并追加本次执行记录。
   - `codex/windows-version-20260411`: 同步 2026-08-20 Windows 完成记录并追加本次执行记录；未发现新的 Windows bridge、deployment 或其他 Windows-specific implementation。
 - 提交信息:
-  - 默认分支内容与本次台账提交：`81f3ada Sync August 20 automation ledgers`
-  - Windows 分支内容提交：`Record August 20 Windows translation completion`
-  - Windows 分支台账提交：`Record August 21 Windows sync execution`
+  - 默认分支内容与初始台账提交：`81f3ada Sync August 20 automation ledgers`
+  - 默认分支收尾台账提交：`Record August 21 GitHub sync execution`
+  - Windows 分支内容提交：`e973a20 Record August 20 Windows translation completion`
+  - Windows 分支台账提交：`8936b1f Record August 21 Windows sync execution`
 - 推送与验证:
   - 本轮将推送两个目标分支，并以远端分支 tip 验证结果。
 - 跳过项:
