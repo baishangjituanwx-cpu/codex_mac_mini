@@ -7051,3 +7051,30 @@
 - 跳过项:
   - 没有新的实现内容可按分支用途同步。
   - `.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均未提交；它们是本地监控运行产物，不属于 GitHub 同步内容。
+
+## 2026-08-22 00:03:28 CST (+0800)
+
+- Windows 转译门禁:
+  - 通过。`windows-translation-status.md` 最新 dated entry 为 `2026-08-21 22:10:40 CST (+0800)`，明确记录 Mac / Windows 版本均完整。
+- 分支处理:
+  - `codex/default-python-sync`: 同步 `skill-change-monitor.md` 的 2026-08-21 监控台账、`windows-translation-status.md` 的 2026-08-21 完成记录，并追加本次执行记录。
+  - `codex/windows-version-20260411`: 同步 2026-08-21 Windows 完成记录并追加本次执行记录；未发现新的 Windows bridge、deployment 或其他 Windows-specific implementation。
+- 提交与推送:
+  - 默认分支将创建监控/状态内容提交和本次执行台账提交后推送。
+  - Windows 分支将创建 Windows 状态/执行台账提交后推送。
+  - 两个目标分支均以 `git ls-remote` 验证远端 tip。
+- 跳过项:
+  - 没有新的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment implementation 文件。
+  - `.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均未提交；它们是本地监控运行产物，不属于 GitHub 同步内容。
+
+## 2026-08-22 00:03:28 CST (+0800)
+
+- Windows 转译门禁:
+  - 通过。`windows-translation-status.md` 最新 dated entry 为 `2026-08-21 22:10:40 CST (+0800)`，明确记录 Mac / Windows 版本均完整。
+- 分支处理:
+  - `codex/default-python-sync`: 同步最新 `docs/automation/skill-change-monitor.md` 监控台账，并记录本次执行结果；未发现新的 generic Python takeover、Mac-compatible Python 或共享实现文件。
+  - `codex/windows-version-20260411`: 同步最新 `docs/automation/windows-translation-status.md` Windows 完成状态，并记录本次执行结果；未发现新的 Windows bridge、deployment 或其他 Windows-specific implementation 文件。
+- 提交与推送:
+  - 两个目标分支分别创建清晰的台账提交并推送，随后用 `git ls-remote` 验证远端 tip。
+- 跳过项:
+  - `.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均未提交；它们是本地监控运行产物，不属于 GitHub 同步内容。
