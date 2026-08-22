@@ -7078,3 +7078,17 @@
   - 两个目标分支分别创建清晰的台账提交并推送，随后用 `git ls-remote` 验证远端 tip。
 - 跳过项:
   - `.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均未提交；它们是本地监控运行产物，不属于 GitHub 同步内容。
+
+## 2026-08-23 00:02:24 CST (+0800)
+
+- Windows 转译门禁:
+  - 通过。`windows-translation-status.md` 最新 dated entry 为 `2026-08-22 22:02:31 CST (+0800)`，明确记录 Mac / Windows 版本均完整。
+- 分支处理:
+  - `codex/default-python-sync`: 同步 2026-08-22 的 `docs/automation/skill-change-monitor.md` no-op 监控台账；未发现新的 generic Python takeover、Mac-compatible Python 或共享实现文件。
+  - `codex/windows-version-20260411`: 同步 `docs/automation/windows-translation-status.md` 的 2026-08-22 完成记录；未发现新的 Windows bridge、deployment 或其他 Windows-specific implementation 文件。
+- 提交与推送:
+  - 默认分支将提交 monitor 台账与本次执行记录后推送。
+  - Windows 分支将提交 Windows 状态台账与本次执行记录后推送。
+  - 两个目标分支均以远端 tip 验证。
+- 跳过项:
+  - `.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件未提交；它们是本地监控运行产物，不属于 GitHub 同步内容。
