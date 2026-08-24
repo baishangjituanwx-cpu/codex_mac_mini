@@ -6954,4 +6954,15 @@
   - Windows 分支将提交 Windows 状态台账与本次执行记录后推送，并以 `git ls-remote` 验证远端 tip。
 - 跳过项:
   - `.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件未提交；它们是本地监控运行产物，不属于 GitHub 同步内容。
+
+## 2026-08-25 00:02:37 CST (+0800)
+
+- Windows 转译门禁:
+  - 通过。`windows-translation-status.md` 最新 dated entry 为 `2026-08-24 22:02:30 CST (+0800)`，明确记录 Mac / Windows 内容覆盖均完整。
+- 分支与提交:
+  - `codex/default-python-sync`: 已由并发收尾提交并推送 `7ea6c16 Sync August 24 automation ledgers`；包含最新 monitor、Windows 状态及默认分支执行台账。
+  - `codex/windows-version-20260411`: 已提交并推送 `e1f0c00 Sync August 24 Windows translation status`；未发现新的 Windows bridge、deployment 或其他 Windows-specific implementation 文件。
+- 跳过项:
+  - 没有新的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment implementation 文件。
+  - `.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件未提交；它们是本地监控运行产物，不属于 GitHub 同步内容。
   - 没有新的 Windows bridge 或 deployment implementation 文件。
