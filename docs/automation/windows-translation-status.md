@@ -3691,122 +3691,200 @@
   - 是，就本日已记录的 skill 行为、Windows 文档、路径处理和命令入口覆盖而言，Mac 与 Windows 均完整。
   - Windows 原生运行验证仍待有 PowerShell 的 Windows 环境执行。
 
-## 2026-08-17 22:04:37 CST (+0800)
+## 2026-08-14 22:03:18 CST (+0800)
 
 - 处理时间:
-  - `2026-08-17 22:04:37 CST (+0800)`
+  - `2026-08-14 22:03:18 CST (+0800)`
 - 输入来源:
-  - 复核 `skill-change-monitor.md` 中自自动化上一轮截止 `2026-08-16T14:01:48.138Z` 之后、此前未在本状态台账单独记录的非零批次:
-    - `2026-08-16 22:30:40 CST (+0800)`: 新增 `skill-center/skills/weixin-shop-audience-targeting/SKILL.md`、`agents/openai.yaml`，修改 `skill-center/skills/weixin-shop-favorite-coupon-ops/SKILL.md`。
-  - `2026-08-16 22:42:57 CST (+0800)` 至 `2026-08-17 13:01:59 UTC (+0000)` 的后续 monitor 扫描均为 `新增 0，修改 0，删除 0`；同步提交 `36ec63c` 仅落地上述已登记批次，不重复计数。
+  - `skill-change-monitor.md` 中此前未写入本状态台账的非零批次 `2026-08-13 22:36:31 CST (+0800)`：新增 3 个慧策供应商售后地址技能镜像文件，修改微信小店限价审计技能 1 个文件。
+  - 该批次之后截至最新 `2026-08-14 22:01:24 CST (+0800)` 的 monitor 批次均为 `新增 0 / 修改 0 / 删除 0`，没有新的 custom-skill 行为。
 - 已完成的 Windows 补全:
-  - `weixin-shop-audience-targeting`:
-    - 复核仓库镜像已保留共享 `chrome-devtools-mcp` 浏览器工作流，无需单独 PowerShell 或 `.cmd` 业务启动器。
-    - 已覆盖 Windows `Control`/`F5`/`Alt` 键位、`%USERPROFILE%\\.codex\\skills\\...` 安装路径、带引号的 `C:/Users/<name>/...` 与 UNC/映射盘证据路径、PowerShell 路径引用、会话级环境变量和凭据/原始请求头禁存规则。
-  - `weixin-shop-favorite-coupon-ops`:
-    - 复核日更创建规则已在 Windows 镜像同步，包括 `Asia/Shanghai` 零点口径、Task Scheduler 仅唤醒/提示、风险门禁、创建后回读、每小时巡检和云台账精确回读。
-    - 已覆盖共享浏览器/云台账复用、Windows 键位、`%USERPROFILE%`、`C:/...` / UNC 路径、当前 PowerShell 会话内的可选 TLS 回退及清理，并明确不使用 `setx`、后台 `.cmd`/PowerShell 变更包装器或持久化凭据。
-  - 本轮没有重复修改上述 skill 文件，也没有新增不必要的 Windows 分叉；当前仓库内容已经提供 Mac 与 Windows 的等价行为。
+  - `skill-center/skills/huice-supplier-return-address/SKILL.md`：确认新增技能的 Windows 镜像已包含共享慧策 HTTP 客户端复用、无需独立业务 `.ps1`/`.cmd`、当前 PowerShell 会话认证、禁止 `setx`/凭据落盘、`%USERPROFILE%` 安装路径、带引号的 UNC 与 `C:/Users/<name>/...` 路径，以及 `Control`/`F5`/`Alt` 浏览器快捷键映射。
+  - `skill-center/skills/huice-supplier-return-address/agents/openai.yaml`：确认 Windows 镜像对应的 agent 元数据、显示信息和默认调用提示已随技能镜像存在。
+  - `skill-center/skills/huice-supplier-return-address/references/source-contract.md`：确认接口契约已包含 Windows 读取约定、共享 PowerShell/Node 入口复用、UNC/映射盘路径、证据路径和当前会话凭据规则。
+  - `skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`：确认供应商地址备用来源、精确 `saleReturnPlaces` 回读、地址来源记录、限价审计交接和 Windows 路径/快捷键/共享客户端说明已同步；该技能继续复用 Chrome DevTools MCP 与共享 HTTP 客户端，不新增临时命令包装器。
+  - 本轮没有新增实现文件：上述 Windows 等价行为已存在于仓库镜像提交中，本轮完成的是漏记批次的核对与状态落账。
 - 未完成的补全:
-  - 无。没有新的 PowerShell 启动器、Windows 专属命令包装器、快捷键差异、路径处理、Windows 文档或配套仓库资产缺口。
+  - 无。新增技能、agent 元数据、接口契约和限价审计交接均已有 Windows 可用等价行为；没有删除项或待补充的 PowerShell 启动器、路径规则、快捷键说明、命令包装器或 Windows 资源。
 - 阻塞原因:
   - 无功能性阻塞。
-  - 本机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法/实机回归；已完成静态 Windows 文档与路径/键位/安全约束核对，`git diff --check` 通过。
+  - 当前 macOS 主机没有 `pwsh` 或 `powershell`，因此不能执行 Windows 原生 PowerShell 语法解析或实机回归；本轮已完成静态覆盖核对、文件存在性检查和 `git diff --check`。
 - 是否达到“Mac / Windows 版本都齐全”:
-  - 是。基于截至 `2026-08-17 13:01:59 UTC (+0000)` 的最新 monitor 记录，今天已复核的技能行为与后续扫描没有遗留 Windows 转译缺口；Mac 与 Windows 覆盖均完整。
+  - 是。就 `2026-08-13 22:36:31` 的非零技能批次及其后截至 `2026-08-14 22:01:24` 的扫描结果而言，Mac 与 Windows 覆盖均完整。
+
+## 2026-08-14 22:03:09 CST (+0800)
+
+- 处理时间:
+  - `2026-08-14 22:03:09 CST (+0800)`
+- 输入来源:
+  - `skill-change-monitor.md` 中 `2026-08-13 22:36:31 CST (+0800)` 的 `3 added / 1 modified / 0 deleted` 批次：`skill-center/skills/huice-supplier-return-address/{SKILL.md,agents/openai.yaml,references/source-contract.md}` 与 `skill-center/skills/weixin-shop-price-floor-audit/SKILL.md`。
+  - 该批次是 `2026-08-13 22:08:46 CST (+0800)` 已记录转译内容的监控重放；其后的 `2026-08-13 22:44:52 CST (+0800)` 至 `2026-08-14 22:01:24 CST (+0800)` 批次均为 `0 added / 0 modified / 0 deleted`。
+- 已完成的 Windows 补全:
+  - 无新增转译项；重放批次中的四个文件已在上一条状态记录中完成 Windows 等价覆盖。
+  - 复核供应商地址技能及接口契约继续使用共享 HTTP/MCP 客户端和既有启动入口，不新增临时业务 `.ps1`/`.cmd`；认证信息仅保留在当前 PowerShell 会话，不使用 `setx` 或持久化凭据。
+  - 复核 Windows 路径与快捷键说明包含 `%USERPROFILE%\\.codex\\skills\\...`、带引号的 `C:/Users/<name>/...`、UNC/映射盘路径，以及 `Control`、`F5`、`Alt+Left`/`Alt+Right` 等键位映射。
+- 未完成的补全:
+  - 无。最新监控窗口没有新的 Mac-only 行为、PowerShell 启动器、路径处理、命令包装器、快捷键说明、Windows 文档或仓库资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。当前主机仍未安装 `pwsh` 或 `powershell`，因此无法执行 Windows 原生 PowerShell 语法解析或实机回归；这是验证环境限制，不是内容缺失。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。就截至 `2026-08-14 22:01:24 CST (+0800)` 的 monitor 内容覆盖而言，Mac 与 Windows 版本均完整；仅 Windows 原生运行验证待在 Windows 环境执行。
+
+## 2026-08-15 22:05:24 CST (+0800)
+
+- 处理时间:
+  - `2026-08-15 22:05:24 CST (+0800)`
+- 输入来源:
+  - 复核上一轮 cutoff `2026-08-14T14:00:50.326Z` 之后的非零批次：`2026-08-15 17:16:34 CST` 修改慧策详情图下载 helper；`2026-08-15 18:06:04 CST` 与 `18:17:38 CST` 记录微信小店收藏券 skill 新增。
+- 已完成的 Windows 补全:
+  - 确认 `weixin-shop-favorite-coupon-ops` 复用共享 Chrome DevTools MCP 流程，不新增 PowerShell 或 `.cmd` 业务 launcher；镜像中的 `Control`/`F5`/`Alt` 键位、`%USERPROFILE%` 安装路径、`C:/Users/<name>/...` 证据路径、UNC/映射盘路径和当前 PowerShell 会话变量约束均已覆盖。
+  - 确认 `download-huice-detail-images.js` 的 `HUICE_TLS_INSECURE=1` HTTPS fallback、响应 MIME/状态处理和去重逻辑已同步；Windows 继续通过既有 `download-huice-detail-images.ps1` 入口使用共享 Node helper。
+  - 确认 `huice-product-media-export/SKILL.md` 已说明证书错误时仅在当前 PowerShell 会话设置并清理变量，不使用 `setx`、`.cmd`、`curl` 或一次性请求包装器。
+- 未完成的补全:
+  - 无内容缺口；没有删除项需要迁移。微信小店收藏券流程不需要 Windows 专属 shell 分叉。
+  - 本机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生回归；这是验证环境限制，不是仓库内容缺失。
+- 验证:
+  - `node --check skill-center/skills/huice-product-media-export/scripts/download-huice-detail-images.js` 通过；共享 helper 与 PowerShell launcher 路径一致。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。以截至 `2026-08-15 21:19:00 CST (+0800)` 的非零 monitor 批次为准，Mac 与 Windows 覆盖均完整；Windows 原生回归待 Windows 环境执行。
+
+## 2026-08-15 22:07:00 CST (+0800)
+
+- 校正结果:
+  - 以本条为本轮最终记录，补正前一条 no-op 记录未覆盖的 `2026-08-15 17:16:34`、`18:06:04` 和 `18:17:38 CST` 非零批次。
+- 已完成的 Windows 补全:
+  - 微信小店收藏券 skill 与 agent 元数据已补齐 Windows 共享流程、键位、路径和当前 PowerShell 会话变量清理规则。
+  - 慧策媒体导出 helper 与 SKILL 文档已补齐 `HUICE_TLS_INSECURE=1` HTTPS fallback，并通过既有 PowerShell 入口暴露。
+- 未完成的补全:
+  - 无内容缺口；唯一未执行的是本机无 `pwsh`/`powershell` 时的 Windows 原生回归。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。以截至 `2026-08-15 21:19:00 CST (+0800)` 的非零 monitor 批次为准，Mac 与 Windows 内容覆盖均完整。
+
+## 2026-08-17 00:04:00 CST (+0800)
+
+- 处理时间:
+  - `2026-08-17 00:04:00 CST (+0800)`
+- Windows 转译门禁:
+  - 通过。最新 dated entry `2026-08-16 22:04:08 CST (+0800)` 明确记录 Mac / Windows 版本均完整。
+- 本轮同步:
+  - 将微信小店人群倾向优化镜像及 agent 元数据同步到 `codex/windows-version-20260411`。
+  - 将微信小店店铺收藏券日更、小时巡检、云台账回读和 Windows 安全约束更新同步到 `codex/windows-version-20260411`。
+- 未完成的补全:
+  - 无内容性 Windows 转译缺口；本机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生回归。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。共享浏览器流程继续复用 Windows 可用的 `chrome-devtools-mcp`、键位和路径约束，无需新增 PowerShell / `.cmd` 业务启动器。
 
 ## 2026-08-17 22:04:01 CST (+0800)
 
-- 处理时间:
-  - `2026-08-17 22:04:01 CST (+0800)`
-- 输入来源:
-  - 复核上次自动化运行时间 `2026-08-16T14:01:48.134Z` 之后的 `skill-change-monitor.md` 条目。
-  - 唯一非零批次为 `2026-08-16 18:36:28 CST (+0800)`：修改本地 `/Users/baishangjituan/.codex/skills/weixin-shop-favorite-coupon-ops/SKILL.md`，新增中国标准时间每日 `00:00` 创建店铺收藏券、同类生效券跳过、固定券参数、创建后回读、风险门禁、至少每小时巡检和云表留痕规则；该本地文件同时移除了 Windows 镜像说明。
-  - 其后截至最新 `2026-08-17 13:01:59 UTC (+0000)` 的 monitor 条目均为 `新增 0，修改 0，删除 0`，没有新增 custom-skill 行为、删除项或配套资产变化。
-- 已完成的 Windows 补全:
-  - 未新增仓库脚本或资源；仓库镜像 [`skill-center/skills/weixin-shop-favorite-coupon-ops/SKILL.md`](/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/weixin-shop-favorite-coupon-ops/SKILL.md) 已保留并核对上述日更规则对应的 Windows 等价行为。
-  - 已确认日更使用中国标准时间，不依赖 Windows 主机本地时区；Windows Task Scheduler 仅可作为 `00:00` 唤醒/提示入口，不能绕过新鲜读取、风险门禁、用户确认和创建后回读直接提交。
-  - 已确认每小时巡检继续复用共享浏览器与云表流程，不需要新增 `.ps1`、`.cmd` 或后台业务变更包装器；认证会话或云表回读不可用时必须阻断并留痕。
-  - 已确认 Windows 快捷键、`%USERPROFILE%` 安装路径、`C:/Users/<name>/...` 证据路径、UNC/映射盘路径、会话级 `HUICE_TLS_INSECURE` 清理和凭据脱敏说明均仍在仓库镜像中；Mac 与通用实现未删除或改写。
-- 未完成的补全:
-  - 无。最新非零行为已有 Windows 等价说明，后续 monitor 批次没有新的待翻译内容。
-- 阻塞原因:
-  - 无功能性阻塞。
-  - 当前 Mac 主机未安装 `pwsh` 或 `powershell`，因此未执行 PowerShell 语法解析或 Windows 实机回归；本轮完成了镜像差异和关键 Windows 文本静态核验。
-- 是否达到“Mac / Windows 版本都齐全”:
-  - 是。就截至 `2026-08-17 13:01:59 UTC (+0000)` 的最新 custom-skill 行为而言，Mac 与 Windows 覆盖均完整；仅 Windows 原生运行验证仍需在 Windows/PowerShell 环境执行。
+- 处理时间: `2026-08-17 22:04:01 CST (+0800)`
+- 输入来源: 复核上次自动化运行后的 `skill-change-monitor.md` 条目；唯一非零批次为店铺收藏券日更规则更新，后续扫描均为 `0 added / 0 modified / 0 deleted`。
+- 已完成的 Windows 补全: 仓库镜像保留中国标准时间日更、Task Scheduler 唤醒提示、风险门禁、创建后回读、小时巡检、Windows 键位/路径和会话级 TLS 清理说明；无需新增 `.ps1`、`.cmd` 或后台业务包装器。
+- 未完成的补全: 无内容性缺口；本机未安装 `pwsh` 或 `powershell`，未执行 Windows 原生回归。
+- 是否达到“Mac / Windows 版本都齐全”: 是。
+
+## 2026-08-17 22:04:37 CST (+0800)
+
+- 处理时间: `2026-08-17 22:04:37 CST (+0800)`
+- 输入来源: 复核 `2026-08-16 22:30:40 CST` 的人群倾向技能及店铺收藏券技能批次，以及其后至 `2026-08-17 13:01:59 UTC` 的零变更扫描。
+- 已完成的 Windows 补全: 两个技能镜像均已覆盖共享浏览器流程、Windows 键位、`%USERPROFILE%` / `C:/...` / UNC 路径、PowerShell 会话变量与凭据安全约束；无需新增 Windows 专属实现。
+- 未完成的补全: 无；本机未安装 `pwsh` 或 `powershell`，未执行 Windows 原生回归。
+- 是否达到“Mac / Windows 版本都齐全”: 是。
 
 ## 2026-08-18 22:01:45 CST (+0800)
 
-- 处理时间:
-  - `2026-08-18 22:01:45 CST (+0800)`
-- 输入来源:
-  - 复核自动化上一轮运行时间 `2026-08-17T14:01:23.382Z` 之后的 `skill-change-monitor.md` 条目。
-  - 截至最新条目 `2026-08-18 20:59:19 CST (+0800)`，所有监控批次均为 `新增 0，修改 0，删除 0`；未发现新的 custom-skill 行为、删除项或 supporting automation 资产。
-- 已完成的 Windows 补全:
-  - 明确记录本轮没有需要翻译的内容：没有新增或修改的 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源。
-  - 静态复核现有 Windows 镜像与仓库路径范围；没有修改 Mac 或通用实现，也没有新增不必要的 Windows 分叉。
-- 未完成的补全:
-  - 无。相对本轮基线，没有待翻译的 custom-skill 行为或 Windows 专属资产。
-- 阻塞原因:
-  - 无功能性阻塞。
-  - 本机未安装 `pwsh` 或 `powershell`，因此未执行 PowerShell 语法解析或 Windows 原生回归；这是验证环境限制，不是仓库内容缺失。
-- 是否达到“Mac / Windows 版本都齐全”:
-  - 是。就截至 `2026-08-18 20:59:19 CST (+0800)` 的最新监控内容而言，今天没有新增 Windows 缺口，Mac 与 Windows 覆盖均完整；Windows 原生运行验证仍需在 Windows/PowerShell 环境执行。
+- 处理时间: `2026-08-18 22:01:45 CST (+0800)`
+- 输入来源: 复核自动化上一轮运行后的 `skill-change-monitor.md` 条目；截至 `2026-08-18 20:59:19 CST (+0800)` 的监控批次均为 `新增 0，修改 0，删除 0`。
+- 已完成的 Windows 补全: 无新增转译项；现有 Windows 镜像继续覆盖已记录技能行为，无需新增 PowerShell 启动器、路径处理、快捷键映射、命令包装器或仓库资源。
+- 未完成的补全: 无。
+- 阻塞原因: 无功能性阻塞；本机未安装 `pwsh` 或 `powershell`，未执行 Windows 原生回归。
+- 是否达到“Mac / Windows 版本都齐全”: 是。Mac 与 Windows 覆盖均完整。
 
-## 2026-08-18 22:02:35 CST (+0800)
+## 2026-08-25 22:04:00 CST (+0800)
 
-- 处理时间:
-  - `2026-08-18 22:02:35 CST (+0800)`
-- 输入来源:
-  - 复核上次已记录截止 `2026-08-18 20:59:19 CST (+0800)` 之后追加的 `skill-change-monitor.md` 条目，最新为 `2026-08-18 21:21:42 CST (+0800)`。
-  - 本增量区间的 monitor 结果为 `新增 0，修改 0，删除 0`；没有新的 custom-skill 行为、删除项或 supporting automation 资产。
-- 已完成的 Windows 补全:
-  - 明确记录本增量区间为 no-op：无需新增或修改 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源。
-  - 保留 Mac 与通用实现不变；现有 Windows 镜像仍覆盖已记录技能行为。
-- 未完成的补全:
-  - 无内容转译缺口；本增量区间没有待翻译的 Mac-only 行为。
-- 阻塞原因:
-  - 无功能性阻塞。
-  - 本机未安装 `pwsh` 或 `powershell`，因此未执行 PowerShell 语法解析或 Windows 原生回归；这是验证环境限制，不是仓库内容缺失。
-- 是否达到“Mac / Windows 版本都齐全”:
-  - 是。就截至 `2026-08-18 21:21:42 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 覆盖均完整；仅 Windows 原生运行验证仍需在 Windows/PowerShell 环境执行。
+- 处理时间: `2026-08-25 22:04:00 CST (+0800)`。
+- 输入来源: 复核自动化上一轮运行时间 `2026-08-24T14:01:53.049Z` 之后追加的 `skill-change-monitor.md` 条目，最新为 `2026-08-25 21:12:59 CST (+0800)`。
+- 变更判定: 期间唯一的非零 canonical 批次报告 `0 added / 66 modified / 0 deleted`，但 66 个路径只有同步/检出造成的统一 mtime 触发；cutoff 后没有对应 Git 内容变更，当前 `skills/`、`skill-center/`、`automation/` 工作树也无实现差异。其余批次均为 `0 added / 0 modified / 0 deleted`。
+- 已完成的 Windows 补全: 本轮实际为 no-op，没有新增或修改 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库资产；已复核 canonical 批次列出的 66 个路径均存在，并确认现有 Hermes、社媒发布、XYQ Nest、Codex Feishu Bridge 等 Windows 启动器/文档仍在位。Mac 与通用实现保持不变。
+- 验证: `git diff --check` 与 Feishu Bridge `bridge.js` 的 `node --check` 通过；本机未安装 `pwsh` 或 `powershell`，未执行 Windows 原生 PowerShell 语法解析或实机回归。
+- 未完成的补全: 无内容转译缺口、删除迁移或缺失 Windows 资产；仅 Windows 原生运行验证仍需在 Windows/PowerShell 环境执行。
+- 是否达到“Mac / Windows 版本都齐全”: 是。就截至 `2026-08-25 21:12:59 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 内容覆盖均完整。
 
-## 2026-08-19 22:02:08 CST (+0800)
+## 2026-08-24 22:02:30 CST (+0800)
 
 - 处理时间:
-  - `2026-08-19 22:02:08 CST (+0800)`
+  - `2026-08-24 22:02:30 CST`
 - 输入来源:
-  - 复核 `skill-change-monitor.md` 中自上一条 Windows 状态记录截止 `2026-08-18 21:21:42 CST (+0800)` 之后追加的条目，最新为 `2026-08-19 21:38:21 CST (+0800)`。
-  - 该增量区间的所有 monitor 批次均为 `新增 0，修改 0，删除 0`；未发现新的 custom-skill 行为、删除项或 supporting automation 资产。
+  - 复核自动化上一轮运行时间 `2026-08-23T14:01:46.404Z` 之后追加的 `skill-change-monitor.md` 条目，最新为 `2026-08-24 22:00:59 CST (+0800)`。
+  - 该增量窗口内的 monitor 批次全部为 `新增 0，修改 0，删除 0`；未发现新的 custom-skill 行为、删除项、新增 `.py` 文件或 supporting automation 资产。
 - 已完成的 Windows 补全:
-  - 明确记录本轮为 no-op：没有新的 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源需要翻译。
-  - 未修改 Mac 或通用实现，也未新增不必要的 Windows 分叉；现有 Windows 镜像继续覆盖已记录技能行为。
+  - 本轮为 no-op：没有任何内容需要翻译，因此没有新增或修改 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源。
+  - 静态复核现有 Windows 启动器与包装器仍存在，包括 `automation/python-platform-takeover/scripts/*.ps1`、`skill-center/scripts/sync-skills.ps1` 和 `scripts/dashboard-sync.ps1`；未修改 Mac 或通用实现，也未新增不必要的 Windows 分叉。
+  - 已完成 `git diff --check`；当前 macOS 主机未安装 `pwsh` 或 `powershell`。
 - 未完成的补全:
-  - 无内容转译缺口；本轮没有待补齐的 Mac-only 行为或 Windows 专属资产。
-- 阻塞原因:
-  - 无功能性阻塞。
-  - 当前 macOS 主机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析或实机回归；这是验证环境限制，不是仓库内容缺失。
+  - 无内容转译缺口、删除迁移或缺失 Windows 资产。
+  - Windows 原生 PowerShell 语法解析和实机回归仍待外部 Windows/PowerShell 环境执行；这是验证环境限制，不是仓库内容缺失。
 - 是否达到“Mac / Windows 版本都齐全”:
-  - 是。就截至 `2026-08-19 21:38:21 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 覆盖今日均完整；仅 Windows 原生运行验证仍需在 Windows/PowerShell 环境执行。
+  - 是。就截至 `2026-08-24 22:00:59 CST (+0800)` 的最新 monitor 内容而言，今天没有新增 Windows 缺口，Mac 与 Windows 内容覆盖均完整；仅 Windows 原生运行验证仍待外部环境执行。
 
-## 2026-08-19 22:02:54 CST (+0800)
+## 2026-08-24 22:02:30 CST (+0800)
+
+- 处理时间: `2026-08-24 22:02:30 CST (+0800)`
+- 输入来源: 复核自动化上一轮运行时间 `2026-08-23T14:01:46.404Z` 之后追加的 `skill-change-monitor.md` 条目，最新为 `2026-08-24 22:00:59 CST (+0800)`；该增量窗口内均为 `新增 0，修改 0，删除 0`。
+- 已完成的 Windows 补全: 本轮无新增内容需要翻译；现有 PowerShell 启动器、Windows 包装器与相关文档仍完整，未修改 Mac 或通用实现。
+- 未完成的补全: 无内容转译缺口、删除迁移或缺失 Windows 资产。
+- 阻塞原因: 无功能性阻塞；本机未安装 `pwsh` 或 `powershell`，未执行 Windows 原生语法解析或实机回归。
+- 是否达到“Mac / Windows 版本都齐全”: 是。就截至 `2026-08-24 22:00:59 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 内容覆盖均完整。
+
+## 2026-08-23 22:01:00 CST (+0800)
 
 - 处理时间:
-  - `2026-08-19 22:02:54 CST (+0800)`
+  - `2026-08-23 22:01:00 CST (+0800)`
 - 输入来源:
-  - 复核 `skill-change-monitor.md` 中自上一轮 Windows 转译记忆截止 `2026-08-18 22:01:45 CST (+0800)` 之后的条目，最新为 `2026-08-19 21:38:21 CST (+0800)`。
-  - 该时间窗内所有 monitor 批次均为 `新增 0，修改 0，删除 0`；没有新的 custom-skill 行为、删除项或 supporting automation 资产。
+  - 复核自动化上一轮运行时间 `2026-08-22T14:02:10.538Z` 之后追加的 `skill-change-monitor.md` 条目，最新为 `2026-08-23 21:50:22 CST (+0800)`。
+  - 该增量窗口内所有 monitor 批次均为 `新增 0，修改 0，删除 0`；未发现新的 custom-skill 行为、删除项、新增 `.py` 文件或 supporting automation 资产。
 - 已完成的 Windows 补全:
-  - 本轮明确记录为 no-op：没有新的 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源需要翻译。
-  - 保留 Mac 与通用实现不变，也未新增不必要的 Windows 分叉；现有 Windows 镜像继续覆盖已记录技能行为。
+  - 本轮明确为 no-op：没有任何内容需要翻译，因此没有新增或修改 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源。
+  - 静态复核现有 Windows 资产仍完整；未修改 Mac 或通用实现，也未新增不必要的 Windows 分叉。
 - 未完成的补全:
-  - 无。相对本轮基线没有待翻译的 Mac-only 行为或 Windows 专属资产缺口。
+  - 无内容转译缺口、删除迁移或缺失 Windows 资产。
 - 阻塞原因:
-  - 无功能性阻塞。
-  - 当前 macOS 主机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析或实机回归；这是验证环境限制，不是仓库内容缺失。静态复核与 `git diff --check` 已通过。
+  - 无功能性阻塞。当前 macOS 主机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析或实机回归；这是验证环境限制，不是仓库内容缺失。
 - 是否达到“Mac / Windows 版本都齐全”:
-  - 是。就截至 `2026-08-19 21:38:21 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 覆盖今日均完整；仅 Windows 原生运行验证仍需在 Windows/PowerShell 环境执行。
+  - 是。就截至 `2026-08-23 21:50:22 CST (+0800)` 的最新 monitor 内容而言，今天没有新增 Windows 缺口，Mac 与 Windows 覆盖均完整。
+
+## 2026-08-23 22:02:51 CST (+0800)
+
+- 处理时间:
+  - `2026-08-23 22:02:51 CST (+0800)`
+- 输入来源:
+  - 复核自动化消息提供的上一轮运行时间 `2026-08-22T14:01:10.531Z` 之后追加的全部 `skill-change-monitor.md` 条目，当前文件最新条目为 `2026-08-23 21:50:22 CST (+0800)`。
+  - 该增量窗口内的 monitor 批次均为 `新增 0，修改 0，删除 0`；未发现新的 custom-skill 行为、删除项、新增 `.py` 文件或 supporting automation 资产。
+- 已完成的 Windows 补全:
+  - 本轮为 no-op：没有新增或修改的 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源需要翻译。
+  - 静态复核现有 Windows 资产仍完整；未修改 Mac 或通用实现，也未新增不必要的 Windows 分叉。
+- 未完成的补全:
+  - 无内容转译缺口、删除迁移或缺失 Windows 资产。
+- 阻塞原因:
+  - 无功能性阻塞。当前 macOS 主机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析或实机回归；这是验证环境限制，不是仓库内容缺失。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。就截至 `2026-08-23 21:50:22 CST (+0800)` 的最新 monitor 内容而言，今天没有新增 Windows 缺口，Mac 与 Windows 内容覆盖均完整。
+
+## 2026-08-22 22:02:31 CST (+0800)
+
+- 处理时间:
+  - `2026-08-22 22:02:31 CST (+0800)`
+- 输入来源:
+  - 复核 `skill-change-monitor.md` 中自动化上一轮运行时间 `2026-08-21T14:00:34.817Z` 之后追加的条目，最新为 `2026-08-22 21:30:12 CST (+0800)`。
+  - 该增量窗口内的 monitor 批次全部为 `新增 0，修改 0，删除 0`；未发现新的 custom-skill 行为、删除项或 supporting automation 资产，也未发现新的 `.py` 文件。
+- 已完成的 Windows 补全:
+  - 本轮没有需要翻译的内容：没有新增或修改的 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源。
+  - 静态复核现有 Windows 资产仍完整，未修改 Mac 或通用实现，也未新增不必要的 Windows 分叉。
+- 未完成的补全:
+  - 无。最新 monitor 增量为 no-op，没有待翻译的 Mac-only 行为或 Windows 专属资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。当前 macOS 主机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析或实机回归。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。就截至 `2026-08-22 21:30:12 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 覆盖均完整。
 
 ## 2026-08-20 22:03:08 CST (+0800)
 
@@ -3816,15 +3894,49 @@
   - 复核自动化上一轮运行时间 `2026-08-19T14:01:33.855Z` 之后追加的 `skill-change-monitor.md` 条目，最新为 `2026-08-20 21:54:25 CST (+0800)`。
   - 该时间窗内所有 monitor 批次均为 `新增 0，修改 0，删除 0`；未发现新的 custom-skill 行为、删除项或 supporting automation 资产。
 - 已完成的 Windows 补全:
-  - 本轮明确记录为 no-op：没有新的 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源需要翻译。
-  - 静态复核现有 Windows 资产仍完整，包括 `automation/python-platform-takeover/scripts/*.ps1`、Codex Feishu bridge PowerShell 模板、`skill-center/scripts/sync-skills.ps1`、`scripts/dashboard-sync.ps1` 及相关 Windows 行为文档；未修改 Mac 或通用实现，也未新增不必要的 Windows 分叉。
+  - 本轮为 no-op：没有新的 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源需要翻译。
+  - 现有 Windows 镜像继续覆盖已记录技能行为，未修改 Mac 或通用实现，也未新增不必要的 Windows 分叉。
 - 未完成的补全:
   - 无。相对本轮基线没有待翻译的 Mac-only 行为或 Windows 专属资产缺口。
 - 阻塞原因:
-  - 无功能性阻塞。
-  - 当前 macOS 主机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析或实机回归；这是验证环境限制，不是仓库内容缺失。静态复核与 `git diff --check` 已通过。
+  - 无功能性阻塞。当前 macOS 主机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析或实机回归；这是验证环境限制，不是仓库内容缺失。
 - 是否达到“Mac / Windows 版本都齐全”:
-  - 是。就截至 `2026-08-20 21:54:25 CST (+0800)` 的最新 monitor 内容而言，今天没有新增 Windows 缺口，Mac 与 Windows 覆盖均完整；仅 Windows 原生运行验证仍需在 Windows/PowerShell 环境执行。
+  - 是。就截至 `2026-08-20 21:54:25 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 覆盖均完整。
+
+## 2026-08-21 22:10:40 CST (+0800)
+
+- 处理时间:
+  - `2026-08-21 22:10:40 CST`
+- 输入来源:
+  - 复核 `skill-change-monitor.md` 中自上次 Windows 状态截止 `2026-08-20 21:54:25 CST (+0800)` 之后追加的所有条目，最新为 `2026-08-21 21:12:10 CST (+0800)`。
+  - 该增量窗口内的 monitor 批次全部为 `新增 0，修改 0，删除 0`；没有新的 custom-skill 行为、删除项或 supporting automation 资产。
+- 已完成的 Windows 补全:
+  - 明确记录本轮为 no-op：没有新的 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源需要翻译。
+  - 静态复核现有 Windows 资产仍完整；未修改 Mac 或通用实现，也未新增不必要的 Windows 分叉。
+- 未完成的补全:
+  - 无。相对本轮输入窗口没有待翻译的 Mac-only 行为或 Windows 专属资产缺口。
+- 阻塞原因:
+  - 无功能性阻塞。当前 macOS 主机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析或实机回归；这是验证环境限制，不是仓库内容缺失。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。就截至 `2026-08-21 21:12:10 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 覆盖均完整。
+
+## 2026-08-19 22:02:08 CST (+0800)
+
+- 处理时间: `2026-08-19 22:02:08 CST (+0800)`
+- 输入来源: 复核 `skill-change-monitor.md` 中自上一条 Windows 状态记录截止 `2026-08-18 21:21:42 CST (+0800)` 之后追加的条目，最新为 `2026-08-19 21:38:21 CST (+0800)`；该增量区间所有 monitor 批次均为 `新增 0，修改 0，删除 0`。
+- 已完成的 Windows 补全: 本轮为 no-op，没有新的 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源需要翻译；未修改 Mac 或通用实现。
+- 未完成的补全: 无内容转译缺口；本轮没有待补齐的 Mac-only 行为或 Windows 专属资产。
+- 阻塞原因: 无功能性阻塞；当前 macOS 主机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析或实机回归。
+- 是否达到“Mac / Windows 版本都齐全”: 是。就截至 `2026-08-19 21:38:21 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 覆盖今日均完整。
+
+## 2026-08-19 22:02:54 CST (+0800)
+
+- 处理时间: `2026-08-19 22:02:54 CST (+0800)`
+- 输入来源: 复核 `skill-change-monitor.md` 中自上一轮 Windows 转译记忆截止 `2026-08-18 22:01:45 CST (+0800)` 之后的条目，最新为 `2026-08-19 21:38:21 CST (+0800)`；该时间窗所有 monitor 批次均为 `新增 0，修改 0，删除 0`。
+- 已完成的 Windows 补全: 本轮为 no-op，没有新的 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源需要翻译；保留 Mac 与通用实现不变。
+- 未完成的补全: 无内容转译缺口；没有待补齐的 Mac-only 行为或 Windows 专属资产缺口。
+- 阻塞原因: 无功能性阻塞；当前 macOS 主机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析或实机回归；静态复核与 `git diff --check` 已通过。
+- 是否达到“Mac / Windows 版本都齐全”: 是。就截至 `2026-08-19 21:38:21 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 覆盖今日均完整。
 
 ## 2026-08-21 22:10:40 CST (+0800)
 
@@ -3845,72 +3957,27 @@
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。就截至 `2026-08-21 21:12:10 CST (+0800)` 的最新 monitor 内容而言，今天没有新增 Windows 缺口，Mac 与 Windows 覆盖均完整；仅 Windows 原生运行验证仍需在 Windows/PowerShell 环境执行。
 
-## 2026-08-22 22:02:31 CST (+0800)
+## 2026-08-18 22:02:35 CST (+0800)
 
-- 处理时间:
-  - `2026-08-22 22:02:31 CST (+0800)`
+- 处理时间: `2026-08-18 22:02:35 CST (+0800)`
+- 输入来源: 复核截至 `2026-08-18 21:21:42 CST (+0800)` 的最新 `skill-change-monitor.md` 条目；本增量区间为 `新增 0，修改 0，删除 0`。
+- 已完成的 Windows 补全: 无新增转译项；保留 Mac 与通用实现不变，现有 Windows 镜像覆盖全部已记录技能行为。
+- 未完成的补全: 无内容转译缺口。
+- 阻塞原因: 无功能性阻塞；本机未安装 `pwsh` 或 `powershell`，未执行 Windows 原生回归。
+- 是否达到“Mac / Windows 版本都齐全”: 是。Mac 与 Windows 覆盖均完整。
+
+## 2026-08-25 22:03:26 CST (+0800)
+
+- 处理时间: `2026-08-25 22:03:26 CST (+0800)`
 - 输入来源:
-  - 复核自动化上一轮运行时间 `2026-08-21T14:00:34.817Z` 之后追加的 `skill-change-monitor.md` 条目，最新为 `2026-08-22 21:30:12 CST (+0800)`。
-  - 该增量窗口内的 monitor 批次全部为 `新增 0，修改 0，删除 0`；未发现新的 custom-skill 行为、删除项或 supporting automation 资产，也未发现新的 `.py` 文件。
+  - 复核自动化上一轮运行时间 `2026-08-24T14:01:23.045Z` 之后追加的 `skill-change-monitor.md` 条目，最新为 `2026-08-25 21:12:59 CST (+0800)`。
+  - 其中 canonical 批次 `2026-08-24 16:03:40 UTC (+0000)` 记录 `0 added / 66 modified / 0 deleted`；其余增量批次均为 `0 added / 0 modified / 0 deleted`。
 - 已完成的 Windows 补全:
-  - 明确记录本轮没有需要翻译的内容：没有新增或修改的 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源。
-  - 静态复核现有 Windows 资产仍完整，包括 `automation/python-platform-takeover/scripts/*.ps1`、`skill-center/scripts/sync-skills.ps1`、`scripts/dashboard-sync.ps1`、Codex Feishu bridge PowerShell 模板及对应文档；未修改 Mac 或通用实现，也未新增不必要的 Windows 分叉。
-  - 已执行 `git diff --check`，并确认本轮涉及的 Windows 启动器文件均存在。
+  - 本轮实际翻译的 custom-skill 行为为 `0`：对 canonical 批次列出的 66 个路径执行内容级复核，均与当前 `HEAD` 一致，未发现可确认的新行为差异，因此没有新增或修改实现文件。
+  - 复核现有 Windows 资产覆盖完整：Python 平台接管的 PowerShell 启动器、Hermes/飞书与社媒通知的 `.ps1`/`.cmd` 包装器、XYQ Nest 的 PowerShell 调用链、Feishu Bridge Windows 安装/打包脚本、Windows 快速安装/部署文档及 `C:/...`、`%TEMP%`、`%USERPROFILE%` 路径规则均已存在。
+  - `git diff --check` 通过，Bridge 模板 `bridge.js` 的 Node 语法检查通过；未修改 Mac 或通用实现。
 - 未完成的补全:
-  - 无。最新 monitor 增量为 no-op，没有待翻译的 Mac-only 行为或 Windows 专属资产缺口。
-- 阻塞原因:
-  - 无功能性阻塞。
-  - 当前 macOS 主机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析或实机回归；这是验证环境限制，不是仓库内容缺失。
+  - 无内容性 Windows 转译缺口、删除迁移或缺失仓库资产。
+  - 当前 macOS 主机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析和实机回归；这是验证环境限制，不是内容缺口。
 - 是否达到“Mac / Windows 版本都齐全”:
-  - 是。就截至 `2026-08-22 21:30:12 CST (+0800)` 的最新 monitor 内容而言，今天没有新增 Windows 缺口，Mac 与 Windows 覆盖均完整；仅 Windows 原生运行验证仍需在 Windows/PowerShell 环境执行。
-
-## 2026-08-23 22:01:00 CST (+0800)
-
-- 处理时间:
-  - `2026-08-23 22:01:00 CST (+0800)`
-- 输入来源:
-  - 复核自动化上一轮运行时间 `2026-08-22T14:02:10.538Z` 之后追加的 `skill-change-monitor.md` 条目，最新为 `2026-08-23 21:50:22 CST (+0800)`。
-  - 该增量窗口内所有 monitor 批次均为 `新增 0，修改 0，删除 0`；未发现新的 custom-skill 行为、删除项、新增 `.py` 文件或 supporting automation 资产。
-- 已完成的 Windows 补全:
-  - 本轮明确为 no-op：没有任何内容需要翻译，因此没有新增或修改 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源。
-  - 静态复核现有 Windows 资产仍完整，包括 `automation/python-platform-takeover/scripts/*.ps1`、`skill-center/scripts/sync-skills.ps1`、`scripts/dashboard-sync.ps1`、Codex Feishu bridge PowerShell 模板及相关 Windows 行为文档；未修改 Mac 或通用实现，也未新增不必要的 Windows 分叉。
-  - 已确认所需 Windows 启动器/模板文件存在，并执行 `git diff --check`。
-- 未完成的补全:
-  - 无内容转译缺口、删除迁移或缺失 Windows 资产。
-  - 当前 macOS 主机未安装 `pwsh` 或 `powershell`，因此 Windows 原生 PowerShell 语法解析和实机回归仍待在 Windows/PowerShell 环境执行；这是验证环境限制，不是仓库内容缺失。
-- 是否达到“Mac / Windows 版本都齐全”:
-  - 是。就截至 `2026-08-23 21:50:22 CST (+0800)` 的最新 monitor 内容而言，今天没有新增 Windows 缺口，Mac 与 Windows 覆盖均完整；仅 Windows 原生运行验证仍待外部 Windows 环境执行。
-
-## 2026-08-23 22:02:51 CST (+0800)
-
-- 处理时间:
-  - `2026-08-23 22:02:51 CST (+0800)`
-- 输入来源:
-  - 复核自动化消息提供的上一轮运行时间 `2026-08-22T14:01:10.531Z` 之后追加的全部 `skill-change-monitor.md` 条目，当前文件最新条目为 `2026-08-23 21:50:22 CST (+0800)`。
-  - 该增量窗口内的 monitor 批次均为 `新增 0，修改 0，删除 0`；未发现新的 custom-skill 行为、删除项、新增 `.py` 文件或 supporting automation 资产。
-- 已完成的 Windows 补全:
-  - 本轮为 no-op：没有新增或修改的 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源需要翻译。
-  - 静态复核现有 Windows 资产仍完整，包括 `automation/python-platform-takeover/scripts/*.ps1`、`skill-center/scripts/sync-skills.ps1`、`scripts/dashboard-sync.ps1`、Codex Feishu bridge PowerShell 模板及相关 Windows 行为文档；未修改 Mac 或通用实现，也未新增不必要的 Windows 分叉。
-  - 已确认所需 Windows 启动器/模板文件存在，并完成 `git diff --check`；当前 macOS 主机未安装 `pwsh` 或 `powershell`。
-- 未完成的补全:
-  - 无内容转译缺口、删除迁移或缺失 Windows 资产。
-  - Windows 原生 PowerShell 语法解析和实机回归仍待外部 Windows/PowerShell 环境执行；这是验证环境限制，不是仓库内容缺失。
-- 是否达到“Mac / Windows 版本都齐全”:
-  - 是。就截至 `2026-08-23 21:50:22 CST (+0800)` 的最新 monitor 内容而言，今天没有新增 Windows 缺口，Mac 与 Windows 内容覆盖均完整；仅 Windows 原生运行验证仍待外部环境执行。
-
-## 2026-08-24 22:02:30 CST (+0800)
-
-- 处理时间:
-  - `2026-08-24 22:02:30 CST (+0800)`
-- 输入来源:
-  - 复核自动化上一轮运行时间 `2026-08-23T14:01:46.404Z` 之后追加的 `skill-change-monitor.md` 条目，最新为 `2026-08-24 22:00:59 CST (+0800)`。
-  - 该增量窗口内的 monitor 批次全部为 `新增 0，修改 0，删除 0`；未发现新的 custom-skill 行为、删除项、新增 `.py` 文件或 supporting automation 资产。
-- 已完成的 Windows 补全:
-  - 本轮为 no-op：没有任何内容需要翻译，因此没有新增或修改 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源。
-  - 静态复核现有 Windows 启动器与包装器仍存在，包括 `automation/python-platform-takeover/scripts/*.ps1`、`skill-center/scripts/sync-skills.ps1` 和 `scripts/dashboard-sync.ps1`；未修改 Mac 或通用实现，也未新增不必要的 Windows 分叉。
-  - 已完成 `git diff --check`；当前 macOS 主机未安装 `pwsh` 或 `powershell`。
-- 未完成的补全:
-  - 无内容转译缺口、删除迁移或缺失 Windows 资产。
-  - Windows 原生 PowerShell 语法解析和实机回归仍待外部 Windows/PowerShell 环境执行；这是验证环境限制，不是仓库内容缺失。
-- 是否达到“Mac / Windows 版本都齐全”:
-  - 是。就截至 `2026-08-24 22:00:59 CST (+0800)` 的最新 monitor 内容而言，今天没有新增 Windows 缺口，Mac 与 Windows 内容覆盖均完整；仅 Windows 原生运行验证仍待外部环境执行。
+  - 是。就截至 `2026-08-25 21:12:59 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 内容覆盖均完整；仅 Windows 原生运行验证仍待外部 Windows/PowerShell 环境执行。
