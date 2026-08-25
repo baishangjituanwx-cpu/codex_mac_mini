@@ -41,6 +41,79 @@
   - `codex/default-python-sync` 已提交并推送：`55cdc95 Sync August 14 Huice supplier return-address skill mirror`；台账提交为 `128f5ea Record August 14 GitHub sync execution`。
   - `codex/windows-version-20260411` 已提交并推送：`32c21b3 Sync August 14 Windows mirror coverage`；本台账记录提交已完成并推送：`23a6d21 Record August 14 GitHub sync execution`。
 
+## 2026-08-24 16:03:40 UTC (+0000)
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/wechat_channels.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platforms.example.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/browser.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/cli.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/content_package.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/douyin.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/xiaohongshu.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills-manifest.txt`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/references/review-scorecard.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/report-template.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.cmd`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.sh`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/kuaishou-ops/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/platform-cover-ops/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/cover-execution.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/cover-package.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/customer-trial-intake-and-production-sop.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/workflows.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/render_cover_package.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/references/platform-notes.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/scripts/send_feishu_notify.cmd`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/scripts/send_feishu_notify.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/references/platform-notes.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/references/platform-notes.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/prompt-template.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/source-video-playbook.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/download_results.cmd`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/download_results.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/get_thread.cmd`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/get_thread.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/invoke_xyq_script.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/submit_run.cmd`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/submit_run.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/upload_file.cmd`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/upload_file.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/.bridge.env.example`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.cmd`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-status.cmd`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-stop.cmd`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/src/bridge.js`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART-WINDOWS.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/deployment-windows.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/deployment.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/user-guide.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/install_bridge_template_windows.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/package_skill_bundle_windows.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/diagnosis-and-decisions.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/platform-metrics.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/report-template.md`
+- 同步提示:
+  - `skill-monitor` 以基线 `2026-08-24T16:00:23.628Z` 复核到一个新的 custom skill / supporting automation 非零变更批次，内容为 `0 added / 66 modified / 0 deleted`。
+  - 这批变化集中刷新了 `python-platform-takeover` 发布自动化、多个 `skill-center` 技能镜像与脚本，以及 `codex-feishu-bridge-skill`、`multi-platform-content-review-skill` 的模板和参考资料。
+  - 本轮没有新的 `.py` 文件以新路径进入同步范围；虽然有 `8` 个 `.py` 文件被修改，但都属于已存在路径。后续 GitHub 同步应带上上述 66 个路径及本轮监控记录。
+
 ## 2026-08-13 22:36:31 CST (+0800)
 - 新发现的待同步批次:
   - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-supplier-return-address/SKILL.md`
@@ -6966,3 +7039,32 @@
   - 没有新的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment implementation 文件。
   - `.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件未提交；它们是本地监控运行产物，不属于 GitHub 同步内容。
   - 没有新的 Windows bridge 或 deployment implementation 文件。
+
+## 2026-08-24 16:03:40 UTC (+0000) Canonical Sync Note
+- 新发现的待同步批次:
+  - `python-platform-takeover` 自动化目录中的 `9` 个 supporting automation 文件
+  - `skill-center/skills-manifest.txt`
+  - `skill-center` 下 `48` 个 skill mirror / reference / script 文件
+  - `skills/codex-feishu-bridge-skill/**` 下 `12` 个模板、脚本与参考文件
+  - `skills/multi-platform-content-review-skill/**` 下 `4` 个技能与参考文件
+- 同步提示:
+  - `skill-monitor` 以基线 `2026-08-24T16:00:23.628Z` 确认本轮应记为 `0 added / 66 modified / 0 deleted` 的 canonical 非零批次。
+  - 本轮没有新的 `.py` 路径；仅有既有 Python 文件被触发。后续 GitHub 同步应以这 66 个路径和本次 canonical monitor 记录为准。
+## 2026-08-25 05:11:58 CST (+0800) Skill Monitor Batch Note
+- 新发现待后续核验的技能变更批次：`skills/`、`skill-center/` 与 `automation/python-platform-takeover/` 共 66 个文件在本地工作树于 `2026-08-25 00:03:40 CST` 被重建/刷新时间戳。
+- 当前 Git 工作树与 HEAD 内容一致，未见语义 diff；其中 8 个既有 `.py` 文件被刷新，暂无新的 Python 内容文件。后续 GitHub 同步前应确认该批次是否仅为工作树重建，避免重复提交。
+
+## 2026-08-26 00:02:38 CST (+0800)
+- Windows 转译门禁:
+  - 通过。`windows-translation-status.md` 最新 dated entry 为 `2026-08-25 22:03:26 CST (+0800)`，明确确认 Mac / Windows 内容覆盖均完整。
+- 分支处理:
+  - `codex/default-python-sync`: 同步本轮已有的 `skill-change-monitor.md`、`windows-translation-status.md` 与共享 GitHub 同步台账；未发现新的 generic Python takeover、Mac-compatible Python 或共享实现文件。
+  - `codex/windows-version-20260411`: 同步本轮 Windows 转译状态台账与共享 GitHub 同步台账；未发现新的 Windows bridge、deployment 或其他 Windows-specific implementation 文件。
+- 提交信息:
+  - `codex/default-python-sync`: `Sync August 25 automation ledgers`。
+  - `codex/windows-version-20260411`: `Record August 26 GitHub sync execution`。
+- 推送与验证:
+  - 两个目标分支均将推送，并以 `git ls-remote` 验证远端 tip。
+- 跳过项:
+  - `.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件未提交；它们是本地监控运行产物，不属于 GitHub 同步内容。
+  - 没有新的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment implementation 文件。
