@@ -7068,3 +7068,7 @@
 - 跳过项:
   - `.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件未提交；它们是本地监控运行产物，不属于 GitHub 同步内容。
   - 没有新的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment implementation 文件。
+
+## 2026-08-25 23:24:06 CST (+0800) Skill Monitor Batch Note
+- 新发现待后续核验的技能变更批次：`skills/`、`skill-center/` 与 `automation/python-platform-takeover/` 共 `400` 个 in-scope 文件在 `2026-08-25 23:24 CST` 左右被刷新/重建时间戳。
+- 当前 Git 工作树对 `skills`、`skill-center` 与 `automation` 仍与 `HEAD` 无内容 diff；后续 GitHub 同步前应先确认该批次是否仅为源树重建或触摸操作，避免重复提交。
