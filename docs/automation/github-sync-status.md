@@ -7107,3 +7107,16 @@
 - 跳过项：
   - `.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交。
   - 没有可单独同步的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment implementation 文件。
+
+## 2026-08-28 00:03:00 CST (+0800)
+
+- Windows 转译门禁：通过。最新 `windows-translation-status.md` dated entry 为 `2026-08-27 22:03:08 CST (+0800)`，明确记录 Mac / Windows 内容覆盖均完整。
+- 分支处理：
+  - `codex/default-python-sync`: 同步自上一轮执行后新增的通用 monitor 与 Windows 状态台账记录；未发现新的 generic Python takeover 或 Mac-compatible Python 实现文件。
+  - `codex/windows-version-20260411`: 同步最新 Windows 状态台账记录；未发现新的 Windows bridge、deployment 或其他 Windows-specific implementation 文件。
+- 提交信息：
+  - `codex/default-python-sync`: `Sync August 27 automation ledgers`。
+  - `codex/windows-version-20260411`: `Sync August 27 Windows translation status`。
+- 跳过项：
+  - 所有 `.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均未提交；它们是本地监控运行产物。
+  - 无可单独同步的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment implementation 文件。
