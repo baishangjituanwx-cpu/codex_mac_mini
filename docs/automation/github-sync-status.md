@@ -7119,4 +7119,12 @@
   - `codex/windows-version-20260411`: `Sync August 27 Windows translation status`。
 - 跳过项：
   - 所有 `.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均未提交；它们是本地监控运行产物。
-  - 无可单独同步的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment implementation 文件。
+- 无可单独同步的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment implementation 文件。
+
+## 2026-08-29 00:01:55 CST (+0800)
+- Windows 转译门禁：通过。最新 `windows-translation-status.md` dated entry 为 `2026-08-28 22:03:02 CST (+0800)`，明确记录 Mac / Windows 内容覆盖均完整。
+- 分支处理：
+  - `codex/default-python-sync`: 同步最新通用 `skill-change-monitor.md` 与共享执行台账；未发现新的 generic Python takeover、Mac-compatible Python 或共享实现文件。
+  - `codex/windows-version-20260411`: 同步最新 Windows 转译状态台账与共享执行台账；未发现新的 Windows bridge、deployment 或其他 Windows-specific implementation 文件。
+- 提交与推送：将分别创建清晰提交并推送两个目标分支，完成后用远端 tip 校验。
+- 跳过项：所有 `.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；没有可单独同步的实现代码。
