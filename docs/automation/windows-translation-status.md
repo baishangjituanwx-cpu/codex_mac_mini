@@ -4066,3 +4066,44 @@
   - 无功能性阻塞。当前 macOS 主机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析和实机回归；这是验证环境限制，不是仓库内容缺口。`git diff --check` 已通过。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。就截至 `2026-08-28 21:20:41 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 内容覆盖均完整；仅 Windows 原生运行验证仍需在 Windows/PowerShell 环境执行。
+
+## 2026-08-29 22:02:50 CST (+0800)
+
+- 处理时间:
+  - `2026-08-29 22:02:50 CST (+0800)` / `2026-08-29 14:02:50 UTC (+0000)`
+- 输入来源:
+  - 复核自动化上一轮运行时间 `2026-08-28T14:01:02.624Z` 之后追加的全部 `skill-change-monitor.md` 条目，最新条目为 `2026-08-29 21:40:06 CST (+0800)`。
+  - 本增量窗口内所有相关 monitor 批次均为 `新增 0 / 修改 0 / 删除 0`；未出现新的 custom-skill 行为、删除项、新增 `.py` 文件或 supporting automation 资产。
+- 已完成的 Windows 补全:
+  - 本轮实际翻译内容为 `0`：没有新增或修改 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源。
+  - 静态复核现有 Windows 资产仍完整，包括 Python 平台接管启动器、社媒/Chrome CDP 启动器、Feishu Bridge `.ps1`/`.cmd` 模板、`skill-center/scripts/sync-skills.ps1`、视频号 Task Scheduler/PowerShell 入口，以及 `C:/...`、`%TEMP%`、`%USERPROFILE%` 路径和 Windows 快捷键说明；未修改 Mac 或通用实现，也未新增不必要的 Windows 分叉。
+  - `node --check skills/codex-feishu-bridge-skill/assets/template/src/bridge.js` 通过；本状态台账的 `git diff --check` 通过。
+- 未完成的补全:
+  - 无内容性 Windows 转译缺口、删除迁移或缺失仓库资产。
+- 阻塞原因:
+  - 无功能性阻塞。当前 macOS 主机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析和实机回归；这是验证环境限制，不是仓库内容缺口。
+  - 工作区范围的 `git diff --check` 仍会命中既有 `skill-change-monitor.md` 修改中的尾随空格；该监控台账属于并行自动化写入，本轮未改动其内容。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。就截至 `2026-08-29 21:40:06 CST (+0800)` 的最新 monitor 内容而言，今天 Mac 与 Windows 内容覆盖均完整；仅 Windows 原生运行验证仍需在 Windows/PowerShell 环境执行。
+
+## 2026-08-29 22:06:25 CST (+0800)
+
+- 处理时间:
+  - `2026-08-29 22:06:25 CST (+0800)`
+- 输入来源:
+  - 复核自动化消息提供的上一轮截止点 `2026-08-28T14:01:02.623Z` 之后的 `skill-change-monitor.md` 增量，覆盖到最新记录 `2026-08-29 21:42:21 CST (+0800)`。
+  - 增量中唯一需要内容级复核的非零批次是 `2026-08-29 00:24:18 CST (+0800)`：`23 added / 43 modified / 357 deleted`；其后各批次均为 `0 added / 0 modified / 0 deleted`。
+- 已完成的 Windows 补全:
+  - `hermes-feishu-operator`：确认新增的 `send-hermes-feishu-prompt.ps1` / `.cmd` 已提供 Windows 等价入口，包含 Feishu/Lark 前台校验、`pwsh -STA`、`Ctrl+A`/`Ctrl+V` 清空粘贴、视觉确认旁路，以及 `C:/Users/...` 路径示例。
+  - `social-publish-automation`：确认 `send_feishu_notify.ps1` / `.cmd` 已覆盖 Windows 通知包装，优先解析仓库内 `lark-cli.cmd` / `lark-cli.exe`，并保留 profile、chat 与幂等键参数。
+  - `xyq-nest-skill`：确认 `download_results`、`get_thread`、`submit_run`、`upload_file` 的 `.ps1` / `.cmd` 包装器及共享 Python invoker 已存在，使用 Windows 路径解析、`.venv\\Scripts\\python.exe`、`py -3` / `python` 回退和退出码透传。
+  - `codex-feishu-bridge-skill`：确认 Windows quickstart/deployment 文档、安装器、打包器、模板启动/状态/停止 `.ps1` / `.cmd` 入口已存在；最新 `.bridge.env`、`LARK_CLI_PROFILE` 与 `CODEX_BRIDGE_PROGRESS_THREAD_IDS` 共享运行时行为可由 Windows PowerShell 直接复用。
+  - `automation/python-platform-takeover` 及其他共享技能修改：确认浏览器页面复用、简化 receipt/发布流程、WeChat Channels 新入口、Xiaohongshu/Douyin 页面匹配、Seedance/审查规则收缩等行为继续由共享 Python/CLI 实现承载；现有 `quickstart-windows.ps1`、`start-chrome-cdp.ps1`、`social-publisher.ps1` 与 Windows 路径/快捷键说明无需新增分叉。
+  - 非零批次中的删除项未删除现有 Windows 入口；`platform-cover-ops`、`playwright`、`xiaoyunque-source-video` 等收缩为共享或更宽泛规则的修改也没有产生新的 Mac-only 行为。未修改 Mac 或通用实现。
+- 未完成的补全:
+  - 无内容性 Windows 转译缺口、删除迁移或缺失仓库资产。
+- 阻塞原因:
+  - 无功能性阻塞。当前 macOS 主机未安装 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析和实机回归；这是验证环境限制，不是仓库内容缺口。
+  - 静态复核确认新增 Windows 文件均存在；`node --check` 可用于桥接运行时验证，Windows 原生验证仍需在 Windows/PowerShell 环境完成。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。就截至 `2026-08-29 21:42:21 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 内容覆盖均完整；仅 Windows 原生运行验证仍待外部 Windows/PowerShell 环境执行。
