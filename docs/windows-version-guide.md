@@ -57,6 +57,15 @@
 
 这意味着 `快手 v0.1` 不再只适配 Mac 键盘逻辑。
 
+### D. Obsidian 知识库只读回读
+
+技能镜像位置:
+
+- `skill-center/skills/obsidian-knowledge-readback/`
+- `skill-center/skills/obsidian-knowledge-readback/scripts/obsidian-preflight.ps1`
+
+Windows 使用内置 OpenSSH Client 和 `%USERPROFILE%\\.ssh\\id_ed25519_obsidian_bridge`，通过 PowerShell 入口回读远端 Linux Vault。Vault 的 `/vol1/1000/Obsidian/obsidian-vault` 是远端路径，不应替换成 Windows 本地路径；入口仍只允许 manifest、关键词检索和受限 Markdown 读取。
+
 ## 3. Windows 上推荐的目录
 
 建议:

@@ -30,6 +30,7 @@ notion-knowledge-capture
 notion-meeting-intelligence
 notion-research-documentation
 notion-spec-to-implementation
+obsidian-knowledge-readback
 pdf
 platform-cover-ops
 platform-ops-hub
