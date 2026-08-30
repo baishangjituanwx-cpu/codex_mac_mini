@@ -7553,3 +7553,11 @@
 - `skill-monitor` 发现新的 custom skill / supporting automation 变更批次：`5 added / 2 modified / 0 deleted`。
 - 变更集中在 `skill-center`：新增并登记 `obsidian-knowledge-readback` 镜像 skill（SKILL.md、agents/openai.yaml、Windows 说明及 macOS/Linux、Windows 预检脚本），并更新 README 与技能清单。
 - 后续 GitHub 同步应处理上述 7 个路径，并连同本轮 `docs/automation/skill-change-monitor.md` 与本条状态记录一起评估；本轮没有新的 `.py` 文件。
+
+## 2026-08-31 00:03:35 CST (+0800) GitHub Sync Execution
+- 前置判断：`windows-translation-status.md` 最新 dated entry 为 `2026-08-30 22:11:17 CST`，明确确认 Mac / Windows 内容覆盖完整，允许同步；Windows 原生 PowerShell 回归仍需外部 Windows 环境。
+- 同步内容：处理 `obsidian-knowledge-readback` skill-center 镜像的 7 个路径及相关 Windows 指南/完成状态；没有新的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment `.py` 实现文件。
+- 分支与提交：
+  - `codex/default-python-sync`：将接收共享监控台账、待同步提示及本次执行记录。
+  - `codex/windows-version-20260411`：已提交 `dcd8a4c Sync August 30 skill monitor ledger`、`987ecf2 Record pending Obsidian skill mirror sync`、`8c724cf Sync Obsidian knowledge readback Windows mirror`；本条记录待随共享执行记录提交。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；无新的 Python 实现可按 takeover 分支同步。
