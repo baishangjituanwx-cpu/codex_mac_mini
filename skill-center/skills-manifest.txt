@@ -21,6 +21,7 @@ figma-use
 frontend-skill
 gh-address-comments
 gh-fix-ci
+hermes-feishu-operator
 jupyter-notebook
 kuaishou-ops
 linear
@@ -29,6 +30,7 @@ notion-knowledge-capture
 notion-meeting-intelligence
 notion-research-documentation
 notion-spec-to-implementation
+obsidian-knowledge-readback
 pdf
 platform-cover-ops
 platform-ops-hub
@@ -58,7 +60,6 @@ wechat-video-channel-share-desktop-ops
 weibo-ops
 winui-app
 xiaohongshu-ops
-xyq-nest-skill
 xiaoyunque-source-video
 yeet
 zhihu-ops
