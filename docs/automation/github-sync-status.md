@@ -12,6 +12,15 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-08-30 18:53:59 CST (+0800)
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/obsidian-knowledge-readback/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/obsidian-knowledge-readback/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/obsidian-knowledge-readback/scripts/obsidian-preflight.sh`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以 canonical baseline `2026-08-30 18:03:30 CST (+0800)` 发现新的 custom skill 非零变更批次，内容为 `0 added / 3 modified / 0 deleted`。
+  - 本批次刷新了 `obsidian-knowledge-readback` 的技能约束、agent 元数据和只读预检脚本；没有新的 `.py` 文件。后续 GitHub 同步应评估上述 3 个本地路径，并连同本轮 `skill-change-monitor.md` 记录处理。
+
 ## 2026-08-14 00:04:16 CST (+0800)
 - 处理时间:
   - `2026-08-14 00:04:16 CST (+0800)`
@@ -7539,3 +7548,8 @@
   - `codex/default-python-sync`：将提交 `Record August 30 GitHub sync execution`，包含共享同步台账与最新 `skill-change-monitor.md`。
   - `codex/windows-version-20260411`：将提交 `Sync August 29 Windows translation status and August 30 execution`，包含 Windows 转译状态台账与共享同步台账。
 - 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；没有可单独同步的实现代码。
+
+## 2026-08-30 22:55:24 CST (+0800) Skill Change Monitor Pending Sync
+- `skill-monitor` 发现新的 custom skill / supporting automation 变更批次：`5 added / 2 modified / 0 deleted`。
+- 变更集中在 `skill-center`：新增并登记 `obsidian-knowledge-readback` 镜像 skill（SKILL.md、agents/openai.yaml、Windows 说明及 macOS/Linux、Windows 预检脚本），并更新 README 与技能清单。
+- 后续 GitHub 同步应处理上述 7 个路径，并连同本轮 `docs/automation/skill-change-monitor.md` 与本条状态记录一起评估；本轮没有新的 `.py` 文件。
