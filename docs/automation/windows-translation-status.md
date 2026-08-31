@@ -4146,3 +4146,21 @@
   - `bash -n skill-center/skills/obsidian-knowledge-readback/scripts/obsidian-preflight.sh`、路径/清单检查和 scoped `git diff --check` 均通过。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。就截至 `2026-08-30 21:55:02 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 内容覆盖均完整；仅 Windows 原生 PowerShell 与实机 SSH 回归仍待外部 Windows 环境执行。
+## 2026-08-31 22:05:30 CST (+0800)
+
+- 处理时间:
+  - `2026-08-31 22:05:30 CST (+0800)`
+- 输入来源:
+  - 复核自动化上一轮运行时间 `2026-08-30T14:01:43.463Z` 之后的 `skill-change-monitor.md` 增量；其中新的非零批次为 `2026-08-30 22:55:24 CST (+0800)` 和其在 `2026-08-31 00:08:35 CST (+0800)` 的重复确认，均为 `新增 5 / 修改 2 / 删除 0`，最新后续 no-op 记录为 `2026-08-31 21:24:21 CST (+0800)`。
+- 已完成的 Windows 补全:
+  - `obsidian-knowledge-readback` 已纳入 `skill-center` 镜像，并更新 `skill-center/README.md` 的技能数量/目录示例及 `skill-center/skills-manifest.txt` 索引；现有 Mac/Linux Bash 入口保持不变。
+  - 新增 Windows PowerShell 等价入口 `skill-center/skills/obsidian-knowledge-readback/scripts/obsidian-preflight.ps1`，支持 `-Manifest`、`-Query`、`-Read`，使用 Windows `ssh.exe` 传递远端 Bash 逻辑、`%USERPROFILE%\.ssh\id_ed25519_obsidian_bridge` 本地密钥路径，并保留远端 Linux Vault 路径、相对 Markdown 路径限制、隐藏目录/路径穿越拦截和 200KB 读取上限。
+  - 更新跨平台 `skill-center/skills/obsidian-knowledge-readback/SKILL.md`，补充 macOS/Linux 与 Windows 的调用方式和本地密钥路径差异；新增 `references/windows.md`，记录 OpenSSH 前置条件、PowerShell 命令和安全边界。
+  - `agents/openai.yaml` 与 Bash 脚本已一并镜像；没有键盘快捷键差异，也没有需要额外 `.cmd` 包装器的 GUI/命令行为。Mac、通用实现及 Windows 分支现有资产均保留。
+- 未完成的补全:
+  - 无内容性 Windows 转译缺口、删除迁移或缺失仓库资产；当前仓库与本地 `codex/windows-version-20260411` 分支均包含上述 Windows 入口和说明。
+- 阻塞原因:
+  - 当前 macOS 主机没有 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析、OpenSSH 实机连接和端到端回归；这是验证环境限制，不是仓库内容缺口。
+  - `bash -n`、Windows 资产存在性、镜像索引和相关分支路径复核已通过。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。就截至 `2026-08-31 21:24:21 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 内容覆盖均完整；仅 Windows 原生 PowerShell/OpenSSH 回归仍待 Windows 环境执行。
