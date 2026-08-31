@@ -12,6 +12,20 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-08-31 01:10:09 CST (+0800)
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/README.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills-manifest.txt`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-readback/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-readback/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-readback/references/windows.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-readback/scripts/obsidian-preflight.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-readback/scripts/obsidian-preflight.sh`
+- 同步提示:
+  - `skill-monitor` 以基线 `2026-08-31 00:06:44 CST (+0800)` 发现新的 custom skill 镜像批次，内容为 `5 added / 2 modified / 0 deleted`。
+  - 这批变化把 `obsidian-knowledge-readback` 正式镜像进仓库，并同步刷新 `skill-center` 的 `README` 与 `skills-manifest.txt`。
+  - 本轮没有新的 `.py` 文件。后续 GitHub 同步应至少带上上述 7 个路径，以及本轮 `skill-change-monitor.md` 记录。
+
 ## 2026-08-30 18:53:59 CST (+0800)
 - 新发现的待同步批次:
   - `/Users/baishangjituan/.codex/skills/obsidian-knowledge-readback/SKILL.md`
@@ -7549,6 +7563,20 @@
   - `codex/windows-version-20260411`：将提交 `Sync August 29 Windows translation status and August 30 execution`，包含 Windows 转译状态台账与共享同步台账。
 - 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；没有可单独同步的实现代码。
 
+## 2026-08-31 00:08:35 CST (+0800)
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/README.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills-manifest.txt`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-readback/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-readback/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-readback/references/windows.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-readback/scripts/obsidian-preflight.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-readback/scripts/obsidian-preflight.sh`
+- 同步提示:
+  - `skill-monitor` 以 canonical baseline `2026-08-30 23:56:52 CST (+0800)` 复核到一个新的 custom skill 非零变更批次，内容为 `5 added / 2 modified / 0 deleted`。
+  - 这批变化把 `obsidian-knowledge-readback` 镜像同步进仓库，并刷新了 `skill-center` 的 README/manifest 索引。
+  - 本轮没有新的 `.py` 文件以新路径进入同步范围；后续 GitHub 同步应至少带上上述 7 个路径，以及 [/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md](/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/skill-change-monitor.md) 在 `2026-08-31 00:08:35 CST (+0800)` 的对应记录。
+
 ## 2026-08-30 22:55:24 CST (+0800) Skill Change Monitor Pending Sync
 - `skill-monitor` 发现新的 custom skill / supporting automation 变更批次：`5 added / 2 modified / 0 deleted`。
 - 变更集中在 `skill-center`：新增并登记 `obsidian-knowledge-readback` 镜像 skill（SKILL.md、agents/openai.yaml、Windows 说明及 macOS/Linux、Windows 预检脚本），并更新 README 与技能清单。
@@ -7560,4 +7588,12 @@
 - 分支与提交：
   - `codex/default-python-sync`：将接收共享监控台账、待同步提示及本次执行记录。
   - `codex/windows-version-20260411`：已提交 `dcd8a4c Sync August 30 skill monitor ledger`、`987ecf2 Record pending Obsidian skill mirror sync`、`8c724cf Sync Obsidian knowledge readback Windows mirror`；本条记录待随共享执行记录提交。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；无新的 Python 实现可按 takeover 分支同步。
+
+## 2026-09-01 00:01:39 CST (+0800) GitHub Sync Execution
+- 前置判断：`windows-translation-status.md` 最新 dated entry 为 `2026-08-31 22:05:30 CST (+0800)`，明确确认 Mac / Windows 内容覆盖完整，允许同步；Windows 原生 PowerShell/OpenSSH 回归仍需外部 Windows 环境。
+- 检查结果：同步 2026-08-31 的监控与状态台账，以及已完成的 `obsidian-knowledge-readback` 镜像批次；没有新的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment 实现文件。
+- 分支与提交：
+  - `codex/default-python-sync`：提交并推送共享 `skill-change-monitor.md`、`windows-translation-status.md` 与执行台账。
+  - `codex/windows-version-20260411`：提交并推送 Windows 状态台账与本次执行记录。
 - 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；无新的 Python 实现可按 takeover 分支同步。
