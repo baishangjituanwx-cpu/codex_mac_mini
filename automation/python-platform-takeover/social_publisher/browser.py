@@ -1,14 +1,18 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Iterable
+from typing import Any, Iterable, TYPE_CHECKING
 
-from playwright.sync_api import Browser, Page, Playwright, sync_playwright
+if TYPE_CHECKING:
+    from playwright.sync_api import Browser, Page, Playwright
+else:
+    Browser = Page = Playwright = Any
 
 
 @dataclass
 class BrowserSessionConfig:
     cdp_url: str | None = None
+    close_browser_on_exit: bool = False
 
 
 class BrowserController:
@@ -20,12 +24,14 @@ class BrowserController:
     def __enter__(self) -> "BrowserController":
         if not self.config.cdp_url:
             raise RuntimeError("BROWSER_CDP_URL is required for existing-tab takeover.")
+        from playwright.sync_api import sync_playwright
+
         self._playwright = sync_playwright().start()
         self._browser = self._playwright.chromium.connect_over_cdp(self.config.cdp_url)
         return self
 
     def __exit__(self, exc_type, exc, tb) -> None:
-        if self._browser is not None:
+        if self._browser is not None and self.config.close_browser_on_exit:
             self._browser.close()
         if self._playwright is not None:
             self._playwright.stop()
@@ -40,9 +46,59 @@ class BrowserController:
     def find_pages_by_url(self, text: str) -> list[Page]:
         return [page for page in self.pages() if text in page.url]
 
+    def primary_page(self) -> Page:
+        pages = self.pages()
+        if pages:
+            return pages[0]
+        browser = self._require_browser()
+        contexts = browser.contexts
+        if contexts:
+            return contexts[0].new_page()
+        context = browser.new_context()
+        return context.new_page()
+
+    def open_or_activate_page(self, url: str, reuse_contains: str | None = None) -> Page:
+        if reuse_contains:
+            matches = self.find_pages_by_url(reuse_contains)
+            if matches:
+                page = matches[0]
+                page.bring_to_front()
+                page.goto(url, wait_until="domcontentloaded")
+                return page
+        page = self.primary_page()
+        page.bring_to_front()
+        page.goto(url, wait_until="domcontentloaded")
+        return page
+
     def describe_pages(self) -> Iterable[tuple[str, str]]:
         for page in self.pages():
             yield page.title(), page.url
+
+    def open_or_activate_page(
+        self,
+        url: str,
+        *,
+        reuse_contains: str | None = None,
+        force_new: bool = False,
+    ) -> Page:
+        if not force_new:
+            for page in self.pages():
+                if reuse_contains and reuse_contains in page.url:
+                    page.bring_to_front()
+                    return page
+                if page.url == url:
+                    page.bring_to_front()
+                    return page
+
+        browser = self._require_browser()
+        if browser.contexts:
+            context = browser.contexts[0]
+        else:
+            context = browser.new_context()
+        page = context.new_page()
+        page.goto(url, wait_until="domcontentloaded")
+        page.bring_to_front()
+        return page
 
     def _require_browser(self) -> Browser:
         if self._browser is None:

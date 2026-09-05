@@ -1,6 +1,15 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+import platform as platform_runtime
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from social_publisher.browser import BrowserController
+    from social_publisher.content_package import AssetPaths, PlatformContent
+    from playwright.sync_api import Locator, Page
+else:
+    Page = object
 
 
 @dataclass(frozen=True)
@@ -14,6 +23,25 @@ class PlatformMetadata:
     success_signals: list[str]
     takeover_allowed: list[str]
     takeover_stop_conditions: list[str]
+
+
+@dataclass
+class PublishResult:
+    ok: bool
+    status: str
+    message: str
+    current_url: str | None = None
+    management_url: str | None = None
+    notes: list[str] = field(default_factory=list)
+
+
+@dataclass
+class TakeoverCandidate:
+    page: "Page"
+    score: int = 0
+    matched_fields: list[str] = field(default_factory=list)
+    stop_reasons: list[str] = field(default_factory=list)
+    notes: list[str] = field(default_factory=list)
 
 
 class PlatformPublisher:
@@ -38,7 +66,112 @@ class PlatformPublisher:
         lines.extend(f"- {item}" for item in self.metadata.takeover_stop_conditions)
         return lines
 
-    def publish(self) -> None:
+    def publish(
+        self,
+        controller: "BrowserController",
+        platform_content: "PlatformContent",
+        assets: "AssetPaths",
+        *,
+        dry_run: bool = False,
+    ) -> PublishResult:
         raise NotImplementedError(
             f"{self.metadata.display_name} publish flow is not implemented yet."
         )
+
+    def inspect_takeover_candidates(
+        self,
+        controller: "BrowserController",
+        platform_content: "PlatformContent",
+    ) -> list[TakeoverCandidate]:
+        del controller, platform_content
+        return []
+
+
+def normalize_text(value: str) -> str:
+    return " ".join(value.split())
+
+
+def content_snippet(value: str, *, limit: int = 18) -> str:
+    normalized = normalize_text(value)
+    return normalized[:limit]
+
+
+def primary_select_all_shortcut() -> str:
+    return "Meta+A" if platform_runtime.system() == "Darwin" else "Control+A"
+
+
+def read_locator_text(locator: "Locator | None") -> str:
+    if locator is None:
+        return ""
+    try:
+        value = locator.input_value(timeout=1500)
+    except Exception:  # noqa: BLE001
+        try:
+            value = locator.inner_text(timeout=1500)
+        except Exception:  # noqa: BLE001
+            return ""
+    return normalize_text(value)
+
+
+def text_matches_target(current: str, target: str) -> bool:
+    normalized_current = normalize_text(current)
+    normalized_target = normalize_text(target)
+    if not normalized_current or not normalized_target:
+        return True
+    return (
+        normalized_current in normalized_target
+        or normalized_target in normalized_current
+    )
+
+
+def detect_text_mismatch(
+    field_name: str,
+    current: str,
+    target: str,
+    *,
+    limit: int = 80,
+) -> str | None:
+    normalized_current = normalize_text(current)
+    if not normalized_current:
+        return None
+    if text_matches_target(normalized_current, target):
+        return None
+    return f"existing_{field_name}: {normalized_current[:limit]}"
+
+
+def evaluate_takeover_field(
+    field_name: str,
+    current: str,
+    target: str,
+    *,
+    limit: int = 80,
+) -> tuple[int, str | None, str | None]:
+    normalized_current = normalize_text(current)
+    normalized_target = normalize_text(target)
+    if not normalized_current or not normalized_target:
+        return 0, None, None
+    if text_matches_target(normalized_current, normalized_target):
+        return 2, field_name, None
+    return 0, None, detect_text_mismatch(
+        field_name,
+        normalized_current,
+        normalized_target,
+        limit=limit,
+    )
+
+
+def pick_takeover_candidate(
+    candidates: list[TakeoverCandidate],
+) -> TakeoverCandidate | None:
+    viable = [candidate for candidate in candidates if not candidate.stop_reasons]
+    if not viable:
+        return None
+    viable.sort(
+        key=lambda candidate: (
+            candidate.score,
+            len(candidate.matched_fields),
+            len(candidate.notes),
+        ),
+        reverse=True,
+    )
+    return viable[0]

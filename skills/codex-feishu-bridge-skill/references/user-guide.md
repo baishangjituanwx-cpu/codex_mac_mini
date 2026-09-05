@@ -77,16 +77,23 @@ If `Thread busy: yes` is returned, wait for the current run to finish before sen
 
 ### Open the local mirror on the machine
 
-Terminal:
+Terminal on macOS:
 
 ```bash
 <install-dir>/scripts/mirror-view.sh latest 60
 ```
 
+PowerShell on Windows:
+
+```powershell
+<install-dir>\scripts\mirror-view.ps1 latest 60
+```
+
 Double-click:
 
 ```text
-<install-dir>/scripts/mirror-view.command
+macOS: <install-dir>/scripts/mirror-view.command
+Windows: <install-dir>\scripts\mirror-view.cmd
 ```
 
 ## Important limitations
@@ -110,3 +117,6 @@ Double-click:
 - The bridge can proactively push short task-progress messages to a Feishu chat while Codex is running.
 - The fastest way is to open the desired Feishu chat and send `/setprogresshere`.
 - Progress push is throttled and sends short summaries instead of streaming every token.
+- If you also want locally resumed desktop threads to emit milestone pushes before any Feishu binding exists, add their ids to `CODEX_BRIDGE_PROGRESS_THREAD_IDS` in `.bridge.env`.
+- If the machine hosts more than one Feishu app profile, set `LARK_CLI_PROFILE` in `.bridge.env` so the same profile is used by both the bridge runtime and the Windows PowerShell wrappers.
+- On Windows, the same bridge state and progress push behavior applies; only the local launcher commands change from `.sh` to `.ps1` / `.cmd`.
