@@ -4259,3 +4259,41 @@
   - 当前 macOS 主机没有 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析、OpenSSH 实机连接和端到端回归；这是验证环境限制，不是仓库内容缺口。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。就截至 `2026-09-05 21:45:02 CST (+0800)` 的最新 monitor 内容而言，今天 Mac 与 Windows 内容覆盖均完整；仅 Windows 原生 PowerShell/OpenSSH 回归仍待相应环境执行。
+
+## 2026-09-06 22:02:07 CST (+0800)
+
+- 处理时间:
+  - `2026-09-06 22:02:07 CST (+0800)`
+- 输入来源:
+  - 复核上一轮 Windows 转译截止点 `2026-09-05 21:45:02 CST (+0800)` 之后追加的全部 `skill-change-monitor.md` 条目，覆盖至最新记录 `2026-09-06 21:03:37 CST (+0800)`。
+  - 本增量窗口内所有 monitor 批次均为 `新增 0 / 修改 0 / 删除 0`；未出现新的 custom-skill 行为、新增 `.py` 文件、删除项或 supporting automation 资产。
+  - 已按 Obsidian 回读门禁执行只读预检；预检成功但未返回相关 Markdown 命中，因此 Vault 中未找到与本轮增量扫描直接相关的依据，也没有可列出的 Obsidian 相对路径来源。
+- 已完成的 Windows 补全:
+  - 本轮为 no-op，实际翻译内容为 `0`：没有新的 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源需要翻译。
+  - 静态复核确认既有 Windows 入口仍在，包括 `obsidian-knowledge-readback` PowerShell/OpenSSH 入口、`skill-center/scripts/sync-skills.ps1`、BYSL `.ps1`/`.cmd` 入口、Huice 与 Seedance PowerShell 入口、视频号 Task Scheduler 入口，以及现有 Windows 路径/快捷键说明；未修改 Mac 或通用实现。
+  - `bash -n skill-center/skills/obsidian-knowledge-readback/scripts/obsidian-preflight.sh`、Windows 资产存在性检查和本状态台账的 `git diff --check` 均通过；当前环境可用 `node`，但本轮没有新增或修改需要 Node 检查的文件。
+- 未完成的补全:
+  - 无内容性 Windows 转译缺口、删除迁移或缺失仓库资产。
+- 阻塞原因:
+  - 当前 macOS 主机没有 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析、OpenSSH 实机连接和端到端回归；这是验证环境限制，不是仓库内容缺口。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。就截至 `2026-09-06 21:03:37 CST (+0800)` 的最新 monitor 内容而言，今天 Mac 与 Windows 内容覆盖均完整；仅 Windows 原生 PowerShell/OpenSSH 回归仍待相应 Windows 环境执行。
+
+## 2026-09-06 22:03:20 CST (+0800)
+
+- 处理时间:
+  - `2026-09-06 22:03:20 CST (+0800)`
+- 输入来源:
+  - 复核上一条状态记录 `2026-09-06 22:02:07 CST (+0800)` 之后追加的 `skill-change-monitor.md` 条目，覆盖至最新记录 `2026-09-06 21:54:55 CST (+0800)`；上一条状态已覆盖到 `2026-09-06 21:03:37 CST (+0800)`。
+  - 本补充窗口内所有 monitor 批次均为 `新增 0 / 修改 0 / 删除 0`；未出现新的 custom-skill 行为、新增 `.py` 文件、删除项或 supporting automation 资产。
+  - 已执行 `obsidian-knowledge-readback` 只读预检；未返回相关 Markdown 相对路径，因此 Vault 中未找到与本轮增量扫描直接相关的依据。
+- 已完成的 Windows 补全:
+  - 本轮为 no-op，实际翻译内容为 `0`：没有新的 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源需要翻译。
+  - 静态复核确认既有 Windows 入口仍在，包括 Python 平台接管启动器、`skill-center/scripts/sync-skills.ps1`、Obsidian 回读 PowerShell/OpenSSH 入口、Feishu Bridge 模板入口、Seedance 与视频号 Task Scheduler 入口，以及现有 Windows 路径/快捷键说明；未修改 Mac 或通用实现。
+  - Windows 资产存在性检查通过；`bash -n`、相关 Bridge `node --check` 与本状态台账的 `git diff --check` 已执行并通过。
+- 未完成的补全:
+  - 无内容性 Windows 转译缺口、删除迁移或缺失仓库资产。
+- 阻塞原因:
+  - 当前 macOS 主机没有 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析、OpenSSH 实机连接和端到端回归；这是验证环境限制，不是仓库内容缺口。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。就截至 `2026-09-06 21:54:55 CST (+0800)` 的最新 monitor 内容而言，今天 Mac 与 Windows 内容覆盖均完整；仅 Windows 原生 PowerShell/OpenSSH 回归仍待相应 Windows 环境执行。
