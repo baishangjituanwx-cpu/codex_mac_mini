@@ -7681,6 +7681,15 @@
 - 发现待后续同步的新 custom skill 批次：新增 `/Users/baishangjituan/.codex/skills/obsidian-knowledge-capture/SKILL.md` 与 `/Users/baishangjituan/.codex/skills/obsidian-knowledge-capture/agents/openai.yaml`；无新增 `.py` 实现文件。
 - 本记录仅标记同步待办，不执行 GitHub 推送；后续同步时应纳入对应监控台账变更。
 
+## 2026-09-08 00:01:39 CST (+0800) GitHub Sync Execution
+- 前置判断：`windows-translation-status.md` 最新 dated entry 为 `2026-09-07 22:02:07 CST (+0800)`，明确确认 Mac / Windows 内容覆盖完整，允许同步；Windows 原生 PowerShell/OpenSSH 回归仍受当前 macOS 环境限制。
+- Obsidian 回读：已执行 `obsidian-knowledge-readback` 只读预检；未返回相关 Markdown 路径，Vault 中未找到可支持本轮判断的项目专属依据。本轮判断基于仓库 Windows 转译状态台账。
+- 检查结果：发现待同步的三份已跟踪台账：`docs/automation/skill-change-monitor.md`、`docs/automation/windows-translation-status.md` 与本执行记录；没有新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 或 `.py` 实现文件。
+- 分支与提交：
+  - `codex/windows-version-20260411`：提交并推送本轮 Windows 状态台账、共享监控台账与执行记录。
+  - `codex/default-python-sync`：同步共享监控台账、Windows 状态台账与执行记录；无 generic/Mac 实现代码可单独同步。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；Windows 原生 PowerShell/OpenSSH 回归仍待相应 Windows 环境执行。
+
 ## 2026-09-08 00:01:46 CST (+0800) GitHub Sync Execution
 - 前置判断：`windows-translation-status.md` 最新 dated entry 为 `2026-09-07 22:02:07 CST (+0800)`，明确确认 Mac / Windows 内容覆盖完整，允许同步；Windows 原生 PowerShell/OpenSSH 回归仍受当前 macOS 环境限制。
 - Obsidian 回读：已执行只读预检；预检成功但未返回相关 Markdown 路径，Vault 中未找到可支持本轮判断的项目专属依据。本轮判断基于仓库 Windows 转译状态台账。
