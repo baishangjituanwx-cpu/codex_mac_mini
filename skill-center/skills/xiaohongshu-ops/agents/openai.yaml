@@ -1,0 +1,4 @@
+interface:
+  display_name: "小红书运营"
+  short_description: "小红书发布、数据复盘、评论互动、规则研究与素材优化运营流程"
+  default_prompt: "Use $xiaohongshu-ops to publish, analyze, moderate comments, or optimize content for a 小红书 account."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "牙博士微信铺货"
+  short_description: "牙博士品牌地址绑定、微信铺货与推广完整闭环"
+  default_prompt: "Use $weixin-shop-yaboshi-publish to select and publish qualified 牙博士 products with the verified cloud-managed return address."

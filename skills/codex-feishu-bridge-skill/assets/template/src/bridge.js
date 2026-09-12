@@ -12,9 +12,43 @@ const STATE_PATH = path.join(DATA_DIR, "state.json");
 const LOG_PATH = path.join(ROOT_DIR, "bridge.log");
 const LARK_BIN_NAME = process.platform === "win32" ? "lark-cli.exe" : "lark-cli";
 const ENV_PATH = path.join(ROOT_DIR, ".bridge.env");
+
+loadEnvFileIntoProcessEnv(ENV_PATH);
+
+function loadEnvFileIntoProcessEnv(filePath) {
+  if (!fs.existsSync(filePath)) {
+    return;
+  }
+  const raw = fs.readFileSync(filePath, "utf8");
+  for (const line of raw.split("\n")) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#")) {
+      continue;
+    }
+    const idx = trimmed.indexOf("=");
+    if (idx <= 0) {
+      continue;
+    }
+    const key = trimmed.slice(0, idx).trim();
+    let value = trimmed.slice(idx + 1).trim();
+    if (!key || Object.prototype.hasOwnProperty.call(process.env, key)) {
+      continue;
+    }
+    if ((value.startsWith("\"") && value.endsWith("\"")) || (value.startsWith("'") && value.endsWith("'"))) {
+      try {
+        value = JSON.parse(value);
+      } catch {
+        value = value.slice(1, -1);
+      }
+    }
+    process.env[key] = value;
+  }
+}
+
 const LARK_CLI =
   process.env.LARK_CLI_BIN ||
   path.join(ROOT_DIR, "node_modules", "@larksuite", "cli", "bin", LARK_BIN_NAME);
+const LARK_PROFILE = process.env.LARK_CLI_PROFILE || "";
 const CODEX_BIN =
   process.env.CODEX_BIN ||
   (process.platform === "win32" ? "codex" : "/Applications/Codex.app/Contents/Resources/codex");
@@ -32,6 +66,10 @@ let progressNotifyChatId =
   process.env.CODEX_BRIDGE_PROGRESS_NOTIFY_CHAT_ID ||
   process.env.CODEX_BRIDGE_PUBLISH_NOTIFY_CHAT_ID ||
   "";
+const EXPLICIT_PROGRESS_THREAD_IDS = String(process.env.CODEX_BRIDGE_PROGRESS_THREAD_IDS || "")
+  .split(",")
+  .map((item) => item.trim())
+  .filter(Boolean);
 const PUBLISH_NOTIFY_KEYWORDS = String(
   process.env.CODEX_BRIDGE_PUBLISH_NOTIFY_KEYWORDS ||
     "自动发布内容,发布,微博,微信视频号,视频号,头条,今日头条,百家号,抖音,小红书,快手,知乎,weibo,wechat channels,douyin,xiaohongshu,kuaishou,zhihu,publish"
@@ -74,6 +112,7 @@ let state = {
   activeThreads: {},
   monitor: {
     lastNotifiedByThread: {},
+    localProgress: {},
   },
 };
 
@@ -124,6 +163,7 @@ async function loadState() {
     state.activeThreads ||= {};
     state.monitor ||= {};
     state.monitor.lastNotifiedByThread ||= {};
+    state.monitor.localProgress ||= {};
   } catch (error) {
     if (error.code !== "ENOENT") {
       throw error;
@@ -140,6 +180,7 @@ async function saveState() {
 function getMonitorState() {
   state.monitor ||= {};
   state.monitor.lastNotifiedByThread ||= {};
+  state.monitor.localProgress ||= {};
   return state.monitor;
 }
 
@@ -161,6 +202,15 @@ function findConversationByChatId(chatId) {
     }
   }
   return null;
+}
+
+function findBindingsByThreadId(threadId) {
+  if (!threadId) {
+    return [];
+  }
+  return Object.entries(state.conversations || {})
+    .filter(([, value]) => value?.threadId === threadId)
+    .map(([key, binding]) => ({ key, binding }));
 }
 
 async function setBinding(event, patch) {
@@ -450,6 +500,319 @@ async function readLatestTaskCompleteForThread(threadId) {
   return null;
 }
 
+function listBoundThreadsForLocalMonitor() {
+  const latestByThread = new Map();
+  for (const binding of Object.values(state.conversations || {})) {
+    if (!binding?.threadId) {
+      continue;
+    }
+    const existing = latestByThread.get(binding.threadId);
+    if (!existing) {
+      latestByThread.set(binding.threadId, binding);
+      continue;
+    }
+    const existingUpdated = String(existing.updatedAt || "");
+    const nextUpdated = String(binding.updatedAt || "");
+    if (nextUpdated > existingUpdated) {
+      latestByThread.set(binding.threadId, binding);
+    }
+  }
+  return Array.from(latestByThread.values()).map((binding) => ({
+    threadId: binding.threadId,
+    chatId: binding.chatId || "",
+    senderOpenId: binding.senderOpenId || "",
+    senderName: binding.senderName || "",
+  }));
+}
+
+function listExplicitProgressThreads() {
+  return EXPLICIT_PROGRESS_THREAD_IDS.map((threadId) => ({
+    threadId,
+    chatId: progressNotifyChatId || "",
+    senderOpenId: "",
+    senderName: "",
+  }));
+}
+
+function listThreadsForLocalMonitor() {
+  const merged = new Map();
+  for (const item of [...listBoundThreadsForLocalMonitor(), ...listExplicitProgressThreads()]) {
+    if (!item?.threadId) {
+      continue;
+    }
+    const existing = merged.get(item.threadId) || {};
+    merged.set(item.threadId, {
+      threadId: item.threadId,
+      chatId: item.chatId || existing.chatId || "",
+      senderOpenId: item.senderOpenId || existing.senderOpenId || "",
+      senderName: item.senderName || existing.senderName || "",
+    });
+  }
+  return Array.from(merged.values());
+}
+
+function getLocalProgressCursor(threadId) {
+  const monitorState = getMonitorState();
+  monitorState.localProgress[threadId] ||= {
+    filePath: "",
+    lineCount: 0,
+    lastUserMessage: "",
+    currentTurnId: "",
+    currentPrompt: "",
+    lastProgressText: "",
+    lastProgressAt: 0,
+    lastCompletedTurnId: "",
+  };
+  return monitorState.localProgress[threadId];
+}
+
+function summarizePatchChanges(changes) {
+  const files = Object.keys(changes || {});
+  if (files.length === 0) {
+    return "";
+  }
+  const labels = files.slice(0, 4).map((filePath) => path.basename(filePath));
+  const extra = files.length > labels.length ? ` 等 ${files.length} 个文件` : "";
+  return `已更新 ${labels.join("、")}${extra}`;
+}
+
+function formatLocalMilestone(payload) {
+  const payloadType = payload?.type || "";
+  if (payloadType === "task_started") {
+    return {
+      phase: "已开始",
+      detail: "任务已在本机 Codex Desktop 中开始执行。",
+      always: true,
+    };
+  }
+  if (payloadType === "agent_reasoning" && typeof payload.text === "string") {
+    return {
+      phase: "分析中",
+      detail: truncate(payload.text.trim(), 1200),
+      always: false,
+    };
+  }
+  if (payloadType === "patch_apply_end" && payload.success) {
+    return {
+      phase: "修改文件",
+      detail: summarizePatchChanges(payload.changes) || "本机线程刚刚应用了一次文件修改。",
+      always: true,
+    };
+  }
+  if (payloadType === "task_complete" && typeof payload.last_agent_message === "string") {
+    return {
+      phase: "已完成",
+      detail: truncate(payload.last_agent_message.trim(), 1200),
+      always: true,
+      completedTurnId: payload.turn_id || "",
+    };
+  }
+  if (payloadType === "turn_aborted") {
+    return {
+      phase: "已中断",
+      detail: truncate(String(payload.reason || "当前任务已被中断。").trim(), 1200),
+      always: true,
+      completedTurnId: payload.turn_id || "",
+    };
+  }
+  if (payloadType === "error") {
+    return {
+      phase: "出错",
+      detail: truncate(String(payload.message || "Codex 线程出现错误。").trim(), 1200),
+      always: true,
+      completedTurnId: payload.turn_id || "",
+    };
+  }
+  return null;
+}
+
+function shouldSendLocalMilestone(cursor, milestone) {
+  const now = Date.now();
+  const nextText = truncateInline(`${milestone.phase} ${milestone.detail || ""}`, 500);
+  if (milestone.completedTurnId && milestone.completedTurnId === cursor.lastCompletedTurnId) {
+    return false;
+  }
+  if (milestone.always) {
+    cursor.lastProgressText = nextText;
+    cursor.lastProgressAt = now;
+    if (milestone.completedTurnId) {
+      cursor.lastCompletedTurnId = milestone.completedTurnId;
+    }
+    return true;
+  }
+  if (!nextText) {
+    return false;
+  }
+  if (nextText === cursor.lastProgressText && now - cursor.lastProgressAt < PROGRESS_NOTIFY_INTERVAL_MS) {
+    return false;
+  }
+  if (now - cursor.lastProgressAt < PROGRESS_NOTIFY_INTERVAL_MS) {
+    return false;
+  }
+  cursor.lastProgressText = nextText;
+  cursor.lastProgressAt = now;
+  return true;
+}
+
+function resolveProgressChatsForThread(threadId) {
+  const chats = new Set();
+  for (const item of findBindingsByThreadId(threadId)) {
+    if (item.binding?.chatId) {
+      chats.add(item.binding.chatId);
+    }
+  }
+  if (progressNotifyChatId) {
+    chats.add(progressNotifyChatId);
+  }
+  return Array.from(chats);
+}
+
+async function readNewLocalProgressEvents(threadId) {
+  const files = await findSessionFilesForThread(threadId);
+  if (files.length === 0) {
+    return [];
+  }
+
+  const filePath = files[files.length - 1];
+  const cursor = getLocalProgressCursor(threadId);
+  const raw = await fsp.readFile(filePath, "utf8");
+  const lines = raw.split("\n").filter(Boolean);
+  let startIndex = 0;
+
+  if (!cursor.filePath) {
+    cursor.filePath = filePath;
+    cursor.lineCount = lines.length;
+    cursor.lastUserMessage = "";
+    cursor.currentTurnId = "";
+    cursor.currentPrompt = "";
+    return [];
+  }
+
+  if (cursor.filePath === filePath) {
+    startIndex = cursor.lineCount <= lines.length ? cursor.lineCount : 0;
+  } else {
+    cursor.filePath = filePath;
+    cursor.lineCount = 0;
+    cursor.lastUserMessage = "";
+    cursor.currentTurnId = "";
+    cursor.currentPrompt = "";
+  }
+
+  const milestones = [];
+  let lastUserMessage = cursor.lastUserMessage || "";
+  let currentTurnId = cursor.currentTurnId || "";
+  let currentPrompt = cursor.currentPrompt || "";
+
+  for (const line of lines.slice(startIndex)) {
+    let item;
+    try {
+      item = JSON.parse(line);
+    } catch {
+      continue;
+    }
+    if (item?.type !== "event_msg") {
+      continue;
+    }
+    const payload = item.payload || {};
+    const payloadType = payload.type || "";
+    if (payloadType === "user_message" && typeof payload.message === "string") {
+      lastUserMessage = truncateInline(payload.message, 500);
+      continue;
+    }
+
+    if (payloadType === "task_started") {
+      currentTurnId = payload.turn_id || currentTurnId || "";
+      currentPrompt = lastUserMessage || currentPrompt || "";
+    }
+
+    const milestone = formatLocalMilestone(payload);
+    if (milestone) {
+      milestones.push({
+        timestamp: item.timestamp || "",
+        turnId: payload.turn_id || currentTurnId || "",
+        prompt: currentPrompt || lastUserMessage || "",
+        ...milestone,
+      });
+    }
+
+    if (payloadType === "task_complete" || payloadType === "turn_aborted" || payloadType === "error") {
+      currentTurnId = "";
+      currentPrompt = "";
+      lastUserMessage = "";
+    }
+  }
+
+  cursor.filePath = filePath;
+  cursor.lineCount = lines.length;
+  cursor.lastUserMessage = lastUserMessage;
+  cursor.currentTurnId = currentTurnId;
+  cursor.currentPrompt = currentPrompt;
+
+  return milestones;
+}
+
+async function pollLocalThreadProgress() {
+  const watchedThreads = listThreadsForLocalMonitor();
+  if (watchedThreads.length === 0) {
+    return;
+  }
+
+  let changed = false;
+  for (const thread of watchedThreads) {
+    if (getActiveThread(thread.threadId)) {
+      continue;
+    }
+
+    const chats = resolveProgressChatsForThread(thread.threadId);
+    if (chats.length === 0) {
+      continue;
+    }
+
+    const cursor = getLocalProgressCursor(thread.threadId);
+    const cursorBefore = JSON.stringify({
+      filePath: cursor.filePath,
+      lineCount: cursor.lineCount,
+      lastUserMessage: cursor.lastUserMessage,
+      currentTurnId: cursor.currentTurnId,
+      currentPrompt: cursor.currentPrompt,
+      lastProgressText: cursor.lastProgressText,
+      lastProgressAt: cursor.lastProgressAt,
+      lastCompletedTurnId: cursor.lastCompletedTurnId,
+    });
+    const milestones = await readNewLocalProgressEvents(thread.threadId);
+    const cursorAfter = JSON.stringify({
+      filePath: cursor.filePath,
+      lineCount: cursor.lineCount,
+      lastUserMessage: cursor.lastUserMessage,
+      currentTurnId: cursor.currentTurnId,
+      currentPrompt: cursor.currentPrompt,
+      lastProgressText: cursor.lastProgressText,
+      lastProgressAt: cursor.lastProgressAt,
+      lastCompletedTurnId: cursor.lastCompletedTurnId,
+    });
+    changed = changed || milestones.length > 0 || cursorBefore !== cursorAfter;
+
+    for (const milestone of milestones) {
+      if (!shouldSendLocalMilestone(cursor, milestone)) {
+        continue;
+      }
+      const payload = {
+        threadId: thread.threadId,
+        prompt: milestone.prompt,
+        phase: milestone.phase,
+        detail: milestone.detail,
+      };
+      for (const chatId of chats) {
+        await sendProgressUpdate(chatId, payload);
+      }
+    }
+  }
+
+  if (changed) {
+    await saveState();
+  }
+}
+
 async function rememberRecentThreads(event, threads) {
   await setBinding(event, {
     recentThreads: threads.map((thread) => ({
@@ -529,6 +892,13 @@ function normalizeEvent(payload) {
 
 function shellQuote(value) {
   return JSON.stringify(String(value));
+}
+
+function withLarkProfile(args) {
+  if (!LARK_PROFILE) {
+    return args;
+  }
+  return ["--profile", LARK_PROFILE, ...args];
 }
 
 function spawnCommand(command, args, options = {}) {
@@ -677,7 +1047,7 @@ async function runCodex(prompt, threadId) {
 
 async function runLark(args) {
   return await new Promise((resolve, reject) => {
-    const child = spawnCommand(LARK_CLI, args);
+    const child = spawnCommand(LARK_CLI, withLarkProfile(args));
     let stdout = "";
     let stderr = "";
     child.stdout.on("data", (chunk) => {
@@ -731,18 +1101,53 @@ async function replyMessage(event, text) {
 
 async function sendMessageToChat(chatId, text, source = "bridge") {
   const body = truncate(text);
-  await runLark([
-    "im",
-    "+messages-send",
-    "--as",
-    "bot",
-    "--chat-id",
-    chatId,
-    "--text",
-    body,
-  ]);
-
   const target = findConversationByChatId(chatId);
+  try {
+    await runLark([
+      "im",
+      "+messages-send",
+      "--as",
+      "bot",
+      "--chat-id",
+      chatId,
+      "--text",
+      body,
+    ]);
+  } catch (error) {
+    const errorText = formatError(error);
+    const senderOpenId = target?.binding?.senderOpenId || "";
+    const shouldTryUserFallback =
+      senderOpenId &&
+      (errorText.includes("230002") ||
+        errorText.toLowerCase().includes("out of the chat"));
+
+    if (!shouldTryUserFallback) {
+      throw error;
+    }
+
+    appendLog(
+      `chat send failed for ${chatId}, trying user-id fallback ${senderOpenId}: ${truncateInline(errorText, 240)}`
+    );
+    try {
+      await runLark([
+        "im",
+        "+messages-send",
+        "--as",
+        "bot",
+        "--user-id",
+        senderOpenId,
+        "--text",
+        body,
+      ]);
+    } catch (fallbackError) {
+      const fallbackText = formatError(fallbackError);
+      appendLog(
+        `user-id fallback failed for ${senderOpenId}: ${truncateInline(fallbackText, 240)}`
+      );
+      throw new Error(`${errorText}\nFallback send by user-id also failed: ${fallbackText}`);
+    }
+  }
+
   if (!target) {
     return;
   }
@@ -860,9 +1265,9 @@ async function pollMonitoredThreads() {
   }
 }
 
-function startMonitorLoop() {
+function startPublishMonitorLoop() {
   if (!publishNotifyChatId || MONITOR_THREAD_NAMES.length === 0) {
-    appendLog("thread monitor disabled");
+    appendLog("publish thread monitor disabled");
     return;
   }
   appendLog(
@@ -878,6 +1283,22 @@ function startMonitorLoop() {
     }
   };
   setTimeout(run, 3000);
+}
+
+function startLocalProgressMonitorLoop() {
+  appendLog(
+    `local thread progress monitor enabled explicitThreads=${EXPLICIT_PROGRESS_THREAD_IDS.join(",") || "(none)"}`
+  );
+  const run = async () => {
+    try {
+      await pollLocalThreadProgress();
+    } catch (error) {
+      appendLog(`local progress monitor failed: ${formatError(error)}`);
+    } finally {
+      setTimeout(run, MONITOR_POLL_MS);
+    }
+  };
+  setTimeout(run, 4000);
 }
 
 function renderHelp() {
@@ -1030,6 +1451,7 @@ async function processPrompt(event, prompt, existingBinding) {
   }
 
   inFlight.add(key);
+  let activeThreadId = threadId;
   try {
     if (threadId) {
       await markThreadActive(event, threadId, prompt);
@@ -1041,7 +1463,7 @@ async function processPrompt(event, prompt, existingBinding) {
       detail: "任务已进入 Codex 执行队列。",
     });
     const result = await runCodex(prompt, existingBinding?.threadId || null);
-    await markThreadActive(event, result.threadId, prompt);
+    activeThreadId = result.threadId || activeThreadId;
     const binding = await setBinding(event, { threadId: result.threadId });
     await replyMessage(
       event,
@@ -1051,7 +1473,7 @@ async function processPrompt(event, prompt, existingBinding) {
   } catch (error) {
     await replyMessage(event, `Codex failed: ${truncate(formatError(error), 1500)}`);
   } finally {
-    await clearThreadActive(existingBinding?.threadId || null);
+    await clearThreadActive(activeThreadId || null);
     inFlight.delete(key);
   }
 }
@@ -1206,7 +1628,7 @@ async function handleEvent(event) {
 
 async function subscribeLoop() {
   appendLog("starting event subscription loop");
-  const child = spawnCommand(LARK_CLI, [
+  const child = spawnCommand(LARK_CLI, withLarkProfile([
     "event",
     "+subscribe",
     "--as",
@@ -1214,7 +1636,7 @@ async function subscribeLoop() {
     "--event-types",
     "im.message.receive_v1",
     "--quiet",
-  ]);
+  ]));
 
   child.stderr.on("data", (chunk) => {
     appendLog(`lark stderr ${chunk.toString().trim()}`);
@@ -1269,6 +1691,7 @@ function printLocalHelp() {
       "Codex Feishu bridge",
       `workdir: ${WORKDIR}`,
       `lark-cli: ${LARK_CLI}`,
+      `lark profile: ${LARK_PROFILE || "(default)"}`,
       `codex: ${CODEX_BIN}`,
       "",
       "Before running, complete:",
@@ -1291,8 +1714,9 @@ async function main() {
   ensureDataDir();
   await verifyBinaries();
   await loadState();
-  appendLog("bridge booted");
-  startMonitorLoop();
+  appendLog(`bridge booted larkProfile=${LARK_PROFILE || "(default)"}`);
+  startPublishMonitorLoop();
+  startLocalProgressMonitorLoop();
   await subscribeLoop();
 }
 

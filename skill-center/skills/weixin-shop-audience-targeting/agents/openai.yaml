@@ -1,0 +1,7 @@
+interface:
+  display_name: "微信小店人群倾向优化"
+  short_description: "按商品属性与投放数据优化人群倾向"
+  default_prompt: "使用 $weixin-shop-audience-targeting 分析并优化小店投放商品的人群倾向。"
+
+policy:
+  allow_implicit_invocation: true

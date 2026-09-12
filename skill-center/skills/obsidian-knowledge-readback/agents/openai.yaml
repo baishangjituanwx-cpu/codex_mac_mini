@@ -1,0 +1,7 @@
+interface:
+  display_name: "Obsidian 知识库回读"
+  short_description: "按需回读远端 Obsidian 知识库并引用来源路径"
+  default_prompt: "使用 $obsidian-knowledge-readback，先判断并检索相关 Obsidian 内容，再回答并给出来源路径。"
+
+policy:
+  allow_implicit_invocation: true

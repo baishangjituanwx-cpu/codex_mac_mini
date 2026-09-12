@@ -44,7 +44,8 @@
 - Node
 - `@larksuite/cli`
 - 本地 `codex` CLI
-- `launchd` 后台服务
+- macOS: `launchd` 后台服务
+- Windows: PowerShell 启动脚本 + 可选 Scheduled Task
 
 ### B. 内容库
 
@@ -115,4 +116,3 @@
 1. 当前浏览器侧成功路径，核心不是“某个脚本”，而是“先有标准内容包，再按 SOP 验证”
 2. 飞书桥接已经代码化且可迁移
 3. 复盘的结构化沉淀已经足够支持下一轮自动化
-

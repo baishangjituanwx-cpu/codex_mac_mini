@@ -1,0 +1,4 @@
+interface:
+  display_name: "平台运营总技能"
+  short_description: "微博百家号知乎头条抖音小红书视频号快手统一运营路由技能"
+  default_prompt: "Use $platform-ops-hub to route a publishing, analysis, comment, rules, or optimization task to the correct platform skill."
