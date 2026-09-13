@@ -30,6 +30,7 @@ notion-knowledge-capture
 notion-meeting-intelligence
 notion-research-documentation
 notion-spec-to-implementation
+obsidian-knowledge-capture
 obsidian-knowledge-readback
 pdf
 platform-cover-ops
@@ -52,8 +53,8 @@ toutiao-ops
 toutiao-publish
 transcribe
 vercel-deploy
-wechat-channels-ops
 wechat-channels-launchagent-keepalive
+wechat-channels-ops
 wechat-desktop-ops
 wechat-moments-desktop-ops
 wechat-video-channel-share-desktop-ops

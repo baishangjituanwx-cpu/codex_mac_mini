@@ -66,6 +66,17 @@
 
 Windows 使用内置 OpenSSH Client 和 `%USERPROFILE%\\.ssh\\id_ed25519_obsidian_bridge`，通过 PowerShell 入口回读远端 Linux Vault。Vault 的 `/vol1/1000/Obsidian/obsidian-vault` 是远端路径，不应替换成 Windows 本地路径；入口仍只允许 manifest、关键词检索和受限 Markdown 读取。
 
+### E. Obsidian 知识沉淀
+
+技能镜像位置:
+
+- `skill-center/skills/obsidian-knowledge-capture/`
+- `skill-center/skills/obsidian-knowledge-capture/references/windows.md`
+
+Windows 端复用 `skill-center/skills/obsidian-knowledge-readback/scripts/obsidian-preflight.ps1` 完成写入前的 manifest、关键词检索和受限 Markdown 回读。技能目录是 `%USERPROFILE%\\.codex\\skills\\obsidian-knowledge-capture\\`，SSH 私钥是 `%USERPROFILE%\\.ssh\\id_ed25519_obsidian_bridge`；远端 Vault 仍为 `/vol1/1000/Obsidian/obsidian-vault`。
+
+`【待确认沉淀】` 不写 Vault；`【立即沉淀】` 和 `【修订 Obsidian】` 只有 allowlisted Codex 线程可以执行远端写入，且写入后必须按原路径回读并等待 `knowledge-bridge`。因此不提供绕过线程权限的 PowerShell 写入包装器。
+
 ## 3. Windows 上推荐的目录
 
 建议:

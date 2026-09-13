@@ -9,7 +9,7 @@
 
 ## 当前范围
 
-- 已镜像技能数量: `64`
+- 已镜像技能数量: `66`
 - 来源: `/Users/baishangjituan/.codex/skills/`
 - 未包含:
   - `.system/` 下的系统内置 skill
@@ -82,3 +82,4 @@ $HOME\.codex\skills\
 
 - `skill-center/skills/baijiahao-ops/SKILL.md`
 - `skill-center/skills/obsidian-knowledge-readback/`
+- `skill-center/skills/obsidian-knowledge-capture/`
