@@ -4411,3 +4411,25 @@
   - 当前 macOS 主机没有 `pwsh` 或 `powershell`，因此未执行 Windows 原生 PowerShell 语法解析、OpenSSH 实机连接和端到端回归；这是验证环境限制，不是仓库内容缺口。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。就截至 `2026-09-12 21:39:48 CST (+0800)` 的最新 monitor 内容而言，今天 Mac 与 Windows 内容覆盖均完整；仅 Windows 原生 PowerShell/OpenSSH 回归仍待相应 Windows 环境执行。
+
+## 2026-09-13 22:04:13 CST (+0800)
+
+- 处理时间:
+  - `2026-09-13 22:04:13 CST (+0800)` / `2026-09-13 14:04:13 UTC (+0000)`
+- 输入来源:
+  - `skill-change-monitor.md` 中 `2026-09-07 17:11:55 CST (+0800)` 的新增批次：`/Users/baishangjituan/.codex/skills/obsidian-knowledge-capture/SKILL.md` 与 `agents/openai.yaml`；该批次此前未进入 Windows 技能镜像。
+  - `skill-change-monitor.md` 中 `2026-09-13 15:50:45 CST (+0800)` 的修改批次：`/Users/baishangjituan/.codex/skills/obsidian-knowledge-capture/SKILL.md`；当前最新内容一并纳入镜像。
+  - 同时复核了上述之后至最新 `2026-09-13 21:53:45 CST (+0800)` 的 monitor 条目；其余批次均为 `新增 0 / 修改 0 / 删除 0`，无新的 Windows 行为需要翻译。
+  - 已执行 Obsidian 只读预检，但未返回相关 Markdown 相对路径；Vault 中未找到可支持本轮判断的依据。
+- 已完成的 Windows 补全:
+  - 新增 `skill-center/skills/obsidian-knowledge-capture/SKILL.md` 与 `agents/openai.yaml`，同步三种沉淀模式、预检前置、allowlisted Codex 线程、受限写入目录、写后回读/桥接确认、安全边界和完成回报要求；Mac / 通用行为保持不变。
+  - 新增 `skill-center/skills/obsidian-knowledge-capture/references/windows.md`，补充 `%USERPROFILE%\\.codex\\skills\\obsidian-knowledge-capture\\`、`%USERPROFILE%\\.ssh\\id_ed25519_obsidian_bridge`、Windows PowerShell 预检命令及远端 Linux Vault 路径规则。
+  - Windows 端复用既有 `skill-center/skills/obsidian-knowledge-readback/scripts/obsidian-preflight.ps1`；没有新增绕过线程权限的本地写 Vault `.ps1` / `.cmd` 包装器，也没有键盘快捷键差异需要处理。
+  - 更新 `skill-center/README.md` 的镜像数量与示例、`skill-center/skills-manifest.txt` 的技能清单，以及 `docs/windows-version-guide.md` 的 Obsidian 知识沉淀章节。
+- 未完成的补全:
+  - 无内容性 Windows 转译缺口、删除迁移或缺失仓库资产。
+  - 当前 macOS 主机没有 `pwsh` 或 `powershell`，未执行 Windows 原生 PowerShell 语法解析、OpenSSH 实机连接和端到端回归；该项待 Windows 环境验证。
+- 验证:
+  - `SKILL.md` 与 `agents/openai.yaml` 均与本机最新技能源一致；技能清单排序、路径存在性、Bash 语法和 `git diff --check` 均通过。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。就截至 `2026-09-13 21:53:45 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 内容覆盖均已完整；仅 Windows 原生 PowerShell/OpenSSH 回归仍待相应 Windows 环境执行。
