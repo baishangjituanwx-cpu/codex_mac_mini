@@ -4471,3 +4471,24 @@
   - 21 个关键 Windows 入口/文档/镜像文件存在；Bash 与 Feishu Bridge Node 静态语法检查、Windows 路径/快捷键/Task Scheduler/包装器标记检查及 `git diff --check` 均通过。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。就截至 `2026-09-14 21:21:37 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 内容覆盖均已完整；仅 Windows 原生 PowerShell/OpenSSH 回归仍待相应 Windows 环境执行。
+
+## 2026-09-15 22:03:07 CST (+0800)
+
+- 处理时间:
+  - `2026-09-15 22:03:07 CST (+0800)` / `2026-09-15 14:03:07 UTC (+0000)`
+- 输入来源:
+  - 复核上一条 Windows 转译状态记录 `2026-09-14 22:03:05 CST (+0800)` 之后追加的全部 `skill-change-monitor.md` 条目，覆盖至最新记录 `2026-09-15 20:40:38 CST (+0800)`。
+  - 发现并处理唯一未登记的非零批次：`2026-09-15 14:24:21 CST (+0800)` 修改 `/Users/baishangjituan/.codex/skills/obsidian-knowledge-capture/SKILL.md`，新增远端写入线程 ID `01a0857a-5528-7e72-ab62-5aebdcf59b18`，并从 Mac 源技能移除 Windows Repo Mirror Notes；其余后续批次均为 `新增 0 / 修改 0 / 删除 0`。
+  - 已执行 `obsidian-knowledge-readback` 只读预检，但未返回相关 Markdown 相对路径；Vault 中未找到可支持本轮判断的依据。
+- 已完成的 Windows 补全:
+  - 更新 `skill-center/skills/obsidian-knowledge-capture/SKILL.md` 的 allowlist，使 Windows 镜像包含新增线程 ID，并与当前 Mac 源技能的远端写入策略一致。
+  - 保留 Windows 镜像独有的 `Windows Repo Mirror Notes`，继续提供 `%USERPROFILE%`、Windows OpenSSH、远端 Linux Vault 路径、PowerShell 预检、键盘无关和无需额外 `.ps1`/`.cmd` 写入包装器等 Windows 使用说明；Mac 与通用实现未修改。
+  - 本轮不需要新增 PowerShell 启动器、路径处理、快捷键映射、命令包装器、Windows 文档或其他仓库资产。
+- 未完成的补全:
+  - 无内容性 Windows 转译缺口、删除迁移或缺失仓库资产。
+  - 当前 macOS 主机没有 `pwsh` 或 `powershell`，未执行 Windows 原生 PowerShell 语法解析、OpenSSH 实机连接和端到端回归；该项仍待 Windows 环境验证。
+- 验证:
+  - 源技能与 Windows 镜像逐行复核后仅保留预期的 Windows 专属章节差异；allowlist、Windows 路径与预检入口标记、相关文件存在性、`bash -n` 和 `git diff --check` 均通过。
+  - 当前主机可用 Node，但本轮没有变更 JavaScript；未执行 Windows 原生运行时测试。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。就截至 `2026-09-15 20:40:38 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 内容覆盖均已完整；仅 Windows 原生 PowerShell/OpenSSH 回归仍待相应 Windows 环境执行。

@@ -12,6 +12,15 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-09-15 14:34:30 CST (+0800)
+
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/obsidian-knowledge-capture/SKILL.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以 `2026-09-15 13:33:10 CST (+0800)` 为基线发现 `0 added / 1 modified / 0 deleted`。
+  - 变更为本地 `obsidian-knowledge-capture` 技能说明刷新，涉及模式、Obsidian 只读回读流程、写入边界、安全规则和完成格式；后续 GitHub 同步需评估该文件及本轮监控记录。
+  - 本轮没有新的 `.py` 文件进入同步范围。
+
 ## 2026-09-07 00:57:36 CST (+0800)
 - 新发现的待同步批次:
   - 监控扫描发现 `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`、`skill-center/` 与 `automation/` 下共 65 个既有文件的时间戳在 `2026-09-06 23:04:59 CST (+0800)` 后刷新。
@@ -7802,3 +7811,19 @@
   - `codex/windows-version-20260411`：同步 Windows 状态台账、共享监控台账与本执行记录，提交消息为 `Sync September 14 automation ledgers`。
   - `codex/default-python-sync`：同步共享监控/状态台账与本执行记录，提交消息为 `Sync September 14 automation ledgers`；无 generic/Mac 实现代码可单独同步。
 - 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；无新的 Windows bridge/deployment 实现；Windows 原生 PowerShell/OpenSSH 端到端回归仍待 Windows 环境执行。
+
+## 2026-09-15 14:24:21 CST Skill Change Batch
+
+- 新发现待后续同步的 `obsidian-knowledge-capture` 变更：`/Users/baishangjituan/.codex/skills/obsidian-knowledge-capture/SKILL.md` 新增一个获准写入线程 ID，并移除 `Windows Repo Mirror Notes` 章节；本批次无新增或删除文件、无新增 `.py` 文件。
+## 2026-09-15 14:34:30 CST (+0800)
+
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/obsidian-knowledge-capture/SKILL.md`
+- 同步提示:
+  - `skill-monitor-95dbcba9cef8` 以 `2026-09-15 13:33:10 CST (+0800)` 为基线发现 `0 added / 1 modified / 0 deleted`。
+  - 变更为本地 `obsidian-knowledge-capture` 技能说明刷新，涉及模式、Obsidian 只读回读流程、写入边界、安全规则和完成格式；后续 GitHub 同步需评估该文件及本轮监控记录。
+  - 本轮没有新的 `.py` 文件进入同步范围。
+## 2026-09-15 22:30:47 CST (+0800) Skill Change Batch
+
+- 新发现待后续同步的 `obsidian-knowledge-capture` 仓库镜像变更：`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-capture/SKILL.md` 的远端 Vault 写入线程白名单新增 Codex 线程 ID `01a0857a-5528-7e72-ab62-5aebdcf59b18`。
+- 本批次为 `0 added / 1 modified / 0 deleted`，无新增 `.py` 文件；后续 GitHub 同步应纳入该技能镜像文件与本轮监控台账。
