@@ -1,0 +1,4 @@
+interface:
+  display_name: "平台发布自动化"
+  short_description: "OpenCLI 驱动的多平台内容发布与故障排查流程"
+  default_prompt: "Use $social-publish-automation to publish or troubleshoot browser-driven posting on Zhihu, Weibo, WeChat Official Accounts, Baijiahao, 今日头条 / 头条号, Xiaohongshu, Douyin, Kuaishou, or Bilibili."
