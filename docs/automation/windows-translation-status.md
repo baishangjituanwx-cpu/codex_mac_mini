@@ -4530,3 +4530,22 @@
   - Windows 资产存在性、Bash/Node 静态检查和 `git diff --check` 均通过；本轮没有修改 Mac 或通用实现文件。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。就截至 `2026-09-16 22:02:37 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 内容覆盖均已完整；仅 Windows 原生 PowerShell/OpenSSH 回归仍待相应 Windows 环境执行。
+
+## 2026-09-17 22:03:41 CST (+0800)
+
+- 处理时间:
+  - `2026-09-17 22:03:41 CST (+0800)` / `2026-09-17 14:03:41 UTC (+0000)`
+- 输入来源:
+  - 复核上一条 Windows 转译状态记录 `2026-09-16 22:03:48 CST (+0800)` 之后追加的全部 `skill-change-monitor.md` 条目，覆盖至最新记录 `2026-09-17 21:13:21 CST (+0800)`。
+  - 唯一未登记的非零批次为 `2026-09-17 19:01:47 CST (+0800)`：修改 `/Users/baishangjituan/.codex/skills/obsidian-knowledge-capture/SKILL.md`，在远端写入线程 allowlist 中新增 `01a02d53-b338-7343-9e9d-c052d9efcb51`；其余批次均为 `新增 0 / 修改 0 / 删除 0`，没有新的 `.py` 文件、删除项或 supporting automation 资产。
+  - 已执行 `obsidian-knowledge-readback` 只读预检，但未返回相关 Markdown 相对路径；Vault 中未找到可支持本轮判断的依据。
+- 已完成的 Windows 补全:
+  - 更新 `skill-center/skills/obsidian-knowledge-capture/SKILL.md` 的 Windows 镜像 allowlist，加入源技能新增的 Codex 线程 ID `01a02d53-b338-7343-9e9d-c052d9efcb51`，并保留现有 Windows 专属的 PowerShell 预检、`%USERPROFILE%` OpenSSH 路径、远端 Linux Vault 路径、键盘无关及无需额外 `.ps1`/`.cmd` 写入包装器说明。
+  - 本轮不需要新增 PowerShell 启动器、Windows 路径处理、键盘快捷键映射、命令包装器或其他仓库资产；Mac 与通用实现保持不变。
+- 未完成的补全:
+  - 无内容性 Windows 转译缺口、删除迁移或缺失仓库资产。
+  - 当前 macOS 主机没有 `pwsh` 或 `powershell`，未执行 Windows 原生 PowerShell 语法解析、OpenSSH 实机连接和端到端回归；该项待 Windows 环境验证。
+- 验证:
+  - 源技能与 Windows 镜像逐行复核后仅保留预期的 Windows 专属章节差异；Windows 资产存在性、相关静态检查和 `git diff --check` 通过。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。就截至 `2026-09-17 21:13:21 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 内容覆盖均已完整；仅 Windows 原生 PowerShell/OpenSSH 回归仍待相应 Windows 环境执行。

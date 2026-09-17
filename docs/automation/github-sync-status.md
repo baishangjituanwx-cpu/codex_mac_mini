@@ -7828,6 +7828,16 @@
 - 新发现待后续同步的 `obsidian-knowledge-capture` 仓库镜像变更：`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-capture/SKILL.md` 的远端 Vault 写入线程白名单新增 Codex 线程 ID `01a0857a-5528-7e72-ab62-5aebdcf59b18`。
 - 本批次为 `0 added / 1 modified / 0 deleted`，无新增 `.py` 文件；后续 GitHub 同步应纳入该技能镜像文件与本轮监控台账。
 
+## 2026-09-18 00:00:00 CST GitHub Sync Execution
+
+- 前置判断：`windows-translation-status.md` 最新 dated entry 为 `2026-09-17 22:03:41 CST (+0800)`，明确确认 Mac / Windows 内容覆盖均已完整，因此允许同步；Windows 原生 PowerShell/OpenSSH 回归仍待 Windows 环境执行。
+- Obsidian 回读：已执行只读预检，未返回相关 Markdown 相对路径；Vault 中未找到可支持本轮项目判断的依据。本轮判断基于仓库 Windows 转译状态台账与 Git 差异。
+- 待同步内容：`docs/automation/skill-change-monitor.md`、`docs/automation/windows-translation-status.md`、本执行台账，以及 `skill-center/skills/obsidian-knowledge-capture/SKILL.md` 的 Windows 镜像 allowlist 更新；没有新的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment 实现文件。
+- 分支与提交：
+  - `codex/windows-version-20260411`：提交并推送共享自动化台账与 `obsidian-knowledge-capture` Windows 技能镜像，提交消息为 `Sync September 17 automation ledgers and Obsidian capture mirror`。
+  - `codex/default-python-sync`：提交并推送共享自动化台账，提交消息为 `Sync September 17 shared automation ledgers`；无 generic/Mac 实现代码可单独同步。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；Windows 原生 PowerShell/OpenSSH 端到端回归仍待相应 Windows 环境执行。
+
 ## 2026-09-16 00:02:54 CST (+0800) GitHub Sync Execution
 
 - 前置判断：`windows-translation-status.md` 最新 dated entry 为 `2026-09-15 22:03:07 CST (+0800)`，明确确认 Mac / Windows 内容覆盖均已完整；Windows 原生 PowerShell/OpenSSH 回归仍受当前 macOS 环境限制，因此允许同步内容，但不宣称已完成 Windows 原生回归。
@@ -7857,3 +7867,13 @@
   - `codex/windows-version-20260411`：同步共享自动化监控台账、Windows 状态台账与本执行记录。
   - `codex/default-python-sync`：同步共享自动化监控/状态台账与本执行记录；无 generic/Mac 实现代码可单独提交。
 - 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；无新的 Windows bridge/deployment 实现；Windows 原生 PowerShell/OpenSSH 端到端回归仍待相应 Windows 环境执行。
+
+## 2026-09-17 19:01:47 CST (+0800) Skill Change Batch
+
+- 新发现待后续同步的 `obsidian-knowledge-capture` 变更：`/Users/baishangjituan/.codex/skills/obsidian-knowledge-capture/SKILL.md` 的远端 Vault 写入线程 allowlist 新增 Codex 线程 ID `01a02d53-b338-7343-9e9d-c052d9efcb51`。
+- 本批次为 `0 added / 1 modified / 0 deleted`，无新增 `.py` 文件；后续 GitHub 同步应评估仓库技能镜像并纳入本轮监控台账。
+
+## 2026-09-17 22:03:54 CST (+0800) Skill Change Batch
+
+- 新发现待后续同步的 `obsidian-knowledge-capture` 仓库镜像变更：`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-capture/SKILL.md` 的远端 Vault 写入线程 allowlist 新增 Codex 线程 ID `01a02d53-b338-7343-9e9d-c052d9efcb51`。
+- 本批次为 `0 added / 1 modified / 0 deleted`，无新增 `.py` 文件；后续 GitHub 同步应纳入该技能镜像文件与本轮监控台账。
