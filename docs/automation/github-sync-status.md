@@ -7886,3 +7886,13 @@
 
 - 新发现待后续同步的 `obsidian-knowledge-capture` 仓库镜像变更：`/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-capture/SKILL.md` 的远端 Vault 写入线程 allowlist 新增 Codex 线程 ID `01a02d53-b338-7343-9e9d-c052d9efcb51`。
 - 本批次为 `0 added / 1 modified / 0 deleted`，无新增 `.py` 文件；后续 GitHub 同步应纳入该技能镜像文件与本轮监控台账。
+
+## 2026-09-19 00:04:00 CST (+0800) GitHub Sync Execution
+
+- 前置条件：最新 Windows 转译状态记录 `2026-09-18 22:02:02 CST (+0800)` 明确确认 Mac 与 Windows 内容覆盖完整；仅 Windows 原生 PowerShell/OpenSSH 回归仍待 Windows 环境验证，不构成本轮内容性阻塞。
+- 检查结果：本轮新增/更新仅为 `docs/automation/skill-change-monitor.md` 与 `docs/automation/windows-translation-status.md` 的 2026-09-18 监控和状态台账；没有新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 或 `.py` 实现文件。
+- 分支与提交：
+  - `codex/windows-version-20260411`：提交并推送 `38746d6 Sync September 18 automation ledgers`；随后记录本次执行，提交消息为 `Record September 19 GitHub sync execution`。
+  - `codex/default-python-sync`：提交并推送 `fc6ca40 Sync September 18 automation ledgers`；随后记录本次执行，提交消息为 `Record September 19 GitHub sync execution`。
+- Obsidian 回读：已按 `obsidian-knowledge-readback` 执行只读预检，查询“GitHub 夜间同步 Windows Mac 翻译状态”，未返回相关 Markdown 相对路径；Vault 中未找到可支持本轮判断的依据。本轮实际依据为仓库状态台账与 Git 差异。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；Windows 原生 PowerShell/OpenSSH 端到端回归仍待相应 Windows 环境执行。
