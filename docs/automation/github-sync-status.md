@@ -7916,3 +7916,9 @@
   - `codex/default-python-sync`：提交并推送 `fc6ca40 Sync September 18 automation ledgers`；随后记录本次执行，提交消息为 `Record September 19 GitHub sync execution`。
 - Obsidian 回读：已按 `obsidian-knowledge-readback` 执行只读预检，查询“GitHub 夜间同步 Windows Mac 翻译状态”，未返回相关 Markdown 相对路径；Vault 中未找到可支持本轮判断的依据。本轮实际依据为仓库状态台账与 Git 差异。
 - 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；Windows 原生 PowerShell/OpenSSH 端到端回归仍待相应 Windows 环境执行。
+
+## 2026-09-20 00:06:40 CST GitHub Sync Execution Finalization
+
+- 本轮最终远端结果：`codex/windows-version-20260411` 为 `0baf0b6 Record September 20 GitHub sync execution`；`codex/default-python-sync` 为 `3af8e08 Record September 20 GitHub sync execution`，两者均已通过 `git ls-remote` 验证。
+- 本轮实际同步内容仅为共享自动化台账：`docs/automation/skill-change-monitor.md` 与 `docs/automation/windows-translation-status.md`；无新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 或 `.py` 实现文件。
+- 跳过 `.codex-*` / `.skill-monitor-*` 本地基线、标记、快照和临时参考文件；Windows 原生 PowerShell/OpenSSH 回归仍待 Windows 环境验证。
