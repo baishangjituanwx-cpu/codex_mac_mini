@@ -1,0 +1,4 @@
+interface:
+  display_name: "微信小店售后地址铺货流程"
+  short_description: "铺货前检查、维护并准确选择微信小店售后及退货地址配置"
+  default_prompt: "使用 $wechat-shop-return-address 检查并配置本次微信小店铺货所需的售后退货地址。"
