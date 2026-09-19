@@ -7909,6 +7909,6 @@
 
 ## 2026-09-20 00:06:40 CST GitHub Sync Execution Finalization
 
-- 本轮最终远端结果：`codex/windows-version-20260411` 为 `cd57cb2 Finalize September 20 GitHub sync ledger`；`codex/default-python-sync` 为本次收尾提交后的最新默认分支 tip，两者均通过远端引用验证。
+- 本轮最终远端结果：`codex/windows-version-20260411` 为 `74b65dd Correct September 20 sync ledger tips`；`codex/default-python-sync` 为 `4d0284a Finalize September 20 GitHub sync ledger`，两者均已通过 `git ls-remote` 验证。
 - 本轮实际同步内容仅为共享自动化台账：`docs/automation/skill-change-monitor.md` 与 `docs/automation/windows-translation-status.md`；无新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 或 `.py` 实现文件。
 - 跳过 `.codex-*` / `.skill-monitor-*` 本地基线、标记、快照和临时参考文件；Windows 原生 PowerShell/OpenSSH 回归仍待 Windows 环境验证。
