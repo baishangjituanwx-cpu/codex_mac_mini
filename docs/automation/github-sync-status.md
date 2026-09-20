@@ -12,6 +12,24 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-09-20 12:01:12 CST (+0800)
+
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/scm-all-products-permanent-delete/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/scm-all-products-permanent-delete/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/scm-group-bulk-remove/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/scm-group-bulk-remove/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/scm-homepage-batch-select/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/scm-homepage-batch-select/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/scm-single-product-select/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/scm-single-product-select/agents/openai.yaml`
+  - `/Users/baishangjituan/.codex/skills/scm-source-refresh-sku-diagnosis/SKILL.md`
+  - `/Users/baishangjituan/.codex/skills/scm-source-refresh-sku-diagnosis/agents/openai.yaml`
+- 同步提示:
+  - `skill-monitor` 以 `2026-09-20 10:59:38 CST (+0800)` 为基线发现 `10 added / 0 modified / 0 deleted`。
+  - 新批次包含 5 个 SCM 商品管理技能及 agent 元数据，覆盖批量/单品选品、分组移除、永久删除和商品源/SKU 只读诊断。
+  - 本轮没有新增 `.py` 文件；后续 GitHub 同步应先将这些本地 skill 镜像进仓库 `skill-center/`，并带上本轮监控记录。
+
 ## 2026-09-15 14:34:30 CST (+0800)
 
 - 新发现的待同步批次:
@@ -7922,3 +7940,33 @@
 - 本轮最终远端结果：`codex/windows-version-20260411` 为 `cd57cb2 Finalize September 20 GitHub sync ledger`；`codex/default-python-sync` 为 `4d0284a Finalize September 20 GitHub sync ledger`，两者均已通过 `git ls-remote` 验证。
 - 本轮实际同步内容仅为共享自动化台账：`docs/automation/skill-change-monitor.md` 与 `docs/automation/windows-translation-status.md`；无新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 或 `.py` 实现文件。
 - 跳过 `.codex-*` / `.skill-monitor-*` 本地基线、标记、快照和临时参考文件；Windows 原生 PowerShell/OpenSSH 回归仍待 Windows 环境验证。
+
+## 2026-09-20 12:02:25 CST Skill Change Batch
+
+- 新发现待后续同步的 SCM custom skills：`/Users/baishangjituan/.codex/skills/scm-all-products-permanent-delete/`、`scm-group-bulk-remove/`、`scm-homepage-batch-select/`、`scm-single-product-select/`、`scm-source-refresh-sku-diagnosis/`，每个目录包含 `SKILL.md` 与 `agents/openai.yaml`。
+- 本批次为 `10 added / 0 modified / 0 deleted`，无新增 `.py` 文件；后续 GitHub 同步应评估这些 SCM 技能是否需要纳入仓库技能镜像。
+
+## 2026-09-20 22:08:07 CST Skill Change Batch
+
+- 新发现待后续同步的 SCM 技能镜像批次：新增 5 个 SCM 技能的 `SKILL.md` 与 `agents/openai.yaml`，并修改 `skill-center/README.md`、`skill-center/skills-manifest.txt`。
+- 本批次为 `10 added / 2 modified / 0 deleted`，无新增 `.py` 文件；后续 GitHub 同步应纳入上述 12 个技能镜像与清单变更。
+
+## 2026-09-21 00:02:04 CST (+0800) GitHub Sync Execution
+
+- 前置条件：最新 Windows 转译状态记录 `2026-09-20 22:06:44 CST (+0800)` 明确确认 Mac 与 Windows 内容覆盖完整；仅 Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待相应 Windows 环境验证，不构成本轮内容性阻塞。
+- 检查结果：本轮同步 5 个 SCM Windows 技能镜像及对应 `agents/openai.yaml`，并更新 `skill-center/README.md`、`skill-center/skills-manifest.txt`、`docs/windows-version-guide.md`；共享自动化台账同步包含 `docs/automation/skill-change-monitor.md` 与 `docs/automation/windows-translation-status.md`。没有新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 或 `.py` 实现文件。
+- 分支与提交：
+  - `codex/windows-version-20260411`：`c0757fa Sync September 20 SCM Windows skill mirrors`、`3b4af91 Sync September 20 automation ledgers`，本记录随后以 `Record September 21 GitHub sync execution` 提交。
+  - `codex/default-python-sync`：同步共享自动化台账并记录本次执行；不带入 SCM Windows 专属镜像、Windows 指南或清单实现。
+- Obsidian 回读：已按 `obsidian-knowledge-readback` 执行只读预检，查询“GitHub 夜间同步 Windows Mac 翻译”，未返回相关 Markdown 路径；Vault 中未找到可支持本轮判断的依据。本轮实际依据为仓库状态台账与 Git 差异。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待相应 Windows 环境执行。
+
+## 2026-09-21 00:00:00 CST GitHub Sync Execution
+
+- 前置条件：最新 Windows 转译状态记录 `2026-09-20 22:06:44 CST (+0800)` 明确确认 Mac 与 Windows 内容覆盖完整；仅 Windows 原生 PowerShell/OpenSSH/运行时回归仍待 Windows 环境验证，不构成本轮内容性阻塞。
+- Obsidian 回读：已按 `obsidian-knowledge-readback` 执行只读预检，查询“GitHub 夜间同步 Windows Mac 翻译状态”，未返回相关 Markdown 相对路径；Vault 中未找到可支持本轮判断的依据。本轮实际依据为仓库状态台账与 Git 差异。
+- 检查结果：同步 5 个 SCM Windows 技能镜像及其 5 个 `agents/openai.yaml`、`skill-center/README.md`、`skill-center/skills-manifest.txt`、`docs/windows-version-guide.md`，以及共享自动化台账 `docs/automation/skill-change-monitor.md` 与 `docs/automation/windows-translation-status.md`；没有新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 或 `.py` 实现文件。
+- 分支与提交：
+  - `codex/windows-version-20260411`：提交并推送 `c0757fa Sync September 20 SCM Windows skill mirrors`、`3b4af91 Sync September 20 automation ledgers`，随后追加本执行记录，提交消息为 `Record September 21 GitHub sync execution`。
+  - `codex/default-python-sync`：同步共享自动化台账并追加本执行记录，计划提交消息分别为 `Sync September 20 shared automation ledgers`、`Record September 21 GitHub sync execution`；未带入 Windows 专属 SCM 技能镜像。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；Windows 原生 PowerShell/OpenSSH/运行时端到端回归仍待 Windows 环境执行。
