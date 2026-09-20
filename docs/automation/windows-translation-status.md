@@ -4588,3 +4588,49 @@
   - 17 个关键 Windows 入口/文档资产存在；4 个 Bash 脚本 `bash -n`、3 个 Bridge Node 脚本 `node --check` 及本状态台账的 `git diff --check` 均通过。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。就截至 `2026-09-19 21:50:02 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 内容覆盖今日均完整；仅 Windows 原生 PowerShell/OpenSSH 回归仍待相应 Windows 环境执行。
+
+## 2026-09-20 22:01:51 CST (+0800)
+
+- 处理时间:
+  - `2026-09-20 22:01:51 CST (+0800)` / `2026-09-20 14:01:51 UTC (+0000)`
+- 输入来源:
+  - 复核上一条 Windows 转译状态记录 `2026-09-19 22:02:32 CST (+0800)` 之后追加的全部 `skill-change-monitor.md` 条目，覆盖至最新记录 `2026-09-20 21:10:40 CST (+0800)`。
+  - 本增量窗口内所有 monitor 批次均为 `新增 0 / 修改 0 / 删除 0`；未出现新的 custom-skill 行为、新增 `.py` 文件、删除项或 supporting automation 资产。
+  - 已执行 `obsidian-knowledge-readback` 只读预检，但未返回相关 Markdown 相对路径；Vault 中未找到可支持本轮判断的依据。
+- 已完成的 Windows 补全:
+  - 本轮为 no-op，实际翻译 `0`：没有新的 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库配套资源需要翻译；Mac 与通用实现保持不变。
+  - 静态复核确认既有 Windows 入口与资源仍完整，包括平台接管启动器、`skill-center/scripts/sync-skills.ps1`、Obsidian 回读 `obsidian-preflight.ps1`、Hermes/社媒/XYQ/Seedance 包装器、Feishu Bridge Windows 模板与安装入口、视频号 Task Scheduler 入口，以及现有 Windows 路径、快捷键和安全边界说明。
+- 未完成的补全:
+  - 无内容性 Windows 转译缺口、删除迁移或缺失仓库资产。
+  - 当前 macOS 主机没有 `pwsh` 或 `powershell`，未执行 Windows 原生 PowerShell 语法解析、OpenSSH 实机连接和端到端回归；该项仍待 Windows 环境验证。
+- 验证:
+  - 17 个关键 Windows 入口/文档资产存在；4 个 Bash 脚本 `bash -n`、2 个 Bridge Node 脚本 `node --check` 及本状态台账的 `git diff --check` 均通过。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。就截至 `2026-09-20 21:10:40 CST (+0800)` 的最新 monitor 内容而言，Mac 与 Windows 内容覆盖今日均完整；仅 Windows 原生 PowerShell/OpenSSH 回归仍待相应 Windows 环境执行。
+
+## 2026-09-20 22:06:44 CST (+0800)
+
+- 处理时间:
+  - `2026-09-20 22:06:44 CST (+0800)` / `2026-09-20 14:06:44 UTC (+0000)`
+- 输入来源:
+  - 复核上一条 Windows 转译状态记录 `2026-09-19 22:02:32 CST (+0800)` 之后的 `skill-change-monitor.md` 条目，覆盖至最新记录 `2026-09-20 21:10:40 CST (+0800)`。
+  - 唯一需要翻译的非零批次是 `2026-09-20 12:01:12 CST (+0800)` / `12:02:25 CST (+0800)`：新增 5 个 SCM custom skill 及 5 个 `agents/openai.yaml`，共 10 个文件；其余批次均为新增 0 / 修改 0 / 删除 0。此前同日 `22:01:51` 的 no-op 记录未覆盖该批次，本条为更正后的权威结果。
+  - 已执行 `obsidian-knowledge-readback` 只读预检；未返回相关 Markdown 相对路径，Vault 中未找到支持本轮判断的依据。
+- 已完成的 Windows 补全:
+  - 新增 5 个 Windows 可用 SCM 技能镜像及对应 agent 元数据：
+    - `skill-center/skills/scm-all-products-permanent-delete/`
+    - `skill-center/skills/scm-group-bulk-remove/`
+    - `skill-center/skills/scm-homepage-batch-select/`
+    - `skill-center/skills/scm-single-product-select/`
+    - `skill-center/skills/scm-source-refresh-sku-diagnosis/`
+  - 每个镜像均保留 Mac / 通用业务正文，并补充 Windows Repo Mirror Notes：复用 Codex 浏览器控制能力、不新增临时 `.ps1` / `.cmd` 业务包装器、使用 `%USERPROFILE%\\.codex\\skills\\...` 安装路径、带引号的 `C:/Users/<name>/...` 或 UNC / 映射盘路径、`Control` / `F5` / `Alt` 浏览器快捷键，以及不把 Cookie、Token、密钥或原始请求头写入 Windows 文件、任务参数和环境变量。
+  - 更新 `skill-center/skills-manifest.txt`，登记 5 个 SCM 技能；更新 `skill-center/README.md` 镜像数量与示例；更新 `docs/windows-version-guide.md` 的 SCM Windows 使用说明。
+  - 未修改或删除 Mac / 通用源技能实现，也没有为浏览器型 SCM 流程创建不必要的 PowerShell、命令包装器或后台任务。
+- 未完成的补全:
+  - 无内容性 Windows 转译缺口、删除迁移或缺失仓库资产。
+  - 当前 macOS 主机没有 `pwsh` 或 `powershell`，未执行 Windows 原生 PowerShell 语法解析、OpenSSH、浏览器登录和端到端回归；该项待相应 Windows 环境验证。
+- 验证:
+  - 5 个镜像的源技能正文前缀逐字一致，5 个 agent 元数据与源文件逐字一致；5 个清单条目和 10 个新增文件均存在。
+  - `git diff --check` 通过。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。就截至 `2026-09-20 21:10:40 CST (+0800)` 的最新 monitor 内容而言，今日 Mac 与 Windows 内容覆盖均已完整；仅 Windows 原生运行时回归仍待相应 Windows 环境执行。
