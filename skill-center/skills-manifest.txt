@@ -39,6 +39,11 @@ playwright
 playwright-interactive
 render-deploy
 screenshot
+scm-all-products-permanent-delete
+scm-group-bulk-remove
+scm-homepage-batch-select
+scm-single-product-select
+scm-source-refresh-sku-diagnosis
 security-best-practices
 security-ownership-map
 security-threat-model

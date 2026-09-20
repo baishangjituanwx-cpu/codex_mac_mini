@@ -108,6 +108,14 @@ C:\content-pipeline
 - 本地路径从 `/Users/...` 变成 `C:\...`
 - 飞书桥接后台不再走 `launchd`
 
+### SCM 技能镜像
+
+SCM 选品与商品诊断技能使用同一套 Codex 浏览器控制能力，不需要额外的 PowerShell 或 `.cmd` 业务启动器。Windows 上从 `%USERPROFILE%\\.codex\\skills\\` 同步技能后：
+
+- 浏览器刷新、地址栏、全选和前进/后退分别使用 `Control+R`/`F5`、`Control+L`、`Control+A`、`Alt+Left`/`Alt+Right`；
+- 截图、批次记录和诊断报告使用带引号的 `C:/Users/<name>/...` 路径，共享资料使用带引号的 UNC 或映射盘路径；
+- SCM 的永久删除、分组移除、批量选品、单品选品和 SKU 诊断仍遵守页面授权、异步回读和只读边界，不改写成临时 `curl`、PowerShell 或后台任务。
+
 ## 5. 当前 Windows 版最适合怎么用
 
 推荐顺序:
