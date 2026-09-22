@@ -7989,5 +7989,5 @@
 - 分支与提交：
   - `codex/windows-version-20260411`：计划提交 `Sync September 22 automation ledgers`，包含 `docs/automation/skill-change-monitor.md`、`docs/automation/windows-translation-status.md` 与本执行记录。
   - `codex/default-python-sync`：计划提交 `Sync September 22 shared automation ledgers`，包含共享自动化台账与本执行记录；不带入 Windows 专属实现。
-- 推送核验：本地 `origin` 引用已指向 Windows `1e25e548ec8b11ed0d20ad53686cb3979e5bb2e`、default `0f233bdc0be6a579333619767c5edb4f9f8f6c43`；本轮 `git fetch` / GitHub SSH 连接被远端关闭，后续提交推送与 `git ls-remote` 核验需重试。
+- 推送核验：Windows 已提交并推送 `b7ebff5 Sync September 22 automation ledgers`，default 已提交并推送 `970e872 Sync September 22 automation ledgers`；最终 `git ls-remote` 校验通过，远端 tip 分别为 Windows `b7ebff5ee25b0f313107f8972493ff1079c01e5e`、default `970e8729e64ab060c158d4f4810c9c2841e7a89b`。此前一次 SSH 连接关闭已由重试解决。
 - 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；Windows 原生运行时回归仍待相应 Windows 环境执行。
