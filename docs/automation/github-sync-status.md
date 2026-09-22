@@ -7980,3 +7980,24 @@
   - `codex/windows-version-20260411`：`7cd9faf Sync September 21 automation ledgers`，包含台账增量与本次执行记录。
   - `codex/default-python-sync`：`cea0108 Sync September 21 automation ledgers`，包含共享台账增量与本次执行记录；不带入 Windows 专属实现。
 - 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；无新的 generic/Mac Python、Windows bridge 或 deployment 实现；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待相应 Windows 环境执行。
+
+## 2026-09-23 00:04:15 CST GitHub Sync Execution
+
+- 前置条件：最新 Windows 转译状态记录 `2026-09-22 22:04:06 CST (+0800)` 明确确认 Mac 与 Windows 内容覆盖完整；仅 Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待相应 Windows 环境验证，不构成本轮内容性阻塞。
+- Obsidian 回读：已按 `obsidian-knowledge-readback` 执行只读预检，查询“GitHub 夜间同步 Windows 翻译 Mac 完成”，未返回相关 Markdown 相对路径；Vault 中未找到可支持本轮项目判断的依据。本轮实际依据为仓库状态台账与 Git 差异。
+- 检查结果：待同步内容仅为 `docs/automation/skill-change-monitor.md` 与 `docs/automation/windows-translation-status.md` 的 2026-09-22 监控/状态台账增量；没有新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 或 `.py` 实现文件。
+- 分支与提交：
+  - `codex/windows-version-20260411`：同步共享自动化台账与本执行记录，提交消息为 `Sync September 22 automation ledgers`。
+  - `codex/default-python-sync`：同步共享自动化台账与本执行记录，提交消息为 `Sync September 22 automation ledgers`；未带入 Windows 专属实现。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；无新的 generic/Mac Python、Windows bridge 或 deployment 实现；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待 Windows 环境执行。
+
+## 2026-09-23 00:04:08 CST (+0800) GitHub Sync Execution
+
+- 前置条件：最新 Windows 转译状态记录 `2026-09-22 22:04:06 CST (+0800)` 明确确认 Mac 与 Windows 内容覆盖完整；仅 Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待相应 Windows 环境验证，不构成本轮内容阻塞。
+- Obsidian 回读：已执行只读预检，未返回相关 Markdown 相对路径；Vault 中未找到可支持本轮判断的依据。本轮实际依据为仓库 Windows 转译状态台账、监控台账与 Git 差异。
+- 检查结果：本轮新增监控内容均为 `新增 0 / 修改 0 / 删除 0` 的 no-op 台账；没有新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 或 `.py` 实现文件。
+- 分支与提交：
+  - `codex/windows-version-20260411`：计划提交 `Sync September 22 automation ledgers`，包含 `docs/automation/skill-change-monitor.md`、`docs/automation/windows-translation-status.md` 与本执行记录。
+  - `codex/default-python-sync`：计划提交 `Sync September 22 shared automation ledgers`，包含共享自动化台账与本执行记录；不带入 Windows 专属实现。
+- 推送核验：本地 `origin` 引用已指向 Windows `1e25e548ec8b11ed0d20ad53686cb3979e5bb2e`、default `0f233bdc0be6a579333619767c5edb4f9f8f6c43`；本轮 `git fetch` / GitHub SSH 连接被远端关闭，后续提交推送与 `git ls-remote` 核验需重试。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；Windows 原生运行时回归仍待相应 Windows 环境执行。
