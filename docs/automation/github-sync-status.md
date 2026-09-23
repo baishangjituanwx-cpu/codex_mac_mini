@@ -8009,5 +8009,5 @@
 - 检查结果：待同步内容仅为 `docs/automation/skill-change-monitor.md` 与 `docs/automation/windows-translation-status.md` 的 2026-09-23 监控/状态台账增量；没有新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 或 `.py` 实现文件。
 - 分支与提交：
   - `codex/windows-version-20260411`：提交并推送共享自动化台账与本执行记录，提交消息为 `Sync September 23 automation ledgers`。
-  - `codex/default-python-sync`：同步共享自动化台账与本执行记录，提交消息为 `Sync September 23 shared automation ledgers`；未带入 Windows 专属实现。
+  - `codex/default-python-sync`：同步共享自动化台账与本执行记录，提交消息为 `Sync September 23 automation ledgers`；未带入 Windows 专属实现。
 - 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；无新的 Windows bridge/deployment 实现；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待相应 Windows 环境执行。
