@@ -16,7 +16,7 @@
 
 - 前置门禁：最新 Windows 转译状态为 `2026-09-24 22:02:34 CST (+0800)`，明确确认 Mac / Windows 内容覆盖完整；同步继续。
 - `codex/windows-version-20260411`：提交并推送 `b550da3 Sync September 24 automation ledgers`，包含本轮 monitor、Windows 转译状态与共享执行台账；随后提交并推送 `4c9c72a Sync September 24 Obsidian Windows skill mirror`，包含 Windows 专属 `obsidian-knowledge-capture` 技能镜像更新。
-- `codex/default-python-sync`：待将共享自动化台账提交 cherry-pick 到默认分支；未带入 Windows 专属技能镜像。
+- `codex/default-python-sync`：已 cherry-pick 共享自动化台账为 `13f5a77 Sync September 24 automation ledgers`，并记录本次执行为 `6eedd19 Record September 25 GitHub sync execution`；未带入 Windows 专属技能镜像。
 - 跳过项：没有新的 generic/Mac-compatible Python takeover、Windows bridge 或 deployment 实现；`.codex-*`、`.skill-monitor-*` 基线/标记/快照/临时参考文件未提交；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待 Windows 环境执行。
 
 ## 2026-09-24 17:32:20 CST (+0800)
