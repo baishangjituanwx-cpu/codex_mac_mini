@@ -12,6 +12,15 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-09-24 17:32:20 CST (+0800)
+
+- 新发现的待同步批次:
+  - `/Users/baishangjituan/.codex/skills/obsidian-knowledge-capture/SKILL.md`
+- 同步提示:
+  - `skill-monitor` 以 `2026-09-24 16:32:08 CST (+0800)` 为基线发现 `0 added / 1 modified / 0 deleted`。
+  - 本地 `obsidian-knowledge-capture` 写入线程 allowlist 新增 3 个 Codex 线程 ID，并移除了 `Windows Repo Mirror Notes`；后续 GitHub 同步应评估并刷新仓库中的对应 skill 镜像，同时带上本轮监控记录。
+  - 本轮没有新增 `.py` 文件。
+
 ## 2026-09-20 12:01:12 CST (+0800)
 
 - 新发现的待同步批次:
@@ -8011,3 +8020,23 @@
   - `codex/windows-version-20260411`：提交并推送共享自动化台账与本执行记录，提交消息为 `Sync September 23 automation ledgers`。
   - `codex/default-python-sync`：同步共享自动化台账与本执行记录，提交消息为 `Sync September 23 automation ledgers`；未带入 Windows 专属实现。
 - 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；无新的 Windows bridge/deployment 实现；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待相应 Windows 环境执行。
+
+## 2026-09-24 15:31:36 CST (+0800) Skill Change Batch
+
+- 新发现待后续同步的本地技能说明修改：`/Users/baishangjituan/.codex/skills/obsidian-knowledge-capture/SKILL.md` 的远端 Vault 写入线程 allowlist 新增 `01a0a9ad-889b-7df2-b4d7-ba296ca73d1e` 和 `01a0d237-48ab-7472-9cd3-6802127d18e1`。
+- 本批次为 `0 added / 1 modified / 0 deleted`，无新增 `.py` 文件；后续 GitHub 同步应将这两个 allowlist 条目纳入仓库技能镜像。
+
+## 2026-09-24 17:35:59 CST (+0800) Skill Change Batch
+
+- 新发现待后续同步的本地技能说明修改：`/Users/baishangjituan/.codex/skills/obsidian-knowledge-capture/SKILL.md` 的远端 Vault 写入线程 allowlist 新增 `01a0d29a-0339-7561-b841-0942d1ca5505`。
+- 本批次为 `0 added / 1 modified / 0 deleted`，无新增 `.py` 文件；后续 GitHub 同步应将该 allowlist 条目纳入仓库技能镜像。
+
+## 2026-09-24 18:32:15 CST (+0800) Skill Change Batch
+
+- 新发现待后续同步的本地技能说明修改：`/Users/baishangjituan/.codex/skills/obsidian-knowledge-capture/SKILL.md` 的远端 Vault 写入线程 allowlist 新增 `01a0d2cf-5769-7343-b583-880f4787bf69`。
+- 本批次为 `0 added / 1 modified / 0 deleted`，无新增 `.py` 文件；后续 GitHub 同步应将该 allowlist 条目纳入仓库技能镜像。
+
+## 2026-09-24 22:35:04 CST (+0800) Skill Change Batch
+
+- 新发现待后续同步的仓库技能镜像修改：`skill-center/skills/obsidian-knowledge-capture/SKILL.md` 已将远端 Vault 写入线程 allowlist 与 live skill 对齐，补齐 `01a0a9ad-889b-7df2-b4d7-ba296ca73d1e`、`01a0d237-48ab-7472-9cd3-6802127d18e1`、`01a0d29a-0339-7561-b841-0942d1ca5505`、`01a0d2cf-5769-7343-b583-880f4787bf69`。
+- 本批次为 `0 added / 1 modified / 0 deleted`，无新增 `.py` 文件；后续 GitHub 同步应纳入该镜像文件及 `docs/automation/skill-change-monitor.md` 的对应记录。
