@@ -8031,8 +8031,8 @@
 ## 2026-09-25 00:02:43 CST (+0800) GitHub 夜间同步执行记录
 
 - 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-09-24 22:02:34 CST (+0800)`，确认 Mac / Windows 内容均完整；仅 Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待相应 Windows 环境验证，因此允许同步。
-- `codex/windows-version-20260411`：同步 Windows 专属 `skill-center/skills/obsidian-knowledge-capture/SKILL.md` 镜像，提交消息为 `Sync September 24 Windows skill mirror`；随后提交共享自动化台账，提交消息为 `Record September 25 GitHub sync execution`。
-- `codex/default-python-sync`：同步共享 `docs/automation/skill-change-monitor.md`、`docs/automation/windows-translation-status.md`、`docs/automation/github-sync-status.md`，提交消息为 `Record September 25 GitHub sync execution`；未带入 Windows 专属镜像。
+- `codex/windows-version-20260411`：已由 `b550da3 Sync September 24 automation ledgers` 同步共享台账，并由 `4c9c72a Sync September 24 Obsidian Windows skill mirror` 同步 Windows 专属镜像；本记录由 `Record September 25 GitHub sync execution` 补充。
+- `codex/default-python-sync`：已由 `13f5a77 Sync September 24 automation ledgers` 同步共享 `docs/automation/skill-change-monitor.md`、`docs/automation/windows-translation-status.md`、`docs/automation/github-sync-status.md`，本记录由 `6eedd19 Record September 25 GitHub sync execution` 补充；未带入 Windows 专属镜像。
 - 本轮没有新的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment 实现文件；共享台账包含 2026-09-24 monitor 批次与本执行记录。
 - 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待相应 Windows 环境执行。
 
