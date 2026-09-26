@@ -1,0 +1,3 @@
+interface:
+  display_name: "SCM 商品源与 SKU 诊断"
+  short_description: "只读核查异步刷新和规格可售状态"

@@ -1,0 +1,29 @@
+selectors:
+  title_input_candidates:
+    - "input[placeholder*='标题']"
+    - "input[placeholder*='请输入标题']"
+    - "input"
+  body_editor_candidates:
+    - ".DraftEditor-editorContainer [contenteditable='true']"
+    - ".public-DraftEditor-content[contenteditable='true']"
+    - "[contenteditable='true']"
+buttons:
+  publish:
+    - "发布"
+    - "发表"
+signals:
+  login_required:
+    - "登录后继续"
+    - "手机号登录"
+    - "注册/登录"
+  success:
+    - "发布成功"
+    - "文章发布成功"
+checkpoints:
+  manual:
+    - "登录态恢复"
+    - "编辑器异常时人工重试"
+verify:
+  management_status:
+    - "已发布"
+    - "公开"
