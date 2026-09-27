@@ -20,6 +20,16 @@
 - 分支与提交：计划将共享台账以 `Sync September 25 automation ledgers and record September 26 GitHub sync execution` 提交并推送到 `codex/windows-version-20260411`，再同步到 `codex/default-python-sync`；不带入 Windows 专属实现。
 - 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待相应 Windows 环境执行。
 
+## 2026-09-28 00:04:17 CST GitHub 夜间同步执行记录
+
+- 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-09-27 22:03:32 CST (+0800)`，明确确认 Mac / Windows 内容覆盖完整；仅 Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待相应 Windows 环境验证，因此允许同步。
+- Obsidian 回读：已按 `obsidian-knowledge-readback` 执行只读预检，未返回相关 Markdown 相对路径；Vault 中未找到可支持本轮项目判断的依据。本轮实际依据为仓库状态台账与 Git 差异。
+- 检查结果：待同步内容为 `docs/automation/skill-change-monitor.md`、`docs/automation/windows-translation-status.md` 与本执行记录；本轮监控批次为自动化 no-op 台账增量，没有新的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment 实现，也没有新增 `.py` 文件。
+- 分支与提交：
+  - `codex/windows-version-20260411`：提交并推送本轮共享自动化台账与执行记录，提交消息为 `Sync September 27 automation ledgers and record September 28 GitHub sync execution`。
+  - `codex/default-python-sync`：同步相同共享自动化台账与执行记录，不带入 Windows 专属实现。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待相应 Windows 环境执行。
+
 ## 2026-09-25 00:42:22 CST (+0800)
 
 - 新发现的待审计变更批次:
