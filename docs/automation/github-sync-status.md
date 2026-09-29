@@ -12,6 +12,16 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-09-30 00:02:22 CST (+0800) GitHub 夜间同步执行记录
+
+- 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-09-29 22:04:20 CST (+0800)`，明确确认 Mac / Windows 内容覆盖完整；仅 Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待 Windows 环境验证，因此允许同步。
+- Obsidian 回读：已执行只读预检，查询“GitHub 夜间同步 Windows 翻译 Mac 完成”，未返回相关 Markdown 相对路径；Vault 中未找到可支持本轮项目判断的依据。本轮实际依据为仓库状态台账与 Git 差异。
+- 检查结果：待同步内容为 `docs/automation/skill-change-monitor.md`、`docs/automation/windows-translation-status.md` 与本执行记录；新增 monitor 批次均为 `新增 0 / 修改 0 / 删除 0`，没有新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 或 `.py` 实现文件。
+- 分支与提交：
+  - `codex/windows-version-20260411`：同步共享自动化台账与本执行记录；未新增 Windows 专属实现。
+  - `codex/default-python-sync`：同步相同共享自动化台账与本执行记录；不带入 Windows 专属实现。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待相应 Windows 环境执行。
+
 ## 2026-09-26 00:02:44 CST (+0800) GitHub 夜间同步执行记录
 
 - 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-09-25 22:04:38 CST (+0800)`，确认 Mac / Windows 内容均完整；仅 Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待 Windows 环境验证，因此允许同步。
