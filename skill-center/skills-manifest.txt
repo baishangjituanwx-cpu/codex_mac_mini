@@ -39,11 +39,6 @@ playwright
 playwright-interactive
 render-deploy
 screenshot
-scm-all-products-permanent-delete
-scm-group-bulk-remove
-scm-homepage-batch-select
-scm-single-product-select
-scm-source-refresh-sku-diagnosis
 security-best-practices
 security-ownership-map
 security-threat-model
@@ -58,8 +53,8 @@ toutiao-ops
 toutiao-publish
 transcribe
 vercel-deploy
-wechat-channels-launchagent-keepalive
 wechat-channels-ops
+wechat-channels-launchagent-keepalive
 wechat-desktop-ops
 wechat-moments-desktop-ops
 wechat-video-channel-share-desktop-ops

@@ -7,19 +7,19 @@
 同步 `skill-center` 后，技能目录通常位于:
 
 ```text
-%USERPROFILE%\.codex\skills\obsidian-knowledge-capture\
+%USERPROFILE%\\.codex\\skills\\obsidian-knowledge-capture\\
 ```
 
 写入前复用 `obsidian-knowledge-readback` 的 Windows 只读入口执行清单、关键词检索和受限 Markdown 回读:
 
 ```powershell
-$preflight = Join-Path $env:USERPROFILE ".codex\skills\obsidian-knowledge-readback\scripts\obsidian-preflight.ps1"
+$preflight = Join-Path $env:USERPROFILE ".codex\\skills\\obsidian-knowledge-readback\\scripts\\obsidian-preflight.ps1"
 powershell.exe -ExecutionPolicy Bypass -File $preflight -Manifest
 powershell.exe -ExecutionPolicy Bypass -File $preflight -Query "项目约定 知识沉淀"
 powershell.exe -ExecutionPolicy Bypass -File $preflight -Read "Codex/Decisions/example.md"
 ```
 
-SSH 私钥默认位置为 `%USERPROFILE%\.ssh\id_ed25519_obsidian_bridge`。Vault 仍使用远端路径 `/vol1/1000/Obsidian/obsidian-vault`，不要把它改成 Windows 本地路径，也不要把本地绝对路径写入捕获内容。
+SSH 私钥默认位置为 `%USERPROFILE%\\.ssh\\id_ed25519_obsidian_bridge`。Vault 仍使用远端路径 `/vol1/1000/Obsidian/obsidian-vault`，不要把它改成 Windows 本地路径，也不要把本地绝对路径写入捕获内容。
 
 ## 三种模式
 
