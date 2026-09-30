@@ -4825,3 +4825,44 @@
   - 13 个关键 Windows 入口和文档资产存在；仓库 21 个 `.sh` 文件通过 `bash -n`；目标文件 `git diff --check` 通过。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是。就截至 `2026-09-29 21:11:03 CST (+0800)` 的最新 monitor 内容而言，今日 Mac 与 Windows 内容覆盖均已完整；仅 Windows 原生 PowerShell/OpenSSH/浏览器运行时回归仍待相应 Windows 环境执行。
+
+## 2026-09-30 22:07:41 CST (+0800)
+
+- 处理时间:
+  - `2026-09-30 22:07:41 CST (+0800)` / `2026-09-30 14:07:41 UTC (+0000)`
+- 输入来源:
+  - 复核上一条 Windows 转译状态记录 `2026-09-29 22:04:20 CST (+0800)` 覆盖到的 monitor 截止点 `2026-09-29 21:11:03 CST (+0800)` 之后的全部 `skill-change-monitor.md` 条目，覆盖至最新记录 `2026-09-30 21:31:25 CST (+0800)`。
+  - 增量窗口内唯一的非零批次是 `2026-09-30 17:22:10 CST (+0800)`：修改 `/Users/baishangjituan/.codex/skills/obsidian-knowledge-capture/SKILL.md`，在远端写入线程 allowlist 中新增 `01a0f162-e094-7b82-b257-09c575675279`；其余条目均为 `新增 0 / 修改 0 / 删除 0`，无新增 `.py` 文件、删除项或 supporting automation 资产。
+  - 已执行 `obsidian-knowledge-readback` 只读预检，但未返回相关 Markdown 相对路径；Vault 中未找到可支持本轮判断的依据。
+- 已完成的 Windows 补全:
+  - 当前工作树原先缺少此前 Windows 分支已有的 `obsidian-knowledge-capture` 镜像；已恢复 Windows 可用镜像并将最新 allowlist ID 同步到 `skill-center/skills/obsidian-knowledge-capture/SKILL.md`。
+  - 新增 `skill-center/skills/obsidian-knowledge-capture/agents/openai.yaml` 与 `references/windows.md`，保留三种沉淀模式、allowlisted Codex 线程、受限写入目录、写后回读/桥接确认、安全边界，以及 Windows `%USERPROFILE%`、OpenSSH 和远端 Linux Vault 路径说明。
+  - 将 `obsidian-knowledge-capture` 补入 `skill-center/skills-manifest.txt` 和 `skill-center/README.md`；未删除或改写 Mac / 通用实现，也没有新增绕过线程权限的 `.ps1` / `.cmd` 写入包装器或快捷键分叉。
+- 未完成的补全:
+  - 无内容性 Windows 转译缺口、删除迁移或缺失仓库资产。
+  - 当前 macOS 主机没有 `pwsh` 或 `powershell`，未执行 Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归；该项仍待相应 Windows 环境验证。
+- 阻塞原因:
+  - 无代码层阻塞；仅缺少 Windows 原生运行时验证环境。
+- 验证:
+  - 已确认源技能与 Windows 镜像都包含 `01a0f162-e094-7b82-b257-09c575675279`；`obsidian-preflight.sh` 的 `bash -n`、关键 Windows 资产存在性检查及目标文件 `git diff --check` 通过。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。就截至 `2026-09-30 21:31:25 CST (+0800)` 的最新 monitor 内容而言，今日 Mac 与 Windows 内容覆盖均已完整；仅 Windows 原生 PowerShell/OpenSSH/浏览器运行时回归仍待相应 Windows 环境执行。
+
+## 2026-09-30 22:04:10 CST (+0800)
+
+- 处理时间:
+  - `2026-09-30 22:04:10 CST (+0800)` / `2026-09-30 14:04:10 UTC (+0000)`
+- 输入来源:
+  - 复核上一条 Windows 转译状态记录 `2026-09-29 22:04:20 CST (+0800)` 覆盖到的 monitor 截止点 `2026-09-29 21:11:03 CST (+0800)` 之后的全部 `skill-change-monitor.md` 条目，覆盖至最新记录 `2026-09-30 20:28:14 CST (+0800)`；其中 2026-09-30 的各批次均为 `新增 0 / 修改 0 / 删除 0`。
+  - 未出现新的 custom-skill 行为、新增 `.py` 文件、删除项、PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或 supporting automation 资产。
+  - 已执行 `obsidian-knowledge-readback` 只读预检，返回成功但未返回相关 Markdown 相对路径；Vault 中未找到支持本轮判断的直接依据。
+- 已完成的 Windows 补全:
+  - 本轮实际翻译 `0`：无需新增或修改 Windows 实现；Mac 与通用实现保持不变。
+  - 静态复核确认既有 PowerShell/CMD 启动器、Windows 路径/快捷键/Task Scheduler 文档、SCM/Feishu Bridge/Python takeover/社媒/XYQ Nest/Seedance 资源及 Obsidian OpenSSH 回读入口仍完整。
+- 未完成的补全:
+  - 无内容性 Windows 转译缺口、删除迁移或缺失仓库资产。
+  - 当前 macOS 主机没有 `pwsh` 或 `powershell`，未执行 Windows 原生 PowerShell/OpenSSH/浏览器端到端回归；该项仍待相应 Windows 环境验证。
+- 验证:
+  - 30 个仓库 shell 脚本通过 `/bin/bash -n`；Node 运行时可用；关键 Windows 资产存在性与状态台账 `git diff --check` 通过。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是。就截至 `2026-09-30 20:28:14 CST (+0800)` 的最新 monitor 内容而言，今日 Mac 与 Windows 内容覆盖均已完整；仅 Windows 原生运行时回归仍待相应 Windows 环境执行。

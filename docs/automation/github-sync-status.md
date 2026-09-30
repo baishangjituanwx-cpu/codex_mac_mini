@@ -22,6 +22,11 @@
   - `codex/default-python-sync`：同步相同共享自动化台账与本执行记录；不带入 Windows 专属实现。
 - 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待相应 Windows 环境执行。
 
+## 2026-09-30 17:22:10 CST Skill Change Batch
+
+- 新发现待后续同步的本地技能说明修改：`/Users/baishangjituan/.codex/skills/obsidian-knowledge-capture/SKILL.md` 的远端 Obsidian 写入线程 allowlist 新增 `01a0f162-e094-7b82-b257-09c575675279`。
+- 本批次为 `0 added / 1 modified / 0 deleted`，无新增 `.py` 文件；后续 GitHub 同步应将该 allowlist 条目纳入仓库技能镜像。
+
 ## 2026-09-26 00:02:44 CST (+0800) GitHub 夜间同步执行记录
 
 - 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-09-25 22:04:38 CST (+0800)`，确认 Mac / Windows 内容均完整；仅 Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待 Windows 环境验证，因此允许同步。
@@ -8130,3 +8135,17 @@
   - `codex/default-python-sync`：同步相同共享自动化台账与本执行记录；不带入 Windows 专属实现。
 - Obsidian 回读：已执行只读预检，未返回相关 Markdown 相对路径；Vault 中未找到可支持本轮项目判断的依据。本轮实际依据为仓库状态台账与 Git 差异。
 - 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待相应 Windows 环境执行。
+
+## 2026-09-30 22:24:23 CST (+0800) Skill Change Batch
+
+- 新发现待后续同步的 `obsidian-knowledge-capture` 仓库技能镜像批次：新增 `skill-center/skills/obsidian-knowledge-capture/SKILL.md`、`agents/openai.yaml`、`references/windows.md`，并更新 `skill-center/README.md` 与 `skill-center/skills-manifest.txt`。
+- 本批次为 `3 added / 2 modified / 0 deleted`，无新增 `.py` 文件；后续 GitHub 同步应纳入上述五个技能中心文件及 `docs/automation/skill-change-monitor.md` 的对应记录。
+
+## 2026-10-01 GitHub 夜间同步执行记录
+
+- 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-09-30 22:07:41 CST (+0800)`，确认 Mac / Windows 内容覆盖完整；仅 Windows 原生运行时回归仍待 Windows 环境验证，因此允许同步。
+- 检查结果：本轮发现并同步 `obsidian-knowledge-capture` 的 Windows 技能仓库镜像批次（3 个新增文件、2 个索引文件更新）及共享自动化台账；没有新的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment 实现，也没有新增 `.py` 文件。
+- 分支与提交：
+  - `codex/windows-version-20260411`：同步共享自动化台账、Windows 技能镜像、索引更新及本执行记录，提交消息为 `Sync September 30 Windows skill mirror and automation ledgers`。
+  - `codex/default-python-sync`：仅同步共享自动化台账与本执行记录，提交消息为 `Sync September 30 shared automation ledgers`；未带入 Windows 专属技能镜像或索引更新。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；无新的 generic/Mac Python、Windows bridge 或 deployment 实现；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待 Windows 环境执行。
