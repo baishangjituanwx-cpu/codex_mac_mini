@@ -83,5 +83,5 @@ $HOME\.codex\skills\
 - `skill-center/skills/baijiahao-ops/SKILL.md`
 - `skill-center/skills/scm-homepage-batch-select/`
 - `skill-center/skills/scm-source-refresh-sku-diagnosis/`
-- `skill-center/skills/obsidian-knowledge-readback/`
 - `skill-center/skills/obsidian-knowledge-capture/`
+- `skill-center/skills/obsidian-knowledge-readback/`
