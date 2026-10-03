@@ -8169,6 +8169,16 @@
 - 新发现待后续同步的 `obsidian-knowledge-capture` 仓库技能镜像批次：新增 `skill-center/skills/obsidian-knowledge-capture/SKILL.md`、`agents/openai.yaml`、`references/windows.md`，并更新 `skill-center/README.md` 与 `skill-center/skills-manifest.txt`。
 - 本批次为 `3 added / 2 modified / 0 deleted`，无新增 `.py` 文件；后续 GitHub 同步应纳入上述五个技能中心文件及 `docs/automation/skill-change-monitor.md` 的对应记录。
 
+## 2026-10-04 GitHub 夜间同步执行记录
+
+- 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-10-03 22:02:28 CST (+0800)`，确认 Mac / Windows 内容覆盖完整；仅 Windows 原生运行时回归仍待 Windows 环境验证，因此允许同步。
+- Obsidian 回读：已执行只读预检，但未返回相关 Markdown 相对路径；Vault 中未找到可支持本轮项目判断的依据。本轮实际依据为仓库 Windows 转译状态台账、监控台账与 Git 差异。
+- 检查结果：待同步内容为 2026-10-03 的 `docs/automation/skill-change-monitor.md` 增量与本执行记录；没有新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 或 `.py` 实现文件。
+- 分支与提交：
+  - `codex/default-python-sync`：同步共享自动化台账与本执行记录，计划提交 `Sync October 3 shared automation ledgers`；未带入 Windows 专属实现。
+  - `codex/windows-version-20260411`：同步 Windows 转译状态台账与本执行记录，计划提交 `Sync October 3 Windows automation ledgers`；未发现新的 Windows bridge/deployment 实现。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待 Windows 环境执行。
+
 ## 2026-10-01 GitHub 夜间同步执行记录
 
 - 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-09-30 22:07:41 CST (+0800)`，确认 Mac / Windows 内容覆盖完整；仅 Windows 原生运行时回归仍待 Windows 环境验证，因此允许同步。
