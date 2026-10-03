@@ -1,0 +1,4 @@
+interface:
+  display_name: "微博运营"
+  short_description: "微博发布、数据复盘、评论互动、规则研究与素材优化运营流程"
+  default_prompt: "Use $weibo-ops to publish, analyze, moderate comments, or optimize content for a 微博 account."

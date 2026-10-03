@@ -1,0 +1,51 @@
+name: Dashboard Sync Checks
+
+on:
+  push:
+    paths:
+      - ".github/workflows/dashboard-sync-checks.yml"
+      - "package.json"
+      - "scripts/**"
+      - "docs/dashboard-sync-runbook.md"
+      - "docs/dashboard-upload-api-contract.md"
+      - "skill-center/skills/data-review/**"
+      - "skills/multi-platform-content-review-skill/**"
+      - "tests/dashboard-fixture/**"
+  pull_request:
+    paths:
+      - ".github/workflows/dashboard-sync-checks.yml"
+      - "package.json"
+      - "scripts/**"
+      - "docs/dashboard-sync-runbook.md"
+      - "docs/dashboard-upload-api-contract.md"
+      - "skill-center/skills/data-review/**"
+      - "skills/multi-platform-content-review-skill/**"
+      - "tests/dashboard-fixture/**"
+
+jobs:
+  dashboard-sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Syntax checks
+        run: |
+          node --check scripts/dashboard-doctor.js
+          node --check scripts/dashboard-export-review.js
+          node --check scripts/dashboard-fixture-smoke.js
+          node --check scripts/dashboard-sync-review.js
+          node --check scripts/dashboard-upload.js
+          node --check scripts/validate-dashboard-export.js
+          node --check scripts/lib/load-dashboard-env.js
+          node --check scripts/lib/workspace-paths.js
+          bash -n scripts/dashboard-sync.sh
+
+      - name: Dashboard fixture smoke
+        run: npm run dashboard:fixture

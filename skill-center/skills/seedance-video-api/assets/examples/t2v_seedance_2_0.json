@@ -1,0 +1,17 @@
+{
+  "model": "doubao-seedance-2-0-260128",
+  "content": [
+    {
+      "type": "text",
+      "text": "生成一段 5 秒电影感写实短片，黄昏街头，镜头平稳推进，人物自然行走，音画同步。"
+    }
+  ],
+  "resolution": "720p",
+  "ratio": "16:9",
+  "duration": 5,
+  "seed": -1,
+  "camera_fixed": false,
+  "watermark": false,
+  "generate_audio": true,
+  "return_last_frame": true
+}

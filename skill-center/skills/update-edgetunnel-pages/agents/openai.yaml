@@ -1,0 +1,4 @@
+interface:
+  display_name: "审计并更新 Cloudflare EdgeTunnel"
+  short_description: "升级前审计下游 Worker 与 NAS 兼容性并安全部署"
+  default_prompt: "使用 $update-edgetunnel-pages 对比完整新旧源头代码，审计下游 Worker 与 NAS 兼容性，通过门禁后再更新 EdgeTunnel。"

@@ -1,0 +1,3 @@
+interface:
+  display_name: "SCM 主页批量选品"
+  short_description: "按筛选条件逐页加入选品库并归入分组"
