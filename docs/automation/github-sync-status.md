@@ -8221,3 +8221,13 @@
   - `codex/default-python-sync`：同步共享监控台账与本执行记录，提交消息为 `Sync October 4 automation ledgers`；未带入 Windows 专属实现。
   - `codex/windows-version-20260411`：同步共享监控台账与本执行记录，提交消息为 `Sync October 4 Windows automation ledgers`；未发现新的 Windows bridge/deployment 实现。
 - 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件未提交；`.codex/skills/.system/` 的 49 个既有系统技能文件修改不属于本仓库发布范围；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待 Windows 环境执行。
+
+## 2026-10-06 00:10:30 CST GitHub 夜间同步执行记录
+
+- 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-10-05 22:02:18 CST (+0800)`，确认 Mac / Windows 内容覆盖完整；仅 Windows 原生运行时验证仍待相应环境执行，因此允许同步。
+- 检查结果：本轮仅发现 `docs/automation/skill-change-monitor.md`、`docs/automation/windows-translation-status.md` 的自动化台账增量；没有新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 实现或 `.py` 文件。
+- 分支与提交：
+  - `codex/default-python-sync`：同步共享自动化台账与本执行记录，计划提交 `Sync October 5-6 automation ledgers`；未带入 Windows 专属实现。
+  - `codex/windows-version-20260411`：同步相同共享自动化台账与本执行记录，计划提交 `Sync October 5-6 Windows automation ledgers`；未发现新的 Windows bridge/deployment 实现。
+- Obsidian 回读：已执行 `obsidian-knowledge-readback` 只读预检，但 SSH 连接 `192.168.1.10:22` 受当前环境限制失败，未读取到 Obsidian Markdown 相对路径；本轮依据为仓库状态台账与 Git 差异。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待相应 Windows 环境执行。
