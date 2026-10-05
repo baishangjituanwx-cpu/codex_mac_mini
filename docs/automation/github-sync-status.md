@@ -8212,6 +8212,16 @@
 - 发现新的变更批次：`/Users/baishangjituan/.codex/skills/.system/` 下 49 个既有系统技能文件被修改；项目仓库 `skills/`、`skill-center/`、`automation/` 无变更。
 - 后续同步前需确认 `.codex/skills/.system/` 是否属于可发布范围；本轮未发现新增 `.py` 文件。
 
+## 2026-10-05 08:03:08 CST GitHub 夜间同步执行记录
+
+- 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-10-03 22:02:28 CST (+0800)`，明确确认 Mac / Windows 内容覆盖完整；仅 Windows 原生运行时回归仍待 Windows 环境验证，因此允许同步。
+- Obsidian 回读：已按 `obsidian-knowledge-readback` 执行只读预检，未返回相关 Markdown 相对路径；Vault 中未找到可支持本轮项目判断的依据。本轮实际依据为仓库 Windows 转译状态台账、监控台账与 Git 差异。
+- 检查结果：待同步内容为自动化监控台账增量（`docs/automation/skill-change-monitor.md`）及本执行记录；没有新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 实现或 `.py` 文件。
+- 分支与提交：
+  - `codex/default-python-sync`：同步共享自动化台账与本执行记录，提交消息为 `Sync October 4-5 automation ledgers`；未带入 Windows 专属实现。
+  - `codex/windows-version-20260411`：同步共享自动化台账与本执行记录，提交消息为 `Sync October 4-5 Windows automation ledgers`；未发现新的 Windows bridge/deployment 实现。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；`/Users/baishangjituan/.codex/skills/.system/` 下 49 个既有系统技能文件的修改未纳入发布范围，待后续明确；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待 Windows 环境执行。
+
 ## 2026-10-05 08:02:00 CST GitHub 夜间同步执行记录
 
 - 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-10-03 22:02:28 CST (+0800)`，确认 Mac / Windows 内容覆盖完整；仅 Windows 原生运行时回归仍待 Windows 环境验证，因此允许同步。
