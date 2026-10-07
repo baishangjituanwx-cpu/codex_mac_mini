@@ -22,6 +22,7 @@ frontend-skill
 gh-address-comments
 gh-fix-ci
 hermes-feishu-operator
+huice-supplier-change-sync
 jupyter-notebook
 kuaishou-ops
 linear
@@ -30,7 +31,6 @@ notion-knowledge-capture
 notion-meeting-intelligence
 notion-research-documentation
 notion-spec-to-implementation
-obsidian-knowledge-capture
 obsidian-knowledge-readback
 pdf
 platform-cover-ops
