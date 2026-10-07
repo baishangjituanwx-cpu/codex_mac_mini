@@ -8086,6 +8086,13 @@
   - `codex/default-python-sync`：同步相同共享自动化台账与本执行记录；不带入 Windows 专属实现。
 - 跳过项：`.codex-*`、`.skill-monitor-*` 基线、标记、快照和临时参考文件均为本地监控运行产物，未提交；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待 Windows 环境执行。
 
+## 2026-10-08 00:01:27 CST (+0800) GitHub 夜间同步执行记录
+
+- 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-10-07 22:01:06 CST (+0800)`，确认 Mac / Windows 内容覆盖完整；仅 Windows 原生运行时验证仍待 Windows 环境执行，因此允许同步。
+- `codex/default-python-sync`：提交 `Sync October 7-8 shared automation ledgers`，同步 `docs/automation/skill-change-monitor.md`、`docs/automation/windows-translation-status.md` 与本执行记录；无新的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment 实现文件。
+- `codex/windows-version-20260411`：提交 `Sync October 7-8 Windows skill mirror and ledgers`，同步 `huice-supplier-change-sync` Windows 技能镜像、技能索引/数量及共享自动化台账。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 基线/标记/快照/临时参考文件均为本地监控运行产物，未提交；未发现新增 `.py` 文件；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待相应 Windows 环境执行。
+
 ## 2026-10-08 00:01:00 CST GitHub 夜间同步执行记录
 
 - 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-10-07 22:01:06 CST (+0800)`，明确确认 Mac / Windows 内容覆盖完整；仅 Windows 原生运行时验证仍待相应环境执行，因此允许同步。
