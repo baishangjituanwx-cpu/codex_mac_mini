@@ -1,0 +1,16 @@
+{
+  "model": "doubao-seedance-2-0-fast-260128",
+  "content": [
+    {
+      "type": "text",
+      "text": "生成一段 5 秒高可用广告短片，明亮厨房环境，展示热咖啡冒着蒸汽，镜头从近景缓慢拉远，音画同步。"
+    }
+  ],
+  "resolution": "720p",
+  "ratio": "16:9",
+  "duration": 5,
+  "seed": -1,
+  "camera_fixed": false,
+  "watermark": false,
+  "generate_audio": true
+}

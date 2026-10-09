@@ -1,0 +1,4 @@
+interface:
+  display_name: "慧策分销订单推单"
+  short_description: "诊断失败、闭环解决并核实慧策委外分销订单推单"
+  default_prompt: "使用 $huice-distribution-order-push 诊断指定订单状态，解决推单问题并核实最终结果。"

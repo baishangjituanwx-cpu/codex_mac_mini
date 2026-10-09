@@ -1,0 +1,4 @@
+interface:
+  display_name: "微信小店限价与供销审计"
+  short_description: "逐SKU复核最低限价、毛利、停供状态与平台在售风险"
+  default_prompt: "Use $weixin-shop-price-floor-audit to audit WeChat Store price floors, margins, supplier changes, and exact live-product status."

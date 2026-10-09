@@ -1,0 +1,4 @@
+interface:
+  display_name: "大陈IP飞轮"
+  short_description: "大陈AI创业者IP八平台发布互动复盘优化飞轮技能体系"
+  default_prompt: "Use $dachen-founder-flywheel to run the daily 8-platform founder-IP publish, interaction, review, and optimization loop."

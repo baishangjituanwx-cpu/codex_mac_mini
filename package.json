@@ -4,7 +4,12 @@
   "private": true,
   "type": "commonjs",
   "scripts": {
-    "init:campaign": "node scripts/init_campaign.js"
+    "init:campaign": "node scripts/init_campaign.js",
+    "dashboard:doctor": "node scripts/dashboard-doctor.js",
+    "dashboard:export": "node scripts/dashboard-export-review.js",
+    "dashboard:fixture": "node scripts/dashboard-fixture-smoke.js",
+    "dashboard:validate": "node scripts/validate-dashboard-export.js",
+    "dashboard:upload": "node scripts/dashboard-upload.js",
+    "dashboard:sync": "node scripts/dashboard-sync-review.js"
   }
 }
-
