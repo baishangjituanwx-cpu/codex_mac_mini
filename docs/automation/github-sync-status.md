@@ -8346,3 +8346,13 @@
   - `codex/default-python-sync`：提交并推送共享自动化台账与本执行记录，提交消息为 `Sync October 11 automation ledgers`。
   - `codex/windows-version-20260411`：应用并推送同一批共享自动化台账与本执行记录，提交消息为 `Sync October 11 automation ledgers`；不重复提交已存在的 Windows 技能镜像与索引。
 - 跳过项：`.codex-*`、`.skill-monitor-*` 基线/标记/快照/临时参考文件未提交；本地既有 `skill-center/README.md`、`skill-center/skills-manifest.txt` 与 `huice-supplier-change-sync` 镜像未重复提交；Windows 原生 PowerShell/OpenSSH、浏览器登录、端到端回归及既有 ESM 检查限制仍待相应 Windows 环境/模块模式处理。
+
+## 2026-10-11 23:58:09 CST (+0800) GitHub 夜间同步执行记录
+
+- 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-10-11 22:07:15 CST (+0800)`，明确确认 Mac / Windows 内容覆盖完整；仅 Windows 原生运行时验证及既有 ESM 检查限制仍待相应环境/模块模式处理，因此允许同步。
+- Obsidian 回读：已按 `obsidian-knowledge-readback` 执行只读预检（查询“GitHub sync Windows translation Mac complete”）；未返回可读取的 Markdown 相对路径，Vault 中未找到支持本轮项目判断的直接依据。本轮实际依据为仓库状态台账与 Git 差异。
+- 检查结果：未发现新的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment 实现；`huice-supplier-change-sync` Windows 镜像、`skill-center/README.md` 和 `skill-center/skills-manifest.txt` 的本地内容哈希与 Windows 远端一致，未重复提交。
+- 分支与提交：
+  - `codex/default-python-sync`：仅追加本执行记录，提交消息为 `Record October 11 GitHub sync verification`；不带入 Windows 专属镜像。
+  - `codex/windows-version-20260411`：仅追加本执行记录，提交消息为 `Record October 11 Windows sync verification`；镜像与索引已在远端，无新增提交内容。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 基线/标记/快照/临时参考文件未提交；既有 `huice-supplier-change-sync` Windows 镜像与技能中心索引未重复提交；Windows 原生 PowerShell/OpenSSH、浏览器登录、端到端回归及既有 ESM 检查限制仍待相应 Windows 环境/模块模式处理。
