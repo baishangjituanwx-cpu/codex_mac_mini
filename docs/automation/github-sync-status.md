@@ -12,6 +12,17 @@
 - 提交信息
 - 若跳过，说明跳过原因
 
+## 2026-10-15 00:03:10 CST GitHub 夜间同步执行记录
+
+- 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-10-14 22:02:02 CST (+0800)`，明确确认 Mac / Windows 内容覆盖完整；仅 Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待 Windows 环境验证，因此允许同步。
+- Obsidian 回读：已执行只读预检（查询“GitHub 夜间同步 Windows 翻译”），未返回可读取的 Markdown 相对路径；Vault 中未找到支持本轮项目判断的直接依据。本轮实际依据为仓库 Windows 转译状态台账、Git 差异与远端分支对象核对。
+- 检查结果：没有新的 generic Python takeover、Mac-compatible Python、Windows bridge 或 deployment 实现，也没有新的 `.py` 文件。未跟踪的 `huice-supplier-change-sync` 镜像、`skill-center/README.md` 的 66 项计数和 `skill-center/skills-manifest.txt` 更新均已与 `codex/windows-version-20260411` 远端逐文件哈希一致，不重复上传；`.codex-*`、`.skill-monitor-*` 文件为本地监控产物，不纳入提交。
+- 分支与提交：
+  - `codex/default-python-sync`：补记本执行记录，提交消息为 `Record October 15 GitHub sync verification`；未发现可归入 generic Python takeover 或 Mac-compatible Python 的实现文件。
+  - `codex/windows-version-20260411`：补记本执行记录并同步本地 Windows 翻译状态增量，提交消息为 `Record October 15 Windows sync verification`；已存在的 `huice-supplier-change-sync` 镜像与技能中心索引不重复提交。
+- 验证：目标文件 `git diff --check` 通过；Windows 远端已有的镜像与索引逐文件哈希一致；本机无 `pwsh` / `powershell`，未执行 Windows 原生回归。
+- 跳过项：未提交 `.codex-*`、`.skill-monitor-*` 基线/标记/快照/临时参考文件；未重复提交已存在的 Windows 镜像与索引；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待 Windows 环境执行。
+
 ## 2026-09-30 00:02:22 CST (+0800) GitHub 夜间同步执行记录
 
 - 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-09-29 22:04:20 CST (+0800)`，明确确认 Mac / Windows 内容覆盖完整；仅 Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待 Windows 环境验证，因此允许同步。
