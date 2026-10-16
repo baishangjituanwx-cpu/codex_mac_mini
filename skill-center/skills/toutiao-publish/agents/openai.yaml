@@ -1,0 +1,4 @@
+interface:
+  display_name: "头条号发布"
+  short_description: "今日头条头条号图文发布、登录校验、收益开通与首发排障流程"
+  default_prompt: "Use $toutiao-publish to publish or troubleshoot a 今日头条 / 头条号 article, including login checks, ad monetization, and 首发 selection."

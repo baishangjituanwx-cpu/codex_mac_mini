@@ -1,0 +1,41 @@
+selectors:
+  description_input_candidates:
+    - "textarea[placeholder*='有什么新鲜事想告诉大家']"
+    - "textarea[placeholder*='分享新鲜事']"
+    - "textarea"
+    - "[contenteditable='true'][role='textbox']"
+    - "[contenteditable='true']"
+  video_file_input_candidates:
+    - "input[type='file'][accept*='video']"
+    - "input[type='file']"
+buttons:
+  publish_entry:
+    - "发微博"
+    - "视频"
+    - "发布微博"
+  publish:
+    - "发布"
+    - "发送"
+signals:
+  login_required:
+    - "登录注册"
+    - "还没有微博？立即注册"
+    - "手机号登录"
+    - "请登录后再试"
+  existing_video:
+    - "重新上传"
+    - "更换视频"
+    - "视频处理中"
+    - "视频上传完成"
+  pending_upload:
+    - "上传中"
+    - "处理中"
+    - "正在上传"
+    - "%"
+  success:
+    - "发布成功"
+    - "已发送"
+checkpoints:
+  manual:
+    - "登录态恢复"
+    - "视频上传卡住时人工复核"
