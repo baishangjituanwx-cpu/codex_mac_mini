@@ -1,0 +1,4 @@
+interface:
+  display_name: "百家号运营"
+  short_description: "百家号发布、数据复盘、评论互动、规则研究与素材优化运营流程"
+  default_prompt: "Use $baijiahao-ops to publish, analyze, moderate comments, or optimize content for a 百家号 account."

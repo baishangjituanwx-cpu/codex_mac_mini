@@ -1,0 +1,4 @@
+interface:
+  display_name: "Coze Seedance工作流"
+  short_description: "Coze Seedance 1.5 Pro 工作流执行、参数配置与导出结构参考技能"
+  default_prompt: "Use $coze-seedance15pro-sales-workflow to inspect, configure, or run the local Coze Seedance 1.5 Pro workflow wrapper."

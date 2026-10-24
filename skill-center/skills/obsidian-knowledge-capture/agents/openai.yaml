@@ -1,0 +1,7 @@
+interface:
+  display_name: "Obsidian即时知识沉淀"
+  short_description: "把确认的决策和项目知识去重写入 Obsidian"
+  default_prompt: "Use $obsidian-knowledge-capture to capture the confirmed decision into Obsidian."
+
+policy:
+  allow_implicit_invocation: true
