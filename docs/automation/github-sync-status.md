@@ -1,5 +1,12 @@
 # GitHub Sync Status
 
+## 2026-10-28 00:04:10 CST (+0800) Windows 分支执行补记
+
+- `codex/windows-version-20260411` 已从远端基线保留既有共享监控台账，并同步本轮 Windows 转译状态台账与执行记录。
+- 提交消息：`Sync October 27-28 Windows automation ledgers`。
+- 由于共享监控台账与默认分支存在并发历史差异，本轮未覆盖 Windows 分支既有台账内容；默认分支已保存本轮共享台账增量。
+- 跳过 `.codex-*`、`.skill-monitor-*` 本地监控产物，以及无新增的 generic/Mac Python、Windows bridge/deployment 实现；Windows 原生运行时验证仍待 Windows 环境。
+
 ## 2026-10-28 00:02:25 CST (+0800) GitHub 夜间同步执行记录
 
 - 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-10-27 22:02:01 CST (+0800)`，明确确认 Mac / Windows 内容覆盖完整、内容性 Windows 转译缺口为 `0`；仅 Windows 原生运行时验证仍待相应环境执行，因此允许同步。
