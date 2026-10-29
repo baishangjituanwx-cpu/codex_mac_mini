@@ -8664,3 +8664,13 @@
 ## 2026-10-29 17:30:43 CST 技能变更待同步提示
 
 - 发现新的自定义技能变更批次：`/Users/baishangjituan/.codex/skills/obsidian-knowledge-capture/SKILL.md` 在本轮基线后修改；后续 GitHub 同步时请纳入技能变更审查。未发现新的 `.py` 实现或其他三个受监控目录中的变更。
+
+## 2026-10-29 23:59:08 CST GitHub 夜间同步执行记录
+
+- 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-10-29 22:01:56 CST (+0800)`，明确确认 Mac / Windows 内容覆盖完整、内容性 Windows 转译缺口为 `0`；仅 Windows 原生运行时验证仍待 Windows 环境执行，因此允许同步。
+- Obsidian 回读：已执行 `obsidian-knowledge-readback` 只读预检（查询“GitHub 夜间同步 Windows Mac 翻译”），命令成功但未返回可读取的 Markdown 相对路径；Vault 中未找到可核实本轮判断的依据。本轮实际依据为仓库状态台账与 Git 审计。
+- 检查结果：发现 Windows 转译状态台账增量；未发现新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 实现或 `.py` 文件。共享自动化台账执行记录同步到两条目标分支。
+- 分支与提交：
+  - `codex/default-python-sync`：仅同步共享执行记录及既有共享自动化台账变更；不带入 Windows 专属状态台账。
+  - `codex/windows-version-20260411`：同步 Windows 转译状态台账与共享执行记录；不重复提交已有实现资产。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 本地运行时/监控产物未提交；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待 Windows 环境执行；Obsidian 未返回可读取的 Markdown 来源路径。
