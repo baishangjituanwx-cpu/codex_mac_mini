@@ -1,5 +1,21 @@
 # GitHub Sync Status
 
+## 2026-10-29 23:57:54 CST (+0800) GitHub 夜间同步执行记录
+
+- 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-10-29 22:01:56 CST (+0800)`，明确确认 Mac / Windows 内容覆盖完整，内容性 Windows 转译缺口为 `0`；仅 Windows 原生运行时验证仍待 Windows 环境执行，因此允许同步。
+- Obsidian 回读：已按 `obsidian-knowledge-readback` 执行只读预检（查询“GitHub 夜间同步 Windows 翻译 Mac 完成”），但 SSH 到 `192.168.1.10:22` 被远端关闭；未读取任何 Vault Markdown 相对路径，Vault 中未找到可核实依据。本轮实际依据为仓库状态台账与 Git 审计。
+- 检查结果：仅发现自动化台账更新（`skill-change-monitor.md`、`windows-translation-status.md` 与本执行记录）；没有新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 实现或 `.py` 文件。外部 `obsidian-knowledge-capture/SKILL.md` 说明变更仅作为监控记录，未作为仓库实现同步。
+- 分支与提交：
+  - `codex/default-python-sync`：提交消息 `Sync October 29 automation ledgers`，同步共享技能变更监控台账与本执行记录，不带入 Windows 专属转译状态台账。
+  - `codex/windows-version-20260411`：提交消息 `Sync October 29 Windows automation ledgers`，同步共享技能变更监控台账、Windows 转译状态台账与本执行记录。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 等本地运行时/监控产物未提交；没有新的 generic/Mac Python、Windows bridge 或 deployment 实现；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待 Windows 环境执行。
+
+## 2026-10-29 17:38:06 CST (+0800) 技能变更监控待同步批次
+
+- 发现待后续同步的本地技能说明修改：`/Users/baishangjituan/.codex/skills/obsidian-knowledge-capture/SKILL.md`。
+- 该文件更新远端 Obsidian 写入线程 allowlist（替换 1 个 ID、新增 1 个 ID），并移除过时的 Windows 仓库镜像说明；本批次为 `0 added / 1 modified / 0 deleted`，无新增 `.py` 文件。
+- 后续 GitHub 同步应评估并更新仓库中的对应技能镜像，同时带上本轮监控记录。
+
 ## 2026-10-28 23:58:41 CST GitHub 夜间同步执行记录
 
 - 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-10-28 22:01:54 CST (+0800)`，明确确认 Mac / Windows 内容覆盖完整，内容性 Windows 转译缺口为 `0`；仅 Windows 原生运行时验证仍待 Windows 环境执行，因此允许同步。
@@ -8644,3 +8660,7 @@
   - `codex/default-python-sync`：仅追加本执行记录，提交消息为 `Record October 29 GitHub sync verification`；不带入 Windows 专属状态台账。
   - `codex/windows-version-20260411`：仅追加本执行记录，提交消息为 `Record October 29 Windows sync verification`；不重复提交远端已有状态台账或实现资产。
 - 跳过项：`.codex-*`、`.skill-monitor-*` 本地运行时/监控产物未提交；主工作树预存的 `windows-translation-status.md` 差异未覆盖；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待 Windows 环境执行。
+
+## 2026-10-29 17:30:43 CST 技能变更待同步提示
+
+- 发现新的自定义技能变更批次：`/Users/baishangjituan/.codex/skills/obsidian-knowledge-capture/SKILL.md` 在本轮基线后修改；后续 GitHub 同步时请纳入技能变更审查。未发现新的 `.py` 实现或其他三个受监控目录中的变更。
