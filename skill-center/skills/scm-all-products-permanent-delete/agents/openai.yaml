@@ -1,0 +1,3 @@
+interface:
+  display_name: "SCM 全部商品永久删除"
+  short_description: "高风险逐批永久删除并逐项复核"

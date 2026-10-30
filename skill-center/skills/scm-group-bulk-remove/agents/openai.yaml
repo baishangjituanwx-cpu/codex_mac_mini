@@ -1,0 +1,3 @@
+interface:
+  display_name: "SCM 分组批量移除"
+  short_description: "仅从当前选品分组移除并刷新核验"

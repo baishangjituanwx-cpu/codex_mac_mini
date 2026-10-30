@@ -1,0 +1,24 @@
+{
+  "model": "doubao-seedance-2-0-260128",
+  "content": [
+    {
+      "type": "text",
+      "text": "基于首帧生成一段 6 秒写实镜头，人物轻微转头，背景灯光柔和，镜头稳定，音画同步。"
+    },
+    {
+      "type": "image_url",
+      "role": "first_frame",
+      "image_url": {
+        "url": "local://./replace-with-your-first-frame.png"
+      }
+    }
+  ],
+  "resolution": "720p",
+  "ratio": "16:9",
+  "duration": 6,
+  "seed": -1,
+  "camera_fixed": false,
+  "watermark": false,
+  "generate_audio": true,
+  "return_last_frame": true
+}
