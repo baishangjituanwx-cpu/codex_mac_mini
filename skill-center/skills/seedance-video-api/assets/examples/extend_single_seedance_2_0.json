@@ -1,0 +1,24 @@
+{
+  "model": "doubao-seedance-2-0-260128",
+  "content": [
+    {
+      "type": "text",
+      "text": "向后延长视频1，镜头继续穿过展厅长廊，人物慢慢走向尽头的一幅巨大油画，整体保持电影感和连贯运镜。"
+    },
+    {
+      "type": "video_url",
+      "role": "reference_video",
+      "video_url": {
+        "url": "https://example.com/replace-with-your-clip-a.mp4"
+      }
+    }
+  ],
+  "resolution": "720p",
+  "ratio": "16:9",
+  "duration": 12,
+  "seed": -1,
+  "camera_fixed": false,
+  "watermark": false,
+  "generate_audio": true,
+  "return_last_frame": true
+}

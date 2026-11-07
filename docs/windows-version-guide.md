@@ -1,0 +1,139 @@
+# Windows 专用版说明
+
+这份说明不是“把 mac 文档里的路径替换一下”。
+
+它的目标是:
+
+- 把这套仓库补成 Windows 可复制版本
+- 明确 Windows 上飞书桥接怎么装
+- 明确浏览器自动化在 Windows 上哪些逻辑相同，哪些地方要改
+
+## 1. 先说结论
+
+这套仓库现在可以同时支持:
+
+- macOS 版
+- Windows 版
+
+真正差异主要在两层:
+
+1. 飞书桥接的本地后台运行方式
+2. 少量浏览器自动化快捷键和路径约定
+
+内容包、平台 SOP、发布日志、复盘结构本身并不因为系统不同而变化。
+
+## 2. Windows 版现在已经补了什么
+
+### A. 飞书桥接 Windows 部署脚本
+
+位置:
+
+- `skills/codex-feishu-bridge-skill/scripts/install_bridge_template_windows.ps1`
+- `skills/codex-feishu-bridge-skill/assets/template/scripts/*.ps1`
+
+当前已经包含:
+
+- 安装脚本
+- 启动脚本
+- 停止脚本
+- 状态查看脚本
+- 日志查看脚本
+- 通知 chat id 写入脚本
+- 可选 startup task 注册脚本
+
+### B. Windows 部署文档
+
+位置:
+
+- `skills/codex-feishu-bridge-skill/references/deployment-windows.md`
+- `skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART-WINDOWS.md`
+
+### C. Python 自动接管的跨平台修正
+
+当前已经补了:
+
+- Windows 下 `Control+A`
+- macOS 下 `Meta+A`
+
+这意味着 `快手 v0.1` 不再只适配 Mac 键盘逻辑。
+
+### D. Obsidian 知识库只读回读
+
+技能镜像位置:
+
+- `skill-center/skills/obsidian-knowledge-readback/`
+- `skill-center/skills/obsidian-knowledge-readback/scripts/obsidian-preflight.ps1`
+
+Windows 使用内置 OpenSSH Client 和 `%USERPROFILE%\\.ssh\\id_ed25519_obsidian_bridge`，通过 PowerShell 入口回读远端 Linux Vault。Vault 的 `/vol1/1000/Obsidian/obsidian-vault` 是远端路径，不应替换成 Windows 本地路径；入口仍只允许 manifest、关键词检索和受限 Markdown 读取。
+
+### E. Obsidian 知识沉淀
+
+技能镜像位置:
+
+- `skill-center/skills/obsidian-knowledge-capture/`
+- `skill-center/skills/obsidian-knowledge-capture/references/windows.md`
+
+Windows 端复用 `skill-center/skills/obsidian-knowledge-readback/scripts/obsidian-preflight.ps1` 完成写入前的 manifest、关键词检索和受限 Markdown 回读。技能目录是 `%USERPROFILE%\\.codex\\skills\\obsidian-knowledge-capture\\`，SSH 私钥是 `%USERPROFILE%\\.ssh\\id_ed25519_obsidian_bridge`；远端 Vault 仍为 `/vol1/1000/Obsidian/obsidian-vault`。
+
+`【待确认沉淀】` 不写 Vault；`【立即沉淀】` 和 `【修订 Obsidian】` 只有 allowlisted Codex 线程可以执行远端写入，且写入后必须按原路径回读并等待 `knowledge-bridge`。因此不提供绕过线程权限的 PowerShell 写入包装器。
+
+## 3. Windows 上推荐的目录
+
+建议:
+
+```text
+C:\codex-feishu-bridge
+```
+
+以及:
+
+```text
+C:\content-pipeline
+```
+
+尽量不要把桥接或仓库放在带很多空格、中文过深层级、同步盘冲突目录里。
+
+## 4. Windows 上浏览器执行要点
+
+### 不变的
+
+- 先写内容包，再开后台
+- 先看管理页，再决定是否继续草稿
+- 不以“点了发布”作为成功
+- 成功判断仍然看管理页 / 公开页 / 列表页
+
+### 变化的
+
+- 快捷键从 `Meta` 切到 `Control`
+- 本地路径从 `/Users/...` 变成 `C:\...`
+- 飞书桥接后台不再走 `launchd`
+
+### SCM 技能镜像
+
+SCM 选品与商品诊断技能使用同一套 Codex 浏览器控制能力，不需要额外的 PowerShell 或 `.cmd` 业务启动器。Windows 上从 `%USERPROFILE%\\.codex\\skills\\` 同步技能后：
+
+- 浏览器刷新、地址栏、全选和前进/后退分别使用 `Control+R`/`F5`、`Control+L`、`Control+A`、`Alt+Left`/`Alt+Right`；
+- 截图、批次记录和诊断报告使用带引号的 `C:/Users/<name>/...` 路径，共享资料使用带引号的 UNC 或映射盘路径；
+- SCM 的永久删除、分组移除、批量选品、单品选品和 SKU 诊断仍遵守页面授权、异步回读和只读边界，不改写成临时 `curl`、PowerShell 或后台任务。
+
+## 5. 当前 Windows 版最适合怎么用
+
+推荐顺序:
+
+1. 先部署 Windows 飞书桥接
+2. 先用 Windows 版继续内容打包和日志回填
+3. 再用 `快手 v0.1` 做第一个平台试点
+4. 再把同一套映射继续补到头条号和微信视频号
+
+## 6. 这一版的边界
+
+现在已经不是“只有 Mac 能看懂、能装”的仓库了。
+
+但也还没到“Windows 8 平台一键全自动”的程度。
+
+当前最准确的表述是:
+
+- Windows 部署链路已补齐
+- Windows 桥接脚本已补齐
+- Windows 自动接管试点已开始可执行
+- 多平台 Windows 全量自动化仍需继续补 selector 和实机验证

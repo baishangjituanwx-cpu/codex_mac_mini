@@ -1,0 +1,6 @@
+interface:
+  display_name: "慧策供销变动同步"
+  short_description: "同步供销商变动、绝对值改价并核验微信小店失效链接"
+  default_prompt: "使用 $huice-supplier-change-sync 同步慧策供销商变动，按绝对值更新分销价格并核验微信小店链接。"
+policy:
+  allow_implicit_invocation: true

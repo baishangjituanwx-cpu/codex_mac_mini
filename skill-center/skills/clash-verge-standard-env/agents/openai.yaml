@@ -1,0 +1,4 @@
+interface:
+  display_name: "Clash Verge Standard Env"
+  short_description: "Deploy standard Clash Verge prefs"
+  default_prompt: "Use $clash-verge-standard-env to set up Clash Verge on this Mac with my standard preferences, excluding the subscription URL."

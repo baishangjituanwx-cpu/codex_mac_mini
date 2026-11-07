@@ -1,0 +1,37 @@
+{
+  "model": "doubao-seedance-2-0-260128",
+  "content": [
+    {
+      "type": "text",
+      "text": "视频1中的拱形窗户打开，进入美术馆室内，接视频2，之后镜头进入画内，接视频3，整体过渡自然且镜头语言统一。"
+    },
+    {
+      "type": "video_url",
+      "role": "reference_video",
+      "video_url": {
+        "url": "https://example.com/replace-with-your-clip-1.mp4"
+      }
+    },
+    {
+      "type": "video_url",
+      "role": "reference_video",
+      "video_url": {
+        "url": "https://example.com/replace-with-your-clip-2.mp4"
+      }
+    },
+    {
+      "type": "video_url",
+      "role": "reference_video",
+      "video_url": {
+        "url": "https://example.com/replace-with-your-clip-3.mp4"
+      }
+    }
+  ],
+  "resolution": "720p",
+  "ratio": "16:9",
+  "duration": 8,
+  "seed": -1,
+  "camera_fixed": false,
+  "watermark": false,
+  "generate_audio": true
+}

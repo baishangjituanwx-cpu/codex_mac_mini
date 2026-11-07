@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Channels Share Desktop Ops"
+  short_description: "Share Channels posts on Mac WeChat desktop"
+  default_prompt: "Use $wechat-video-channel-share-desktop-ops to verify Mac WeChat support for sharing Channels posts to groups or Moments, follow the desktop workflow, and troubleshoot missing share targets."
