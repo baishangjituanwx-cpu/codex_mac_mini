@@ -8858,3 +8858,10 @@
 - 分支与提交：`codex/windows-version-20260411` 将提交 `Sync November 8 Windows automation ledgers`，包含共享监控台账、Windows 转译台账与本执行记录；`codex/default-python-sync` 将提交 `Sync November 8 shared automation ledgers`，仅包含共享监控台账与本执行记录，不带入 Windows 专属转译台账。
 - 推送与核验：本轮 `git fetch` 因 GitHub 连接被远端关闭而失败；待提交后分别尝试推送，并以远端分支核验结果更新记录。
 - 跳过项：`.codex-*`、`.skill-monitor-*` 等本地监控产物未提交；没有新的实现性内容需要分类；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待 Windows 环境执行。
+
+## 2026-11-09 00:02:21 CST (+0800) GitHub 夜间同步结果补记
+
+- `codex/default-python-sync` 已推送：`967db27`（共享台账）与 `1e0301d`（11 月 9 日监控扫描）；远端核验成功。
+- `codex/windows-version-20260411` 已推送：`ef03ce6`（Windows 台账）与 `0509742`（共享 11 月 9 日监控扫描）；远端核验成功。
+- 初始 `git fetch` 与首次 Windows 推送曾因 GitHub SSH 连接被远端关闭而失败；随后重试成功。并发监控台账改写未丢弃，分别保存在本地 Git stash 中，未覆盖或删除。
+- 跳过项：无新的 generic/Mac Python、Windows bridge 或 deployment 实现；`.codex-*`、`.skill-monitor-*` 运行时产物及 Windows 原生运行时验证仍未纳入本次同步。
