@@ -6090,18 +6090,39 @@
 
 ## 2026-11-12 22:00:28 CST (+0800)
 
-- 输入来源：复核自动化上次触发点之后至 `2026-11-12 21:57:34 CST (+0800)` 的 `skill-change-monitor.md` 条目；所有 monitor 批次均为 `新增 0 / 修改 0 / 可确认删除 0`，没有新的行为或资产需要转译。
-- Obsidian：只读预检因 SSH 连接 `192.168.1.10:22` 超时未读取 Markdown；`Vault 中未找到依据`。
-- 已完成的 Windows 补全：本轮实际翻译 `0`；现有 Windows 启动器、路径处理、文档、快捷键、命令包装器及 supporting automation 资产无需改动。
-- 未完成的补全：内容性 Windows 转译缺口为 `0`；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归仍待 Windows 环境执行。
-- 验证：`30` 个已跟踪 `.sh` 文件通过 `bash -n`；关键 Windows 资产存在；既有 JS ESM/CJS 检查限制不属于本轮新增缺口。
-- 是否达到“Mac / Windows 版本都齐全”：是（内容覆盖层面）。
+- 处理时间:
+  - `2026-11-12 22:00:28 CST (+0800)` / `2026-11-12 14:00:28 UTC (+0000)`
+- 输入来源:
+  - 复核自动化上次触发点 `2026-11-11T14:03:24.382Z`（`2026-11-11 22:03:24 CST`）之后的 `skill-change-monitor.md` 条目，覆盖至最新实际条目 `2026-11-12 21:57:34 CST (+0800)`。
+  - 覆盖范围内所有 monitor 批次均为 `新增 0 / 修改 0 / 可确认删除 0`；没有新的 custom-skill 行为、新增 `.py`、PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或 supporting automation 资产需要转译。
+  - 已按 `obsidian-knowledge-readback` 技能执行只读预检；SSH 连接 `192.168.1.10:22` 超时，未读取 Obsidian Markdown，因而没有可提供的 Vault 相对路径；`Vault 中未找到依据`。本记录仅依据本地 monitor、Git 和仓库文件复核。
+- 已完成的 Windows 补全:
+  - 本轮实际翻译 `0`：明确没有需要翻译的新增或修改行为，未修改或删除 Mac / 通用实现。
+  - 复核现有 `28` 个已跟踪 `.ps1/.cmd/.bat` 资产、`30` 个已跟踪 `.sh` 文件、`65` 行技能 manifest、Windows 路径/快捷键/文档/包装器及关键 Windows 资产；均无需改动。
+- 未完成的补全:
+  - monitor 驱动的内容性 Windows 转译缺口为 `0`；没有待迁移行为、删除项或缺失仓库资产。
+  - 当前 macOS 主机没有 `pwsh` 或 `powershell`，未执行 Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归；这是运行环境验证缺口，不是本轮内容翻译缺口。
+- 验证:
+  - 全部 `30` 个已跟踪 `.sh` 文件通过 `bash -n`；关键 Windows 资产存在；`git diff --check` 通过。
+  - `40` 个已跟踪 JS/MJS/CJS 文件中 `39` 个通过 `node --check`；唯一失败仍为既有 `skill-center/skills/develop-web-game/scripts/web_game_playwright_client.js` 的 ESM/CJS 配置不匹配。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是（内容覆盖层面）。截至最新 monitor 内容，今日 Mac 与 Windows 版本均已完整；仅 Windows 原生运行时验证仍待 Windows 环境执行。
 
 ## 2026-11-12 22:02:22 CST (+0800)
 
-- 输入来源：复核 `skill-change-monitor.md` 最新条目 `2026-11-12 21:57:34 CST (+0800)`；自上一轮 Windows 转译基线以来，所有相关批次均为 `新增 0 / 内容修改 0 / 可确认删除 0`，文件时间刷新不对应 Git 内容差异。
-- Obsidian：只读预检因 SSH 连接 `192.168.1.10:22` 超时未读取 Markdown；`Vault 中未找到依据`。
-- 已完成的 Windows 补全：本轮实际翻译 `0`；既有 Windows 资产保持可用，无需补充。
-- 未完成的补全：monitor 驱动的内容性 Windows 转译缺口为 `0`；Windows 原生运行时验证和既有 ESM/CJS 检查限制仍待相应环境处理。
-- 验证：`30` 个已跟踪 `.sh` 文件通过 `bash -n`；既有 JS ESM/CJS 检查限制不属于本轮新增缺口。
-- 是否达到“Mac / Windows 版本都齐全”：是（内容覆盖层面）。
+- 输入来源:
+  - 复核 `skill-change-monitor.md` 最新条目 `2026-11-12 21:57:34 CST (+0800)`；自上一轮 Windows 转译基线以来，所有相关 monitor 批次均为 `新增 0 / 内容修改 0 / 可确认删除 0`。
+  - 独立检查 `skills/`、`skill-center/` 与 `automation/` 的 scoped Git 状态和文件审计，未发现需要转译的内容性实现变化；文件时间刷新不对应 Git 内容差异。
+  - 已执行 `obsidian-knowledge-readback` 只读预检，但 SSH 连接 `192.168.1.10:22` 超时，未读取 Obsidian Markdown；Vault 中未找到可核实本轮结论的依据。
+- 已完成的 Windows 补全:
+  - 本轮实际翻译 `0`：没有新增或修改的 PowerShell 启动器、Windows 路径处理、Windows 文档、键盘快捷键映射、命令包装器或仓库资产；未修改或删除 Mac / 通用实现。
+  - 既有 `28` 个已跟踪 `.ps1/.cmd/.bat` 资产、`30` 个已跟踪 `.sh` 文件及 Windows 路径/快捷键/文档/包装器资产保持可用，无需补充。
+- 未完成的补全:
+  - monitor 驱动的内容性 Windows 转译缺口为 `0`；没有待迁移行为、删除项或缺失仓库资产。
+  - 当前 macOS 主机没有 `pwsh` 或 `powershell`，未执行 Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归；这是环境验证缺口，不是本轮内容翻译缺口。
+  - `skill-center/skills/develop-web-game/scripts/web_game_playwright_client.js` 的既有 ESM/CJS `node --check` 不匹配仍存在，不属于本轮新增缺口。
+- 验证:
+  - 全部 `30` 个已跟踪 `.sh` 文件通过 `bash -n`；`git diff --check` 通过。
+  - 已跟踪 `40` 个 JS/MJS/CJS 文件中 `39` 个通过 `node --check`，唯一失败为上述既有 ESM/CJS 配置不匹配。
+- 是否达到“Mac / Windows 版本都齐全”:
+  - 是（内容覆盖层面）。截至最新 monitor 内容，今日 Mac 与 Windows 版本均已完整；仅 Windows 原生运行时验证和既有 ESM/CJS 检查限制仍待相应环境/模块模式处理。
