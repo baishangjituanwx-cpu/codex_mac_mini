@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Moments Desktop Ops"
+  short_description: "Publish and troubleshoot Moments on Mac WeChat desktop"
+  default_prompt: "Use this skill to verify support for posting Moments from WeChat on macOS, follow the desktop posting workflow, and troubleshoot permission or UI issues."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Desktop Ops"
+  short_description: "Operate Mac WeChat desktop and auto-reply flows"
+  default_prompt: "Use this skill to operate WeChat desktop on macOS, troubleshoot permissions, and run or repair the auto-reply workflow."

@@ -1,0 +1,35 @@
+# Copy this file to configs/content-package.local.yaml for your first real run.
+# Replace the asset placeholders before you use --execute.
+
+campaign_id: "replace-this-campaign-id"
+theme: "replace-this-theme"
+assets:
+  main_video: "/ABS/PATH/final_video.mp4"
+  backup_video: "/ABS/PATH/final_video_backup.mp4"
+  cover_3_4: "/ABS/PATH/cover-3x4.jpg"
+  cover_4_3: "/ABS/PATH/cover-4x3.jpg"
+platforms:
+  weibo:
+    title: "这里替换成微博标题"
+    description: "这里替换成微博正文"
+  douyin:
+    title: "这里替换成抖音标题"
+    description: "这里替换成抖音描述"
+  wechat_channels:
+    title: "这里替换成视频号标题"
+    description: "这里替换成视频号描述"
+  kuaishou:
+    title: "这里替换成快手标题"
+    description: "这里替换成快手描述"
+  baijiahao:
+    title: "这里替换成百家号标题"
+    description: "这里替换成百家号正文"
+  toutiao:
+    title: "这里替换成头条号标题"
+    description: "这里替换成头条号正文"
+  zhihu:
+    title: "这里替换成知乎标题"
+    description: "这里替换成知乎正文"
+  xiaohongshu:
+    title: "这里替换成小红书标题"
+    description: "这里替换成小红书正文"

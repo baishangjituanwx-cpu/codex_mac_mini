@@ -1,6 +1,14 @@
 selectors:
-  description_editor: "#work-description-edit"
-  file_input: "input[type='file']"
+  description_input_candidates:
+    - "#work-description-edit"
+    - "div[contenteditable='true']"
+    - "textarea"
+  file_input_candidates:
+    - "input[type='file'][accept*='video']"
+    - "input[type='file']"
+  cover_file_input_candidates:
+    - "input[type='file'][accept*='image']"
+    - "input[type='file']"
   cover_file_input_index: 0
 buttons:
   continue_edit:
@@ -11,7 +19,12 @@ buttons:
     - "更换封面"
   publish:
     - "发布"
+    - "发布作品"
 signals:
+  login_required:
+    - "登录后继续"
+    - "手机号登录"
+    - "验证码登录"
   existing_video:
     - "重新上传"
     - "更换视频"
@@ -20,6 +33,9 @@ signals:
     - "取消上传"
     - "0%"
     - "上传中"
+  success:
+    - "发布成功"
+    - "提交成功"
 checkpoints:
   manual:
     - "登录态恢复"
