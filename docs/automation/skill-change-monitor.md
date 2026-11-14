@@ -1,5 +1,104 @@
 # Skill Change Monitor
 
+## 2026-11-14 22:09:16 CST (+0800) — Run completion
+
+- Baseline: persisted automation-memory completion `2026-11-14T13:04:21Z` was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp `2026-11-14T13:03:38.831Z`.
+- Changes: none — `0 added / 0 content-modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: all four post-baseline regular-file mtime scans were empty. Repository checks for `skills/`, `skill-center/`, and `automation/` found no staged or unstaged content differences, untracked files, tracked deletions, or post-baseline Git history. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions remain unconfirmable without a contemporaneous inventory; none is supported by this audit.
+- New `.py` files: none; no purpose, related-skill, or cross-platform/platform-specific classification is required.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控 自动化` failed because SSH to `192.168.1.10:22` timed out; no Obsidian Markdown was read and no relative source path is available. Vault 中未找到依据. This entry relies on the local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 21:51:51 CST (+0800) — Run completion
+
+- Baseline: persisted automation-memory completion `2026-11-14T12:49:35Z` was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp `2026-11-14T12:49:08.723Z`.
+- Changes: none — `0 added / 0 content-modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: all four post-baseline regular-file mtime scans were empty. Repository status and post-baseline Git history found no monitored-path content changes. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions remain unconfirmable without a contemporaneous inventory; none is supported by this audit.
+- New `.py` files: none; no purpose, related-skill, or cross-platform/platform-specific classification is required.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行` failed because SSH to `192.168.1.10:22` timed out; no Obsidian Markdown was read and no relative source path is available. Vault 中未找到依据. This entry relies on the local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 15:52:53 CST (+0800) — Run completion
+
+- Baseline: persisted automation-memory completion `2026-11-14T06:55:13Z` was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp `2026-11-14T06:54:05.242Z`.
+- Changes: none — `0 added / 0 content-modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: all four post-baseline regular-file mtime scans were empty. Repository checks for `skills/`, `skill-center/`, and `automation/` found no staged or unstaged content differences, untracked files, tracked deletions, or post-baseline Git history. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions remain unconfirmable without a contemporaneous inventory; none is supported by this audit.
+- New `.py` files: none; no purpose, related-skill, or cross-platform/platform-specific classification is required.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控 GitHub 同步` failed because SSH to `192.168.1.10:22` timed out; no Obsidian Markdown was read and no relative source path is available. Vault 中未找到依据. This entry relies on the local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 14:55:13 CST (+0800) — Run completion
+
+- Baseline: persisted automation-memory completion `2026-11-14T12:50:38Z` (`2026-11-14 20:50:38 CST`) was treated as the latest stored checkpoint, but it is in the future relative to this host's `2026-11-14 14:55:13 CST` clock. The last completed ledger entry at `2026-11-14 12:50:38 CST` was therefore used as the effective local lower bound.
+- Changes: none — `0 added / 0 content-modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: all four post-baseline regular-file mtime scans were empty. Repository checks for `skills/`, `skill-center/`, and `automation/` found no staged or unstaged content differences, untracked files, tracked deletions, or post-baseline Git history. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions remain unconfirmable without a contemporaneous inventory; none is supported by this audit.
+- New `.py` files: none; no purpose, related-skill, or cross-platform/platform-specific classification is required.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out; no Obsidian Markdown was read and no relative source path is available. Vault 中未找到依据. This entry relies on the local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 12:50:38 CST (+0800) — Run completion
+
+- Baseline: automation-provided previous-run timestamp `2026-11-14T03:46:28.769Z` (`2026-11-14 11:46:28.769 CST`) was used as the exclusive lower bound. Persisted automation memory records the prior completion at `2026-11-14T03:47:25Z`.
+- Changes: none — `0 added / 0 content-modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: all four post-baseline regular-file mtime scans were empty. Repository checks for `skills/`, `skill-center/`, and `automation/` found no unstaged or staged content differences, untracked files, tracked deletions, or post-baseline Git history. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions remain unconfirmable without a contemporaneous inventory; none is supported by this audit.
+- New `.py` files: none; no purpose, related-skill, or cross-platform/platform-specific classification is required.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控 自动化` failed because SSH to `192.168.1.10:22` timed out; no Obsidian Markdown was read and no relative source path is available. Vault 中未找到依据. This entry relies on the local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 12:20:50 CST (+0800) — Run completion
+
+- Baseline: automation-provided previous-run timestamp `2026-11-14T03:20:58.744Z` (`2026-11-14 11:20:58.744 CST`) was used as the exclusive lower bound; the persisted automation memory recorded the prior completion at `2026-11-14T03:21:41Z`.
+- Changes: none — `0 added / 0 content-modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: all four post-baseline regular-file mtime scans were empty. Repository status and post-baseline Git history showed no monitored-path additions, modifications, untracked files, or tracked deletions. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned; standalone deletions remain unconfirmable without a contemporaneous inventory, and none is supported by this audit.
+- New `.py` files: none; no purpose, related-skill, or cross-platform/platform-specific classification is required.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行` failed because SSH to `192.168.1.10:22` timed out; no Obsidian Markdown was read and no relative source path is available. Vault 中未找到依据. This entry relies on the local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 11:47:25 CST (+0800) — Run completion
+
+- Baseline: automation-provided previous-run timestamp `2026-11-14T02:49:58.694Z` (`2026-11-14 10:49:58.694 CST`) was used as the exclusive lower bound; the persisted automation-memory file was absent.
+- Changes: none — `0 added / 0 content-modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: no regular file in the four monitored roots has a post-baseline mtime. Repository checks for `skills/`, `skill-center/`, and `automation/` found no staged or unstaged differences, untracked files, tracked deletions, or post-baseline Git history. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned; standalone deletions cannot be independently confirmed without a prior inventory, and none is supported by this audit.
+- New `.py` files: none; no purpose, related-skill, or cross-platform/platform-specific classification is required.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out; no Obsidian Markdown was read and no relative source path is available. Vault 中未找到依据. This entry relies on the local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 08:23:43 CST (+0800) — Run completion
+
+- Baseline: automation-provided previous-run timestamp `2026-11-13T23:16:27.769Z` (`2026-11-14 07:16:27.769 CST`) was used as the exclusive lower bound.
+- Changes: none — `0 added / 0 content-modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: the external `/Users/baishangjituan/.codex/skills/` tree had no post-baseline regular-file mtimes. The repository had 82 post-baseline regular-file mtime refreshes, but every tracked file matched `HEAD`; worktree/index status, untracked-file checks, tracked-deletion checks, and post-baseline Git history found no content change. The external skills tree is unversioned, so standalone deletions remain unconfirmable without a contemporaneous inventory; none is supported by this audit.
+- New `.py` files: none. The eight post-baseline `.py` paths were existing tracked files with mtime-only refreshes, so no purpose, related-skill, or cross-platform/platform-specific classification is required.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行 变更记录` failed because SSH to `192.168.1.10:22` timed out; no Obsidian Markdown was read and no relative source path is available. This entry relies on the local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 02:13:53 CST (+0800) — Run completion
+
+- Baseline: automation-provided previous-run timestamp `2026-11-13T17:11:56.476Z` (`2026-11-14 01:11:56.476 CST`) was used as the exclusive lower bound.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: all four post-baseline regular-file mtime scans were empty; repository worktree/index checks for `skills/`, `skill-center/`, and `automation/` found no content changes, untracked files, or tracked deletions. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions remain unconfirmable without a contemporaneous inventory; none is supported by this audit.
+- New `.py` files: none; no purpose, related-skill, or cross-platform/platform-specific classification is required.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 自动化 技能` failed because SSH to `192.168.1.10:22` timed out; no Obsidian Markdown was read and no relative source path is available. This entry relies on the local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 01:37:08 CST (+0800) — Run completion
+
+- Baseline: automation-provided previous-run timestamp `2026-11-13T16:34:26.259Z` was used as the exclusive lower bound. The persisted completion (`2026-11-14T00:36:32Z`) is earlier; both are later than the current host clock, so this run can only establish that no qualifying file has a timestamp after the supplied baseline.
+- Changes: none — `0 added / 0 content-modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: all four post-baseline regular-file mtime scans were empty. Repository worktree and index diffs for `skills/`, `skill-center/`, and `automation/`, plus all-ref Git history after the baseline, were also empty. The external skills tree is unversioned, so standalone deletions cannot be independently confirmed without an inventory; none is supported by this audit.
+- New `.py` files: none; no purpose, related-skill, or cross-platform/platform-specific classification is required.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out; no Obsidian Markdown was read, no relative source path is available, and `Vault 中未找到依据`. This entry relies on the local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 08:36:32 CST (+0800) — Run completion
+
+- Baseline: automation-provided previous-run timestamp `2026-11-13T15:29:25.925Z` (`2026-11-13 23:29:25 CST`) was used as the exclusive lower bound because the automation memory file was absent.
+- Changes: none — `0 added / 0 content-modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: `/Users/baishangjituan/.codex/skills/` had no post-baseline regular-file mtimes. Repository files in `skills/`, `skill-center/`, and `automation/` share a `2026-11-14 08:11:44 CST` mtime refresh, but monitored Git worktree/index differences, untracked-file checks, tracked-deletion checks, and post-baseline all-ref Git history are empty, so this is treated as a non-content checkout/materialization refresh. The external skills tree is unversioned; standalone deletions cannot be independently confirmed without a persisted inventory, and none is supported by this audit.
+- New `.py` files: none. Eight existing Python files carry the shared mtime refresh (two Seedance helpers and six `python-platform-takeover` modules), but Git confirms they are not new or content-modified; no purpose, related-skill, or portability classification is required.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out; no Obsidian Markdown was read, no relative source path is available, and `Vault 中未找到依据`. This entry relies on the local filesystem and Git audit.
+
 ## 2026-11-13 21:13:43 CST (+0800) — Run completion
 
 - Baseline: automation-provided previous-run timestamp `2026-11-13T12:14:55.285Z` (`2026-11-13 20:14:55 CST`) was used as the exclusive lower bound.
@@ -328756,4 +328855,548 @@
 - New `.py` files: none; no purpose, related-skill, or cross-platform/platform-specific classification is required.
 - GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
 - Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out; no Obsidian Markdown was read, no relative source path is available, and `Vault 中未找到依据`. This run relies on the local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 00:14:27 CST (+0800) — Run completion
+
+- Baseline: newest existing monitor-ledger completion `2026-11-13T15:19:00Z` (`2026-11-13 23:19:00 CST`) was used as the exclusive lower bound; this is later than the scheduler-provided `2026-11-13T15:14:25.864Z`.
+- Changes: no content-level additions, modifications, or confirmable deletions were found. An 81-file filesystem mtime-refresh batch was detected; every path below is tracked by Git and matches `HEAD`, so each is recorded as `modified (mtime-only; content unchanged)`:
+
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md` — modified (mtime-only; content unchanged); Python platform-takeover automation overview.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/wechat_channels.yaml` — modified (mtime-only; content unchanged); WeChat Channels platform mapping.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platforms.example.yaml` — modified (mtime-only; content unchanged); example platform configuration.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/browser.py` — modified (mtime-only; content unchanged); shared browser automation helper.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/cli.py` — modified (mtime-only; content unchanged); publisher command-line entry point.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/content_package.py` — modified (mtime-only; content unchanged); content-package model and loading logic.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/douyin.py` — modified (mtime-only; content unchanged); Douyin platform adapter.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py` — modified (mtime-only; content unchanged); WeChat Channels platform adapter.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/xiaohongshu.py` — modified (mtime-only; content unchanged); Xiaohongshu platform adapter.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/README.md` — modified (mtime-only; content unchanged); skill-center usage documentation.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills-manifest.txt` — modified (mtime-only; content unchanged); skill inventory manifest.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml` — modified (mtime-only; content unchanged); Clash Verge environment rule enhancements.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/SKILL.md` — modified (mtime-only; content unchanged); founder-flywheel skill instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/references/review-scorecard.md` — modified (mtime-only; content unchanged); founder-flywheel review scorecard.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/SKILL.md` — modified (mtime-only; content unchanged); data-review skill instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/report-template.md` — modified (mtime-only; content unchanged); data-review report template.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/SKILL.md` — modified (mtime-only; content unchanged); Hermes Feishu operator instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/agents/openai.yaml` — modified (mtime-only; content unchanged); Hermes agent metadata.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.cmd` — modified (mtime-only; content unchanged); Windows Hermes prompt launcher.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.ps1` — modified (mtime-only; content unchanged); PowerShell Hermes prompt launcher.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.sh` — modified (mtime-only; content unchanged); shell Hermes prompt launcher.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-supplier-change-sync/SKILL.md` — modified (mtime-only; content unchanged); supplier-change-sync skill instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-supplier-change-sync/agents/openai.yaml` — modified (mtime-only; content unchanged); supplier-change-sync agent metadata.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/kuaishou-ops/SKILL.md` — modified (mtime-only; content unchanged); Kuaishou operations skill instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-capture/SKILL.md` — modified (mtime-only; content unchanged); Obsidian capture skill instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-capture/agents/openai.yaml` — modified (mtime-only; content unchanged); Obsidian capture agent metadata.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-capture/references/windows.md` — modified (mtime-only; content unchanged); Windows capture guidance.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/platform-cover-ops/SKILL.md` — modified (mtime-only; content unchanged); platform-cover operations instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh` — modified (mtime-only; content unchanged); Playwright CLI wrapper.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-all-products-permanent-delete/SKILL.md` — modified (mtime-only; content unchanged); permanent-delete skill instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-all-products-permanent-delete/agents/openai.yaml` — modified (mtime-only; content unchanged); permanent-delete agent metadata.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-group-bulk-remove/SKILL.md` — modified (mtime-only; content unchanged); group-bulk-remove skill instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-group-bulk-remove/agents/openai.yaml` — modified (mtime-only; content unchanged); group-bulk-remove agent metadata.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-homepage-batch-select/SKILL.md` — modified (mtime-only; content unchanged); homepage batch-select skill instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-homepage-batch-select/agents/openai.yaml` — modified (mtime-only; content unchanged); homepage batch-select agent metadata.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-single-product-select/SKILL.md` — modified (mtime-only; content unchanged); single-product-select skill instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-single-product-select/agents/openai.yaml` — modified (mtime-only; content unchanged); single-product-select agent metadata.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-source-refresh-sku-diagnosis/SKILL.md` — modified (mtime-only; content unchanged); SKU diagnosis skill instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-source-refresh-sku-diagnosis/agents/openai.yaml` — modified (mtime-only; content unchanged); SKU diagnosis agent metadata.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/cover-execution.md` — modified (mtime-only; content unchanged); Seedance cover execution guidance.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/cover-package.md` — modified (mtime-only; content unchanged); Seedance cover package guidance.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/customer-trial-intake-and-production-sop.md` — modified (mtime-only; content unchanged); Seedance customer trial SOP.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/workflows.md` — modified (mtime-only; content unchanged); Seedance workflow reference.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/render_cover_package.py` — modified (mtime-only; content unchanged); existing Seedance cover renderer.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.py` — modified (mtime-only; content unchanged); existing Seedance CLI.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/SKILL.md` — modified (mtime-only; content unchanged); social publishing automation instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/references/platform-notes.md` — modified (mtime-only; content unchanged); social platform notes.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/scripts/send_feishu_notify.cmd` — modified (mtime-only; content unchanged); Windows Feishu notification launcher.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/scripts/send_feishu_notify.ps1` — modified (mtime-only; content unchanged); PowerShell Feishu notification launcher.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/SKILL.md` — modified (mtime-only; content unchanged); WeChat Channels operations instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/references/platform-notes.md` — modified (mtime-only; content unchanged); WeChat Channels platform notes.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/SKILL.md` — modified (mtime-only; content unchanged); Xiaohongshu operations instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/references/platform-notes.md` — modified (mtime-only; content unchanged); Xiaohongshu platform notes.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/SKILL.md` — modified (mtime-only; content unchanged); Xiaoyunque source-video skill instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/agents/openai.yaml` — modified (mtime-only; content unchanged); Xiaoyunque agent metadata.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/prompt-template.md` — modified (mtime-only; content unchanged); source-video prompt template.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/source-video-playbook.md` — modified (mtime-only; content unchanged); source-video playbook.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/download_results.cmd` — modified (mtime-only; content unchanged); Windows result downloader.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/download_results.ps1` — modified (mtime-only; content unchanged); PowerShell result downloader.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/get_thread.cmd` — modified (mtime-only; content unchanged); Windows thread fetcher.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/get_thread.ps1` — modified (mtime-only; content unchanged); PowerShell thread fetcher.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/invoke_xyq_script.ps1` — modified (mtime-only; content unchanged); PowerShell Xiaoyunque invocation wrapper.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/submit_run.cmd` — modified (mtime-only; content unchanged); Windows run submitter.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/submit_run.ps1` — modified (mtime-only; content unchanged); PowerShell run submitter.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/upload_file.cmd` — modified (mtime-only; content unchanged); Windows file uploader.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/upload_file.ps1` — modified (mtime-only; content unchanged); PowerShell file uploader.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.cmd` — modified (mtime-only; content unchanged); Windows bridge starter template.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-status.cmd` — modified (mtime-only; content unchanged); Windows bridge status template.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-stop.cmd` — modified (mtime-only; content unchanged); Windows bridge stopper template.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/src/bridge.js` — modified (mtime-only; content unchanged); Feishu bridge JavaScript template.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART-WINDOWS.md` — modified (mtime-only; content unchanged); Windows bridge installation guide.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART.md` — modified (mtime-only; content unchanged); bridge installation guide.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/deployment-windows.md` — modified (mtime-only; content unchanged); Windows bridge deployment guide.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/deployment.md` — modified (mtime-only; content unchanged); bridge deployment guide.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/user-guide.md` — modified (mtime-only; content unchanged); bridge user guide.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/install_bridge_template_windows.ps1` — modified (mtime-only; content unchanged); Windows bridge template installer.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/package_skill_bundle_windows.ps1` — modified (mtime-only; content unchanged); Windows skill bundle packager.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/SKILL.md` — modified (mtime-only; content unchanged); multi-platform content review instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/diagnosis-and-decisions.md` — modified (mtime-only; content unchanged); review diagnosis and decision reference.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/platform-metrics.md` — modified (mtime-only; content unchanged); platform metrics reference.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/report-template.md` — modified (mtime-only; content unchanged); review report template.
+
+- Added: none. Deleted: none confirmable; the external `/Users/baishangjituan/.codex/skills/` tree is unversioned and has no contemporaneous inventory for standalone deletion confirmation. The external tree itself had no post-baseline mtime changes.
+- New `.py` files: none. The eight `.py` paths in the mtime batch are pre-existing tracked files; no new purpose or platform classification applies.
+- GitHub sync status: unchanged; this is an mtime-only batch with no implementation diff or new change batch requiring later sync. `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 自动化 技能` failed because SSH to `192.168.1.10:22` timed out; no Obsidian Markdown was read, no relative source path is available, and `Vault 中未找到依据`. This run relies on local filesystem, Git audit, and automation memory.
+
+-
+## 2026-11-14 01:13:24 CST (+0800) — Run completion
+
+- Baseline: scheduler-provided previous-run timestamp `2026-11-13T16:12:56.102Z` (`2026-11-14 00:12:56 CST`) was used as the exclusive lower bound.
+- Changes: no content-level additions, modifications, or confirmable deletions were found. The following 82 files had mtime-only refreshes after the baseline; all tracked repository files matched `HEAD`:
+
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md` — modified (mtime-only; content unchanged); Python platform-takeover overview.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/wechat_channels.yaml` — modified (mtime-only; content unchanged); WeChat Channels mapping.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platforms.example.yaml` — modified (mtime-only; content unchanged); example platform configuration.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/browser.py` — modified (mtime-only; content unchanged); shared browser helper.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/cli.py` — modified (mtime-only; content unchanged); publisher CLI.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/content_package.py` — modified (mtime-only; content unchanged); content-package model/loading.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/douyin.py` — modified (mtime-only; content unchanged); Douyin adapter.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py` — modified (mtime-only; content unchanged); WeChat Channels adapter.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/xiaohongshu.py` — modified (mtime-only; content unchanged); Xiaohongshu adapter.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/README.md` — modified (mtime-only; content unchanged); skill-center documentation.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills-manifest.txt` — modified (mtime-only; content unchanged); skill inventory.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml` — modified (mtime-only; content unchanged); Clash Verge rules.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/SKILL.md` — modified (mtime-only; content unchanged); founder-flywheel instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/references/review-scorecard.md` — modified (mtime-only; content unchanged); review scorecard.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/SKILL.md` — modified (mtime-only; content unchanged); data-review instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/report-template.md` — modified (mtime-only; content unchanged); report template.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/SKILL.md` — modified (mtime-only; content unchanged); Hermes operator instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/agents/openai.yaml` — modified (mtime-only; content unchanged); Hermes agent metadata.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.cmd` — modified (mtime-only; content unchanged); Windows launcher.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.ps1` — modified (mtime-only; content unchanged); PowerShell launcher.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.sh` — modified (mtime-only; content unchanged); shell launcher.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-supplier-change-sync/SKILL.md` — modified (mtime-only; content unchanged); supplier sync instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-supplier-change-sync/agents/openai.yaml` — modified (mtime-only; content unchanged); supplier sync metadata.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/kuaishou-ops/SKILL.md` — modified (mtime-only; content unchanged); Kuaishou operations instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-capture/SKILL.md` — modified (mtime-only; content unchanged); Obsidian capture instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-capture/agents/openai.yaml` — modified (mtime-only; content unchanged); capture agent metadata.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-capture/references/windows.md` — modified (mtime-only; content unchanged); Windows capture guidance.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/platform-cover-ops/SKILL.md` — modified (mtime-only; content unchanged); cover operations instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh` — modified (mtime-only; content unchanged); Playwright wrapper.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-all-products-permanent-delete/SKILL.md` — modified (mtime-only; content unchanged); permanent-delete instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-all-products-permanent-delete/agents/openai.yaml` — modified (mtime-only; content unchanged); permanent-delete metadata.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-group-bulk-remove/SKILL.md` — modified (mtime-only; content unchanged); group-removal instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-group-bulk-remove/agents/openai.yaml` — modified (mtime-only; content unchanged); group-removal metadata.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-homepage-batch-select/SKILL.md` — modified (mtime-only; content unchanged); homepage selection instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-homepage-batch-select/agents/openai.yaml` — modified (mtime-only; content unchanged); homepage selection metadata.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-single-product-select/SKILL.md` — modified (mtime-only; content unchanged); product selection instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-single-product-select/agents/openai.yaml` — modified (mtime-only; content unchanged); product selection metadata.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-source-refresh-sku-diagnosis/SKILL.md` — modified (mtime-only; content unchanged); SKU diagnosis instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-source-refresh-sku-diagnosis/agents/openai.yaml` — modified (mtime-only; content unchanged); SKU diagnosis metadata.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/cover-execution.md` — modified (mtime-only; content unchanged); cover execution guidance.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/cover-package.md` — modified (mtime-only; content unchanged); cover package guidance.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/customer-trial-intake-and-production-sop.md` — modified (mtime-only; content unchanged); customer trial SOP.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/workflows.md` — modified (mtime-only; content unchanged); Seedance workflows.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/render_cover_package.py` — modified (mtime-only; content unchanged); existing cover renderer.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.py` — modified (mtime-only; content unchanged); existing Seedance CLI.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/SKILL.md` — modified (mtime-only; content unchanged); publishing automation instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/references/platform-notes.md` — modified (mtime-only; content unchanged); platform notes.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/scripts/send_feishu_notify.cmd` — modified (mtime-only; content unchanged); Windows notifier.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/scripts/send_feishu_notify.ps1` — modified (mtime-only; content unchanged); PowerShell notifier.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/SKILL.md` — modified (mtime-only; content unchanged); WeChat Channels instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/references/platform-notes.md` — modified (mtime-only; content unchanged); WeChat Channels notes.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/SKILL.md` — modified (mtime-only; content unchanged); Xiaohongshu instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/references/platform-notes.md` — modified (mtime-only; content unchanged); Xiaohongshu notes.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/SKILL.md` — modified (mtime-only; content unchanged); source-video instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/agents/openai.yaml` — modified (mtime-only; content unchanged); source-video metadata.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/prompt-template.md` — modified (mtime-only; content unchanged); prompt template.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/source-video-playbook.md` — modified (mtime-only; content unchanged); source-video playbook.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/download_results.cmd` — modified (mtime-only; content unchanged); Windows result downloader.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/download_results.ps1` — modified (mtime-only; content unchanged); PowerShell result downloader.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/get_thread.cmd` — modified (mtime-only; content unchanged); Windows thread fetcher.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/get_thread.ps1` — modified (mtime-only; content unchanged); PowerShell thread fetcher.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/invoke_xyq_script.ps1` — modified (mtime-only; content unchanged); PowerShell invocation wrapper.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/submit_run.cmd` — modified (mtime-only; content unchanged); Windows run submitter.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/submit_run.ps1` — modified (mtime-only; content unchanged); PowerShell run submitter.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/upload_file.cmd` — modified (mtime-only; content unchanged); Windows uploader.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/upload_file.ps1` — modified (mtime-only; content unchanged); PowerShell uploader.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/.bridge.env.example` — modified (mtime-only; content unchanged); bridge environment template.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.cmd` — modified (mtime-only; content unchanged); Windows bridge starter.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-status.cmd` — modified (mtime-only; content unchanged); Windows bridge status checker.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-stop.cmd` — modified (mtime-only; content unchanged); Windows bridge stopper.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/src/bridge.js` — modified (mtime-only; content unchanged); bridge JavaScript template.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART-WINDOWS.md` — modified (mtime-only; content unchanged); Windows install guide.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART.md` — modified (mtime-only; content unchanged); bridge install guide.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/deployment-windows.md` — modified (mtime-only; content unchanged); Windows deployment guide.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/deployment.md` — modified (mtime-only; content unchanged); deployment guide.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/user-guide.md` — modified (mtime-only; content unchanged); bridge user guide.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/install_bridge_template_windows.ps1` — modified (mtime-only; content unchanged); Windows template installer.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/package_skill_bundle_windows.ps1` — modified (mtime-only; content unchanged); Windows bundle packager.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/SKILL.md` — modified (mtime-only; content unchanged); review skill instructions.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/diagnosis-and-decisions.md` — modified (mtime-only; content unchanged); diagnosis reference.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/platform-metrics.md` — modified (mtime-only; content unchanged); platform metrics reference.
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/report-template.md` — modified (mtime-only; content unchanged); report template.
+
+- Added: none. Deleted: none confirmable; the external `/Users/baishangjituan/.codex/skills/` tree is unversioned and has no contemporaneous inventory for standalone deletion confirmation.
+- New `.py` files: none. The 8 `.py` paths above are pre-existing tracked files refreshed only by mtime; no new purpose or platform classification applies.
+- GitHub sync status: unchanged because no implementation change batch was discovered; `github-sync-status.md` was not updated.
+- Obsidian readback: required manifest preflight failed because SSH to `192.168.1.10:22` timed out; no Obsidian Markdown was read and no relative source path is available. This run relies on local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 02:35:10 CST (+0800) — No-change scan
+
+- Baseline: scheduler-provided previous-run timestamp `2026-11-13T17:35:56.552Z` was used as the exclusive lower bound.
+- Changes: none. No file in `/Users/baishangjituan/.codex/skills/`, `skills/`, `skill-center/`, or skill-supporting content under `automation/` had an mtime after the baseline. Repository Git history, worktree, index, and untracked-file audits for `skills/`, `skill-center/`, and `automation/` also reported no additions, modifications, or deletions.
+- Deleted files: none confirmable. The external `/Users/baishangjituan/.codex/skills/` tree remains unversioned, so standalone deletions cannot be proven without a prior inventory; it had no post-baseline surviving-file changes.
+- New `.py` files: none; no Python file in any monitored location has an mtime after the baseline.
+- GitHub sync status: unchanged; no new change batch was discovered, so `docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 监控 自动化 变更` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据, and no relative source path is available. This scan relies on local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 03:15:48 CST (+0800) — mtime-only batch
+
+- Baseline: scheduler-provided previous-run timestamp `2026-11-13T18:12:56.717Z` was used as the exclusive lower bound.
+- Result: no post-baseline files changed in the external `/Users/baishangjituan/.codex/skills/` tree. In the repository, 82 existing files below `skills/`, `skill-center/`, and skill-related `automation/` paths had filesystem mtime refreshes; Git status, history, and untracked-file checks found no content-level additions, modifications, or deletions, and all tracked files match `HEAD`.
+- Exact mtime-only paths (content unchanged):
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/README.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platform-mappings/wechat_channels.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/configs/platforms.example.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/browser.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/cli.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/content_package.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/douyin.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/wechat_channels.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/python-platform-takeover/social_publisher/platforms/xiaohongshu.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/README.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills-manifest.txt`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/clash-verge-standard-env/references/rules-enhancement.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/dachen-founder-flywheel/references/review-scorecard.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/data-review/references/report-template.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.cmd`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/hermes-feishu-operator/scripts/send-hermes-feishu-prompt.sh`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-supplier-change-sync/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/huice-supplier-change-sync/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/kuaishou-ops/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-capture/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-capture/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/obsidian-knowledge-capture/references/windows.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/platform-cover-ops/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/playwright/scripts/playwright_cli.sh`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-all-products-permanent-delete/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-all-products-permanent-delete/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-group-bulk-remove/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-group-bulk-remove/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-homepage-batch-select/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-homepage-batch-select/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-single-product-select/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-single-product-select/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-source-refresh-sku-diagnosis/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/scm-source-refresh-sku-diagnosis/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/cover-execution.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/cover-package.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/customer-trial-intake-and-production-sop.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/references/workflows.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/render_cover_package.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/seedance-video-api/scripts/seedance_cli.py`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/references/platform-notes.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/scripts/send_feishu_notify.cmd`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/social-publish-automation/scripts/send_feishu_notify.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/wechat-channels-ops/references/platform-notes.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaohongshu-ops/references/platform-notes.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/agents/openai.yaml`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/prompt-template.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xiaoyunque-source-video/references/source-video-playbook.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/download_results.cmd`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/download_results.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/get_thread.cmd`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/get_thread.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/invoke_xyq_script.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/submit_run.cmd`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/submit_run.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/upload_file.cmd`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/skills/xyq-nest-skill/scripts/upload_file.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/.bridge.env.example`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-start.cmd`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-status.cmd`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/scripts/bridge-stop.cmd`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/assets/template/src/bridge.js`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART-WINDOWS.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/INSTALL-QUICKSTART.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/deployment-windows.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/deployment.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/references/user-guide.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/install_bridge_template_windows.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/codex-feishu-bridge-skill/scripts/package_skill_bundle_windows.ps1`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/SKILL.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/diagnosis-and-decisions.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/platform-metrics.md`
+  - `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/multi-platform-content-review-skill/references/report-template.md`
+- Added: none. Deleted: none confirmable; the external tree is unversioned and has no contemporaneous inventory for standalone deletion confirmation.
+- New `.py` files: none. Eight existing `.py` files above were mtime-only refreshes; no new purpose or platform classification applies.
+- GitHub sync status: unchanged; no content-level change batch was discovered, so `github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This run relies on local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 03:40:48 CST (+0800) Skill change monitor
+
+- Baseline: automation-provided previous-run timestamp `2026-11-13T18:34:26.805Z`.
+- Added: none. Modified: none. Deleted: none confirmable. A post-baseline scan of `/Users/baishangjituan/.codex/skills/`, `skills/`, `skill-center/`, and `automation/` found no skill-related or supporting-automation files after the baseline (excluding virtual environments and caches); Git history, worktree, and untracked-file audits also found no content change. Standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a prior inventory.
+- New `.py` files: none; therefore no purpose, related-skill, or platform classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on the local filesystem audit and automation memory.
+
+## 2026-11-14 04:12:39 CST (+0800) Skill change monitor
+
+- Baseline: automation-provided previous-run timestamp `2026-11-13T19:14:26.908Z`.
+- Added: none. Modified: none. Deleted: none confirmable. Scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no post-baseline files; repository Git status and recent history also showed no related content changes.
+- New `.py` files: none; therefore no purpose, related-skill, or platform classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on the local filesystem audit and automation memory.
+
+## 2026-11-14 04:44:10 CST (+0800) Skill change monitor
+
+- Baseline: automation-provided previous-run timestamp `2026-11-13T19:39:26.999Z`.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no changed skill-related or supporting-automation files. Git worktree, index, untracked-file, and all-ref history audits for the repository paths also found no content change. Standalone deletions in unversioned external `.codex/skills` remain unconfirmable without a prior inventory.
+- New `.py` files: none; no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控 自动化` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on local filesystem and Git audit plus automation memory.
+
+## 2026-11-14 05:13:12 CST (+0800) Skill change monitor
+
+- Baseline: automation-provided previous-run timestamp `2026-11-13T20:11:57.129Z` was used as the exclusive lower bound.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no files. Repository Git status, untracked-file checks, and recent history for the monitored paths found no content changes; standalone deletions in the unversioned external skills tree remain unconfirmable without a contemporaneous inventory.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行 变更记录` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on the local filesystem audit, Git audit, and automation memory.
+
+## 2026-11-14 05:41:04 CST (+0800) Skill change monitor
+
+- Baseline: automation-provided previous-run timestamp `2026-11-13T20:43:27.240Z` was used as the exclusive lower bound. The automation memory file was absent at the start of this run.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no skill-related or supporting-automation files. Repository worktree, index, tracked-deletion, and all-ref history audits for `skills/`, `skill-center/`, and `automation/` also found no content changes. Standalone deletions in the unversioned external skills tree remain unconfirmable without a prior inventory.
+- New `.py` files: none; no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read, so no relative source path is available and Vault 中未找到依据. This entry relies on the local filesystem and Git audit.
+
+## 2026-11-14 06:18:21 CST (+0800) Skill change monitor
+
+- Baseline: automation-provided previous-run timestamp `2026-11-13T21:12:27.359Z` (`2026-11-14 05:12:27.359 CST`) was used as the exclusive lower bound.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no files. Repository Git status, recent history, tracked-deletion, and untracked-file audits also found no monitored-path content changes; standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on the local filesystem audit, Git audit, and automation memory.
+
+## 2026-11-14 06:48:20 CST (+0800) Skill change monitor
+
+- Baseline: automation-provided previous-run timestamp `2026-11-13T21:39:57.477Z` was used as the exclusive lower bound. The automation memory file was absent at the start of this run, so this entry establishes its first local baseline.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no skill-related or supporting-automation files. Repository worktree, index, untracked-file, and recent-history audits for `skills/`, `skill-center/`, and `automation/` also found no content change. Standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a prior inventory.
+- New `.py` files: none; no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on the local filesystem and Git audit.
+
+## 2026-11-14 07:17:32 CST (+0800) Skill change monitor
+
+- Baseline: automation-provided previous-run timestamp `2026-11-13T22:17:57.521Z` (`2026-11-14 06:17:57.521 CST`) was used as the exclusive lower bound.
+- Added: none. Modified: none at the content level. Deleted: none confirmable. Post-baseline scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no new or changed skill-related/supporting-automation content. Repository status, recent history, tracked-deletion, and untracked-file audits matched this result; existing repository files with refreshed mtimes matched `HEAD`. Standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行 自动化` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on the local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 07:49:51 CST (+0800) Skill change monitor
+
+- Baseline: automation-provided previous-run timestamp `2026-11-13T22:47:27.639Z` was used as the exclusive lower bound.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no skill-related or supporting-automation files. Repository status, history, tracked-deletion, and untracked-file audits also found no content change; standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控 自动化` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on local filesystem and Git audit plus automation memory.
+
+## 2026-11-14 08:44:52 CST (+0800) Skill change monitor
+
+- Baseline: the prior automation-memory run timestamp `2026-11-13T23:49:51Z` was used as the exclusive lower bound.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no skill-related or supporting-automation files. Repository Git status, staged and unstaged monitored-path diffs, and post-baseline history also found no content changes. Standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on local filesystem and Git audit plus automation memory.
+
+## 2026-11-14 09:20:57 CST (+0800) Skill change monitor
+
+- Baseline: automation-provided previous-run timestamp `2026-11-14T00:22:28.129Z` was used as the exclusive lower bound.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline mtime scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no files. Repository Git status, recent history, tracked-deletion, and untracked-file audits also found no monitored-path content changes; standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on the local filesystem audit, Git audit, and automation memory.
+
+## 2026-11-14 09:52:12 CST (+0800) Skill change monitor
+
+- Baseline: automation-provided previous-run timestamp `2026-11-14T00:43:58.206Z` was used as the exclusive lower bound. The automation memory file was absent at the start of this run and is now initialized.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no skill-related or supporting-automation files. Repository Git status and post-baseline monitored-path history also found no content changes; standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on local filesystem and Git audit.
+
+## 2026-11-14 10:20:30 CST (+0800) Skill change monitor
+
+- Baseline: automation-provided previous-run timestamp `2026-11-14T01:19:58.337Z` was used as the exclusive lower bound.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline mtime scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no files. Repository status, recent history, and untracked-file audits also found no monitored-path content changes; standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on the local filesystem audit, Git audit, and automation memory.
+
+## 2026-11-14 10:51:01 CST (+0800) Skill change monitor
+
+- Baseline: persisted automation-memory completion `2026-11-14T01:52:12Z` was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp `2026-11-14T01:51:28.482Z`.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline mtime scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no skill-related or supporting-automation files. Repository staged/unstaged diffs, tracked-deletion and untracked-file checks, and post-baseline all-ref history found no monitored-path content changes. Standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控 自动化` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read, so no relative source path is available; Vault 中未找到依据. This entry relies on local filesystem, Git, and automation-memory evidence.
+
+## 2026-11-14 11:21:41 CST (+0800) Skill change monitor
+
+- Baseline: automation-provided previous-run timestamp `2026-11-14T02:19:28.593Z` was used as the exclusive lower bound; the persisted memory completion at `2026-11-14T02:20:30Z` is later than that scheduler baseline.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline mtime scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no files. Repository staged/unstaged diffs, recent history, tracked-deletion, and untracked-file audits also found no monitored-path content changes; standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 13:19:44 CST (+0800) Skill change monitor
+
+- Baseline: automation-provided previous-run timestamp `2026-11-14T04:19:58.868Z` was used as the exclusive lower bound.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline mtime scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no files. Repository status and post-baseline history found no monitored-path content changes; standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行 自动化` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 14:46:08 CST (+0800) Skill change monitor
+
+- Baseline: persisted automation-memory completion `2026-11-14T05:19:44Z` was used as the exclusive lower bound.
+- Added: none. Modified: none at the content level. Deleted: none confirmable. The four monitored locations contained no new or content-modified skill-related/supporting-automation files after the baseline. The external `/Users/baishangjituan/.codex/skills/.system/` tree had a 49-file timestamp-only refresh at one batch time; all files were pre-existing, and no content diff was evidenced. Repository `skills/`, `skill-center/`, and `automation/` status/history checks found no monitored-path content changes. Standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- New `.py` files: none. Eight existing `.py` files were included in the timestamp-only `.system` refresh; no new purpose, related-skill, or cross-platform/platform-specific classification applies.
+- Exact changed-file paths: none at the content level. `docs/automation/github-sync-status.md` was not updated because no new custom-skill change batch was discovered.
+- Obsidian readback: required preflight query `技能变更监控 上次运行 自动化` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 15:46:11 CST (+0800) Skill change monitor
+
+- Baseline: persisted automation-memory completion `2026-11-14T06:46:08Z` was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp `2026-11-14T06:45:35.151Z`.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline mtime scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no files. Repository Git status, content diff, and post-baseline history checks found no monitored-path content changes; standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行 自动化` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 16:48:15 CST (+0800) Skill change monitor
+
+- Baseline: persisted automation-memory completion `2026-11-14T07:46:11Z` was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp `2026-11-14T07:45:05.818Z`.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no files. Repository status, history, and monitored-path content audits also found no changes; standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行 变更记录` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on local filesystem, Git, and automation-memory evidence.
+
+## 2026-11-14 17:00:03 CST (+0800) Skill change monitor
+
+- Baseline: persisted automation-memory completion `2026-11-14T07:52:53Z` was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp `2026-11-14T07:52:05.850Z`.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline mtime scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no skill-related or supporting-automation files. Repository staged/unstaged diffs, untracked-file, tracked-deletion, and all-ref post-baseline history checks also found no monitored-path content changes. Standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 监控 变更` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on local filesystem, Git, and automation-memory evidence.
+
+## 2026-11-14 17:53:06 CST (+0800) Skill change monitor
+
+- Baseline: persisted automation-memory completion `2026-11-14T08:48:15Z` was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp `2026-11-14T08:47:36.225Z`.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no files. Repository status and post-baseline monitored-path history found no content changes; standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行 变更记录` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on local filesystem, Git, and automation-memory evidence.
+
+## 2026-11-14 17:59:21 CST (+0800) Skill change monitor
+
+- Baseline: persisted automation-memory completion `2026-11-14T09:00:03Z` was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp `2026-11-14T08:59:06.441Z`.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no skill-related or supporting-automation files. Repository status, monitored-path diffs, tracked deletions, untracked files, and post-baseline history also found no content changes. Standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on local filesystem, Git, and automation-memory evidence.
+
+## 2026-11-14 18:53:40 CST (+0800) Skill change monitor
+
+- Baseline: persisted automation-memory completion `2026-11-14T08:48:15Z` was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp `2026-11-14T08:47:36.225Z`.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no files. Repository status, monitored-path diffs, and post-baseline history found no content changes; standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- Exact changed-file paths: none at the content level.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行 变更记录` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 18:58:23 CST (+0800) Skill change monitor
+
+- Baseline: persisted automation-memory completion `2026-11-14T09:59:21Z` was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp `2026-11-14T09:58:07.088Z`.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline mtime scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no skill-related or supporting-automation files. Repository staged/unstaged monitored-path diffs found no content changes. Standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- Exact changed-file paths: none at the content level.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight manifest failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no relative source path is available; Vault 中未找到依据. This entry relies on local filesystem, Git, and automation-memory evidence.
+
+## 2026-11-14 19:53:40 CST (+0800) Skill change monitor
+
+- Baseline: persisted automation-memory completion `2026-11-14T10:53:40Z` was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp `2026-11-14T10:53:07.492Z`.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline mtime scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no files. Repository status and post-baseline monitored-path history found no content changes; standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- Exact changed-file paths: none at the content level.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行 变更记录` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on local filesystem, Git audit, and automation-memory evidence.
+
+## 2026-11-14 20:01:53 CST (+0800) Skill change monitor
+
+- Baseline: persisted automation-memory completion `2026-11-14T10:58:23Z` was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp `2026-11-14T10:57:37.558Z`.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline mtime scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no skill-related or supporting-automation files. Repository status and post-baseline monitored-path history found no content changes. Standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- Exact changed-file paths: none at the content level.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控 自动化` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no relative source path is available; Vault 中未找到依据. This entry relies on local filesystem, Git, and automation-memory evidence.
+
+## 2026-11-14 20:49:35 CST (+0800) Skill change monitor
+
+- Baseline: persisted automation-memory completion `2026-11-14T11:53:40Z` was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp `2026-11-14T11:53:08.291Z`.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline mtime scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no files. Repository status and post-baseline monitored-path history found no content changes; standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- Exact changed-file paths: none at the content level.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行 变更记录` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on local filesystem, Git audit, and automation memory.
+
+## 2026-11-14 21:04:21 CST (+0800) Skill change monitor
+
+- Baseline: persisted automation-memory completion `2026-11-14T12:01:53Z` was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp `2026-11-14T12:01:08.394Z`.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline mtime scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no skill-related or supporting-automation files. Repository status and all-ref post-baseline monitored-path history also found no content changes. Standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- Exact changed-file paths: none at the content level.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控 自动化` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no relative source path is available; Vault 中未找到依据. This entry relies on local filesystem, Git, and automation-memory evidence.
+
+## 2026-11-14 22:49:14 CST (+0800) Skill change monitor
+
+- Baseline: persisted automation-memory completion `2026-11-14T13:51:51Z` was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp `2026-11-14T13:51:09.481Z`.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline mtime scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no files. Repository status and all-ref post-baseline monitored-path history found no content changes; standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- Exact changed-file paths: none at the content level.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on local filesystem, Git audit, and automation-memory evidence.
+
+## 2026-11-14 23:11:15 CST (+0800) Skill change monitor
+
+- Baseline: persisted automation-memory completion `2026-11-14T14:09:16Z` was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp `2026-11-14T14:07:39.657Z`.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline mtime scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no skill-related or supporting-automation files. Repository status, staged/unstaged diffs, untracked-file and tracked-deletion checks, and all-ref post-baseline history also found no monitored-path content changes. Standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- Exact changed-file paths: none at the content level.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no relative source path is available; Vault 中未找到依据. This entry relies on local filesystem, Git, and automation-memory evidence.
+
+## 2026-11-14 23:58:14 CST (+0800) Skill change monitor
+
+- Baseline: persisted automation-memory completion `2026-11-14T14:49:14Z` was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp `2026-11-14T14:48:40.108Z`.
+- Added: none. Modified: none. Deleted: none confirmable. Post-baseline mtime scans of `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, and `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/` found no files. Repository status and post-baseline monitored-path history found no content changes; standalone deletions in the unversioned external `.codex/skills` tree remain unconfirmable without a contemporaneous inventory.
+- Exact changed-file paths: none at the content level.
+- New `.py` files: none; therefore no purpose, related-skill, or cross-platform/platform-specific classification applies.
+- GitHub sync status: unchanged because no new change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 上次运行` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no relative source path is available. This entry relies on local filesystem, Git audit, and automation memory.
 
