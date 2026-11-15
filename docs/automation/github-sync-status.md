@@ -1,5 +1,16 @@
 # GitHub Sync Status
 
+## 2026-11-16 00:00:44 CST (+0800) GitHub 夜间同步执行记录
+
+- 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-11-15 23:58:56 CST (+0800)`，确认 Mac / Windows 内容覆盖完整、内容性 Windows 转译缺口为 `0`；仅 Windows 原生运行时验证及既有 ESM/CJS 检查限制仍待相应环境处理，因此允许同步。
+- Obsidian 回读：已按 `obsidian-knowledge-readback` 执行只读预检（查询“GitHub 夜间同步 Windows Mac 完成”），但 SSH 到 `192.168.1.10:22` 超时，未读取任何 Obsidian Markdown；Vault 中未找到可核实本轮项目判断的依据，也没有可提供的 Obsidian 相对路径。本轮依据为本地状态台账、Git 审计和远端分支核对。
+- 检查结果：上一轮以来未发现新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 实现或 `.py` 文件；共享监控台账已由默认分支提交 `40d1be6` 同步，Windows 分支保留其对应共享台账提交 `69eec1c`，本轮新增为执行记录。
+- 分支与提交：
+  - `codex/default-python-sync`：补记本执行记录，提交消息为 `Record November 16 GitHub sync verification`；不带入 Windows 专属转译状态台账。
+  - `codex/windows-version-20260411`：补记本执行记录，提交消息为 `Sync November 15-16 Windows automation ledgers`；保留 Windows 专属状态台账。
+- 推送：默认分支已推送；Windows 分支将在本记录提交后推送并通过 `git ls-remote` 核验。
+- 跳过项：`.codex-*`、`.skill-monitor-*` 等本地运行时/监控产物未提交；没有新的实现内容需要按 generic/Mac 或 Windows bridge/deployment 分类；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归，以及既有 ESM/CJS 检查限制仍未在当前 macOS 主机处理。
+
 ## 2026-11-15 00:04:31 CST (+0800) GitHub 夜间同步执行记录
 
 - 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-11-14 22:03:29 CST (+0800)`，确认 Mac / Windows 内容覆盖完整、内容性 Windows 转译缺口为 `0`；仅 Windows 原生运行时验证及既有 ESM/CJS 检查限制仍待相应环境处理，因此允许同步。
