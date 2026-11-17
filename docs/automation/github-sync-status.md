@@ -9044,3 +9044,11 @@
 - 分支与提交：待完成默认分支与 Windows 分支的共享/Windows 台账提交及远端验证。
 - 跳过项：`.codex-*` / `.skill-monitor-*` 运行时产物及 JPG 未提交；无新的实现内容需要分类；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归，以及既有 ESM/CJS 检查限制仍待相应环境处理。
 
+## 2026-11-18 00:00:39 CST (+0800) GitHub 夜间同步完成记录
+
+- 完成情况：本轮同步已完成并验证远端分支。
+- 分支与提交：`codex/default-python-sync` 推送 `438f87b`（`Sync November 17 shared automation ledgers`）；`codex/windows-version-20260411` 推送 `34d3b64`（共享台账）与 `29a87ec`（`Sync November 17 Windows translation status`）。
+- 内容分类：未发现新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 实现、`.py` 文件或未跟踪实现文件；Windows 状态台账仅记录本轮内容缺口为 `0`。
+- 跳过项：`.codex-*` / `.skill-monitor-*` 运行时产物及 `.tmp-sb-detail-2893149213602873345.jpg` 未提交；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归，以及既有 ESM/CJS 检查限制仍待相应 Windows 环境处理。
+- Obsidian 回读：预检 SSH 到 `192.168.1.10:22` 超时，未读取 Markdown；Vault 中未找到可核实本轮结论的依据，也无可提供的 Obsidian 相对路径。
+
