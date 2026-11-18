@@ -9060,3 +9060,9 @@
 - 分支与提交：待完成 `codex/default-python-sync` 的共享台账提交，以及 `codex/windows-version-20260411` 的共享/Windows 台账提交和远端验证。
 - 跳过项：`.codex-*` / `.skill-monitor-*` 运行时产物及 JPG 未提交；无新的实现内容需要分类；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归，以及既有 ESM/CJS 检查限制仍待相应 Windows 环境处理。
 
+## 2026-11-19 00:05:12 CST GitHub 夜间同步核验记录
+
+- 分支与提交：`codex/default-python-sync` 已推送 `307bc4b`（`Sync November 18-19 shared automation ledgers`）；`codex/windows-version-20260411` 已推送 `ffc505c`（`Sync November 18 Windows automation ledgers`，包含共享台账、Windows 转译状态台账与执行记录）。
+- 远端核验：两条分支的 `git ls-remote` 均与上述提交一致。
+- 跳过项：无新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 实现或 `.py` 文件；`.codex-*` / `.skill-monitor-*` 运行时产物及 `.tmp-sb-detail-2893149213602873345.jpg` 未提交；Windows 原生运行时验证、既有 ESM/CJS 检查限制及 Obsidian SSH 回读失败仍待相应环境/连接处理。
+
