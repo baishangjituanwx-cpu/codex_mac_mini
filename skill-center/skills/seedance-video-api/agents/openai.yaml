@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seedance Video API"
+  short_description: "Direct Ark Seedance 2.0/2.0 Fast workflows"
+  default_prompt: "Use $seedance-video-api to prepare or run a Volcengine Ark Seedance 2.0 / 2.0 Fast video task safely via environment-based auth."

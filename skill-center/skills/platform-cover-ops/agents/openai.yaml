@@ -1,0 +1,4 @@
+interface:
+  display_name: "平台封面技能"
+  short_description: "八个平台封面优化封面修复首帧策略与裁切检查统一技能"
+  default_prompt: "Use $platform-cover-ops to fix or optimize covers across the 8 content platforms."

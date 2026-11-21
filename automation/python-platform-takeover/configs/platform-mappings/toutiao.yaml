@@ -1,7 +1,11 @@
 selectors:
   title_input_candidates:
     - "input[placeholder*='标题']"
+    - "input[placeholder*='请输入标题']"
+    - "input[maxlength]"
   body_editor_candidates:
+    - "[data-testid='article-editor'] [contenteditable='true']"
+    - ".ProseMirror[contenteditable='true']"
     - "[contenteditable='true']"
   cover_file_inputs:
     - "input[type='file']"
@@ -13,6 +17,15 @@ buttons:
     - "预览并发布"
   confirm_publish:
     - "确认发布"
+signals:
+  login_required:
+    - "验证码登录"
+    - "手机号登录"
+    - "登录后即可创作"
+  success:
+    - "发布成功"
+    - "提交成功"
+    - "已提交"
 checkpoints:
   manual:
     - "短信验证码"
@@ -24,3 +37,4 @@ verify:
   management_status:
     - "审核中"
     - "已发布"
+    - "待审核"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "快手运营"
+  short_description: "快手发布、数据复盘、评论互动、规则研究与素材优化运营流程"
+  default_prompt: "Use $kuaishou-ops to publish, analyze, moderate comments, or optimize content for a 快手 account."
