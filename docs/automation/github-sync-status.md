@@ -9054,6 +9054,14 @@
 - 分支与提交：待完成默认分支与 Windows 分支的共享/Windows 台账提交及远端验证。
 - 跳过项：`.codex-*` / `.skill-monitor-*` 运行时产物及 JPG 未提交；无新的实现内容需要分类；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归，以及既有 ESM/CJS 检查限制仍待相应环境处理。
 
+## 2026-11-21 23:57:21 CST GitHub 夜间同步执行记录
+
+- 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-11-21 21:59:31 CST (+0800)`，明确确认 Mac / Windows 内容覆盖完整、内容性 Windows 转译缺口为 `0`；仅 Windows 原生运行时验证、既有 ESM/CJS 检查限制及 Obsidian 回读失败仍待相应环境处理，因此允许同步。
+- Obsidian 回读：已按 `obsidian-knowledge-readback` 技能执行只读预检（查询“GitHub 夜间同步 Windows Mac 版本”），但 SSH 到 `192.168.1.10:22` 超时；未读取任何 Obsidian Markdown，Vault 中未找到可核实本轮项目判断的依据，也无可提供的 Obsidian 相对路径。本轮依据为仓库状态台账与 Git 审计。
+- 检查结果：发现共享 `docs/automation/skill-change-monitor.md` 台账增量，以及 Windows `docs/automation/windows-translation-status.md` 台账增量；未发现新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 实现、`.py` 文件或未跟踪实现文件。临时 `.tmp-sb-detail-2893149213602873345.jpg` 未提交。
+- 分支与提交：`codex/default-python-sync` 将提交共享监控台账与本执行记录，提交消息为 `Sync November 21 shared automation ledgers`；`codex/windows-version-20260411` 将提交共享监控台账、Windows 转译状态台账与本执行记录，提交消息为 `Sync November 21 Windows automation ledgers`。
+- 跳过项：`.codex-*` / `.skill-monitor-*` 运行时产物及 JPG 未提交；无新的实现内容需要分类；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归，以及既有 ESM/CJS 检查限制仍待相应环境处理。GitHub SSH 抓取已失败，推送将单独记录结果。
+
 ## 2026-11-18 00:00:39 CST (+0800) GitHub 夜间同步完成记录
 
 - 完成情况：本轮同步已完成并验证远端分支。
