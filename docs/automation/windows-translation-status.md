@@ -6385,3 +6385,21 @@
   - 全部 `30` 个已跟踪 `.sh` 文件通过 `bash -n`；全部 `40` 个已跟踪 JS/MJS/CJS 文件通过 `node --check`；目标监控文件与状态文件 `git diff --check` 通过；未进行 Windows 原生 PowerShell 语法或端到端验证。
 - 是否达到“Mac / Windows 版本都齐全”:
   - 是（内容覆盖层面）。本轮没有待翻译内容，今日 Mac 与 Windows 版本均已补齐；仅 Windows 原生运行时验证及 Obsidian 回读失败仍待相应环境/连接处理。
+
+## 2026-11-21 21:58:38 CST (+0800)
+
+- 处理时间：`2026-11-21 21:58:38 CST (+0800)` / `2026-11-21 13:58:38 UTC (+0000)`。
+- 输入来源：复核 `skill-change-monitor.md` 中自动化批次，全部为 `0 added / 0 modified / 0 confirmably deleted`；没有新增或修改的 custom-skill、supporting automation、`.py` 文件或 Windows 相关仓库资产。
+- Obsidian：已执行只读预检，但 SSH 连接 `192.168.1.10:22` 失败；未读取 Markdown，Vault 中未找到依据。
+- Windows 补全：本轮实际翻译 `0`；现有 Windows 资产覆盖保持完整。内容性 Windows 转译缺口为 `0`，没有待迁移行为、删除项或缺失仓库资产。
+- 验证限制：当前 macOS 主机没有 `pwsh` 或 `powershell`，未执行 Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归；既有 ESM/CJS 检查限制仍待相应环境处理。
+- 是否达到“Mac / Windows 版本都齐全”：是（内容覆盖层面）。
+
+## 2026-11-21 21:59:31 CST (+0800)
+
+- 处理时间：`2026-11-21 21:59:31 CST (+0800)` / `2026-11-21 13:59:31 UTC (+0000)`。
+- 输入来源：复核上一条状态记录覆盖范围之外的 `skill-change-monitor.md` 条目至 `2026-11-21 21:33:03 CST`；新增、修改和可确认删除均为 `0`，未发现新的实现变更或未跟踪项。
+- Obsidian：已执行只读预检，但 SSH 连接 `192.168.1.10:22` 失败；未读取 Markdown，Vault 中未找到依据。
+- Windows 补全：本轮实际翻译 `0`；现有 Windows 覆盖保持完整。内容性 Windows 转译缺口为 `0`，没有待迁移行为、删除项或缺失仓库资产。
+- 验证限制：当前 macOS 主机没有 `pwsh` 或 `powershell`，未执行 Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归；既有 ESM/CJS 检查限制仍待相应环境处理。
+- 是否达到“Mac / Windows 版本都齐全”：是（内容覆盖层面）。
