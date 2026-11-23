@@ -9062,6 +9062,14 @@
 - 分支与提交：待完成默认分支与 Windows 分支的共享/Windows 台账提交及远端验证。
 - 跳过项：`.codex-*` / `.skill-monitor-*` 运行时产物及 JPG 未提交；无新的实现内容需要分类；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归，以及既有 ESM/CJS 检查限制仍待相应环境处理。
 
+## 2026-11-23 23:57:25 CST (+0800) GitHub 夜间同步执行记录
+
+- 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-11-23 21:58:35 CST (+0800)`，确认 Mac / Windows 内容覆盖完整、内容性 Windows 转译缺口为 `0`；因此允许同步。
+- Obsidian 回读：已按 `obsidian-knowledge-readback` 执行只读预检（查询“GitHub 夜间同步 Windows Mac 完成”），但 SSH 到 `192.168.1.10:22` 超时；未读取任何 Obsidian Markdown，Vault 中未找到可核实本轮项目判断的依据，也无可提供的 Obsidian 相对路径。本轮依据为仓库状态台账与 Git 审计。
+- 检查结果：仅发现 `docs/automation/skill-change-monitor.md`、`docs/automation/windows-translation-status.md` 与本执行台账的更新；未发现新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 实现、`.py` 文件或未跟踪实现文件。
+- 分支与提交：`codex/default-python-sync` 将同步共享监控台账与本执行记录；`codex/windows-version-20260411` 将同步共享监控台账、Windows 转译状态台账与对应执行记录。提交消息将在提交时记录，并在推送后核验远端 tip。
+- 跳过项：`.codex-*` / `.skill-monitor-*` 运行时产物及 `.tmp-sb-detail-2893149213602873345.jpg` 未提交；仓库外 `/Users/baishangjituan/.codex/skills/.system/` 的 53 个系统技能文件不纳入本次仓库同步；无新的实现内容需要分类；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归，以及既有 ESM/CJS 检查限制仍待相应环境处理。
+
 ## 2026-11-23 00:02:41 CST (+0800) GitHub 夜间同步执行记录
 
 - 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-11-22 22:04:19 CST (+0800)`，确认 Mac / Windows 内容覆盖完整、内容性 Windows 转译缺口为 `0`；仅 Windows 原生运行时验证、既有 ESM/CJS 检查限制及 Obsidian 回读失败仍待相应环境处理，因此允许同步。
@@ -9101,6 +9109,10 @@
 - 检查结果：发现 `docs/automation/skill-change-monitor.md` 与 `docs/automation/windows-translation-status.md` 的自动化台账增量；未发现新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 实现、`.py` 文件或未跟踪实现文件。临时 `.tmp-sb-detail-2893149213602873345.jpg` 未提交。
 - 分支与提交：待完成 `codex/default-python-sync` 的共享台账提交，以及 `codex/windows-version-20260411` 的共享/Windows 台账提交和远端验证。
 - 跳过项：`.codex-*` / `.skill-monitor-*` 运行时产物及 JPG 未提交；无新的实现内容需要分类；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归，以及既有 ESM/CJS 检查限制仍待相应 Windows 环境处理。
+
+## 2026-11-23 23:27:11 CST (+0800) 技能变更监控待同步提示
+
+- 新发现 53 个 `/Users/baishangjituan/.codex/skills/.system/` 系统技能文件（`review-agent`、`create-statusline`、`skill-creator`、`skill-installer`、`openai-docs`、`imagegen`）；该批次位于仓库外，后续同步前需决定是否将其纳入版本控制。
 
 ## 2026-11-19 00:05:12 CST GitHub 夜间同步核验记录
 
