@@ -5,7 +5,7 @@
 - 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-11-24 22:03:19 CST (+0800)`，明确确认 Mac / Windows 内容覆盖完整、内容性 Windows 转译缺口为 `0`；因此允许同步。
 - Obsidian 回读：已按 `obsidian-knowledge-readback` 执行只读预检（查询“GitHub 夜间同步 Windows Mac 完成”），但 SSH 到 `192.168.1.10:22` 报告 `Host is down`；未读取任何 Obsidian Markdown，`Vault 中未找到依据`，无可提供的 Obsidian 相对路径。
 - 检查结果：发现自动化账本更新：`docs/automation/skill-change-monitor.md`、`docs/automation/windows-translation-status.md` 及本执行台账；未发现新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 实现或 `.py` 实现文件。
-- 分支与提交：`codex/default-python-sync` 提交共享 `skill-change-monitor.md` 与本执行记录；`codex/windows-version-20260411` 提交共享监控台账、Windows 转译状态台账与本执行记录。提交消息和远端 tip 在推送后补记于本条目。
+- 分支与提交：`codex/default-python-sync` 推送 `6e7401b`（`Sync November 24 shared automation ledgers`）；`codex/windows-version-20260411` 提交共享台账 `a7e204b`（`Sync November 24 shared automation ledgers`）与 Windows 状态 `f1ec345`（`Sync November 24 Windows translation status`），随后将以最终记录提交补记远端 tip。
 - 跳过项：`.tmp-sb-detail-2893149213602873345.jpg`、`.codex-*` / `.skill-monitor-*` 运行时产物及仓库外 `/Users/baishangjituan/.codex/skills/.system/` 系统技能文件不提交；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归，以及既有 ESM/CJS 检查限制仍待相应环境处理。
 
 ## 2026-11-24 01:39:35 CST (+0800) 技能变更监控待同步批次
