@@ -1,5 +1,19 @@
 # GitHub Sync Status
 
+## 2026-11-24 23:58:41 CST (+0800) GitHub 夜间同步执行记录
+
+- 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-11-24 22:03:19 CST (+0800)`，明确确认 Mac / Windows 内容覆盖完整、内容性 Windows 转译缺口为 `0`；因此允许同步。
+- Obsidian 回读：已按 `obsidian-knowledge-readback` 执行只读预检（查询“GitHub 夜间同步 Windows Mac 完成”），但 SSH 到 `192.168.1.10:22` 报告 `Host is down`；未读取任何 Obsidian Markdown，`Vault 中未找到依据`，无可提供的 Obsidian 相对路径。
+- 检查结果：发现自动化账本更新：`docs/automation/skill-change-monitor.md`、`docs/automation/windows-translation-status.md` 及本执行台账；未发现新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 实现或 `.py` 实现文件。
+- 分支与提交：`codex/default-python-sync` 提交共享 `skill-change-monitor.md` 与本执行记录；`codex/windows-version-20260411` 提交共享监控台账、Windows 转译状态台账与本执行记录。提交消息和远端 tip 在推送后补记于本条目。
+- 跳过项：`.tmp-sb-detail-2893149213602873345.jpg`、`.codex-*` / `.skill-monitor-*` 运行时产物及仓库外 `/Users/baishangjituan/.codex/skills/.system/` 系统技能文件不提交；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归，以及既有 ESM/CJS 检查限制仍待相应环境处理。
+
+## 2026-11-24 01:39:35 CST (+0800) 技能变更监控待同步批次
+
+- 发现 `/Users/baishangjituan/.codex/skills/.system/` 系统技能包在上一轮基线后整批重新物化，监控记录为 `0 added / 53 modified / 0 confirmably deleted`；项目仓库的 `skills/`、`skill-center/`、`automation/` 无变化。
+- 本批次包含 9 个既有 `.py` 工具的 mtime 刷新，无新增 `.py`；后续 GitHub 同步应先复核该系统技能包是否为内容变更，再决定是否同步，避免把运行时重物化误当作语义更新。
+- 本轮仅更新本地监控台账，未提交、未推送；Obsidian 预检因 SSH 到 `192.168.1.10:22` 超时未读取 Vault，`Vault 中未找到依据`。
+
 ## 2026-11-23 00:06:30 CST (+0800) GitHub 夜间同步执行记录
 
 - 前置判断：Windows 分支待同步前复核的最新状态依据为 `2026-11-22 22:04:19 CST (+0800)`，确认 Mac / Windows 内容覆盖完整、内容性 Windows 转译缺口为 `0`；因此允许同步。
