@@ -1,5 +1,24 @@
 # Skill Change Monitor
 
+## 2026-11-25 20:25:38 CST (+0800) — Run completion
+
+- Baseline: persisted automation-memory completion `2026-11-25T11:23:33Z` was used as the exclusive lower bound, later than the scheduler-provided previous-run timestamp `2026-11-25T11:21:47.486Z`, preventing duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file mtime scans, new-`.py` scans, scoped Git working-tree checks, tracked-file deletion checks, and all-ref Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree remains unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控 自动化` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; `Vault 中未找到依据` and no Obsidian relative source path is available. This filesystem-only delta audit relies on local filesystem mtimes, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 17:26:00 CST (+0800) — Run completion
+
+- Baseline: the persisted automation-memory completion `2026-11-25T08:21:25Z` was used as the exclusive lower bound, later than the scheduler-provided previous-run timestamp `2026-11-25T08:20:12.969Z`, preventing duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file mtime scans, new-`.py` scans, scoped Git working-tree checks, tracked-file deletion checks, and all-ref Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree remains unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+
 ## 2026-11-24 21:48:14 CST (+0800) — Run completion
 
 - Baseline: the latest recorded monitor completion, `2026-11-24 21:08:18 CST` (`2026-11-24T13:08:18Z`), was used as the exclusive lower bound. It supersedes the scheduler-provided previous-run timestamp (`2026-11-24T12:44:59.718Z`) and prevents duplicate coverage. The automation memory file was absent at start, so it could not supply a baseline.
@@ -8,6 +27,7 @@
 - Evidence: post-baseline regular-file and `.py` mtime scans, scoped Git history and working-tree checks, and tracked-file-deletion checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so independent standalone deletion detection is limited; none is supported by this audit.
 - New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
 - GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+
 - Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; Vault 中未找到依据 and no Obsidian relative source path is available. This filesystem-only delta audit relies on local filesystem mtimes, Git audit, scheduler metadata, and the monitor ledger.
 
 ## 2026-11-24 21:08:18 CST (+0800) — Run completion
@@ -333822,3 +333842,431 @@
 - Evidence: post-baseline regular-file mtime scans, scoped Git working-tree and deletion checks, and Git history comparison from prior baseline `be99ebe` to `e0afdeb` were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
 - New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
 - GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+
+## 2026-11-25 00:42:33 CST (+0800) — Run completion
+
+- Baseline: persisted automation-memory completion `2026-11-24T15:47:32Z` (`2026-11-24 23:47:32 CST`) was used as the exclusive lower bound, superseding the scheduler-provided previous-run timestamp `2026-11-24T15:46:31.861Z` and preventing duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree/deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree remains unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控 自动化` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; `Vault 中未找到依据` and no Obsidian relative source path is available. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 01:03:04 CST (+0800) — Run completion
+
+- Baseline: scheduler previous-run timestamp `2026-11-24T16:03:02.099Z` (`2026-11-25 00:03:02 CST`) was used as the exclusive lower bound.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file mtime scans, scoped Git working-tree/deletion checks, and all-ref Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree remains unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 自动化同步` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; `Vault 中未找到依据` and no Obsidian relative source path is available. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 01:46:47 CST (+0800) — Run completion
+
+- Baseline: persisted automation-memory completion `2026-11-24T16:42:33Z` (`2026-11-25 00:42:33 CST`) was used as the exclusive lower bound, superseding the scheduler-provided previous-run timestamp `2026-11-24T16:41:32.516Z` and preventing duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree/deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree remains unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; `Vault 中未找到依据` and no Obsidian relative source path is available. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 02:00:28 CST (+0800) — Run completion
+
+- Baseline: scheduler previous-run timestamp `2026-11-24T17:02:02.739Z` (`2026-11-25 01:02:02 CST`) was used as the exclusive lower bound.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file mtime scans, scoped Git working-tree deletion checks, and all-ref Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree remains unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit. The repository remains on `codex/default-python-sync` at `836bd74`.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 自动化同步` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read; `Vault 中未找到依据` and no Obsidian relative source path is available. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 02:52:11 CST (+0800) — Run completion
+
+- Baseline: persisted automation-memory completion `2026-11-24T17:46:47Z` (`2026-11-25 01:46:47 CST`) was used as the exclusive lower bound, superseding the scheduler-provided previous-run timestamp `2026-11-24T17:44:33.233Z` and preventing duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree/deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree remains unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 11:17:04 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 10:57:58 CST` (`2026-11-25T02:57:58Z`), was used as the exclusive lower bound to avoid duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file mtime scans, new-`.py` scans, scoped Git working-tree/deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 自动化同步` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 03:07:53 CST (+0800) — Run completion
+
+- Baseline: scheduler previous-run timestamp `2026-11-24T17:59:33.403Z` (`2026-11-25 01:59:33 CST`) was used as the exclusive lower bound.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file mtime scans, scoped Git working-tree/deletion checks, and all-ref Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree remains unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit. The repository remains on `codex/default-python-sync` at `836bd74`.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 自动化同步` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+
+## 2026-11-25 03:50:22 CST (+0800) — Run completion
+
+- Baseline: persisted automation-memory completion `2026-11-24T18:52:11Z` (`2026-11-25 02:52:11 CST`) was used as the exclusive lower bound, superseding the scheduler-provided previous-run timestamp `2026-11-24T18:47:03.970Z` and preventing duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree/deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree remains unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 13:18:36 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 12:18:05 CST` (`2026-11-25T04:18:05Z`), was used as the exclusive lower bound to avoid duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file mtime scans, new-`.py` scans, scoped Git working-tree checks, scoped tracked-deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 自动化同步` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 04:08:13 CST (+0800) — Run completion
+
+- Baseline: scheduler previous-run timestamp `2026-11-24T19:07:04.207Z` (`2026-11-25 03:07:04 CST`) was used as the exclusive lower bound.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file mtime scans, scoped Git working-tree checks, and all-ref Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree remains unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 自动化同步` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 04:49:16 CST (+0800) — Run completion
+
+- Baseline: persisted automation-memory completion `2026-11-24T19:50:26Z` (`2026-11-25 03:50:26 CST`) was used as the exclusive lower bound, superseding the scheduler-provided previous-run timestamp `2026-11-24T19:49:34.657Z` and preventing duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree/deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree remains unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `skill change monitor` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 05:06:47 CST (+0800) — Run completion
+
+- Baseline: scheduler previous-run timestamp `2026-11-24T20:07:34.931Z` (`2026-11-25 04:07:34 CST`) was used as the exclusive lower bound.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file mtime scans, scoped Git working-tree checks, and all-ref Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree remains unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 05:47:43 CST (+0800) — Run completion
+
+- Baseline: persisted automation-memory completion `2026-11-24T20:49:16Z` (`2026-11-25 04:49:16 CST`) was used as the exclusive lower bound, superseding the scheduler-provided previous-run timestamp `2026-11-24T20:48:35.493Z` and preventing duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree/deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree remains unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 06:06:47 CST (+0800) — Run completion
+
+- Baseline: scheduler previous-run timestamp `2026-11-24T21:06:05.675Z` (`2026-11-25 05:06:05 CST`) was used as the exclusive lower bound.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file mtime scans, scoped Git working-tree checks, and all-ref Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree remains unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 自动化同步` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 06:49:04 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-24T22:06:47Z` (`2026-11-25 06:06:47 CST`), was used as the exclusive lower bound. It is later than both the scheduler-provided previous-run timestamp (`2026-11-24T21:46:36.182Z`) and the newest automation-memory completion (`2026-11-24T21:47:43Z`), preventing duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped tracked-file deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 07:11:20 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 06:49:04 CST` (`2026-11-24T22:49:04Z`), was used as the exclusive lower bound. It is later than the scheduler-provided previous-run timestamp (`2026-11-24T22:05:36.354Z`) and the persisted automation-memory completion, preventing duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file mtime scans, scoped Git working-tree checks, and all-ref Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree remains unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 自动化同步` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 07:54:22 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 07:11:20 CST` (`2026-11-24T23:11:20Z`), was used as the exclusive lower bound. It is later than the scheduler-provided previous-run timestamp (`2026-11-24T22:48:06.869Z`) and the persisted automation-memory completion, preventing duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree/deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 08:11:57 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 07:54:22 CST` (`2026-11-24T23:54:22Z`), was used as the exclusive lower bound to avoid duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file mtime scans, scoped Git working-tree checks, and all-ref Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree remains unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+
+## 2026-11-25 09:03:20 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 08:11:57 CST` (`2026-11-25T00:11:57Z`), was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp (`2026-11-24T23:53:07.720Z`) and avoids duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped tracked-file deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 监控 同步` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 09:14:16 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 09:03:20 CST` (`2026-11-25T01:03:20Z`), was used as the exclusive lower bound to avoid duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file mtime scans, new-`.py` scans, scoped Git working-tree checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 自动化同步` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 09:52:36 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 09:14:16 CST` (`2026-11-25T01:14:16Z`), was used as the exclusive lower bound. It is later than the scheduler-provided previous-run timestamp (`2026-11-25T00:54:38.457Z`) and prevents duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree/deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 10:18:58 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 09:52:36 CST` (`2026-11-25T01:52:36Z`), was used as the exclusive lower bound to avoid duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file mtime scans, new-`.py` scans, scoped Git working-tree checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 自动化同步` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 10:57:58 CST (+0800) — Run completion
+
+- Baseline: the persisted automation-memory completion, `2026-11-25T01:52:36Z` (`2026-11-25 09:52:36 CST`), was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp (`2026-11-25T01:51:39.302Z`) and prevents duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree/deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 12:06:41 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 10:57:58 CST` (`2026-11-25T02:57:58Z`), was used as the exclusive lower bound; it matches the scheduler-provided previous-run window and avoids duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree/deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, and the monitor ledger.
+
+## 2026-11-25 12:18:05 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 12:06:41 CST` (`2026-11-25T04:06:41Z`), was used as the exclusive lower bound to avoid duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file mtime scans, new-`.py` scans, scoped Git working-tree checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 自动化同步` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 13:02:30 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 12:18:05 CST` (`2026-11-25T04:18:05Z`), was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp and prevents duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped tracked-file deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 14:03:13 CST (+0800) — Run completion
+
+- Baseline: persisted automation-memory completion `2026-11-25T05:02:30Z` (`2026-11-25 13:02:30 CST`) was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp and prevents duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree/deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 14:17:08 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 14:03:13 CST` (`2026-11-25T06:03:13Z`), was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp (`2026-11-25T05:17:41.755Z`) and prevents duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file mtime scans, new-`.py` scans, scoped Git working-tree checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 自动化同步` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 15:02:22 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 14:17:08 CST` (`2026-11-25T06:17:08Z`), was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp (`2026-11-25T06:02:12.118Z`) and the persisted automation-memory completion, preventing duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 16:07:21 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 15:02:22 CST` (`2026-11-25T07:02:22Z`), was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp (`2026-11-25T07:01:12.555Z`) and prevents duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree/deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 16:21:25 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 16:07:21 CST` (`2026-11-25T07:18:20Z`), was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp and prevents duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file mtime scans, new-`.py` scans, scoped Git working-tree checks, and all-ref post-baseline Git-history/deletion checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 自动化 文档` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 17:05:04 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 16:21:25 CST` (`2026-11-25T08:21:25Z`), was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp (`2026-11-25T08:06:12.864Z`) and avoids duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree/deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控 自动化` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 18:02:56 CST (+0800) — Run completion
+
+- Baseline: persisted automation-memory completion `2026-11-25T09:05:04Z` (`2026-11-25 17:05:04 CST`) was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp and avoids duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree/deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 18:21:56 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 18:02:56 CST` (`2026-11-25T10:02:56Z`), was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp and the persisted automation-memory completion, avoiding duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file mtime scans, new-`.py` scans, scoped Git working-tree checks, and all-ref post-baseline Git-history/deletion checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 自动化同步` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 19:08:17 CST (+0800) — Run completion
+
+- Baseline: the persisted automation-memory completion, `2026-11-25T10:02:56Z` (`2026-11-25 18:02:56 CST`), was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp (`2026-11-25T10:01:46.490Z`) and prevents duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree/deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控 同步 自动化` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 19:23:33 CST (+0800) — Run completion
+
+- Baseline: scheduler-provided previous-run timestamp `2026-11-25T10:21:16Z` (`2026-11-25 18:21:16 CST`) was used as the exclusive lower bound.
+- Branch checked: `codex/default-python-sync` at `836bd74b867bb8b2c72a7eef81e51fbe8878c773`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: UTC post-baseline regular-file and new-`.py` mtime scans were empty; scoped Git working-tree, commit-history, and deletion checks were also empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: not required for this filesystem-only delta audit; no Obsidian Markdown was read and no Obsidian relative source path is applicable.
+
+## 2026-11-25 20:12:14 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 19:23:33 CST` (`2026-11-25T11:23:33Z`), was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp and persisted automation-memory completion, preventing duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74b867b`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree/deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更 监控` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 21:11:08 CST (+0800) — Run completion
+
+- Baseline: persisted automation-memory completion `2026-11-25T12:12:14Z` (`2026-11-25 20:12:14 CST`) was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp (`2026-11-25T12:11:17.949Z`) and prevents duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74b867b`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree/deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: not required for this filesystem-only delta audit; no Obsidian Markdown was read and no Obsidian relative source path is applicable.
+
+## 2026-11-25 21:27:41 CST (+0800) — Run completion
+
+- Baseline: scheduler-provided previous-run timestamp `2026-11-25T12:24:48.144Z` (`2026-11-25 20:24:48 CST`) was used as the exclusive lower bound.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: UTC post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree checks, and all-ref Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: not required for this filesystem-only delta audit; no Obsidian Markdown was read and no Obsidian relative source path is applicable.
+
+## 2026-11-25 22:14:16 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 21:27:41 CST` (`2026-11-25T13:27:41Z`), was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp (`2026-11-25T13:09:48.892Z`) and prevents duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: post-baseline regular-file and new-`.py` mtime scans, scoped Git working-tree/deletion checks, and all-ref post-baseline Git-history checks were empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 监控 同步` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, and the monitor ledger.
+
+## 2026-11-25 22:28:20 CST (+0800) — Run completion
+
+- Baseline: persisted automation-memory completion `2026-11-25T13:27:41Z` (`2026-11-25 21:27:41 CST`) was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp and prevents duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74b867bb8b2c72a7eef81e51fbe8878c773`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: UTC post-baseline regular-file and new-`.py` mtime scans were empty; scoped Git working-tree, commit-history, and deletion checks were also empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: not required for this filesystem-only delta audit; no Obsidian Markdown was read and no Obsidian relative source path is applicable.
+
+## 2026-11-25 23:11:30 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 22:28:20 CST` (`2026-11-25T14:28:20Z`), was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp (`2026-11-25T14:12:49.743Z`) and persisted automation-memory completion, preventing duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: UTC post-baseline regular-file and new-`.py` mtime scans were empty; scoped Git working-tree, commit-history, and deletion checks were also empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能变更监控 自动化` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
+## 2026-11-25 23:28:02 CST (+0800) — Run completion
+
+- Baseline: the latest monitor-ledger completion, `2026-11-25 23:11:30 CST` (`2026-11-25T15:11:30Z`), was used as the exclusive lower bound; it is later than the scheduler-provided previous-run timestamp (`2026-11-25T14:27:19.927Z`) and prevents duplicate coverage.
+- Branch checked: `codex/default-python-sync` at `836bd74b867bb8b2c72a7eef81e51fbe8878c773`.
+- Changes: none — `0 added / 0 modified / 0 confirmably deleted` custom-skill or supporting-automation files were found in `/Users/baishangjituan/.codex/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skills/`, `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/skill-center/`, or `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/automation/`. Exact changed-file paths: none.
+- Evidence: UTC post-baseline regular-file and new-`.py` mtime scans were empty; scoped Git working-tree, commit-history, and deletion checks were also empty. The external `/Users/baishangjituan/.codex/skills/` tree is unversioned, so standalone deletions cannot be independently confirmed; none is supported by this audit.
+- New `.py` files: none detected after the baseline; purpose, related skill, and cross-platform/platform-specific classification do not apply.
+- GitHub sync status: unchanged because no new custom-skill change batch was discovered; `/Users/baishangjituan/Documents/New project/github-ready/multi-platform-content-pipeline/docs/automation/github-sync-status.md` was not updated.
+- Obsidian readback: required preflight query `技能 变更监控 自动化` failed because SSH to `192.168.1.10:22` timed out. No Obsidian Markdown was read and no Obsidian relative source path is available; Vault evidence for this run is unavailable. This filesystem-only delta audit relies on local filesystem, Git audit, scheduler metadata, automation memory, and the monitor ledger.
+
