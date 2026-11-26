@@ -9190,3 +9190,11 @@
 - 检查结果：同步了最新 Windows 转译状态台账；未发现新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 实现、`.py` 文件或未跟踪实现文件。
 - 分支与提交：`codex/default-python-sync` 提交共享 Windows 转译状态台账与本执行记录，提交消息为 `Sync November 25-26 shared automation ledgers`；`codex/windows-version-20260411` 将提交同一 Windows 状态台账与对应执行记录，提交消息为 `Sync November 25-26 Windows automation ledgers`。
 - 跳过项：主工作树预存的 `.tmp-sb-detail-2893149213602873345.jpg`、其他 `.codex-*` / `.skill-monitor-*` 运行时产物未提交；无新的实现内容需要分类；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归，以及既有 ESM/CJS 检查限制仍待相应环境处理。
+
+## 2026-11-27 00:02:27 CST (+0800) GitHub 夜间同步执行记录
+
+- 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-11-26 22:04:13 CST (+0800)`，明确确认 Mac / Windows 内容覆盖完整、内容性 Windows 转译缺口为 `0`；因此允许同步。
+- Obsidian 回读：已执行只读预检（查询“GitHub 夜间同步 Windows Mac 完成”），但 SSH 到 `192.168.1.10:22` 报 `Host is down`；未读取任何 Obsidian Markdown，Vault 中未找到可核实本轮项目判断的依据，也无可提供的 Obsidian 相对路径。
+- 检查结果：发现自动化监控台账和 Windows 转译状态台账增量；未发现新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 实现或 `.py` 文件。`.tmp-sb-detail-2893149213602873345.jpg` 及运行时产物未纳入同步。
+- 分支与提交：`codex/default-python-sync` 已基于最新远端并提交共享台账 `c78c630`（`Sync November 26 automation ledgers`）；本记录将作为默认分支的后续提交。`codex/windows-version-20260411` 将同步共享监控台账、Windows 转译状态台账和本执行记录，并在推送后核验远端 tip。
+- 跳过项：无新增实现内容可分类；仓库外 `.codex/skills/.system/` 文件、`.codex-*` / `.skill-monitor-*` 运行时产物及 JPG 未提交；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归，以及既有 ESM/CJS 检查限制仍待相应环境处理。
