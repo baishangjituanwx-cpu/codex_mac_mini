@@ -9198,3 +9198,10 @@
 - 检查结果：发现自动化监控台账和 Windows 转译状态台账增量；未发现新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 实现或 `.py` 文件。`.tmp-sb-detail-2893149213602873345.jpg` 及运行时产物未纳入同步。
 - 分支与提交：`codex/default-python-sync` 已推送共享台账 `c78c630`（`Sync November 26 automation ledgers`）及本执行记录 `3cd092d`（`Record November 27 GitHub sync`）；`codex/windows-version-20260411` 将提交共享监控台账、Windows 转译状态台账和对应执行记录，并在推送后核验远端 tip。
 - 跳过项：无新增实现内容可分类；仓库外 `.codex/skills/.system/` 文件、`.codex-*` / `.skill-monitor-*` 运行时产物及 JPG 未提交；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归，以及既有 ESM/CJS 检查限制仍待相应环境处理。
+
+## 2026-11-27 00:04:10 CST (+0800) GitHub 夜间同步最终核验
+
+- 已核验两条目标远端分支：`codex/default-python-sync` 为 `3cd092d`（`Record November 27 GitHub sync`），`codex/windows-version-20260411` 为 `4feb820`（`Sync November 26 Windows automation ledgers`）。
+- 本轮未发现新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 实现、`.py` 文件或未跟踪实现文件；最新 Windows 状态已确认 Mac / Windows 内容覆盖完整、内容性缺口为 `0`。
+- 跳过项：`.tmp-sb-detail-2893149213602873345.jpg`、`.codex-*` / `.skill-monitor-*` 运行时产物、仓库外系统技能文件，以及 Windows 原生验证和既有 ESM/CJS 检查限制。
+- Obsidian 回读预检因 `192.168.1.10:22` 返回 `Host is down` 失败；未读取 Markdown，Vault 中未找到可核实依据，也无可提供的 Obsidian 相对路径。
