@@ -9213,3 +9213,11 @@
 - 检查结果：未发现新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 实现、`.py` 文件或未跟踪实现文件；待同步内容仅为共享监控台账与 Windows 转译状态台账增量。
 - 分支与提交：`codex/default-python-sync` 将同步共享监控台账、Windows 转译状态台账与本执行记录；`codex/windows-version-20260411` 将保留远端并发台账历史后同步对应 Windows 台账与本执行记录。提交消息、远端 tip 与推送结果将在提交后核验。
 - 跳过项：`.tmp-sb-detail-2893149213602873345.jpg`、`.codex-*` / `.skill-monitor-*` 运行时产物、仓库外系统技能文件未提交；无新增实现内容可分类；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归，以及既有 ESM/CJS 检查限制仍待相应环境处理。
+
+## 2026-11-28 00:05:31 CST (+0800) GitHub 夜间同步最终核验
+
+- 前置判断：`docs/automation/windows-translation-status.md` 最新 dated entry 为 `2026-11-27 22:04:48 CST (+0800)`，确认 Mac / Windows 内容覆盖完整、内容性 Windows 转译缺口为 `0`；因此本轮允许同步。
+- Obsidian 回读：已执行 `obsidian-knowledge-readback` 只读预检（查询“GitHub 夜间同步 Windows Mac 完成”），但 SSH 到 `192.168.1.10:22` 超时；未读取任何 Obsidian Markdown，Vault 中未找到可核实本轮项目判断的依据，也无可提供的 Obsidian 相对路径。
+- 检查结果：未发现新的 generic Python takeover、Mac-compatible Python、Windows bridge、deployment 实现、`.py` 文件或未跟踪实现文件；仅处理共享自动化台账与本执行记录。
+- 分支与提交：默认分支将提交共享监控台账与本记录；Windows 分支将保留远端并发历史并提交对应 Windows 台账与本记录。提交消息和远端 tip 在推送后核验。
+- 跳过项：`.tmp-sb-detail-2893149213602873345.jpg`、`.codex-*` / `.skill-monitor-*` 运行时产物和仓库外系统技能文件未提交；Windows 原生 PowerShell/OpenSSH、浏览器登录和端到端回归，以及既有 ESM/CJS 检查限制仍待相应环境处理。
