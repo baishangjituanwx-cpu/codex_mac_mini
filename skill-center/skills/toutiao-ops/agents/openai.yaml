@@ -1,0 +1,4 @@
+interface:
+  display_name: "头条号运营"
+  short_description: "头条图文发布、数据复盘、评论互动、规则研究与素材优化运营流程"
+  default_prompt: "Use $toutiao-ops to publish, analyze, moderate comments, or optimize content for a 今日头条 / 头条号 account."

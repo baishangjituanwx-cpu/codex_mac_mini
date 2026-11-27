@@ -1,0 +1,46 @@
+selectors:
+  title_input_candidates:
+    - "input[placeholder*='标题']"
+    - "input[placeholder*='请输入标题']"
+    - "input[maxlength]"
+  body_editor_candidates:
+    - ".ql-editor"
+    - "[contenteditable='true']"
+    - "textarea"
+  cover_file_inputs:
+    - "input[type='file'][accept='image/*']"
+    - "input[type='file'][accept*='image']"
+    - "input[type='file']"
+buttons:
+  publish_entry:
+    - "发布内容"
+    - "写文章"
+    - "图文"
+    - "发布文章"
+  publish:
+    - "发布"
+    - "提交"
+    - "发布文章"
+    - "提交审核"
+signals:
+  login_required:
+    - "扫码登录"
+    - "手机号登录"
+    - "百度账号"
+    - "登录后继续"
+  safety_verification:
+    - "百度安全验证"
+    - "安全验证"
+  success:
+    - "提交成功"
+    - "正在审核中"
+checkpoints:
+  manual:
+    - "百度安全验证"
+    - "登录态恢复"
+    - "封面上传后人工复核"
+verify:
+  management_status:
+    - "审核中"
+    - "已发布"
+    - "审核未通过"

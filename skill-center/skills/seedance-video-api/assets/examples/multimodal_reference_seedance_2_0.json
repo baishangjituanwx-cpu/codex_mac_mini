@@ -1,0 +1,38 @@
+{
+  "model": "doubao-seedance-2-0-260128",
+  "content": [
+    {
+      "type": "text",
+      "text": "参考这些素材生成一段 8 秒写实品牌短片，主体一致，镜头语言高级，节奏跟随音乐但不要旁白。"
+    },
+    {
+      "type": "image_url",
+      "role": "reference_image",
+      "image_url": {
+        "url": "https://example.com/replace-with-your-reference-image.png"
+      }
+    },
+    {
+      "type": "video_url",
+      "role": "reference_video",
+      "video_url": {
+        "url": "https://example.com/replace-with-your-reference-video.mp4"
+      }
+    },
+    {
+      "type": "audio_url",
+      "role": "reference_audio",
+      "audio_url": {
+        "url": "local://./replace-with-your-reference-audio.mp3"
+      }
+    }
+  ],
+  "resolution": "720p",
+  "ratio": "16:9",
+  "duration": 8,
+  "seed": -1,
+  "camera_fixed": false,
+  "watermark": false,
+  "generate_audio": false,
+  "return_last_frame": true
+}
